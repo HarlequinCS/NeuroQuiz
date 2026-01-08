@@ -1,0 +1,178 @@
+/**
+ * NeuroQuiz™ - Theme Stylesheet
+ * 
+ * UI Team: This file contains color palettes, theme variables, and accessibility features.
+ * You can modify colors, but maintain high contrast ratios (WCAG AA minimum).
+ * 
+ * IMPORTANT: Do not modify CSS custom properties used by theme.js for theme switching.
+ */
+
+/* ============================================
+   CSS CUSTOM PROPERTIES (THEME VARIABLES)
+   ============================================ */
+
+:root {
+    /* Light Theme Colors - High Contrast, Color-Blind Safe */
+    --color-primary: #2563eb;        /* Blue - Primary actions */
+    --color-primary-dark: #1e40af;   /* Darker blue for hover */
+    --color-primary-light: #3b82f6;  /* Lighter blue for active states */
+    
+    --color-secondary: #7c3aed;      /* Purple - Secondary actions */
+    --color-secondary-dark: #6d28d9;
+    --color-secondary-light: #8b5cf6;
+    
+    --color-success: #10b981;        /* Green - Correct answers, success */
+    --color-success-dark: #059669;
+    --color-success-light: #34d399;
+    
+    --color-error: #ef4444;          /* Red - Wrong answers, errors */
+    --color-error-dark: #dc2626;
+    --color-error-light: #f87171;
+    
+    --color-warning: #f59e0b;        /* Amber - Warnings, hints */
+    --color-warning-dark: #d97706;
+    --color-warning-light: #fbbf24;
+    
+    /* Neutral Colors */
+    --color-bg-primary: #ffffff;      /* Main background */
+    --color-bg-secondary: #f9fafb;    /* Secondary background */
+    --color-bg-tertiary: #f3f4f6;     /* Tertiary background */
+    
+    --color-text-primary: #111827;    /* Main text - high contrast */
+    --color-text-secondary: #4b5563;  /* Secondary text */
+    --color-text-tertiary: #6b7280;   /* Tertiary text */
+    --color-text-inverse: #ffffff;     /* Text on dark backgrounds */
+    
+    --color-border: #e5e7eb;          /* Borders */
+    --color-border-dark: #d1d5db;     /* Darker borders */
+    
+    /* Gamification Colors */
+    --color-gold: #fbbf24;            /* Gold for achievements */
+    --color-silver: #9ca3af;          /* Silver for achievements */
+    --color-bronze: #d97706;          /* Bronze for achievements */
+    
+    /* Shadow Colors */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    
+    /* Spacing Scale */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-full: 9999px;
+    
+    /* Typography */
+    --font-family-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-family-heading: var(--font-family-primary);
+    --font-family-mono: 'Courier New', Courier, monospace;
+    
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 250ms ease-in-out;
+    --transition-slow: 350ms ease-in-out;
+}
+
+/* Dark Theme - Automatically applied via theme.js */
+[data-theme="dark"] {
+    --color-bg-primary: #111827;
+    --color-bg-secondary: #1f2937;
+    --color-bg-tertiary: #374151;
+    
+    --color-text-primary: #f9fafb;
+    --color-text-secondary: #d1d5db;
+    --color-text-tertiary: #9ca3af;
+    --color-text-inverse: #111827;
+    
+    --color-border: #374151;
+    --color-border-dark: #4b5563;
+    
+    /* Adjust shadows for dark theme */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}
+
+/* High Contrast Theme - For accessibility */
+[data-theme="high-contrast"] {
+    --color-primary: #0066cc;
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #ffffff;
+    --color-text-primary: #000000;
+    --color-text-secondary: #000000;
+    --color-border: #000000;
+    --color-border-dark: #000000;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* ============================================
+   ACCESSIBILITY FEATURES
+   ============================================ */
+
+/* Focus indicators - High visibility for keyboard navigation */
+*:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Color-blind safe: Use patterns/icons in addition to color */
+/* UI Team: Ensure all status indicators have icons or text labels, not just color */
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Text Colors */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-tertiary { color: var(--color-text-tertiary); }
+.text-success { color: var(--color-success); }
+.text-error { color: var(--color-error); }
+.text-warning { color: var(--color-warning); }
+
+/* Background Colors */
+.bg-primary { background-color: var(--color-bg-primary); }
+.bg-secondary { background-color: var(--color-bg-secondary); }
+.bg-tertiary { background-color: var(--color-bg-tertiary); }
+
+/* UI Team: Add more utility classes as needed for your design system */
+

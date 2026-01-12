@@ -1,0 +1,4502 @@
+[
+  {
+    "id": 4001,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'The Cat in the Hat'?",
+    "options": [
+      "Dr. Seuss",
+      "Roald Dahl",
+      "Shel Silverstein",
+      "Eric Carle"
+    ],
+    "answer": 0,
+    "explanation": "Dr. Seuss (Theodor Geisel) wrote The Cat in the Hat"
+  },
+  {
+    "id": 4002,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the main character's name in 'Harry Potter'?",
+    "options": [
+      "Harry Potter",
+      "Ron Weasley",
+      "Draco Malfoy",
+      "Hermione Granger"
+    ],
+    "answer": 0,
+    "explanation": "Harry Potter is the main character of the series"
+  },
+  {
+    "id": 4003,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What type of animal is Winnie the Pooh?",
+    "options": [
+      "Rabbit",
+      "Tiger",
+      "Bear",
+      "Pig"
+    ],
+    "answer": 2,
+    "explanation": "Winnie the Pooh is a bear"
+  },
+  {
+    "id": 4004,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who is the author of 'Charlotte's Web'?",
+    "options": [
+      "Beverly Cleary",
+      "Roald Dahl",
+      "Judy Blume",
+      "E.B. White"
+    ],
+    "answer": 3,
+    "explanation": "E.B. White wrote Charlotte's Web"
+  },
+  {
+    "id": 4005,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is a group of words that tells a complete thought called?",
+    "options": [
+      "Paragraph",
+      "Word",
+      "Letter",
+      "Sentence"
+    ],
+    "answer": 3,
+    "explanation": "A sentence is a group of words expressing a complete thought"
+  },
+  {
+    "id": 4006,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "In 'The Three Little Pigs', what material made the strongest house?",
+    "options": [
+      "Bricks",
+      "Leaves",
+      "Sticks",
+      "Straw"
+    ],
+    "answer": 0,
+    "explanation": "The brick house was the strongest and couldn't be blown down"
+  },
+  {
+    "id": 4007,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What color is the fish in 'One Fish Two Fish Red Fish Blue Fish'?",
+    "options": [
+      "Red and blue",
+      "Only red",
+      "Green",
+      "Only blue"
+    ],
+    "answer": 0,
+    "explanation": "The book features both red and blue fish"
+  },
+  {
+    "id": 4008,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Green Eggs and Ham'?",
+    "options": [
+      "Shel Silverstein",
+      "Dr. Seuss",
+      "Maurice Sendak",
+      "Eric Carle"
+    ],
+    "answer": 1,
+    "explanation": "Dr. Seuss wrote Green Eggs and Ham"
+  },
+  {
+    "id": 4009,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the name of the snowman in 'Frozen'?",
+    "options": [
+      "Olaf",
+      "Sven",
+      "Kristoff",
+      "Hans"
+    ],
+    "answer": 0,
+    "explanation": "Olaf is the friendly snowman in Frozen"
+  },
+  {
+    "id": 4010,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What does a period (.) at the end of a sentence mean?",
+    "options": [
+      "Question",
+      "Pause",
+      "End of sentence",
+      "Excitement"
+    ],
+    "answer": 2,
+    "explanation": "A period indicates the end of a sentence"
+  },
+  {
+    "id": 4011,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who is Dorothy's dog in 'The Wizard of Oz'?",
+    "options": [
+      "Toto",
+      "Max",
+      "Buddy",
+      "Spot"
+    ],
+    "answer": 0,
+    "explanation": "Toto is Dorothy's little dog"
+  },
+  {
+    "id": 4012,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the name of the boy in 'Where the Wild Things Are'?",
+    "options": [
+      "Jack",
+      "Max",
+      "Tom",
+      "Sam"
+    ],
+    "answer": 1,
+    "explanation": "Max is the main character who becomes king of the wild things"
+  },
+  {
+    "id": 4013,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What punctuation mark shows excitement?",
+    "options": [
+      "Period",
+      "Comma",
+      "Question mark",
+      "Exclamation mark"
+    ],
+    "answer": 3,
+    "explanation": "An exclamation mark (!) shows excitement or strong emotion"
+  },
+  {
+    "id": 4014,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "In 'Goldilocks', how many bears lived in the house?",
+    "options": [
+      "Three",
+      "Two",
+      "Four",
+      "One"
+    ],
+    "answer": 0,
+    "explanation": "Three bears lived in the house: Papa, Mama, and Baby Bear"
+  },
+  {
+    "id": 4015,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who is the author of 'The Very Hungry Caterpillar'?",
+    "options": [
+      "Bill Martin Jr.",
+      "Dr. Seuss",
+      "Leo Lionni",
+      "Eric Carle"
+    ],
+    "answer": 3,
+    "explanation": "Eric Carle wrote and illustrated The Very Hungry Caterpillar"
+  },
+  {
+    "id": 4016,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the name of Peter Pan's fairy friend?",
+    "options": [
+      "Wendy",
+      "Tiger Lily",
+      "Tinker Bell",
+      "Jane"
+    ],
+    "answer": 2,
+    "explanation": "Tinker Bell is Peter Pan's fairy companion"
+  },
+  {
+    "id": 4017,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is a story that teaches a lesson called?",
+    "options": [
+      "Poem",
+      "Letter",
+      "Fable",
+      "Article"
+    ],
+    "answer": 2,
+    "explanation": "A fable is a short story that teaches a moral lesson"
+  },
+  {
+    "id": 4018,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who lost her glass slipper at the ball?",
+    "options": [
+      "Rapunzel",
+      "Cinderella",
+      "Sleeping Beauty",
+      "Snow White"
+    ],
+    "answer": 1,
+    "explanation": "Cinderella lost her glass slipper at midnight"
+  },
+  {
+    "id": 4019,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What word describes a naming word (person, place, or thing)?",
+    "options": [
+      "Adverb",
+      "Verb",
+      "Noun",
+      "Adjective"
+    ],
+    "answer": 2,
+    "explanation": "A noun is a word that names a person, place, thing, or idea"
+  },
+  {
+    "id": 4020,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote about 'Curious George'?",
+    "options": [
+      "H.A. Rey",
+      "Maurice Sendak",
+      "Dr. Seuss",
+      "Beatrix Potter"
+    ],
+    "answer": 0,
+    "explanation": "H.A. Rey and Margret Rey created Curious George"
+  },
+  {
+    "id": 4021,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the name of the pig in 'Charlotte's Web'?",
+    "options": [
+      "Templeton",
+      "Wilbur",
+      "Fern",
+      "Charlotte"
+    ],
+    "answer": 1,
+    "explanation": "Wilbur is the pig that Charlotte saves"
+  },
+  {
+    "id": 4022,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What kind of story has characters like fairies and magic?",
+    "options": [
+      "Recipe",
+      "Biography",
+      "News article",
+      "Fairy tale"
+    ],
+    "answer": 3,
+    "explanation": "Fairy tales feature magical elements and characters"
+  },
+  {
+    "id": 4023,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "In 'Jack and the Beanstalk', what did Jack trade for magic beans?",
+    "options": [
+      "A pig",
+      "A cow",
+      "A chicken",
+      "A horse"
+    ],
+    "answer": 1,
+    "explanation": "Jack traded his cow for magic beans"
+  },
+  {
+    "id": 4024,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What punctuation mark is used for questions?",
+    "options": [
+      "Period",
+      "Comma",
+      "Question mark",
+      "Exclamation mark"
+    ],
+    "answer": 2,
+    "explanation": "A question mark (?) is used at the end of questions"
+  },
+  {
+    "id": 4025,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Matilda'?",
+    "options": [
+      "Enid Blyton",
+      "Roald Dahl",
+      "C.S. Lewis",
+      "J.K. Rowling"
+    ],
+    "answer": 1,
+    "explanation": "Roald Dahl wrote Matilda"
+  },
+  {
+    "id": 4026,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the first letter of a sentence always?",
+    "options": [
+      "Lowercase",
+      "Symbol",
+      "Number",
+      "Capital/Uppercase"
+    ],
+    "answer": 3,
+    "explanation": "Sentences always begin with a capital letter"
+  },
+  {
+    "id": 4027,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What animal tells the story in 'The Tortoise and the Hare'?",
+    "options": [
+      "A lion",
+      "Both tortoise and hare",
+      "A fox",
+      "An owl"
+    ],
+    "answer": 1,
+    "explanation": "The fable is about a tortoise and a hare racing"
+  },
+  {
+    "id": 4028,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who is Shrek's wife?",
+    "options": [
+      "Snow White",
+      "Rapunzel",
+      "Cinderella",
+      "Fiona"
+    ],
+    "answer": 3,
+    "explanation": "Princess Fiona is Shrek's wife"
+  },
+  {
+    "id": 4029,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is a word that describes an action called?",
+    "options": [
+      "Adjective",
+      "Noun",
+      "Verb",
+      "Adverb"
+    ],
+    "answer": 2,
+    "explanation": "A verb is an action word"
+  },
+  {
+    "id": 4030,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What does the spider write in 'Charlotte's Web'?",
+    "options": [
+      "'Some Pig'",
+      "'Nice Pig'",
+      "'Best Pig'",
+      "'Great Pig'"
+    ],
+    "answer": 0,
+    "explanation": "Charlotte writes 'Some Pig' and other words to save Wilbur"
+  },
+  {
+    "id": 4031,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'The Lion, the Witch and the Wardrobe'?",
+    "options": [
+      "J.R.R. Tolkien",
+      "Roald Dahl",
+      "C.S. Lewis",
+      "J.K. Rowling"
+    ],
+    "answer": 2,
+    "explanation": "C.S. Lewis wrote The Chronicles of Narnia series"
+  },
+  {
+    "id": 4032,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the name of the dragon in 'How to Train Your Dragon'?",
+    "options": [
+      "Toothless",
+      "Norbert",
+      "Smaug",
+      "Draco"
+    ],
+    "answer": 0,
+    "explanation": "Toothless is Hiccup's dragon"
+  },
+  {
+    "id": 4033,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is writing that uses rhyme and rhythm often called?",
+    "options": [
+      "Novel",
+      "Poetry",
+      "Article",
+      "Essay"
+    ],
+    "answer": 1,
+    "explanation": "Poetry often uses rhyme and rhythm"
+  },
+  {
+    "id": 4034,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Alice's Adventures in Wonderland'?",
+    "options": [
+      "Hans Christian Andersen",
+      "Lewis Carroll",
+      "C.S. Lewis",
+      "Roald Dahl"
+    ],
+    "answer": 1,
+    "explanation": "Lewis Carroll wrote Alice's Adventures in Wonderland"
+  },
+  {
+    "id": 4035,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is an adjective?",
+    "options": [
+      "Describing word",
+      "Naming word",
+      "Action word",
+      "Connecting word"
+    ],
+    "answer": 0,
+    "explanation": "An adjective describes a noun"
+  },
+  {
+    "id": 4036,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Jungle Book'?",
+    "options": [
+      "Lewis Carroll",
+      "Robert Louis Stevenson",
+      "Mark Twain",
+      "Rudyard Kipling"
+    ],
+    "answer": 3,
+    "explanation": "Rudyard Kipling wrote The Jungle Book"
+  },
+  {
+    "id": 4037,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the setting of a story?",
+    "options": [
+      "When and where it takes place",
+      "The moral",
+      "The main character",
+      "The ending"
+    ],
+    "answer": 0,
+    "explanation": "Setting is the time and place of a story"
+  },
+  {
+    "id": 4038,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who is the main character in 'The BFG'?",
+    "options": [
+      "A boy wizard",
+      "A big friendly giant",
+      "A talking animal",
+      "A witch"
+    ],
+    "answer": 1,
+    "explanation": "BFG stands for Big Friendly Giant"
+  },
+  {
+    "id": 4039,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is a synonym?",
+    "options": [
+      "Rhyming word",
+      "Opposite word",
+      "Action word",
+      "Same meaning word"
+    ],
+    "answer": 3,
+    "explanation": "A synonym is a word with the same or similar meaning"
+  },
+  {
+    "id": 4040,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who is the villain in 'Peter Pan'?",
+    "options": [
+      "Smee",
+      "The Crocodile",
+      "The Lost Boys",
+      "Captain Hook"
+    ],
+    "answer": 3,
+    "explanation": "Captain Hook is the main villain in Peter Pan"
+  },
+  {
+    "id": 4041,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is an antonym?",
+    "options": [
+      "Opposite meaning",
+      "Describing word",
+      "Rhyming word",
+      "Same meaning"
+    ],
+    "answer": 0,
+    "explanation": "An antonym is a word with opposite meaning"
+  },
+  {
+    "id": 4042,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'James and the Giant Peach'?",
+    "options": [
+      "Dr. Seuss",
+      "J.K. Rowling",
+      "E.B. White",
+      "Roald Dahl"
+    ],
+    "answer": 3,
+    "explanation": "Roald Dahl wrote James and the Giant Peach"
+  },
+  {
+    "id": 4043,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the main problem in a story called?",
+    "options": [
+      "Resolution",
+      "Setting",
+      "Conflict",
+      "Theme"
+    ],
+    "answer": 2,
+    "explanation": "The conflict is the main problem or struggle in a story"
+  },
+  {
+    "id": 4044,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "In 'The Little Mermaid', what does Ariel give up for legs?",
+    "options": [
+      "Her voice",
+      "Her tail",
+      "Her hair",
+      "Her crown"
+    ],
+    "answer": 0,
+    "explanation": "Ariel trades her voice to become human"
+  },
+  {
+    "id": 4045,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is a contraction?",
+    "options": [
+      "Opposite word",
+      "Action word",
+      "Long word",
+      "Two words combined with apostrophe"
+    ],
+    "answer": 3,
+    "explanation": "A contraction combines two words using an apostrophe (e.g., don't)"
+  },
+  {
+    "id": 4046,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Secret Garden'?",
+    "options": [
+      "Louisa May Alcott",
+      "Lucy Maud Montgomery",
+      "Frances Hodgson Burnett",
+      "E.B. White"
+    ],
+    "answer": 2,
+    "explanation": "Frances Hodgson Burnett wrote The Secret Garden"
+  },
+  {
+    "id": 4047,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the message or lesson of a story called?",
+    "options": [
+      "Plot",
+      "Conflict",
+      "Setting",
+      "Theme"
+    ],
+    "answer": 3,
+    "explanation": "The theme is the main message or lesson of a story"
+  },
+  {
+    "id": 4048,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who is the author of 'The Hobbit'?",
+    "options": [
+      "George R.R. Martin",
+      "Terry Pratchett",
+      "J.R.R. Tolkien",
+      "C.S. Lewis"
+    ],
+    "answer": 2,
+    "explanation": "J.R.R. Tolkien wrote The Hobbit"
+  },
+  {
+    "id": 4049,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is personification?",
+    "options": [
+      "Comparing with 'like'",
+      "Exaggeration",
+      "Giving human qualities to non-human things",
+      "Repetition"
+    ],
+    "answer": 2,
+    "explanation": "Personification gives human qualities to animals or objects"
+  },
+  {
+    "id": 4050,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What type of story is 'Diary of a Wimpy Kid'?",
+    "options": [
+      "Fantasy",
+      "Fairy tale",
+      "Realistic fiction",
+      "Science fiction"
+    ],
+    "answer": 2,
+    "explanation": "Diary of a Wimpy Kid is realistic fiction"
+  },
+  {
+    "id": 4051,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'A Wrinkle in Time'?",
+    "options": [
+      "C.S. Lewis",
+      "Madeleine L'Engle",
+      "Ursula K. Le Guin",
+      "Diana Wynne Jones"
+    ],
+    "answer": 1,
+    "explanation": "Madeleine L'Engle wrote A Wrinkle in Time"
+  },
+  {
+    "id": 4052,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is a simile?",
+    "options": [
+      "Comparison using 'like' or 'as'",
+      "Sound words",
+      "Giving human qualities",
+      "Extreme exaggeration"
+    ],
+    "answer": 0,
+    "explanation": "A simile compares things using 'like' or 'as'"
+  },
+  {
+    "id": 4053,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Percy Jackson' series?",
+    "options": [
+      "Veronica Roth",
+      "Suzanne Collins",
+      "Rick Riordan",
+      "J.K. Rowling"
+    ],
+    "answer": 2,
+    "explanation": "Rick Riordan wrote the Percy Jackson series"
+  },
+  {
+    "id": 4054,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the sequence of events in a story called?",
+    "options": [
+      "Setting",
+      "Conflict",
+      "Plot",
+      "Theme"
+    ],
+    "answer": 2,
+    "explanation": "The plot is the sequence of events in a story"
+  },
+  {
+    "id": 4055,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who is the main character in 'Anne of Green Gables'?",
+    "options": [
+      "Gilbert Blythe",
+      "Anne Shirley",
+      "Marilla Cuthbert",
+      "Diana Barry"
+    ],
+    "answer": 1,
+    "explanation": "Anne Shirley is the main character"
+  },
+  {
+    "id": 4056,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is onomatopoeia?",
+    "options": [
+      "Exaggeration",
+      "Comparison",
+      "Repetition",
+      "Words that sound like their meaning"
+    ],
+    "answer": 3,
+    "explanation": "Onomatopoeia: words that imitate sounds (buzz, splash, bang)"
+  },
+  {
+    "id": 4057,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Giver'?",
+    "options": [
+      "Scott Westerfeld",
+      "Lois Lowry",
+      "Neal Shusterman",
+      "Suzanne Collins"
+    ],
+    "answer": 1,
+    "explanation": "Lois Lowry wrote The Giver"
+  },
+  {
+    "id": 4058,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is a biography?",
+    "options": [
+      "Made-up story",
+      "Play",
+      "Poem",
+      "Story about someone's life written by another"
+    ],
+    "answer": 3,
+    "explanation": "A biography is a true story about someone's life written by another person"
+  },
+  {
+    "id": 4059,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the perspective from which a story is told?",
+    "options": [
+      "Theme",
+      "Point of view",
+      "Setting",
+      "Conflict"
+    ],
+    "answer": 1,
+    "explanation": "Point of view is the perspective from which a story is narrated"
+  },
+  {
+    "id": 4060,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is a metaphor?",
+    "options": [
+      "Direct comparison without 'like' or 'as'",
+      "Comparison using 'like'",
+      "Exaggeration",
+      "Sound word"
+    ],
+    "answer": 0,
+    "explanation": "A metaphor directly compares things without using 'like' or 'as'"
+  },
+  {
+    "id": 4061,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Hatchet'?",
+    "options": [
+      "Jean Craighead George",
+      "Scott O'Dell",
+      "Gary Paulsen",
+      "Jack London"
+    ],
+    "answer": 2,
+    "explanation": "Gary Paulsen wrote Hatchet"
+  },
+  {
+    "id": 4062,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is an autobiography?",
+    "options": [
+      "News article",
+      "Story about your own life",
+      "Story about someone else",
+      "Fantasy story"
+    ],
+    "answer": 1,
+    "explanation": "An autobiography is a person's life story written by themselves"
+  },
+  {
+    "id": 4063,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Holes'?",
+    "options": [
+      "Jerry Spinelli",
+      "Louis Sachar",
+      "Gordon Korman",
+      "Andrew Clements"
+    ],
+    "answer": 1,
+    "explanation": "Louis Sachar wrote Holes"
+  },
+  {
+    "id": 4064,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is alliteration?",
+    "options": [
+      "Comparing things",
+      "Repetition of beginning sounds",
+      "Rhyming words",
+      "Exaggeration"
+    ],
+    "answer": 1,
+    "explanation": "Alliteration is repetition of the same starting sound (Peter Piper picked)"
+  },
+  {
+    "id": 4065,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Bridge to Terabithia'?",
+    "options": [
+      "Katherine Paterson",
+      "Phyllis Reynolds Naylor",
+      "Betsy Byars",
+      "Kate DiCamillo"
+    ],
+    "answer": 0,
+    "explanation": "Katherine Paterson wrote Bridge to Terabithia"
+  },
+  {
+    "id": 4066,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the turning point of a story called?",
+    "options": [
+      "Climax",
+      "Introduction",
+      "Setting",
+      "Resolution"
+    ],
+    "answer": 0,
+    "explanation": "The climax is the turning point or most exciting part of a story"
+  },
+  {
+    "id": 4067,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is hyperbole?",
+    "options": [
+      "Extreme exaggeration",
+      "Understatement",
+      "Comparison",
+      "Sound word"
+    ],
+    "answer": 0,
+    "explanation": "Hyperbole is extreme exaggeration for effect (I'm so hungry I could eat a horse)"
+  },
+  {
+    "id": 4068,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the resolution of a story?",
+    "options": [
+      "The problem",
+      "The beginning",
+      "How the problem is solved",
+      "The setting"
+    ],
+    "answer": 2,
+    "explanation": "The resolution is how the conflict is resolved at the end"
+  },
+  {
+    "id": 4069,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'The Wind in the Willows'?",
+    "options": [
+      "Kenneth Grahame",
+      "Beatrix Potter",
+      "E.B. White",
+      "A.A. Milne"
+    ],
+    "answer": 0,
+    "explanation": "Kenneth Grahame wrote The Wind in the Willows"
+  },
+  {
+    "id": 4070,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is first-person point of view?",
+    "options": [
+      "No narrator",
+      "Using 'he/she'",
+      "Using 'you'",
+      "Using 'I' as narrator"
+    ],
+    "answer": 3,
+    "explanation": "First person uses 'I' - the narrator is a character in the story"
+  },
+  {
+    "id": 4071,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Treasure Island'?",
+    "options": [
+      "Jules Verne",
+      "Robert Louis Stevenson",
+      "Daniel Defoe",
+      "Mark Twain"
+    ],
+    "answer": 1,
+    "explanation": "Robert Louis Stevenson wrote Treasure Island"
+  },
+  {
+    "id": 4072,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is third-person point of view?",
+    "options": [
+      "Using 'you'",
+      "Using 'he/she/they'",
+      "No pronouns",
+      "Using 'I'"
+    ],
+    "answer": 1,
+    "explanation": "Third person uses 'he/she/they' - narrator is outside the story"
+  },
+  {
+    "id": 4073,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is foreshadowing?",
+    "options": [
+      "The ending",
+      "Looking back",
+      "The climax",
+      "Hints about future events"
+    ],
+    "answer": 3,
+    "explanation": "Foreshadowing gives hints about what will happen later"
+  },
+  {
+    "id": 4074,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Little Women'?",
+    "options": [
+      "Jane Austen",
+      "Charlotte Brontë",
+      "Louisa May Alcott",
+      "Emily Brontë"
+    ],
+    "answer": 2,
+    "explanation": "Louisa May Alcott wrote Little Women"
+  },
+  {
+    "id": 4075,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is irony?",
+    "options": [
+      "Saying what you mean",
+      "Opposite of what's expected",
+      "A comparison",
+      "A type of rhyme"
+    ],
+    "answer": 1,
+    "explanation": "Irony is when something happens opposite to what's expected"
+  },
+  {
+    "id": 4076,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'The Adventures of Tom Sawyer'?",
+    "options": [
+      "Nathaniel Hawthorne",
+      "Mark Twain",
+      "Charles Dickens",
+      "Herman Melville"
+    ],
+    "answer": 1,
+    "explanation": "Mark Twain wrote The Adventures of Tom Sawyer"
+  },
+  {
+    "id": 4077,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is a flashback?",
+    "options": [
+      "Looking forward",
+      "The beginning",
+      "Scene from the past inserted into present",
+      "The ending"
+    ],
+    "answer": 2,
+    "explanation": "A flashback shows events that happened before the current story time"
+  },
+  {
+    "id": 4078,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the protagonist?",
+    "options": [
+      "A minor character",
+      "The villain",
+      "The narrator",
+      "The main character"
+    ],
+    "answer": 3,
+    "explanation": "The protagonist is the main character of a story"
+  },
+  {
+    "id": 4079,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Black Beauty'?",
+    "options": [
+      "Mary Shelley",
+      "Emily Brontë",
+      "Anna Sewell",
+      "George Eliot"
+    ],
+    "answer": 2,
+    "explanation": "Anna Sewell wrote Black Beauty"
+  },
+  {
+    "id": 4080,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the antagonist?",
+    "options": [
+      "The character opposing the main character",
+      "The hero",
+      "The author",
+      "The narrator"
+    ],
+    "answer": 0,
+    "explanation": "The antagonist opposes or conflicts with the protagonist"
+  },
+  {
+    "id": 4081,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote '20,000 Leagues Under the Sea'?",
+    "options": [
+      "Jules Verne",
+      "H.G. Wells",
+      "Robert Louis Stevenson",
+      "Mark Twain"
+    ],
+    "answer": 0,
+    "explanation": "Jules Verne wrote 20,000 Leagues Under the Sea"
+  },
+  {
+    "id": 4082,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is symbolism?",
+    "options": [
+      "Literal meaning only",
+      "Using something to represent something else",
+      "Rhyming",
+      "Sound effects"
+    ],
+    "answer": 1,
+    "explanation": "Symbolism uses objects/ideas to represent deeper meanings"
+  },
+  {
+    "id": 4083,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What genre is 'A Christmas Carol'?",
+    "options": [
+      "Science fiction",
+      "Mystery",
+      "Fantasy/Ghost story",
+      "Historical fiction"
+    ],
+    "answer": 2,
+    "explanation": "A Christmas Carol features ghosts and is a fantasy/ghost story"
+  },
+  {
+    "id": 4084,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'The Call of the Wild'?",
+    "options": [
+      "Jack London",
+      "John Steinbeck",
+      "Ernest Hemingway",
+      "F. Scott Fitzgerald"
+    ],
+    "answer": 0,
+    "explanation": "Jack London wrote The Call of the Wild"
+  },
+  {
+    "id": 4085,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is a stanza?",
+    "options": [
+      "A chapter",
+      "A group of lines in a poem",
+      "A type of sentence",
+      "A paragraph"
+    ],
+    "answer": 1,
+    "explanation": "A stanza is a grouped set of lines in a poem"
+  },
+  {
+    "id": 4086,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is imagery?",
+    "options": [
+      "Descriptive language appealing to senses",
+      "A diagram",
+      "A photograph",
+      "Pictures in a book"
+    ],
+    "answer": 0,
+    "explanation": "Imagery uses descriptive language to create mental pictures"
+  },
+  {
+    "id": 4087,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Robinson Crusoe'?",
+    "options": [
+      "Henry Fielding",
+      "Daniel Defoe",
+      "Jonathan Swift",
+      "Samuel Richardson"
+    ],
+    "answer": 1,
+    "explanation": "Daniel Defoe wrote Robinson Crusoe"
+  },
+  {
+    "id": 4088,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is a protagonist's motivation?",
+    "options": [
+      "Their appearance",
+      "Their name",
+      "Why they do what they do",
+      "Their age"
+    ],
+    "answer": 2,
+    "explanation": "Motivation is the reason behind a character's actions"
+  },
+  {
+    "id": 4089,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the exposition?",
+    "options": [
+      "The resolution",
+      "The climax",
+      "The conflict",
+      "The beginning that introduces setting/characters"
+    ],
+    "answer": 3,
+    "explanation": "Exposition introduces the characters, setting, and situation"
+  },
+  {
+    "id": 4090,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'The Swiss Family Robinson'?",
+    "options": [
+      "Daniel Defoe",
+      "Johann David Wyss",
+      "Jules Verne",
+      "Robert Louis Stevenson"
+    ],
+    "answer": 1,
+    "explanation": "Johann David Wyss wrote The Swiss Family Robinson"
+  },
+  {
+    "id": 4091,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is rising action?",
+    "options": [
+      "The ending",
+      "The beginning",
+      "The resolution",
+      "Events building to the climax"
+    ],
+    "answer": 3,
+    "explanation": "Rising action is the series of events building toward the climax"
+  },
+  {
+    "id": 4092,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is falling action?",
+    "options": [
+      "The exposition",
+      "Events after the climax leading to resolution",
+      "The beginning",
+      "The climax itself"
+    ],
+    "answer": 1,
+    "explanation": "Falling action shows events after the climax leading to the ending"
+  },
+  {
+    "id": 4093,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Gulliver's Travels'?",
+    "options": [
+      "Henry Fielding",
+      "Jonathan Swift",
+      "Laurence Sterne",
+      "Daniel Defoe"
+    ],
+    "answer": 1,
+    "explanation": "Jonathan Swift wrote Gulliver's Travels"
+  },
+  {
+    "id": 4094,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is tone in writing?",
+    "options": [
+      "Volume of voice",
+      "The setting",
+      "The plot",
+      "Author's attitude toward subject"
+    ],
+    "answer": 3,
+    "explanation": "Tone is the author's attitude or feeling toward the subject"
+  },
+  {
+    "id": 4095,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is mood in literature?",
+    "options": [
+      "The setting only",
+      "The plot",
+      "Author's feelings",
+      "Feeling the reader gets"
+    ],
+    "answer": 3,
+    "explanation": "Mood is the emotional atmosphere that affects the reader"
+  },
+  {
+    "id": 4096,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Around the World in Eighty Days'?",
+    "options": [
+      "Mark Twain",
+      "Charles Dickens",
+      "Jules Verne",
+      "H.G. Wells"
+    ],
+    "answer": 2,
+    "explanation": "Jules Verne wrote Around the World in Eighty Days"
+  },
+  {
+    "id": 4097,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is a static character?",
+    "options": [
+      "The villain",
+      "A character that stays the same",
+      "The main character",
+      "A character that changes"
+    ],
+    "answer": 1,
+    "explanation": "A static character does not change throughout the story"
+  },
+  {
+    "id": 4098,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is a dynamic character?",
+    "options": [
+      "A flat character",
+      "A character that stays the same",
+      "A minor character",
+      "A character that changes and grows"
+    ],
+    "answer": 3,
+    "explanation": "A dynamic character undergoes significant change during the story"
+  },
+  {
+    "id": 4099,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is internal conflict?",
+    "options": [
+      "Fight between characters",
+      "Argument",
+      "War in the story",
+      "Struggle within a character's mind"
+    ],
+    "answer": 3,
+    "explanation": "Internal conflict is a struggle within a character (decisions, emotions)"
+  },
+  {
+    "id": 4100,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is external conflict?",
+    "options": [
+      "Dreams",
+      "Conflict between character and outside force",
+      "Thoughts",
+      "Inner struggle"
+    ],
+    "answer": 1,
+    "explanation": "External conflict is between a character and an outside force (person, nature, society)"
+  },
+  {
+    "id": 4101,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "options": [
+      "Charles Dickens",
+      "William Shakespeare",
+      "Geoffrey Chaucer",
+      "Jane Austen"
+    ],
+    "answer": 1,
+    "explanation": "William Shakespeare wrote Romeo and Juliet"
+  },
+  {
+    "id": 4102,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What literary period is Shakespeare associated with?",
+    "options": [
+      "Modern",
+      "Victorian",
+      "Renaissance/Elizabethan",
+      "Romantic"
+    ],
+    "answer": 2,
+    "explanation": "Shakespeare wrote during the Elizabethan/Renaissance period"
+  },
+  {
+    "id": 4103,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Pride and Prejudice'?",
+    "options": [
+      "Mary Shelley",
+      "Charlotte Brontë",
+      "Emily Brontë",
+      "Jane Austen"
+    ],
+    "answer": 3,
+    "explanation": "Jane Austen wrote Pride and Prejudice"
+  },
+  {
+    "id": 4104,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is a sonnet?",
+    "options": [
+      "A prose piece",
+      "A long poem",
+      "A 14-line poem",
+      "A 3-line poem"
+    ],
+    "answer": 2,
+    "explanation": "A sonnet is a 14-line poem with specific rhyme schemes"
+  },
+  {
+    "id": 4105,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'To Kill a Mockingbird'?",
+    "options": [
+      "Harper Lee",
+      "John Steinbeck",
+      "F. Scott Fitzgerald",
+      "Ernest Hemingway"
+    ],
+    "answer": 0,
+    "explanation": "Harper Lee wrote To Kill a Mockingbird"
+  },
+  {
+    "id": 4106,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the main character in 'To Kill a Mockingbird' called?",
+    "options": [
+      "Boo",
+      "Jem",
+      "Atticus",
+      "Scout"
+    ],
+    "answer": 3,
+    "explanation": "Scout (Jean Louise Finch) is the narrator and main character"
+  },
+  {
+    "id": 4107,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote '1984'?",
+    "options": [
+      "H.G. Wells",
+      "Aldous Huxley",
+      "Ray Bradbury",
+      "George Orwell"
+    ],
+    "answer": 3,
+    "explanation": "George Orwell wrote 1984"
+  },
+  {
+    "id": 4108,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is a tragedy?",
+    "options": [
+      "A comedy",
+      "A serious drama with an unhappy ending",
+      "A happy story",
+      "A mystery"
+    ],
+    "answer": 1,
+    "explanation": "A tragedy is a serious drama ending in disaster for the protagonist"
+  },
+  {
+    "id": 4109,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'The Great Gatsby'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "John Steinbeck",
+      "Ernest Hemingway",
+      "William Faulkner"
+    ],
+    "answer": 0,
+    "explanation": "F. Scott Fitzgerald wrote The Great Gatsby"
+  },
+  {
+    "id": 4110,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the setting of 'The Great Gatsby'?",
+    "options": [
+      "The 1800s",
+      "The 1950s",
+      "The 1920s",
+      "The 1970s"
+    ],
+    "answer": 2,
+    "explanation": "The Great Gatsby is set in the Jazz Age/Roaring 1920s"
+  },
+  {
+    "id": 4111,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Lord of the Flies'?",
+    "options": [
+      "J.D. Salinger",
+      "George Orwell",
+      "William Golding",
+      "Aldous Huxley"
+    ],
+    "answer": 2,
+    "explanation": "William Golding wrote Lord of the Flies"
+  },
+  {
+    "id": 4112,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is iambic pentameter?",
+    "options": [
+      "A stanza type",
+      "A rhythm of 10 syllables per line",
+      "A poem type",
+      "A type of rhyme"
+    ],
+    "answer": 1,
+    "explanation": "Iambic pentameter has 10 syllables with alternating unstressed/stressed pattern"
+  },
+  {
+    "id": 4113,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Of Mice and Men'?",
+    "options": [
+      "John Steinbeck",
+      "William Faulkner",
+      "Ernest Hemingway",
+      "F. Scott Fitzgerald"
+    ],
+    "answer": 0,
+    "explanation": "John Steinbeck wrote Of Mice and Men"
+  },
+  {
+    "id": 4114,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is a soliloquy?",
+    "options": [
+      "A fight",
+      "A conversation",
+      "A character speaking thoughts aloud alone",
+      "A group scene"
+    ],
+    "answer": 2,
+    "explanation": "A soliloquy is when a character speaks their thoughts aloud while alone"
+  },
+  {
+    "id": 4115,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'The Catcher in the Rye'?",
+    "options": [
+      "J.D. Salinger",
+      "John Updike",
+      "Philip Roth",
+      "Saul Bellow"
+    ],
+    "answer": 0,
+    "explanation": "J.D. Salinger wrote The Catcher in the Rye"
+  },
+  {
+    "id": 4116,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is a monologue?",
+    "options": [
+      "Two people talking",
+      "A long speech by one person",
+      "A short poem",
+      "A letter"
+    ],
+    "answer": 1,
+    "explanation": "A monologue is a long speech by one character"
+  },
+  {
+    "id": 4117,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Brave New World'?",
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "Philip K. Dick",
+      "Ray Bradbury"
+    ],
+    "answer": 1,
+    "explanation": "Aldous Huxley wrote Brave New World"
+  },
+  {
+    "id": 4118,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the genre of '1984' and 'Brave New World'?",
+    "options": [
+      "Romance",
+      "Comedy",
+      "Dystopian fiction",
+      "Historical fiction"
+    ],
+    "answer": 2,
+    "explanation": "Both are dystopian novels depicting negative future societies"
+  },
+  {
+    "id": 4119,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Fahrenheit 451'?",
+    "options": [
+      "Ray Bradbury",
+      "George Orwell",
+      "Aldous Huxley",
+      "Isaac Asimov"
+    ],
+    "answer": 0,
+    "explanation": "Ray Bradbury wrote Fahrenheit 451"
+  },
+  {
+    "id": 4120,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the central theme of 'Fahrenheit 451'?",
+    "options": [
+      "Time travel",
+      "Censorship and book burning",
+      "Love",
+      "Space exploration"
+    ],
+    "answer": 1,
+    "explanation": "Fahrenheit 451 is about censorship and the destruction of books"
+  },
+  {
+    "id": 4121,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Animal Farm'?",
+    "options": [
+      "Jules Verne",
+      "George Orwell",
+      "Aldous Huxley",
+      "H.G. Wells"
+    ],
+    "answer": 1,
+    "explanation": "George Orwell wrote Animal Farm"
+  },
+  {
+    "id": 4122,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is 'Animal Farm' an allegory of?",
+    "options": [
+      "World War I",
+      "The American Revolution",
+      "The French Revolution",
+      "The Russian Revolution"
+    ],
+    "answer": 3,
+    "explanation": "Animal Farm is an allegory of the Russian Revolution and Soviet Union"
+  },
+  {
+    "id": 4123,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Jane Eyre'?",
+    "options": [
+      "Charlotte Brontë",
+      "George Eliot",
+      "Jane Austen",
+      "Emily Brontë"
+    ],
+    "answer": 0,
+    "explanation": "Charlotte Brontë wrote Jane Eyre"
+  },
+  {
+    "id": 4124,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Wuthering Heights'?",
+    "options": [
+      "Charlotte Brontë",
+      "Emily Brontë",
+      "Anne Brontë",
+      "Jane Austen"
+    ],
+    "answer": 1,
+    "explanation": "Emily Brontë wrote Wuthering Heights"
+  },
+  {
+    "id": 4125,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is dramatic irony?",
+    "options": [
+      "A sad ending",
+      "When the audience knows something characters don't",
+      "A funny scene",
+      "A plot twist"
+    ],
+    "answer": 1,
+    "explanation": "Dramatic irony: audience knows information that characters don't"
+  },
+  {
+    "id": 4126,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'A Tale of Two Cities'?",
+    "options": [
+      "Charles Dickens",
+      "George Eliot",
+      "William Thackeray",
+      "Thomas Hardy"
+    ],
+    "answer": 0,
+    "explanation": "Charles Dickens wrote A Tale of Two Cities"
+  },
+  {
+    "id": 4127,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What two cities are in 'A Tale of Two Cities'?",
+    "options": [
+      "New York and Boston",
+      "London and Paris",
+      "Berlin and Vienna",
+      "Rome and Venice"
+    ],
+    "answer": 1,
+    "explanation": "The novel is set in London and Paris during the French Revolution"
+  },
+  {
+    "id": 4128,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Great Expectations'?",
+    "options": [
+      "Jane Austen",
+      "Charles Dickens",
+      "George Eliot",
+      "Thomas Hardy"
+    ],
+    "answer": 1,
+    "explanation": "Charles Dickens wrote Great Expectations"
+  },
+  {
+    "id": 4129,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the main character in 'Great Expectations'?",
+    "options": [
+      "Nicholas",
+      "Oliver",
+      "Pip",
+      "David"
+    ],
+    "answer": 2,
+    "explanation": "Pip (Philip Pirrip) is the protagonist and narrator"
+  },
+  {
+    "id": 4130,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'The Scarlet Letter'?",
+    "options": [
+      "Henry James",
+      "Nathaniel Hawthorne",
+      "Herman Melville",
+      "Mark Twain"
+    ],
+    "answer": 1,
+    "explanation": "Nathaniel Hawthorne wrote The Scarlet Letter"
+  },
+  {
+    "id": 4131,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What does the 'A' stand for in 'The Scarlet Letter'?",
+    "options": [
+      "Angel",
+      "Alone",
+      "America",
+      "Adultery"
+    ],
+    "answer": 3,
+    "explanation": "The scarlet letter 'A' stands for adultery"
+  },
+  {
+    "id": 4132,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Moby-Dick'?",
+    "options": [
+      "Mark Twain",
+      "Herman Melville",
+      "Jack London",
+      "Nathaniel Hawthorne"
+    ],
+    "answer": 1,
+    "explanation": "Herman Melville wrote Moby-Dick"
+  },
+  {
+    "id": 4133,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What type of animal is Moby Dick?",
+    "options": [
+      "Giant squid",
+      "White whale",
+      "Shark",
+      "Dolphin"
+    ],
+    "answer": 1,
+    "explanation": "Moby Dick is a great white whale"
+  },
+  {
+    "id": 4134,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the tragic flaw called in Greek drama?",
+    "options": [
+      "Pathos",
+      "Catharsis",
+      "Hamartia",
+      "Hubris"
+    ],
+    "answer": 2,
+    "explanation": "Hamartia is the tragic flaw that leads to the hero's downfall"
+  },
+  {
+    "id": 4135,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is hubris?",
+    "options": [
+      "Sadness",
+      "Wisdom",
+      "Excessive pride",
+      "Courage"
+    ],
+    "answer": 2,
+    "explanation": "Hubris is excessive pride or arrogance, often leading to downfall"
+  },
+  {
+    "id": 4136,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Odyssey'?",
+    "options": [
+      "Virgil",
+      "Homer",
+      "Sophocles",
+      "Ovid"
+    ],
+    "answer": 1,
+    "explanation": "Homer wrote The Odyssey and The Iliad"
+  },
+  {
+    "id": 4137,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is catharsis?",
+    "options": [
+      "A type of poem",
+      "A plot device",
+      "Emotional release/purification through art",
+      "A character type"
+    ],
+    "answer": 2,
+    "explanation": "Catharsis is the emotional release or purification experienced through tragedy"
+  },
+  {
+    "id": 4138,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Canterbury Tales'?",
+    "options": [
+      "William Shakespeare",
+      "Geoffrey Chaucer",
+      "Edmund Spenser",
+      "John Milton"
+    ],
+    "answer": 1,
+    "explanation": "Geoffrey Chaucer wrote The Canterbury Tales"
+  },
+  {
+    "id": 4139,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is an epic?",
+    "options": [
+      "A play",
+      "A long narrative poem about heroic deeds",
+      "A short poem",
+      "A letter"
+    ],
+    "answer": 1,
+    "explanation": "An epic is a long narrative poem celebrating heroic feats"
+  },
+  {
+    "id": 4140,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Paradise Lost'?",
+    "options": [
+      "John Milton",
+      "Edmund Spenser",
+      "John Donne",
+      "William Shakespeare"
+    ],
+    "answer": 0,
+    "explanation": "John Milton wrote Paradise Lost"
+  },
+  {
+    "id": 4141,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the subject of 'Paradise Lost'?",
+    "options": [
+      "The Fall of Man",
+      "The Trojan War",
+      "The Odyssey",
+      "King Arthur"
+    ],
+    "answer": 0,
+    "explanation": "Paradise Lost tells of Satan's rebellion and the Fall of Man"
+  },
+  {
+    "id": 4142,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Frankenstein'?",
+    "options": [
+      "Edgar Allan Poe",
+      "Mary Shelley",
+      "Bram Stoker",
+      "H.G. Wells"
+    ],
+    "answer": 1,
+    "explanation": "Mary Shelley wrote Frankenstein"
+  },
+  {
+    "id": 4143,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is Gothic literature characterized by?",
+    "options": [
+      "Mystery, horror, and the supernatural",
+      "Historical facts",
+      "Romance only",
+      "Comedy"
+    ],
+    "answer": 0,
+    "explanation": "Gothic literature features dark settings, mystery, horror, and supernatural elements"
+  },
+  {
+    "id": 4144,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Dracula'?",
+    "options": [
+      "H.P. Lovecraft",
+      "Bram Stoker",
+      "Edgar Allan Poe",
+      "Mary Shelley"
+    ],
+    "answer": 1,
+    "explanation": "Bram Stoker wrote Dracula"
+  },
+  {
+    "id": 4145,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What literary movement emphasized emotion and nature?",
+    "options": [
+      "Realism",
+      "Romanticism",
+      "Modernism",
+      "Naturalism"
+    ],
+    "answer": 1,
+    "explanation": "Romanticism emphasized emotion, individualism, and nature"
+  },
+  {
+    "id": 4146,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Raven'?",
+    "options": [
+      "Walt Whitman",
+      "Edgar Allan Poe",
+      "Henry Wadsworth Longfellow",
+      "Emily Dickinson"
+    ],
+    "answer": 1,
+    "explanation": "Edgar Allan Poe wrote The Raven"
+  },
+  {
+    "id": 4147,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What word does the raven repeat in 'The Raven'?",
+    "options": [
+      "Always",
+      "Never",
+      "Forever",
+      "Nevermore"
+    ],
+    "answer": 3,
+    "explanation": "The raven repeatedly says 'Nevermore'"
+  },
+  {
+    "id": 4148,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who is considered the father of free verse in American poetry?",
+    "options": [
+      "Robert Frost",
+      "Walt Whitman",
+      "T.S. Eliot",
+      "Edgar Allan Poe"
+    ],
+    "answer": 1,
+    "explanation": "Walt Whitman pioneered free verse in 'Leaves of Grass'"
+  },
+  {
+    "id": 4149,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is free verse?",
+    "options": [
+      "Drama",
+      "Prose writing",
+      "Poetry with strict rhyme",
+      "Poetry without regular meter or rhyme"
+    ],
+    "answer": 3,
+    "explanation": "Free verse lacks consistent meter, rhyme, or other patterns"
+  },
+  {
+    "id": 4150,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Road Not Taken'?",
+    "options": [
+      "Carl Sandburg",
+      "Robert Frost",
+      "Emily Dickinson",
+      "Walt Whitman"
+    ],
+    "answer": 1,
+    "explanation": "Robert Frost wrote The Road Not Taken"
+  },
+  {
+    "id": 4151,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is a Bildungsroman?",
+    "options": [
+      "A mystery",
+      "A horror novel",
+      "A romance",
+      "A coming-of-age story"
+    ],
+    "answer": 3,
+    "explanation": "Bildungsroman is a novel about moral/psychological growth (coming-of-age)"
+  },
+  {
+    "id": 4152,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Old Man and the Sea'?",
+    "options": [
+      "William Faulkner",
+      "John Steinbeck",
+      "F. Scott Fitzgerald",
+      "Ernest Hemingway"
+    ],
+    "answer": 3,
+    "explanation": "Ernest Hemingway wrote The Old Man and the Sea"
+  },
+  {
+    "id": 4153,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is Hemingway's writing style known for?",
+    "options": [
+      "Flowery prose",
+      "Long descriptions",
+      "Stream of consciousness",
+      "Short, simple sentences (Iceberg Theory)"
+    ],
+    "answer": 3,
+    "explanation": "Hemingway used simple prose with meaning beneath the surface (Iceberg Theory)"
+  },
+  {
+    "id": 4154,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Heart of Darkness'?",
+    "options": [
+      "Somerset Maugham",
+      "Graham Greene",
+      "E.M. Forster",
+      "Joseph Conrad"
+    ],
+    "answer": 3,
+    "explanation": "Joseph Conrad wrote Heart of Darkness"
+  },
+  {
+    "id": 4155,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is stream of consciousness?",
+    "options": [
+      "Description",
+      "Plot summary",
+      "Dialogue",
+      "Narrative technique showing continuous flow of thoughts"
+    ],
+    "answer": 3,
+    "explanation": "Stream of consciousness depicts the continuous flow of a character's thoughts"
+  },
+  {
+    "id": 4156,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Mrs Dalloway'?",
+    "options": [
+      "Virginia Woolf",
+      "D.H. Lawrence",
+      "E.M. Forster",
+      "James Joyce"
+    ],
+    "answer": 0,
+    "explanation": "Virginia Woolf wrote Mrs Dalloway"
+  },
+  {
+    "id": 4157,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Ulysses'?",
+    "options": [
+      "Virginia Woolf",
+      "James Joyce",
+      "D.H. Lawrence",
+      "Samuel Beckett"
+    ],
+    "answer": 1,
+    "explanation": "James Joyce wrote Ulysses"
+  },
+  {
+    "id": 4158,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What literary period followed Romanticism?",
+    "options": [
+      "Medieval",
+      "Renaissance",
+      "Victorian/Realism",
+      "Modernism"
+    ],
+    "answer": 2,
+    "explanation": "The Victorian era and Realism followed Romanticism"
+  },
+  {
+    "id": 4159,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Tess of the d'Urbervilles'?",
+    "options": [
+      "Charles Dickens",
+      "Thomas Hardy",
+      "Anthony Trollope",
+      "George Eliot"
+    ],
+    "answer": 1,
+    "explanation": "Thomas Hardy wrote Tess of the d'Urbervilles"
+  },
+  {
+    "id": 4160,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is naturalism in literature?",
+    "options": [
+      "Romantic idealism",
+      "Fantasy",
+      "Writing about nature",
+      "Extreme realism showing environment shaping characters"
+    ],
+    "answer": 3,
+    "explanation": "Naturalism is extreme realism showing how environment/heredity shape people"
+  },
+  {
+    "id": 4161,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Grapes of Wrath'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "John Steinbeck",
+      "Ernest Hemingway",
+      "William Faulkner"
+    ],
+    "answer": 1,
+    "explanation": "John Steinbeck wrote The Grapes of Wrath"
+  },
+  {
+    "id": 4162,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What historical event is 'The Grapes of Wrath' about?",
+    "options": [
+      "The Civil War",
+      "The Great Depression/Dust Bowl",
+      "World War II",
+      "World War I"
+    ],
+    "answer": 1,
+    "explanation": "The novel depicts the Dust Bowl and Great Depression"
+  },
+  {
+    "id": 4163,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Sound and the Fury'?",
+    "options": [
+      "Ernest Hemingway",
+      "F. Scott Fitzgerald",
+      "John Steinbeck",
+      "William Faulkner"
+    ],
+    "answer": 3,
+    "explanation": "William Faulkner wrote The Sound and the Fury"
+  },
+  {
+    "id": 4164,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is an unreliable narrator?",
+    "options": [
+      "Omniscient narrator",
+      "Truthful narrator",
+      "Third-person narrator",
+      "Narrator whose credibility is questionable"
+    ],
+    "answer": 3,
+    "explanation": "An unreliable narrator's account cannot be fully trusted"
+  },
+  {
+    "id": 4165,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Slaughterhouse-Five'?",
+    "options": [
+      "Thomas Pynchon",
+      "Joseph Heller",
+      "Ken Kesey",
+      "Kurt Vonnegut"
+    ],
+    "answer": 3,
+    "explanation": "Kurt Vonnegut wrote Slaughterhouse-Five"
+  },
+  {
+    "id": 4166,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Catch-22'?",
+    "options": [
+      "Gore Vidal",
+      "Joseph Heller",
+      "Kurt Vonnegut",
+      "Norman Mailer"
+    ],
+    "answer": 1,
+    "explanation": "Joseph Heller wrote Catch-22"
+  },
+  {
+    "id": 4167,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the Petrarchan sonnet structure?",
+    "options": [
+      "14 unrhymed lines",
+      "Three quatrains and couplet",
+      "Octave and sestet (8+6 lines)",
+      "Two septets"
+    ],
+    "answer": 2,
+    "explanation": "Petrarchan/Italian sonnet has an octave (8) and sestet (6) with volta"
+  },
+  {
+    "id": 4168,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the Shakespearean sonnet structure?",
+    "options": [
+      "Two septets",
+      "14 free verse lines",
+      "Octave and sestet",
+      "Three quatrains and a couplet"
+    ],
+    "answer": 3,
+    "explanation": "Shakespearean/English sonnet has 3 quatrains (ABAB CDCD EFEF) + couplet (GG)"
+  },
+  {
+    "id": 4169,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is enjambment?",
+    "options": [
+      "Meter",
+      "End-stopped line",
+      "Rhyme scheme",
+      "Continuation of sentence without pause across lines"
+    ],
+    "answer": 3,
+    "explanation": "Enjambment is when a sentence continues past the end of a line without pause"
+  },
+  {
+    "id": 4170,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the volta in a sonnet?",
+    "options": [
+      "The rhyme",
+      "The turn or shift in thought",
+      "The last line",
+      "The title"
+    ],
+    "answer": 1,
+    "explanation": "The volta is the turn or shift in argument/tone in a sonnet"
+  },
+  {
+    "id": 4171,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is an allegory?",
+    "options": [
+      "A comparison",
+      "A character type",
+      "A story with hidden symbolic meaning",
+      "A rhyme scheme"
+    ],
+    "answer": 2,
+    "explanation": "An allegory is a story where characters/events represent abstract ideas"
+  },
+  {
+    "id": 4172,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'The Waste Land'?",
+    "options": [
+      "Wallace Stevens",
+      "W.B. Yeats",
+      "Ezra Pound",
+      "T.S. Eliot"
+    ],
+    "answer": 3,
+    "explanation": "T.S. Eliot wrote The Waste Land"
+  },
+  {
+    "id": 4173,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What literary movement is 'The Waste Land' associated with?",
+    "options": [
+      "Modernism",
+      "Naturalism",
+      "Romanticism",
+      "Realism"
+    ],
+    "answer": 0,
+    "explanation": "The Waste Land is a key Modernist poem"
+  },
+  {
+    "id": 4174,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is an epiphany in literature?",
+    "options": [
+      "The climax",
+      "A sudden moment of insight or revelation",
+      "The setting",
+      "The ending"
+    ],
+    "answer": 1,
+    "explanation": "An epiphany is a sudden realization or moment of clarity for a character"
+  },
+  {
+    "id": 4175,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Dubliners'?",
+    "options": [
+      "Oscar Wilde",
+      "James Joyce",
+      "Samuel Beckett",
+      "W.B. Yeats"
+    ],
+    "answer": 1,
+    "explanation": "James Joyce wrote Dubliners, a short story collection"
+  },
+  {
+    "id": 4176,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is metafiction?",
+    "options": [
+      "Fiction that is self-aware of being fiction",
+      "Science fiction",
+      "Historical fiction",
+      "Realistic fiction"
+    ],
+    "answer": 0,
+    "explanation": "Metafiction is fiction that self-consciously addresses its own nature as fiction"
+  },
+  {
+    "id": 4177,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'One Hundred Years of Solitude'?",
+    "options": [
+      "Jorge Luis Borges",
+      "Gabriel García Márquez",
+      "Carlos Fuentes",
+      "Mario Vargas Llosa"
+    ],
+    "answer": 1,
+    "explanation": "Gabriel García Márquez wrote One Hundred Years of Solitude"
+  },
+  {
+    "id": 4178,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is magical realism?",
+    "options": [
+      "Realistic fiction with magical elements as normal",
+      "Pure fantasy",
+      "Horror",
+      "Science fiction"
+    ],
+    "answer": 0,
+    "explanation": "Magical realism presents magical elements as ordinary within realistic settings"
+  },
+  {
+    "id": 4179,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Waiting for Godot'?",
+    "options": [
+      "Eugene Ionesco",
+      "Samuel Beckett",
+      "Tom Stoppard",
+      "Harold Pinter"
+    ],
+    "answer": 1,
+    "explanation": "Samuel Beckett wrote Waiting for Godot"
+  },
+  {
+    "id": 4180,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What literary movement is 'Waiting for Godot' part of?",
+    "options": [
+      "Realism",
+      "Theatre of the Absurd",
+      "Romanticism",
+      "Naturalism"
+    ],
+    "answer": 1,
+    "explanation": "Waiting for Godot is a key work of the Theatre of the Absurd"
+  },
+  {
+    "id": 4181,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is an archetype?",
+    "options": [
+      "A genre",
+      "A plot device",
+      "A universal symbolic pattern or character type",
+      "A rhyme scheme"
+    ],
+    "answer": 2,
+    "explanation": "Archetypes are universal patterns (hero, trickster, journey, etc.)"
+  },
+  {
+    "id": 4182,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Invisible Man'?",
+    "options": [
+      "Richard Wright",
+      "Langston Hughes",
+      "Ralph Ellison",
+      "James Baldwin"
+    ],
+    "answer": 2,
+    "explanation": "Ralph Ellison wrote Invisible Man"
+  },
+  {
+    "id": 4183,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the Harlem Renaissance?",
+    "options": [
+      "European art movement",
+      "Southern literature",
+      "Beat poetry",
+      "African American cultural movement of the 1920s-30s"
+    ],
+    "answer": 3,
+    "explanation": "The Harlem Renaissance was a Black cultural/artistic flowering in 1920s-30s New York"
+  },
+  {
+    "id": 4184,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Their Eyes Were Watching God'?",
+    "options": [
+      "Zora Neale Hurston",
+      "Maya Angelou",
+      "Toni Morrison",
+      "Alice Walker"
+    ],
+    "answer": 0,
+    "explanation": "Zora Neale Hurston wrote Their Eyes Were Watching God"
+  },
+  {
+    "id": 4185,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Native Son'?",
+    "options": [
+      "Ralph Ellison",
+      "James Baldwin",
+      "Richard Wright",
+      "Chester Himes"
+    ],
+    "answer": 2,
+    "explanation": "Richard Wright wrote Native Son"
+  },
+  {
+    "id": 4186,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is a motif?",
+    "options": [
+      "The main idea",
+      "A recurring element that reinforces theme",
+      "The plot",
+      "The setting"
+    ],
+    "answer": 1,
+    "explanation": "A motif is a recurring element (image, symbol, idea) that develops theme"
+  },
+  {
+    "id": 4187,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Beloved'?",
+    "options": [
+      "Alice Walker",
+      "Toni Morrison",
+      "Zora Neale Hurston",
+      "Maya Angelou"
+    ],
+    "answer": 1,
+    "explanation": "Toni Morrison wrote Beloved"
+  },
+  {
+    "id": 4188,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is pastiche?",
+    "options": [
+      "Satire",
+      "Imitation of style, often as tribute",
+      "Parody",
+      "Criticism"
+    ],
+    "answer": 1,
+    "explanation": "Pastiche imitates the style of another work or period, often as homage"
+  },
+  {
+    "id": 4189,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'The Color Purple'?",
+    "options": [
+      "Alice Walker",
+      "Toni Morrison",
+      "Gloria Naylor",
+      "Maya Angelou"
+    ],
+    "answer": 0,
+    "explanation": "Alice Walker wrote The Color Purple"
+  },
+  {
+    "id": 4190,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is an epistolary novel?",
+    "options": [
+      "Historical novel",
+      "Romantic novel",
+      "Mystery novel",
+      "Novel told through letters/documents"
+    ],
+    "answer": 3,
+    "explanation": "An epistolary novel is written as a series of letters or documents"
+  },
+  {
+    "id": 4191,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'On the Road'?",
+    "options": [
+      "Jack Kerouac",
+      "William S. Burroughs",
+      "Neal Cassady",
+      "Allen Ginsberg"
+    ],
+    "answer": 0,
+    "explanation": "Jack Kerouac wrote On the Road"
+  },
+  {
+    "id": 4192,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What literary movement are the Beat writers associated with?",
+    "options": [
+      "Realism",
+      "The Beat Generation",
+      "Modernism",
+      "Romanticism"
+    ],
+    "answer": 1,
+    "explanation": "The Beat Generation was a 1950s literary movement rejecting conformity"
+  },
+  {
+    "id": 4193,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Howl'?",
+    "options": [
+      "Allen Ginsberg",
+      "Jack Kerouac",
+      "Gregory Corso",
+      "Lawrence Ferlinghetti"
+    ],
+    "answer": 0,
+    "explanation": "Allen Ginsberg wrote the poem Howl"
+  },
+  {
+    "id": 4194,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is a frame narrative?",
+    "options": [
+      "A story within a story structure",
+      "The main story",
+      "The beginning",
+      "The ending"
+    ],
+    "answer": 0,
+    "explanation": "A frame narrative is a story that contains another story within it"
+  },
+  {
+    "id": 4195,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'The Metamorphosis'?",
+    "options": [
+      "Hermann Hesse",
+      "Robert Musil",
+      "Franz Kafka",
+      "Thomas Mann"
+    ],
+    "answer": 2,
+    "explanation": "Franz Kafka wrote The Metamorphosis"
+  },
+  {
+    "id": 4196,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is Kafkaesque?",
+    "options": [
+      "Romantic",
+      "Realistic",
+      "Comedic",
+      "Nightmarish, absurd bureaucratic situations"
+    ],
+    "answer": 3,
+    "explanation": "Kafkaesque describes nightmarish, illogical, threatening situations"
+  },
+  {
+    "id": 4197,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Crime and Punishment'?",
+    "options": [
+      "Anton Chekhov",
+      "Fyodor Dostoevsky",
+      "Leo Tolstoy",
+      "Ivan Turgenev"
+    ],
+    "answer": 1,
+    "explanation": "Fyodor Dostoevsky wrote Crime and Punishment"
+  },
+  {
+    "id": 4198,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'War and Peace'?",
+    "options": [
+      "Fyodor Dostoevsky",
+      "Nikolai Gogol",
+      "Leo Tolstoy",
+      "Anton Chekhov"
+    ],
+    "answer": 2,
+    "explanation": "Leo Tolstoy wrote War and Peace"
+  },
+  {
+    "id": 4199,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is a deus ex machina?",
+    "options": [
+      "A theme",
+      "An unexpected device solving an impossible situation",
+      "A setting",
+      "A character type"
+    ],
+    "answer": 1,
+    "explanation": "Deus ex machina is an unexpected event/character that suddenly solves a problem"
+  },
+  {
+    "id": 4200,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "Who wrote 'Don Quixote'?",
+    "options": [
+      "Miguel de Cervantes",
+      "Pedro Calderón",
+      "Lope de Vega",
+      "Federico García Lorca"
+    ],
+    "answer": 0,
+    "explanation": "Miguel de Cervantes wrote Don Quixote"
+  },
+  {
+    "id": 4201,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is New Criticism?",
+    "options": [
+      "Reviewing new books",
+      "Biographical criticism",
+      "Historical analysis",
+      "Close reading focusing on text itself"
+    ],
+    "answer": 3,
+    "explanation": "New Criticism focuses on close reading of text, ignoring author/context"
+  },
+  {
+    "id": 4202,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is structuralism in literary theory?",
+    "options": [
+      "Biographical analysis",
+      "Historical context",
+      "Analyzing underlying structures and patterns",
+      "Building structure"
+    ],
+    "answer": 2,
+    "explanation": "Structuralism analyzes underlying structures, codes, and conventions in texts"
+  },
+  {
+    "id": 4203,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is deconstruction?",
+    "options": [
+      "Marxist criticism",
+      "Building analysis",
+      "Historical criticism",
+      "Challenging binary oppositions and stable meaning"
+    ],
+    "answer": 3,
+    "explanation": "Deconstruction questions fixed meanings and binary oppositions in texts"
+  },
+  {
+    "id": 4204,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who is associated with deconstruction?",
+    "options": [
+      "Jacques Lacan",
+      "Roland Barthes",
+      "Jacques Derrida",
+      "Michel Foucault"
+    ],
+    "answer": 2,
+    "explanation": "Jacques Derrida is the primary theorist of deconstruction"
+  },
+  {
+    "id": 4205,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the 'death of the author' concept?",
+    "options": [
+      "Close reading",
+      "Text meaning independent of author's intention",
+      "Author biography focus",
+      "Historical context"
+    ],
+    "answer": 1,
+    "explanation": "Barthes' concept: text's meaning is created by readers, not author's intention"
+  },
+  {
+    "id": 4206,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'The Death of the Author'?",
+    "options": [
+      "Michel Foucault",
+      "Jacques Derrida",
+      "Julia Kristeva",
+      "Roland Barthes"
+    ],
+    "answer": 3,
+    "explanation": "Roland Barthes wrote 'The Death of the Author' (1967)"
+  },
+  {
+    "id": 4207,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is feminist literary criticism?",
+    "options": [
+      "Formalist approach",
+      "Historical analysis",
+      "Analyzing gender representation and patriarchy in texts",
+      "Criticizing women"
+    ],
+    "answer": 2,
+    "explanation": "Feminist criticism examines gender representation and challenges patriarchal assumptions"
+  },
+  {
+    "id": 4208,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is Marxist literary criticism?",
+    "options": [
+      "Psychological analysis",
+      "Analyzing class, ideology, and economic factors",
+      "Ignoring economics",
+      "Formalist criticism"
+    ],
+    "answer": 1,
+    "explanation": "Marxist criticism analyzes class struggle, ideology, and material conditions"
+  },
+  {
+    "id": 4209,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is psychoanalytic criticism?",
+    "options": [
+      "Historical analysis",
+      "Analyzing texts through psychological/Freudian lens",
+      "Formalist approach",
+      "Marxist analysis"
+    ],
+    "answer": 1,
+    "explanation": "Psychoanalytic criticism applies Freudian/Lacanian psychology to literature"
+  },
+  {
+    "id": 4210,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is reader-response theory?",
+    "options": [
+      "Focus on reader's role in creating meaning",
+      "Historical context",
+      "Author's intention focus",
+      "Textual analysis only"
+    ],
+    "answer": 0,
+    "explanation": "Reader-response emphasizes the reader's role in constructing meaning"
+  },
+  {
+    "id": 4211,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is postcolonial criticism?",
+    "options": [
+      "Formalist criticism",
+      "Analyzing effects of colonialism and empire on literature",
+      "Celebrating colonialism",
+      "Historical dates focus"
+    ],
+    "answer": 1,
+    "explanation": "Postcolonial criticism examines colonialism's cultural and literary effects"
+  },
+  {
+    "id": 4212,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Orientalism'?",
+    "options": [
+      "Edward Said",
+      "Homi Bhabha",
+      "Frantz Fanon",
+      "Gayatri Spivak"
+    ],
+    "answer": 0,
+    "explanation": "Edward Said wrote Orientalism (1978), foundational to postcolonial studies"
+  },
+  {
+    "id": 4213,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is intertextuality?",
+    "options": [
+      "Text isolation",
+      "Author biography",
+      "Relationships between texts",
+      "Single text focus"
+    ],
+    "answer": 2,
+    "explanation": "Intertextuality refers to relationships and references between texts"
+  },
+  {
+    "id": 4214,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the canon in literature?",
+    "options": [
+      "Unpublished works",
+      "New writing only",
+      "A weapon",
+      "Body of works considered most important"
+    ],
+    "answer": 3,
+    "explanation": "The literary canon is the body of works traditionally considered most important"
+  },
+  {
+    "id": 4215,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is narratology?",
+    "options": [
+      "Historical criticism",
+      "Biographical analysis",
+      "Study of narrative structure and technique",
+      "Writing narratives"
+    ],
+    "answer": 2,
+    "explanation": "Narratology is the systematic study of narrative structure and technique"
+  },
+  {
+    "id": 4216,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the implied author?",
+    "options": [
+      "Narrator",
+      "Real author",
+      "The author as constructed from the text",
+      "Character"
+    ],
+    "answer": 2,
+    "explanation": "The implied author is the reader's sense of the author constructed from text"
+  },
+  {
+    "id": 4217,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is focalization?",
+    "options": [
+      "Perspective through which narrative is presented",
+      "Character development",
+      "Plot structure",
+      "Camera focus"
+    ],
+    "answer": 0,
+    "explanation": "Focalization is whose perspective filters the narrative (who sees)"
+  },
+  {
+    "id": 4218,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is diegesis?",
+    "options": [
+      "The fictional world of a narrative",
+      "Author's life",
+      "Dialogue",
+      "The real world"
+    ],
+    "answer": 0,
+    "explanation": "Diegesis is the world within the narrative, the story's reality"
+  },
+  {
+    "id": 4219,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is mimesis?",
+    "options": [
+      "Fantasy",
+      "Imitation or representation of reality",
+      "Memory",
+      "Abstract art"
+    ],
+    "answer": 1,
+    "explanation": "Mimesis is the imitation or representation of nature/reality in art"
+  },
+  {
+    "id": 4220,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who wrote 'Poetics'?",
+    "options": [
+      "Plato",
+      "Aristotle",
+      "Sophocles",
+      "Socrates"
+    ],
+    "answer": 1,
+    "explanation": "Aristotle wrote Poetics, foundational to literary theory"
+  },
+  {
+    "id": 4221,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What are the three unities in classical drama?",
+    "options": [
+      "Time, place, action",
+      "Plot, theme, setting",
+      "Character, conflict, resolution",
+      "Beginning, middle, end"
+    ],
+    "answer": 0,
+    "explanation": "The three unities are time (24 hours), place (single location), action (single plot)"
+  },
+  {
+    "id": 4222,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is defamiliarization?",
+    "options": [
+      "Making the familiar seem strange",
+      "Simple language",
+      "Making familiar",
+      "Realistic description"
+    ],
+    "answer": 0,
+    "explanation": "Defamiliarization (ostranenie) makes the familiar strange to renew perception"
+  },
+  {
+    "id": 4223,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who introduced the concept of defamiliarization?",
+    "options": [
+      "Mikhail Bakhtin",
+      "Roman Jakobson",
+      "Roland Barthes",
+      "Viktor Shklovsky"
+    ],
+    "answer": 3,
+    "explanation": "Viktor Shklovsky introduced ostranenie (defamiliarization) in Russian Formalism"
+  },
+  {
+    "id": 4224,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the signifier/signified distinction?",
+    "options": [
+      "Word form (signifier) vs. concept (signified)",
+      "Character vs. narrator",
+      "Grammar rule",
+      "Plot vs. theme"
+    ],
+    "answer": 0,
+    "explanation": "Saussure: signifier is the word/sound, signified is the concept it represents"
+  },
+  {
+    "id": 4225,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who developed structural linguistics?",
+    "options": [
+      "Noam Chomsky",
+      "Ferdinand de Saussure",
+      "Claude Lévi-Strauss",
+      "Roman Jakobson"
+    ],
+    "answer": 1,
+    "explanation": "Ferdinand de Saussure is the founder of structural linguistics"
+  },
+  {
+    "id": 4226,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is binary opposition?",
+    "options": [
+      "Plot conflict",
+      "Mathematical term",
+      "Pairs of opposing concepts (good/evil, male/female)",
+      "Character contrast"
+    ],
+    "answer": 2,
+    "explanation": "Binary opposition: contrasting pairs that structure meaning (light/dark)"
+  },
+  {
+    "id": 4227,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is heteroglossia?",
+    "options": [
+      "Diversity of voices/languages in a text",
+      "Author's voice",
+      "Monologue",
+      "Single voice"
+    ],
+    "answer": 0,
+    "explanation": "Bakhtin's heteroglossia: the presence of multiple voices/discourses in a text"
+  },
+  {
+    "id": 4228,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who developed the concept of heteroglossia?",
+    "options": [
+      "Michel Foucault",
+      "Roland Barthes",
+      "Mikhail Bakhtin",
+      "Jacques Derrida"
+    ],
+    "answer": 2,
+    "explanation": "Mikhail Bakhtin developed heteroglossia and dialogism"
+  },
+  {
+    "id": 4229,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is the carnivalesque?",
+    "options": [
+      "Formal structure",
+      "Circus performance",
+      "Subversion of hierarchy through humor and chaos",
+      "Classical tragedy"
+    ],
+    "answer": 2,
+    "explanation": "Bakhtin's carnivalesque: subversion of authority through humor, the grotesque"
+  },
+  {
+    "id": 4230,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is a discourse in Foucault's sense?",
+    "options": [
+      "Narrative",
+      "Dialogue",
+      "Systems of knowledge, power, and language",
+      "Conversation"
+    ],
+    "answer": 2,
+    "explanation": "Foucault: discourse is systems of thought/knowledge that shape what can be said"
+  },
+  {
+    "id": 4231,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is New Historicism?",
+    "options": [
+      "Formalist approach",
+      "Reading texts within their cultural/historical context",
+      "Historical dates",
+      "Biographical focus"
+    ],
+    "answer": 1,
+    "explanation": "New Historicism analyzes texts within their cultural and historical contexts"
+  },
+  {
+    "id": 4232,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "What is écriture féminine?",
+    "options": [
+      "Women's writing challenging patriarchal language",
+      "Male writing",
+      "Historical documents",
+      "Traditional poetry"
+    ],
+    "answer": 0,
+    "explanation": "Écriture féminine: feminist concept of writing that challenges masculine discourse"
+  },
+  {
+    "id": 4233,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Literature",
+    "question": "Who is associated with écriture féminine?",
+    "options": [
+      "Judith Butler",
+      "Simone de Beauvoir",
+      "Virginia Woolf",
+      "Hélène Cixous"
+    ],
+    "answer": 3,
+    "explanation": "Hélène Cixous is associated with écriture féminine"
+  },
+  {
+    "id": 4234,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is Lacan's concept of the 'mirror stage'?",
+    "options": [
+      "Formation of ego through misrecognition of unified self",
+      "Self-reflection",
+      "Literal mirror use",
+      "Childhood memory"
+    ],
+    "answer": 0,
+    "explanation": "Lacan: infant forms ego by identifying with mirror image, a misrecognition"
+  },
+  {
+    "id": 4235,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the Symbolic in Lacanian theory?",
+    "options": [
+      "Images",
+      "Realm of language, law, and social order",
+      "Dreams",
+      "The unconscious"
+    ],
+    "answer": 1,
+    "explanation": "The Symbolic is the realm of language, law, and structured social reality"
+  },
+  {
+    "id": 4236,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the Real in Lacanian theory?",
+    "options": [
+      "Consciousness",
+      "What resists symbolization, traumatic kernel",
+      "The symbolic order",
+      "Reality"
+    ],
+    "answer": 1,
+    "explanation": "Lacan's Real is what cannot be represented in language, the traumatic"
+  },
+  {
+    "id": 4237,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is aporia?",
+    "options": [
+      "Resolution",
+      "Opening",
+      "An irresolvable internal contradiction or impasse",
+      "Agreement"
+    ],
+    "answer": 2,
+    "explanation": "Aporia is an irresolvable contradiction or logical impasse in a text"
+  },
+  {
+    "id": 4238,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is différance?",
+    "options": [
+      "Similarity",
+      "Derrida's term for deferral and difference in meaning",
+      "Identity",
+      "Difference"
+    ],
+    "answer": 1,
+    "explanation": "Derrida's différance: meaning is endlessly deferred through chains of signifiers"
+  },
+  {
+    "id": 4239,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is logocentrism?",
+    "options": [
+      "Visual culture",
+      "Logo design",
+      "Scientific thinking",
+      "Privileging speech/presence over writing/absence"
+    ],
+    "answer": 3,
+    "explanation": "Logocentrism: Western tendency to privilege speech, presence, and unified meaning"
+  },
+  {
+    "id": 4240,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the subaltern?",
+    "options": [
+      "Marginalized groups outside power structures",
+      "Authors",
+      "Dominant class",
+      "Military rank"
+    ],
+    "answer": 0,
+    "explanation": "Subaltern (Spivak): groups marginalized and silenced by dominant discourse"
+  },
+  {
+    "id": 4241,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'Can the Subaltern Speak?'",
+    "options": [
+      "Gayatri Spivak",
+      "Homi Bhabha",
+      "Frantz Fanon",
+      "Edward Said"
+    ],
+    "answer": 0,
+    "explanation": "Gayatri Spivak wrote 'Can the Subaltern Speak?' (1988)"
+  },
+  {
+    "id": 4242,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is hybridity in postcolonial theory?",
+    "options": [
+      "Separation",
+      "Cultural mixing and blending of identities",
+      "Pure culture",
+      "Tradition"
+    ],
+    "answer": 1,
+    "explanation": "Bhabha's hybridity: cultural mixing that creates new transcultural forms"
+  },
+  {
+    "id": 4243,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the 'third space' in postcolonial theory?",
+    "options": [
+      "Hybrid space of cultural negotiation",
+      "Margin",
+      "Physical location",
+      "Colonial center"
+    ],
+    "answer": 0,
+    "explanation": "Bhabha's third space: ambivalent site where cultural meaning is negotiated"
+  },
+  {
+    "id": 4244,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is interpellation?",
+    "options": [
+      "Translation",
+      "Questioning",
+      "Process of being hailed as a subject by ideology",
+      "Interruption"
+    ],
+    "answer": 2,
+    "explanation": "Althusser's interpellation: ideology constitutes individuals as subjects"
+  },
+  {
+    "id": 4245,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who developed the concept of interpellation?",
+    "options": [
+      "Michel Foucault",
+      "Antonio Gramsci",
+      "Louis Althusser",
+      "Georg Lukács"
+    ],
+    "answer": 2,
+    "explanation": "Louis Althusser developed interpellation in Marxist theory"
+  },
+  {
+    "id": 4246,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is hegemony in Gramsci's sense?",
+    "options": [
+      "Direct force",
+      "Ideological dominance through consent",
+      "Military control",
+      "Economic power"
+    ],
+    "answer": 1,
+    "explanation": "Gramsci: hegemony is domination through cultural consent, not just force"
+  },
+  {
+    "id": 4247,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the gaze in film/literary theory?",
+    "options": [
+      "Looking",
+      "Power dynamic in looking and being looked at",
+      "Eye contact",
+      "Camera angle"
+    ],
+    "answer": 1,
+    "explanation": "The gaze involves power relations in looking (often male gaze, colonial gaze)"
+  },
+  {
+    "id": 4248,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who developed the concept of the male gaze?",
+    "options": [
+      "Laura Mulvey",
+      "Simone de Beauvoir",
+      "Judith Butler",
+      "Julia Kristeva"
+    ],
+    "answer": 0,
+    "explanation": "Laura Mulvey developed the male gaze concept in 'Visual Pleasure and Narrative Cinema'"
+  },
+  {
+    "id": 4249,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is performativity in Butler's theory?",
+    "options": [
+      "Gender as constituted through repeated acts",
+      "Theatre",
+      "Acting skill",
+      "Single performance"
+    ],
+    "answer": 0,
+    "explanation": "Butler: gender is performative, constituted through repeated stylized acts"
+  },
+  {
+    "id": 4250,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is queer theory?",
+    "options": [
+      "LGBTQ+ history",
+      "Challenging fixed sexual/gender identities and norms",
+      "Gay literature only",
+      "Medical study"
+    ],
+    "answer": 1,
+    "explanation": "Queer theory challenges normative categories of gender and sexuality"
+  },
+  {
+    "id": 4251,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the anxiety of influence?",
+    "options": [
+      "Reader anxiety",
+      "Publication fear",
+      "Writing anxiety",
+      "Strong poets struggling against predecessors"
+    ],
+    "answer": 3,
+    "explanation": "Bloom's anxiety of influence: poets struggle to differentiate from predecessors"
+  },
+  {
+    "id": 4252,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who wrote 'The Anxiety of Influence'?",
+    "options": [
+      "Geoffrey Hartman",
+      "Harold Bloom",
+      "J. Hillis Miller",
+      "Paul de Man"
+    ],
+    "answer": 1,
+    "explanation": "Harold Bloom wrote The Anxiety of Influence (1973)"
+  },
+  {
+    "id": 4253,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the intentional fallacy?",
+    "options": [
+      "Error of judging text by author's intention",
+      "Narrative mistake",
+      "Author's intention is key",
+      "Plot hole"
+    ],
+    "answer": 0,
+    "explanation": "Wimsatt/Beardsley: judging text by author's intention is a fallacy"
+  },
+  {
+    "id": 4254,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the affective fallacy?",
+    "options": [
+      "Error of judging text by reader's emotional response",
+      "Character flaw",
+      "Plot failure",
+      "Emotional criticism"
+    ],
+    "answer": 0,
+    "explanation": "Affective fallacy: confusing the poem with its emotional effects on readers"
+  },
+  {
+    "id": 4255,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is fabula vs. sjuzhet?",
+    "options": [
+      "Character types",
+      "Plot vs. theme",
+      "Setting vs. mood",
+      "Story events (fabula) vs. their arrangement (sjuzhet)"
+    ],
+    "answer": 3,
+    "explanation": "Fabula is chronological events; sjuzhet is how they're arranged in narrative"
+  },
+  {
+    "id": 4256,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is analepsis?",
+    "options": [
+      "Parallel action",
+      "Forward jump",
+      "Present tense",
+      "Flashback in narrative"
+    ],
+    "answer": 3,
+    "explanation": "Analepsis is a narrative flashback (opposite of prolepsis)"
+  },
+  {
+    "id": 4257,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is prolepsis?",
+    "options": [
+      "Present tense",
+      "Flashback",
+      "Flash-forward in narrative",
+      "Past tense"
+    ],
+    "answer": 2,
+    "explanation": "Prolepsis is a narrative flash-forward, anticipating future events"
+  },
+  {
+    "id": 4258,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is free indirect discourse?",
+    "options": [
+      "Dialogue",
+      "Blend of narrator's voice and character's thoughts",
+      "Direct speech",
+      "Monologue"
+    ],
+    "answer": 1,
+    "explanation": "Free indirect discourse blends third-person narration with character's inner voice"
+  },
+  {
+    "id": 4259,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the implied reader?",
+    "options": [
+      "The reader assumed/constructed by the text",
+      "Author",
+      "Critic",
+      "Real reader"
+    ],
+    "answer": 0,
+    "explanation": "The implied reader is the ideal reader presupposed by the text itself"
+  },
+  {
+    "id": 4260,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "Who developed implied reader concept?",
+    "options": [
+      "Stanley Fish",
+      "Wolfgang Iser",
+      "Roland Barthes",
+      "Hans Robert Jauss"
+    ],
+    "answer": 1,
+    "explanation": "Wolfgang Iser developed the concept of the implied reader"
+  },
+  {
+    "id": 4261,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the horizon of expectations?",
+    "options": [
+      "Author's intention",
+      "Future prediction",
+      "Plot expectation",
+      "Reader's cultural framework for understanding texts"
+    ],
+    "answer": 3,
+    "explanation": "Jauss: horizon of expectations is reader's cultural framework for interpreting texts"
+  },
+  {
+    "id": 4262,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is interpretive community?",
+    "options": [
+      "Publishers",
+      "Group sharing reading strategies that shape meaning",
+      "Authors",
+      "Reading group"
+    ],
+    "answer": 1,
+    "explanation": "Fish: interpretive communities share strategies that determine textual meaning"
+  },
+  {
+    "id": 4263,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is the hermeneutic circle?",
+    "options": [
+      "Reading speed",
+      "Understanding whole/parts through each other",
+      "Circular plot",
+      "Genre classification"
+    ],
+    "answer": 1,
+    "explanation": "Hermeneutic circle: understanding parts requires whole, whole requires parts"
+  },
+  {
+    "id": 4264,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is phenomenological criticism?",
+    "options": [
+      "Historical approach",
+      "Focus on consciousness and experience of reading",
+      "Scientific analysis",
+      "Formalist method"
+    ],
+    "answer": 1,
+    "explanation": "Phenomenological criticism examines the reader's consciousness during reading"
+  },
+  {
+    "id": 4265,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is a palimpsest in literary terms?",
+    "options": [
+      "Plot structure",
+      "Character type",
+      "Text with traces of earlier erased texts",
+      "Type of poem"
+    ],
+    "answer": 2,
+    "explanation": "Palimpsest: text bearing traces of earlier writing, suggesting layered meanings"
+  },
+  {
+    "id": 4266,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Literature",
+    "question": "What is thick description?",
+    "options": [
+      "Simple narration",
+      "Long description",
+      "Detailed interpretation of cultural meanings",
+      "Physical description"
+    ],
+    "answer": 2,
+    "explanation": "Geertz's thick description: detailed interpretation revealing cultural significance"
+  },
+  {
+    "id": 4267,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the trace in Derrida's philosophy?",
+    "options": [
+      "Evidence",
+      "Presence of absence, mark of différance",
+      "Memory",
+      "Footprint"
+    ],
+    "answer": 1,
+    "explanation": "Trace: the mark of absence/différance that haunts presence"
+  },
+  {
+    "id": 4268,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the supplement in Derrida's thought?",
+    "options": [
+      "Extra chapter",
+      "Addition",
+      "Appendix",
+      "That which completes but also shows lack in original"
+    ],
+    "answer": 3,
+    "explanation": "Supplement: addition that reveals and compensates for lack in the original"
+  },
+  {
+    "id": 4269,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the pharmakon concept?",
+    "options": [
+      "Medicine",
+      "Drug reference",
+      "Derrida's term for undecidability (poison/cure)",
+      "Healing"
+    ],
+    "answer": 2,
+    "explanation": "Pharmakon: Greek word meaning both poison and cure, undecidable"
+  },
+  {
+    "id": 4270,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the objet petit a in Lacan?",
+    "options": [
+      "Art object",
+      "The unattainable object-cause of desire",
+      "Personal item",
+      "Small object"
+    ],
+    "answer": 1,
+    "explanation": "Objet petit a: the unattainable object that causes and sustains desire"
+  },
+  {
+    "id": 4271,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is jouissance in Lacanian theory?",
+    "options": [
+      "Joy",
+      "Excessive enjoyment beyond pleasure principle",
+      "Happiness",
+      "Satisfaction"
+    ],
+    "answer": 1,
+    "explanation": "Jouissance: painful/excessive enjoyment transgressing the pleasure principle"
+  },
+  {
+    "id": 4272,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the semiotic in Kristeva's theory?",
+    "options": [
+      "Language rules",
+      "Pre-linguistic, rhythmic drives disrupting symbolic",
+      "Signs",
+      "Symbols"
+    ],
+    "answer": 1,
+    "explanation": "Kristeva's semiotic: pre-linguistic bodily drives that disrupt symbolic order"
+  },
+  {
+    "id": 4273,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is abjection in Kristeva's theory?",
+    "options": [
+      "Rejection",
+      "Horror at breakdown of distinction between self/other",
+      "Objection",
+      "Criticism"
+    ],
+    "answer": 1,
+    "explanation": "Abjection: horror at things that threaten boundaries (corpse, bodily fluids)"
+  },
+  {
+    "id": 4274,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is rhizome in Deleuze and Guattari?",
+    "options": [
+      "Non-hierarchical network of connections",
+      "Linear path",
+      "Plant root",
+      "Tree structure"
+    ],
+    "answer": 0,
+    "explanation": "Rhizome: non-hierarchical, multiple-entry network opposing tree-like structures"
+  },
+  {
+    "id": 4275,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is deterritorialization?",
+    "options": [
+      "Freeing from fixed territories and meanings",
+      "Border control",
+      "Mapping",
+      "Colonization"
+    ],
+    "answer": 0,
+    "explanation": "Deleuze/Guattari: deterritorialization frees elements from fixed territories/identities"
+  },
+  {
+    "id": 4276,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is a minor literature?",
+    "options": [
+      "Short stories",
+      "Literature that deterritorializes major language",
+      "Children's books",
+      "Unimportant writing"
+    ],
+    "answer": 1,
+    "explanation": "Deleuze/Guattari: minor literature uses major language in deterritorializing way"
+  },
+  {
+    "id": 4277,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is biopolitics?",
+    "options": [
+      "Political biology",
+      "Medical politics",
+      "Power over life and populations",
+      "Ecological politics"
+    ],
+    "answer": 2,
+    "explanation": "Foucault's biopolitics: power that regulates populations and biological life"
+  },
+  {
+    "id": 4278,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is panopticism?",
+    "options": [
+      "Prison design only",
+      "All-seeing eye",
+      "Internalized surveillance and self-discipline",
+      "Photography"
+    ],
+    "answer": 2,
+    "explanation": "Foucault: panopticism is internalized surveillance producing self-discipline"
+  },
+  {
+    "id": 4279,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the episteme in Foucault?",
+    "options": [
+      "Knowledge",
+      "Science",
+      "Truth",
+      "Underlying framework determining what counts as knowledge"
+    ],
+    "answer": 3,
+    "explanation": "Episteme: historical a priori that determines what can be thought/said in era"
+  },
+  {
+    "id": 4280,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is genealogy in Foucault's method?",
+    "options": [
+      "Linear history",
+      "Tracing historical contingency and power relations",
+      "Family history",
+      "Evolution"
+    ],
+    "answer": 1,
+    "explanation": "Foucauldian genealogy traces power relations and contingency of 'truths'"
+  },
+  {
+    "id": 4281,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the simulacrum in Baudrillard?",
+    "options": [
+      "Copy of original",
+      "Fake",
+      "Simulation game",
+      "Copy without original, hyperreal sign"
+    ],
+    "answer": 3,
+    "explanation": "Baudrillard: simulacrum is copy without original; hyperreality replaces reality"
+  },
+  {
+    "id": 4282,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is hyperreality?",
+    "options": [
+      "Virtual reality",
+      "Enhanced reality",
+      "Simulation more real than real, signs without referents",
+      "True reality"
+    ],
+    "answer": 2,
+    "explanation": "Baudrillard: hyperreality is simulation that precedes and replaces the real"
+  },
+  {
+    "id": 4283,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the society of the spectacle?",
+    "options": [
+      "Visual culture",
+      "Debord's critique of image-mediated social relations",
+      "Entertainment industry",
+      "Theatre society"
+    ],
+    "answer": 1,
+    "explanation": "Debord: spectacle mediates all social relations through images"
+  },
+  {
+    "id": 4284,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is Žižek's concept of ideology?",
+    "options": [
+      "Propaganda",
+      "Political doctrine",
+      "False beliefs",
+      "Fantasy structuring social reality"
+    ],
+    "answer": 3,
+    "explanation": "Žižek: ideology is not illusion but fantasy that structures our social reality"
+  },
+  {
+    "id": 4285,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is parallax in Žižek's philosophy?",
+    "options": [
+      "Agreement",
+      "Irreducible gap between perspectives",
+      "Visual effect",
+      "Measurement"
+    ],
+    "answer": 1,
+    "explanation": "Žižek's parallax: irreducible gap between different perspectives on same object"
+  },
+  {
+    "id": 4286,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is cognitive mapping in Jameson?",
+    "options": [
+      "Memory technique",
+      "Mental representation of social totality under late capitalism",
+      "Geography",
+      "Brain science"
+    ],
+    "answer": 1,
+    "explanation": "Jameson: cognitive mapping is grasping one's position in global capitalist system"
+  },
+  {
+    "id": 4287,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the political unconscious?",
+    "options": [
+      "Political amnesia",
+      "Voting patterns",
+      "Jameson: narrative as socially symbolic act",
+      "Subliminal politics"
+    ],
+    "answer": 2,
+    "explanation": "Jameson: all literature is political, expressing class struggle and history"
+  },
+  {
+    "id": 4288,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is bare life in Agamben?",
+    "options": [
+      "Natural existence",
+      "Basic needs",
+      "Simple life",
+      "Life excluded from political order yet captured by it"
+    ],
+    "answer": 3,
+    "explanation": "Agamben: bare life is life stripped of political rights, exposed to sovereign power"
+  },
+  {
+    "id": 4289,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the state of exception?",
+    "options": [
+      "Agamben: suspension of law that becomes permanent",
+      "Exception clause",
+      "Emergency state",
+      "Special case"
+    ],
+    "answer": 0,
+    "explanation": "Agamben: state of exception is suspension of law that becomes normalized"
+  },
+  {
+    "id": 4290,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is negative dialectics?",
+    "options": [
+      "Adorno: dialectics without synthesis",
+      "Pessimism",
+      "Contradiction",
+      "Opposition only"
+    ],
+    "answer": 0,
+    "explanation": "Adorno: negative dialectics refuses the reconciliation of contradictions"
+  },
+  {
+    "id": 4291,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the culture industry?",
+    "options": [
+      "Entertainment business",
+      "Arts funding",
+      "Creative sector",
+      "Adorno/Horkheimer: mass culture as ideological control"
+    ],
+    "answer": 3,
+    "explanation": "Culture industry: standardized mass culture that produces conformity"
+  },
+  {
+    "id": 4292,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the uncanny (unheimlich)?",
+    "options": [
+      "Freud: familiar made strange, returning repressed",
+      "Horror",
+      "Strange",
+      "Supernatural"
+    ],
+    "answer": 0,
+    "explanation": "Uncanny: the strangely familiar, when the repressed returns"
+  },
+  {
+    "id": 4293,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the death drive?",
+    "options": [
+      "Risk-taking",
+      "Suicide",
+      "Freud: drive toward destruction and return to inorganic",
+      "Murder instinct"
+    ],
+    "answer": 2,
+    "explanation": "Death drive (Thanatos): compulsion to return to inorganic state"
+  },
+  {
+    "id": 4294,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the chronotope in Bakhtin?",
+    "options": [
+      "Clock",
+      "Intrinsic connection of time and space in narrative",
+      "Time only",
+      "Space only"
+    ],
+    "answer": 1,
+    "explanation": "Chronotope: the intrinsic connectedness of temporal and spatial relations"
+  },
+  {
+    "id": 4295,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is polyphony in Bakhtin's sense?",
+    "options": [
+      "Multiple independent voices/consciousnesses in novel",
+      "Chorus",
+      "Harmony",
+      "Multiple sounds"
+    ],
+    "answer": 0,
+    "explanation": "Bakhtin: polyphony is plurality of independent, unmerged voices in novel"
+  },
+  {
+    "id": 4296,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the dialogic imagination?",
+    "options": [
+      "Creative dialogue",
+      "Q&A",
+      "Bakhtin: novel as site of competing discourses",
+      "Conversation"
+    ],
+    "answer": 2,
+    "explanation": "Dialogic imagination: the novel as arena for heteroglossia and dialogue"
+  },
+  {
+    "id": 4297,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the implied reader different from narratee?",
+    "options": [
+      "Reader vs. listener",
+      "Real vs. fictional",
+      "Same thing",
+      "Implied reader is textual construct; narratee is addressed in text"
+    ],
+    "answer": 3,
+    "explanation": "Narratee is explicitly addressed in text; implied reader is presupposed by it"
+  },
+  {
+    "id": 4298,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is metalepsis?",
+    "options": [
+      "Metonymy",
+      "Metaphor",
+      "Hyperbole",
+      "Transgression between narrative levels"
+    ],
+    "answer": 3,
+    "explanation": "Metalepsis: transgression of boundary between narrative levels (author entering story)"
+  },
+  {
+    "id": 4299,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is the hermeneutics of suspicion?",
+    "options": [
+      "Close reading",
+      "Literal reading",
+      "Ricoeur: reading that unmasks hidden meanings",
+      "Trust author"
+    ],
+    "answer": 2,
+    "explanation": "Ricoeur: hermeneutics of suspicion (Marx, Freud, Nietzsche) unmasks illusions"
+  },
+  {
+    "id": 4300,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Literature",
+    "question": "What is surface reading?",
+    "options": [
+      "Speed reading",
+      "Best/Marcus: attention to text's surface vs. hidden depths",
+      "Skimming",
+      "Shallow reading"
+    ],
+    "answer": 1,
+    "explanation": "Surface reading: focuses on what texts say rather than symptomatic reading"
+  }
+]

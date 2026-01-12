@@ -100,6 +100,10 @@
                     <button class="btn btn-secondary" id="next-btn" style="display: none;">
                         <span class="btn-text">Next Question</span>
                     </button>
+                    <button class="btn btn-outline" id="stop-btn" style="margin-left: auto;">
+                        <span class="btn-icon">⏹️</span>
+                        <span class="btn-text">Stop Quiz</span>
+                    </button>
                 </div>
             </section>
 
@@ -143,6 +147,13 @@
     <script src="js/engine.js"></script>
     <script src="js/quiz-ui.js"></script>
     <script src="js/theme.js"></script>
+    <script>
+        const stored = localStorage.getItem('neuroquizUserSetup');
+        if (!stored) {
+            console.log('[RB-ADA] no_setup_found, redirecting to setup');
+            window.location.href = 'setup.html';
+        }
+    </script>
 </body>
 </html>
 

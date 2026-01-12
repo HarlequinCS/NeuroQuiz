@@ -1,0 +1,4502 @@
+[
+  {
+    "id": 5001,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the capital of the United States?",
+    "options": [
+      "New York",
+      "Los Angeles",
+      "Washington D.C.",
+      "Chicago"
+    ],
+    "answer": 2,
+    "explanation": "Washington D.C. is the capital of the United States"
+  },
+  {
+    "id": 5002,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "How many continents are there?",
+    "options": [
+      "8",
+      "7",
+      "6",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "There are 7 continents on Earth"
+  },
+  {
+    "id": 5003,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What color are bananas when ripe?",
+    "options": [
+      "Green",
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "answer": 3,
+    "explanation": "Ripe bananas are yellow"
+  },
+  {
+    "id": 5004,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "How many days are in a week?",
+    "options": [
+      "8",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 3,
+    "explanation": "There are 7 days in a week"
+  },
+  {
+    "id": 5005,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the largest ocean on Earth?",
+    "options": [
+      "Atlantic",
+      "Indian",
+      "Pacific",
+      "Arctic"
+    ],
+    "answer": 2,
+    "explanation": "The Pacific Ocean is the largest ocean"
+  },
+  {
+    "id": 5006,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What animal is known as the King of the Jungle?",
+    "options": [
+      "Lion",
+      "Elephant",
+      "Bear",
+      "Tiger"
+    ],
+    "answer": 0,
+    "explanation": "The lion is called the King of the Jungle"
+  },
+  {
+    "id": 5007,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "How many colors are in a rainbow?",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "5"
+    ],
+    "answer": 0,
+    "explanation": "A rainbow has 7 colors: red, orange, yellow, green, blue, indigo, violet"
+  },
+  {
+    "id": 5008,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the largest land animal?",
+    "options": [
+      "Giraffe",
+      "Rhino",
+      "Elephant",
+      "Hippo"
+    ],
+    "answer": 2,
+    "explanation": "The African elephant is the largest land animal"
+  },
+  {
+    "id": 5009,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which country is known for the Eiffel Tower?",
+    "options": [
+      "France",
+      "Germany",
+      "Italy",
+      "Spain"
+    ],
+    "answer": 0,
+    "explanation": "The Eiffel Tower is in Paris, France"
+  },
+  {
+    "id": 5010,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the main ingredient in bread?",
+    "options": [
+      "Flour",
+      "Corn",
+      "Oats",
+      "Rice"
+    ],
+    "answer": 0,
+    "explanation": "Bread is mainly made from flour"
+  },
+  {
+    "id": 5011,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "How many months have 31 days?",
+    "options": [
+      "7",
+      "5",
+      "8",
+      "6"
+    ],
+    "answer": 0,
+    "explanation": "7 months have 31 days"
+  },
+  {
+    "id": 5012,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the tallest animal?",
+    "options": [
+      "Camel",
+      "Giraffe",
+      "Elephant",
+      "Horse"
+    ],
+    "answer": 1,
+    "explanation": "The giraffe is the tallest animal"
+  },
+  {
+    "id": 5013,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which planet is closest to the Sun?",
+    "options": [
+      "Mars",
+      "Earth",
+      "Mercury",
+      "Venus"
+    ],
+    "answer": 2,
+    "explanation": "Mercury is the closest planet to the Sun"
+  },
+  {
+    "id": 5014,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What do you call a baby dog?",
+    "options": [
+      "Cub",
+      "Kitten",
+      "Calf",
+      "Puppy"
+    ],
+    "answer": 3,
+    "explanation": "A baby dog is called a puppy"
+  },
+  {
+    "id": 5015,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "How many sides does a triangle have?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "3"
+    ],
+    "answer": 3,
+    "explanation": "A triangle has 3 sides"
+  },
+  {
+    "id": 5016,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is frozen water called?",
+    "options": [
+      "Rain",
+      "Ice",
+      "Fog",
+      "Steam"
+    ],
+    "answer": 1,
+    "explanation": "Frozen water is called ice"
+  },
+  {
+    "id": 5017,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which country is famous for pizza?",
+    "options": [
+      "Greece",
+      "France",
+      "Spain",
+      "Italy"
+    ],
+    "answer": 3,
+    "explanation": "Pizza originated in Italy"
+  },
+  {
+    "id": 5018,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the opposite of hot?",
+    "options": [
+      "Warm",
+      "Cool",
+      "Cold",
+      "Mild"
+    ],
+    "answer": 2,
+    "explanation": "Cold is the opposite of hot"
+  },
+  {
+    "id": 5019,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "How many legs does a spider have?",
+    "options": [
+      "12",
+      "10",
+      "8",
+      "6"
+    ],
+    "answer": 2,
+    "explanation": "Spiders have 8 legs"
+  },
+  {
+    "id": 5020,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What color is the sky on a clear day?",
+    "options": [
+      "Red",
+      "Blue",
+      "Green",
+      "Yellow"
+    ],
+    "answer": 1,
+    "explanation": "The sky appears blue on a clear day"
+  },
+  {
+    "id": 5021,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which animal gives us milk?",
+    "options": [
+      "Cow",
+      "Chicken",
+      "Fish",
+      "Bird"
+    ],
+    "answer": 0,
+    "explanation": "Cows give us milk"
+  },
+  {
+    "id": 5022,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What holiday is on December 25th?",
+    "options": [
+      "Easter",
+      "Thanksgiving",
+      "Christmas",
+      "Halloween"
+    ],
+    "answer": 2,
+    "explanation": "Christmas is celebrated on December 25th"
+  },
+  {
+    "id": 5023,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the fastest land animal?",
+    "options": [
+      "Cheetah",
+      "Horse",
+      "Deer",
+      "Lion"
+    ],
+    "answer": 0,
+    "explanation": "The cheetah is the fastest land animal"
+  },
+  {
+    "id": 5024,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "How many wheels does a bicycle have?",
+    "options": [
+      "3",
+      "1",
+      "4",
+      "2"
+    ],
+    "answer": 3,
+    "explanation": "A bicycle has 2 wheels"
+  },
+  {
+    "id": 5025,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the capital of Japan?",
+    "options": [
+      "Seoul",
+      "Tokyo",
+      "Bangkok",
+      "Beijing"
+    ],
+    "answer": 1,
+    "explanation": "Tokyo is the capital of Japan"
+  },
+  {
+    "id": 5026,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which bird cannot fly?",
+    "options": [
+      "Eagle",
+      "Sparrow",
+      "Penguin",
+      "Crow"
+    ],
+    "answer": 2,
+    "explanation": "Penguins cannot fly"
+  },
+  {
+    "id": 5027,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What do you call a baby cat?",
+    "options": [
+      "Puppy",
+      "Kitten",
+      "Joey",
+      "Cub"
+    ],
+    "answer": 1,
+    "explanation": "A baby cat is called a kitten"
+  },
+  {
+    "id": 5028,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "How many hours are in a day?",
+    "options": [
+      "30",
+      "18",
+      "12",
+      "24"
+    ],
+    "answer": 3,
+    "explanation": "There are 24 hours in a day"
+  },
+  {
+    "id": 5029,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the capital of England?",
+    "options": [
+      "Dublin",
+      "London",
+      "Edinburgh",
+      "Paris"
+    ],
+    "answer": 1,
+    "explanation": "London is the capital of England"
+  },
+  {
+    "id": 5030,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What fruit is orange and orange?",
+    "options": [
+      "Orange",
+      "Apple",
+      "Banana",
+      "Grape"
+    ],
+    "answer": 0,
+    "explanation": "An orange is both orange in color and called orange"
+  },
+  {
+    "id": 5031,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which season comes after summer?",
+    "options": [
+      "Summer",
+      "Fall/Autumn",
+      "Spring",
+      "Winter"
+    ],
+    "answer": 1,
+    "explanation": "Fall/Autumn comes after summer"
+  },
+  {
+    "id": 5032,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the largest country by area?",
+    "options": [
+      "Canada",
+      "USA",
+      "China",
+      "Russia"
+    ],
+    "answer": 3,
+    "explanation": "Russia is the largest country by area"
+  },
+  {
+    "id": 5033,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which animal has a trunk?",
+    "options": [
+      "Giraffe",
+      "Hippo",
+      "Elephant",
+      "Zebra"
+    ],
+    "answer": 2,
+    "explanation": "Elephants have trunks"
+  },
+  {
+    "id": 5034,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the capital of Australia?",
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "Perth",
+      "Canberra"
+    ],
+    "answer": 3,
+    "explanation": "Canberra is the capital of Australia, not Sydney"
+  },
+  {
+    "id": 5035,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which ocean is between Europe and America?",
+    "options": [
+      "Atlantic",
+      "Indian",
+      "Pacific",
+      "Arctic"
+    ],
+    "answer": 0,
+    "explanation": "The Atlantic Ocean is between Europe and America"
+  },
+  {
+    "id": 5036,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the longest river in the world?",
+    "options": [
+      "Mississippi",
+      "Yangtze",
+      "Nile",
+      "Amazon"
+    ],
+    "answer": 2,
+    "explanation": "The Nile is traditionally considered the longest river"
+  },
+  {
+    "id": 5037,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "How many stripes are on the American flag?",
+    "options": [
+      "12",
+      "11",
+      "13",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "The American flag has 13 stripes representing the original colonies"
+  },
+  {
+    "id": 5038,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the currency of the United Kingdom?",
+    "options": [
+      "Dollar",
+      "Franc",
+      "Euro",
+      "Pound"
+    ],
+    "answer": 3,
+    "explanation": "The British Pound is the UK's currency"
+  },
+  {
+    "id": 5039,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which desert is the largest in the world?",
+    "options": [
+      "Kalahari",
+      "Arabian",
+      "Gobi",
+      "Sahara"
+    ],
+    "answer": 3,
+    "explanation": "The Sahara is the largest hot desert in the world"
+  },
+  {
+    "id": 5040,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What country has the Great Wall?",
+    "options": [
+      "India",
+      "China",
+      "Korea",
+      "Japan"
+    ],
+    "answer": 1,
+    "explanation": "The Great Wall is in China"
+  },
+  {
+    "id": 5041,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which sport uses a shuttlecock?",
+    "options": [
+      "Badminton",
+      "Tennis",
+      "Squash",
+      "Volleyball"
+    ],
+    "answer": 0,
+    "explanation": "Badminton uses a shuttlecock"
+  },
+  {
+    "id": 5042,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the hardest natural substance?",
+    "options": [
+      "Diamond",
+      "Silver",
+      "Gold",
+      "Iron"
+    ],
+    "answer": 0,
+    "explanation": "Diamond is the hardest natural substance"
+  },
+  {
+    "id": 5043,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which country is shaped like a boot?",
+    "options": [
+      "Portugal",
+      "Italy",
+      "Spain",
+      "Greece"
+    ],
+    "answer": 1,
+    "explanation": "Italy is shaped like a boot"
+  },
+  {
+    "id": 5044,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the largest planet in our solar system?",
+    "options": [
+      "Neptune",
+      "Saturn",
+      "Jupiter",
+      "Uranus"
+    ],
+    "answer": 2,
+    "explanation": "Jupiter is the largest planet"
+  },
+  {
+    "id": 5045,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which country is known for kangaroos?",
+    "options": [
+      "New Zealand",
+      "Australia",
+      "South Africa",
+      "India"
+    ],
+    "answer": 1,
+    "explanation": "Australia is famous for kangaroos"
+  },
+  {
+    "id": 5046,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the capital of Canada?",
+    "options": [
+      "Toronto",
+      "Vancouver",
+      "Ottawa",
+      "Montreal"
+    ],
+    "answer": 2,
+    "explanation": "Ottawa is the capital of Canada"
+  },
+  {
+    "id": 5047,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "How many rings are on the Olympic flag?",
+    "options": [
+      "7",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": 3,
+    "explanation": "The Olympic flag has 5 interlocking rings"
+  },
+  {
+    "id": 5048,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the tallest mountain in the world?",
+    "options": [
+      "Mont Blanc",
+      "Kilimanjaro",
+      "K2",
+      "Mount Everest"
+    ],
+    "answer": 3,
+    "explanation": "Mount Everest is the tallest mountain"
+  },
+  {
+    "id": 5049,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which country gave the Statue of Liberty to the USA?",
+    "options": [
+      "Italy",
+      "England",
+      "Spain",
+      "France"
+    ],
+    "answer": 3,
+    "explanation": "France gave the Statue of Liberty to the United States"
+  },
+  {
+    "id": 5050,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the main language spoken in Brazil?",
+    "options": [
+      "Spanish",
+      "English",
+      "French",
+      "Portuguese"
+    ],
+    "answer": 3,
+    "explanation": "Portuguese is the main language in Brazil"
+  },
+  {
+    "id": 5051,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the smallest country in the world?",
+    "options": [
+      "Liechtenstein",
+      "Monaco",
+      "San Marino",
+      "Vatican City"
+    ],
+    "answer": 3,
+    "explanation": "Vatican City is the smallest country"
+  },
+  {
+    "id": 5052,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which country has the most people?",
+    "options": [
+      "USA",
+      "Russia",
+      "China",
+      "India"
+    ],
+    "answer": 2,
+    "explanation": "China has the largest population (or India, depending on current data)"
+  },
+  {
+    "id": 5053,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the currency of Japan?",
+    "options": [
+      "Yen",
+      "Yuan",
+      "Won",
+      "Ringgit"
+    ],
+    "answer": 0,
+    "explanation": "The Yen is Japan's currency"
+  },
+  {
+    "id": 5054,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which animal is the symbol of the World Wildlife Fund (WWF)?",
+    "options": [
+      "Tiger",
+      "Panda",
+      "Elephant",
+      "Whale"
+    ],
+    "answer": 1,
+    "explanation": "The Giant Panda is the WWF symbol"
+  },
+  {
+    "id": 5055,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the capital of Egypt?",
+    "options": [
+      "Alexandria",
+      "Giza",
+      "Luxor",
+      "Cairo"
+    ],
+    "answer": 3,
+    "explanation": "Cairo is the capital of Egypt"
+  },
+  {
+    "id": 5056,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which continent is the Sahara Desert in?",
+    "options": [
+      "South America",
+      "Africa",
+      "Australia",
+      "Asia"
+    ],
+    "answer": 1,
+    "explanation": "The Sahara Desert is in Africa"
+  },
+  {
+    "id": 5057,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What year did World War II end?",
+    "options": [
+      "1944",
+      "1946",
+      "1945",
+      "1943"
+    ],
+    "answer": 2,
+    "explanation": "World War II ended in 1945"
+  },
+  {
+    "id": 5058,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which planet is known as the Red Planet?",
+    "options": [
+      "Venus",
+      "Mars",
+      "Mercury",
+      "Jupiter"
+    ],
+    "answer": 1,
+    "explanation": "Mars is called the Red Planet"
+  },
+  {
+    "id": 5059,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the capital of India?",
+    "options": [
+      "New Delhi",
+      "Kolkata",
+      "Mumbai",
+      "Bangalore"
+    ],
+    "answer": 0,
+    "explanation": "New Delhi is the capital of India"
+  },
+  {
+    "id": 5060,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which sport is played at Wimbledon?",
+    "options": [
+      "Golf",
+      "Cricket",
+      "Football",
+      "Tennis"
+    ],
+    "answer": 3,
+    "explanation": "Tennis is played at Wimbledon"
+  },
+  {
+    "id": 5061,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the largest rainforest in the world?",
+    "options": [
+      "Amazon",
+      "Tongass",
+      "Congo",
+      "Daintree"
+    ],
+    "answer": 0,
+    "explanation": "The Amazon Rainforest is the largest"
+  },
+  {
+    "id": 5062,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which country has the maple leaf on its flag?",
+    "options": [
+      "Australia",
+      "UK",
+      "Canada",
+      "USA"
+    ],
+    "answer": 2,
+    "explanation": "Canada has a maple leaf on its flag"
+  },
+  {
+    "id": 5063,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the Great Barrier Reef made of?",
+    "options": [
+      "Coral",
+      "Shells",
+      "Sand",
+      "Rocks"
+    ],
+    "answer": 0,
+    "explanation": "The Great Barrier Reef is made of coral"
+  },
+  {
+    "id": 5064,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which country invented paper?",
+    "options": [
+      "Egypt",
+      "Greece",
+      "India",
+      "China"
+    ],
+    "answer": 3,
+    "explanation": "Paper was invented in China"
+  },
+  {
+    "id": 5065,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the capital of Germany?",
+    "options": [
+      "Berlin",
+      "Frankfurt",
+      "Munich",
+      "Hamburg"
+    ],
+    "answer": 0,
+    "explanation": "Berlin is the capital of Germany"
+  },
+  {
+    "id": 5066,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which ocean is the warmest?",
+    "options": [
+      "Atlantic",
+      "Arctic",
+      "Indian",
+      "Pacific"
+    ],
+    "answer": 2,
+    "explanation": "The Indian Ocean is the warmest ocean"
+  },
+  {
+    "id": 5067,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the capital of Brazil?",
+    "options": [
+      "Brasília",
+      "Salvador",
+      "São Paulo",
+      "Rio de Janeiro"
+    ],
+    "answer": 0,
+    "explanation": "Brasília is the capital of Brazil, not Rio"
+  },
+  {
+    "id": 5068,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which country has the longest coastline?",
+    "options": [
+      "USA",
+      "Canada",
+      "Russia",
+      "Australia"
+    ],
+    "answer": 1,
+    "explanation": "Canada has the longest coastline in the world"
+  },
+  {
+    "id": 5069,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the deepest ocean trench?",
+    "options": [
+      "Java Trench",
+      "Puerto Rico Trench",
+      "Philippine Trench",
+      "Mariana Trench"
+    ],
+    "answer": 3,
+    "explanation": "The Mariana Trench is the deepest point in the ocean"
+  },
+  {
+    "id": 5070,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which ancient wonder was in Egypt?",
+    "options": [
+      "Colossus",
+      "Great Pyramid of Giza",
+      "Hanging Gardens",
+      "Lighthouse"
+    ],
+    "answer": 1,
+    "explanation": "The Great Pyramid of Giza is the only surviving ancient wonder"
+  },
+  {
+    "id": 5071,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the smallest ocean?",
+    "options": [
+      "Southern",
+      "Atlantic",
+      "Indian",
+      "Arctic"
+    ],
+    "answer": 3,
+    "explanation": "The Arctic Ocean is the smallest ocean"
+  },
+  {
+    "id": 5072,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which country has the most time zones?",
+    "options": [
+      "Russia",
+      "USA",
+      "China",
+      "France"
+    ],
+    "answer": 3,
+    "explanation": "France has 12 time zones due to overseas territories"
+  },
+  {
+    "id": 5073,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the currency of Switzerland?",
+    "options": [
+      "Mark",
+      "Euro",
+      "Franc",
+      "Krona"
+    ],
+    "answer": 2,
+    "explanation": "Switzerland uses the Swiss Franc"
+  },
+  {
+    "id": 5074,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which country has the most islands?",
+    "options": [
+      "Japan",
+      "Philippines",
+      "Sweden",
+      "Indonesia"
+    ],
+    "answer": 2,
+    "explanation": "Sweden has the most islands (approximately 267,570)"
+  },
+  {
+    "id": 5075,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the capital of Turkey?",
+    "options": [
+      "Antalya",
+      "Ankara",
+      "Istanbul",
+      "Izmir"
+    ],
+    "answer": 1,
+    "explanation": "Ankara is the capital of Turkey, not Istanbul"
+  },
+  {
+    "id": 5076,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which river flows through Paris?",
+    "options": [
+      "Thames",
+      "Seine",
+      "Rhine",
+      "Danube"
+    ],
+    "answer": 1,
+    "explanation": "The Seine flows through Paris"
+  },
+  {
+    "id": 5077,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the largest lake by surface area?",
+    "options": [
+      "Lake Superior",
+      "Caspian Sea",
+      "Lake Victoria",
+      "Lake Baikal"
+    ],
+    "answer": 1,
+    "explanation": "The Caspian Sea is the largest lake by surface area"
+  },
+  {
+    "id": 5078,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "options": [
+      "Korea",
+      "Thailand",
+      "China",
+      "Japan"
+    ],
+    "answer": 3,
+    "explanation": "Japan is called the Land of the Rising Sun"
+  },
+  {
+    "id": 5079,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the capital of South Korea?",
+    "options": [
+      "Seoul",
+      "Busan",
+      "Daegu",
+      "Incheon"
+    ],
+    "answer": 0,
+    "explanation": "Seoul is the capital of South Korea"
+  },
+  {
+    "id": 5080,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which country is completely surrounded by South Africa?",
+    "options": [
+      "Lesotho",
+      "Botswana",
+      "Zimbabwe",
+      "Swaziland"
+    ],
+    "answer": 0,
+    "explanation": "Lesotho is completely surrounded by South Africa"
+  },
+  {
+    "id": 5081,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the official language of Pakistan?",
+    "options": [
+      "Hindi",
+      "English",
+      "Punjabi",
+      "Urdu"
+    ],
+    "answer": 3,
+    "explanation": "Urdu is the official language of Pakistan"
+  },
+  {
+    "id": 5082,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which European country has the most UNESCO World Heritage Sites?",
+    "options": [
+      "France",
+      "Italy",
+      "Germany",
+      "Spain"
+    ],
+    "answer": 1,
+    "explanation": "Italy has the most UNESCO World Heritage Sites"
+  },
+  {
+    "id": 5083,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the largest Spanish-speaking country by area?",
+    "options": [
+      "Argentina",
+      "Colombia",
+      "Spain",
+      "Mexico"
+    ],
+    "answer": 0,
+    "explanation": "Argentina is the largest Spanish-speaking country by area"
+  },
+  {
+    "id": 5084,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which strait separates Europe from Africa?",
+    "options": [
+      "Malacca",
+      "Hormuz",
+      "Gibraltar",
+      "Bosphorus"
+    ],
+    "answer": 2,
+    "explanation": "The Strait of Gibraltar separates Europe from Africa"
+  },
+  {
+    "id": 5085,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the highest waterfall in the world?",
+    "options": [
+      "Victoria Falls",
+      "Niagara Falls",
+      "Angel Falls",
+      "Iguazu Falls"
+    ],
+    "answer": 2,
+    "explanation": "Angel Falls in Venezuela is the highest waterfall"
+  },
+  {
+    "id": 5086,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which country was formerly known as Persia?",
+    "options": [
+      "Iran",
+      "Syria",
+      "Turkey",
+      "Iraq"
+    ],
+    "answer": 0,
+    "explanation": "Iran was formerly known as Persia"
+  },
+  {
+    "id": 5087,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the capital of New Zealand?",
+    "options": [
+      "Queenstown",
+      "Auckland",
+      "Christchurch",
+      "Wellington"
+    ],
+    "answer": 3,
+    "explanation": "Wellington is the capital of New Zealand"
+  },
+  {
+    "id": 5088,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which African country was never colonized?",
+    "options": [
+      "Ethiopia",
+      "Ghana",
+      "Kenya",
+      "Nigeria"
+    ],
+    "answer": 0,
+    "explanation": "Ethiopia was never colonized (briefly occupied by Italy)"
+  },
+  {
+    "id": 5089,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the largest island in the world?",
+    "options": [
+      "Madagascar",
+      "Borneo",
+      "New Guinea",
+      "Greenland"
+    ],
+    "answer": 3,
+    "explanation": "Greenland is the largest island (Australia is a continent)"
+  },
+  {
+    "id": 5090,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which country has the most official languages?",
+    "options": [
+      "Zimbabwe",
+      "South Africa",
+      "Switzerland",
+      "India"
+    ],
+    "answer": 0,
+    "explanation": "Zimbabwe has 16 official languages"
+  },
+  {
+    "id": 5091,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the driest continent?",
+    "options": [
+      "Australia",
+      "Asia",
+      "Antarctica",
+      "Africa"
+    ],
+    "answer": 2,
+    "explanation": "Antarctica is technically the driest continent"
+  },
+  {
+    "id": 5092,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which river is the longest in Europe?",
+    "options": [
+      "Rhine",
+      "Seine",
+      "Volga",
+      "Danube"
+    ],
+    "answer": 2,
+    "explanation": "The Volga is the longest river in Europe"
+  },
+  {
+    "id": 5093,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the capital of Vietnam?",
+    "options": [
+      "Hue",
+      "Da Nang",
+      "Ho Chi Minh City",
+      "Hanoi"
+    ],
+    "answer": 3,
+    "explanation": "Hanoi is the capital of Vietnam"
+  },
+  {
+    "id": 5094,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which mountain range separates Europe from Asia?",
+    "options": [
+      "Caucasus",
+      "Alps",
+      "Himalayas",
+      "Ural Mountains"
+    ],
+    "answer": 3,
+    "explanation": "The Ural Mountains traditionally separate Europe from Asia"
+  },
+  {
+    "id": 5095,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the most spoken language in the world?",
+    "options": [
+      "Hindi",
+      "Mandarin Chinese",
+      "Spanish",
+      "English"
+    ],
+    "answer": 1,
+    "explanation": "Mandarin Chinese has the most native speakers"
+  },
+  {
+    "id": 5096,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which country has the most pyramids?",
+    "options": [
+      "Egypt",
+      "Peru",
+      "Mexico",
+      "Sudan"
+    ],
+    "answer": 3,
+    "explanation": "Sudan has more pyramids than Egypt"
+  },
+  {
+    "id": 5097,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the capital of Morocco?",
+    "options": [
+      "Fez",
+      "Marrakech",
+      "Casablanca",
+      "Rabat"
+    ],
+    "answer": 3,
+    "explanation": "Rabat is the capital of Morocco"
+  },
+  {
+    "id": 5098,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which country has the highest average elevation?",
+    "options": [
+      "Switzerland",
+      "Bhutan",
+      "Bolivia",
+      "Nepal"
+    ],
+    "answer": 1,
+    "explanation": "Bhutan has the highest average elevation"
+  },
+  {
+    "id": 5099,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the largest landlocked country?",
+    "options": [
+      "Mongolia",
+      "Chad",
+      "Mali",
+      "Kazakhstan"
+    ],
+    "answer": 3,
+    "explanation": "Kazakhstan is the world's largest landlocked country"
+  },
+  {
+    "id": 5100,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which two countries share the longest international border?",
+    "options": [
+      "USA-Mexico",
+      "USA-Canada",
+      "Russia-China",
+      "Argentina-Chile"
+    ],
+    "answer": 1,
+    "explanation": "The USA-Canada border is the longest international border"
+  },
+  {
+    "id": 5101,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Who painted the Mona Lisa?",
+    "options": [
+      "Leonardo da Vinci",
+      "Raphael",
+      "Michelangelo",
+      "Botticelli"
+    ],
+    "answer": 0,
+    "explanation": "Leonardo da Vinci painted the Mona Lisa"
+  },
+  {
+    "id": 5102,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "In which year did World War I begin?",
+    "options": [
+      "1916",
+      "1914",
+      "1912",
+      "1918"
+    ],
+    "answer": 1,
+    "explanation": "World War I began in 1914"
+  },
+  {
+    "id": 5103,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Who was the first person to walk on the moon?",
+    "options": [
+      "Neil Armstrong",
+      "Yuri Gagarin",
+      "John Glenn",
+      "Buzz Aldrin"
+    ],
+    "answer": 0,
+    "explanation": "Neil Armstrong was the first person on the moon in 1969"
+  },
+  {
+    "id": 5104,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the chemical symbol for gold?",
+    "options": [
+      "Ag",
+      "Au",
+      "Go",
+      "Gd"
+    ],
+    "answer": 1,
+    "explanation": "Au (from Latin 'aurum') is the symbol for gold"
+  },
+  {
+    "id": 5105,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which country hosted the 2016 Summer Olympics?",
+    "options": [
+      "China",
+      "Brazil",
+      "UK",
+      "Japan"
+    ],
+    "answer": 1,
+    "explanation": "Brazil (Rio de Janeiro) hosted the 2016 Olympics"
+  },
+  {
+    "id": 5106,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "options": [
+      "Mark Twain",
+      "William Shakespeare",
+      "Jane Austen",
+      "Charles Dickens"
+    ],
+    "answer": 1,
+    "explanation": "William Shakespeare wrote Romeo and Juliet"
+  },
+  {
+    "id": 5107,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the currency of the European Union?",
+    "options": [
+      "Euro",
+      "Franc",
+      "Pound",
+      "Dollar"
+    ],
+    "answer": 0,
+    "explanation": "The Euro is the currency of the Eurozone"
+  },
+  {
+    "id": 5108,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Who discovered penicillin?",
+    "options": [
+      "Joseph Lister",
+      "Robert Koch",
+      "Alexander Fleming",
+      "Louis Pasteur"
+    ],
+    "answer": 2,
+    "explanation": "Alexander Fleming discovered penicillin in 1928"
+  },
+  {
+    "id": 5109,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the largest organ in the human body?",
+    "options": [
+      "Brain",
+      "Liver",
+      "Skin",
+      "Heart"
+    ],
+    "answer": 2,
+    "explanation": "The skin is the largest organ"
+  },
+  {
+    "id": 5110,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "In which city is the Colosseum located?",
+    "options": [
+      "Paris",
+      "Athens",
+      "Rome",
+      "Madrid"
+    ],
+    "answer": 2,
+    "explanation": "The Colosseum is in Rome, Italy"
+  },
+  {
+    "id": 5111,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Who painted the ceiling of the Sistine Chapel?",
+    "options": [
+      "Leonardo da Vinci",
+      "Caravaggio",
+      "Raphael",
+      "Michelangelo"
+    ],
+    "answer": 3,
+    "explanation": "Michelangelo painted the Sistine Chapel ceiling"
+  },
+  {
+    "id": 5112,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What does DNA stand for?",
+    "options": [
+      "Dinitrogen acid",
+      "Dioxin nucleic acid",
+      "Dual nitrogen acid",
+      "Deoxyribonucleic acid"
+    ],
+    "answer": 3,
+    "explanation": "DNA stands for Deoxyribonucleic acid"
+  },
+  {
+    "id": 5113,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which planet is known for its rings?",
+    "options": [
+      "Jupiter",
+      "Uranus",
+      "Saturn",
+      "Neptune"
+    ],
+    "answer": 2,
+    "explanation": "Saturn is famous for its prominent ring system"
+  },
+  {
+    "id": 5114,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Who was the first President of the United States?",
+    "options": [
+      "Thomas Jefferson",
+      "John Adams",
+      "George Washington",
+      "Benjamin Franklin"
+    ],
+    "answer": 2,
+    "explanation": "George Washington was the first US President"
+  },
+  {
+    "id": 5115,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What year did the Titanic sink?",
+    "options": [
+      "1916",
+      "1912",
+      "1914",
+      "1910"
+    ],
+    "answer": 1,
+    "explanation": "The Titanic sank in 1912"
+  },
+  {
+    "id": 5116,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which country invented tea?",
+    "options": [
+      "Japan",
+      "England",
+      "China",
+      "India"
+    ],
+    "answer": 2,
+    "explanation": "Tea originated in China"
+  },
+  {
+    "id": 5117,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the capital of Spain?",
+    "options": [
+      "Madrid",
+      "Valencia",
+      "Seville",
+      "Barcelona"
+    ],
+    "answer": 0,
+    "explanation": "Madrid is the capital of Spain"
+  },
+  {
+    "id": 5118,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Who invented the telephone?",
+    "options": [
+      "Guglielmo Marconi",
+      "Thomas Edison",
+      "Nikola Tesla",
+      "Alexander Graham Bell"
+    ],
+    "answer": 3,
+    "explanation": "Alexander Graham Bell invented the telephone"
+  },
+  {
+    "id": 5119,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which blood type is the universal donor?",
+    "options": [
+      "B",
+      "A",
+      "O",
+      "AB"
+    ],
+    "answer": 2,
+    "explanation": "Type O negative is the universal donor"
+  },
+  {
+    "id": 5120,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the largest bone in the human body?",
+    "options": [
+      "Tibia",
+      "Spine",
+      "Humerus",
+      "Femur"
+    ],
+    "answer": 3,
+    "explanation": "The femur (thigh bone) is the largest bone"
+  },
+  {
+    "id": 5121,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which ancient civilization built the Parthenon?",
+    "options": [
+      "Greek",
+      "Persian",
+      "Roman",
+      "Egyptian"
+    ],
+    "answer": 0,
+    "explanation": "The Greeks built the Parthenon in Athens"
+  },
+  {
+    "id": 5122,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the speed of light approximately?",
+    "options": [
+      "100,000 km/s",
+      "500,000 km/s",
+      "300,000 km/s",
+      "150,000 km/s"
+    ],
+    "answer": 2,
+    "explanation": "Light travels at approximately 300,000 km/s"
+  },
+  {
+    "id": 5123,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Who wrote 'The Odyssey'?",
+    "options": [
+      "Plato",
+      "Sophocles",
+      "Aristotle",
+      "Homer"
+    ],
+    "answer": 3,
+    "explanation": "Homer wrote The Odyssey"
+  },
+  {
+    "id": 5124,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the main gas in Earth's atmosphere?",
+    "options": [
+      "Carbon dioxide",
+      "Argon",
+      "Nitrogen",
+      "Oxygen"
+    ],
+    "answer": 2,
+    "explanation": "Nitrogen makes up about 78% of Earth's atmosphere"
+  },
+  {
+    "id": 5125,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which war was fought between the North and South in the USA?",
+    "options": [
+      "War of 1812",
+      "Mexican-American War",
+      "Civil War",
+      "Revolutionary War"
+    ],
+    "answer": 2,
+    "explanation": "The Civil War was between the North and South (1861-1865)"
+  },
+  {
+    "id": 5126,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the study of earthquakes called?",
+    "options": [
+      "Geology",
+      "Volcanology",
+      "Meteorology",
+      "Seismology"
+    ],
+    "answer": 3,
+    "explanation": "Seismology is the study of earthquakes"
+  },
+  {
+    "id": 5127,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Who developed the theory of relativity?",
+    "options": [
+      "Niels Bohr",
+      "Albert Einstein",
+      "Stephen Hawking",
+      "Isaac Newton"
+    ],
+    "answer": 1,
+    "explanation": "Albert Einstein developed the theory of relativity"
+  },
+  {
+    "id": 5128,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the smallest bone in the human body?",
+    "options": [
+      "Phalanges",
+      "Femur",
+      "Patella",
+      "Stapes"
+    ],
+    "answer": 3,
+    "explanation": "The stapes (stirrup) in the ear is the smallest bone"
+  },
+  {
+    "id": 5129,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which empire built Machu Picchu?",
+    "options": [
+      "Olmec",
+      "Maya",
+      "Inca",
+      "Aztec"
+    ],
+    "answer": 2,
+    "explanation": "The Inca Empire built Machu Picchu"
+  },
+  {
+    "id": 5130,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the chemical formula for water?",
+    "options": [
+      "H2O",
+      "NaCl",
+      "CO2",
+      "O2"
+    ],
+    "answer": 0,
+    "explanation": "Water's chemical formula is H2O"
+  },
+  {
+    "id": 5131,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Who was the first woman to win a Nobel Prize?",
+    "options": [
+      "Mother Teresa",
+      "Marie Curie",
+      "Barbara McClintock",
+      "Dorothy Hodgkin"
+    ],
+    "answer": 1,
+    "explanation": "Marie Curie won the Nobel Prize in Physics in 1903"
+  },
+  {
+    "id": 5132,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the largest desert in Africa?",
+    "options": [
+      "Kalahari",
+      "Sahara",
+      "Libyan",
+      "Namib"
+    ],
+    "answer": 1,
+    "explanation": "The Sahara is Africa's (and the world's) largest hot desert"
+  },
+  {
+    "id": 5133,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "Which vitamin is produced when skin is exposed to sunlight?",
+    "options": [
+      "Vitamin D",
+      "Vitamin E",
+      "Vitamin A",
+      "Vitamin C"
+    ],
+    "answer": 0,
+    "explanation": "Vitamin D is produced from sunlight exposure"
+  },
+  {
+    "id": 5134,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "In what year did the Berlin Wall fall?",
+    "options": [
+      "1993",
+      "1987",
+      "1991",
+      "1989"
+    ],
+    "answer": 3,
+    "explanation": "The Berlin Wall fell in 1989"
+  },
+  {
+    "id": 5135,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Who was the longest-reigning British monarch before Elizabeth II?",
+    "options": [
+      "Henry VIII",
+      "Queen Victoria",
+      "Elizabeth I",
+      "George III"
+    ],
+    "answer": 1,
+    "explanation": "Queen Victoria reigned for 63 years (1837-1901)"
+  },
+  {
+    "id": 5136,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the capital of Argentina?",
+    "options": [
+      "Montevideo",
+      "Buenos Aires",
+      "Lima",
+      "Santiago"
+    ],
+    "answer": 1,
+    "explanation": "Buenos Aires is the capital of Argentina"
+  },
+  {
+    "id": 5137,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Who wrote 'The Communist Manifesto'?",
+    "options": [
+      "Trotsky",
+      "Lenin",
+      "Stalin",
+      "Marx and Engels"
+    ],
+    "answer": 3,
+    "explanation": "Karl Marx and Friedrich Engels wrote The Communist Manifesto"
+  },
+  {
+    "id": 5138,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the atomic number of carbon?",
+    "options": [
+      "6",
+      "4",
+      "12",
+      "8"
+    ],
+    "answer": 0,
+    "explanation": "Carbon has atomic number 6"
+  },
+  {
+    "id": 5139,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which treaty ended World War I?",
+    "options": [
+      "Treaty of Versailles",
+      "Treaty of Ghent",
+      "Treaty of Vienna",
+      "Treaty of Paris"
+    ],
+    "answer": 0,
+    "explanation": "The Treaty of Versailles ended World War I in 1919"
+  },
+  {
+    "id": 5140,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the world's most widely practiced religion?",
+    "options": [
+      "Buddhism",
+      "Islam",
+      "Hinduism",
+      "Christianity"
+    ],
+    "answer": 3,
+    "explanation": "Christianity has the most adherents worldwide"
+  },
+  {
+    "id": 5141,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Who founded Microsoft?",
+    "options": [
+      "Mark Zuckerberg",
+      "Bill Gates and Paul Allen",
+      "Steve Jobs",
+      "Jeff Bezos"
+    ],
+    "answer": 1,
+    "explanation": "Bill Gates and Paul Allen founded Microsoft in 1975"
+  },
+  {
+    "id": 5142,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the pH of pure water?",
+    "options": [
+      "14",
+      "9",
+      "7",
+      "5"
+    ],
+    "answer": 2,
+    "explanation": "Pure water has a neutral pH of 7"
+  },
+  {
+    "id": 5143,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "In which year did India gain independence?",
+    "options": [
+      "1947",
+      "1949",
+      "1945",
+      "1950"
+    ],
+    "answer": 0,
+    "explanation": "India gained independence from Britain in 1947"
+  },
+  {
+    "id": 5144,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the main component of the Sun?",
+    "options": [
+      "Nitrogen",
+      "Hydrogen",
+      "Oxygen",
+      "Helium"
+    ],
+    "answer": 1,
+    "explanation": "The Sun is primarily made of hydrogen"
+  },
+  {
+    "id": 5145,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Who painted 'Starry Night'?",
+    "options": [
+      "Salvador Dalí",
+      "Vincent van Gogh",
+      "Claude Monet",
+      "Pablo Picasso"
+    ],
+    "answer": 1,
+    "explanation": "Vincent van Gogh painted Starry Night"
+  },
+  {
+    "id": 5146,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the capital of Thailand?",
+    "options": [
+      "Bangkok",
+      "Manila",
+      "Jakarta",
+      "Kuala Lumpur"
+    ],
+    "answer": 0,
+    "explanation": "Bangkok is the capital of Thailand"
+  },
+  {
+    "id": 5147,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which element has the chemical symbol Fe?",
+    "options": [
+      "Iron",
+      "Lead",
+      "Francium",
+      "Fluorine"
+    ],
+    "answer": 0,
+    "explanation": "Fe (from Latin 'ferrum') is iron"
+  },
+  {
+    "id": 5148,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Who was the first female Prime Minister of the UK?",
+    "options": [
+      "Theresa May",
+      "Elizabeth II",
+      "Margaret Thatcher",
+      "Queen Victoria"
+    ],
+    "answer": 2,
+    "explanation": "Margaret Thatcher was PM from 1979-1990"
+  },
+  {
+    "id": 5149,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What does UNESCO stand for?",
+    "options": [
+      "Universal Network for Education, Science, Culture",
+      "United Nations Educational, Scientific and Cultural Organization",
+      "Union of Nations for Education and Science",
+      "United Nations Economic and Social Council"
+    ],
+    "answer": 1,
+    "explanation": "United Nations Educational, Scientific and Cultural Organization"
+  },
+  {
+    "id": 5150,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which planet has the Great Red Spot?",
+    "options": [
+      "Saturn",
+      "Mars",
+      "Neptune",
+      "Jupiter"
+    ],
+    "answer": 3,
+    "explanation": "Jupiter has the Great Red Spot, a massive storm"
+  },
+  {
+    "id": 5151,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Who led India's independence movement through nonviolence?",
+    "options": [
+      "Subhas Chandra Bose",
+      "Jawaharlal Nehru",
+      "Mahatma Gandhi",
+      "B.R. Ambedkar"
+    ],
+    "answer": 2,
+    "explanation": "Mahatma Gandhi led the nonviolent independence movement"
+  },
+  {
+    "id": 5152,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the hardest substance in the human body?",
+    "options": [
+      "Nails",
+      "Bones",
+      "Tooth enamel",
+      "Cartilage"
+    ],
+    "answer": 2,
+    "explanation": "Tooth enamel is the hardest substance in the human body"
+  },
+  {
+    "id": 5153,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "In which century did the Renaissance begin?",
+    "options": [
+      "12th",
+      "16th",
+      "18th",
+      "14th"
+    ],
+    "answer": 3,
+    "explanation": "The Renaissance began in the 14th century in Italy"
+  },
+  {
+    "id": 5154,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the most abundant element in the universe?",
+    "options": [
+      "Carbon",
+      "Oxygen",
+      "Hydrogen",
+      "Helium"
+    ],
+    "answer": 2,
+    "explanation": "Hydrogen is the most abundant element in the universe"
+  },
+  {
+    "id": 5155,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Who wrote '1984'?",
+    "options": [
+      "Aldous Huxley",
+      "George Orwell",
+      "Ray Bradbury",
+      "H.G. Wells"
+    ],
+    "answer": 1,
+    "explanation": "George Orwell wrote 1984"
+  },
+  {
+    "id": 5156,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the capital of Poland?",
+    "options": [
+      "Krakow",
+      "Warsaw",
+      "Poznan",
+      "Gdansk"
+    ],
+    "answer": 1,
+    "explanation": "Warsaw is the capital of Poland"
+  },
+  {
+    "id": 5157,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which organ produces insulin?",
+    "options": [
+      "Pancreas",
+      "Kidney",
+      "Liver",
+      "Stomach"
+    ],
+    "answer": 0,
+    "explanation": "The pancreas produces insulin"
+  },
+  {
+    "id": 5158,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Who was the founder of Buddhism?",
+    "options": [
+      "Confucius",
+      "Mahavira",
+      "Lao Tzu",
+      "Siddhartha Gautama"
+    ],
+    "answer": 3,
+    "explanation": "Siddhartha Gautama (Buddha) founded Buddhism"
+  },
+  {
+    "id": 5159,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the largest moon in our solar system?",
+    "options": [
+      "Titan",
+      "Ganymede",
+      "Io",
+      "Europa"
+    ],
+    "answer": 1,
+    "explanation": "Ganymede (Jupiter's moon) is the largest moon"
+  },
+  {
+    "id": 5160,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "In which year did the French Revolution begin?",
+    "options": [
+      "1776",
+      "1815",
+      "1799",
+      "1789"
+    ],
+    "answer": 3,
+    "explanation": "The French Revolution began in 1789"
+  },
+  {
+    "id": 5161,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the study of fungi called?",
+    "options": [
+      "Botany",
+      "Virology",
+      "Zoology",
+      "Mycology"
+    ],
+    "answer": 3,
+    "explanation": "Mycology is the study of fungi"
+  },
+  {
+    "id": 5162,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Who composed the 'Four Seasons'?",
+    "options": [
+      "Vivaldi",
+      "Beethoven",
+      "Mozart",
+      "Bach"
+    ],
+    "answer": 0,
+    "explanation": "Antonio Vivaldi composed The Four Seasons"
+  },
+  {
+    "id": 5163,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the capital of Nigeria?",
+    "options": [
+      "Abuja",
+      "Ibadan",
+      "Lagos",
+      "Kano"
+    ],
+    "answer": 0,
+    "explanation": "Abuja is the capital of Nigeria (not Lagos)"
+  },
+  {
+    "id": 5164,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Which civilization built the Sphinx?",
+    "options": [
+      "Roman",
+      "Mesopotamian",
+      "Greek",
+      "Egyptian"
+    ],
+    "answer": 3,
+    "explanation": "Ancient Egyptians built the Sphinx"
+  },
+  {
+    "id": 5165,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is absolute zero in Celsius?",
+    "options": [
+      "-100°C",
+      "-459°C",
+      "-273.15°C",
+      "0°C"
+    ],
+    "answer": 2,
+    "explanation": "Absolute zero is -273.15°C (0 Kelvin)"
+  },
+  {
+    "id": 5166,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "Who invented the printing press?",
+    "options": [
+      "Thomas Edison",
+      "Nikola Tesla",
+      "Benjamin Franklin",
+      "Johannes Gutenberg"
+    ],
+    "answer": 3,
+    "explanation": "Johannes Gutenberg invented the printing press around 1440"
+  },
+  {
+    "id": 5167,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Krebs Cycle also known as?",
+    "options": [
+      "Calvin cycle",
+      "Electron transport",
+      "Glycolysis",
+      "Citric acid cycle"
+    ],
+    "answer": 3,
+    "explanation": "The Krebs Cycle is also called the citric acid cycle"
+  },
+  {
+    "id": 5168,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which Mughal emperor built the Taj Mahal?",
+    "options": [
+      "Jahangir",
+      "Shah Jahan",
+      "Aurangzeb",
+      "Akbar"
+    ],
+    "answer": 1,
+    "explanation": "Shah Jahan built the Taj Mahal for his wife Mumtaz Mahal"
+  },
+  {
+    "id": 5169,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the half-life of Carbon-14?",
+    "options": [
+      "1,000 years",
+      "50,000 years",
+      "10,000 years",
+      "5,730 years"
+    ],
+    "answer": 3,
+    "explanation": "Carbon-14 has a half-life of approximately 5,730 years"
+  },
+  {
+    "id": 5170,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who wrote 'The Wealth of Nations'?",
+    "options": [
+      "John Locke",
+      "Karl Marx",
+      "Adam Smith",
+      "John Stuart Mill"
+    ],
+    "answer": 2,
+    "explanation": "Adam Smith wrote The Wealth of Nations in 1776"
+  },
+  {
+    "id": 5171,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the rarest blood type?",
+    "options": [
+      "B negative",
+      "A negative",
+      "O negative",
+      "AB negative"
+    ],
+    "answer": 3,
+    "explanation": "AB negative is the rarest blood type (about 1% of population)"
+  },
+  {
+    "id": 5172,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Which dynasty built the Great Wall of China?",
+    "options": [
+      "Qin",
+      "Ming",
+      "Han",
+      "Tang"
+    ],
+    "answer": 0,
+    "explanation": "The Qin Dynasty began building the Great Wall; Ming expanded it"
+  },
+  {
+    "id": 5173,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the densest naturally occurring element?",
+    "options": [
+      "Lead",
+      "Gold",
+      "Platinum",
+      "Osmium"
+    ],
+    "answer": 3,
+    "explanation": "Osmium is the densest naturally occurring element"
+  },
+  {
+    "id": 5174,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who was the last Tsar of Russia?",
+    "options": [
+      "Alexander II",
+      "Nicholas II",
+      "Peter the Great",
+      "Alexander III"
+    ],
+    "answer": 1,
+    "explanation": "Nicholas II was the last Tsar, executed in 1918"
+  },
+  {
+    "id": 5175,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What year was the United Nations founded?",
+    "options": [
+      "1948",
+      "1950",
+      "1942",
+      "1945"
+    ],
+    "answer": 3,
+    "explanation": "The United Nations was founded in 1945"
+  },
+  {
+    "id": 5176,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Chandrasekhar limit?",
+    "options": [
+      "Maximum white dwarf mass",
+      "Nuclear fusion threshold",
+      "Black hole radius",
+      "Speed of light limit"
+    ],
+    "answer": 0,
+    "explanation": "Chandrasekhar limit is maximum mass of a stable white dwarf (~1.4 solar masses)"
+  },
+  {
+    "id": 5177,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who discovered X-rays?",
+    "options": [
+      "Marie Curie",
+      "Henri Becquerel",
+      "Wilhelm Röntgen",
+      "Ernest Rutherford"
+    ],
+    "answer": 2,
+    "explanation": "Wilhelm Röntgen discovered X-rays in 1895"
+  },
+  {
+    "id": 5178,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the capital of Myanmar?",
+    "options": [
+      "Naypyidaw",
+      "Bagan",
+      "Yangon",
+      "Mandalay"
+    ],
+    "answer": 0,
+    "explanation": "Naypyidaw is the capital of Myanmar (not Yangon)"
+  },
+  {
+    "id": 5179,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who proposed the heliocentric model of the solar system?",
+    "options": [
+      "Kepler",
+      "Copernicus",
+      "Galileo",
+      "Ptolemy"
+    ],
+    "answer": 1,
+    "explanation": "Nicolaus Copernicus proposed the heliocentric model"
+  },
+  {
+    "id": 5180,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Monroe Doctrine?",
+    "options": [
+      "US economic policy",
+      "Treaty with Britain",
+      "US policy opposing European colonialism in Americas",
+      "Constitutional amendment"
+    ],
+    "answer": 2,
+    "explanation": "Monroe Doctrine (1823) opposed European colonialism in the Americas"
+  },
+  {
+    "id": 5181,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the speed of sound in air at sea level?",
+    "options": [
+      "443 m/s",
+      "343 m/s",
+      "243 m/s",
+      "543 m/s"
+    ],
+    "answer": 1,
+    "explanation": "Sound travels at approximately 343 m/s in air at 20°C"
+  },
+  {
+    "id": 5182,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who was the first Holy Roman Emperor?",
+    "options": [
+      "Julius Caesar",
+      "Augustus",
+      "Constantine",
+      "Charlemagne"
+    ],
+    "answer": 3,
+    "explanation": "Charlemagne was crowned first Holy Roman Emperor in 800 CE"
+  },
+  {
+    "id": 5183,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What causes tides on Earth?",
+    "options": [
+      "Ocean currents",
+      "Moon and Sun's gravity",
+      "Earth's rotation",
+      "Wind"
+    ],
+    "answer": 1,
+    "explanation": "Tides are primarily caused by gravitational pull of Moon and Sun"
+  },
+  {
+    "id": 5184,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What year did the Ottoman Empire end?",
+    "options": [
+      "1924",
+      "1920",
+      "1918",
+      "1922"
+    ],
+    "answer": 3,
+    "explanation": "The Ottoman Empire officially ended in 1922"
+  },
+  {
+    "id": 5185,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the largest gland in the human body?",
+    "options": [
+      "Thyroid",
+      "Pancreas",
+      "Liver",
+      "Pituitary"
+    ],
+    "answer": 2,
+    "explanation": "The liver is the largest gland in the human body"
+  },
+  {
+    "id": 5186,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who wrote 'The Prince'?",
+    "options": [
+      "Thomas Hobbes",
+      "Niccolò Machiavelli",
+      "John Locke",
+      "Jean-Jacques Rousseau"
+    ],
+    "answer": 1,
+    "explanation": "Niccolò Machiavelli wrote The Prince in 1513"
+  },
+  {
+    "id": 5187,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the most abundant protein in the human body?",
+    "options": [
+      "Collagen",
+      "Keratin",
+      "Myosin",
+      "Hemoglobin"
+    ],
+    "answer": 0,
+    "explanation": "Collagen is the most abundant protein in the human body"
+  },
+  {
+    "id": 5188,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "In which year was the Magna Carta signed?",
+    "options": [
+      "1314",
+      "1215",
+      "1453",
+      "1066"
+    ],
+    "answer": 1,
+    "explanation": "The Magna Carta was signed in 1215"
+  },
+  {
+    "id": 5189,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the currency of South Africa?",
+    "options": [
+      "Rand",
+      "Dollar",
+      "Shilling",
+      "Pound"
+    ],
+    "answer": 0,
+    "explanation": "The South African Rand is the currency"
+  },
+  {
+    "id": 5190,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who discovered the structure of DNA?",
+    "options": [
+      "Darwin and Wallace",
+      "Watson and Crick",
+      "Mendel and Morgan",
+      "Pasteur and Koch"
+    ],
+    "answer": 1,
+    "explanation": "Watson and Crick discovered DNA's double helix structure in 1953"
+  },
+  {
+    "id": 5191,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Doppler Effect?",
+    "options": [
+      "Wave interference",
+      "Sound absorption",
+      "Frequency change due to motion",
+      "Light bending"
+    ],
+    "answer": 2,
+    "explanation": "Doppler Effect: frequency changes when source/observer moves"
+  },
+  {
+    "id": 5192,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who was the first emperor of a unified China?",
+    "options": [
+      "Qin Shi Huang",
+      "Kublai Khan",
+      "Han Wudi",
+      "Confucius"
+    ],
+    "answer": 0,
+    "explanation": "Qin Shi Huang unified China and became first emperor in 221 BCE"
+  },
+  {
+    "id": 5193,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the charge of an electron?",
+    "options": [
+      "Positive",
+      "Variable",
+      "Negative",
+      "Neutral"
+    ],
+    "answer": 2,
+    "explanation": "Electrons have a negative charge"
+  },
+  {
+    "id": 5194,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who led the Reformation?",
+    "options": [
+      "Erasmus",
+      "Martin Luther",
+      "Henry VIII",
+      "John Calvin"
+    ],
+    "answer": 1,
+    "explanation": "Martin Luther started the Protestant Reformation in 1517"
+  },
+  {
+    "id": 5195,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the capital of Kazakhstan?",
+    "options": [
+      "Almaty",
+      "Astana/Nur-Sultan",
+      "Tashkent",
+      "Bishkek"
+    ],
+    "answer": 1,
+    "explanation": "Astana (renamed Nur-Sultan, then back to Astana) is the capital"
+  },
+  {
+    "id": 5196,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Planck constant used for?",
+    "options": [
+      "Speed calculations",
+      "Gravity calculations",
+      "Chemical reactions",
+      "Quantum mechanics"
+    ],
+    "answer": 3,
+    "explanation": "Planck constant is fundamental to quantum mechanics"
+  },
+  {
+    "id": 5197,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who painted 'Guernica'?",
+    "options": [
+      "Salvador Dalí",
+      "Pablo Picasso",
+      "Joan Miró",
+      "Diego Rivera"
+    ],
+    "answer": 1,
+    "explanation": "Pablo Picasso painted Guernica in 1937"
+  },
+  {
+    "id": 5198,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the most common element in Earth's crust?",
+    "options": [
+      "Oxygen",
+      "Silicon",
+      "Aluminum",
+      "Iron"
+    ],
+    "answer": 0,
+    "explanation": "Oxygen is the most abundant element in Earth's crust (~46%)"
+  },
+  {
+    "id": 5199,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Who was the leader of the Soviet Union during WWII?",
+    "options": [
+      "Trotsky",
+      "Lenin",
+      "Khrushchev",
+      "Stalin"
+    ],
+    "answer": 3,
+    "explanation": "Joseph Stalin led the Soviet Union during World War II"
+  },
+  {
+    "id": 5200,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Higgs boson?",
+    "options": [
+      "A quark",
+      "Particle giving mass to other particles",
+      "Type of electron",
+      "Nuclear particle"
+    ],
+    "answer": 1,
+    "explanation": "The Higgs boson is associated with the field that gives particles mass"
+  },
+  {
+    "id": 5201,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What does GDP stand for?",
+    "options": [
+      "General Domestic Production",
+      "Gross Domestic Product",
+      "Global Domestic Price",
+      "Gross Development Progress"
+    ],
+    "answer": 1,
+    "explanation": "GDP stands for Gross Domestic Product"
+  },
+  {
+    "id": 5202,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Bretton Woods system?",
+    "options": [
+      "Post-WWII monetary system",
+      "Trade agreement",
+      "Environmental treaty",
+      "Military alliance"
+    ],
+    "answer": 0,
+    "explanation": "Bretton Woods established the post-WWII international monetary system"
+  },
+  {
+    "id": 5203,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What are the permanent members of the UN Security Council?",
+    "options": [
+      "G7 nations",
+      "USA, UK, France, Russia, China",
+      "EU members",
+      "NATO members"
+    ],
+    "answer": 1,
+    "explanation": "The P5 are USA, UK, France, Russia, and China"
+  },
+  {
+    "id": 5204,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the World Bank's primary purpose?",
+    "options": [
+      "Regulate currency",
+      "Provide development financing",
+      "Set interest rates",
+      "Trade arbitration"
+    ],
+    "answer": 1,
+    "explanation": "The World Bank provides loans and grants for development projects"
+  },
+  {
+    "id": 5205,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What does NATO stand for?",
+    "options": [
+      "North Atlantic Treaty Organization",
+      "North American Trade Organization",
+      "Nuclear Arms Treaty Organization",
+      "National Allied Territory Organization"
+    ],
+    "answer": 0,
+    "explanation": "North Atlantic Treaty Organization"
+  },
+  {
+    "id": 5206,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the European Union's currency?",
+    "options": [
+      "Dollar",
+      "Franc",
+      "Pound",
+      "Euro"
+    ],
+    "answer": 3,
+    "explanation": "The Euro is used by Eurozone members of the EU"
+  },
+  {
+    "id": 5207,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the IMF?",
+    "options": [
+      "Internal Management Forum",
+      "International Market Federation",
+      "International Military Force",
+      "International Monetary Fund"
+    ],
+    "answer": 3,
+    "explanation": "IMF is the International Monetary Fund"
+  },
+  {
+    "id": 5208,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is inflation?",
+    "options": [
+      "Currency appreciation",
+      "General increase in prices over time",
+      "Economic growth",
+      "Decrease in prices"
+    ],
+    "answer": 1,
+    "explanation": "Inflation is a sustained increase in the general price level"
+  },
+  {
+    "id": 5209,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the OPEC?",
+    "options": [
+      "Organization of Petroleum Exporting Countries",
+      "Oil Production Export Commission",
+      "Overseas Petroleum Exchange Council",
+      "Oil Producing and Exporting Countries"
+    ],
+    "answer": 0,
+    "explanation": "OPEC is the Organization of Petroleum Exporting Countries"
+  },
+  {
+    "id": 5210,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Universal Declaration of Human Rights?",
+    "options": [
+      "UN document on fundamental rights",
+      "US Constitution",
+      "NATO treaty",
+      "EU charter"
+    ],
+    "answer": 0,
+    "explanation": "UDHR is a 1948 UN document proclaiming fundamental human rights"
+  },
+  {
+    "id": 5211,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the G7?",
+    "options": [
+      "7 largest economies",
+      "7 nuclear powers",
+      "7 largest countries",
+      "Group of 7 major advanced economies"
+    ],
+    "answer": 3,
+    "explanation": "G7 includes USA, Canada, UK, Germany, France, Italy, Japan"
+  },
+  {
+    "id": 5212,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the World Trade Organization (WTO)?",
+    "options": [
+      "Military alliance",
+      "Organization regulating international trade",
+      "Monetary fund",
+      "Development bank"
+    ],
+    "answer": 1,
+    "explanation": "WTO deals with rules of trade between nations"
+  },
+  {
+    "id": 5213,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Geneva Convention about?",
+    "options": [
+      "Environmental protection",
+      "Trade agreements",
+      "Treatment of war victims and POWs",
+      "Nuclear weapons"
+    ],
+    "answer": 2,
+    "explanation": "Geneva Conventions establish humanitarian treatment in war"
+  },
+  {
+    "id": 5214,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Cold War?",
+    "options": [
+      "Winter military campaign",
+      "Nuclear war",
+      "War in Arctic",
+      "US-Soviet geopolitical tension (1947-1991)"
+    ],
+    "answer": 3,
+    "explanation": "Cold War was the geopolitical rivalry between USA and USSR"
+  },
+  {
+    "id": 5215,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the International Criminal Court (ICC)?",
+    "options": [
+      "UN internal court",
+      "Court prosecuting international crimes",
+      "US court",
+      "Trade dispute court"
+    ],
+    "answer": 1,
+    "explanation": "ICC prosecutes genocide, war crimes, crimes against humanity"
+  },
+  {
+    "id": 5216,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What was the Marshall Plan?",
+    "options": [
+      "Military strategy",
+      "US aid program for post-WWII Europe",
+      "Soviet expansion plan",
+      "UN development program"
+    ],
+    "answer": 1,
+    "explanation": "Marshall Plan provided US economic aid to rebuild Western Europe"
+  },
+  {
+    "id": 5217,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the BRICS?",
+    "options": [
+      "Trade agreement",
+      "Building materials",
+      "Banking system",
+      "Brazil, Russia, India, China, South Africa group"
+    ],
+    "answer": 3,
+    "explanation": "BRICS is an association of major emerging economies"
+  },
+  {
+    "id": 5218,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Paris Agreement about?",
+    "options": [
+      "Climate change mitigation",
+      "Trade",
+      "Human rights",
+      "Military alliance"
+    ],
+    "answer": 0,
+    "explanation": "Paris Agreement (2015) addresses climate change"
+  },
+  {
+    "id": 5219,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the difference between Sunni and Shia Islam?",
+    "options": [
+      "Dispute over Prophet's succession",
+      "Different gods",
+      "Geographic origin",
+      "Different holy books"
+    ],
+    "answer": 0,
+    "explanation": "Split originated from dispute over succession after Prophet Muhammad"
+  },
+  {
+    "id": 5220,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Kyoto Protocol?",
+    "options": [
+      "Nuclear treaty",
+      "Climate treaty on emissions reduction",
+      "Peace treaty",
+      "Trade agreement"
+    ],
+    "answer": 1,
+    "explanation": "Kyoto Protocol (1997) committed nations to reduce greenhouse emissions"
+  },
+  {
+    "id": 5221,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the ASEAN?",
+    "options": [
+      "African union",
+      "Association of Southeast Asian Nations",
+      "American states group",
+      "Asian monetary fund"
+    ],
+    "answer": 1,
+    "explanation": "ASEAN is an intergovernmental organization of Southeast Asian countries"
+  },
+  {
+    "id": 5222,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Non-Proliferation Treaty (NPT)?",
+    "options": [
+      "Environmental treaty",
+      "Treaty limiting spread of nuclear weapons",
+      "Trade agreement",
+      "Human rights treaty"
+    ],
+    "answer": 1,
+    "explanation": "NPT aims to prevent spread of nuclear weapons"
+  },
+  {
+    "id": 5223,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What was apartheid?",
+    "options": [
+      "Trade agreement",
+      "South African racial segregation system",
+      "Economic system",
+      "Political party"
+    ],
+    "answer": 1,
+    "explanation": "Apartheid was South Africa's system of racial segregation (1948-1994)"
+  },
+  {
+    "id": 5224,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the African Union?",
+    "options": [
+      "Continental organization of African states",
+      "Military alliance",
+      "Currency union",
+      "Trade bloc"
+    ],
+    "answer": 0,
+    "explanation": "AU is a continental body of all 55 African countries"
+  },
+  {
+    "id": 5225,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the difference between civil law and common law?",
+    "options": [
+      "Same thing",
+      "Common law is written",
+      "Civil law is codified; common law uses precedent",
+      "Geographic difference only"
+    ],
+    "answer": 2,
+    "explanation": "Civil law relies on codes; common law relies on judicial precedent"
+  },
+  {
+    "id": 5226,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What was the Silk Road?",
+    "options": [
+      "Modern highway",
+      "Textile factory",
+      "Chinese dynasty",
+      "Ancient trade route connecting East and West"
+    ],
+    "answer": 3,
+    "explanation": "Silk Road was ancient network of trade routes across Eurasia"
+  },
+  {
+    "id": 5227,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Nobel Prize?",
+    "options": [
+      "Political award",
+      "Academic degree",
+      "Annual prizes for outstanding contributions",
+      "Olympic medal"
+    ],
+    "answer": 2,
+    "explanation": "Nobel Prizes recognize outstanding achievements in various fields"
+  },
+  {
+    "id": 5228,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Commonwealth of Nations?",
+    "options": [
+      "Association of mostly former British territories",
+      "US states",
+      "European union",
+      "Economic zone"
+    ],
+    "answer": 0,
+    "explanation": "Commonwealth is an association of 56 member states, mostly former British territories"
+  },
+  {
+    "id": 5229,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Schengen Area?",
+    "options": [
+      "Currency union",
+      "Trade bloc",
+      "Military zone",
+      "European zone without internal border controls"
+    ],
+    "answer": 3,
+    "explanation": "Schengen Area allows passport-free movement across member states"
+  },
+  {
+    "id": 5230,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the Arab League?",
+    "options": [
+      "Trade union",
+      "Regional organization of Arab states",
+      "Religious organization",
+      "Sports league"
+    ],
+    "answer": 1,
+    "explanation": "Arab League is a regional organization of Arab countries"
+  },
+  {
+    "id": 5231,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the difference between republic and democracy?",
+    "options": [
+      "Republic has elected representatives; democracy is broader concept",
+      "Republic is authoritarian",
+      "Same thing",
+      "Democracy is older"
+    ],
+    "answer": 0,
+    "explanation": "Democracy is rule by people; republic specifically has elected representatives"
+  },
+  {
+    "id": 5232,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is INTERPOL?",
+    "options": [
+      "International police organization",
+      "Political party",
+      "Internet protocol",
+      "Trade organization"
+    ],
+    "answer": 0,
+    "explanation": "INTERPOL facilitates international police cooperation"
+  },
+  {
+    "id": 5233,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "General Knowledge",
+    "question": "What is the WHO?",
+    "options": [
+      "Weather organization",
+      "Water organization",
+      "Wildlife organization",
+      "World Health Organization"
+    ],
+    "answer": 3,
+    "explanation": "WHO is the World Health Organization, a UN agency"
+  },
+  {
+    "id": 5234,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the Westphalian system?",
+    "options": [
+      "Economic model",
+      "Military doctrine",
+      "Educational system",
+      "System of sovereign nation-states from 1648"
+    ],
+    "answer": 3,
+    "explanation": "Westphalian system established sovereign nation-states after Peace of Westphalia"
+  },
+  {
+    "id": 5235,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the Truman Doctrine?",
+    "options": [
+      "Economic policy",
+      "Trade agreement",
+      "Environmental law",
+      "US policy to contain Soviet expansion"
+    ],
+    "answer": 3,
+    "explanation": "Truman Doctrine (1947) pledged US support against communism"
+  },
+  {
+    "id": 5236,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the petrodollar system?",
+    "options": [
+      "OPEC policy",
+      "Currency exchange",
+      "Oil priced and traded in US dollars",
+      "Oil company"
+    ],
+    "answer": 2,
+    "explanation": "Petrodollar refers to oil being priced in US dollars globally"
+  },
+  {
+    "id": 5237,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the difference between hard power and soft power?",
+    "options": [
+      "Hard: military/economic coercion; Soft: cultural influence",
+      "Same thing",
+      "Geographic terms",
+      "Hard is stronger"
+    ],
+    "answer": 0,
+    "explanation": "Hard power uses coercion; soft power uses attraction and persuasion"
+  },
+  {
+    "id": 5238,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What was the Sykes-Picot Agreement?",
+    "options": [
+      "Secret 1916 British-French Middle East division",
+      "Military alliance",
+      "Peace treaty",
+      "Trade deal"
+    ],
+    "answer": 0,
+    "explanation": "Sykes-Picot secretly divided Ottoman Middle East between Britain and France"
+  },
+  {
+    "id": 5239,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the responsibility to protect (R2P)?",
+    "options": [
+      "Trade principle",
+      "Military strategy",
+      "Environmental doctrine",
+      "Norm that states must protect populations from atrocities"
+    ],
+    "answer": 3,
+    "explanation": "R2P holds states responsible for protecting populations from mass atrocities"
+  },
+  {
+    "id": 5240,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the Washington Consensus?",
+    "options": [
+      "Neoliberal economic policy recommendations",
+      "Military treaty",
+      "Environmental accord",
+      "Political agreement"
+    ],
+    "answer": 0,
+    "explanation": "Washington Consensus: free market reforms promoted by IMF/World Bank"
+  },
+  {
+    "id": 5241,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the Thucydides Trap?",
+    "options": [
+      "Greek battle",
+      "Political scandal",
+      "Rising power threatening established power leads to war",
+      "Economic theory"
+    ],
+    "answer": 2,
+    "explanation": "Thucydides Trap: tensions when rising power threatens established power"
+  },
+  {
+    "id": 5242,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What was the Balfour Declaration?",
+    "options": [
+      "1917 British support for Jewish homeland in Palestine",
+      "Trade agreement",
+      "Human rights document",
+      "Peace treaty"
+    ],
+    "answer": 0,
+    "explanation": "Balfour Declaration (1917) expressed British support for Jewish homeland"
+  },
+  {
+    "id": 5243,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the difference between de jure and de facto?",
+    "options": [
+      "De jure: by law; de facto: in practice",
+      "Legal terms only",
+      "Same meaning",
+      "Geographic terms"
+    ],
+    "answer": 0,
+    "explanation": "De jure means by right/law; de facto means in fact/practice"
+  },
+  {
+    "id": 5244,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the Gini coefficient?",
+    "options": [
+      "Trade index",
+      "GDP component",
+      "Currency value",
+      "Measure of income inequality"
+    ],
+    "answer": 3,
+    "explanation": "Gini coefficient measures statistical dispersion of income (0-1)"
+  },
+  {
+    "id": 5245,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the Human Development Index (HDI)?",
+    "options": [
+      "Military strength",
+      "Population growth",
+      "Composite of life expectancy, education, and income",
+      "Economic growth measure"
+    ],
+    "answer": 2,
+    "explanation": "HDI measures human development beyond just economic indicators"
+  },
+  {
+    "id": 5246,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the Nuremberg Trials' significance?",
+    "options": [
+      "Trade disputes",
+      "Established precedent for prosecuting war crimes",
+      "Environmental law",
+      "Economic planning"
+    ],
+    "answer": 1,
+    "explanation": "Nuremberg Trials established individual criminal responsibility for war crimes"
+  },
+  {
+    "id": 5247,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the concept of mutually assured destruction (MAD)?",
+    "options": [
+      "Trade policy",
+      "Nuclear deterrence through guaranteed retaliation",
+      "Military strategy",
+      "Political theory"
+    ],
+    "answer": 1,
+    "explanation": "MAD: full-scale nuclear attack would result in attacker's destruction too"
+  },
+  {
+    "id": 5248,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What was the Camp David Accords?",
+    "options": [
+      "1978 Egypt-Israel peace framework",
+      "US domestic policy",
+      "Environmental treaty",
+      "Trade agreement"
+    ],
+    "answer": 0,
+    "explanation": "Camp David Accords led to Egypt-Israel peace treaty"
+  },
+  {
+    "id": 5249,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the doctrine of preemptive war?",
+    "options": [
+      "Defensive strategy",
+      "Peace principle",
+      "Attack before imminent threat materializes",
+      "Trade policy"
+    ],
+    "answer": 2,
+    "explanation": "Preemptive war: striking first to prevent imminent attack"
+  },
+  {
+    "id": 5250,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the Belt and Road Initiative?",
+    "options": [
+      "Chinese global infrastructure development strategy",
+      "Environmental program",
+      "Military alliance",
+      "Fashion industry"
+    ],
+    "answer": 0,
+    "explanation": "BRI is China's global infrastructure investment initiative"
+  },
+  {
+    "id": 5251,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the difference between federalism and unitarism?",
+    "options": [
+      "Same system",
+      "Federalism divides power; unitarism centralizes it",
+      "Economic terms",
+      "Military structures"
+    ],
+    "answer": 1,
+    "explanation": "Federalism: power divided between central and regional; unitarism: centralized"
+  },
+  {
+    "id": 5252,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the Monroe Doctrine's Roosevelt Corollary?",
+    "options": [
+      "US right to intervene in Latin America",
+      "Environmental law",
+      "Trade agreement",
+      "Economic policy"
+    ],
+    "answer": 0,
+    "explanation": "Roosevelt Corollary (1904) asserted US intervention rights in Latin America"
+  },
+  {
+    "id": 5253,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the concept of state sovereignty?",
+    "options": [
+      "Economic independence",
+      "Military strength",
+      "Supreme authority of state over its territory",
+      "Royal power"
+    ],
+    "answer": 2,
+    "explanation": "Sovereignty: state has supreme authority within its borders"
+  },
+  {
+    "id": 5254,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What was the Congress of Vienna?",
+    "options": [
+      "1814-15 conference redrawing Europe after Napoleon",
+      "Scientific meeting",
+      "Environmental conference",
+      "Economic summit"
+    ],
+    "answer": 0,
+    "explanation": "Congress of Vienna reorganized Europe after Napoleonic Wars"
+  },
+  {
+    "id": 5255,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the difference between bilateral and multilateral agreements?",
+    "options": [
+      "Same thing",
+      "Economic terms only",
+      "Geographic terms",
+      "Bilateral: two parties; multilateral: multiple parties"
+    ],
+    "answer": 3,
+    "explanation": "Bilateral involves two parties; multilateral involves multiple parties"
+  },
+  {
+    "id": 5256,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the principle of jus cogens?",
+    "options": [
+      "Trade principle",
+      "Peremptory international law norms",
+      "Military doctrine",
+      "Economic theory"
+    ],
+    "answer": 1,
+    "explanation": "Jus cogens: fundamental international law principles that cannot be violated"
+  },
+  {
+    "id": 5257,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What was the Scramble for Africa?",
+    "options": [
+      "Civil war",
+      "Athletic event",
+      "European colonization of Africa (1881-1914)",
+      "Trade competition"
+    ],
+    "answer": 2,
+    "explanation": "Scramble for Africa: rapid European colonization in late 19th century"
+  },
+  {
+    "id": 5258,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the concept of realpolitik?",
+    "options": [
+      "Democratic theory",
+      "Practical politics based on power not ideology",
+      "Economic policy",
+      "Idealistic politics"
+    ],
+    "answer": 1,
+    "explanation": "Realpolitik: politics based on practical considerations not ideology"
+  },
+  {
+    "id": 5259,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What was the Yalta Conference?",
+    "options": [
+      "Environmental summit",
+      "Scientific conference",
+      "Trade meeting",
+      "1945 WWII Allied leaders' meeting"
+    ],
+    "answer": 3,
+    "explanation": "Yalta Conference (1945): Roosevelt, Churchill, Stalin planned post-war order"
+  },
+  {
+    "id": 5260,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the concept of balance of power?",
+    "options": [
+      "Military equality",
+      "Economic equality",
+      "Trade balance",
+      "Distribution of power preventing dominance by one state"
+    ],
+    "answer": 3,
+    "explanation": "Balance of power: equilibrium among states preventing hegemony"
+  },
+  {
+    "id": 5261,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the SWIFT system?",
+    "options": [
+      "Trade platform",
+      "Global interbank financial messaging system",
+      "Fast delivery",
+      "Email service"
+    ],
+    "answer": 1,
+    "explanation": "SWIFT enables secure international financial transactions"
+  },
+  {
+    "id": 5262,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What was the Bandung Conference?",
+    "options": [
+      "Trade summit",
+      "Environmental conference",
+      "1955 Asian-African nations meeting promoting decolonization",
+      "Military alliance"
+    ],
+    "answer": 2,
+    "explanation": "Bandung Conference (1955) promoted Afro-Asian solidarity and non-alignment"
+  },
+  {
+    "id": 5263,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the concept of collective security?",
+    "options": [
+      "States agree to respond collectively to aggression",
+      "Private security",
+      "Economic union",
+      "Military alliance"
+    ],
+    "answer": 0,
+    "explanation": "Collective security: attack on one is considered attack on all"
+  },
+  {
+    "id": 5264,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is the difference between customs union and free trade area?",
+    "options": [
+      "Customs union has common external tariff; FTA doesn't",
+      "Same thing",
+      "Political terms",
+      "Geographic difference"
+    ],
+    "answer": 0,
+    "explanation": "Customs union: common external tariff; FTA: free trade, own external tariffs"
+  },
+  {
+    "id": 5265,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What was the Berlin Conference (1884-85)?",
+    "options": [
+      "Peace treaty",
+      "Scientific meeting",
+      "European partition of Africa",
+      "Music festival"
+    ],
+    "answer": 2,
+    "explanation": "Berlin Conference regulated European colonization of Africa"
+  },
+  {
+    "id": 5266,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "General Knowledge",
+    "question": "What is purchasing power parity (PPP)?",
+    "options": [
+      "Trade balance",
+      "Interest rate",
+      "Economic theory comparing currencies via goods basket",
+      "Currency value"
+    ],
+    "answer": 2,
+    "explanation": "PPP compares currencies based on identical goods' prices"
+  },
+  {
+    "id": 5267,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Malthusian theory?",
+    "options": [
+      "Population grows faster than food supply",
+      "Environmental theory",
+      "Economic growth model",
+      "Political theory"
+    ],
+    "answer": 0,
+    "explanation": "Malthus argued population grows exponentially while food grows linearly"
+  },
+  {
+    "id": 5268,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Prisoner's Dilemma in game theory?",
+    "options": [
+      "Economic policy",
+      "Scenario showing individual rationality leads to suboptimal outcomes",
+      "Legal case",
+      "Prison reform"
+    ],
+    "answer": 1,
+    "explanation": "Prisoner's Dilemma shows rational self-interest can harm collective outcome"
+  },
+  {
+    "id": 5269,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the democratic peace theory?",
+    "options": [
+      "Democracies rarely go to war with each other",
+      "Trade theory",
+      "UN policy",
+      "Peace movement"
+    ],
+    "answer": 0,
+    "explanation": "Democratic peace theory: democracies tend not to fight other democracies"
+  },
+  {
+    "id": 5270,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Ricardian theory of comparative advantage?",
+    "options": [
+      "Countries benefit from specializing in relatively efficient production",
+      "Military strategy",
+      "Environmental principle",
+      "Political theory"
+    ],
+    "answer": 0,
+    "explanation": "Ricardo: trade benefits all when countries specialize in comparative advantage"
+  },
+  {
+    "id": 5271,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Heckscher-Ohlin model?",
+    "options": [
+      "Military strategy",
+      "Environmental model",
+      "Political theory",
+      "Countries export goods using abundant factors"
+    ],
+    "answer": 3,
+    "explanation": "H-O: countries export goods intensive in their abundant factor"
+  },
+  {
+    "id": 5272,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Triffin Dilemma?",
+    "options": [
+      "Political problem",
+      "Trade dispute",
+      "Environmental issue",
+      "Conflict between domestic and global interests of reserve currency"
+    ],
+    "answer": 3,
+    "explanation": "Triffin: reserve currency country faces domestic vs. international conflicts"
+  },
+  {
+    "id": 5273,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of hegemonic stability theory?",
+    "options": [
+      "International order requires a dominant power",
+      "Economic policy",
+      "Military doctrine",
+      "Political movement"
+    ],
+    "answer": 0,
+    "explanation": "Hegemonic stability: international system stable when led by dominant power"
+  },
+  {
+    "id": 5274,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Mundell-Fleming model?",
+    "options": [
+      "Environmental model",
+      "Military strategy",
+      "Relationship between exchange rates, interest rates, and output",
+      "Political theory"
+    ],
+    "answer": 2,
+    "explanation": "Mundell-Fleming analyzes open economy macroeconomics"
+  },
+  {
+    "id": 5275,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the resource curse paradox?",
+    "options": [
+      "Trade imbalance",
+      "Environmental problem",
+      "Resource-rich countries often have poor development",
+      "Population issue"
+    ],
+    "answer": 2,
+    "explanation": "Resource curse: natural resources can hinder development"
+  },
+  {
+    "id": 5276,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the dependency theory in development?",
+    "options": [
+      "Core countries exploit periphery causing underdevelopment",
+      "Political dependency",
+      "Military dependence",
+      "Trade theory"
+    ],
+    "answer": 0,
+    "explanation": "Dependency theory: wealthy countries benefit at developing countries' expense"
+  },
+  {
+    "id": 5277,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of original position in Rawls?",
+    "options": [
+      "Historical origin",
+      "Economic status",
+      "Hypothetical veil of ignorance for just principles",
+      "Political position"
+    ],
+    "answer": 2,
+    "explanation": "Rawls: original position is hypothetical state for deriving justice principles"
+  },
+  {
+    "id": 5278,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Two-Level Games theory?",
+    "options": [
+      "Sports theory",
+      "Leaders negotiate at domestic and international levels simultaneously",
+      "Military strategy",
+      "Economic theory"
+    ],
+    "answer": 1,
+    "explanation": "Putnam: international negotiations involve domestic and international bargaining"
+  },
+  {
+    "id": 5279,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of securitization in IR theory?",
+    "options": [
+      "Military strategy",
+      "Economic policy",
+      "Process of framing issues as existential threats",
+      "Financial term only"
+    ],
+    "answer": 2,
+    "explanation": "Securitization: framing issues as security threats requiring extraordinary measures"
+  },
+  {
+    "id": 5280,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Clash of Civilizations thesis?",
+    "options": [
+      "Huntington: future conflicts along cultural/religious lines",
+      "Economic theory",
+      "Peace theory",
+      "Historical event"
+    ],
+    "answer": 0,
+    "explanation": "Huntington argued post-Cold War conflicts would be civilizational"
+  },
+  {
+    "id": 5281,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Phillips Curve?",
+    "options": [
+      "Population curve",
+      "Political trend",
+      "Inverse relationship between unemployment and inflation",
+      "Musical notation"
+    ],
+    "answer": 2,
+    "explanation": "Phillips Curve shows tradeoff between unemployment and inflation"
+  },
+  {
+    "id": 5282,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Laffer Curve?",
+    "options": [
+      "Political trend",
+      "Humor analysis",
+      "Relationship between tax rates and revenue",
+      "Population growth"
+    ],
+    "answer": 2,
+    "explanation": "Laffer Curve: beyond certain point, higher taxes reduce revenue"
+  },
+  {
+    "id": 5283,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of epistemic communities?",
+    "options": [
+      "Economic unions",
+      "Scientific groups",
+      "Political parties",
+      "Networks of experts influencing policy"
+    ],
+    "answer": 3,
+    "explanation": "Epistemic communities: expert networks sharing beliefs that influence policy"
+  },
+  {
+    "id": 5284,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the English School of IR?",
+    "options": [
+      "Approach emphasizing international society and norms",
+      "Language school",
+      "Economic model",
+      "Political party"
+    ],
+    "answer": 0,
+    "explanation": "English School: international system as society with rules and institutions"
+  },
+  {
+    "id": 5285,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of the security dilemma?",
+    "options": [
+      "Military problem",
+      "Economic issue",
+      "Political dilemma",
+      "One state's security measures threaten others"
+    ],
+    "answer": 3,
+    "explanation": "Security dilemma: defensive measures seen as threatening by others"
+  },
+  {
+    "id": 5286,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the neofunctionalist theory of integration?",
+    "options": [
+      "Economic model",
+      "Functional cooperation spills over into political integration",
+      "Scientific theory",
+      "Military doctrine"
+    ],
+    "answer": 1,
+    "explanation": "Neofunctionalism: integration in one area creates pressure for more"
+  },
+  {
+    "id": 5287,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of path dependence?",
+    "options": [
+      "Physical path",
+      "Political strategy",
+      "Historical choices constrain future options",
+      "Economic term"
+    ],
+    "answer": 2,
+    "explanation": "Path dependence: past decisions limit current possibilities"
+  },
+  {
+    "id": 5288,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the principal-agent problem?",
+    "options": [
+      "Legal issue",
+      "Agents may not act in principal's best interest",
+      "Educational concept",
+      "Military term"
+    ],
+    "answer": 1,
+    "explanation": "Principal-agent: agents may pursue own interests over principals'"
+  },
+  {
+    "id": 5289,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of structural adjustment programs?",
+    "options": [
+      "Military restructuring",
+      "IMF/World Bank reforms requiring free market policies",
+      "Environmental programs",
+      "Building codes"
+    ],
+    "answer": 1,
+    "explanation": "SAPs: economic reforms required for IMF/World Bank loans"
+  },
+  {
+    "id": 5290,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the trilemma of international finance?",
+    "options": [
+      "Three banks",
+      "Trade issue",
+      "Three currencies",
+      "Can only have 2 of: fixed exchange, free capital, monetary independence"
+    ],
+    "answer": 3,
+    "explanation": "Impossible trinity: cannot have all three policies simultaneously"
+  },
+  {
+    "id": 5291,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the selectorate theory?",
+    "options": [
+      "Military strategy",
+      "Economic model",
+      "Election theory",
+      "Leaders' policies depend on winning coalition size"
+    ],
+    "answer": 3,
+    "explanation": "Selectorate theory: leader behavior depends on coalition needed for power"
+  },
+  {
+    "id": 5292,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of complex interdependence?",
+    "options": [
+      "Multiple channels, issues, and military irrelevance in relations",
+      "Military concept",
+      "Simple dependence",
+      "Economic term"
+    ],
+    "answer": 0,
+    "explanation": "Keohane/Nye: interdependence through multiple channels diminishes military role"
+  },
+  {
+    "id": 5293,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the constructivist approach in IR?",
+    "options": [
+      "Economic approach",
+      "Ideas, norms, and identities shape international politics",
+      "Building theory",
+      "Military strategy"
+    ],
+    "answer": 1,
+    "explanation": "Constructivism: social reality constructed through ideas and interactions"
+  },
+  {
+    "id": 5294,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of the developmental state?",
+    "options": [
+      "Economic theory",
+      "Developing country",
+      "State-led economic development model",
+      "Political system"
+    ],
+    "answer": 2,
+    "explanation": "Developmental state: government directs economic development (e.g., Japan, Korea)"
+  },
+  {
+    "id": 5295,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the middle-income trap?",
+    "options": [
+      "Political problem",
+      "Trade barrier",
+      "Poverty trap",
+      "Countries stall after reaching middle-income status"
+    ],
+    "answer": 3,
+    "explanation": "Middle-income trap: difficulty transitioning from middle to high income"
+  },
+  {
+    "id": 5296,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of regulatory capture?",
+    "options": [
+      "Regulatory agencies serve industry interests",
+      "Environmental regulation",
+      "Military concept",
+      "Legal term"
+    ],
+    "answer": 0,
+    "explanation": "Regulatory capture: agencies serve those they're meant to regulate"
+  },
+  {
+    "id": 5297,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Dutch Disease?",
+    "options": [
+      "Medical condition",
+      "Political problem",
+      "Agricultural pest",
+      "Natural resource boom harming other sectors"
+    ],
+    "answer": 3,
+    "explanation": "Dutch Disease: resource boom causes currency appreciation, hurting other exports"
+  },
+  {
+    "id": 5298,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of just war theory?",
+    "options": [
+      "Military strategy",
+      "Pacifism",
+      "Any war is just",
+      "Moral criteria for when war is justified"
+    ],
+    "answer": 3,
+    "explanation": "Just war theory: ethical framework for when war is morally permissible"
+  },
+  {
+    "id": 5299,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the Varieties of Capitalism approach?",
+    "options": [
+      "Trade theory",
+      "Distinguishes liberal and coordinated market economies",
+      "Investment types",
+      "Political systems"
+    ],
+    "answer": 1,
+    "explanation": "VoC: distinguishes liberal (US/UK) from coordinated (Germany/Japan) capitalism"
+  },
+  {
+    "id": 5300,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "What is the concept of critical junctures in institutionalism?",
+    "options": [
+      "Economic term",
+      "Military strategy",
+      "Road intersections",
+      "Periods when significant change becomes possible"
+    ],
+    "answer": 3,
+    "explanation": "Critical junctures: moments when major institutional change becomes possible"
+  }
+]

@@ -8,117 +8,136 @@
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/quiz.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header" role="banner">
+    <canvas id="neural-bg"></canvas>
+    <div id="background-shapes" aria-hidden="true"></div>
+
+        <!-- Header Navigation -->
+        <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
-                <div class="logo-container">
+                <a href="index.html" class="logo-container">
                     <img src="assets/images/logo.png" alt="NeuroQuiz Logo" class="logo" id="logo">
                     <span class="brand-name">NeuroQuiz™</span>
+                </a>
+
+                <div class="mid-header-animation" aria-hidden="true">
+        
+                <div class="dino-sky">
+                    <div class="cloud cloud-1"></div>
+                    <div class="cloud cloud-2"></div>
+                    <div class="star star-1"></div>
+                    <div class="star star-2"></div>
+                    <div class="star star-3"></div>
                 </div>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="quiz.html" class="nav-link active" aria-current="page">Quiz</a></li>
-                </ul>
+
+                <div class="dino-ground"></div>
+
+                <div class="obstacle-cactus"></div>
+
+                <div class="obstacle-bird">
+                    <div class="bird-wing"></div>
+                </div>
+
+                <div class="dino-rex">
+                    <div class="rex-body-wrapper">
+                        <div class="rex-shape">
+                            <div class="rex-eye"></div>
+                            <div class="rex-arm"></div>
+                        </div>
+                    </div>
+                    <div class="rex-leg leg-left"></div>
+                    <div class="rex-leg leg-right"></div>
+                </div>
+
             </div>
-        </nav>
-    </header>
+
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="quiz.html" class="nav-link active" aria-current="page">Quiz</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
     <!-- Main Quiz Container -->
     <main class="quiz-main" role="main">
         <div class="quiz-container" id="quiz-container">
-            
-            <!-- Progress Bar Section -->
+    
+            <div class="gamification-header">
+                
+                <div class="header-stat">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-label">LEVEL</span>
+                    <span class="stat-value" id="level-value">1</span>
+                </div>
+
+                <div class="header-stat">
+                    <span class="stat-icon">🔥</span>
+                    <span class="stat-label">STREAK</span>
+                    <span class="stat-value gold-text" id="streak-value">0</span>
+                </div>
+
+                <div class="header-stat">
+                    <span class="stat-icon">💎</span>
+                    <span class="stat-label">POINTS</span>
+                    <span class="stat-value" id="points-value">0</span>
+                </div>
+
+            </div>
+
             <section class="progress-section" id="progress-section">
                 <div class="progress-container" id="progress-container">
                     <div class="progress-bar-wrapper" id="progress-bar-wrapper">
                         <div class="progress-bar" id="progress-bar" role="progressbar" 
-                             aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                             <span class="progress-fill" id="progress-fill"></span>
                         </div>
                     </div>
                     <div class="progress-text" id="progress-text">
                         <span class="question-counter" id="question-counter">Question 0 of 0</span>
-                        <span class="score-display" id="score-display">Score: 0</span>
-                    </div>
+                        </div>
                 </div>
             </section>
 
-            <!-- Question Card Container -->
             <section class="question-section" id="question-section">
                 <div class="question-card" id="question-card">
-                    <!-- Question Number Badge -->
+                    
                     <div class="question-badge" id="question-badge">
                         <span class="badge-text" id="badge-text">Q1</span>
                     </div>
 
-                    <!-- Question Text -->
                     <div class="question-content" id="question-content">
                         <h2 class="question-title" id="question-title">
                             Loading question...
                         </h2>
                         <p class="question-description" id="question-description" aria-live="polite">
-                            <!-- UI Team: Question description/context can go here -->
-                        </p>
+                            </p>
                     </div>
 
-                    <!-- Options Container -->
-                    <div class="options-container" id="options-container" role="radiogroup" aria-labelledby="question-title">
-                        <!-- UI Team: Options will be dynamically generated by quiz-ui.js -->
-                        <!-- Structure: Each option is a button with class "option-btn" -->
-                        <!-- Example structure (DO NOT MODIFY - generated by JS):
-                            <button class="option-btn" data-option-id="0" aria-label="Option 1">
-                                <span class="option-label">A</span>
-                                <span class="option-text">Option text here</span>
-                            </button>
-                        -->
-                    </div>
+                    <div class="options-container" id="options-container" role="radiogroup">
+                        </div>
 
-                    <!-- Feedback Area (shown after selection) -->
-                    <div class="feedback-area" id="feedback-area" aria-live="polite" aria-atomic="true">
-                        <!-- UI Team: Feedback messages will appear here -->
-                        <!-- Structure controlled by quiz-ui.js -->
-                    </div>
+                    <div class="feedback-area" id="feedback-area" aria-live="polite"></div>
                 </div>
             </section>
 
-            <!-- Action Buttons -->
             <section class="quiz-actions" id="quiz-actions">
-                <div class="action-buttons" id="action-buttons">
-                    <!-- UI Team: Button styling only - functionality in quiz-ui.js -->
-                    <button class="btn btn-secondary" id="hint-btn" disabled>
-                        <span class="btn-icon">💡</span>
-                        <span class="btn-text">Hint</span>
-                    </button>
-                    <button class="btn btn-primary" id="submit-btn" disabled>
-                        <span class="btn-text">Submit Answer</span>
-                    </button>
-                    <button class="btn btn-secondary" id="next-btn" style="display: none;">
-                        <span class="btn-text">Next Question</span>
-                    </button>
-                </div>
-            </section>
+                <button class="btn" id="hint-btn" aria-label="Get a Hint">
+                    <span class="btn-icon">💡</span>
+                </button>
 
-            <!-- Level/Streak Indicator -->
-            <section class="gamification-indicators" id="gamification-indicators">
-                <div class="indicators-container" id="indicators-container">
-                    <div class="indicator-item" id="level-indicator">
-                        <span class="indicator-label">Level</span>
-                        <span class="indicator-value" id="level-value">1</span>
-                    </div>
-                    <div class="indicator-item" id="streak-indicator">
-                        <span class="indicator-label">Streak</span>
-                        <span class="indicator-value" id="streak-value">0</span>
-                    </div>
-                    <div class="indicator-item" id="points-indicator">
-                        <span class="indicator-label">Points</span>
-                        <span class="indicator-value" id="points-value">0</span>
-                    </div>
-                </div>
+                <button class="btn" id="submit-btn" disabled>
+                    <span class="btn-text">SUBMIT ANSWER</span>
+                </button>
+
+                <button class="btn" id="next-btn" style="display: none;">
+                    <span class="btn-text">NEXT QUESTION ➜</span>
+                </button>
             </section>
 
         </div>
@@ -143,6 +162,8 @@
     <script src="js/engine.js"></script>
     <script src="js/quiz-ui.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/background-effects.js"></script>
+    <script src="js/card-tilt.js"></script>
 </body>
 </html>
 

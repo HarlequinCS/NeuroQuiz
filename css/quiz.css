@@ -1,0 +1,1024 @@
+/* =========================================
+   NEUROQUIZ™ - FINAL INTERACTIVE UI (V10)
+   File: css/quiz.css
+   ========================================= */
+
+/* 1. THEME VARIABLES SETUP */
+:root {
+    /* --- CORE GAME COLORS --- */
+    --game-red: #ff4b4b;    --game-red-shadow: #c50000;
+    --game-blue: #1cb0f6;   --game-blue-shadow: #118cc6;
+    --game-yellow: #ffc800; --game-yellow-shadow: #cc8e00;
+    --game-green: #2bde73;  --game-green-shadow: #1ba653;
+
+    /* --- LIGHT MODE DEFAULTS --- */
+    --page-bg-color: #4487de;            /* Vibrant Blue */
+    
+    --quiz-bg-color: #ffffff;            
+    --quiz-text-primary: #2c2c2c;        
+    --quiz-text-secondary: #4b5563;      
+    --quiz-border: rgba(0,0,0,0.1);      
+    --quiz-shadow: rgba(0,0,0,0.1);      
+    --progress-track: #e5e5e5;           
+    
+    /* Button Themes (Light) */
+    --hint-btn-bg: #ffffff;
+    --hint-btn-text: #6b7280;
+    --hint-btn-border: #e5e5e5;
+    --submit-btn-bg: #2c2c2c;            
+    --submit-btn-text: #ffffff;
+}
+
+/* --- DARK MODE OVERRIDES --- */
+[data-theme="dark"] {
+    --page-bg-color: #2e0249;            /* Deep Purple */
+    
+    --quiz-bg-color: #1a1a2e;            
+    --quiz-text-primary: #ffffff;        
+    --quiz-text-secondary: #a78bfa;      
+    --quiz-border: rgba(255,255,255,0.1);
+    --quiz-shadow: rgba(0,0,0,0.5);      
+    --progress-track: rgba(255,255,255,0.1);
+
+    --hint-btn-bg: rgba(255,255,255,0.05);
+    --hint-btn-text: #cccccc;
+    --hint-btn-border: rgba(255,255,255,0.2);
+    --submit-btn-bg: #ffffff;            
+    --submit-btn-text: #2e0249;
+}
+
+/* 2. PAGE BACKGROUND (Interactive) */
+body {
+    background-color: var(--page-bg-color) !important;
+    background-image: none !important; /* Allow Canvas to show */
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+    overflow-x: hidden;
+    perspective: 1000px; /* Essential for 3D Tilt */
+}
+
+/* Canvas Styling (Behind content) */
+#neural-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 3. MAIN CARD (Static Container) */
+.quiz-container {
+    background: var(--quiz-bg-color);
+    border-radius: 30px;
+    padding: 2.5rem;
+    max-width: 850px;
+    margin: 60px auto 100px auto;
+    border: 4px solid var(--quiz-border);
+    box-shadow: 0 20px 0 var(--quiz-shadow);
+    position: relative;
+    overflow: visible;
+    
+    /* This creates the 3D space, but DOES NOT move */
+    perspective: 1000px; 
+    z-index: 10;
+}
+
+/* 3. MAIN CARD (STATIC STAGE - NO MOVEMENT) */
+.quiz-container {
+    background: var(--quiz-bg-color);
+    border-radius: 30px;
+    padding: 2.5rem;
+    max-width: 850px;
+    margin: 60px auto 100px auto;
+    border: 4px solid var(--quiz-border);
+    box-shadow: 0 20px 0 var(--quiz-shadow);
+    position: relative;
+    overflow: visible;
+    z-index: 10;
+    /* REMOVED: perspective and transform here. It must remain static. */
+}
+
+/* THE QUESTION CARD (DYNAMIC ACTOR - THIS TILTS) */
+#question-card {
+    /* 1. Appearance */
+    background: rgba(255, 255, 255, 0.5); /* Visible background */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    /* 2. IMPORTANT: Transition REMOVED so it follows mouse instantly */
+    /* transition: transform 0.1s ease-out;  <-- THIS WAS THE PROBLEM */
+    
+    will-change: transform; /* optimizing performance */
+    
+    /* 3. Important: We don't set perspective here, we add it in JS */
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden; /* Keeps the glare inside the rounded corners */
+}
+
+/* Dark Mode Appearance */
+[data-theme="dark"] #question-card {
+    background: rgba(30, 30, 50, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* NEW: The Glare Effect Layer */
+.card-glare {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    pointer-events: none; /* Let clicks pass through to buttons */
+    mix-blend-mode: overlay; /* Makes it look like light */
+    z-index: 2;
+}
+
+/* 4. PROGRESS BAR */
+.progress-section { margin-bottom: 2rem; }
+
+.progress-bar-wrapper {
+    background: var(--progress-track);
+    height: 20px;
+    border-radius: 12px;
+    box-shadow: inset 0 4px 0 rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(180deg, #5dd200, #4eb300);
+    height: 100%;
+    border-radius: 12px;
+    width: 0%;
+    transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 800;
+    color: var(--quiz-text-secondary);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* 5. QUESTION AREA (Pops out in 3D) */
+.question-badge {
+    background: #ce82ff;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 0 #a14add;
+    transform: translateZ(20px); /* 3D Depth */
+}
+
+.question-title {
+    color: var(--quiz-text-primary);
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    transition: color 0.3s ease;
+    transform: translateZ(30px); /* 3D Depth */
+}
+
+/* 6. OPTIONS GRID */
+.options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    transform: translateZ(20px); /* 3D Depth */
+}
+
+@media (max-width: 600px) {
+    .options-container { grid-template-columns: 1fr; }
+}
+
+/* 7. BUTTONS */
+.option-btn {
+    border: none;
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #2c2c2c !important; /* Dark text */
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    transition: transform 0.1s !important;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.2); 
+    z-index: 1;
+}
+
+.option-btn::before {
+    position: static !important;
+    content: '' !important;
+    display: inline-block !important;
+    width: 40px !important; 
+    height: 40px !important;
+    margin-right: 15px !important;
+    background-size: contain !important;
+    opacity: 0.8;
+    background: rgba(0,0,0,0.2) !important;
+    border-radius: 8px !important;
+    transform: none !important;
+    transition: none !important;
+    left: auto !important;
+}
+
+/* Button Backgrounds */
+.option-btn[data-option-id="0"] { background: var(--game-red) !important; box-shadow: 0 6px 0 var(--game-red-shadow); }
+.option-btn[data-option-id="1"] { background: var(--game-blue) !important; box-shadow: 0 6px 0 var(--game-blue-shadow); }
+.option-btn[data-option-id="2"] { background: var(--game-yellow) !important; box-shadow: 0 6px 0 var(--game-yellow-shadow); }
+.option-btn[data-option-id="3"] { background: var(--game-green) !important; box-shadow: 0 6px 0 var(--game-green-shadow); }
+
+/* Icons */
+.option-btn[data-option-id="0"]::before { content: '▲' !important; font-size: 24px; text-align: center; line-height: 40px; color: inherit;}
+.option-btn[data-option-id="1"]::before { content: '◆' !important; font-size: 24px; text-align: center; line-height: 40px; color: inherit;}
+.option-btn[data-option-id="2"]::before { content: '●' !important; font-size: 24px; text-align: center; line-height: 40px; color: inherit;}
+.option-btn[data-option-id="3"]::before { content: '■' !important; font-size: 24px; text-align: center; line-height: 40px; color: inherit;}
+
+/* Hover State (Outline + Lift) */
+.option-btn:hover:not(:disabled) {
+    transform: translateY(-4px) translateZ(10px); /* Lift + 3D Pop */
+    filter: brightness(1.1);
+    box-shadow: 0 10px 0 rgba(0,0,0,0.1), 0 0 0 4px #ffffff !important; 
+    z-index: 10;
+}
+
+/* Selected State (Neon Glow) */
+.option-btn:active:not(:disabled), .option-btn.selected {
+    transform: translateY(2px) translateZ(0px); 
+    border: 2px solid #fff;
+    filter: brightness(1.2) contrast(1.1);
+}
+
+.option-btn[data-option-id="0"].selected { box-shadow: 0 0 20px var(--game-red), inset 0 0 20px rgba(255,255,255,0.4) !important; }
+.option-btn[data-option-id="1"].selected { box-shadow: 0 0 20px var(--game-blue), inset 0 0 20px rgba(255,255,255,0.4) !important; }
+.option-btn[data-option-id="2"].selected { box-shadow: 0 0 20px var(--game-yellow), inset 0 0 20px rgba(255,255,255,0.4) !important; }
+.option-btn[data-option-id="3"].selected { box-shadow: 0 0 20px var(--game-green), inset 0 0 20px rgba(255,255,255,0.4) !important; }
+
+.option-label { display: none !important; }
+
+/* =========================================
+   8. ACTION BUTTONS (Side-by-Side Layout)
+   ========================================= */
+.quiz-actions {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
+    border-top: 2px dashed var(--quiz-border);
+    padding-top: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    transform: translateZ(20px);
+}
+
+/* Common Button Styles */
+.btn {
+    border: none;
+    border-radius: 16px; /* Slightly rounder */
+    padding: 16px 24px;  /* Taller touch target */
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.1s, filter 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* HINT BUTTON (The Lightbulb) */
+#hint-btn {
+    background: var(--hint-btn-bg);
+    border: 2px solid var(--hint-btn-border);
+    color: var(--hint-btn-text);
+    box-shadow: 0 4px 0 var(--quiz-border);
+    
+    flex: 0 0 auto; 
+    min-width: 60px;
+    
+    /* Smooth transition for the light effect */
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: visible; /* Allows the glow to shine outside the button */
+}
+
+/* 1. HOVER: Soft Warm Glow (Pre-heating) */
+#hint-btn:hover {
+    border-color: #fbbf24; /* Gold Border */
+    background: #fffbeb;   /* Very Pale Yellow Background */
+    color: #d97706;        /* Darker Yellow Icon */
+    
+    /* The Soft Glow */
+    box-shadow: 
+        0 0 15px rgba(251, 191, 36, 0.5), /* Yellow aura */
+        0 4px 0 var(--quiz-border);       /* Keep the 3D depth */
+        
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* 2. CLICK: LIGHTS UP (Intense Brightness) */
+#hint-btn:active {
+    background: #fbbf24; /* Bright Yellow Bulb Color */
+    border-color: #f59e0b;
+    color: #ffffff;      /* White Filament/Icon */
+    
+    /* THE LIGHT BURST EFFECT */
+    box-shadow: 
+        0 0 20px #fbbf24,  /* Inner Glow */
+        0 0 50px #fbbf24,  /* Outer Glow */
+        inset 0 0 10px rgba(255, 255, 255, 1); /* Internal light reflection */
+
+    transform: translateY(2px) scale(0.95); /* Press down effect */
+}
+
+/* Dark Mode Adjustment */
+[data-theme="dark"] #hint-btn:hover {
+    background: rgba(251, 191, 36, 0.1); /* Darker yellow tint */
+    color: #fbbf24;
+}
+
+/* SUBMIT & NEXT BUTTONS (Primary - Right Side - Grows to fill space) */
+#submit-btn, #next-btn {
+    background: var(--submit-btn-bg);
+    color: var(--submit-btn-text);
+    box-shadow: 0 6px 0 rgba(0,0,0,0.3); /* Thicker shadow for primary */
+    /* Grow to fill remaining space */
+    flex: 1; 
+}
+
+#submit-btn:hover, #next-btn:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+#submit-btn:active, #next-btn:active {
+    transform: translateY(4px);
+    box-shadow: none !important;
+}
+
+/* Disabled State */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+    filter: grayscale(1);
+}
+
+/* =========================================
+   9. GAMIFICATION HEADER (Glossy + High Visibility)
+   ========================================= */
+
+.gamification-header {
+    /* LIGHT MODE: Off-White Glass (Visible against white bg) */
+    background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    
+    /* Keep the blur */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    border-radius: 20px;
+    padding: 15px 30px;
+    margin-bottom: 2rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+    /* VISIBILITY FIXES: */
+    /* 1. Grey Border instead of White (Defines the shape) */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    
+    /* 2. Stronger Shadow (Lifts it up) */
+    box-shadow: 
+        0 10px 25px -5px rgba(0, 0, 0, 0.1), /* Main Shadow */
+        0 8px 10px -6px rgba(0, 0, 0, 0.1),  /* Detail Shadow */
+        inset 0 1px 0 rgba(255, 255, 255, 1); /* Shiny Top Edge */
+        
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* DARK MODE: Dark Polished Glass (Stays the same) */
+[data-theme="dark"] .gamification-header {
+    background: linear-gradient(145deg, rgba(30, 30, 50, 0.9), rgba(15, 15, 25, 0.8));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* --- THE SHIMMER BEAM --- */
+.gamification-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    
+    /* White Beam */
+    background: linear-gradient(
+        to right, 
+        transparent, 
+        rgba(255, 255, 255, 0.6), 
+        transparent
+    );
+    
+    transform: skewX(-20deg);
+    animation: headerShimmer 6s infinite linear; 
+    pointer-events: none;
+}
+
+/* Adjust shimmer for Dark Mode */
+[data-theme="dark"] .gamification-header::after {
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+@keyframes headerShimmer {
+    0% { left: -100px; }
+    20% { left: 120%; }
+    100% { left: 120%; }
+}
+
+/* --- CONTENT STYLING --- */
+.header-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    z-index: 2; 
+}
+
+/* 1. EMOJI */
+.stat-icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    animation: simpleBounce 2s infinite ease-in-out;
+}
+
+/* 2. LABEL */
+.stat-label {
+    font-family: inherit; 
+    font-weight: 800; 
+    text-transform: uppercase;
+    font-size: 0.75rem; 
+    letter-spacing: 1px;
+    color: #64748b; 
+    margin-bottom: 4px;
+}
+[data-theme="dark"] .stat-label { color: #94a3b8; }
+
+/* 3. VALUE */
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #1e293b; /* Dark text for light mode */
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+[data-theme="dark"] .stat-value {
+    color: #ffffff; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Streak Gold Text */
+.gold-text { color: #f59e0b !important; }
+
+@keyframes simpleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+@media (max-width: 500px) {
+    .gamification-header { padding: 12px 15px; }
+    .stat-icon { font-size: 1.2rem; margin-bottom: 4px; }
+    .stat-label { font-size: 0.6rem; }
+    .stat-value { font-size: 1.2rem; }
+}
+
+/* =========================================
+   GAMIFIED FEEDBACK CARD (V2)
+   ========================================= */
+
+#feedback-container {
+    margin-top: 2rem;
+    perspective: 1000px;
+    display: none;
+}
+
+/* The Card Wrapper */
+.feedback-card {
+    background: var(--quiz-bg-color); /* White (Light) or Navy (Dark) */
+    border-radius: 20px;
+    overflow: hidden; /* Clips the header inside */
+    box-shadow: 0 10px 0 rgba(0,0,0,0.2); /* Thick "Game" shadow */
+    position: relative;
+    border: 4px solid transparent; /* Placeholder for color */
+    transform-origin: top center;
+}
+
+/* --- VARIANT: CORRECT --- */
+.feedback-card.correct {
+    border-color: var(--game-green);
+}
+.feedback-card.correct .feedback-header {
+    background: var(--game-green);
+    color: #fff;
+    box-shadow: 0 4px 0 var(--game-green-shadow);
+}
+
+/* --- VARIANT: INCORRECT --- */
+.feedback-card.incorrect {
+    border-color: var(--game-red);
+}
+.feedback-card.incorrect .feedback-header {
+    background: var(--game-red);
+    color: #fff;
+    box-shadow: 0 4px 0 var(--game-red-shadow);
+}
+
+/* 1. The Colorful Top Banner */
+.feedback-header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.feedback-icon {
+    background: rgba(255,255,255,0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: inset 0 2px 0 rgba(0,0,0,0.2);
+}
+
+/* 2. The Content Body */
+.feedback-body {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: var(--quiz-text-primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* 3. The Points Badge */
+.points-badge {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    background: var(--quiz-border);
+    color: var(--quiz-text-secondary);
+}
+
+/* --- ANIMATIONS --- */
+
+/* Shake for Incorrect */
+@keyframes headShake {
+    0% { transform: translateX(0); }
+    6.5% { transform: translateX(-6px) rotateY(-9deg); }
+    18.5% { transform: translateX(5px) rotateY(7deg); }
+    31.5% { transform: translateX(-3px) rotateY(-5deg); }
+    43.5% { transform: translateX(2px) rotateY(3deg); }
+    50% { transform: translateX(0); }
+}
+
+.feedback-card.incorrect {
+    animation: headShake 0.5s ease-in-out;
+}
+
+/* Pop-In for Correct */
+@keyframes rubberBand {
+    0% { transform: scale3d(1, 1, 1); }
+    30% { transform: scale3d(1.25, 0.75, 1); }
+    40% { transform: scale3d(0.75, 1.25, 1); }
+    50% { transform: scale3d(1.15, 0.85, 1); }
+    65% { transform: scale3d(0.95, 1.05, 1); }
+    75% { transform: scale3d(1.05, 0.95, 1); }
+    100% { transform: scale3d(1, 1, 1); }
+}
+
+.feedback-card.correct {
+    animation: rubberBand 0.8s;
+}
+
+/* =========================================
+   NEW: COLORFUL FLOATING BACKGROUND SHAPES
+   ========================================= */
+
+#background-shapes {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0; /* Behind content */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bg-shape {
+    position: absolute;
+    border-radius: 50%; /* Circle by default */
+    
+    /* GLASS EFFECT FOR SHAPES */
+    backdrop-filter: blur(2px); 
+    mix-blend-mode: multiply; /* Blends nicely in light mode */
+    
+    /* Animation definition */
+    animation: shapeFloat ease-in-out forwards;
+}
+
+/* Dark mode blend adjustment */
+[data-theme="dark"] .bg-shape {
+    mix-blend-mode: screen; /* Makes colors glow in dark mode */
+    filter: brightness(1.2);
+}
+
+/* SMOOTH APPEAR & DISAPPEAR ANIMATION */
+@keyframes shapeFloat {
+    0% { 
+        opacity: 0;
+        transform: scale(0.5) translateY(50px) rotate(0deg);
+    }
+    30% { 
+        opacity: 0.6; /* Visible peak (adjust if too bright) */
+    }
+    70% {
+        opacity: 0.6; /* Stay visible for a while */
+    }
+    100% { 
+        opacity: 0;
+        transform: scale(1.2) translateY(-100px) rotate(45deg);
+    }
+
+    
+}
+
+/* =========================================
+   TOP NAVIGATION: EDGE-TO-EDGE (Fixed)
+   ========================================= */
+
+/* 1. The Main Header Bar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;       /* Full viewport width */
+    height: 80px;
+    z-index: 1000;
+    
+    /* Minimal padding to stick to edges (Adjust to 10px or 0px if needed) */
+    padding: 0 30px; 
+    
+    display: flex;
+    align-items: center;
+    
+    pointer-events: none; /* Clicks pass through empty space */
+    box-sizing: border-box;
+}
+
+/* 2. The Nav Wrapper (CRITICAL FIX) */
+/* This ensures the middle layer stretches full width */
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* 3. The Inner Container (Visual Layout) */
+.nav-container {
+    width: 100%;        /* Take up 100% of the .nav */
+    max-width: none;    /* UNLOCK: No width limit */
+    margin: 0;          /* No centering margins */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes content to EXTREME edges */
+    
+    pointer-events: auto; /* Re-enable clicks */
+}
+
+/* 4. LOGO (Sticks to Far Left) */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    
+    /* Make it stand out */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    transition: transform 0.2s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+}
+
+.brand-name {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    letter-spacing: -0.5px;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+/* 5. NAV MENU (Sticks to Far Right) */
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 6px 8px;
+    
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    /* Glass Pill Style */
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    
+    border-radius: 50px;
+}
+
+/* 6. NAV LINKS */
+.nav-link {
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 10px 25px;
+    border-radius: 40px;
+    
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link.active {
+    background: #ffffff;
+    color: #0f172a;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* --- LIGHT MODE ADJUSTMENTS --- */
+body:not([data-theme="dark"]) .brand-name {
+    color: #1e293b;
+    text-shadow: none;
+}
+body:not([data-theme="dark"]) .nav-menu {
+    background: rgba(255, 255, 255, 0.9); 
+    border-color: rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+body:not([data-theme="dark"]) .nav-link { color: #64748b; }
+body:not([data-theme="dark"]) .nav-link:hover { 
+    color: #0f172a; background: rgba(0,0,0,0.05); 
+}
+body:not([data-theme="dark"]) .nav-link.active {
+    background: #0f172a;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header { padding: 0 15px; height: 70px; } /* Reduce padding on mobile */
+    .brand-name { display: none; }
+    .nav-link { padding: 8px 16px; font-size: 0.9rem; }
+}
+
+/* =========================================
+   DINO RUNNER: ADAPTIVE THEME (Final Fix)
+   ========================================= */
+
+/* --- 1. DEFAULT: LIGHT MODE (Day Theme) --- */
+
+/* The Stage (Blue Sky) */
+.mid-header-animation {
+    flex-grow: 1;
+    height: 70px;
+    margin: 0 40px;
+    position: relative;
+    overflow: hidden;
+    
+    /* Day Sky */
+    background: linear-gradient(to bottom, #bae6fd 0%, #f0f9ff 100%);
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Parallax Sky */
+.dino-sky { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.cloud {
+    position: absolute;
+    background: #ffffff; /* White Clouds */
+    border-radius: 20px;
+    opacity: 0.9;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    animation: sceneryScroll linear infinite;
+}
+.cloud-1 { width: 50px; height: 14px; top: 15px; left: 100%; animation-duration: 15s; }
+.cloud-2 { width: 30px; height: 10px; top: 30px; left: 100%; animation-duration: 20s; animation-delay: 5s; }
+
+/* Stars (Hidden in Day) */
+.star {
+    position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%;
+    animation: twinkle 3s infinite alternate;
+    opacity: 0; /* Invisible by default */
+}
+.star-1 { top: 10px; left: 20%; }
+.star-2 { top: 20px; left: 60%; animation-duration: 2s; }
+
+/* The Ground (Dark Lines) */
+.dino-ground {
+    position: absolute; bottom: 0; left: 0; width: 200%; height: 10px;
+    /* Darkish Ground Lines */
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 195px, rgba(0,0,0,0.1) 195px, rgba(0,0,0,0.1) 200px);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    animation: groundScroll 3s linear infinite;
+}
+
+/* OBSTACLES (Dark/Flat colors for Day) */
+.obstacle-cactus {
+    position: absolute; bottom: 10px; left: 100%;
+    width: 16px; height: 24px;
+    background: #22c55e; /* Green */
+    clip-path: polygon(30% 0, 70% 0, 70% 100%, 30% 100%, 30% 60%, 0% 50%, 0% 30%, 30% 40%, 70% 40%, 100% 30%, 100% 50%, 70% 60%);
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+    animation: cactusMove 6s linear infinite;
+}
+
+.obstacle-bird {
+    position: absolute; bottom: 35px; left: 100%;
+    width: 24px; height: 16px;
+    background: #e11d48; /* Red */
+    clip-path: polygon(0 40%, 30% 40%, 60% 60%, 100% 30%, 80% 60%, 40% 70%, 20% 60%);
+    filter: drop-shadow(0 4px 3px rgba(0,0,0,0.2));
+    animation: birdMove 6s linear infinite;
+}
+.bird-wing {
+    position: absolute; top: -5px; left: 5px; width: 10px; height: 10px; background: #e11d48;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    animation: wingFlap 0.3s infinite alternate;
+}
+
+/* DINO (Dark Charcoal for Day) */
+.dino-rex {
+    position: absolute; bottom: 10px; left: 40px; 
+    width: 44px; height: 44px; z-index: 10;
+    animation: dinoJumpLoop 6s ease-in-out infinite;
+}
+.rex-body-wrapper {
+    width: 100%; height: 100%; transform-origin: bottom center;
+    animation: dinoDuckLoop 6s ease-in-out infinite;
+}
+.rex-shape {
+    width: 100%; height: 100%; 
+    background: #334155; /* Dark Grey */
+    clip-path: polygon(50% 0, 100% 0, 100% 35%, 65% 35%, 65% 45%, 90% 45%, 90% 55%, 50% 55%, 50% 65%, 20% 50%, 0 55%, 20% 80%, 20% 100%, 55% 100%, 55% 80%);
+}
+.rex-eye { position: absolute; top: 5px; right: 12px; width: 3px; height: 3px; background: #fff; } /* White Eye */
+.rex-arm { position: absolute; top: 25px; right: 14px; width: 4px; height: 2px; background: #fff; }
+.rex-leg { position: absolute; bottom: -4px; width: 6px; height: 10px; background: #334155; }
+.leg-left  { left: 22px; animation: runLegs 0.2s infinite alternate; }
+.leg-right { left: 32px; animation: runLegs 0.2s infinite alternate-reverse; }
+
+
+/* --- 2. DARK MODE OVERRIDES (Night Theme) --- */
+/* This selector works regardless of where 'data-theme' is located (html or body) */
+[data-theme="dark"] .mid-header-animation {
+    background: linear-gradient(to bottom, #020617 0%, #1e293b 100%); /* Deep Space */
+    border-color: rgba(255,255,255,0.15);
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.6);
+}
+
+[data-theme="dark"] .star { opacity: 1; } /* Show Stars */
+
+[data-theme="dark"] .cloud {
+    background: rgba(255, 255, 255, 0.05); /* Faint Clouds */
+    box-shadow: none;
+}
+
+[data-theme="dark"] .dino-ground {
+    /* White/Neon Ground Lines */
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 195px, rgba(255,255,255,0.3) 195px, rgba(255,255,255,0.3) 200px);
+    border-top-color: rgba(255,255,255,0.2);
+}
+
+[data-theme="dark"] .obstacle-cactus {
+    background: #2bde73; /* Neon Green */
+    box-shadow: 0 0 10px #2bde73; /* Glow */
+    filter: none;
+}
+
+[data-theme="dark"] .obstacle-bird, [data-theme="dark"] .bird-wing {
+    background: #f43f5e; /* Neon Red */
+    filter: drop-shadow(0 0 5px #f43f5e); /* Glow */
+}
+
+[data-theme="dark"] .rex-shape, [data-theme="dark"] .rex-leg {
+    background: #cbd5e1; /* Light Grey Dino */
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.4)); /* Glow */
+}
+
+[data-theme="dark"] .rex-eye, [data-theme="dark"] .rex-arm {
+    background: #0f172a; /* Dark Eye */
+}
+
+
+/* --- 3. ANIMATION TIMING (6 Seconds Loop) --- */
+/* (Unchanged from previous strict timing) */
+@keyframes cactusMove {
+    0%    { left: 100%; }
+    21.67% { left: 40px; } 
+    35%   { left: -20%; } 
+    100%  { left: -20%; }
+}
+@keyframes dinoJumpLoop {
+    0%, 15%  { transform: translateY(0); } 
+    21.67%    { transform: translateY(-55px); }
+    28%      { transform: translateY(0); }   
+    100%     { transform: translateY(0); }
+}
+@keyframes birdMove {
+    0%, 50%  { left: 100%; }
+    71.67%    { left: 40px; } 
+    85%      { left: -20%; }
+    100%     { left: -20%; }
+}
+@keyframes dinoDuckLoop {
+    0%, 65%  { transform: scale(1, 1); }
+    71.67%    { transform: scale(1.3, 0.5) translateY(15px); } 
+    78%      { transform: scale(1, 1); }
+    100%     { transform: scale(1, 1); }
+}
+
+@keyframes sceneryScroll { 0% { left: 100%; } 100% { left: -20%; } }
+@keyframes groundScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes twinkle { 0% { opacity: 0.3; } 100% { opacity: 1; } }
+@keyframes wingFlap { 0% { transform: scaleY(1); } 100% { transform: scaleY(-1); } }
+@keyframes runLegs { 0% { height: 10px; transform: translateY(0); } 100% { height: 6px; transform: translateY(-4px); } }
+
+@media (max-width: 1100px) { .mid-header-animation { display: none; } }

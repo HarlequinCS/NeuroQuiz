@@ -1,23 +1,16 @@
 /**
  * NeuroQuiz™ - Quiz UI Controller
- * 
- * UI Team: This file connects HTML elements to the quiz engine.
- * You can modify UI interactions, animations, and display logic here.
- * 
- * IMPORTANT: 
- * - Do not modify core logic (that's in engine.js)
- * - Call engine methods to get data and process answers
- * - Handle all DOM manipulation and user interactions here
+ * * UI Team: This file connects HTML elements to the quiz engine.
+ * Includes: Gamified Feedback Cards, Unselect Logic, and Animations.
  */
 
-/**
- * QuizUIController Class
- * Manages all UI interactions for the quiz page
- */
 class QuizUIController {
     constructor() {
         // DOM Elements
         this.elements = {
+            // Note: Ensure your HTML ID is 'feedback-container' to match CSS, 
+            // or 'feedback-area' if you prefer (just make sure CSS matches).
+            // We use the ID from your provided code here:
             quizContainer: document.getElementById('quiz-container'),
             questionCard: document.getElementById('question-card'),
             questionTitle: document.getElementById('question-title'),
@@ -29,7 +22,7 @@ class QuizUIController {
             submitBtn: document.getElementById('submit-btn'),
             nextBtn: document.getElementById('next-btn'),
             hintBtn: document.getElementById('hint-btn'),
-            feedbackArea: document.getElementById('feedback-area'),
+            feedbackArea: document.getElementById('feedback-container') || document.getElementById('feedback-area'),
             loadingOverlay: document.getElementById('loading-overlay'),
             levelValue: document.getElementById('level-value'),
             streakValue: document.getElementById('streak-value'),
@@ -46,28 +39,15 @@ class QuizUIController {
         console.log('QuizUIController initialized');
     }
     
-    /**
-     * Initialize the quiz UI
-     */
     async init() {
-        // Show loading
         this.showLoading();
-        
         try {
-            // Initialize engine (will be implemented by lead developer)
-            this.engine = new QuizEngine();
-            
-            // Load question data
-            // TODO: Lead Developer - Initialize engine with question data
+            // Initialize engine (Placeholder for lead dev integration)
+            // this.engine = new QuizEngine(); 
             // this.engine.initialize(getAllQuestions());
             
-            // Hide loading
             this.hideLoading();
-            
-            // Load first question
             this.loadQuestion();
-            
-            // Setup event listeners
             this.setupEventListeners();
             
         } catch (error) {
@@ -76,11 +56,8 @@ class QuizUIController {
         }
     }
     
-    /**
-     * Setup event listeners for UI interactions
-     */
     setupEventListeners() {
-        // Option button clicks
+        // Option button clicks (Delegation)
         this.elements.optionsContainer.addEventListener('click', (e) => {
             const optionBtn = e.target.closest('.option-btn');
             if (optionBtn && !this.isAnswered) {
@@ -100,25 +77,14 @@ class QuizUIController {
             this.nextQuestion();
         });
         
-        // Hint button (optional feature)
+        // Hint button
         this.elements.hintBtn.addEventListener('click', () => {
             this.showHint();
         });
-        
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            this.handleKeyboard(e);
-        });
     }
     
-    /**
-     * Load and display current question
-     */
     loadQuestion() {
-        // TODO: Lead Developer - Get question from engine
-        // const question = this.engine.getCurrentQuestion();
-        
-        // Placeholder - UI Team can style this structure
+        // Placeholder Question Data
         const question = {
             id: 1,
             question: "Sample Question - Engine will provide real questions",
@@ -126,7 +92,7 @@ class QuizUIController {
             category: "General"
         };
         
-        // Update question text
+        // Update text
         this.elements.questionTitle.textContent = question.question;
         
         // Clear and populate options
@@ -136,10 +102,8 @@ class QuizUIController {
             this.elements.optionsContainer.appendChild(optionBtn);
         });
         
-        // Update progress
+        // Update gamification UI
         this.updateProgress();
-        
-        // Update gamification stats
         this.updateGamificationDisplay();
         
         // Reset UI state
@@ -147,15 +111,12 @@ class QuizUIController {
         this.isAnswered = false;
         this.elements.submitBtn.disabled = true;
         this.elements.nextBtn.style.display = 'none';
+        
+        // Clear feedback
         this.elements.feedbackArea.innerHTML = '';
+        this.elements.feedbackArea.style.display = 'none';
     }
     
-    /**
-     * Create option button element
-     * @param {string} text - Option text
-     * @param {number} index - Option index
-     * @returns {HTMLElement} Button element
-     */
     createOptionButton(text, index) {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
@@ -177,199 +138,167 @@ class QuizUIController {
     }
     
     /**
-     * Handle option selection
-     * @param {HTMLElement} optionBtn - Selected option button
+     * Handle option selection with Toggle (Select/Unselect) Logic
      */
     selectOption(optionBtn) {
-        // Remove previous selection
+        // Check if the clicked button is ALREADY selected
+        const isAlreadySelected = optionBtn.classList.contains('selected');
+
+        // 1. Reset ALL buttons first (remove selected class)
         document.querySelectorAll('.option-btn').forEach(btn => {
             btn.classList.remove('selected');
         });
-        
-        // Mark as selected
-        optionBtn.classList.add('selected');
-        this.selectedOption = parseInt(optionBtn.getAttribute('data-option-id'));
-        
-        // Enable submit button
-        this.elements.submitBtn.disabled = false;
+
+        if (isAlreadySelected) {
+            // 2a. If it was already selected, we are UNSELECTING it.
+            this.selectedOption = null;
+            this.elements.submitBtn.disabled = true;
+        } else {
+            // 2b. If it was NOT selected, we SELECT it.
+            optionBtn.classList.add('selected');
+            this.selectedOption = parseInt(optionBtn.getAttribute('data-option-id'));
+            
+            // Enable submit button
+            this.elements.submitBtn.disabled = false;
+        }
     }
     
-    /**
-     * Submit answer and process
-     */
     async submitAnswer() {
         if (this.selectedOption === null || this.isAnswered) return;
         
         this.isAnswered = true;
         this.elements.submitBtn.disabled = true;
         
-        // TODO: Lead Developer - Process answer through engine
-        // const result = this.engine.submitAnswer(this.selectedOption);
-        
-        // Placeholder result
+        // Placeholder Result (Simulating Engine Response)
         const result = {
-            isCorrect: false,
+            isCorrect: false, // Change this to true to test correct state
             correctAnswer: 0,
-            feedback: "Sample feedback - Engine will provide real feedback",
+            feedback: "Sample feedback - Engine will provide real feedback explanation here.",
             pointsEarned: 10
         };
         
-        // Show feedback
+        // 1. Show "Perfect" Feedback Card
         this.showFeedback(result);
         
-        // Highlight correct/incorrect options
+        // 2. Highlight Answers
         this.highlightAnswers(result);
         
-        // Play audio feedback
+        // 3. Play Audio
         this.playAudioFeedback(result.isCorrect);
         
-        // Show next button
+        // 4. Show Next Button
         this.elements.nextBtn.style.display = 'block';
         
-        // Update score display
         this.updateScore();
     }
     
     /**
-     * Show feedback message
-     * @param {Object} result - Result object from engine
+     * Renders the "Game Style" Feedback Card
      */
     showFeedback(result) {
-        const feedbackDiv = document.createElement('div');
-        feedbackDiv.className = result.isCorrect ? 'feedback-correct' : 'feedback-wrong';
-        feedbackDiv.innerHTML = `
-            <strong>${result.isCorrect ? '✓ Correct!' : '✗ Incorrect'}</strong>
-            <p>${result.feedback}</p>
-            <p>Points earned: ${result.pointsEarned}</p>
-        `;
+        const container = this.elements.feedbackArea;
         
-        this.elements.feedbackArea.innerHTML = '';
-        this.elements.feedbackArea.appendChild(feedbackDiv);
+        // 1. Determine Content & Style
+        const isCorrect = result.isCorrect;
+        const icon = isCorrect ? '✔' : '✖';
+        const title = isCorrect ? 'Correct!' : 'Incorrect';
+        const styleClass = isCorrect ? 'correct' : 'incorrect';
+        
+        // 2. Build HTML Structure (Split Header/Body)
+        const html = `
+            <div class="feedback-card ${styleClass}">
+                <div class="feedback-header">
+                    <div class="feedback-icon">${icon}</div>
+                    <span>${title}</span>
+                </div>
+                
+                <div class="feedback-body">
+                    <div class="feedback-text">
+                        ${result.feedback}
+                    </div>
+                    
+                    ${result.pointsEarned > 0 ? `
+                    <div class="points-badge">
+                        +${result.pointsEarned} Points
+                    </div>` : `
+                    <div class="points-badge" style="opacity: 0.6">
+                        0 Points
+                    </div>`}
+                </div>
+            </div>
+        `;
+
+        // 3. Inject and Show
+        container.innerHTML = html;
+        container.style.display = 'block';
+        
+        // Scroll slightly to make sure feedback is visible on mobile
+        container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
     
-    /**
-     * Highlight correct and incorrect answers
-     * @param {Object} result - Result object from engine
-     */
     highlightAnswers(result) {
         const options = document.querySelectorAll('.option-btn');
         options.forEach((btn, index) => {
+            // Remove previous selections styling if needed, or keep it
+            btn.classList.remove('selected');
+            
             if (index === result.correctAnswer) {
-                btn.classList.add('correct');
+                btn.classList.add('correct'); // Add Green style in CSS if desired
+                // If using the game colors, you might just want to keep the color 
+                // but add a thick border or icon.
+                btn.style.boxShadow = "0 0 15px #2bde73";
+                btn.style.borderColor = "#2bde73";
             } else if (index === this.selectedOption && !result.isCorrect) {
                 btn.classList.add('wrong');
+                btn.style.opacity = "0.7";
+            } else {
+                btn.style.opacity = "0.5"; // Dim other options
             }
             btn.disabled = true;
         });
     }
     
-    /**
-     * Move to next question
-     */
     nextQuestion() {
-        // TODO: Lead Developer - Check if quiz complete
-        // if (this.engine.isComplete()) {
-        //     this.completeQuiz();
-        //     return;
-        // }
-        
-        // TODO: Lead Developer - Move to next question
-        // this.engine.nextQuestion();
-        
-        // Reload question display
+        // Logic to load next question from engine would go here
+        // For now, we just reload the sample
         this.loadQuestion();
     }
     
-    /**
-     * Complete quiz and redirect to results
-     */
-    completeQuiz() {
-        // TODO: Lead Developer - Get results and store
-        // const results = this.engine.getResults();
-        // localStorage.setItem('quizResults', JSON.stringify(results));
-        
-        // Redirect to results page
-        window.location.href = 'result.html';
-    }
-    
-    /**
-     * Update progress bar
-     */
     updateProgress() {
-        // TODO: Lead Developer - Get progress from engine
-        // const progress = (this.engine.currentQuestionIndex / this.engine.questions.length) * 100;
-        
         const progress = 0; // Placeholder
         this.elements.progressBar.style.width = `${progress}%`;
-        this.elements.progressText.textContent = `Question 0 of 0`; // Placeholder
+        this.elements.progressText.textContent = `Question 1 of 5`; 
     }
     
-    /**
-     * Update score display
-     */
     updateScore() {
-        // TODO: Lead Developer - Get score from engine
-        // const score = this.engine.score;
-        this.elements.scoreDisplay.textContent = 'Score: 0'; // Placeholder
+        this.elements.scoreDisplay.textContent = 'Score: 10'; 
     }
     
-    /**
-     * Update gamification indicators
-     */
     updateGamificationDisplay() {
-        // TODO: Lead Developer - Get stats from engine
-        // const stats = this.engine.getGamificationStats();
-        // this.elements.levelValue.textContent = stats.level;
-        // this.elements.streakValue.textContent = stats.streak;
-        // this.elements.pointsValue.textContent = stats.points;
+        // Placeholder stats
     }
     
-    /**
-     * Show hint (optional feature)
-     */
     showHint() {
-        // UI Team: Implement hint display logic
         alert('Hint feature - to be implemented');
     }
     
-    /**
-     * Handle keyboard navigation
-     * @param {KeyboardEvent} e - Keyboard event
-     */
-    handleKeyboard(e) {
-        // UI Team: Add keyboard shortcuts
-        // e.g., 1-4 for options, Enter to submit, etc.
-    }
-    
-    /**
-     * Play audio feedback
-     * @param {boolean} isCorrect - Whether answer was correct
-     */
     playAudioFeedback(isCorrect) {
-        const audio = new Audio(isCorrect ? 'assets/audio/correct.mp3' : 'assets/audio/wrong.mp3');
-        audio.play().catch(err => console.log('Audio playback failed:', err));
+        // Optional: Add simple beeps if files aren't available
+        // const audio = new Audio(isCorrect ? 'assets/audio/correct.mp3' : 'assets/audio/wrong.mp3');
+        // audio.play().catch(err => console.log('Audio playback failed:', err));
     }
     
-    /**
-     * Show loading overlay
-     */
     showLoading() {
-        this.elements.loadingOverlay.setAttribute('aria-hidden', 'false');
+        if(this.elements.loadingOverlay) this.elements.loadingOverlay.setAttribute('aria-hidden', 'false');
     }
     
-    /**
-     * Hide loading overlay
-     */
     hideLoading() {
-        this.elements.loadingOverlay.setAttribute('aria-hidden', 'true');
+        if(this.elements.loadingOverlay) this.elements.loadingOverlay.setAttribute('aria-hidden', 'true');
     }
     
-    /**
-     * Show error message
-     * @param {string} message - Error message
-     */
     showError(message) {
-        this.elements.feedbackArea.innerHTML = `<div class="feedback-wrong">${message}</div>`;
+        this.elements.feedbackArea.innerHTML = `<div class="feedback-card incorrect shake">${message}</div>`;
+        this.elements.feedbackArea.style.display = 'block';
     }
 }
 
@@ -378,4 +307,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const quizUI = new QuizUIController();
     quizUI.init();
 });
-

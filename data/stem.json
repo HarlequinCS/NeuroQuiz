@@ -1,0 +1,4502 @@
+[
+  {
+    "id": 3001,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What planet do we live on?",
+    "options": [
+      "Mars",
+      "Earth",
+      "Jupiter",
+      "Venus"
+    ],
+    "answer": 1,
+    "explanation": "We live on planet Earth"
+  },
+  {
+    "id": 3002,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the closest star to Earth?",
+    "options": [
+      "Sun",
+      "Moon",
+      "Mars",
+      "North Star"
+    ],
+    "answer": 0,
+    "explanation": "The Sun is the closest star to Earth"
+  },
+  {
+    "id": 3003,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "How many legs does a spider have?",
+    "options": [
+      "8",
+      "4",
+      "10",
+      "6"
+    ],
+    "answer": 0,
+    "explanation": "Spiders have 8 legs"
+  },
+  {
+    "id": 3004,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What do plants need to grow?",
+    "options": [
+      "Water, sunlight, and soil",
+      "Only sunlight",
+      "Only soil",
+      "Only water"
+    ],
+    "answer": 0,
+    "explanation": "Plants need water, sunlight, and nutrients from soil to grow"
+  },
+  {
+    "id": 3005,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is H2O commonly known as?",
+    "options": [
+      "Sugar",
+      "Salt",
+      "Air",
+      "Water"
+    ],
+    "answer": 3,
+    "explanation": "H2O is the chemical formula for water"
+  },
+  {
+    "id": 3006,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "Which force keeps us on the ground?",
+    "options": [
+      "Electricity",
+      "Gravity",
+      "Magnetism",
+      "Friction"
+    ],
+    "answer": 1,
+    "explanation": "Gravity pulls objects toward Earth's center"
+  },
+  {
+    "id": 3007,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the largest organ in the human body?",
+    "options": [
+      "Skin",
+      "Brain",
+      "Heart",
+      "Liver"
+    ],
+    "answer": 0,
+    "explanation": "Skin is the largest organ, covering the entire body"
+  },
+  {
+    "id": 3008,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What do bees make?",
+    "options": [
+      "Milk",
+      "Wax only",
+      "Silk",
+      "Honey"
+    ],
+    "answer": 3,
+    "explanation": "Bees produce honey from flower nectar"
+  },
+  {
+    "id": 3009,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "How many days does Earth take to orbit the Sun?",
+    "options": [
+      "100 days",
+      "30 days",
+      "365 days",
+      "7 days"
+    ],
+    "answer": 2,
+    "explanation": "Earth takes approximately 365 days to orbit the Sun"
+  },
+  {
+    "id": 3010,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What are the three states of matter?",
+    "options": [
+      "Hard, soft, wet",
+      "Big, medium, small",
+      "Solid, liquid, gas",
+      "Hot, warm, cold"
+    ],
+    "answer": 2,
+    "explanation": "The three common states of matter are solid, liquid, and gas"
+  },
+  {
+    "id": 3011,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What body part pumps blood?",
+    "options": [
+      "Stomach",
+      "Lungs",
+      "Brain",
+      "Heart"
+    ],
+    "answer": 3,
+    "explanation": "The heart pumps blood throughout the body"
+  },
+  {
+    "id": 3012,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What gas do we breathe in?",
+    "options": [
+      "Nitrogen",
+      "Helium",
+      "Carbon dioxide",
+      "Oxygen"
+    ],
+    "answer": 3,
+    "explanation": "We breathe in oxygen and breathe out carbon dioxide"
+  },
+  {
+    "id": 3013,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the boiling point of water?",
+    "options": [
+      "200°C",
+      "100°C",
+      "50°C",
+      "0°C"
+    ],
+    "answer": 1,
+    "explanation": "Water boils at 100°C (212°F) at sea level"
+  },
+  {
+    "id": 3014,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "Which animal is known as 'man's best friend'?",
+    "options": [
+      "Horse",
+      "Dog",
+      "Bird",
+      "Cat"
+    ],
+    "answer": 1,
+    "explanation": "Dogs are commonly called man's best friend"
+  },
+  {
+    "id": 3015,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What do caterpillars turn into?",
+    "options": [
+      "Ants",
+      "Butterflies",
+      "Bees",
+      "Spiders"
+    ],
+    "answer": 1,
+    "explanation": "Caterpillars metamorphose into butterflies or moths"
+  },
+  {
+    "id": 3016,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the freezing point of water?",
+    "options": [
+      "32°C",
+      "100°C",
+      "0°C",
+      "10°C"
+    ],
+    "answer": 2,
+    "explanation": "Water freezes at 0°C (32°F)"
+  },
+  {
+    "id": 3017,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "How many bones are in an adult human body?",
+    "options": [
+      "406",
+      "206",
+      "306",
+      "106"
+    ],
+    "answer": 1,
+    "explanation": "Adults have 206 bones"
+  },
+  {
+    "id": 3018,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the largest planet in our solar system?",
+    "options": [
+      "Neptune",
+      "Saturn",
+      "Jupiter",
+      "Earth"
+    ],
+    "answer": 2,
+    "explanation": "Jupiter is the largest planet in our solar system"
+  },
+  {
+    "id": 3019,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What makes a rainbow?",
+    "options": [
+      "Wind",
+      "Sunlight and rain",
+      "Stars",
+      "Clouds"
+    ],
+    "answer": 1,
+    "explanation": "Rainbows form when sunlight passes through raindrops"
+  },
+  {
+    "id": 3020,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What type of animal is a frog?",
+    "options": [
+      "Amphibian",
+      "Fish",
+      "Reptile",
+      "Mammal"
+    ],
+    "answer": 0,
+    "explanation": "Frogs are amphibians - they live both in water and on land"
+  },
+  {
+    "id": 3021,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What do we call animals that eat only plants?",
+    "options": [
+      "Insectivores",
+      "Omnivores",
+      "Herbivores",
+      "Carnivores"
+    ],
+    "answer": 2,
+    "explanation": "Herbivores are animals that eat only plants"
+  },
+  {
+    "id": 3022,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the Moon?",
+    "options": [
+      "Earth's satellite",
+      "A planet",
+      "A star",
+      "A comet"
+    ],
+    "answer": 0,
+    "explanation": "The Moon is Earth's natural satellite"
+  },
+  {
+    "id": 3023,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "Which planet is known as the Red Planet?",
+    "options": [
+      "Mercury",
+      "Mars",
+      "Saturn",
+      "Venus"
+    ],
+    "answer": 1,
+    "explanation": "Mars is called the Red Planet due to its reddish appearance"
+  },
+  {
+    "id": 3024,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What does a thermometer measure?",
+    "options": [
+      "Speed",
+      "Distance",
+      "Temperature",
+      "Weight"
+    ],
+    "answer": 2,
+    "explanation": "A thermometer measures temperature"
+  },
+  {
+    "id": 3025,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "How many planets are in our solar system?",
+    "options": [
+      "7",
+      "9",
+      "8",
+      "6"
+    ],
+    "answer": 2,
+    "explanation": "There are 8 planets in our solar system"
+  },
+  {
+    "id": 3026,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What part of the plant absorbs water?",
+    "options": [
+      "Flowers",
+      "Leaves",
+      "Stem",
+      "Roots"
+    ],
+    "answer": 3,
+    "explanation": "Roots absorb water and nutrients from the soil"
+  },
+  {
+    "id": 3027,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the hard outer layer of Earth called?",
+    "options": [
+      "Crust",
+      "Core",
+      "Atmosphere",
+      "Mantle"
+    ],
+    "answer": 0,
+    "explanation": "The crust is Earth's outermost solid layer"
+  },
+  {
+    "id": 3028,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What are baby frogs called?",
+    "options": [
+      "Cubs",
+      "Puppies",
+      "Fry",
+      "Tadpoles"
+    ],
+    "answer": 3,
+    "explanation": "Baby frogs are called tadpoles"
+  },
+  {
+    "id": 3029,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What type of energy does the Sun give us?",
+    "options": [
+      "Wind energy",
+      "Light and heat energy",
+      "Electrical energy",
+      "Sound energy"
+    ],
+    "answer": 1,
+    "explanation": "The Sun provides light and heat energy"
+  },
+  {
+    "id": 3030,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the process plants use to make food?",
+    "options": [
+      "Photosynthesis",
+      "Digestion",
+      "Circulation",
+      "Respiration"
+    ],
+    "answer": 0,
+    "explanation": "Photosynthesis is how plants convert sunlight into food"
+  },
+  {
+    "id": 3031,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "Which sense do your eyes provide?",
+    "options": [
+      "Smell",
+      "Hearing",
+      "Sight",
+      "Touch"
+    ],
+    "answer": 2,
+    "explanation": "Eyes provide the sense of sight"
+  },
+  {
+    "id": 3032,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is a group of stars that form a pattern called?",
+    "options": [
+      "Constellation",
+      "Nebula",
+      "Solar system",
+      "Galaxy"
+    ],
+    "answer": 0,
+    "explanation": "A constellation is a pattern of stars as seen from Earth"
+  },
+  {
+    "id": 3033,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What do fish use to breathe?",
+    "options": [
+      "Lungs",
+      "Skin",
+      "Nose",
+      "Gills"
+    ],
+    "answer": 3,
+    "explanation": "Fish breathe through gills that extract oxygen from water"
+  },
+  {
+    "id": 3034,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the chemical symbol for gold?",
+    "options": [
+      "Go",
+      "Ag",
+      "Au",
+      "Gd"
+    ],
+    "answer": 2,
+    "explanation": "Au (from Latin 'aurum') is the symbol for gold"
+  },
+  {
+    "id": 3035,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What causes day and night?",
+    "options": [
+      "Earth's rotation",
+      "Sun's movement",
+      "Moon's orbit",
+      "Earth's orbit"
+    ],
+    "answer": 0,
+    "explanation": "Earth rotating on its axis causes day and night"
+  },
+  {
+    "id": 3036,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the smallest unit of life?",
+    "options": [
+      "Atom",
+      "Organ",
+      "Tissue",
+      "Cell"
+    ],
+    "answer": 3,
+    "explanation": "The cell is the basic unit of all living things"
+  },
+  {
+    "id": 3037,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What simple machine is a ramp?",
+    "options": [
+      "Lever",
+      "Inclined plane",
+      "Pulley",
+      "Wheel and axle"
+    ],
+    "answer": 1,
+    "explanation": "A ramp is an inclined plane, one of six simple machines"
+  },
+  {
+    "id": 3038,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "Which planet has rings visible from Earth?",
+    "options": [
+      "Uranus",
+      "Mars",
+      "Jupiter",
+      "Saturn"
+    ],
+    "answer": 3,
+    "explanation": "Saturn's rings are easily visible with a small telescope"
+  },
+  {
+    "id": 3039,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is molten rock beneath Earth's surface called?",
+    "options": [
+      "Lava",
+      "Magma",
+      "Ite",
+      "Ite"
+    ],
+    "answer": 1,
+    "explanation": "Magma is molten rock underground; lava is when it reaches the surface"
+  },
+  {
+    "id": 3040,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "How does sound travel?",
+    "options": [
+      "Through a vacuum only",
+      "Only through solids",
+      "As waves through matter",
+      "Faster than light"
+    ],
+    "answer": 2,
+    "explanation": "Sound travels as waves through solids, liquids, and gases"
+  },
+  {
+    "id": 3041,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What are the tiny parts that make up all matter?",
+    "options": [
+      "Particles",
+      "Cells",
+      "Atoms",
+      "Molecules"
+    ],
+    "answer": 2,
+    "explanation": "Atoms are the basic building blocks of all matter"
+  },
+  {
+    "id": 3042,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What causes the seasons?",
+    "options": [
+      "Sun's temperature",
+      "Moon's gravity",
+      "Distance from Sun",
+      "Earth's tilted axis"
+    ],
+    "answer": 3,
+    "explanation": "Earth's tilted axis causes different parts to receive more sunlight at different times"
+  },
+  {
+    "id": 3043,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the water cycle?",
+    "options": [
+      "Water in a glass",
+      "River flow",
+      "Movement of water through evaporation, condensation, precipitation",
+      "Water going in circles"
+    ],
+    "answer": 2,
+    "explanation": "The water cycle describes how water evaporates, forms clouds, and falls as rain"
+  },
+  {
+    "id": 3044,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "Which organ controls all body functions?",
+    "options": [
+      "Lungs",
+      "Brain",
+      "Heart",
+      "Liver"
+    ],
+    "answer": 1,
+    "explanation": "The brain controls all body functions and processes information"
+  },
+  {
+    "id": 3045,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What type of rock forms from cooled lava?",
+    "options": [
+      "Metamorphic",
+      "Igneous",
+      "Mineral",
+      "Sedimentary"
+    ],
+    "answer": 1,
+    "explanation": "Igneous rocks form when molten rock (lava or magma) cools"
+  },
+  {
+    "id": 3046,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is an ecosystem?",
+    "options": [
+      "Living things and their environment interacting",
+      "Just animals",
+      "Just plants",
+      "Weather patterns"
+    ],
+    "answer": 0,
+    "explanation": "An ecosystem includes all living and non-living things interacting in an area"
+  },
+  {
+    "id": 3047,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the function of white blood cells?",
+    "options": [
+      "Fight infections",
+      "Digest food",
+      "Clot blood",
+      "Carry oxygen"
+    ],
+    "answer": 0,
+    "explanation": "White blood cells are part of the immune system, fighting infections"
+  },
+  {
+    "id": 3048,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What type of energy is stored in food?",
+    "options": [
+      "Kinetic",
+      "Chemical",
+      "Nuclear",
+      "Electrical"
+    ],
+    "answer": 1,
+    "explanation": "Food contains chemical energy that our bodies convert to other forms"
+  },
+  {
+    "id": 3049,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the hardest natural substance?",
+    "options": [
+      "Diamond",
+      "Quartz",
+      "Iron",
+      "Gold"
+    ],
+    "answer": 0,
+    "explanation": "Diamond is the hardest natural substance known"
+  },
+  {
+    "id": 3050,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What causes lightning?",
+    "options": [
+      "Sun rays",
+      "Wind",
+      "Moon gravity",
+      "Static electricity in clouds"
+    ],
+    "answer": 3,
+    "explanation": "Lightning is caused by electrical charges building up in clouds"
+  },
+  {
+    "id": 3051,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What does the digestive system do?",
+    "options": [
+      "Moves the body",
+      "Pumps blood",
+      "Filters air",
+      "Breaks down food"
+    ],
+    "answer": 3,
+    "explanation": "The digestive system breaks down food so the body can absorb nutrients"
+  },
+  {
+    "id": 3052,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the center of an atom called?",
+    "options": [
+      "Neutron",
+      "Electron",
+      "Proton",
+      "Nucleus"
+    ],
+    "answer": 3,
+    "explanation": "The nucleus is the central core of an atom containing protons and neutrons"
+  },
+  {
+    "id": 3053,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What causes tides in the ocean?",
+    "options": [
+      "Earthquakes",
+      "Fish",
+      "Moon's gravity",
+      "Wind"
+    ],
+    "answer": 2,
+    "explanation": "Ocean tides are primarily caused by the Moon's gravitational pull"
+  },
+  {
+    "id": 3054,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is a food chain?",
+    "options": [
+      "A recipe",
+      "A list of restaurants",
+      "How energy passes from one organism to another",
+      "Types of food"
+    ],
+    "answer": 2,
+    "explanation": "A food chain shows how energy flows from plants to animals"
+  },
+  {
+    "id": 3055,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the chemical symbol for oxygen?",
+    "options": [
+      "O2",
+      "O",
+      "Ox",
+      "Og"
+    ],
+    "answer": 1,
+    "explanation": "O is the chemical symbol for oxygen (O2 is oxygen gas)"
+  },
+  {
+    "id": 3056,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What type of simple machine is a seesaw?",
+    "options": [
+      "Pulley",
+      "Screw",
+      "Wedge",
+      "Lever"
+    ],
+    "answer": 3,
+    "explanation": "A seesaw is a lever - a bar that pivots on a fulcrum"
+  },
+  {
+    "id": 3057,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is evaporation?",
+    "options": [
+      "Gas turning to liquid",
+      "Solid to liquid",
+      "Water turning to gas",
+      "Water freezing"
+    ],
+    "answer": 2,
+    "explanation": "Evaporation is when liquid water turns into water vapor (gas)"
+  },
+  {
+    "id": 3058,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "Which gas do plants release during photosynthesis?",
+    "options": [
+      "Carbon dioxide",
+      "Hydrogen",
+      "Oxygen",
+      "Nitrogen"
+    ],
+    "answer": 2,
+    "explanation": "Plants release oxygen as a byproduct of photosynthesis"
+  },
+  {
+    "id": 3059,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Earth's atmosphere made mostly of?",
+    "options": [
+      "Nitrogen",
+      "Carbon dioxide",
+      "Oxygen",
+      "Hydrogen"
+    ],
+    "answer": 0,
+    "explanation": "Nitrogen makes up about 78% of Earth's atmosphere"
+  },
+  {
+    "id": 3060,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is a habitat?",
+    "options": [
+      "A food source",
+      "Where an organism lives",
+      "An animal",
+      "A type of plant"
+    ],
+    "answer": 1,
+    "explanation": "A habitat is the natural environment where an organism lives"
+  },
+  {
+    "id": 3061,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is condensation?",
+    "options": [
+      "Solid to gas",
+      "Liquid to solid",
+      "Liquid to gas",
+      "Gas to liquid"
+    ],
+    "answer": 3,
+    "explanation": "Condensation is when water vapor (gas) turns into liquid water"
+  },
+  {
+    "id": 3062,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What carries blood away from the heart?",
+    "options": [
+      "Nerves",
+      "Veins",
+      "Arteries",
+      "Capillaries"
+    ],
+    "answer": 2,
+    "explanation": "Arteries carry oxygenated blood away from the heart"
+  },
+  {
+    "id": 3063,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is a carnivore?",
+    "options": [
+      "Both plants and meat",
+      "Neither",
+      "Meat eater",
+      "Plant eater"
+    ],
+    "answer": 2,
+    "explanation": "Carnivores are animals that eat mainly meat"
+  },
+  {
+    "id": 3064,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What causes an echo?",
+    "options": [
+      "Sound waves bouncing back",
+      "Temperature",
+      "Wind",
+      "Light reflection"
+    ],
+    "answer": 0,
+    "explanation": "An echo occurs when sound waves reflect off a surface back to you"
+  },
+  {
+    "id": 3065,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the function of roots in plants?",
+    "options": [
+      "Make food",
+      "Attract insects",
+      "Absorb water and anchor plant",
+      "Produce seeds"
+    ],
+    "answer": 2,
+    "explanation": "Roots absorb water and nutrients and anchor the plant in soil"
+  },
+  {
+    "id": 3066,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is static electricity?",
+    "options": [
+      "Battery power",
+      "Lightning",
+      "Buildup of electric charge",
+      "Flowing electricity"
+    ],
+    "answer": 2,
+    "explanation": "Static electricity is the buildup of electric charge on a surface"
+  },
+  {
+    "id": 3067,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the speed of light approximately?",
+    "options": [
+      "300,000 km/s",
+      "300 km/s",
+      "3,000 km/s",
+      "3,000,000 km/s"
+    ],
+    "answer": 0,
+    "explanation": "Light travels at approximately 300,000 kilometers per second"
+  },
+  {
+    "id": 3068,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What are chromosomes made of?",
+    "options": [
+      "Fats",
+      "DNA and proteins",
+      "Carbohydrates",
+      "Proteins only"
+    ],
+    "answer": 1,
+    "explanation": "Chromosomes consist of DNA wrapped around proteins called histones"
+  },
+  {
+    "id": 3069,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is Newton's first law of motion?",
+    "options": [
+      "Objects at rest stay at rest unless acted upon",
+      "For every action there's a reaction",
+      "Energy cannot be created",
+      "F = ma"
+    ],
+    "answer": 0,
+    "explanation": "Newton's first law: an object remains in its state unless acted upon by a force"
+  },
+  {
+    "id": 3070,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the periodic table organized by?",
+    "options": [
+      "Discovery date",
+      "Alphabetical order",
+      "Atomic number",
+      "Color"
+    ],
+    "answer": 2,
+    "explanation": "Elements are organized by atomic number (number of protons)"
+  },
+  {
+    "id": 3071,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the difference between mass and weight?",
+    "options": [
+      "They're the same",
+      "Mass is amount of matter, weight is gravitational force",
+      "Weight is amount of matter",
+      "Mass changes with location"
+    ],
+    "answer": 1,
+    "explanation": "Mass is constant; weight depends on gravitational force"
+  },
+  {
+    "id": 3072,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the function of mitochondria?",
+    "options": [
+      "Digest waste",
+      "Produce energy (ATP)",
+      "Store DNA",
+      "Make proteins"
+    ],
+    "answer": 1,
+    "explanation": "Mitochondria are the 'powerhouse' of the cell, producing ATP energy"
+  },
+  {
+    "id": 3073,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is an exothermic reaction?",
+    "options": [
+      "Absorbs heat",
+      "No heat change",
+      "Releases heat",
+      "Very slow"
+    ],
+    "answer": 2,
+    "explanation": "Exothermic reactions release heat energy to surroundings"
+  },
+  {
+    "id": 3074,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What are the three types of rocks?",
+    "options": [
+      "Hard, soft, sandy",
+      "Igneous, sedimentary, metamorphic",
+      "Old, new, ancient",
+      "Big, medium, small"
+    ],
+    "answer": 1,
+    "explanation": "The three rock types are igneous, sedimentary, and metamorphic"
+  },
+  {
+    "id": 3075,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the pH of a neutral solution?",
+    "options": [
+      "7",
+      "14",
+      "1",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "A pH of 7 is neutral; below 7 is acidic, above 7 is basic"
+  },
+  {
+    "id": 3076,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is photosynthesis's chemical equation?",
+    "options": [
+      "C6H12O6 → CO2 + H2O",
+      "O2 + H2O → CO2",
+      "CO2 + H2O → C6H12O6 + O2",
+      "N2 + O2 → NO2"
+    ],
+    "answer": 2,
+    "explanation": "Plants combine CO2 and water using light to make glucose and oxygen"
+  },
+  {
+    "id": 3077,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the formula for calculating speed?",
+    "options": [
+      "Speed = time ÷ distance",
+      "Speed = force × distance",
+      "Speed = distance ÷ time",
+      "Speed = mass × acceleration"
+    ],
+    "answer": 2,
+    "explanation": "Speed equals distance divided by time (s = d/t)"
+  },
+  {
+    "id": 3078,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is an alloy?",
+    "options": [
+      "Pure metal",
+      "A gas",
+      "A mineral",
+      "Mixture of metals"
+    ],
+    "answer": 3,
+    "explanation": "An alloy is a mixture of two or more metals (e.g., bronze, steel)"
+  },
+  {
+    "id": 3079,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the ozone layer's function?",
+    "options": [
+      "Produces oxygen",
+      "Blocks UV radiation",
+      "Creates weather",
+      "Holds atmosphere"
+    ],
+    "answer": 1,
+    "explanation": "The ozone layer absorbs most of the Sun's harmful UV radiation"
+  },
+  {
+    "id": 3080,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the difference between AC and DC electricity?",
+    "options": [
+      "AC is faster",
+      "No difference",
+      "AC alternates direction, DC flows one way",
+      "DC is more powerful"
+    ],
+    "answer": 2,
+    "explanation": "AC (alternating current) changes direction; DC (direct current) flows one direction"
+  },
+  {
+    "id": 3081,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is a semiconductor?",
+    "options": [
+      "Full conductor",
+      "Complete insulator",
+      "Material between conductor and insulator",
+      "Type of metal"
+    ],
+    "answer": 2,
+    "explanation": "Semiconductors conduct electricity partially, used in computer chips"
+  },
+  {
+    "id": 3082,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is cellular respiration?",
+    "options": [
+      "Breathing",
+      "Converting glucose to ATP in cells",
+      "Cell division",
+      "Photosynthesis"
+    ],
+    "answer": 1,
+    "explanation": "Cellular respiration converts glucose and oxygen into ATP energy"
+  },
+  {
+    "id": 3083,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the law of conservation of energy?",
+    "options": [
+      "Energy cannot be created or destroyed",
+      "Energy comes from nothing",
+      "Energy always decreases",
+      "Energy increases over time"
+    ],
+    "answer": 0,
+    "explanation": "Energy can only be transformed, not created or destroyed"
+  },
+  {
+    "id": 3084,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is DNA's shape called?",
+    "options": [
+      "Triple helix",
+      "Helix",
+      "Double helix",
+      "Spiral"
+    ],
+    "answer": 2,
+    "explanation": "DNA has a double helix structure, like a twisted ladder"
+  },
+  {
+    "id": 3085,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is friction?",
+    "options": [
+      "Force that opposes motion",
+      "A type of energy",
+      "Magnetic force",
+      "Gravitational pull"
+    ],
+    "answer": 0,
+    "explanation": "Friction is the force that resists motion between surfaces in contact"
+  },
+  {
+    "id": 3086,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the difference between elements and compounds?",
+    "options": [
+      "Elements are pure, compounds have multiple elements",
+      "They're the same",
+      "Compounds are pure",
+      "Elements are mixtures"
+    ],
+    "answer": 0,
+    "explanation": "Elements are pure substances; compounds contain two or more different elements chemically bonded"
+  },
+  {
+    "id": 3087,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is acceleration?",
+    "options": [
+      "Change in velocity over time",
+      "Maximum speed",
+      "Constant speed",
+      "Distance traveled"
+    ],
+    "answer": 0,
+    "explanation": "Acceleration is the rate of change of velocity with respect to time"
+  },
+  {
+    "id": 3088,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the function of chlorophyll?",
+    "options": [
+      "Produces seeds",
+      "Fights diseases",
+      "Absorbs light for photosynthesis",
+      "Stores water"
+    ],
+    "answer": 2,
+    "explanation": "Chlorophyll is the green pigment that absorbs light energy for photosynthesis"
+  },
+  {
+    "id": 3089,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is a polymer?",
+    "options": [
+      "Small molecule",
+      "Large molecule made of repeating units",
+      "Single atom",
+      "Type of element"
+    ],
+    "answer": 1,
+    "explanation": "Polymers are large molecules made of many smaller repeating units (monomers)"
+  },
+  {
+    "id": 3090,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What causes earthquakes?",
+    "options": [
+      "Temperature",
+      "Movement of tectonic plates",
+      "Ocean currents",
+      "Wind"
+    ],
+    "answer": 1,
+    "explanation": "Earthquakes occur when tectonic plates shift and release energy"
+  },
+  {
+    "id": 3091,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the difference between weather and climate?",
+    "options": [
+      "Climate is short-term",
+      "Same thing",
+      "Weather is short-term, climate is long-term",
+      "Weather is regional"
+    ],
+    "answer": 2,
+    "explanation": "Weather is day-to-day conditions; climate is average conditions over decades"
+  },
+  {
+    "id": 3092,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is an isotope?",
+    "options": [
+      "Different element",
+      "Same element with different neutrons",
+      "Charged atom",
+      "Molecule"
+    ],
+    "answer": 1,
+    "explanation": "Isotopes are atoms of the same element with different numbers of neutrons"
+  },
+  {
+    "id": 3093,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the electromagnetic spectrum?",
+    "options": [
+      "Range of all electromagnetic radiation",
+      "Only radio waves",
+      "Only visible light",
+      "Magnetic field"
+    ],
+    "answer": 0,
+    "explanation": "The EM spectrum includes radio waves, microwaves, infrared, visible light, UV, X-rays, gamma rays"
+  },
+  {
+    "id": 3094,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is potential energy?",
+    "options": [
+      "Light energy",
+      "Stored energy due to position or condition",
+      "Heat energy",
+      "Energy of motion"
+    ],
+    "answer": 1,
+    "explanation": "Potential energy is stored energy that can be converted to kinetic energy"
+  },
+  {
+    "id": 3095,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is kinetic energy?",
+    "options": [
+      "Stored energy",
+      "Nuclear energy",
+      "Chemical energy",
+      "Energy of motion"
+    ],
+    "answer": 3,
+    "explanation": "Kinetic energy is the energy an object has due to its motion"
+  },
+  {
+    "id": 3096,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is density?",
+    "options": [
+      "Volume",
+      "Size",
+      "Weight",
+      "Mass per unit volume"
+    ],
+    "answer": 3,
+    "explanation": "Density is mass divided by volume (d = m/v)"
+  },
+  {
+    "id": 3097,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is natural selection?",
+    "options": [
+      "Artificial breeding",
+      "Genetic engineering",
+      "Survival of best-adapted organisms",
+      "Random change"
+    ],
+    "answer": 2,
+    "explanation": "Natural selection is the process where better-adapted organisms survive and reproduce"
+  },
+  {
+    "id": 3098,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the atomic number?",
+    "options": [
+      "Number of neutrons",
+      "Number of electrons",
+      "Number of protons",
+      "Mass number"
+    ],
+    "answer": 2,
+    "explanation": "Atomic number is the number of protons in an atom's nucleus"
+  },
+  {
+    "id": 3099,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is convection?",
+    "options": [
+      "Heat transfer through solids",
+      "Heat transfer through waves",
+      "No heat transfer",
+      "Heat transfer through fluid movement"
+    ],
+    "answer": 3,
+    "explanation": "Convection transfers heat through the movement of fluids (liquids or gases)"
+  },
+  {
+    "id": 3100,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the function of enzymes?",
+    "options": [
+      "Store energy",
+      "Carry oxygen",
+      "Slow reactions",
+      "Speed up chemical reactions"
+    ],
+    "answer": 3,
+    "explanation": "Enzymes are biological catalysts that speed up chemical reactions"
+  },
+  {
+    "id": 3101,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is Ohm's Law?",
+    "options": [
+      "F = ma",
+      "E = mc²",
+      "V = IR",
+      "P = IV"
+    ],
+    "answer": 2,
+    "explanation": "Ohm's Law states that voltage equals current times resistance (V = IR)"
+  },
+  {
+    "id": 3102,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What subatomic particle has a negative charge?",
+    "options": [
+      "Electron",
+      "Neutron",
+      "Proton",
+      "Photon"
+    ],
+    "answer": 0,
+    "explanation": "Electrons carry a negative charge"
+  },
+  {
+    "id": 3103,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the SI unit of force?",
+    "options": [
+      "Newton",
+      "Pascal",
+      "Joule",
+      "Watt"
+    ],
+    "answer": 0,
+    "explanation": "The Newton (N) is the SI unit of force"
+  },
+  {
+    "id": 3104,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the chemical formula for table salt?",
+    "options": [
+      "NaCl",
+      "CaCl2",
+      "MgCl2",
+      "KCl"
+    ],
+    "answer": 0,
+    "explanation": "Table salt is sodium chloride (NaCl)"
+  },
+  {
+    "id": 3105,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the powerhouse of the cell?",
+    "options": [
+      "Nucleus",
+      "Ribosome",
+      "Mitochondria",
+      "Golgi apparatus"
+    ],
+    "answer": 2,
+    "explanation": "Mitochondria produce ATP, the cell's energy currency"
+  },
+  {
+    "id": 3106,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the formula for calculating work?",
+    "options": [
+      "W = Fd",
+      "W = Pt",
+      "W = mv",
+      "W = ma"
+    ],
+    "answer": 0,
+    "explanation": "Work equals force times distance (W = Fd)"
+  },
+  {
+    "id": 3107,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "How many chromosomes do humans have?",
+    "options": [
+      "46",
+      "48",
+      "23",
+      "42"
+    ],
+    "answer": 0,
+    "explanation": "Humans have 46 chromosomes (23 pairs)"
+  },
+  {
+    "id": 3108,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What type of bond shares electrons?",
+    "options": [
+      "Metallic bond",
+      "Ionic bond",
+      "Covalent bond",
+      "Hydrogen bond"
+    ],
+    "answer": 2,
+    "explanation": "Covalent bonds involve sharing electrons between atoms"
+  },
+  {
+    "id": 3109,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the unit of electrical resistance?",
+    "options": [
+      "Volt",
+      "Ohm",
+      "Ampere",
+      "Watt"
+    ],
+    "answer": 1,
+    "explanation": "Electrical resistance is measured in Ohms (Ω)"
+  },
+  {
+    "id": 3110,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What organelle contains the cell's genetic material?",
+    "options": [
+      "Nucleus",
+      "Ribosome",
+      "Vacuole",
+      "Mitochondria"
+    ],
+    "answer": 0,
+    "explanation": "The nucleus contains DNA, the cell's genetic material"
+  },
+  {
+    "id": 3111,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the acceleration due to gravity on Earth?",
+    "options": [
+      "8.8 m/s²",
+      "10.8 m/s²",
+      "11.8 m/s²",
+      "9.8 m/s²"
+    ],
+    "answer": 3,
+    "explanation": "Gravitational acceleration on Earth is approximately 9.8 m/s²"
+  },
+  {
+    "id": 3112,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What are the four DNA bases?",
+    "options": [
+      "A, T, G, C",
+      "A, U, G, C",
+      "A, T, G, U",
+      "A, B, C, D"
+    ],
+    "answer": 0,
+    "explanation": "DNA bases are Adenine, Thymine, Guanine, and Cytosine"
+  },
+  {
+    "id": 3113,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the chemical symbol for sodium?",
+    "options": [
+      "S",
+      "Sd",
+      "Na",
+      "So"
+    ],
+    "answer": 2,
+    "explanation": "Na (from Latin 'natrium') is sodium's symbol"
+  },
+  {
+    "id": 3114,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the SI unit of energy?",
+    "options": [
+      "Watt",
+      "Pascal",
+      "Joule",
+      "Newton"
+    ],
+    "answer": 2,
+    "explanation": "The Joule (J) is the SI unit of energy"
+  },
+  {
+    "id": 3115,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What process do cells use to divide?",
+    "options": [
+      "Mitosis",
+      "Respiration",
+      "Meiosis only",
+      "Photosynthesis"
+    ],
+    "answer": 0,
+    "explanation": "Mitosis is the process of cell division for growth and repair"
+  },
+  {
+    "id": 3116,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the formula for kinetic energy?",
+    "options": [
+      "KE = mgh",
+      "KE = Fd",
+      "KE = ½mv²",
+      "KE = mv"
+    ],
+    "answer": 2,
+    "explanation": "Kinetic energy equals one-half mass times velocity squared"
+  },
+  {
+    "id": 3117,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What type of wave is sound?",
+    "options": [
+      "Transverse",
+      "Electromagnetic",
+      "Surface",
+      "Longitudinal"
+    ],
+    "answer": 3,
+    "explanation": "Sound waves are longitudinal (compression) waves"
+  },
+  {
+    "id": 3118,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the atomic mass unit based on?",
+    "options": [
+      "Carbon-12",
+      "Nitrogen",
+      "Oxygen",
+      "Hydrogen"
+    ],
+    "answer": 0,
+    "explanation": "The atomic mass unit is defined as 1/12 the mass of carbon-12"
+  },
+  {
+    "id": 3119,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What carries genetic information from DNA to ribosomes?",
+    "options": [
+      "DNA polymerase",
+      "rRNA",
+      "mRNA",
+      "tRNA"
+    ],
+    "answer": 2,
+    "explanation": "mRNA (messenger RNA) carries genetic information to ribosomes"
+  },
+  {
+    "id": 3120,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the SI unit of power?",
+    "options": [
+      "Pascal",
+      "Newton",
+      "Watt",
+      "Joule"
+    ],
+    "answer": 2,
+    "explanation": "The Watt (W) is the SI unit of power (J/s)"
+  },
+  {
+    "id": 3121,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What determines an element's identity?",
+    "options": [
+      "Number of protons",
+      "Atomic mass",
+      "Number of neutrons",
+      "Number of electrons"
+    ],
+    "answer": 0,
+    "explanation": "The number of protons (atomic number) defines the element"
+  },
+  {
+    "id": 3122,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the formula for gravitational potential energy?",
+    "options": [
+      "PE = kx²",
+      "PE = mgh",
+      "PE = ½mv²",
+      "PE = Fd"
+    ],
+    "answer": 1,
+    "explanation": "Gravitational PE equals mass × gravity × height"
+  },
+  {
+    "id": 3123,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the function of ribosomes?",
+    "options": [
+      "Protein synthesis",
+      "Waste removal",
+      "Energy production",
+      "Cell division"
+    ],
+    "answer": 0,
+    "explanation": "Ribosomes synthesize proteins from mRNA instructions"
+  },
+  {
+    "id": 3124,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the most abundant gas in Earth's atmosphere?",
+    "options": [
+      "Argon",
+      "Oxygen",
+      "Nitrogen",
+      "Carbon dioxide"
+    ],
+    "answer": 2,
+    "explanation": "Nitrogen makes up about 78% of the atmosphere"
+  },
+  {
+    "id": 3125,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What type of energy is stored in a stretched spring?",
+    "options": [
+      "Chemical",
+      "Thermal",
+      "Kinetic",
+      "Elastic potential"
+    ],
+    "answer": 3,
+    "explanation": "A stretched or compressed spring stores elastic potential energy"
+  },
+  {
+    "id": 3126,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the chemical formula for glucose?",
+    "options": [
+      "C2H5OH",
+      "C12H22O11",
+      "CH4",
+      "C6H12O6"
+    ],
+    "answer": 3,
+    "explanation": "Glucose has the formula C6H12O6"
+  },
+  {
+    "id": 3127,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the unit of frequency?",
+    "options": [
+      "Watt",
+      "Second",
+      "Hertz",
+      "Meter"
+    ],
+    "answer": 2,
+    "explanation": "Frequency is measured in Hertz (Hz), cycles per second"
+  },
+  {
+    "id": 3128,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What organelle is responsible for photosynthesis?",
+    "options": [
+      "Ribosome",
+      "Mitochondria",
+      "Chloroplast",
+      "Nucleus"
+    ],
+    "answer": 2,
+    "explanation": "Chloroplasts contain chlorophyll and perform photosynthesis"
+  },
+  {
+    "id": 3129,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the speed of sound in air approximately?",
+    "options": [
+      "343 m/s",
+      "1000 m/s",
+      "3000 m/s",
+      "100 m/s"
+    ],
+    "answer": 0,
+    "explanation": "Sound travels at about 343 m/s in air at room temperature"
+  },
+  {
+    "id": 3130,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What bond forms between water molecules?",
+    "options": [
+      "Ionic",
+      "Metallic",
+      "Covalent",
+      "Hydrogen"
+    ],
+    "answer": 3,
+    "explanation": "Hydrogen bonds form between water molecules due to polarity"
+  },
+  {
+    "id": 3131,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the SI unit of electric current?",
+    "options": [
+      "Ohm",
+      "Coulomb",
+      "Volt",
+      "Ampere"
+    ],
+    "answer": 3,
+    "explanation": "Electric current is measured in Amperes (A)"
+  },
+  {
+    "id": 3132,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What process creates sex cells?",
+    "options": [
+      "Binary fission",
+      "Budding",
+      "Meiosis",
+      "Mitosis"
+    ],
+    "answer": 2,
+    "explanation": "Meiosis produces gametes (sex cells) with half the chromosomes"
+  },
+  {
+    "id": 3133,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is Newton's second law?",
+    "options": [
+      "F = ma",
+      "Objects at rest stay at rest",
+      "Energy is conserved",
+      "Action equals reaction"
+    ],
+    "answer": 0,
+    "explanation": "Newton's second law: Force equals mass times acceleration"
+  },
+  {
+    "id": 3134,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the relationship between wavelength and frequency?",
+    "options": [
+      "Exponential",
+      "Directly proportional",
+      "No relationship",
+      "Inversely proportional"
+    ],
+    "answer": 3,
+    "explanation": "Wavelength and frequency are inversely proportional: c = fλ"
+  },
+  {
+    "id": 3135,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is Avogadro's number?",
+    "options": [
+      "9.8 × 10²³",
+      "1.38 × 10⁻²³",
+      "6.02 × 10²³",
+      "3.14 × 10²³"
+    ],
+    "answer": 2,
+    "explanation": "Avogadro's number is approximately 6.02 × 10²³ particles per mole"
+  },
+  {
+    "id": 3136,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the structure of benzene?",
+    "options": [
+      "Hexagonal ring",
+      "Linear chain",
+      "Branched chain",
+      "Tetrahedral"
+    ],
+    "answer": 0,
+    "explanation": "Benzene has a hexagonal ring structure with alternating double bonds"
+  },
+  {
+    "id": 3137,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Hardy-Weinberg equilibrium about?",
+    "options": [
+      "Chemical equilibrium",
+      "Thermal equilibrium",
+      "Mechanical equilibrium",
+      "Genetic equilibrium in populations"
+    ],
+    "answer": 3,
+    "explanation": "Hardy-Weinberg describes allele frequencies in non-evolving populations"
+  },
+  {
+    "id": 3138,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the formula for electrical power?",
+    "options": [
+      "P = V + I",
+      "P = V/I",
+      "P = VI",
+      "P = V - I"
+    ],
+    "answer": 2,
+    "explanation": "Electrical power equals voltage times current (P = VI)"
+  },
+  {
+    "id": 3139,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the electron configuration of carbon?",
+    "options": [
+      "1s² 2s²",
+      "1s² 2s² 2p⁶",
+      "1s² 2s² 2p²",
+      "1s² 2p⁴"
+    ],
+    "answer": 2,
+    "explanation": "Carbon has 6 electrons: 1s² 2s² 2p²"
+  },
+  {
+    "id": 3140,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the difference between speed and velocity?",
+    "options": [
+      "Speed includes direction",
+      "They're identical",
+      "Velocity includes direction",
+      "Speed is always greater"
+    ],
+    "answer": 2,
+    "explanation": "Velocity is speed with direction (vector quantity)"
+  },
+  {
+    "id": 3141,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the role of ATP in cells?",
+    "options": [
+      "Energy currency",
+      "Stores genetic info",
+      "Structural support",
+      "Transport only"
+    ],
+    "answer": 0,
+    "explanation": "ATP stores and transfers energy for cellular processes"
+  },
+  {
+    "id": 3142,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the difference between series and parallel circuits?",
+    "options": [
+      "Parallel has one path",
+      "Series has one path, parallel has multiple",
+      "No difference",
+      "Series is faster"
+    ],
+    "answer": 1,
+    "explanation": "Series circuits have one current path; parallel circuits have multiple branches"
+  },
+  {
+    "id": 3143,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the formula for momentum?",
+    "options": [
+      "p = ½mv²",
+      "p = Ft",
+      "p = ma",
+      "p = mv"
+    ],
+    "answer": 3,
+    "explanation": "Momentum equals mass times velocity (p = mv)"
+  },
+  {
+    "id": 3144,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is CRISPR used for?",
+    "options": [
+      "Chemical synthesis",
+      "Energy production",
+      "Gene editing",
+      "Data storage"
+    ],
+    "answer": 2,
+    "explanation": "CRISPR is a revolutionary gene editing technology"
+  },
+  {
+    "id": 3145,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is Le Chatelier's principle?",
+    "options": [
+      "Mass is conserved",
+      "Entropy increases",
+      "Energy is conserved",
+      "Systems resist changes to equilibrium"
+    ],
+    "answer": 3,
+    "explanation": "Le Chatelier: systems shift to counteract changes to equilibrium"
+  },
+  {
+    "id": 3146,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the function of the endoplasmic reticulum?",
+    "options": [
+      "Digestion",
+      "Cell division",
+      "Protein and lipid synthesis/transport",
+      "Energy production"
+    ],
+    "answer": 2,
+    "explanation": "ER synthesizes proteins (rough ER) and lipids (smooth ER)"
+  },
+  {
+    "id": 3147,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Doppler effect?",
+    "options": [
+      "Light bending",
+      "Sound absorption",
+      "Frequency change due to motion",
+      "Wave interference"
+    ],
+    "answer": 2,
+    "explanation": "Doppler effect: frequency changes when source/observer moves"
+  },
+  {
+    "id": 3148,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is oxidation?",
+    "options": [
+      "Gaining protons",
+      "Losing electrons",
+      "Losing neutrons",
+      "Gaining electrons"
+    ],
+    "answer": 1,
+    "explanation": "Oxidation is the loss of electrons (OIL RIG: Oxidation Is Loss)"
+  },
+  {
+    "id": 3149,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the impulse-momentum theorem?",
+    "options": [
+      "F = ma",
+      "E = mc²",
+      "J = Δp (impulse equals change in momentum)",
+      "p = mv"
+    ],
+    "answer": 2,
+    "explanation": "Impulse (force × time) equals change in momentum"
+  },
+  {
+    "id": 3150,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the central dogma of molecular biology?",
+    "options": [
+      "RNA → DNA → Protein",
+      "DNA → RNA → Protein",
+      "DNA → Protein → RNA",
+      "Protein → RNA → DNA"
+    ],
+    "answer": 1,
+    "explanation": "Central dogma: DNA is transcribed to RNA, translated to protein"
+  },
+  {
+    "id": 3151,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the ideal gas law?",
+    "options": [
+      "PV = mRT",
+      "PV = nRT",
+      "P = nRT/V",
+      "PV = kT"
+    ],
+    "answer": 1,
+    "explanation": "Ideal gas law: Pressure × Volume = moles × R × Temperature"
+  },
+  {
+    "id": 3152,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the difference between diffusion and osmosis?",
+    "options": [
+      "Diffusion requires energy",
+      "Same process",
+      "Osmosis is water through membrane",
+      "Osmosis is faster"
+    ],
+    "answer": 2,
+    "explanation": "Osmosis is specifically diffusion of water across a semipermeable membrane"
+  },
+  {
+    "id": 3153,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is electromagnetic induction?",
+    "options": [
+      "Electric heating",
+      "Creating current with changing magnetic field",
+      "Magnetizing iron",
+      "Static electricity"
+    ],
+    "answer": 1,
+    "explanation": "Electromagnetic induction: changing magnetic fields induce electric current"
+  },
+  {
+    "id": 3154,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the pH scale range?",
+    "options": [
+      "0-7",
+      "0-14",
+      "-7 to 7",
+      "1-10"
+    ],
+    "answer": 1,
+    "explanation": "pH ranges from 0 (most acidic) to 14 (most basic)"
+  },
+  {
+    "id": 3155,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the formula for the period of a pendulum?",
+    "options": [
+      "T = 2π√(L/g)",
+      "T = 2π√(m/k)",
+      "T = v/λ",
+      "T = 1/f"
+    ],
+    "answer": 0,
+    "explanation": "Pendulum period T = 2π√(L/g), depends on length and gravity"
+  },
+  {
+    "id": 3156,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What are restriction enzymes used for?",
+    "options": [
+      "Cell division",
+      "Cutting DNA at specific sequences",
+      "RNA transcription",
+      "Protein synthesis"
+    ],
+    "answer": 1,
+    "explanation": "Restriction enzymes cut DNA at specific recognition sequences"
+  },
+  {
+    "id": 3157,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is Snell's law about?",
+    "options": [
+      "Refraction of light",
+      "Reflection",
+      "Interference",
+      "Diffraction"
+    ],
+    "answer": 0,
+    "explanation": "Snell's law describes how light bends when entering a different medium"
+  },
+  {
+    "id": 3158,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is electronegativity?",
+    "options": [
+      "Ability to attract electrons in a bond",
+      "Electron mass",
+      "Number of electrons",
+      "Ability to conduct electricity"
+    ],
+    "answer": 0,
+    "explanation": "Electronegativity measures an atom's ability to attract shared electrons"
+  },
+  {
+    "id": 3159,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the law of conservation of momentum?",
+    "options": [
+      "Momentum increases",
+      "Total momentum stays constant in closed system",
+      "Momentum = energy",
+      "Momentum decreases"
+    ],
+    "answer": 1,
+    "explanation": "In a closed system, total momentum before = total momentum after"
+  },
+  {
+    "id": 3160,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is PCR used for?",
+    "options": [
+      "Cell culture",
+      "Protein analysis",
+      "Microscopy",
+      "DNA amplification"
+    ],
+    "answer": 3,
+    "explanation": "PCR (Polymerase Chain Reaction) amplifies specific DNA sequences"
+  },
+  {
+    "id": 3161,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is capacitance measured in?",
+    "options": [
+      "Teslas",
+      "Ohms",
+      "Farads",
+      "Henrys"
+    ],
+    "answer": 2,
+    "explanation": "Capacitance is measured in Farads (F)"
+  },
+  {
+    "id": 3162,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the difference between DNA and RNA?",
+    "options": [
+      "RNA has thymine",
+      "RNA is single-stranded, has uracil",
+      "DNA has uracil",
+      "No difference"
+    ],
+    "answer": 1,
+    "explanation": "RNA is usually single-stranded and has uracil instead of thymine"
+  },
+  {
+    "id": 3163,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is centripetal force?",
+    "options": [
+      "Friction force",
+      "Force toward center of circular motion",
+      "Force pushing outward",
+      "Force of gravity"
+    ],
+    "answer": 1,
+    "explanation": "Centripetal force points toward the center of circular motion"
+  },
+  {
+    "id": 3164,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is a buffer solution?",
+    "options": [
+      "Resists pH changes",
+      "Neutral solution",
+      "Very basic",
+      "Very acidic"
+    ],
+    "answer": 0,
+    "explanation": "Buffers resist changes in pH when acids or bases are added"
+  },
+  {
+    "id": 3165,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the second law of thermodynamics?",
+    "options": [
+      "Heat flows from cold to hot",
+      "Entropy tends to increase",
+      "Work equals heat",
+      "Energy is conserved"
+    ],
+    "answer": 1,
+    "explanation": "Second law: entropy of an isolated system tends to increase"
+  },
+  {
+    "id": 3166,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is gel electrophoresis used for?",
+    "options": [
+      "Mixing chemicals",
+      "Growing cells",
+      "Heating samples",
+      "Separating DNA/proteins by size"
+    ],
+    "answer": 3,
+    "explanation": "Gel electrophoresis separates molecules by size using electric field"
+  },
+  {
+    "id": 3167,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Heisenberg uncertainty principle?",
+    "options": [
+      "Time is relative",
+      "Cannot know position and momentum precisely simultaneously",
+      "Mass is uncertain",
+      "Energy is uncertain"
+    ],
+    "answer": 1,
+    "explanation": "You cannot simultaneously know exact position and momentum of a particle"
+  },
+  {
+    "id": 3168,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Krebs cycle?",
+    "options": [
+      "Citric acid cycle in cellular respiration",
+      "DNA replication cycle",
+      "Cell division cycle",
+      "Nitrogen cycle"
+    ],
+    "answer": 0,
+    "explanation": "Krebs cycle produces ATP, NADH, and FADH2 in mitochondria"
+  },
+  {
+    "id": 3169,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is Faraday's law of induction?",
+    "options": [
+      "EMF = -dΦ/dt",
+      "E = mc²",
+      "F = qvB",
+      "V = IR"
+    ],
+    "answer": 0,
+    "explanation": "Faraday's law: induced EMF equals negative rate of change of magnetic flux"
+  },
+  {
+    "id": 3170,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is hybridization in chemistry?",
+    "options": [
+      "Mixing atomic orbitals to form new orbitals",
+      "Mixing species",
+      "Mixing elements",
+      "Chemical reaction"
+    ],
+    "answer": 0,
+    "explanation": "Orbital hybridization mixes atomic orbitals to form equivalent hybrid orbitals"
+  },
+  {
+    "id": 3171,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the electron transport chain?",
+    "options": [
+      "Photosynthesis stage",
+      "DNA transfer",
+      "Final stage of cellular respiration producing ATP",
+      "Protein synthesis"
+    ],
+    "answer": 2,
+    "explanation": "ETC uses electrons to pump protons and produce most cellular ATP"
+  },
+  {
+    "id": 3172,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the photoelectric effect?",
+    "options": [
+      "Light absorption",
+      "Electrons ejected by light",
+      "Light interference",
+      "Light bending"
+    ],
+    "answer": 1,
+    "explanation": "Photoelectric effect: light ejects electrons from a metal surface"
+  },
+  {
+    "id": 3173,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is VSEPR theory used for?",
+    "options": [
+      "Finding electrons",
+      "Measuring mass",
+      "Calculating energy",
+      "Predicting molecular geometry"
+    ],
+    "answer": 3,
+    "explanation": "VSEPR predicts molecular shapes based on electron pair repulsion"
+  },
+  {
+    "id": 3174,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the lac operon?",
+    "options": [
+      "Cell structure",
+      "Gene regulation system in bacteria",
+      "Protein",
+      "Enzyme"
+    ],
+    "answer": 1,
+    "explanation": "Lac operon is a model of gene regulation in E. coli for lactose metabolism"
+  },
+  {
+    "id": 3175,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the de Broglie wavelength?",
+    "options": [
+      "Sound wavelength",
+      "Light wavelength",
+      "Wavelength associated with moving particles",
+      "Radio wavelength"
+    ],
+    "answer": 2,
+    "explanation": "de Broglie: λ = h/p, all matter has wave-like properties"
+  },
+  {
+    "id": 3176,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is entropy?",
+    "options": [
+      "Pressure",
+      "Temperature",
+      "Energy",
+      "Measure of disorder/randomness"
+    ],
+    "answer": 3,
+    "explanation": "Entropy measures the disorder or number of possible microscopic states"
+  },
+  {
+    "id": 3177,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Calvin cycle?",
+    "options": [
+      "Respiration cycle",
+      "Nitrogen cycle",
+      "Light-independent reactions of photosynthesis",
+      "Cell cycle"
+    ],
+    "answer": 2,
+    "explanation": "Calvin cycle uses ATP and NADPH to fix CO2 into glucose"
+  },
+  {
+    "id": 3178,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Lorentz force?",
+    "options": [
+      "Nuclear force",
+      "Friction",
+      "Force on charged particle in EM field",
+      "Gravitational force"
+    ],
+    "answer": 2,
+    "explanation": "Lorentz force: F = q(E + v × B), force on charge in EM fields"
+  },
+  {
+    "id": 3179,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Gibbs free energy equation?",
+    "options": [
+      "G = E + PV",
+      "G = H - TS",
+      "G = U - TS",
+      "G = H + TS"
+    ],
+    "answer": 1,
+    "explanation": "ΔG = ΔH - TΔS; negative ΔG means spontaneous reaction"
+  },
+  {
+    "id": 3180,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is epigenetics?",
+    "options": [
+      "Heritable changes without DNA sequence change",
+      "Gene mutations",
+      "Studying genes",
+      "DNA replication"
+    ],
+    "answer": 0,
+    "explanation": "Epigenetics: changes in gene expression not involving DNA sequence changes"
+  },
+  {
+    "id": 3181,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is special relativity's time dilation?",
+    "options": [
+      "Time speeds up",
+      "Moving clocks run slower",
+      "Time is constant",
+      "Time reverses"
+    ],
+    "answer": 1,
+    "explanation": "Special relativity: time passes slower for moving objects relative to stationary observer"
+  },
+  {
+    "id": 3182,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Born-Haber cycle?",
+    "options": [
+      "Cell cycle",
+      "Carbon cycle",
+      "Thermodynamic cycle for lattice energy",
+      "Life cycle"
+    ],
+    "answer": 2,
+    "explanation": "Born-Haber cycle calculates lattice energy of ionic compounds"
+  },
+  {
+    "id": 3183,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is apoptosis?",
+    "options": [
+      "Programmed cell death",
+      "Cell division",
+      "Cell growth",
+      "Cell movement"
+    ],
+    "answer": 0,
+    "explanation": "Apoptosis is controlled, programmed cell death for development and health"
+  },
+  {
+    "id": 3184,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Pauli exclusion principle?",
+    "options": [
+      "Electrons are waves",
+      "Energy is quantized",
+      "No two electrons can have same quantum numbers",
+      "Orbitals are spherical"
+    ],
+    "answer": 2,
+    "explanation": "Pauli: two electrons cannot occupy same quantum state simultaneously"
+  },
+  {
+    "id": 3185,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Michaelis-Menten equation for?",
+    "options": [
+      "Gas behavior",
+      "Chemical equilibrium",
+      "Enzyme kinetics",
+      "Electrical circuits"
+    ],
+    "answer": 2,
+    "explanation": "Michaelis-Menten describes relationship between enzyme reaction rate and substrate concentration"
+  },
+  {
+    "id": 3186,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is wave-particle duality?",
+    "options": [
+      "Light/matter exhibits both wave and particle properties",
+      "Particles are waves",
+      "Waves become particles",
+      "Waves and particles are different"
+    ],
+    "answer": 0,
+    "explanation": "Quantum mechanics: entities exhibit both wave and particle characteristics"
+  },
+  {
+    "id": 3187,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Nernst equation for?",
+    "options": [
+      "Electrode potential under non-standard conditions",
+      "Calculating pressure",
+      "Temperature change",
+      "Energy calculation"
+    ],
+    "answer": 0,
+    "explanation": "Nernst equation calculates cell potential at non-standard conditions"
+  },
+  {
+    "id": 3188,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is signal transduction?",
+    "options": [
+      "Nerve signals only",
+      "Protein folding",
+      "DNA transcription",
+      "Cell communication through molecular signals"
+    ],
+    "answer": 3,
+    "explanation": "Signal transduction: cells receive and respond to external signals via molecular cascades"
+  },
+  {
+    "id": 3189,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Schrödinger equation for?",
+    "options": [
+      "Classical motion",
+      "Quantum mechanical wave function",
+      "Thermodynamics",
+      "Electricity"
+    ],
+    "answer": 1,
+    "explanation": "Schrödinger equation describes how quantum state of a system evolves"
+  },
+  {
+    "id": 3190,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is chirality in chemistry?",
+    "options": [
+      "Non-superimposable mirror images",
+      "Color property",
+      "Weight property",
+      "Size property"
+    ],
+    "answer": 0,
+    "explanation": "Chiral molecules have non-superimposable mirror images (like hands)"
+  },
+  {
+    "id": 3191,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the meselson-Stahl experiment about?",
+    "options": [
+      "Protein synthesis",
+      "Cell division",
+      "Semiconservative DNA replication",
+      "Evolution"
+    ],
+    "answer": 2,
+    "explanation": "Meselson-Stahl proved DNA replicates semiconservatively"
+  },
+  {
+    "id": 3192,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Stefan-Boltzmann law?",
+    "options": [
+      "Gas behavior",
+      "Sound waves",
+      "Light refraction",
+      "Blackbody radiation power ∝ T⁴"
+    ],
+    "answer": 3,
+    "explanation": "Stefan-Boltzmann: power radiated by blackbody proportional to T⁴"
+  },
+  {
+    "id": 3193,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Haber process?",
+    "options": [
+      "Making water",
+      "Oil refining",
+      "Industrial ammonia synthesis",
+      "Steel production"
+    ],
+    "answer": 2,
+    "explanation": "Haber process: N2 + 3H2 → 2NH3 for industrial ammonia production"
+  },
+  {
+    "id": 3194,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is telomerase?",
+    "options": [
+      "Enzyme that extends telomeres",
+      "Structural protein",
+      "Digestive enzyme",
+      "Respiratory enzyme"
+    ],
+    "answer": 0,
+    "explanation": "Telomerase adds DNA to telomeres, related to aging and cancer"
+  },
+  {
+    "id": 3195,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Compton effect?",
+    "options": [
+      "Photoelectric effect",
+      "Light absorption",
+      "X-ray wavelength increase after electron scattering",
+      "Light emission"
+    ],
+    "answer": 2,
+    "explanation": "Compton effect: X-rays scattered by electrons increase in wavelength"
+  },
+  {
+    "id": 3196,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is Le Chatelier's principle applied to temperature?",
+    "options": [
+      "Increase T favors endothermic direction",
+      "Increase T favors exothermic",
+      "No effect",
+      "Temperature doesn't matter"
+    ],
+    "answer": 0,
+    "explanation": "Increasing temperature shifts equilibrium toward endothermic direction"
+  },
+  {
+    "id": 3197,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the central limit theorem?",
+    "options": [
+      "Chemistry law",
+      "Biology principle",
+      "Sample means approach normal distribution",
+      "Physics theorem"
+    ],
+    "answer": 2,
+    "explanation": "CLT: distribution of sample means approaches normal as sample size increases"
+  },
+  {
+    "id": 3198,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Carnot efficiency?",
+    "options": [
+      "η = Tc/Th",
+      "η = 1 - Tc/Th",
+      "Depends on fuel",
+      "100% always"
+    ],
+    "answer": 1,
+    "explanation": "Maximum efficiency of heat engine: η = 1 - Tc/Th (cold/hot temperatures)"
+  },
+  {
+    "id": 3199,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is allosteric regulation?",
+    "options": [
+      "Gene regulation",
+      "Cell division control",
+      "Hormone action",
+      "Enzyme regulation at non-active site"
+    ],
+    "answer": 3,
+    "explanation": "Allosteric: molecule binds away from active site, changing enzyme activity"
+  },
+  {
+    "id": 3200,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Zeeman effect?",
+    "options": [
+      "Light bending",
+      "Heat transfer",
+      "Sound effect",
+      "Spectral line splitting in magnetic field"
+    ],
+    "answer": 3,
+    "explanation": "Zeeman effect: spectral lines split in presence of magnetic field"
+  },
+  {
+    "id": 3201,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the SI unit of magnetic field strength?",
+    "options": [
+      "Gauss",
+      "Weber",
+      "Henry",
+      "Tesla"
+    ],
+    "answer": 3,
+    "explanation": "The Tesla (T) is the SI unit of magnetic flux density"
+  },
+  {
+    "id": 3202,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the standard enthalpy of formation of an element?",
+    "options": [
+      "Variable",
+      "Positive",
+      "Zero",
+      "Negative"
+    ],
+    "answer": 2,
+    "explanation": "By definition, ΔHf° of elements in standard state is zero"
+  },
+  {
+    "id": 3203,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What are the four quantum numbers?",
+    "options": [
+      "n, l, ml, ms",
+      "a, b, c, d",
+      "p, q, r, s",
+      "x, y, z, t"
+    ],
+    "answer": 0,
+    "explanation": "Principal (n), angular momentum (l), magnetic (ml), spin (ms)"
+  },
+  {
+    "id": 3204,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the function of helicase in DNA replication?",
+    "options": [
+      "Unwinds double helix",
+      "Joins fragments",
+      "Adds nucleotides",
+      "Proofreads"
+    ],
+    "answer": 0,
+    "explanation": "Helicase unwinds and separates the DNA double helix"
+  },
+  {
+    "id": 3205,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is Planck's constant approximately?",
+    "options": [
+      "9.11 × 10⁻³¹ kg",
+      "3.00 × 10⁸ m/s",
+      "6.63 × 10⁻³⁴ J·s",
+      "1.38 × 10⁻²³ J/K"
+    ],
+    "answer": 2,
+    "explanation": "Planck's constant h ≈ 6.63 × 10⁻³⁴ J·s"
+  },
+  {
+    "id": 3206,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the Henderson-Hasselbalch equation for?",
+    "options": [
+      "Reaction rates",
+      "pH of buffer solutions",
+      "Gas laws",
+      "Equilibrium constants"
+    ],
+    "answer": 1,
+    "explanation": "Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA])"
+  },
+  {
+    "id": 3207,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the role of DNA ligase?",
+    "options": [
+      "Joins DNA fragments",
+      "Unwinds DNA",
+      "Adds primers",
+      "Removes errors"
+    ],
+    "answer": 0,
+    "explanation": "DNA ligase joins Okazaki fragments and seals DNA nicks"
+  },
+  {
+    "id": 3208,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the Boltzmann constant?",
+    "options": [
+      "6.02 × 10²³",
+      "1.38 × 10⁻²³ J/K",
+      "6.63 × 10⁻³⁴ J·s",
+      "8.31 J/(mol·K)"
+    ],
+    "answer": 1,
+    "explanation": "Boltzmann constant kB ≈ 1.38 × 10⁻²³ J/K"
+  },
+  {
+    "id": 3209,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What determines electron orbital shape?",
+    "options": [
+      "Principal quantum number",
+      "Spin quantum number",
+      "Angular momentum quantum number",
+      "Magnetic quantum number"
+    ],
+    "answer": 2,
+    "explanation": "Angular momentum quantum number (l) determines orbital shape (s, p, d, f)"
+  },
+  {
+    "id": 3210,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the difference between exons and introns?",
+    "options": [
+      "No difference",
+      "Both code for protein",
+      "Introns code, exons removed",
+      "Exons code, introns are removed"
+    ],
+    "answer": 3,
+    "explanation": "Exons are expressed; introns are spliced out during RNA processing"
+  },
+  {
+    "id": 3211,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the permittivity of free space (ε₀)?",
+    "options": [
+      "4π × 10⁻⁷ H/m",
+      "3 × 10⁸ m/s",
+      "1.6 × 10⁻¹⁹ C",
+      "8.85 × 10⁻¹² F/m"
+    ],
+    "answer": 3,
+    "explanation": "ε₀ ≈ 8.85 × 10⁻¹² F/m (used in Coulomb's law)"
+  },
+  {
+    "id": 3212,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the rate-determining step?",
+    "options": [
+      "First step",
+      "Fastest step",
+      "Slowest step in a mechanism",
+      "Last step"
+    ],
+    "answer": 2,
+    "explanation": "Rate-determining step is the slowest step, controlling overall rate"
+  },
+  {
+    "id": 3213,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the function of primase?",
+    "options": [
+      "Proofreads",
+      "Joins DNA",
+      "Unwinds DNA",
+      "Synthesizes RNA primers"
+    ],
+    "answer": 3,
+    "explanation": "Primase synthesizes short RNA primers for DNA replication"
+  },
+  {
+    "id": 3214,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the fine structure constant approximately?",
+    "options": [
+      "1/100",
+      "1/1000",
+      "1/137",
+      "1/10"
+    ],
+    "answer": 2,
+    "explanation": "Fine structure constant α ≈ 1/137 (dimensionless)"
+  },
+  {
+    "id": 3215,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the order of a first-order reaction?",
+    "options": [
+      "Rate is constant",
+      "Rate depends on [A]⁰",
+      "Rate depends on [A]¹",
+      "Rate depends on [A]²"
+    ],
+    "answer": 2,
+    "explanation": "First-order: rate = k[A], rate proportional to concentration"
+  },
+  {
+    "id": 3216,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the codon for methionine (start)?",
+    "options": [
+      "UAG",
+      "UGA",
+      "UAA",
+      "AUG"
+    ],
+    "answer": 3,
+    "explanation": "AUG codes for methionine and serves as start codon"
+  },
+  {
+    "id": 3217,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the permeability of free space (μ₀)?",
+    "options": [
+      "8.85 × 10⁻¹² F/m",
+      "4π × 10⁻⁷ H/m",
+      "1.6 × 10⁻¹⁹ C",
+      "3 × 10⁸ m/s"
+    ],
+    "answer": 1,
+    "explanation": "μ₀ = 4π × 10⁻⁷ H/m (magnetic constant)"
+  },
+  {
+    "id": 3218,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the Arrhenius equation for?",
+    "options": [
+      "Temperature dependence of rate constants",
+      "Pressure",
+      "Equilibrium",
+      "Concentration"
+    ],
+    "answer": 0,
+    "explanation": "Arrhenius: k = Ae^(-Ea/RT), relates rate constant to temperature"
+  },
+  {
+    "id": 3219,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What are the three stop codons?",
+    "options": [
+      "AUG, UGA, UAA",
+      "GGG, CCC, AAA",
+      "UAA, UAG, UGA",
+      "AUG, AUA, AUC"
+    ],
+    "answer": 2,
+    "explanation": "Stop codons are UAA, UAG, and UGA"
+  },
+  {
+    "id": 3220,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the elementary charge?",
+    "options": [
+      "1.67 × 10⁻²⁷ kg",
+      "6.63 × 10⁻³⁴ J·s",
+      "9.11 × 10⁻³¹ kg",
+      "1.6 × 10⁻¹⁹ C"
+    ],
+    "answer": 3,
+    "explanation": "Elementary charge e ≈ 1.6 × 10⁻¹⁹ Coulombs"
+  },
+  {
+    "id": 3221,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is activation energy?",
+    "options": [
+      "Energy released",
+      "Minimum energy needed for reaction",
+      "Final energy",
+      "Total energy"
+    ],
+    "answer": 1,
+    "explanation": "Activation energy is the minimum energy required for a reaction to occur"
+  },
+  {
+    "id": 3222,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the function of topoisomerase?",
+    "options": [
+      "Joins fragments",
+      "Adds nucleotides",
+      "Synthesizes primers",
+      "Relieves supercoiling in DNA"
+    ],
+    "answer": 3,
+    "explanation": "Topoisomerase relieves tension from DNA supercoiling during replication"
+  },
+  {
+    "id": 3223,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the electron mass?",
+    "options": [
+      "6.63 × 10⁻³⁴ kg",
+      "1.6 × 10⁻¹⁹ kg",
+      "1.67 × 10⁻²⁷ kg",
+      "9.11 × 10⁻³¹ kg"
+    ],
+    "answer": 3,
+    "explanation": "Electron mass me ≈ 9.11 × 10⁻³¹ kg"
+  },
+  {
+    "id": 3224,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the molecularity of a reaction?",
+    "options": [
+      "Half-life",
+      "Reaction order",
+      "Number of molecules in elementary step",
+      "Rate constant"
+    ],
+    "answer": 2,
+    "explanation": "Molecularity is the number of reactant molecules in an elementary step"
+  },
+  {
+    "id": 3225,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the spliceosome?",
+    "options": [
+      "Enzyme",
+      "Complex that removes introns from pre-mRNA",
+      "DNA structure",
+      "Ribosome type"
+    ],
+    "answer": 1,
+    "explanation": "Spliceosome is a complex that splices introns from pre-mRNA"
+  },
+  {
+    "id": 3226,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the Rydberg constant used for?",
+    "options": [
+      "Gas laws",
+      "Thermodynamics",
+      "Kinetics",
+      "Atomic spectral lines"
+    ],
+    "answer": 3,
+    "explanation": "Rydberg constant appears in formulas for hydrogen spectral lines"
+  },
+  {
+    "id": 3227,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is a zwitterion?",
+    "options": [
+      "Neutral molecule",
+      "Negative ion",
+      "Molecule with both + and - charges",
+      "Positive ion"
+    ],
+    "answer": 2,
+    "explanation": "Zwitterions have both positive and negative charges (e.g., amino acids)"
+  },
+  {
+    "id": 3228,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What enzyme synthesizes the leading strand?",
+    "options": [
+      "DNA ligase",
+      "Primase",
+      "DNA polymerase III",
+      "Helicase"
+    ],
+    "answer": 2,
+    "explanation": "DNA polymerase III synthesizes both leading and lagging strands"
+  },
+  {
+    "id": 3229,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the proton mass approximately?",
+    "options": [
+      "6.63 × 10⁻³⁴ kg",
+      "1.67 × 10⁻²⁷ kg",
+      "9.11 × 10⁻³¹ kg",
+      "1.6 × 10⁻¹⁹ kg"
+    ],
+    "answer": 1,
+    "explanation": "Proton mass mp ≈ 1.67 × 10⁻²⁷ kg"
+  },
+  {
+    "id": 3230,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the half-life of a first-order reaction?",
+    "options": [
+      "t½ = k/0.693",
+      "t½ = [A]₀/2k",
+      "t½ = 1/k[A]₀",
+      "t½ = 0.693/k"
+    ],
+    "answer": 3,
+    "explanation": "First-order half-life: t½ = ln(2)/k = 0.693/k"
+  },
+  {
+    "id": 3231,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the promoter in gene expression?",
+    "options": [
+      "DNA sequence where transcription begins",
+      "Enhancer",
+      "Coding region",
+      "Stop signal"
+    ],
+    "answer": 0,
+    "explanation": "Promoter is the DNA region where RNA polymerase binds to start transcription"
+  },
+  {
+    "id": 3232,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the gas constant R?",
+    "options": [
+      "8.31 J/(mol·K)",
+      "22.4 L",
+      "1.38 × 10⁻²³ J/K",
+      "6.02 × 10²³"
+    ],
+    "answer": 0,
+    "explanation": "Universal gas constant R ≈ 8.31 J/(mol·K)"
+  },
+  {
+    "id": 3233,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "STEM",
+    "question": "What is the integrated rate law for zero-order?",
+    "options": [
+      "[A] = [A]₀ - kt",
+      "[A] = [A]₀e^(-kt)",
+      "1/[A] = 1/[A]₀ + kt",
+      "ln[A] = ln[A]₀ - kt"
+    ],
+    "answer": 0,
+    "explanation": "Zero-order: [A] decreases linearly with time"
+  },
+  {
+    "id": 3234,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Dirac equation for?",
+    "options": [
+      "Thermodynamics",
+      "Electrostatics",
+      "Relativistic quantum mechanics of spin-½ particles",
+      "Classical mechanics"
+    ],
+    "answer": 2,
+    "explanation": "Dirac equation describes relativistic electrons and predicts antimatter"
+  },
+  {
+    "id": 3235,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Born-Oppenheimer approximation?",
+    "options": [
+      "Electrons and nuclei move together",
+      "Electrons are fixed",
+      "All particles move equally",
+      "Nuclei are fixed relative to faster electrons"
+    ],
+    "answer": 3,
+    "explanation": "Born-Oppenheimer: nuclei are stationary relative to fast-moving electrons"
+  },
+  {
+    "id": 3236,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Michaelis constant (Km)?",
+    "options": [
+      "Substrate concentration at ½ Vmax",
+      "Maximum velocity",
+      "Product concentration",
+      "Enzyme concentration"
+    ],
+    "answer": 0,
+    "explanation": "Km is substrate concentration at half-maximum velocity"
+  },
+  {
+    "id": 3237,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Maxwell-Boltzmann distribution?",
+    "options": [
+      "Energy levels",
+      "Molecular speed distribution at temperature",
+      "Pressure distribution",
+      "Position distribution"
+    ],
+    "answer": 1,
+    "explanation": "Maxwell-Boltzmann describes the distribution of molecular speeds in a gas"
+  },
+  {
+    "id": 3238,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Cori cycle?",
+    "options": [
+      "Lactate recycling between muscle and liver",
+      "Citric acid cycle",
+      "Calvin cycle",
+      "Urea cycle"
+    ],
+    "answer": 0,
+    "explanation": "Cori cycle: lactate from muscles converted to glucose in liver"
+  },
+  {
+    "id": 3239,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the commutator [x, p] in quantum mechanics?",
+    "options": [
+      "ℏ",
+      "0",
+      "iℏ",
+      "-iℏ"
+    ],
+    "answer": 2,
+    "explanation": "[x, p] = xp - px = iℏ (fundamental commutation relation)"
+  },
+  {
+    "id": 3240,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Langmuir isotherm for?",
+    "options": [
+      "Phase transitions",
+      "Adsorption on surfaces",
+      "Reaction rates",
+      "Gas behavior"
+    ],
+    "answer": 1,
+    "explanation": "Langmuir isotherm models monolayer adsorption on surfaces"
+  },
+  {
+    "id": 3241,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the wobble hypothesis?",
+    "options": [
+      "mRNA stability",
+      "DNA structure",
+      "Protein folding",
+      "Flexibility in third codon position base pairing"
+    ],
+    "answer": 3,
+    "explanation": "Wobble: non-standard base pairing at third codon position allows fewer tRNAs"
+  },
+  {
+    "id": 3242,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What are Lagrangian mechanics based on?",
+    "options": [
+      "Momentum",
+      "Position only",
+      "Energy (L = T - V)",
+      "Forces"
+    ],
+    "answer": 2,
+    "explanation": "Lagrangian L = Kinetic energy - Potential energy"
+  },
+  {
+    "id": 3243,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Debye-Hückel theory for?",
+    "options": [
+      "Solid structures",
+      "Activity coefficients of electrolytes",
+      "Ideal solutions",
+      "Gas behavior"
+    ],
+    "answer": 1,
+    "explanation": "Debye-Hückel models ionic interactions affecting activity coefficients"
+  },
+  {
+    "id": 3244,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the operone model?",
+    "options": [
+      "Prokaryotic gene regulation with operator",
+      "Eukaryotic gene regulation",
+      "Viral replication",
+      "Protein synthesis"
+    ],
+    "answer": 0,
+    "explanation": "Operon model explains coordinated bacterial gene regulation"
+  },
+  {
+    "id": 3245,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the canonical partition function?",
+    "options": [
+      "Z = Σexp(E/kT)",
+      "Z = E/kT",
+      "Z = kT/E",
+      "Z = Σexp(-E/kT)"
+    ],
+    "answer": 3,
+    "explanation": "Partition function Z = Σexp(-Ei/kT) sums over all states"
+  },
+  {
+    "id": 3246,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Lineweaver-Burk plot?",
+    "options": [
+      "v vs [S]",
+      "1/v vs 1/[S] for enzyme kinetics",
+      "ln(v) vs T",
+      "[S] vs time"
+    ],
+    "answer": 1,
+    "explanation": "Lineweaver-Burk: double reciprocal plot to determine Km and Vmax"
+  },
+  {
+    "id": 3247,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Hamiltonian operator?",
+    "options": [
+      "Spin operator",
+      "Total energy operator",
+      "Position operator",
+      "Momentum operator"
+    ],
+    "answer": 1,
+    "explanation": "Hamiltonian H = T + V represents total energy in quantum mechanics"
+  },
+  {
+    "id": 3248,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Clausius-Clapeyron equation for?",
+    "options": [
+      "Reaction rates",
+      "Equilibrium constants",
+      "Vapor pressure vs temperature",
+      "Ideal gases"
+    ],
+    "answer": 2,
+    "explanation": "Clausius-Clapeyron relates vapor pressure to temperature along phase boundary"
+  },
+  {
+    "id": 3249,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is RNA interference (RNAi)?",
+    "options": [
+      "RNA synthesis",
+      "Transcription",
+      "Gene silencing by small RNAs",
+      "RNA editing"
+    ],
+    "answer": 2,
+    "explanation": "RNAi: small RNAs (siRNA, miRNA) silence gene expression post-transcriptionally"
+  },
+  {
+    "id": 3250,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the virial expansion?",
+    "options": [
+      "Ideal gas law",
+      "Van der Waals equation",
+      "PV = nRT(1 + B/V + C/V² +...)",
+      "Ideal solution"
+    ],
+    "answer": 2,
+    "explanation": "Virial expansion corrects ideal gas law with density-dependent terms"
+  },
+  {
+    "id": 3251,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is competitive inhibition?",
+    "options": [
+      "Inhibitor binds active site",
+      "Irreversible binding",
+      "Non-competitive",
+      "Inhibitor binds allosteric site"
+    ],
+    "answer": 0,
+    "explanation": "Competitive inhibitor competes with substrate for active site"
+  },
+  {
+    "id": 3252,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Stern-Gerlach experiment significance?",
+    "options": [
+      "Quantization of angular momentum",
+      "Atomic structure",
+      "Photoelectric effect",
+      "Wave nature of light"
+    ],
+    "answer": 0,
+    "explanation": "Stern-Gerlach demonstrated quantization of spin angular momentum"
+  },
+  {
+    "id": 3253,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Hess's law?",
+    "options": [
+      "Enthalpy change is path-independent",
+      "Energy is conserved",
+      "Entropy increases",
+      "G = H - TS"
+    ],
+    "answer": 0,
+    "explanation": "Hess's law: total ΔH is same regardless of reaction pathway"
+  },
+  {
+    "id": 3254,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the difference between siRNA and miRNA?",
+    "options": [
+      "siRNA is exogenous, miRNA is endogenous",
+      "miRNA is larger",
+      "siRNA is natural",
+      "Same thing"
+    ],
+    "answer": 0,
+    "explanation": "siRNA typically from external sources; miRNA encoded by genome"
+  },
+  {
+    "id": 3255,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the WKB approximation?",
+    "options": [
+      "Exact quantum solution",
+      "Semiclassical approximation for wavefunctions",
+      "Statistical method",
+      "Classical mechanics"
+    ],
+    "answer": 1,
+    "explanation": "WKB is semiclassical method for approximately solving Schrödinger equation"
+  },
+  {
+    "id": 3256,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the colligative property?",
+    "options": [
+      "Depends on number of solute particles",
+      "Depends on solute identity",
+      "Depends on temperature only",
+      "Depends on pressure only"
+    ],
+    "answer": 0,
+    "explanation": "Colligative properties depend only on concentration, not identity of solute"
+  },
+  {
+    "id": 3257,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the enhancer in gene regulation?",
+    "options": [
+      "Coding sequence",
+      "Terminator",
+      "Promoter element",
+      "DNA region increasing transcription from distance"
+    ],
+    "answer": 3,
+    "explanation": "Enhancers increase transcription and can act from far distances"
+  },
+  {
+    "id": 3258,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Fermi-Dirac distribution for?",
+    "options": [
+      "Fermion occupation probability",
+      "Classical particles",
+      "Photons",
+      "Bosons"
+    ],
+    "answer": 0,
+    "explanation": "Fermi-Dirac: probability distribution for fermions (electrons)"
+  },
+  {
+    "id": 3259,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Van't Hoff equation?",
+    "options": [
+      "Rate law",
+      "Gas law",
+      "Temperature dependence of equilibrium constant",
+      "Osmotic pressure"
+    ],
+    "answer": 2,
+    "explanation": "Van't Hoff: d(lnK)/dT = ΔH°/RT²"
+  },
+  {
+    "id": 3260,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is chromatin remodeling?",
+    "options": [
+      "Chromosome condensation",
+      "DNA repair",
+      "DNA replication",
+      "Dynamic changes in chromatin structure affecting gene access"
+    ],
+    "answer": 3,
+    "explanation": "Chromatin remodeling alters nucleosome positioning for gene regulation"
+  },
+  {
+    "id": 3261,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Bose-Einstein distribution for?",
+    "options": [
+      "Electrons",
+      "Classical particles",
+      "Boson occupation probability",
+      "Fermions"
+    ],
+    "answer": 2,
+    "explanation": "Bose-Einstein: probability distribution for bosons (photons, phonons)"
+  },
+  {
+    "id": 3262,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the standard cell potential?",
+    "options": [
+      "E° = E°cathode - E°anode",
+      "E° = RT/nF",
+      "E° = E°anode - E°cathode",
+      "E° = E°cathode + E°anode"
+    ],
+    "answer": 0,
+    "explanation": "Standard cell potential E° = E°cathode - E°anode"
+  },
+  {
+    "id": 3263,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Shine-Dalgarno sequence?",
+    "options": [
+      "Prokaryotic ribosome binding site",
+      "Terminator sequence",
+      "Eukaryotic promoter",
+      "Enhancer"
+    ],
+    "answer": 0,
+    "explanation": "Shine-Dalgarno sequence helps position prokaryotic ribosome on mRNA"
+  },
+  {
+    "id": 3264,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the selection rule for electric dipole transitions?",
+    "options": [
+      "Δl = ±2",
+      "Δl = 0",
+      "Any Δl",
+      "Δl = ±1"
+    ],
+    "answer": 3,
+    "explanation": "Electric dipole transitions require Δl = ±1 (orbital angular momentum)"
+  },
+  {
+    "id": 3265,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is the Faraday constant?",
+    "options": [
+      "6.02 × 10²³",
+      "8.31 J/(mol·K)",
+      "96485 C/mol",
+      "1.38 × 10⁻²³ J/K"
+    ],
+    "answer": 2,
+    "explanation": "Faraday constant F ≈ 96485 C/mol (charge per mole of electrons)"
+  },
+  {
+    "id": 3266,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "STEM",
+    "question": "What is post-translational modification?",
+    "options": [
+      "mRNA processing",
+      "DNA methylation",
+      "Transcription regulation",
+      "Chemical changes to proteins after synthesis"
+    ],
+    "answer": 3,
+    "explanation": "PTM: chemical modifications to proteins after translation (phosphorylation, etc.)"
+  },
+  {
+    "id": 3267,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the path integral formulation of QM?",
+    "options": [
+      "Sum over all possible paths weighted by e^(iS/ℏ)",
+      "Single path approach",
+      "Random walk",
+      "Classical trajectory only"
+    ],
+    "answer": 0,
+    "explanation": "Feynman's path integral: amplitude is sum over all paths weighted by action"
+  },
+  {
+    "id": 3268,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Marcus theory for?",
+    "options": [
+      "Acid-base reactions",
+      "Precipitation",
+      "Electron transfer reaction rates",
+      "Nuclear reactions"
+    ],
+    "answer": 2,
+    "explanation": "Marcus theory predicts rates of electron transfer reactions"
+  },
+  {
+    "id": 3269,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the central dogma exception by retroviruses?",
+    "options": [
+      "RNA → DNA (reverse transcriptase)",
+      "DNA → RNA",
+      "Protein → RNA",
+      "DNA → Protein"
+    ],
+    "answer": 0,
+    "explanation": "Retroviruses use reverse transcriptase: RNA → DNA"
+  },
+  {
+    "id": 3270,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is spontaneous symmetry breaking?",
+    "options": [
+      "No symmetry exists",
+      "Ground state has less symmetry than Hamiltonian",
+      "System breaks conservation laws",
+      "Symmetry is random"
+    ],
+    "answer": 1,
+    "explanation": "SSB: lowest energy state has lower symmetry than the governing equations"
+  },
+  {
+    "id": 3271,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Woodward-Hoffmann rules for?",
+    "options": [
+      "Precipitation",
+      "Pericyclic reaction stereochemistry",
+      "Acid-base reactions",
+      "Redox reactions"
+    ],
+    "answer": 1,
+    "explanation": "Woodward-Hoffmann rules predict outcomes of pericyclic reactions using orbital symmetry"
+  },
+  {
+    "id": 3272,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the ubiquitin-proteasome pathway?",
+    "options": [
+      "RNA processing",
+      "Targeted protein degradation",
+      "DNA repair",
+      "Protein synthesis"
+    ],
+    "answer": 1,
+    "explanation": "Ubiquitin tags proteins for degradation by the proteasome"
+  },
+  {
+    "id": 3273,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the adiabatic theorem in QM?",
+    "options": [
+      "Fast changes maintain state",
+      "System stays in eigenstate if Hamiltonian changes slowly",
+      "Energy is constant",
+      "Entropy is constant"
+    ],
+    "answer": 1,
+    "explanation": "Adiabatic theorem: slow changes keep system in instantaneous eigenstate"
+  },
+  {
+    "id": 3274,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Eyring equation?",
+    "options": [
+      "Transition state theory rate equation",
+      "Equilibrium constant",
+      "Diffusion rate",
+      "Gas law"
+    ],
+    "answer": 0,
+    "explanation": "Eyring: k = (kT/h)exp(-ΔG‡/RT) from transition state theory"
+  },
+  {
+    "id": 3275,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the unfolded protein response (UPR)?",
+    "options": [
+      "Apoptosis",
+      "Cellular stress response to misfolded proteins in ER",
+      "DNA repair",
+      "Protein synthesis increase"
+    ],
+    "answer": 1,
+    "explanation": "UPR activates when unfolded proteins accumulate in endoplasmic reticulum"
+  },
+  {
+    "id": 3276,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Berry phase?",
+    "options": [
+      "Atomic orbital phase",
+      "Geometric phase from cyclic adiabatic evolution",
+      "Chemical reaction phase",
+      "Wave interference"
+    ],
+    "answer": 1,
+    "explanation": "Berry phase is geometric phase acquired during cyclic adiabatic parameter changes"
+  },
+  {
+    "id": 3277,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the DLVO theory?",
+    "options": [
+      "Atomic structure",
+      "Colloidal stability from electrical and van der Waals forces",
+      "Thermodynamics",
+      "Chemical kinetics"
+    ],
+    "answer": 1,
+    "explanation": "DLVO theory explains colloidal stability through competing forces"
+  },
+  {
+    "id": 3278,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is autophagy?",
+    "options": [
+      "Programmed death",
+      "Self-digestion of cellular components",
+      "Cell division",
+      "Growth"
+    ],
+    "answer": 1,
+    "explanation": "Autophagy: cells degrade and recycle their own components via lysosomes"
+  },
+  {
+    "id": 3279,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the spin-statistics theorem?",
+    "options": [
+      "Integer spin → bosons, half-integer → fermions",
+      "All particles are fermions",
+      "Spin is quantized",
+      "Spin determines mass"
+    ],
+    "answer": 0,
+    "explanation": "Spin-statistics: integer spin particles are bosons, half-integer are fermions"
+  },
+  {
+    "id": 3280,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Onsager reciprocal relations?",
+    "options": [
+      "Cross-coefficients in irreversible thermodynamics are equal",
+      "Equilibrium conditions",
+      "Newton's laws",
+      "Conservation laws"
+    ],
+    "answer": 0,
+    "explanation": "Onsager relations: Lij = Lji for coupled irreversible processes"
+  },
+  {
+    "id": 3281,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Warburg effect?",
+    "options": [
+      "Oxygen transport",
+      "Respiration increase",
+      "Photosynthesis",
+      "Cancer cells prefer glycolysis even with oxygen"
+    ],
+    "answer": 3,
+    "explanation": "Warburg effect: cancer cells use aerobic glycolysis for energy"
+  },
+  {
+    "id": 3282,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Kohn-Sham approach in DFT?",
+    "options": [
+      "Classical approximation",
+      "Monte Carlo method",
+      "Wave function method",
+      "Non-interacting electron system with same density"
+    ],
+    "answer": 3,
+    "explanation": "Kohn-Sham: maps interacting electrons to non-interacting system with same density"
+  },
+  {
+    "id": 3283,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the fluctuation-dissipation theorem?",
+    "options": [
+      "Entropy production",
+      "Energy conservation",
+      "Response to perturbation related to equilibrium fluctuations",
+      "Heat flow"
+    ],
+    "answer": 2,
+    "explanation": "FDT connects thermal fluctuations to dissipative response"
+  },
+  {
+    "id": 3284,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the epitranscriptome?",
+    "options": [
+      "DNA modifications",
+      "Protein modifications",
+      "Chemical modifications to RNA",
+      "Lipid modifications"
+    ],
+    "answer": 2,
+    "explanation": "Epitranscriptome: chemical modifications on RNA affecting function"
+  },
+  {
+    "id": 3285,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Keldysh formalism?",
+    "options": [
+      "Classical mechanics",
+      "Equilibrium thermodynamics",
+      "Non-equilibrium Green's functions",
+      "Static quantum theory"
+    ],
+    "answer": 2,
+    "explanation": "Keldysh formalism treats non-equilibrium quantum systems"
+  },
+  {
+    "id": 3286,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Butler-Volmer equation?",
+    "options": [
+      "Diffusion",
+      "Electrode kinetics",
+      "Heat transfer",
+      "Gas behavior"
+    ],
+    "answer": 1,
+    "explanation": "Butler-Volmer describes current-overpotential relationship at electrodes"
+  },
+  {
+    "id": 3287,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the CRISPR-Cas9 PAM sequence?",
+    "options": [
+      "Any sequence",
+      "TATA",
+      "NGG for Cas9",
+      "ATAT"
+    ],
+    "answer": 2,
+    "explanation": "SpCas9 requires NGG PAM adjacent to target sequence"
+  },
+  {
+    "id": 3288,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is topological order in condensed matter?",
+    "options": [
+      "Crystalline order",
+      "Magnetic order",
+      "Liquid order",
+      "Order beyond symmetry breaking, characterized by topology"
+    ],
+    "answer": 3,
+    "explanation": "Topological order: quantum order not described by local order parameters"
+  },
+  {
+    "id": 3289,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Kirkwood-Buff theory?",
+    "options": [
+      "Relating solution thermodynamics to molecular distribution",
+      "Gas behavior",
+      "Reaction kinetics",
+      "Crystal structure"
+    ],
+    "answer": 0,
+    "explanation": "Kirkwood-Buff connects solution thermodynamics to radial distribution functions"
+  },
+  {
+    "id": 3290,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the pioneer factor in gene regulation?",
+    "options": [
+      "mRNA",
+      "First enzyme",
+      "Ribosome",
+      "Transcription factor that opens closed chromatin"
+    ],
+    "answer": 3,
+    "explanation": "Pioneer factors access nucleosomal DNA and enable other factors to bind"
+  },
+  {
+    "id": 3291,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Kubo formula?",
+    "options": [
+      "Linear response of observables to perturbations",
+      "Rate equation",
+      "Equilibrium formula",
+      "Gas law"
+    ],
+    "answer": 0,
+    "explanation": "Kubo formula expresses linear response coefficients via correlation functions"
+  },
+  {
+    "id": 3292,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Marcus inverted region?",
+    "options": [
+      "No electron transfer",
+      "Classical behavior",
+      "Rate decreases when driving force exceeds reorganization energy",
+      "Rate increases with driving force"
+    ],
+    "answer": 2,
+    "explanation": "In inverted region, ET rate decreases as driving force increases beyond λ"
+  },
+  {
+    "id": 3293,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is liquid-liquid phase separation in cells?",
+    "options": [
+      "Diffusion",
+      "Formation of membraneless organelles",
+      "Osmosis",
+      "Cell division"
+    ],
+    "answer": 1,
+    "explanation": "LLPS forms membraneless compartments (condensates) in cells"
+  },
+  {
+    "id": 3294,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Wigner function?",
+    "options": [
+      "Energy function",
+      "Probability density",
+      "Quasi-probability distribution in phase space",
+      "Wave function"
+    ],
+    "answer": 2,
+    "explanation": "Wigner function is a quasi-probability distribution representing quantum states"
+  },
+  {
+    "id": 3295,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Lindemann mechanism?",
+    "options": [
+      "Catalysis",
+      "Unimolecular reaction mechanism via collision activation",
+      "Gas expansion",
+      "Bimolecular reaction"
+    ],
+    "answer": 1,
+    "explanation": "Lindemann: unimolecular reactions require collisional activation"
+  },
+  {
+    "id": 3296,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is phase separation and gene regulation connection?",
+    "options": [
+      "Condensates concentrate transcription machinery",
+      "No connection",
+      "Random",
+      "Inhibits transcription"
+    ],
+    "answer": 0,
+    "explanation": "Biomolecular condensates compartmentalize and regulate transcription"
+  },
+  {
+    "id": 3297,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Anderson localization?",
+    "options": [
+      "Superconductivity",
+      "Wave localization in disordered systems",
+      "Electron delocalization",
+      "Classical diffusion"
+    ],
+    "answer": 1,
+    "explanation": "Anderson localization: waves (electrons) trapped by disorder"
+  },
+  {
+    "id": 3298,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the transition state theory assumption?",
+    "options": [
+      "No barrier",
+      "No equilibrium",
+      "Classical motion",
+      "Quasi-equilibrium between reactants and transition state"
+    ],
+    "answer": 3,
+    "explanation": "TST assumes quasi-equilibrium between reactants and transition state complex"
+  },
+  {
+    "id": 3299,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is m6A modification in RNA?",
+    "options": [
+      "DNA methylation",
+      "Protein modification",
+      "Lipid modification",
+      "N6-methyladenosine, most common mRNA modification"
+    ],
+    "answer": 3,
+    "explanation": "m6A is the most abundant internal modification in eukaryotic mRNA"
+  },
+  {
+    "id": 3300,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "STEM",
+    "question": "What is the Jarzynski equality?",
+    "options": [
+      "Entropy production",
+      "Equilibrium relation",
+      "Connects non-equilibrium work to free energy differences",
+      "Energy conservation"
+    ],
+    "answer": 2,
+    "explanation": "Jarzynski: ⟨exp(-W/kT)⟩ = exp(-ΔF/kT), relates work to free energy"
+  }
+]

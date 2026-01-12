@@ -22,6 +22,7 @@ class QuizUIController {
             questionCard: document.getElementById('question-card'),
             questionTitle: document.getElementById('question-title'),
             questionDescription: document.getElementById('question-description'),
+            badgeText: document.getElementById('badge-text'),
             optionsContainer: document.getElementById('options-container'),
             progressBar: document.getElementById('progress-fill'),
             progressText: document.getElementById('question-counter'),
@@ -29,6 +30,7 @@ class QuizUIController {
             submitBtn: document.getElementById('submit-btn'),
             nextBtn: document.getElementById('next-btn'),
             hintBtn: document.getElementById('hint-btn'),
+            stopBtn: document.getElementById('stop-btn'),
             feedbackArea: document.getElementById('feedback-area'),
             loadingOverlay: document.getElementById('loading-overlay'),
             levelValue: document.getElementById('level-value'),
@@ -42,6 +44,7 @@ class QuizUIController {
         // UI State
         this.selectedOption = null;
         this.isAnswered = false;
+        this.currentQuestion = null;
         
         console.log('QuizUIController initialized');
     }
@@ -54,17 +57,11 @@ class QuizUIController {
         this.showLoading();
         
         try {
-            // Initialize engine (will be implemented by lead developer)
-            this.engine = new QuizEngine();
-            
-            // Load question data
-            // TODO: Lead Developer - Initialize engine with question data
-            // this.engine.initialize(getAllQuestions());
-            
-            // Hide loading
+            const questionBank = await this.loadQuestionBank();
+            const userSetup = await this.ensureUserSetup(questionBank);
+            this.engine = new QuizEngine({ ...userSetup, questionBank });
             this.hideLoading();
             
-            // Load first question
             this.loadQuestion();
             
             // Setup event listeners
@@ -100,6 +97,11 @@ class QuizUIController {
             this.nextQuestion();
         });
         
+        // Stop button
+        this.elements.stopBtn.addEventListener('click', () => {
+            this.stopQuiz();
+        });
+        
         // Hint button (optional feature)
         this.elements.hintBtn.addEventListener('click', () => {
             this.showHint();
@@ -115,19 +117,20 @@ class QuizUIController {
      * Load and display current question
      */
     loadQuestion() {
-        // TODO: Lead Developer - Get question from engine
-        // const question = this.engine.getCurrentQuestion();
+        const question = this.engine ? this.engine.getCurrentQuestion() : null;
+        if (!question) {
+            this.completeQuiz();
+            return;
+        }
         
-        // Placeholder - UI Team can style this structure
-        const question = {
-            id: 1,
-            question: "Sample Question - Engine will provide real questions",
-            options: ["Option A", "Option B", "Option C", "Option D"],
-            category: "General"
-        };
-        
-        // Update question text
+        this.currentQuestion = question;
         this.elements.questionTitle.textContent = question.question;
+        this.elements.questionDescription.textContent = question.category ? `Category: ${question.category}` : '';
+        
+        const progress = this.engine.getProgress();
+        if (this.elements.badgeText) {
+            this.elements.badgeText.textContent = `Q${Math.max(progress.current, 1)}`;
+        }
         
         // Clear and populate options
         this.elements.optionsContainer.innerHTML = '';
@@ -204,15 +207,11 @@ class QuizUIController {
         this.elements.submitBtn.disabled = true;
         
         // TODO: Lead Developer - Process answer through engine
-        // const result = this.engine.submitAnswer(this.selectedOption);
-        
-        // Placeholder result
-        const result = {
-            isCorrect: false,
-            correctAnswer: 0,
-            feedback: "Sample feedback - Engine will provide real feedback",
-            pointsEarned: 10
-        };
+        const result = this.engine.submitAnswer(this.selectedOption);
+        if (!result) {
+            this.showError('No question available to submit.');
+            return;
+        }
         
         // Show feedback
         this.showFeedback(result);
@@ -228,6 +227,8 @@ class QuizUIController {
         
         // Update score display
         this.updateScore();
+        this.updateGamificationDisplay();
+        this.updateProgress();
     }
     
     /**
@@ -267,16 +268,11 @@ class QuizUIController {
      * Move to next question
      */
     nextQuestion() {
-        // TODO: Lead Developer - Check if quiz complete
-        // if (this.engine.isComplete()) {
-        //     this.completeQuiz();
-        //     return;
-        // }
+        if (this.engine && this.engine.isComplete()) {
+            this.completeQuiz();
+            return;
+        }
         
-        // TODO: Lead Developer - Move to next question
-        // this.engine.nextQuestion();
-        
-        // Reload question display
         this.loadQuestion();
     }
     
@@ -284,44 +280,63 @@ class QuizUIController {
      * Complete quiz and redirect to results
      */
     completeQuiz() {
-        // TODO: Lead Developer - Get results and store
-        // const results = this.engine.getResults();
-        // localStorage.setItem('quizResults', JSON.stringify(results));
-        
-        // Redirect to results page
+        if (this.engine) {
+            const summary = this.engine.getPerformanceSummary();
+            localStorage.setItem('quizResults', JSON.stringify(summary));
+        }
         window.location.href = 'result.html';
+    }
+    
+    /**
+     * Stop quiz with confirmation
+     */
+    stopQuiz() {
+        const state = this.engine ? this.engine.getState() : null;
+        const answered = state ? state.totalAnswered : 0;
+        
+        const message = answered > 0 
+            ? `You have answered ${answered} question(s). Are you sure you want to stop the quiz? Your progress will be saved.`
+            : 'Are you sure you want to stop the quiz?';
+        
+        if (window.confirm(message)) {
+            console.log('[RB-ADA] quiz_stopped_by_user', { answered });
+            this.completeQuiz();
+        }
     }
     
     /**
      * Update progress bar
      */
     updateProgress() {
-        // TODO: Lead Developer - Get progress from engine
-        // const progress = (this.engine.currentQuestionIndex / this.engine.questions.length) * 100;
-        
-        const progress = 0; // Placeholder
-        this.elements.progressBar.style.width = `${progress}%`;
-        this.elements.progressText.textContent = `Question 0 of 0`; // Placeholder
+        if (!this.engine) return;
+        const progress = this.engine.getProgress();
+        const state = this.engine.getState();
+        const total = progress.total || 1;
+        const answered = state.totalAnswered;
+        const currentNumber = Math.min(answered + 1, total);
+        const percent = Math.round((answered / total) * 100);
+        this.elements.progressBar.style.width = `${percent}%`;
+        this.elements.progressText.textContent = `Question ${currentNumber} of ${total}`;
     }
     
     /**
      * Update score display
      */
     updateScore() {
-        // TODO: Lead Developer - Get score from engine
-        // const score = this.engine.score;
-        this.elements.scoreDisplay.textContent = 'Score: 0'; // Placeholder
+        if (!this.engine) return;
+        const state = this.engine.getState();
+        this.elements.scoreDisplay.textContent = `Score: ${state.score}`;
     }
     
     /**
      * Update gamification indicators
      */
     updateGamificationDisplay() {
-        // TODO: Lead Developer - Get stats from engine
-        // const stats = this.engine.getGamificationStats();
-        // this.elements.levelValue.textContent = stats.level;
-        // this.elements.streakValue.textContent = stats.streak;
-        // this.elements.pointsValue.textContent = stats.points;
+        if (!this.engine) return;
+        const state = this.engine.getState();
+        this.elements.levelValue.textContent = state.currentLevel;
+        this.elements.streakValue.textContent = state.streak;
+        this.elements.pointsValue.textContent = state.score;
     }
     
     /**
@@ -370,6 +385,103 @@ class QuizUIController {
      */
     showError(message) {
         this.elements.feedbackArea.innerHTML = `<div class="feedback-wrong">${message}</div>`;
+    }
+
+    /**
+     * Load user setup from localStorage or defaults
+     * @returns {Object} Setup configuration
+     */
+    loadUserSetup(validCategories = []) {
+        const stored = localStorage.getItem('neuroquizUserSetup');
+        let parsed = {};
+        if (stored) {
+            try {
+                parsed = JSON.parse(stored) || {};
+            } catch (e) {
+                parsed = {};
+            }
+        }
+        const fallbackCategory = validCategories.length ? validCategories[0] : ((window.QUESTION_BANK && window.QUESTION_BANK[0] && window.QUESTION_BANK[0].category) ? window.QUESTION_BANK[0].category : null);
+        const normalizedCategory = validCategories.includes(parsed.category) ? parsed.category : fallbackCategory;
+        return {
+            level: this.normalizeLevel(parsed.level),
+            category: normalizedCategory,
+            literacyLevel: this.normalizeLiteracy(parsed.literacyLevel)
+        };
+    }
+
+    /**
+     * Ensure user setup exists; prompt if missing/invalid
+     * @param {Array} questionBank - loaded questions
+     * @returns {Object} setup config
+     */
+    async ensureUserSetup(questionBank) {
+        const categories = Array.from(new Set((questionBank || []).map(q => q.category).filter(Boolean)));
+        let setup = this.loadUserSetup(categories);
+
+        const missingCategory = !setup.category && categories.length > 0;
+        const missingLevel = !setup.level;
+        const missingLiteracy = !setup.literacyLevel;
+
+        if (missingCategory || missingLevel || missingLiteracy) {
+            console.log('[RB-ADA] user_setup_incomplete, redirecting to setup');
+            window.location.href = 'setup.html';
+            return null;
+        }
+
+        console.log('[RB-ADA] user_setup_loaded', setup);
+        return setup;
+    }
+
+    normalizeLevel(level) {
+        const num = parseInt(level, 10);
+        if (Number.isInteger(num) && num >= 1 && num <= 3) return num;
+        return 1;
+    }
+
+    normalizeLiteracy(lit) {
+        const allowed = ['Beginner', 'Intermediate', 'Expert'];
+        if (allowed.includes(lit)) return lit;
+        const lower = (lit || '').toString().toLowerCase();
+        if (lower === 'beginner') return 'Beginner';
+        if (lower === 'intermediate') return 'Intermediate';
+        if (lower === 'expert') return 'Expert';
+        return 'Beginner';
+    }
+
+
+    /**
+     * Load full quiz bank from bundled JSON datasets
+     * @returns {Promise<Array>} Combined question bank
+     */
+    async loadQuestionBank() {
+        if (window.NEUROQUIZ_QUESTION_BANK && Array.isArray(window.NEUROQUIZ_QUESTION_BANK)) {
+            return window.NEUROQUIZ_QUESTION_BANK;
+        }
+
+        const datasets = ['gk', 'literature', 'logic', 'math', 'stem'];
+        const results = [];
+
+        for (const name of datasets) {
+            try {
+                const resp = await fetch(`data/${name}.json`);
+                if (!resp.ok) continue;
+                const data = await resp.json();
+                if (Array.isArray(data)) {
+                    results.push(...data);
+                }
+            } catch (e) {
+                console.warn(`Failed to load dataset ${name}:`, e);
+            }
+        }
+
+        if (results.length === 0 && Array.isArray(window.QUESTION_BANK)) {
+            window.NEUROQUIZ_QUESTION_BANK = window.QUESTION_BANK;
+            return window.NEUROQUIZ_QUESTION_BANK;
+        }
+
+        window.NEUROQUIZ_QUESTION_BANK = results;
+        return window.NEUROQUIZ_QUESTION_BANK;
     }
 }
 

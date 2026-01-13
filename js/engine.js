@@ -280,7 +280,8 @@ class QuizEngine {
             answeredQuestionIds: new Set(),
             totalTimeMs: 0,
             currentQuestion: null,
-            sessionStartMs: Date.now()
+            sessionStartMs: Date.now(),
+            lastDifficultyIncreaseAtStreak: 0
         };
         this.currentQuestionStartMs = null;
     }
@@ -298,16 +299,33 @@ class QuizEngine {
 
     getNextCandidate() {
         const remaining = this.filteredQuestions.filter(q => !this.state.answeredQuestionIds.has(q.id));
-        const levelDifficulty = remaining.find(q => q.level === this.state.currentLevel && q.difficulty === this.state.currentDifficulty);
-        if (levelDifficulty) return levelDifficulty;
+        if (remaining.length === 0) return null;
 
-        const levelOnly = remaining.find(q => q.level === this.state.currentLevel);
-        if (levelOnly) return levelOnly;
+        const levelDifficulty = remaining.filter(q => q.level === this.state.currentLevel && q.difficulty === this.state.currentDifficulty);
+        if (levelDifficulty.length > 0) {
+            return this.shuffleArray(levelDifficulty)[0];
+        }
 
-        const difficultyOnly = remaining.find(q => q.difficulty === this.state.currentDifficulty);
-        if (difficultyOnly) return difficultyOnly;
+        const levelOnly = remaining.filter(q => q.level === this.state.currentLevel);
+        if (levelOnly.length > 0) {
+            return this.shuffleArray(levelOnly)[0];
+        }
 
-        return remaining[0] || null;
+        const difficultyOnly = remaining.filter(q => q.difficulty === this.state.currentDifficulty);
+        if (difficultyOnly.length > 0) {
+            return this.shuffleArray(difficultyOnly)[0];
+        }
+
+        return this.shuffleArray(remaining)[0];
+    }
+
+    shuffleArray(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
     }
 
     getCurrentQuestion() {
@@ -441,6 +459,24 @@ class QuizEngine {
             difficultyDelta = Math.min(difficultyDelta, -1);
         }
 
+        if (isCorrect && this.state.streak >= 7 && this.state.currentDifficulty < RBADA_CONSTANTS.MAX_DIFFICULTY) {
+            const streakThreshold = 7;
+            const streakCycle = Math.floor(this.state.streak / streakThreshold);
+            const lastIncreaseCycle = Math.floor(this.state.lastDifficultyIncreaseAtStreak / streakThreshold);
+            
+            if (streakCycle > lastIncreaseCycle) {
+                difficultyDelta = Math.max(difficultyDelta, 1);
+                this.state.lastDifficultyIncreaseAtStreak = this.state.streak;
+                logAdaptive('difficulty_increase_streak', {
+                    streak: this.state.streak,
+                    fromDifficulty: this.state.currentDifficulty,
+                    toDifficulty: this.state.currentDifficulty + 1,
+                    reason: 'high_streak_performance',
+                    streakCycle: streakCycle
+                });
+            }
+        }
+
         difficultyDelta = clamp(difficultyDelta, -1, 1);
 
         let nextDifficulty = this.state.currentDifficulty + difficultyDelta;
@@ -464,7 +500,7 @@ class QuizEngine {
         }
 
         this.state.currentDifficulty = clamp(nextDifficulty, RBADA_CONSTANTS.MIN_DIFFICULTY, RBADA_CONSTANTS.MAX_DIFFICULTY);
-        if (this.state.currentDifficulty !== before.difficulty) {
+        if (this.state.currentDifficulty !== before.difficulty && !(isCorrect && this.state.streak >= 7 && difficultyDelta === 1)) {
             logAdaptive('difficulty_change', {
                 from: before.difficulty,
                 to: this.state.currentDifficulty,
@@ -478,13 +514,13 @@ class QuizEngine {
             this.state.currentLevel = clamp(this.state.currentLevel + 1, RBADA_CONSTANTS.MIN_LEVEL, RBADA_CONSTANTS.MAX_LEVEL);
             if (this.state.currentLevel > previousLevel) {
                 this.state.hasDroppedLevel = false;
-                this.state.streak = 0;
                 this.state.promotionCount += 1;
                 logAdaptive('level_promotion', {
                     fromLevel: previousLevel,
                     toLevel: this.state.currentLevel,
                     reason: 'recovery_streak',
-                    promotionCount: this.state.promotionCount
+                    promotionCount: this.state.promotionCount,
+                    streak: this.state.streak
                 });
             }
         }
@@ -515,24 +551,84 @@ class QuizEngine {
     getPerformanceSummary() {
         const totalQuestions = this.state.totalAnswered;
         const accuracy = totalQuestions > 0 ? Math.round((this.state.correctCount / totalQuestions) * 100) : 0;
-        return {
+        const categoryPerformance = this.buildCategoryPerformance();
+        const totalTimeSeconds = Math.round(this.state.totalTimeMs / 1000);
+        const averageTimeMs = totalQuestions > 0 ? Math.round(this.state.totalTimeMs / totalQuestions) : 0;
+        const questionsPerMinute = totalTimeSeconds > 0 ? Math.round((totalQuestions / (totalTimeSeconds / 60)) * 10) / 10 : 0;
+        const bestStreak = this.calculateBestStreak();
+        const totalScore = this.state.score;
+        const initialLevel = this.sessionConfig.initialLevel || 1;
+        const finalLevel = this.state.currentLevel;
+        const initialDifficulty = this.sessionConfig.initialDifficulty || 1;
+        const finalDifficulty = this.state.currentDifficulty;
+        const netLevelChange = finalLevel - initialLevel;
+        const netDifficultyChange = finalDifficulty - initialDifficulty;
+        
+        const storedSetup = typeof window !== 'undefined' ? localStorage.getItem('neuroquizUserSetup') : null;
+        let userName = 'User';
+        if (storedSetup) {
+            try {
+                const parsed = JSON.parse(storedSetup);
+                if (parsed.name) {
+                    userName = parsed.name;
+                }
+            } catch (e) {
+                console.warn('Failed to parse user setup for name:', e);
+            }
+        }
+        
+        const summary = {
+            userName: userName,
             totalQuestions,
             correctAnswers: this.state.correctCount,
             wrongAnswers: this.state.wrongCount,
             percentage: accuracy,
-            timeTaken: Math.round(this.state.totalTimeMs / 1000),
-            averageTimeMs: totalQuestions > 0 ? Math.round(this.state.totalTimeMs / totalQuestions) : 0,
-            currentLevel: this.state.currentLevel,
-            currentDifficulty: this.state.currentDifficulty,
+            accuracy: accuracy,
+            timeTaken: totalTimeSeconds,
+            totalTimeMs: this.state.totalTimeMs,
+            averageTimeMs: averageTimeMs,
+            questionsPerMinute: questionsPerMinute,
+            bestStreak: bestStreak,
+            totalScore: totalScore,
+            currentLevel: finalLevel,
+            currentDifficulty: finalDifficulty,
+            initialLevel: initialLevel,
+            finalLevel: finalLevel,
+            initialDifficulty: initialDifficulty,
+            finalDifficulty: finalDifficulty,
+            netLevelChange: netLevelChange,
+            netDifficultyChange: netDifficultyChange,
             dropCount: this.state.dropCount,
             promotionCount: this.state.promotionCount,
             streak: this.state.streak,
             hasDroppedLevel: this.state.hasDroppedLevel,
             performanceHistory: this.state.performanceHistory.slice(),
-            categoryPerformance: this.buildCategoryPerformance(),
+            categoryPerformance: categoryPerformance,
             sessionConfig: this.sessionConfig,
             answeredQuestionIds: Array.from(this.state.answeredQuestionIds)
         };
+        
+        if (typeof window !== 'undefined' && window.CognitiveAnalyzer) {
+            summary.cognitiveProfile = window.CognitiveAnalyzer.analyzeCognitiveProfile(summary);
+        }
+        
+        return summary;
+    }
+    
+    calculateBestStreak() {
+        let bestStreak = 0;
+        let currentStreak = 0;
+        
+        for (const entry of this.state.performanceHistory) {
+            if (entry.isCorrect) {
+                currentStreak++;
+                bestStreak = Math.max(bestStreak, currentStreak);
+            } else {
+                currentStreak = 0;
+            }
+        }
+        
+        return bestStreak;
     }
 
     buildCategoryPerformance() {

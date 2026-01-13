@@ -62,6 +62,7 @@ class QuizUIController {
             this.engine = new QuizEngine({ ...userSetup, questionBank });
             this.hideLoading();
             
+            this.displayUserName(userSetup.name);
             this.loadQuestion();
             
             // Setup event listeners
@@ -70,6 +71,13 @@ class QuizUIController {
         } catch (error) {
             console.error('Error initializing quiz:', error);
             this.showError('Failed to load quiz. Please refresh the page.');
+        }
+    }
+    
+    displayUserName(name) {
+        const userNameElement = document.getElementById('user-name');
+        if (userNameElement && name) {
+            userNameElement.textContent = name;
         }
     }
     
@@ -239,7 +247,12 @@ class QuizUIController {
         const feedbackDiv = document.createElement('div');
         feedbackDiv.className = result.isCorrect ? 'feedback-correct' : 'feedback-wrong';
         feedbackDiv.innerHTML = `
-            <strong>${result.isCorrect ? '✓ Correct!' : '✗ Incorrect'}</strong>
+            <strong>
+                ${result.isCorrect ? 
+                    '<span class="feedback-icon correct-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Correct!</span>' : 
+                    '<span class="feedback-icon wrong-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Incorrect</span>'
+                }
+            </strong>
             <p>${result.feedback}</p>
             <p>Points earned: ${result.pointsEarned}</p>
         `;
@@ -404,6 +417,7 @@ class QuizUIController {
         const fallbackCategory = validCategories.length ? validCategories[0] : ((window.QUESTION_BANK && window.QUESTION_BANK[0] && window.QUESTION_BANK[0].category) ? window.QUESTION_BANK[0].category : null);
         const normalizedCategory = validCategories.includes(parsed.category) ? parsed.category : fallbackCategory;
         return {
+            name: parsed.name || 'User',
             level: this.normalizeLevel(parsed.level),
             category: normalizedCategory,
             literacyLevel: this.normalizeLiteracy(parsed.literacyLevel)

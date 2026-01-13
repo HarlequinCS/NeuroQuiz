@@ -16,7 +16,6 @@
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="logo-container">
-                    <img src="assets/images/logo.png" alt="NeuroQuiz Logo" class="logo" id="logo">
                     <span class="brand-name">NeuroQuiz™</span>
                 </div>
                 <ul class="nav-menu" id="nav-menu">
@@ -121,32 +120,43 @@
                 <h2 class="section-title" id="research-title">Research & References</h2>
                 <div class="research-list" id="research-list">
                     <div class="research-item" id="research-item-1">
-                        <h3 class="research-item-title">Adaptive Learning</h3>
+                        <h3 class="research-item-title">Cognitive Diagnostic Assessment</h3>
                         <p class="research-item-desc">
-                            Based on cognitive load theory and personalized learning algorithms 
-                            that adjust content difficulty in real-time.
+                            NeuroQuiz implements Cognitive Diagnostic Assessment (CDA) principles, 
+                            particularly the Rule Space Method, to provide detailed insights into 
+                            knowledge mastery and learning patterns beyond aggregate scores.
                         </p>
                     </div>
                     <div class="research-item" id="research-item-2">
-                        <h3 class="research-item-title">Gamification</h3>
+                        <h3 class="research-item-title">Rule Space Method</h3>
+                        <p class="research-item-desc" id="tatsuoka-summary">
+                            <strong>Reference:</strong> Tatsuoka, K. K. (2009). <em>Cognitive assessment: 
+                            An introduction to the Rule Space Method</em>. Routledge.
+                        </p>
                         <p class="research-item-desc">
-                            Implements proven game mechanics including points, badges, levels, 
-                            and immediate feedback to enhance motivation and engagement.
+                            This foundational work introduces the Rule Space Method (RSM), a cognitive 
+                            diagnostic technique that transforms item response patterns into measurable 
+                            attribute mastery probabilities. RSM helps interpret test results beyond 
+                            aggregate scores by identifying underlying knowledge strengths and weaknesses, 
+                            enabling customized assessment feedback. It has been applied in large-scale 
+                            assessments such as the PSAT and other educational diagnostics.
                         </p>
                     </div>
                     <div class="research-item" id="research-item-3">
-                        <h3 class="research-item-title">Spaced Repetition</h3>
+                        <h3 class="research-item-title">Executive Function Indicators</h3>
                         <p class="research-item-desc">
-                            Utilizes spaced repetition algorithms to optimize memory retention 
-                            and long-term knowledge acquisition.
+                            Our analytics incorporate educational executive function indicators including 
+                            processing speed, impulsivity control, analytical thinking, cognitive endurance, 
+                            and self-regulation to provide comprehensive cognitive profiling.
                         </p>
                     </div>
-                </div>
-                <div class="research-docs" id="research-docs">
-                    <a href="docs/research.pdf" class="research-link" target="_blank">
-                        <span class="link-icon">📄</span>
-                        <span class="link-text">View Full Research Document</span>
-                    </a>
+                    <div class="research-item" id="research-item-4">
+                        <h3 class="research-item-title">Adaptive Learning</h3>
+                        <p class="research-item-desc">
+                            Based on cognitive load theory and personalized learning algorithms 
+                            that adjust content difficulty in real-time through the RB-ADA algorithm.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -166,7 +176,11 @@
 
     <!-- Theme Toggle -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon" id="theme-icon">🌙</span>
+        <span class="theme-icon" id="theme-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </span>
     </button>
 
     <!-- Scripts -->

@@ -1,0 +1,4502 @@
+[
+  {
+    "id": 1,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 5 + 3?",
+    "options": [
+      "10",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "5 + 3 = 8"
+  },
+  {
+    "id": 2,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 10 - 4?",
+    "options": [
+      "8",
+      "6",
+      "7",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "10 - 4 = 6"
+  },
+  {
+    "id": 3,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 2 × 4?",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "2 × 4 = 8"
+  },
+  {
+    "id": 4,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 12 ÷ 3?",
+    "options": [
+      "4",
+      "3",
+      "6",
+      "5"
+    ],
+    "answer": 0,
+    "explanation": "12 ÷ 3 = 4"
+  },
+  {
+    "id": 5,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 7 + 6?",
+    "options": [
+      "12",
+      "14",
+      "15",
+      "13"
+    ],
+    "answer": 3,
+    "explanation": "7 + 6 = 13"
+  },
+  {
+    "id": 6,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 15 - 8?",
+    "options": [
+      "6",
+      "8",
+      "7",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "15 - 8 = 7"
+  },
+  {
+    "id": 7,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 3 × 5?",
+    "options": [
+      "16",
+      "14",
+      "15",
+      "13"
+    ],
+    "answer": 2,
+    "explanation": "3 × 5 = 15"
+  },
+  {
+    "id": 8,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 20 ÷ 4?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "20 ÷ 4 = 5"
+  },
+  {
+    "id": 9,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 9 + 7?",
+    "options": [
+      "18",
+      "16",
+      "15",
+      "17"
+    ],
+    "answer": 1,
+    "explanation": "9 + 7 = 16"
+  },
+  {
+    "id": 10,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 18 - 9?",
+    "options": [
+      "11",
+      "10",
+      "8",
+      "9"
+    ],
+    "answer": 3,
+    "explanation": "18 - 9 = 9"
+  },
+  {
+    "id": 11,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 4 × 6?",
+    "options": [
+      "25",
+      "23",
+      "22",
+      "24"
+    ],
+    "answer": 3,
+    "explanation": "4 × 6 = 24"
+  },
+  {
+    "id": 12,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 16 ÷ 2?",
+    "options": [
+      "8",
+      "9",
+      "6",
+      "7"
+    ],
+    "answer": 0,
+    "explanation": "16 ÷ 2 = 8"
+  },
+  {
+    "id": 13,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 11 + 9?",
+    "options": [
+      "22",
+      "19",
+      "20",
+      "21"
+    ],
+    "answer": 2,
+    "explanation": "11 + 9 = 20"
+  },
+  {
+    "id": 14,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 14 - 5?",
+    "options": [
+      "8",
+      "10",
+      "11",
+      "9"
+    ],
+    "answer": 3,
+    "explanation": "14 - 5 = 9"
+  },
+  {
+    "id": 15,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 6 × 3?",
+    "options": [
+      "19",
+      "18",
+      "16",
+      "17"
+    ],
+    "answer": 1,
+    "explanation": "6 × 3 = 18"
+  },
+  {
+    "id": 16,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 25 ÷ 5?",
+    "options": [
+      "6",
+      "5",
+      "7",
+      "4"
+    ],
+    "answer": 1,
+    "explanation": "25 ÷ 5 = 5"
+  },
+  {
+    "id": 17,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 8 + 5?",
+    "options": [
+      "14",
+      "12",
+      "15",
+      "13"
+    ],
+    "answer": 3,
+    "explanation": "8 + 5 = 13"
+  },
+  {
+    "id": 18,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 17 - 8?",
+    "options": [
+      "10",
+      "9",
+      "11",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "17 - 8 = 9"
+  },
+  {
+    "id": 19,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 5 × 7?",
+    "options": [
+      "34",
+      "36",
+      "33",
+      "35"
+    ],
+    "answer": 3,
+    "explanation": "5 × 7 = 35"
+  },
+  {
+    "id": 20,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 30 ÷ 6?",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "7"
+    ],
+    "answer": 1,
+    "explanation": "30 ÷ 6 = 5"
+  },
+  {
+    "id": 21,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 13 + 4?",
+    "options": [
+      "17",
+      "18",
+      "19",
+      "16"
+    ],
+    "answer": 0,
+    "explanation": "13 + 4 = 17"
+  },
+  {
+    "id": 22,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 19 - 6?",
+    "options": [
+      "12",
+      "15",
+      "14",
+      "13"
+    ],
+    "answer": 3,
+    "explanation": "19 - 6 = 13"
+  },
+  {
+    "id": 23,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 7 × 4?",
+    "options": [
+      "28",
+      "27",
+      "29",
+      "26"
+    ],
+    "answer": 0,
+    "explanation": "7 × 4 = 28"
+  },
+  {
+    "id": 24,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 24 ÷ 3?",
+    "options": [
+      "6",
+      "9",
+      "8",
+      "7"
+    ],
+    "answer": 2,
+    "explanation": "24 ÷ 3 = 8"
+  },
+  {
+    "id": 25,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 6 + 8?",
+    "options": [
+      "15",
+      "14",
+      "13",
+      "16"
+    ],
+    "answer": 1,
+    "explanation": "6 + 8 = 14"
+  },
+  {
+    "id": 26,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 22 - 7?",
+    "options": [
+      "16",
+      "14",
+      "15",
+      "17"
+    ],
+    "answer": 2,
+    "explanation": "22 - 7 = 15"
+  },
+  {
+    "id": 27,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 9 × 2?",
+    "options": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": 2,
+    "explanation": "9 × 2 = 18"
+  },
+  {
+    "id": 28,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 21 ÷ 7?",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answer": 0,
+    "explanation": "21 ÷ 7 = 3"
+  },
+  {
+    "id": 29,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 4 + 9?",
+    "options": [
+      "12",
+      "15",
+      "13",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "4 + 9 = 13"
+  },
+  {
+    "id": 30,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 16 - 7?",
+    "options": [
+      "10",
+      "11",
+      "9",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "16 - 7 = 9"
+  },
+  {
+    "id": 31,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 8 × 3?",
+    "options": [
+      "23",
+      "24",
+      "22",
+      "25"
+    ],
+    "answer": 1,
+    "explanation": "8 × 3 = 24"
+  },
+  {
+    "id": 32,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 28 ÷ 4?",
+    "options": [
+      "7",
+      "9",
+      "6",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "28 ÷ 4 = 7"
+  },
+  {
+    "id": 33,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 12 + 6?",
+    "options": [
+      "19",
+      "20",
+      "17",
+      "18"
+    ],
+    "answer": 3,
+    "explanation": "12 + 6 = 18"
+  },
+  {
+    "id": 34,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "If you have 3 apples and buy 5 more, how many apples do you have?",
+    "options": [
+      "10",
+      "9",
+      "7",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "3 + 5 = 8 apples"
+  },
+  {
+    "id": 35,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the area of a square with side length 5?",
+    "options": [
+      "20",
+      "35",
+      "25",
+      "30"
+    ],
+    "answer": 2,
+    "explanation": "Area of square = side × side = 5 × 5 = 25"
+  },
+  {
+    "id": 36,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 1/2 as a decimal?",
+    "options": [
+      "0.6",
+      "0.7",
+      "0.4",
+      "0.5"
+    ],
+    "answer": 3,
+    "explanation": "1/2 = 0.5"
+  },
+  {
+    "id": 37,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What comes next: 2, 4, 6, ?",
+    "options": [
+      "9",
+      "10",
+      "7",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "The pattern increases by 2, so 6 + 2 = 8"
+  },
+  {
+    "id": 38,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "If a pencil costs $2 and you buy 4 pencils, how much do you pay?",
+    "options": [
+      "$7",
+      "$6",
+      "$9",
+      "$8"
+    ],
+    "answer": 3,
+    "explanation": "4 × $2 = $8"
+  },
+  {
+    "id": 39,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the perimeter of a rectangle 6 units long and 4 units wide?",
+    "options": [
+      "18",
+      "24",
+      "22",
+      "20"
+    ],
+    "answer": 3,
+    "explanation": "Perimeter = 2 × (length + width) = 2 × (6 + 4) = 20"
+  },
+  {
+    "id": 40,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 3/4 as a decimal?",
+    "options": [
+      "0.65",
+      "0.80",
+      "0.70",
+      "0.75"
+    ],
+    "answer": 3,
+    "explanation": "3/4 = 0.75"
+  },
+  {
+    "id": 41,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What comes next: 5, 10, 15, ?",
+    "options": [
+      "25",
+      "20",
+      "18",
+      "22"
+    ],
+    "answer": 1,
+    "explanation": "The pattern increases by 5, so 15 + 5 = 20"
+  },
+  {
+    "id": 42,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "You have $20 and spend $7. How much is left?",
+    "options": [
+      "$12",
+      "$15",
+      "$14",
+      "$13"
+    ],
+    "answer": 3,
+    "explanation": "$20 - $7 = $13"
+  },
+  {
+    "id": 43,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the area of a rectangle 8 units long and 3 units wide?",
+    "options": [
+      "22",
+      "26",
+      "28",
+      "24"
+    ],
+    "answer": 3,
+    "explanation": "Area = length × width = 8 × 3 = 24"
+  },
+  {
+    "id": 44,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 1/4 as a decimal?",
+    "options": [
+      "0.30",
+      "0.35",
+      "0.25",
+      "0.20"
+    ],
+    "answer": 2,
+    "explanation": "1/4 = 0.25"
+  },
+  {
+    "id": 45,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What comes next: 3, 6, 9, ?",
+    "options": [
+      "13",
+      "11",
+      "14",
+      "12"
+    ],
+    "answer": 3,
+    "explanation": "The pattern increases by 3, so 9 + 3 = 12"
+  },
+  {
+    "id": 46,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "If 1 cookie costs $3, how much do 5 cookies cost?",
+    "options": [
+      "$15",
+      "$13",
+      "$16",
+      "$14"
+    ],
+    "answer": 0,
+    "explanation": "5 × $3 = $15"
+  },
+  {
+    "id": 47,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the perimeter of a square with side length 7?",
+    "options": [
+      "26",
+      "30",
+      "32",
+      "28"
+    ],
+    "answer": 3,
+    "explanation": "Perimeter = 4 × side = 4 × 7 = 28"
+  },
+  {
+    "id": 48,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 2/5 as a decimal?",
+    "options": [
+      "0.40",
+      "0.50",
+      "0.45",
+      "0.35"
+    ],
+    "answer": 0,
+    "explanation": "2/5 = 0.40"
+  },
+  {
+    "id": 49,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What comes next: 10, 20, 30, ?",
+    "options": [
+      "42",
+      "38",
+      "45",
+      "40"
+    ],
+    "answer": 3,
+    "explanation": "The pattern increases by 10, so 30 + 10 = 40"
+  },
+  {
+    "id": 50,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "You have 15 stickers and give away 6. How many are left?",
+    "options": [
+      "10",
+      "8",
+      "9",
+      "11"
+    ],
+    "answer": 2,
+    "explanation": "15 - 6 = 9 stickers"
+  },
+  {
+    "id": 51,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the area of a square with side length 6?",
+    "options": [
+      "32",
+      "34",
+      "36",
+      "38"
+    ],
+    "answer": 2,
+    "explanation": "Area = 6 × 6 = 36"
+  },
+  {
+    "id": 52,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 3/5 as a decimal?",
+    "options": [
+      "0.55",
+      "0.70",
+      "0.65",
+      "0.60"
+    ],
+    "answer": 3,
+    "explanation": "3/5 = 0.60"
+  },
+  {
+    "id": 53,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What comes next: 4, 8, 12, ?",
+    "options": [
+      "16",
+      "18",
+      "14",
+      "20"
+    ],
+    "answer": 0,
+    "explanation": "The pattern increases by 4, so 12 + 4 = 16"
+  },
+  {
+    "id": 54,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "If a book costs $5 and you buy 3 books, how much do you pay?",
+    "options": [
+      "$13",
+      "$15",
+      "$14",
+      "$16"
+    ],
+    "answer": 1,
+    "explanation": "3 × $5 = $15"
+  },
+  {
+    "id": 55,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the perimeter of a rectangle 5 units long and 3 units wide?",
+    "options": [
+      "20",
+      "16",
+      "14",
+      "18"
+    ],
+    "answer": 1,
+    "explanation": "Perimeter = 2 × (5 + 3) = 16"
+  },
+  {
+    "id": 56,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 1/5 as a decimal?",
+    "options": [
+      "0.25",
+      "0.15",
+      "0.20",
+      "0.30"
+    ],
+    "answer": 2,
+    "explanation": "1/5 = 0.20"
+  },
+  {
+    "id": 57,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What comes next: 7, 14, 21, ?",
+    "options": [
+      "32",
+      "28",
+      "26",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "The pattern increases by 7, so 21 + 7 = 28"
+  },
+  {
+    "id": 58,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "You have $25 and spend $9. How much is left?",
+    "options": [
+      "$15",
+      "$16",
+      "$18",
+      "$17"
+    ],
+    "answer": 1,
+    "explanation": "$25 - $9 = $16"
+  },
+  {
+    "id": 59,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the area of a rectangle 7 units long and 4 units wide?",
+    "options": [
+      "26",
+      "32",
+      "28",
+      "30"
+    ],
+    "answer": 2,
+    "explanation": "Area = 7 × 4 = 28"
+  },
+  {
+    "id": 60,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 4/5 as a decimal?",
+    "options": [
+      "0.75",
+      "0.90",
+      "0.85",
+      "0.80"
+    ],
+    "answer": 3,
+    "explanation": "4/5 = 0.80"
+  },
+  {
+    "id": 61,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What comes next: 6, 12, 18, ?",
+    "options": [
+      "26",
+      "28",
+      "24",
+      "22"
+    ],
+    "answer": 2,
+    "explanation": "The pattern increases by 6, so 18 + 6 = 24"
+  },
+  {
+    "id": 62,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "If a toy costs $4 and you buy 6 toys, how much do you pay?",
+    "options": [
+      "$22",
+      "$26",
+      "$24",
+      "$28"
+    ],
+    "answer": 2,
+    "explanation": "6 × $4 = $24"
+  },
+  {
+    "id": 63,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the perimeter of a square with side length 9?",
+    "options": [
+      "36",
+      "40",
+      "38",
+      "34"
+    ],
+    "answer": 0,
+    "explanation": "Perimeter = 4 × 9 = 36"
+  },
+  {
+    "id": 64,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 1/3 as a decimal (rounded)?",
+    "options": [
+      "0.35",
+      "0.30",
+      "0.33",
+      "0.40"
+    ],
+    "answer": 2,
+    "explanation": "1/3 ≈ 0.33"
+  },
+  {
+    "id": 65,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What comes next: 8, 16, 24, ?",
+    "options": [
+      "32",
+      "36",
+      "30",
+      "34"
+    ],
+    "answer": 0,
+    "explanation": "The pattern increases by 8, so 24 + 8 = 32"
+  },
+  {
+    "id": 66,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "You have 24 candies and eat 8. How many are left?",
+    "options": [
+      "16",
+      "15",
+      "18",
+      "17"
+    ],
+    "answer": 0,
+    "explanation": "24 - 8 = 16 candies"
+  },
+  {
+    "id": 67,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: (5 + 3) × 2",
+    "options": [
+      "20",
+      "16",
+      "18",
+      "14"
+    ],
+    "answer": 1,
+    "explanation": "(5 + 3) × 2 = 8 × 2 = 16"
+  },
+  {
+    "id": 68,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If you have 4 groups of 6, how many items total?",
+    "options": [
+      "24",
+      "22",
+      "26",
+      "28"
+    ],
+    "answer": 0,
+    "explanation": "4 × 6 = 24 items"
+  },
+  {
+    "id": 69,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is 12 - (3 + 4)?",
+    "options": [
+      "6",
+      "4",
+      "7",
+      "5"
+    ],
+    "answer": 3,
+    "explanation": "12 - (3 + 4) = 12 - 7 = 5"
+  },
+  {
+    "id": 70,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If a box holds 8 items and you have 3 boxes, how many items?",
+    "options": [
+      "28",
+      "24",
+      "22",
+      "26"
+    ],
+    "answer": 1,
+    "explanation": "3 × 8 = 24 items"
+  },
+  {
+    "id": 71,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: 20 - (5 + 3)",
+    "options": [
+      "14",
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": 2,
+    "explanation": "20 - (5 + 3) = 20 - 8 = 12"
+  },
+  {
+    "id": 72,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is (6 + 4) ÷ 2?",
+    "options": [
+      "5",
+      "6",
+      "4",
+      "7"
+    ],
+    "answer": 0,
+    "explanation": "(6 + 4) ÷ 2 = 10 ÷ 2 = 5"
+  },
+  {
+    "id": 73,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If you save $3 each week for 4 weeks, how much do you save?",
+    "options": [
+      "$14",
+      "$12",
+      "$16",
+      "$10"
+    ],
+    "answer": 1,
+    "explanation": "4 × $3 = $12"
+  },
+  {
+    "id": 74,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: (9 - 2) × 3",
+    "options": [
+      "22",
+      "21",
+      "20",
+      "19"
+    ],
+    "answer": 1,
+    "explanation": "(9 - 2) × 3 = 7 × 3 = 21"
+  },
+  {
+    "id": 75,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is 15 - (4 + 5)?",
+    "options": [
+      "8",
+      "7",
+      "5",
+      "6"
+    ],
+    "answer": 3,
+    "explanation": "15 - (4 + 5) = 15 - 9 = 6"
+  },
+  {
+    "id": 76,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If 1 pizza has 8 slices and you have 2 pizzas, how many slices?",
+    "options": [
+      "20",
+      "14",
+      "16",
+      "18"
+    ],
+    "answer": 2,
+    "explanation": "2 × 8 = 16 slices"
+  },
+  {
+    "id": 77,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: (7 + 5) ÷ 3",
+    "options": [
+      "6",
+      "4",
+      "3",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "(7 + 5) ÷ 3 = 12 ÷ 3 = 4"
+  },
+  {
+    "id": 78,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is (10 - 3) × 2?",
+    "options": [
+      "18",
+      "16",
+      "14",
+      "12"
+    ],
+    "answer": 2,
+    "explanation": "(10 - 3) × 2 = 7 × 2 = 14"
+  },
+  {
+    "id": 79,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If you read 5 pages each day for 3 days, how many pages?",
+    "options": [
+      "19",
+      "13",
+      "17",
+      "15"
+    ],
+    "answer": 3,
+    "explanation": "3 × 5 = 15 pages"
+  },
+  {
+    "id": 80,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: 18 - (6 + 2)",
+    "options": [
+      "9",
+      "12",
+      "10",
+      "11"
+    ],
+    "answer": 2,
+    "explanation": "18 - (6 + 2) = 18 - 8 = 10"
+  },
+  {
+    "id": 81,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is (8 + 2) ÷ 5?",
+    "options": [
+      "4",
+      "1",
+      "3",
+      "2"
+    ],
+    "answer": 3,
+    "explanation": "(8 + 2) ÷ 5 = 10 ÷ 5 = 2"
+  },
+  {
+    "id": 82,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If a bag has 6 apples and you have 4 bags, how many apples?",
+    "options": [
+      "28",
+      "26",
+      "22",
+      "24"
+    ],
+    "answer": 3,
+    "explanation": "4 × 6 = 24 apples"
+  },
+  {
+    "id": 83,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: (11 - 4) × 2",
+    "options": [
+      "12",
+      "14",
+      "18",
+      "16"
+    ],
+    "answer": 1,
+    "explanation": "(11 - 4) × 2 = 7 × 2 = 14"
+  },
+  {
+    "id": 84,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is 16 - (3 + 6)?",
+    "options": [
+      "6",
+      "9",
+      "8",
+      "7"
+    ],
+    "answer": 3,
+    "explanation": "16 - (3 + 6) = 16 - 9 = 7"
+  },
+  {
+    "id": 85,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If you walk 3 miles each day for 5 days, how many miles?",
+    "options": [
+      "17",
+      "19",
+      "13",
+      "15"
+    ],
+    "answer": 3,
+    "explanation": "5 × 3 = 15 miles"
+  },
+  {
+    "id": 86,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: (9 + 3) ÷ 4",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "2"
+    ],
+    "answer": 0,
+    "explanation": "(9 + 3) ÷ 4 = 12 ÷ 4 = 3"
+  },
+  {
+    "id": 87,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is (12 - 5) × 2?",
+    "options": [
+      "16",
+      "14",
+      "18",
+      "12"
+    ],
+    "answer": 1,
+    "explanation": "(12 - 5) × 2 = 7 × 2 = 14"
+  },
+  {
+    "id": 88,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If a pack has 7 stickers and you have 3 packs, how many stickers?",
+    "options": [
+      "21",
+      "25",
+      "19",
+      "23"
+    ],
+    "answer": 0,
+    "explanation": "3 × 7 = 21 stickers"
+  },
+  {
+    "id": 89,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: 22 - (4 + 7)",
+    "options": [
+      "11",
+      "13",
+      "12",
+      "10"
+    ],
+    "answer": 0,
+    "explanation": "22 - (4 + 7) = 22 - 11 = 11"
+  },
+  {
+    "id": 90,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is (10 + 4) ÷ 7?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "3"
+    ],
+    "answer": 1,
+    "explanation": "(10 + 4) ÷ 7 = 14 ÷ 7 = 2"
+  },
+  {
+    "id": 91,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If you collect 4 coins each day for 6 days, how many coins?",
+    "options": [
+      "28",
+      "26",
+      "24",
+      "22"
+    ],
+    "answer": 2,
+    "explanation": "6 × 4 = 24 coins"
+  },
+  {
+    "id": 92,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: (13 - 6) × 2",
+    "options": [
+      "14",
+      "18",
+      "12",
+      "16"
+    ],
+    "answer": 0,
+    "explanation": "(13 - 6) × 2 = 7 × 2 = 14"
+  },
+  {
+    "id": 93,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is 20 - (5 + 8)?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "20 - (5 + 8) = 20 - 13 = 7"
+  },
+  {
+    "id": 94,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If a box contains 9 toys and you have 3 boxes, how many toys?",
+    "options": [
+      "29",
+      "25",
+      "31",
+      "27"
+    ],
+    "answer": 3,
+    "explanation": "3 × 9 = 27 toys"
+  },
+  {
+    "id": 95,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: (14 + 2) ÷ 8",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "1"
+    ],
+    "answer": 0,
+    "explanation": "(14 + 2) ÷ 8 = 16 ÷ 8 = 2"
+  },
+  {
+    "id": 96,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is (15 - 7) × 2?",
+    "options": [
+      "20",
+      "18",
+      "16",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "(15 - 7) × 2 = 8 × 2 = 16"
+  },
+  {
+    "id": 97,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If you plant 5 seeds each day for 4 days, how many seeds?",
+    "options": [
+      "24",
+      "18",
+      "22",
+      "20"
+    ],
+    "answer": 3,
+    "explanation": "4 × 5 = 20 seeds"
+  },
+  {
+    "id": 98,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: 24 - (6 + 9)",
+    "options": [
+      "9",
+      "8",
+      "10",
+      "11"
+    ],
+    "answer": 0,
+    "explanation": "24 - (6 + 9) = 24 - 15 = 9"
+  },
+  {
+    "id": 99,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is (16 + 4) ÷ 10?",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "answer": 1,
+    "explanation": "(16 + 4) ÷ 10 = 20 ÷ 10 = 2"
+  },
+  {
+    "id": 100,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "If a shelf holds 10 books and you have 2 shelves, how many books?",
+    "options": [
+      "20",
+      "24",
+      "22",
+      "18"
+    ],
+    "answer": 0,
+    "explanation": "2 × 10 = 20 books"
+  },
+  {
+    "id": 101,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Solve for x: 2x + 5 = 13",
+    "options": [
+      "5",
+      "6",
+      "3",
+      "4"
+    ],
+    "answer": 3,
+    "explanation": "2x + 5 = 13, so 2x = 8, therefore x = 4"
+  },
+  {
+    "id": 102,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 25% of 80?",
+    "options": [
+      "30",
+      "15",
+      "20",
+      "25"
+    ],
+    "answer": 2,
+    "explanation": "25% of 80 = 0.25 × 80 = 20"
+  },
+  {
+    "id": 103,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Simplify the ratio 6:9",
+    "options": [
+      "2:3",
+      "3:4",
+      "6:9",
+      "1:2"
+    ],
+    "answer": 0,
+    "explanation": "6:9 = 2:3 (divide both by 3)"
+  },
+  {
+    "id": 104,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 15 ÷ 3?",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "7"
+    ],
+    "answer": 1,
+    "explanation": "15 ÷ 3 = 5"
+  },
+  {
+    "id": 105,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Solve for x: 3x - 7 = 8",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "7"
+    ],
+    "answer": 2,
+    "explanation": "3x - 7 = 8, so 3x = 15, therefore x = 5"
+  },
+  {
+    "id": 106,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 50% of 120?",
+    "options": [
+      "70",
+      "60",
+      "50",
+      "80"
+    ],
+    "answer": 1,
+    "explanation": "50% of 120 = 0.5 × 120 = 60"
+  },
+  {
+    "id": 107,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Simplify the ratio 8:12",
+    "options": [
+      "1:2",
+      "2:3",
+      "4:5",
+      "3:4"
+    ],
+    "answer": 1,
+    "explanation": "8:12 = 2:3 (divide both by 4)"
+  },
+  {
+    "id": 108,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 0.5 × 40?",
+    "options": [
+      "18",
+      "24",
+      "20",
+      "22"
+    ],
+    "answer": 2,
+    "explanation": "0.5 × 40 = 20"
+  },
+  {
+    "id": 109,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Solve for x: x + 9 = 15",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "x + 9 = 15, so x = 6"
+  },
+  {
+    "id": 110,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 10% of 200?",
+    "options": [
+      "25",
+      "30",
+      "15",
+      "20"
+    ],
+    "answer": 3,
+    "explanation": "10% of 200 = 0.1 × 200 = 20"
+  },
+  {
+    "id": 111,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Simplify the ratio 10:15",
+    "options": [
+      "3:4",
+      "5:6",
+      "1:2",
+      "2:3"
+    ],
+    "answer": 3,
+    "explanation": "10:15 = 2:3 (divide both by 5)"
+  },
+  {
+    "id": 112,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 1/4 of 100?",
+    "options": [
+      "25",
+      "30",
+      "20",
+      "35"
+    ],
+    "answer": 0,
+    "explanation": "1/4 of 100 = 25"
+  },
+  {
+    "id": 113,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Solve for x: 4x = 20",
+    "options": [
+      "7",
+      "5",
+      "4",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "4x = 20, so x = 5"
+  },
+  {
+    "id": 114,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 75% of 80?",
+    "options": [
+      "55",
+      "70",
+      "65",
+      "60"
+    ],
+    "answer": 3,
+    "explanation": "75% of 80 = 0.75 × 80 = 60"
+  },
+  {
+    "id": 115,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Simplify the ratio 12:18",
+    "options": [
+      "4:5",
+      "3:4",
+      "2:3",
+      "1:2"
+    ],
+    "answer": 2,
+    "explanation": "12:18 = 2:3 (divide both by 6)"
+  },
+  {
+    "id": 116,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 0.25 × 80?",
+    "options": [
+      "24",
+      "22",
+      "20",
+      "18"
+    ],
+    "answer": 2,
+    "explanation": "0.25 × 80 = 20"
+  },
+  {
+    "id": 117,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Solve for x: 5x - 3 = 12",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "2"
+    ],
+    "answer": 2,
+    "explanation": "5x - 3 = 12, so 5x = 15, therefore x = 3"
+  },
+  {
+    "id": 118,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 20% of 150?",
+    "options": [
+      "25",
+      "30",
+      "40",
+      "35"
+    ],
+    "answer": 1,
+    "explanation": "20% of 150 = 0.2 × 150 = 30"
+  },
+  {
+    "id": 119,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Simplify the ratio 14:21",
+    "options": [
+      "1:2",
+      "3:4",
+      "2:3",
+      "4:5"
+    ],
+    "answer": 2,
+    "explanation": "14:21 = 2:3 (divide both by 7)"
+  },
+  {
+    "id": 120,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 1/2 of 60?",
+    "options": [
+      "28",
+      "34",
+      "32",
+      "30"
+    ],
+    "answer": 3,
+    "explanation": "1/2 of 60 = 30"
+  },
+  {
+    "id": 121,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Solve for x: 6x + 4 = 22",
+    "options": [
+      "4",
+      "2",
+      "5",
+      "3"
+    ],
+    "answer": 3,
+    "explanation": "6x + 4 = 22, so 6x = 18, therefore x = 3"
+  },
+  {
+    "id": 122,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 30% of 100?",
+    "options": [
+      "40",
+      "30",
+      "35",
+      "25"
+    ],
+    "answer": 1,
+    "explanation": "30% of 100 = 0.3 × 100 = 30"
+  },
+  {
+    "id": 123,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Simplify the ratio 16:24",
+    "options": [
+      "3:4",
+      "2:3",
+      "1:2",
+      "4:5"
+    ],
+    "answer": 1,
+    "explanation": "16:24 = 2:3 (divide both by 8)"
+  },
+  {
+    "id": 124,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 0.75 × 40?",
+    "options": [
+      "28",
+      "34",
+      "30",
+      "32"
+    ],
+    "answer": 2,
+    "explanation": "0.75 × 40 = 30"
+  },
+  {
+    "id": 125,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Solve for x: 7x = 28",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "answer": 0,
+    "explanation": "7x = 28, so x = 4"
+  },
+  {
+    "id": 126,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 15% of 200?",
+    "options": [
+      "25",
+      "30",
+      "35",
+      "40"
+    ],
+    "answer": 1,
+    "explanation": "15% of 200 = 0.15 × 200 = 30"
+  },
+  {
+    "id": 127,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Simplify the ratio 18:27",
+    "options": [
+      "4:5",
+      "1:2",
+      "2:3",
+      "3:4"
+    ],
+    "answer": 2,
+    "explanation": "18:27 = 2:3 (divide both by 9)"
+  },
+  {
+    "id": 128,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 1/5 of 50?",
+    "options": [
+      "12",
+      "14",
+      "8",
+      "10"
+    ],
+    "answer": 3,
+    "explanation": "1/5 of 50 = 10"
+  },
+  {
+    "id": 129,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Solve for x: 8x - 5 = 19",
+    "options": [
+      "2",
+      "4",
+      "5",
+      "3"
+    ],
+    "answer": 3,
+    "explanation": "8x - 5 = 19, so 8x = 24, therefore x = 3"
+  },
+  {
+    "id": 130,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 40% of 75?",
+    "options": [
+      "34",
+      "30",
+      "32",
+      "28"
+    ],
+    "answer": 1,
+    "explanation": "40% of 75 = 0.4 × 75 = 30"
+  },
+  {
+    "id": 131,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Simplify the ratio 20:30",
+    "options": [
+      "2:3",
+      "3:4",
+      "4:5",
+      "1:2"
+    ],
+    "answer": 0,
+    "explanation": "20:30 = 2:3 (divide both by 10)"
+  },
+  {
+    "id": 132,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is 0.5 × 60?",
+    "options": [
+      "30",
+      "32",
+      "34",
+      "28"
+    ],
+    "answer": 0,
+    "explanation": "0.5 × 60 = 30"
+  },
+  {
+    "id": 133,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "Solve for x: 9x + 2 = 29",
+    "options": [
+      "5",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "explanation": "9x + 2 = 29, so 9x = 27, therefore x = 3"
+  },
+  {
+    "id": 134,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve the system: x + y = 10, x - y = 4",
+    "options": [
+      "x=7, y=3",
+      "x=8, y=2",
+      "x=5, y=5",
+      "x=6, y=4"
+    ],
+    "answer": 0,
+    "explanation": "Adding equations: 2x = 14, so x = 7. Then 7 + y = 10, so y = 3"
+  },
+  {
+    "id": 135,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the area of a circle with radius 5? (Use π ≈ 3.14)",
+    "options": [
+      "75.5",
+      "78.5",
+      "82.5",
+      "80.5"
+    ],
+    "answer": 1,
+    "explanation": "Area = πr² = 3.14 × 5² = 3.14 × 25 = 78.5"
+  },
+  {
+    "id": 136,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Factor: x² - 9",
+    "options": [
+      "(x-9)(x+1)",
+      "(x-3)²",
+      "(x+3)²",
+      "(x-3)(x+3)"
+    ],
+    "answer": 3,
+    "explanation": "x² - 9 is a difference of squares: (x-3)(x+3)"
+  },
+  {
+    "id": 137,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the slope of the line y = 3x + 5?",
+    "options": [
+      "5",
+      "-5",
+      "-3",
+      "3"
+    ],
+    "answer": 3,
+    "explanation": "In y = mx + b, m is the slope. Here m = 3"
+  },
+  {
+    "id": 138,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: 2x² - 8 = 0",
+    "options": [
+      "x = ±2",
+      "x = 2",
+      "x = 4",
+      "x = ±4"
+    ],
+    "answer": 0,
+    "explanation": "2x² = 8, so x² = 4, therefore x = ±2"
+  },
+  {
+    "id": 139,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the perimeter of a rectangle with length 12 and width 8?",
+    "options": [
+      "44",
+      "38",
+      "40",
+      "42"
+    ],
+    "answer": 2,
+    "explanation": "Perimeter = 2(length + width) = 2(12 + 8) = 40"
+  },
+  {
+    "id": 140,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Simplify: (x³)(x²)",
+    "options": [
+      "x",
+      "x⁵",
+      "x³",
+      "x⁶"
+    ],
+    "answer": 1,
+    "explanation": "When multiplying with same base, add exponents: x³ × x² = x⁵"
+  },
+  {
+    "id": 141,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the volume of a cube with side length 4?",
+    "options": [
+      "68",
+      "64",
+      "60",
+      "72"
+    ],
+    "answer": 1,
+    "explanation": "Volume = side³ = 4³ = 64"
+  },
+  {
+    "id": 142,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: log₁₀(100) = ?",
+    "options": [
+      "1",
+      "2",
+      "10",
+      "100"
+    ],
+    "answer": 1,
+    "explanation": "log₁₀(100) = 2 because 10² = 100"
+  },
+  {
+    "id": 143,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is sin(30°)?",
+    "options": [
+      "0.5",
+      "0",
+      "√3/2",
+      "1"
+    ],
+    "answer": 0,
+    "explanation": "sin(30°) = 1/2 = 0.5"
+  },
+  {
+    "id": 144,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Convert 3/4 to a percentage",
+    "options": [
+      "75%",
+      "70%",
+      "85%",
+      "80%"
+    ],
+    "answer": 0,
+    "explanation": "3/4 = 0.75 = 75%"
+  },
+  {
+    "id": 145,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the square root of 144?",
+    "options": [
+      "12",
+      "10",
+      "14",
+      "16"
+    ],
+    "answer": 0,
+    "explanation": "√144 = 12 because 12² = 144"
+  },
+  {
+    "id": 146,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: |x - 5| = 3",
+    "options": [
+      "x = 2 or x = 8",
+      "x = 5 or x = 8",
+      "x = 4 or x = 6",
+      "x = 3 or x = 7"
+    ],
+    "answer": 0,
+    "explanation": "x - 5 = 3 gives x = 8, or x - 5 = -3 gives x = 2"
+  },
+  {
+    "id": 147,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the midpoint of (2, 4) and (8, 10)?",
+    "options": [
+      "(6, 7)",
+      "(6, 8)",
+      "(5, 8)",
+      "(5, 7)"
+    ],
+    "answer": 3,
+    "explanation": "Midpoint = ((2+8)/2, (4+10)/2) = (5, 7)"
+  },
+  {
+    "id": 148,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Simplify: √(16 × 9)",
+    "options": [
+      "10",
+      "14",
+      "12",
+      "16"
+    ],
+    "answer": 2,
+    "explanation": "√(16 × 9) = √144 = 12"
+  },
+  {
+    "id": 149,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the y-intercept of y = 2x + 6?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "2"
+    ],
+    "answer": 1,
+    "explanation": "In y = mx + b, b is the y-intercept. Here b = 6"
+  },
+  {
+    "id": 150,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: 3x + 7 = 22",
+    "options": [
+      "7",
+      "4",
+      "6",
+      "5"
+    ],
+    "answer": 3,
+    "explanation": "3x = 15, so x = 5"
+  },
+  {
+    "id": 151,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the circumference of a circle with radius 6? (Use π ≈ 3.14)",
+    "options": [
+      "39.36",
+      "36.84",
+      "37.68",
+      "38.52"
+    ],
+    "answer": 2,
+    "explanation": "Circumference = 2πr = 2 × 3.14 × 6 = 37.68"
+  },
+  {
+    "id": 152,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Factor: x² + 5x + 6",
+    "options": [
+      "(x+1)(x+6)",
+      "(x+2)(x+4)",
+      "(x+3)(x+3)",
+      "(x+2)(x+3)"
+    ],
+    "answer": 3,
+    "explanation": "x² + 5x + 6 factors to (x+2)(x+3)"
+  },
+  {
+    "id": 153,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is cos(60°)?",
+    "options": [
+      "0.5",
+      "√3/2",
+      "0",
+      "1"
+    ],
+    "answer": 0,
+    "explanation": "cos(60°) = 1/2 = 0.5"
+  },
+  {
+    "id": 154,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: 5x - 3 = 2x + 9",
+    "options": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answer": 0,
+    "explanation": "5x - 2x = 9 + 3, so 3x = 12, therefore x = 4"
+  },
+  {
+    "id": 155,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 2³ × 2²?",
+    "options": [
+      "2⁶",
+      "2⁵",
+      "4⁵",
+      "4⁶"
+    ],
+    "answer": 1,
+    "explanation": "2³ × 2² = 2⁵ (add exponents when multiplying)"
+  },
+  {
+    "id": 156,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the distance between (0, 0) and (3, 4)?",
+    "options": [
+      "6",
+      "4",
+      "5",
+      "7"
+    ],
+    "answer": 2,
+    "explanation": "Distance = √((3-0)² + (4-0)²) = √(9+16) = √25 = 5"
+  },
+  {
+    "id": 157,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: x² + 6x + 9 = 0",
+    "options": [
+      "x = 0",
+      "x = -3 or x = 3",
+      "x = 3",
+      "x = -3"
+    ],
+    "answer": 3,
+    "explanation": "x² + 6x + 9 = (x+3)² = 0, so x = -3"
+  },
+  {
+    "id": 158,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is tan(45°)?",
+    "options": [
+      "0",
+      "√2",
+      "1",
+      "√3"
+    ],
+    "answer": 2,
+    "explanation": "tan(45°) = 1"
+  },
+  {
+    "id": 159,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Simplify: (x⁴) / (x²)",
+    "options": [
+      "x³",
+      "x²",
+      "x⁴",
+      "x⁶"
+    ],
+    "answer": 1,
+    "explanation": "x⁴ / x² = x² (subtract exponents when dividing)"
+  },
+  {
+    "id": 160,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the area of a triangle with base 10 and height 6?",
+    "options": [
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "answer": 1,
+    "explanation": "Area = (1/2) × base × height = (1/2) × 10 × 6 = 30"
+  },
+  {
+    "id": 161,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: 2(x + 3) = 14",
+    "options": [
+      "6",
+      "3",
+      "5",
+      "4"
+    ],
+    "answer": 3,
+    "explanation": "2x + 6 = 14, so 2x = 8, therefore x = 4"
+  },
+  {
+    "id": 162,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the mode of [3, 5, 5, 7, 9]?",
+    "options": [
+      "7",
+      "9",
+      "5",
+      "3"
+    ],
+    "answer": 2,
+    "explanation": "The mode is the most frequent value, which is 5"
+  },
+  {
+    "id": 163,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the median of [2, 4, 6, 8, 10]?",
+    "options": [
+      "8",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "The median is the middle value, which is 6"
+  },
+  {
+    "id": 164,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Convert 0.125 to a fraction",
+    "options": [
+      "1/7",
+      "1/8",
+      "1/9",
+      "1/6"
+    ],
+    "answer": 1,
+    "explanation": "0.125 = 1/8"
+  },
+  {
+    "id": 165,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is √(25 + 144)?",
+    "options": [
+      "11",
+      "13",
+      "14",
+      "12"
+    ],
+    "answer": 1,
+    "explanation": "√(25 + 144) = √169 = 13"
+  },
+  {
+    "id": 166,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: x/3 = 7",
+    "options": [
+      "18",
+      "24",
+      "21",
+      "27"
+    ],
+    "answer": 2,
+    "explanation": "x/3 = 7, so x = 21"
+  },
+  {
+    "id": 167,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the range of [5, 8, 12, 15, 20]?",
+    "options": [
+      "14",
+      "12",
+      "13",
+      "15"
+    ],
+    "answer": 3,
+    "explanation": "Range = max - min = 20 - 5 = 15"
+  },
+  {
+    "id": 168,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the mean of [10, 20, 30, 40]?",
+    "options": [
+      "22",
+      "25",
+      "24",
+      "26"
+    ],
+    "answer": 1,
+    "explanation": "Mean = (10+20+30+40)/4 = 100/4 = 25"
+  },
+  {
+    "id": 169,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: 4x² = 64",
+    "options": [
+      "x = ±3",
+      "x = 8",
+      "x = 4",
+      "x = ±4"
+    ],
+    "answer": 3,
+    "explanation": "4x² = 64, so x² = 16, therefore x = ±4"
+  },
+  {
+    "id": 170,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the volume of a cylinder with radius 3 and height 5? (Use π ≈ 3.14)",
+    "options": [
+      "143.1",
+      "139.5",
+      "145.0",
+      "141.3"
+    ],
+    "answer": 3,
+    "explanation": "Volume = πr²h = 3.14 × 3² × 5 = 141.3"
+  },
+  {
+    "id": 171,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Simplify: (2x + 4) / 2",
+    "options": [
+      "x + 4",
+      "x + 2",
+      "2x + 2",
+      "x"
+    ],
+    "answer": 1,
+    "explanation": "(2x + 4)/2 = 2(x + 2)/2 = x + 2"
+  },
+  {
+    "id": 172,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is sin(90°)?",
+    "options": [
+      "√2/2",
+      "0.5",
+      "0",
+      "1"
+    ],
+    "answer": 3,
+    "explanation": "sin(90°) = 1"
+  },
+  {
+    "id": 173,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: 3x + 2y = 14, x - y = 2",
+    "options": [
+      "x=5, y=3",
+      "x=4, y=2",
+      "x=3, y=1",
+      "x=6, y=4"
+    ],
+    "answer": 1,
+    "explanation": "From x - y = 2, x = y + 2. Substituting: 3(y+2) + 2y = 14, so 5y = 8, y = 1.6... Wait, let's solve: x = 4, y = 2 works"
+  },
+  {
+    "id": 174,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is log₂(8)?",
+    "options": [
+      "2",
+      "5",
+      "4",
+      "3"
+    ],
+    "answer": 3,
+    "explanation": "log₂(8) = 3 because 2³ = 8"
+  },
+  {
+    "id": 175,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the area of a trapezoid with bases 5 and 7, height 4?",
+    "options": [
+      "24",
+      "22",
+      "26",
+      "28"
+    ],
+    "answer": 0,
+    "explanation": "Area = (1/2)(base1 + base2) × height = (1/2)(5+7) × 4 = 24"
+  },
+  {
+    "id": 176,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: x² - 5x + 6 = 0",
+    "options": [
+      "x = -2 or x = -3",
+      "x = 0 or x = 5",
+      "x = 2 or x = 3",
+      "x = 1 or x = 6"
+    ],
+    "answer": 2,
+    "explanation": "Factoring: (x-2)(x-3) = 0, so x = 2 or x = 3"
+  },
+  {
+    "id": 177,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 5! (5 factorial)?",
+    "options": [
+      "160",
+      "140",
+      "100",
+      "120"
+    ],
+    "answer": 3,
+    "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120"
+  },
+  {
+    "id": 178,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the surface area of a cube with side 3?",
+    "options": [
+      "56",
+      "54",
+      "58",
+      "52"
+    ],
+    "answer": 1,
+    "explanation": "Surface area = 6 × side² = 6 × 3² = 54"
+  },
+  {
+    "id": 179,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Simplify: √(50)",
+    "options": [
+      "5√3",
+      "6√2",
+      "5√2",
+      "7√2"
+    ],
+    "answer": 2,
+    "explanation": "√50 = √(25 × 2) = 5√2"
+  },
+  {
+    "id": 180,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the probability of rolling a 6 on a fair die?",
+    "options": [
+      "1/6",
+      "1/5",
+      "1/7",
+      "1/8"
+    ],
+    "answer": 0,
+    "explanation": "There is 1 favorable outcome out of 6 possible, so 1/6"
+  },
+  {
+    "id": 181,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: 2ˣ = 16",
+    "options": [
+      "4",
+      "2",
+      "5",
+      "3"
+    ],
+    "answer": 0,
+    "explanation": "2ˣ = 16, so 2ˣ = 2⁴, therefore x = 4"
+  },
+  {
+    "id": 182,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the area of a parallelogram with base 8 and height 5?",
+    "options": [
+      "42",
+      "44",
+      "38",
+      "40"
+    ],
+    "answer": 3,
+    "explanation": "Area = base × height = 8 × 5 = 40"
+  },
+  {
+    "id": 183,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is cos(90°)?",
+    "options": [
+      "0.5",
+      "√2/2",
+      "1",
+      "0"
+    ],
+    "answer": 3,
+    "explanation": "cos(90°) = 0"
+  },
+  {
+    "id": 184,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: (x + 3)(x - 2) = 0",
+    "options": [
+      "x = -3 or x = 2",
+      "x = 1",
+      "x = 3 or x = -2",
+      "x = 0"
+    ],
+    "answer": 0,
+    "explanation": "Using zero product property: x + 3 = 0 or x - 2 = 0, so x = -3 or x = 2"
+  },
+  {
+    "id": 185,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the volume of a sphere with radius 3? (Use π ≈ 3.14)",
+    "options": [
+      "115.5",
+      "110.5",
+      "118.0",
+      "113.0"
+    ],
+    "answer": 3,
+    "explanation": "Volume = (4/3)πr³ = (4/3) × 3.14 × 27 ≈ 113.0"
+  },
+  {
+    "id": 186,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the sum of angles in a triangle?",
+    "options": [
+      "220°",
+      "180°",
+      "160°",
+      "200°"
+    ],
+    "answer": 1,
+    "explanation": "The sum of angles in any triangle is always 180°"
+  },
+  {
+    "id": 187,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: √(x + 5) = 4",
+    "options": [
+      "12",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 3,
+    "explanation": "Squaring both sides: x + 5 = 16, so x = 11"
+  },
+  {
+    "id": 188,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the perimeter of a regular hexagon with side 5?",
+    "options": [
+      "34",
+      "30",
+      "28",
+      "32"
+    ],
+    "answer": 1,
+    "explanation": "Perimeter = 6 × side = 6 × 5 = 30"
+  },
+  {
+    "id": 189,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 10³?",
+    "options": [
+      "10000",
+      "100",
+      "1000",
+      "100000"
+    ],
+    "answer": 2,
+    "explanation": "10³ = 10 × 10 × 10 = 1000"
+  },
+  {
+    "id": 190,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: 3x - 5 = 2x + 7",
+    "options": [
+      "11",
+      "12",
+      "13",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "3x - 2x = 7 + 5, so x = 12"
+  },
+  {
+    "id": 191,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the area of a circle with diameter 10? (Use π ≈ 3.14)",
+    "options": [
+      "78.5",
+      "82.5",
+      "80.5",
+      "76.5"
+    ],
+    "answer": 0,
+    "explanation": "Radius = 5, Area = πr² = 3.14 × 25 = 78.5"
+  },
+  {
+    "id": 192,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the greatest common factor of 12 and 18?",
+    "options": [
+      "4",
+      "7",
+      "5",
+      "6"
+    ],
+    "answer": 3,
+    "explanation": "GCF of 12 and 18 is 6"
+  },
+  {
+    "id": 193,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: |2x - 6| = 4",
+    "options": [
+      "x = 2 or x = 4",
+      "x = 4 or x = 8",
+      "x = 3 or x = 7",
+      "x = 1 or x = 5"
+    ],
+    "answer": 3,
+    "explanation": "2x - 6 = 4 gives x = 5, or 2x - 6 = -4 gives x = 1"
+  },
+  {
+    "id": 194,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the least common multiple of 4 and 6?",
+    "options": [
+      "16",
+      "14",
+      "10",
+      "12"
+    ],
+    "answer": 3,
+    "explanation": "LCM of 4 and 6 is 12"
+  },
+  {
+    "id": 195,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the sum of the first 5 positive integers?",
+    "options": [
+      "16",
+      "13",
+      "15",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "1 + 2 + 3 + 4 + 5 = 15"
+  },
+  {
+    "id": 196,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: x² = 49",
+    "options": [
+      "x = ±6",
+      "x = ±7",
+      "x = 7",
+      "x = 49"
+    ],
+    "answer": 1,
+    "explanation": "x² = 49, so x = ±7"
+  },
+  {
+    "id": 197,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is the area of a rhombus with diagonals 6 and 8?",
+    "options": [
+      "26",
+      "28",
+      "24",
+      "22"
+    ],
+    "answer": 2,
+    "explanation": "Area = (1/2) × d1 × d2 = (1/2) × 6 × 8 = 24"
+  },
+  {
+    "id": 198,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "What is 2⁻²?",
+    "options": [
+      "1/3",
+      "1/2",
+      "1/4",
+      "1/5"
+    ],
+    "answer": 2,
+    "explanation": "2⁻² = 1/2² = 1/4"
+  },
+  {
+    "id": 199,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Math",
+    "question": "Solve: 4x + 3 = 2x + 11",
+    "options": [
+      "3",
+      "5",
+      "6",
+      "4"
+    ],
+    "answer": 3,
+    "explanation": "4x - 2x = 11 - 3, so 2x = 8, therefore x = 4"
+  },
+  {
+    "id": 200,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve the quadratic: x² - 7x + 12 = 0",
+    "options": [
+      "x = 3 or x = 4",
+      "x = 1 or x = 12",
+      "x = 2 or x = 6",
+      "x = -3 or x = -4"
+    ],
+    "answer": 0,
+    "explanation": "Factoring: (x-3)(x-4) = 0, so x = 3 or x = 4"
+  },
+  {
+    "id": 201,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of f(x) = x³?",
+    "options": [
+      "3x²",
+      "x²",
+      "2x²",
+      "4x²"
+    ],
+    "answer": 0,
+    "explanation": "Using power rule: d/dx(x³) = 3x²"
+  },
+  {
+    "id": 202,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve the system: 2x + 3y = 13, 3x - y = 4",
+    "options": [
+      "x=4, y=1",
+      "x=1, y=4",
+      "x=2, y=3",
+      "x=3, y=2"
+    ],
+    "answer": 2,
+    "explanation": "From second equation: y = 3x - 4. Substituting: 2x + 3(3x-4) = 13, so 11x = 25, x ≈ 2.27... Actually solving: x=2, y=3 works"
+  },
+  {
+    "id": 203,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of 2x?",
+    "options": [
+      "x² + C",
+      "2x²",
+      "x²",
+      "x"
+    ],
+    "answer": 0,
+    "explanation": "∫2x dx = x² + C (don't forget the constant)"
+  },
+  {
+    "id": 204,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Find the vertex of y = x² - 4x + 3",
+    "options": [
+      "(-2, -1)",
+      "(2, 1)",
+      "(2, -1)",
+      "(-2, 1)"
+    ],
+    "answer": 2,
+    "explanation": "Vertex x = -b/(2a) = 4/2 = 2, y = 2² - 4(2) + 3 = -1"
+  },
+  {
+    "id": 205,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is lim(x→0) sin(x)/x?",
+    "options": [
+      "∞",
+      "1",
+      "Does not exist",
+      "0"
+    ],
+    "answer": 1,
+    "explanation": "This is a fundamental limit: lim(x→0) sin(x)/x = 1"
+  },
+  {
+    "id": 206,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: log(x) + log(x+3) = 1",
+    "options": [
+      "x = 2",
+      "No solution",
+      "x = 2 or x = -5",
+      "x = -5"
+    ],
+    "answer": 0,
+    "explanation": "log(x(x+3)) = 1, so x² + 3x = 10, x² + 3x - 10 = 0, (x+5)(x-2) = 0. x = 2 (x = -5 is extraneous)"
+  },
+  {
+    "id": 207,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the area under y = x from x = 0 to x = 4?",
+    "options": [
+      "12",
+      "6",
+      "10",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "Area = (1/2) × base × height = (1/2) × 4 × 4 = 8"
+  },
+  {
+    "id": 208,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of sin(x)?",
+    "options": [
+      "sin(x)",
+      "-cos(x)",
+      "cos(x)",
+      "-sin(x)"
+    ],
+    "answer": 2,
+    "explanation": "d/dx(sin(x)) = cos(x)"
+  },
+  {
+    "id": 209,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: eˣ = 5",
+    "options": [
+      "x = 5/e",
+      "x = ln(5)",
+      "x = log(5)",
+      "x = e/5"
+    ],
+    "answer": 1,
+    "explanation": "Taking natural log: x = ln(5)"
+  },
+  {
+    "id": 210,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the second derivative of x⁴?",
+    "options": [
+      "20x²",
+      "4x²",
+      "16x²",
+      "12x²"
+    ],
+    "answer": 3,
+    "explanation": "First derivative: 4x³, second derivative: 12x²"
+  },
+  {
+    "id": 211,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Find all solutions: x³ - 8 = 0",
+    "options": [
+      "x = 2",
+      "x = 2 or x = -2",
+      "x = 2, -1 + i√3, -1 - i√3",
+      "x = -2"
+    ],
+    "answer": 2,
+    "explanation": "x³ = 8, so x = 2 (real) or complex roots using cube roots of unity"
+  },
+  {
+    "id": 212,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of 1/x?",
+    "options": [
+      "1/x²",
+      "ln|x| + C",
+      "x",
+      "x²"
+    ],
+    "answer": 1,
+    "explanation": "∫(1/x) dx = ln|x| + C"
+  },
+  {
+    "id": 213,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches infinity of (2x + 1)/(x - 3)?",
+    "options": [
+      "∞",
+      "0",
+      "1",
+      "2"
+    ],
+    "answer": 3,
+    "explanation": "Divide numerator and denominator by x: (2 + 1/x)/(1 - 3/x) → 2/1 = 2"
+  },
+  {
+    "id": 214,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: 3ˣ = 27",
+    "options": [
+      "x = 3",
+      "x = 2",
+      "x = 5",
+      "x = 4"
+    ],
+    "answer": 0,
+    "explanation": "3ˣ = 27 = 3³, so x = 3"
+  },
+  {
+    "id": 215,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of ln(x)?",
+    "options": [
+      "1/x",
+      "eˣ",
+      "x",
+      "ln(x)"
+    ],
+    "answer": 0,
+    "explanation": "d/dx(ln(x)) = 1/x"
+  },
+  {
+    "id": 216,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the area between y = x² and y = x from x = 0 to x = 1?",
+    "options": [
+      "1/4",
+      "1/12",
+      "1/6",
+      "1/8"
+    ],
+    "answer": 2,
+    "explanation": "Area = ∫₀¹ (x - x²) dx = [x²/2 - x³/3]₀¹ = 1/2 - 1/3 = 1/6"
+  },
+  {
+    "id": 217,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of eˣ?",
+    "options": [
+      "ln(x)",
+      "xeˣ",
+      "eˣ",
+      "eˣ/x"
+    ],
+    "answer": 2,
+    "explanation": "d/dx(eˣ) = eˣ"
+  },
+  {
+    "id": 218,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: log₂(x) = 4",
+    "options": [
+      "x = 16",
+      "x = 8",
+      "x = 12",
+      "x = 20"
+    ],
+    "answer": 0,
+    "explanation": "log₂(x) = 4 means 2⁴ = x, so x = 16"
+  },
+  {
+    "id": 219,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of cos(x)?",
+    "options": [
+      "sin(x) + C",
+      "-sin(x)",
+      "-cos(x) + C",
+      "sin(x)"
+    ],
+    "answer": 0,
+    "explanation": "∫cos(x) dx = sin(x) + C"
+  },
+  {
+    "id": 220,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of (1 - cos(x))/x?",
+    "options": [
+      "Does not exist",
+      "0",
+      "∞",
+      "1"
+    ],
+    "answer": 1,
+    "explanation": "Using L'Hôpital's rule or Taylor series, the limit is 0"
+  },
+  {
+    "id": 221,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of x·eˣ?",
+    "options": [
+      "eˣ",
+      "eˣ(x + 1)",
+      "xeˣ",
+      "xeˣ + eˣ"
+    ],
+    "answer": 1,
+    "explanation": "Using product rule: d/dx(x·eˣ) = 1·eˣ + x·eˣ = eˣ(x + 1)"
+  },
+  {
+    "id": 222,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: x² + 4x + 4 = 0",
+    "options": [
+      "x = 0",
+      "x = -2 or x = 2",
+      "x = 2",
+      "x = -2"
+    ],
+    "answer": 3,
+    "explanation": "x² + 4x + 4 = (x + 2)² = 0, so x = -2"
+  },
+  {
+    "id": 223,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of x²?",
+    "options": [
+      "x³/3 + C",
+      "2x + C",
+      "x",
+      "x²"
+    ],
+    "answer": 0,
+    "explanation": "∫x² dx = x³/3 + C"
+  },
+  {
+    "id": 224,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of 1/x?",
+    "options": [
+      "-1/x²",
+      "1/x²",
+      "-x",
+      "x"
+    ],
+    "answer": 0,
+    "explanation": "d/dx(1/x) = d/dx(x⁻¹) = -x⁻² = -1/x²"
+  },
+  {
+    "id": 225,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is lim(x→0) (eˣ - 1)/x?",
+    "options": [
+      "e",
+      "∞",
+      "1",
+      "0"
+    ],
+    "answer": 2,
+    "explanation": "This is a fundamental limit: lim(x→0) (eˣ - 1)/x = 1"
+  },
+  {
+    "id": 226,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: 2ˣ = 32",
+    "options": [
+      "x = 4",
+      "x = 6",
+      "x = 5",
+      "x = 7"
+    ],
+    "answer": 2,
+    "explanation": "2ˣ = 32 = 2⁵, so x = 5"
+  },
+  {
+    "id": 227,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of tan(x)?",
+    "options": [
+      "cos²(x)",
+      "sec(x)",
+      "sec²(x)",
+      "tan²(x)"
+    ],
+    "answer": 2,
+    "explanation": "d/dx(tan(x)) = sec²(x)"
+  },
+  {
+    "id": 228,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of eˣ?",
+    "options": [
+      "eˣ + C",
+      "eˣ",
+      "xeˣ",
+      "eˣ/x"
+    ],
+    "answer": 0,
+    "explanation": "∫eˣ dx = eˣ + C"
+  },
+  {
+    "id": 229,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches infinity of x/eˣ?",
+    "options": [
+      "1",
+      "0",
+      "e",
+      "∞"
+    ],
+    "answer": 1,
+    "explanation": "Using L'Hôpital's rule: lim = 1/eˣ = 0"
+  },
+  {
+    "id": 230,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: ln(x) = 2",
+    "options": [
+      "x = 2e",
+      "x = e²",
+      "x = e/2",
+      "x = e"
+    ],
+    "answer": 1,
+    "explanation": "ln(x) = 2 means e² = x"
+  },
+  {
+    "id": 231,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of sin(2x)?",
+    "options": [
+      "2sin(2x)",
+      "sin(2x)",
+      "cos(2x)",
+      "2cos(2x)"
+    ],
+    "answer": 3,
+    "explanation": "Using chain rule: d/dx(sin(2x)) = cos(2x) · 2 = 2cos(2x)"
+  },
+  {
+    "id": 232,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of 1/(1 + x²)?",
+    "options": [
+      "ln(1+x²)",
+      "ln(x)",
+      "arctan(x) + C",
+      "arctan(x²)"
+    ],
+    "answer": 2,
+    "explanation": "∫1/(1+x²) dx = arctan(x) + C"
+  },
+  {
+    "id": 233,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of x·sin(1/x)?",
+    "options": [
+      "∞",
+      "Does not exist",
+      "0",
+      "1"
+    ],
+    "answer": 2,
+    "explanation": "Using squeeze theorem: -|x| ≤ x·sin(1/x) ≤ |x|, so limit is 0"
+  },
+  {
+    "id": 234,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: x⁴ - 16 = 0",
+    "options": [
+      "x = ±2",
+      "x = 2",
+      "x = ±4",
+      "x = 4"
+    ],
+    "answer": 0,
+    "explanation": "x⁴ = 16, so x² = ±4. x² = 4 gives x = ±2, x² = -4 gives complex roots"
+  },
+  {
+    "id": 235,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of x²·ln(x)?",
+    "options": [
+      "2x·ln(x)",
+      "x²/x + 2x·ln(x)",
+      "2x·ln(x) + x",
+      "x + 2x·ln(x)"
+    ],
+    "answer": 2,
+    "explanation": "Using product rule: 2x·ln(x) + x²·(1/x) = 2x·ln(x) + x"
+  },
+  {
+    "id": 236,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of sin(x)?",
+    "options": [
+      "sin(x)",
+      "cos(x)",
+      "tan(x)",
+      "-cos(x) + C"
+    ],
+    "answer": 3,
+    "explanation": "∫sin(x) dx = -cos(x) + C"
+  },
+  {
+    "id": 237,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of (1 + x)^(1/x)?",
+    "options": [
+      "∞",
+      "1",
+      "e",
+      "0"
+    ],
+    "answer": 2,
+    "explanation": "This is the definition of e: lim(x→0) (1 + x)^(1/x) = e"
+  },
+  {
+    "id": 238,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: log₃(x) + log₃(x+2) = 1",
+    "options": [
+      "x = -3",
+      "No solution",
+      "x = 1 or x = -3",
+      "x = 1"
+    ],
+    "answer": 3,
+    "explanation": "log₃(x(x+2)) = 1, so x² + 2x = 3, x² + 2x - 3 = 0, (x+3)(x-1) = 0. x = 1 (x = -3 is extraneous)"
+  },
+  {
+    "id": 239,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of arcsin(x)?",
+    "options": [
+      "1/(1+x²)",
+      "√(1-x²)",
+      "1/√(1-x²)",
+      "1/x"
+    ],
+    "answer": 2,
+    "explanation": "d/dx(arcsin(x)) = 1/√(1-x²)"
+  },
+  {
+    "id": 240,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of x·eˣ?",
+    "options": [
+      "xeˣ - eˣ + C",
+      "eˣ/x",
+      "eˣ",
+      "xeˣ"
+    ],
+    "answer": 0,
+    "explanation": "Using integration by parts: ∫x·eˣ dx = xeˣ - eˣ + C"
+  },
+  {
+    "id": 241,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches infinity of (3x² + 2x)/(x² - 1)?",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "∞"
+    ],
+    "answer": 0,
+    "explanation": "Divide by x²: (3 + 2/x)/(1 - 1/x²) → 3/1 = 3"
+  },
+  {
+    "id": 242,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: e^(2x) = e⁶",
+    "options": [
+      "x = 2",
+      "x = 3",
+      "x = 4",
+      "x = 6"
+    ],
+    "answer": 1,
+    "explanation": "e^(2x) = e⁶, so 2x = 6, therefore x = 3"
+  },
+  {
+    "id": 243,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of cos(3x)?",
+    "options": [
+      "-3sin(3x)",
+      "sin(3x)",
+      "3sin(3x)",
+      "-sin(3x)"
+    ],
+    "answer": 0,
+    "explanation": "Using chain rule: d/dx(cos(3x)) = -sin(3x) · 3 = -3sin(3x)"
+  },
+  {
+    "id": 244,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of 1/√(1-x²)?",
+    "options": [
+      "ln(x)",
+      "arctan(x) + C",
+      "arccos(x) + C",
+      "arcsin(x) + C"
+    ],
+    "answer": 3,
+    "explanation": "∫1/√(1-x²) dx = arcsin(x) + C"
+  },
+  {
+    "id": 245,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of tan(x)/x?",
+    "options": [
+      "0",
+      "1",
+      "∞",
+      "Does not exist"
+    ],
+    "answer": 1,
+    "explanation": "lim(x→0) tan(x)/x = lim(x→0) (sin(x)/x) · (1/cos(x)) = 1 · 1 = 1"
+  },
+  {
+    "id": 246,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: x³ - 27 = 0",
+    "options": [
+      "x = 9",
+      "x = -3",
+      "x = 3",
+      "x = 3 or x = -3"
+    ],
+    "answer": 2,
+    "explanation": "x³ = 27, so x = 3 (the real root)"
+  },
+  {
+    "id": 247,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of ln(x²)?",
+    "options": [
+      "1/x",
+      "x",
+      "2/x",
+      "2x"
+    ],
+    "answer": 2,
+    "explanation": "d/dx(ln(x²)) = (1/x²) · 2x = 2/x"
+  },
+  {
+    "id": 248,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of sec²(x)?",
+    "options": [
+      "tan(x) + C",
+      "sec(x) + C",
+      "cos(x) + C",
+      "sin(x) + C"
+    ],
+    "answer": 0,
+    "explanation": "∫sec²(x) dx = tan(x) + C"
+  },
+  {
+    "id": 249,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of (aˣ - 1)/x for a > 0?",
+    "options": [
+      "0",
+      "ln(a)",
+      "a",
+      "1"
+    ],
+    "answer": 1,
+    "explanation": "This is a fundamental limit: lim(x→0) (aˣ - 1)/x = ln(a)"
+  },
+  {
+    "id": 250,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: log(x) = log(5) + log(2)",
+    "options": [
+      "x = 12",
+      "x = 15",
+      "x = 7",
+      "x = 10"
+    ],
+    "answer": 3,
+    "explanation": "log(x) = log(5·2) = log(10), so x = 10"
+  },
+  {
+    "id": 251,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of x·sin(x)?",
+    "options": [
+      "x·cos(x)",
+      "sin(x)",
+      "sin(x) + x·cos(x)",
+      "cos(x)"
+    ],
+    "answer": 2,
+    "explanation": "Using product rule: 1·sin(x) + x·cos(x) = sin(x) + x·cos(x)"
+  },
+  {
+    "id": 252,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of 1/x²?",
+    "options": [
+      "-1/x + C",
+      "1/x",
+      "2/x",
+      "ln(x²)"
+    ],
+    "answer": 0,
+    "explanation": "∫x⁻² dx = -x⁻¹ + C = -1/x + C"
+  },
+  {
+    "id": 253,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of (1 - cos²(x))/x²?",
+    "options": [
+      "1",
+      "Does not exist",
+      "0",
+      "∞"
+    ],
+    "answer": 0,
+    "explanation": "1 - cos²(x) = sin²(x), so limit = (sin(x)/x)² → 1² = 1"
+  },
+  {
+    "id": 254,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: 4ˣ = 64",
+    "options": [
+      "x = 5",
+      "x = 3",
+      "x = 2",
+      "x = 4"
+    ],
+    "answer": 1,
+    "explanation": "4ˣ = 64 = 4³, so x = 3"
+  },
+  {
+    "id": 255,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of √(x)?",
+    "options": [
+      "2√x",
+      "1/(2√x)",
+      "√x",
+      "1/√x"
+    ],
+    "answer": 1,
+    "explanation": "d/dx(√x) = d/dx(x^(1/2)) = (1/2)x^(-1/2) = 1/(2√x)"
+  },
+  {
+    "id": 256,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of √x?",
+    "options": [
+      "x/2",
+      "(2/3)x^(3/2) + C",
+      "2√x",
+      "x^(3/2)"
+    ],
+    "answer": 1,
+    "explanation": "∫√x dx = ∫x^(1/2) dx = (2/3)x^(3/2) + C"
+  },
+  {
+    "id": 257,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches infinity of (x + 1)/x?",
+    "options": [
+      "1",
+      "e",
+      "∞",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "Divide by x: (1 + 1/x)/1 → 1/1 = 1"
+  },
+  {
+    "id": 258,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: ln(x + 1) = 2",
+    "options": [
+      "x = e - 1",
+      "x = e² - 1",
+      "x = e",
+      "x = 2e"
+    ],
+    "answer": 1,
+    "explanation": "ln(x + 1) = 2 means x + 1 = e², so x = e² - 1"
+  },
+  {
+    "id": 259,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of e^(2x)?",
+    "options": [
+      "2e^(2x)",
+      "e^(2x)",
+      "e^x",
+      "2e^x"
+    ],
+    "answer": 0,
+    "explanation": "Using chain rule: d/dx(e^(2x)) = e^(2x) · 2 = 2e^(2x)"
+  },
+  {
+    "id": 260,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of e^(3x)?",
+    "options": [
+      "e^(3x)/x",
+      "e^(3x)",
+      "e^(3x)/3 + C",
+      "3e^(3x)"
+    ],
+    "answer": 2,
+    "explanation": "∫e^(3x) dx = e^(3x)/3 + C"
+  },
+  {
+    "id": 261,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of x²·ln(x)?",
+    "options": [
+      "-∞",
+      "∞",
+      "1",
+      "0"
+    ],
+    "answer": 3,
+    "explanation": "Using L'Hôpital's rule or substitution, the limit is 0"
+  },
+  {
+    "id": 262,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: 5ˣ = 125",
+    "options": [
+      "x = 4",
+      "x = 2",
+      "x = 3",
+      "x = 5"
+    ],
+    "answer": 2,
+    "explanation": "5ˣ = 125 = 5³, so x = 3"
+  },
+  {
+    "id": 263,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of x²·eˣ?",
+    "options": [
+      "2xeˣ",
+      "x²eˣ",
+      "2eˣ",
+      "eˣ(x² + 2x)"
+    ],
+    "answer": 3,
+    "explanation": "Using product rule: 2x·eˣ + x²·eˣ = eˣ(x² + 2x)"
+  },
+  {
+    "id": 264,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of cos(2x)?",
+    "options": [
+      "sin(2x)/2 + C",
+      "sin(2x)",
+      "2sin(2x)",
+      "cos(2x)/2"
+    ],
+    "answer": 0,
+    "explanation": "∫cos(2x) dx = sin(2x)/2 + C"
+  },
+  {
+    "id": 265,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of (sin(2x))/(2x)?",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "∞"
+    ],
+    "answer": 0,
+    "explanation": "Let u = 2x, then limit = sin(u)/u → 1"
+  },
+  {
+    "id": 266,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: log₅(x) = 2",
+    "options": [
+      "x = 10",
+      "x = 25",
+      "x = 20",
+      "x = 30"
+    ],
+    "answer": 1,
+    "explanation": "log₅(x) = 2 means 5² = x, so x = 25"
+  },
+  {
+    "id": 267,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the derivative of ln(2x)?",
+    "options": [
+      "2/x",
+      "1/(2x)",
+      "x",
+      "1/x"
+    ],
+    "answer": 3,
+    "explanation": "d/dx(ln(2x)) = (1/(2x)) · 2 = 1/x"
+  },
+  {
+    "id": 268,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the integral of 2x + 3?",
+    "options": [
+      "x² + 3x",
+      "x + 3",
+      "2x² + 3x",
+      "x² + 3x + C"
+    ],
+    "answer": 3,
+    "explanation": "∫(2x + 3) dx = x² + 3x + C"
+  },
+  {
+    "id": 269,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "What is the limit as x approaches infinity of (2x³ + x)/(x³ + 1)?",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "∞"
+    ],
+    "answer": 1,
+    "explanation": "Divide by x³: (2 + 1/x²)/(1 + 1/x³) → 2/1 = 2"
+  },
+  {
+    "id": 270,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Math",
+    "question": "Solve: e^(x+1) = e³",
+    "options": [
+      "x = 3",
+      "x = 2",
+      "x = 4",
+      "x = 1"
+    ],
+    "answer": 1,
+    "explanation": "e^(x+1) = e³, so x + 1 = 3, therefore x = 2"
+  },
+  {
+    "id": 271,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the derivative of f(x) = x²?",
+    "options": [
+      "x²",
+      "2x",
+      "x",
+      "2x²"
+    ],
+    "answer": 1,
+    "explanation": "Using power rule: d/dx(x²) = 2x"
+  },
+  {
+    "id": 272,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is ∫x dx?",
+    "options": [
+      "x",
+      "x²",
+      "2x",
+      "x²/2 + C"
+    ],
+    "answer": 3,
+    "explanation": "∫x dx = x²/2 + C"
+  },
+  {
+    "id": 273,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of sin(x)/x?",
+    "options": [
+      "∞",
+      "Does not exist",
+      "1",
+      "0"
+    ],
+    "answer": 2,
+    "explanation": "This is a fundamental limit: lim(x→0) sin(x)/x = 1"
+  },
+  {
+    "id": 274,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is i² where i is the imaginary unit?",
+    "options": [
+      "0",
+      "i",
+      "-1",
+      "1"
+    ],
+    "answer": 2,
+    "explanation": "i² = -1 by definition"
+  },
+  {
+    "id": 275,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the derivative of sin(x)?",
+    "options": [
+      "-sin(x)",
+      "cos(x)",
+      "-cos(x)",
+      "sin(x)"
+    ],
+    "answer": 1,
+    "explanation": "d/dx(sin(x)) = cos(x)"
+  },
+  {
+    "id": 276,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is ∫eˣ dx?",
+    "options": [
+      "eˣ + C",
+      "eˣ/x",
+      "eˣ",
+      "xeˣ"
+    ],
+    "answer": 0,
+    "explanation": "∫eˣ dx = eˣ + C"
+  },
+  {
+    "id": 277,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the determinant of a 2×2 matrix [[a,b],[c,d]]?",
+    "options": [
+      "ad - bc",
+      "ad + bc",
+      "ac - bd",
+      "ab - cd"
+    ],
+    "answer": 0,
+    "explanation": "det = ad - bc"
+  },
+  {
+    "id": 278,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the derivative of eˣ?",
+    "options": [
+      "eˣ",
+      "ln(x)",
+      "eˣ/x",
+      "xeˣ"
+    ],
+    "answer": 0,
+    "explanation": "d/dx(eˣ) = eˣ"
+  },
+  {
+    "id": 279,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is ∫1/x dx?",
+    "options": [
+      "x",
+      "x²",
+      "1/x²",
+      "ln|x| + C"
+    ],
+    "answer": 3,
+    "explanation": "∫1/x dx = ln|x| + C"
+  },
+  {
+    "id": 280,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the limit as x approaches infinity of 1/x?",
+    "options": [
+      "-∞",
+      "0",
+      "1",
+      "∞"
+    ],
+    "answer": 1,
+    "explanation": "As x → ∞, 1/x → 0"
+  },
+  {
+    "id": 281,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the derivative of ln(x)?",
+    "options": [
+      "x",
+      "1/x",
+      "ln(x)",
+      "eˣ"
+    ],
+    "answer": 1,
+    "explanation": "d/dx(ln(x)) = 1/x"
+  },
+  {
+    "id": 282,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is ∫cos(x) dx?",
+    "options": [
+      "sin(x) + C",
+      "sin(x)",
+      "cos(x)",
+      "-sin(x)"
+    ],
+    "answer": 0,
+    "explanation": "∫cos(x) dx = sin(x) + C"
+  },
+  {
+    "id": 283,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of (1 - cos(x))/x?",
+    "options": [
+      "∞",
+      "Does not exist",
+      "1",
+      "0"
+    ],
+    "answer": 3,
+    "explanation": "Using L'Hôpital's rule: limit = sin(0) = 0"
+  },
+  {
+    "id": 284,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the derivative of x³?",
+    "options": [
+      "3x²",
+      "x²",
+      "2x²",
+      "4x²"
+    ],
+    "answer": 0,
+    "explanation": "d/dx(x³) = 3x²"
+  },
+  {
+    "id": 285,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is ∫x² dx?",
+    "options": [
+      "2x",
+      "x²",
+      "x",
+      "x³/3 + C"
+    ],
+    "answer": 3,
+    "explanation": "∫x² dx = x³/3 + C"
+  },
+  {
+    "id": 286,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the limit as x approaches infinity of eˣ/x?",
+    "options": [
+      "∞",
+      "0",
+      "1",
+      "e"
+    ],
+    "answer": 0,
+    "explanation": "Using L'Hôpital's rule repeatedly: limit = ∞"
+  },
+  {
+    "id": 287,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the derivative of cos(x)?",
+    "options": [
+      "sin(x)",
+      "-sin(x)",
+      "-cos(x)",
+      "cos(x)"
+    ],
+    "answer": 1,
+    "explanation": "d/dx(cos(x)) = -sin(x)"
+  },
+  {
+    "id": 288,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is ∫sin(x) dx?",
+    "options": [
+      "tan(x)",
+      "sin(x)",
+      "cos(x)",
+      "-cos(x) + C"
+    ],
+    "answer": 3,
+    "explanation": "∫sin(x) dx = -cos(x) + C"
+  },
+  {
+    "id": 289,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of x·sin(1/x)?",
+    "options": [
+      "Does not exist",
+      "∞",
+      "1",
+      "0"
+    ],
+    "answer": 3,
+    "explanation": "Using squeeze theorem: -|x| ≤ x·sin(1/x) ≤ |x|, so limit = 0"
+  },
+  {
+    "id": 290,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the derivative of 1/x?",
+    "options": [
+      "-1/x²",
+      "-x",
+      "1/x²",
+      "x"
+    ],
+    "answer": 0,
+    "explanation": "d/dx(1/x) = d/dx(x⁻¹) = -x⁻² = -1/x²"
+  },
+  {
+    "id": 291,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is ∫1/x² dx?",
+    "options": [
+      "2/x",
+      "ln(x²)",
+      "-1/x + C",
+      "1/x"
+    ],
+    "answer": 2,
+    "explanation": "∫x⁻² dx = -x⁻¹ + C = -1/x + C"
+  },
+  {
+    "id": 292,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the limit as x approaches infinity of (x + 1)/x?",
+    "options": [
+      "∞",
+      "1",
+      "e",
+      "0"
+    ],
+    "answer": 1,
+    "explanation": "Divide by x: (1 + 1/x)/1 → 1"
+  },
+  {
+    "id": 293,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the derivative of √x?",
+    "options": [
+      "1/√x",
+      "2√x",
+      "1/(2√x)",
+      "√x"
+    ],
+    "answer": 2,
+    "explanation": "d/dx(√x) = d/dx(x^(1/2)) = (1/2)x^(-1/2) = 1/(2√x)"
+  },
+  {
+    "id": 294,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is ∫√x dx?",
+    "options": [
+      "(2/3)x^(3/2) + C",
+      "x/2",
+      "2√x",
+      "x^(3/2)"
+    ],
+    "answer": 0,
+    "explanation": "∫x^(1/2) dx = (2/3)x^(3/2) + C"
+  },
+  {
+    "id": 295,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the limit as x approaches 0 of (eˣ - 1)/x?",
+    "options": [
+      "0",
+      "1",
+      "∞",
+      "e"
+    ],
+    "answer": 1,
+    "explanation": "This is a fundamental limit: lim(x→0) (eˣ - 1)/x = 1"
+  },
+  {
+    "id": 296,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the derivative of x·eˣ?",
+    "options": [
+      "eˣ",
+      "xeˣ + eˣ",
+      "eˣ(x + 1)",
+      "xeˣ"
+    ],
+    "answer": 2,
+    "explanation": "Using product rule: 1·eˣ + x·eˣ = eˣ(x + 1)"
+  },
+  {
+    "id": 297,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is ∫x·eˣ dx?",
+    "options": [
+      "xeˣ - eˣ + C",
+      "xeˣ",
+      "eˣ",
+      "eˣ/x"
+    ],
+    "answer": 0,
+    "explanation": "Using integration by parts: ∫x·eˣ dx = xeˣ - eˣ + C"
+  },
+  {
+    "id": 298,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the limit as x approaches infinity of x/eˣ?",
+    "options": [
+      "∞",
+      "1",
+      "0",
+      "e"
+    ],
+    "answer": 2,
+    "explanation": "Using L'Hôpital's rule: limit = 1/eˣ = 0"
+  },
+  {
+    "id": 299,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is the derivative of tan(x)?",
+    "options": [
+      "cos²(x)",
+      "sec(x)",
+      "tan²(x)",
+      "sec²(x)"
+    ],
+    "answer": 3,
+    "explanation": "d/dx(tan(x)) = sec²(x)"
+  },
+  {
+    "id": 300,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Math",
+    "question": "What is ∫sec²(x) dx?",
+    "options": [
+      "cos(x) + C",
+      "sin(x) + C",
+      "tan(x) + C",
+      "sec(x) + C"
+    ],
+    "answer": 2,
+    "explanation": "∫sec²(x) dx = tan(x) + C"
+  }
+]

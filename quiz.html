@@ -15,8 +15,7 @@
     <canvas id="neural-bg"></canvas>
     <div id="background-shapes" aria-hidden="true"></div>
 
-        <!-- Header Navigation -->
-        <header class="header" role="banner">
+    <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <a href="index.html" class="logo-container">
@@ -25,70 +24,64 @@
                 </a>
 
                 <div class="mid-header-animation" aria-hidden="true">
-        
-                <div class="dino-sky">
-                    <div class="cloud cloud-1"></div>
-                    <div class="cloud cloud-2"></div>
-                    <div class="star star-1"></div>
-                    <div class="star star-2"></div>
-                    <div class="star star-3"></div>
-                </div>
-
-                <div class="dino-ground"></div>
-
-                <div class="obstacle-cactus"></div>
-
-                <div class="obstacle-bird">
-                    <div class="bird-wing"></div>
-                </div>
-
-                <div class="dino-rex">
-                    <div class="rex-body-wrapper">
-                        <div class="rex-shape">
-                            <div class="rex-eye"></div>
-                            <div class="rex-arm"></div>
-                        </div>
+                    <div class="dino-sky">
+                        <div class="cloud cloud-1"></div>
+                        <div class="cloud cloud-2"></div>
+                        <div class="star star-1"></div>
+                        <div class="star star-2"></div>
+                        <div class="star star-3"></div>
                     </div>
-                    <div class="rex-leg leg-left"></div>
-                    <div class="rex-leg leg-right"></div>
+                    <div class="dino-ground"></div>
+                    <div class="obstacle-cactus"></div>
+                    <div class="obstacle-bird">
+                        <div class="bird-wing"></div>
+                    </div>
+                    <div class="dino-rex">
+                        <div class="rex-body-wrapper">
+                            <div class="rex-shape">
+                                <div class="rex-eye"></div>
+                                <div class="rex-arm"></div>
+                            </div>
+                        </div>
+                        <div class="rex-leg leg-left"></div>
+                        <div class="rex-leg leg-right"></div>
+                    </div>
                 </div>
 
+                <ul class="nav-menu" id="nav-menu">
+                    <div class="nav-marker"></div>
+                    <li><a href="index.html" class="nav-link" data-color="#ffc800">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-color="#2bde73">About</a></li>
+                    <li><a href="#" class="nav-link active" data-color="#1cb0f6">Quiz</a></li>
+                </ul>
             </div>
+        </nav>
+    </header>
 
-                    <ul class="nav-menu" id="nav-menu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link">About</a></li>
-                        <li><a href="quiz.html" class="nav-link active" aria-current="page">Quiz</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-    <!-- Main Quiz Container -->
     <main class="quiz-main" role="main">
         <div class="quiz-container" id="quiz-container">
     
             <div class="gamification-header">
-                
-                <div class="header-stat">
-                    <span class="stat-icon">⭐</span>
-                    <span class="stat-label">LEVEL</span>
-                    <span class="stat-value" id="level-value">1</span>
-                </div>
+        
+                    <div class="header-stat">
+                        <div class="stat-icon" id="level-icon">⭐</div> 
+                        <div class="stat-label">Level</div>
+                        <div class="stat-value" id="level-value">1</div>
+                    </div>
 
-                <div class="header-stat">
-                    <span class="stat-icon">🔥</span>
-                    <span class="stat-label">STREAK</span>
-                    <span class="stat-value gold-text" id="streak-value">0</span>
-                </div>
+                    <div class="header-stat">
+                        <div class="stat-icon" id="streak-icon">🔥</div> 
+                        <div class="stat-label">Streak</div>
+                        <div class="stat-value" id="streak-value">0</div>
+                    </div>
 
-                <div class="header-stat">
-                    <span class="stat-icon">💎</span>
-                    <span class="stat-label">POINTS</span>
-                    <span class="stat-value" id="points-value">0</span>
-                </div>
+                    <div class="header-stat">
+                        <div class="stat-icon" id="points-icon">💎</div>
+                        <div class="stat-label">Points</div>
+                        <div class="stat-value" id="points-value">0</div>
+                    </div>
 
-            </div>
+                </div>
 
             <section class="progress-section" id="progress-section">
                 <div class="progress-container" id="progress-container">
@@ -100,13 +93,12 @@
                     </div>
                     <div class="progress-text" id="progress-text">
                         <span class="question-counter" id="question-counter">Question 0 of 0</span>
-                        </div>
+                    </div>
                 </div>
             </section>
 
             <section class="question-section" id="question-section">
                 <div class="question-card" id="question-card">
-                    
                     <div class="question-badge" id="question-badge">
                         <span class="badge-text" id="badge-text">Q1</span>
                     </div>
@@ -116,14 +108,14 @@
                             Loading question...
                         </h2>
                         <p class="question-description" id="question-description" aria-live="polite">
-                            </p>
+                        </p>
                     </div>
 
                     <div class="options-container" id="options-container" role="radiogroup">
-                        </div>
-
-                    <div class="feedback-area" id="feedback-area" aria-live="polite"></div>
+                    </div>
                 </div>
+
+                <div class="feedback-area" id="feedback-area" aria-live="polite"></div>
             </section>
 
             <section class="quiz-actions" id="quiz-actions">
@@ -131,19 +123,24 @@
                     <span class="btn-icon">💡</span>
                 </button>
 
-                <button class="btn" id="submit-btn" disabled>
-                    <span class="btn-text">SUBMIT ANSWER</span>
-                </button>
+                <div class="action-center">
+                    <button class="btn" id="submit-btn" disabled>
+                        <span class="btn-text">SUBMIT ANSWER</span>
+                    </button>
 
-                <button class="btn" id="next-btn" style="display: none;">
-                    <span class="btn-text">NEXT QUESTION ➜</span>
+                    <button class="btn hidden" id="next-btn" style="display: none;"> 
+                         <span class="btn-text">NEXT QUESTION ➜</span>
+                    </button>
+                </div>
+
+                <button class="btn btn-stop" id="stop-btn" aria-label="Stop Quiz">
+                    <span class="btn-icon">🛑</span>
                 </button>
             </section>
 
         </div>
     </main>
 
-    <!-- Loading Overlay -->
     <div class="loading-overlay" id="loading-overlay" aria-hidden="true">
         <div class="loading-spinner" id="loading-spinner">
             <div class="spinner"></div>
@@ -151,19 +148,39 @@
         </div>
     </div>
 
-    <!-- Theme Toggle -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
         <span class="theme-icon" id="theme-icon">🌙</span>
     </button>
 
-    <!-- Scripts -->
-    <!-- IMPORTANT: Load order matters - data.js first, then engine.js, then UI -->
+    <div class="custom-modal-overlay" id="modal-overlay" aria-hidden="true">
+        <div class="custom-modal-card">
+            <div class="modal-header">
+                <span class="modal-icon" id="modal-icon">💡</span>
+                <h3 class="modal-title" id="modal-title">Hint</h3>
+            </div>
+            
+            <div class="modal-body">
+                <p id="modal-message">Here is a helpful hint for you!</p>
+            </div>
+            
+            <div class="modal-footer" id="modal-footer">
+                </div>
+        </div>
+    </div>
+
     <script src="js/data.js"></script>
     <script src="js/engine.js"></script>
     <script src="js/quiz-ui.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/background-effects.js"></script>
     <script src="js/card-tilt.js"></script>
+
+    <script>
+        const stored = localStorage.getItem('neuroquizUserSetup');
+        if (!stored) {
+            console.log('[RB-ADA] no_setup_found, redirecting to setup');
+            window.location.href = 'setup.html';
+        }
+    </script>
 </body>
 </html>
-

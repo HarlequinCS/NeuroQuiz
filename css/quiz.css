@@ -1,5 +1,5 @@
 /* =========================================
-   NEUROQUIZ™ - FINAL INTERACTIVE UI (V10)
+   NEUROQUIZ™ - FINAL INTERACTIVE UI (V16 - Static Header)
    File: css/quiz.css
    ========================================= */
 
@@ -20,7 +20,8 @@
     --quiz-border: rgba(0,0,0,0.1);      
     --quiz-shadow: rgba(0,0,0,0.1);      
     --progress-track: #e5e5e5;           
-    
+    --brand-color: #1e293b;
+
     /* Button Themes (Light) */
     --hint-btn-bg: #ffffff;
     --hint-btn-text: #6b7280;
@@ -30,7 +31,7 @@
 }
 
 /* --- DARK MODE OVERRIDES --- */
-[data-theme="dark"] {
+:root[data-theme="dark"] {
     --page-bg-color: #2e0249;            /* Deep Purple */
     
     --quiz-bg-color: #1a1a2e;            
@@ -39,6 +40,7 @@
     --quiz-border: rgba(255,255,255,0.1);
     --quiz-shadow: rgba(0,0,0,0.5);      
     --progress-track: rgba(255,255,255,0.1);
+    --brand-color: #ffffff;
 
     --hint-btn-bg: rgba(255,255,255,0.05);
     --hint-btn-text: #cccccc;
@@ -50,971 +52,603 @@
 /* 2. PAGE BACKGROUND (Interactive) */
 body {
     background-color: var(--page-bg-color) !important;
-    background-image: none !important; /* Allow Canvas to show */
+    background-image: none !important; 
     font-family: 'Nunito', 'Segoe UI', sans-serif;
     min-height: 100vh;
     transition: background-color 0.3s ease;
     overflow-x: hidden;
-    perspective: 1000px; /* Essential for 3D Tilt */
 }
 
-/* Canvas Styling (Behind content) */
+/* Canvas Styling */
 #neural-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1; pointer-events: none;
 }
 
-/* 3. MAIN CARD (Static Container) */
+/* 3. MAIN CARD */
 .quiz-container {
     background: var(--quiz-bg-color);
     border-radius: 30px;
     padding: 2.5rem;
     max-width: 850px;
-    margin: 60px auto 100px auto;
-    border: 4px solid var(--quiz-border);
-    box-shadow: 0 20px 0 var(--quiz-shadow);
-    position: relative;
-    overflow: visible;
     
-    /* This creates the 3D space, but DOES NOT move */
-    perspective: 1000px; 
-    z-index: 10;
-}
-
-/* 3. MAIN CARD (STATIC STAGE - NO MOVEMENT) */
-.quiz-container {
-    background: var(--quiz-bg-color);
-    border-radius: 30px;
-    padding: 2.5rem;
-    max-width: 850px;
-    margin: 60px auto 100px auto;
+    /* --- FIX 1: Increased top margin to clear the fixed header --- */
+    margin: 140px auto 100px auto;
+    
     border: 4px solid var(--quiz-border);
     box-shadow: 0 20px 0 var(--quiz-shadow);
     position: relative;
     overflow: visible;
     z-index: 10;
-    /* REMOVED: perspective and transform here. It must remain static. */
 }
 
-/* THE QUESTION CARD (DYNAMIC ACTOR - THIS TILTS) */
+/* THE QUESTION CARD */
 #question-card {
-    /* 1. Appearance */
-    background: rgba(255, 255, 255, 0.5); /* Visible background */
+    background: rgba(255, 255, 255, 0.5); 
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-
-    /* 2. IMPORTANT: Transition REMOVED so it follows mouse instantly */
-    /* transition: transform 0.1s ease-out;  <-- THIS WAS THE PROBLEM */
-    
-    will-change: transform; /* optimizing performance */
-    
-    /* 3. Important: We don't set perspective here, we add it in JS */
+    will-change: transform; 
     transform-style: preserve-3d;
     position: relative;
-    overflow: hidden; /* Keeps the glare inside the rounded corners */
+    overflow: hidden; 
 }
 
-/* Dark Mode Appearance */
 [data-theme="dark"] #question-card {
     background: rgba(30, 30, 50, 0.6);
     border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* NEW: The Glare Effect Layer */
 .card-glare {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    pointer-events: none; /* Let clicks pass through to buttons */
-    mix-blend-mode: overlay; /* Makes it look like light */
-    z-index: 2;
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 20px; pointer-events: none; mix-blend-mode: overlay; z-index: 2;
 }
 
-/* 4. PROGRESS BAR */
+/* 4. USER WELCOME SECTION */
+.user-welcome-section {
+    margin-bottom: 1.5rem;
+    padding: 0 5px 15px 5px;
+    animation: slideInRight 0.5s ease-out;
+    border-bottom: 2px solid var(--quiz-border);
+    display: flex; align-items: center; justify-content: space-between;
+}
+
+.greeting-text {
+    font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--quiz-text-secondary); opacity: 0.8;
+}
+
+.user-name {
+    font-size: 1.8rem; font-weight: 900;
+    background: linear-gradient(90deg, var(--game-blue), #8b5cf6);
+    
+    /* FIX: Define standard property first, then WebKit */
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+[data-theme="dark"] .user-name {
+    background: linear-gradient(90deg, #60a5fa, #c084fc);
+    
+    /* FIX: Added here as well for safety */
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+}
+
+.cognitive-status {
+    font-size: 0.75rem; font-weight: 800; color: var(--quiz-text-secondary);
+    background: var(--progress-track); padding: 6px 14px; border-radius: 20px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+}
+/* --------------------------------------------------------- */
+
+/* 4. PROGRESS BAR (Water Glass Effect) */
 .progress-section { margin-bottom: 2rem; }
 
 .progress-bar-wrapper {
-    background: var(--progress-track);
-    height: 20px;
-    border-radius: 12px;
-    box-shadow: inset 0 4px 0 rgba(0,0,0,0.05);
+    /* Glass Container Look */
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(4px);
+    height: 28px; /* Slightly thicker for the glass effect */
+    border-radius: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.8); /* Thick Glass Border */
+    box-shadow: 
+        inset 0 4px 6px rgba(0,0,0,0.1), /* Inner depth */
+        0 10px 20px rgba(0,0,0,0.05); /* Outer shadow */
     position: relative;
     overflow: hidden;
+    z-index: 1;
+}
+
+/* Dark Mode Glass Adjustment */
+:root[data-theme="dark"] .progress-bar-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
 }
 
 .progress-fill {
-    background: linear-gradient(180deg, #5dd200, #4eb300);
-    height: 100%;
-    border-radius: 12px;
+    display: block; 
+    /* Water Gradient (Deep Blue to Cyan) */
+    background: linear-gradient(90deg, #0061ff 0%, #60efff 100%);
+    height: 100%; 
+    border-radius: 50px; 
     width: 0%;
-    transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy "Slosh" Transition */
+    transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    box-shadow: 0 0 15px rgba(96, 239, 255, 0.6); /* Glow */
+}
+
+/* The "Glare" Reflection on top of the water */
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 4px; left: 10px; right: 10px; height: 35%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.1));
+    border-radius: 20px;
+}
+
+/* Bubbles Effect (Optional decoration) */
+.progress-fill::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+        radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px);
+    background-size: 10px 10px, 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.3;
 }
 
 .progress-text {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-weight: 800;
-    color: var(--quiz-text-secondary);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    display: flex; justify-content: space-between; margin-top: 10px;
+    font-weight: 800; color: var(--quiz-text-secondary);
+    text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;
 }
 
-/* 5. QUESTION AREA (Pops out in 3D) */
+/* 5. QUESTION AREA */
 .question-badge {
-    background: #ce82ff;
-    color: #fff;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-weight: 900;
-    font-size: 0.9rem;
-    display: inline-block;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 0 #a14add;
-    transform: translateZ(20px); /* 3D Depth */
+    background: #ce82ff; color: #fff; padding: 6px 16px;
+    border-radius: 20px; font-weight: 900; font-size: 0.9rem;
+    display: inline-block; margin-bottom: 1rem;
+    box-shadow: 0 4px 0 #a14add; transform: translateZ(20px); 
 }
 
 .question-title {
-    color: var(--quiz-text-primary);
-    font-size: 2rem;
-    font-weight: 900;
-    line-height: 1.25;
-    margin-bottom: 2.5rem;
-    text-align: center;
-    transition: color 0.3s ease;
-    transform: translateZ(30px); /* 3D Depth */
+    color: var(--quiz-text-primary); font-size: 2rem; font-weight: 900;
+    line-height: 1.25; margin-bottom: 2.5rem; text-align: center;
+    transition: color 0.3s ease; transform: translateZ(30px); 
 }
 
-/* 6. OPTIONS GRID */
-.options-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    transform: translateZ(20px); /* 3D Depth */
-}
+/* 7. OPTIONS GRID */
+.options-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; transform: translateZ(20px); }
+@media (max-width: 600px) { .options-container { grid-template-columns: 1fr; } }
 
-@media (max-width: 600px) {
-    .options-container { grid-template-columns: 1fr; }
-}
-
-/* 7. BUTTONS */
 .option-btn {
-    border: none;
-    border-radius: 16px;
-    padding: 1rem 1.5rem;
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #2c2c2c !important; /* Dark text */
-    cursor: pointer;
-    position: relative;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    min-height: 80px;
-    transition: transform 0.1s !important;
+    border: none; border-radius: 16px; padding: 1rem 1.5rem;
+    font-size: 1.2rem; font-weight: 800; color: #2c2c2c !important; 
+    cursor: pointer; position: relative; text-align: left;
+    display: flex; align-items: center; min-height: 80px;
+    transition: transform 0.1s !important; 
     box-shadow: 0 6px 0 rgba(0,0,0,0.2); 
     z-index: 1;
 }
 
 .option-btn::before {
-    position: static !important;
-    content: '' !important;
-    display: inline-block !important;
-    width: 40px !important; 
-    height: 40px !important;
-    margin-right: 15px !important;
-    background-size: contain !important;
-    opacity: 0.8;
-    background: rgba(0,0,0,0.2) !important;
-    border-radius: 8px !important;
-    transform: none !important;
-    transition: none !important;
-    left: auto !important;
+    position: static !important; content: '' !important; display: inline-block !important;
+    width: 40px !important; height: 40px !important; margin-right: 15px !important;
+    background: rgba(0,0,0,0.2) !important; border-radius: 8px !important;
 }
 
-/* Button Backgrounds */
+/* Option Colors */
 .option-btn[data-option-id="0"] { background: var(--game-red) !important; box-shadow: 0 6px 0 var(--game-red-shadow); }
 .option-btn[data-option-id="1"] { background: var(--game-blue) !important; box-shadow: 0 6px 0 var(--game-blue-shadow); }
 .option-btn[data-option-id="2"] { background: var(--game-yellow) !important; box-shadow: 0 6px 0 var(--game-yellow-shadow); }
 .option-btn[data-option-id="3"] { background: var(--game-green) !important; box-shadow: 0 6px 0 var(--game-green-shadow); }
 
-/* Icons */
-.option-btn[data-option-id="0"]::before { content: '▲' !important; font-size: 24px; text-align: center; line-height: 40px; color: inherit;}
-.option-btn[data-option-id="1"]::before { content: '◆' !important; font-size: 24px; text-align: center; line-height: 40px; color: inherit;}
-.option-btn[data-option-id="2"]::before { content: '●' !important; font-size: 24px; text-align: center; line-height: 40px; color: inherit;}
-.option-btn[data-option-id="3"]::before { content: '■' !important; font-size: 24px; text-align: center; line-height: 40px; color: inherit;}
+/* FIX: Added !important to content so icons appear */
+.option-btn[data-option-id="0"]::before { content: '▲' !important; font-size: 24px; text-align: center; line-height: 40px; }
+.option-btn[data-option-id="1"]::before { content: '◆' !important; font-size: 24px; text-align: center; line-height: 40px; }
+.option-btn[data-option-id="2"]::before { content: '●' !important; font-size: 24px; text-align: center; line-height: 40px; }
+.option-btn[data-option-id="3"]::before { content: '■' !important; font-size: 24px; text-align: center; line-height: 35px; }
 
-/* Hover State (Outline + Lift) */
+/* HOVER STATE: White Outline */
 .option-btn:hover:not(:disabled) {
-    transform: translateY(-4px) translateZ(10px); /* Lift + 3D Pop */
-    filter: brightness(1.1);
+    transform: translateY(-4px) translateZ(10px); 
+    filter: brightness(1.1); 
+    /* White outline + shadow */
     box-shadow: 0 10px 0 rgba(0,0,0,0.1), 0 0 0 4px #ffffff !important; 
     z-index: 10;
 }
 
-/* Selected State (Neon Glow) */
+/* ACTIVE / SELECTED STATE: White Outline + Glow */
 .option-btn:active:not(:disabled), .option-btn.selected {
     transform: translateY(2px) translateZ(0px); 
-    border: 2px solid #fff;
     filter: brightness(1.2) contrast(1.1);
+    border: none; 
 }
 
-.option-btn[data-option-id="0"].selected { box-shadow: 0 0 20px var(--game-red), inset 0 0 20px rgba(255,255,255,0.4) !important; }
-.option-btn[data-option-id="1"].selected { box-shadow: 0 0 20px var(--game-blue), inset 0 0 20px rgba(255,255,255,0.4) !important; }
-.option-btn[data-option-id="2"].selected { box-shadow: 0 0 20px var(--game-yellow), inset 0 0 20px rgba(255,255,255,0.4) !important; }
-.option-btn[data-option-id="3"].selected { box-shadow: 0 0 20px var(--game-green), inset 0 0 20px rgba(255,255,255,0.4) !important; }
+/* Selected States with White Outline + Color Glow */
+.option-btn[data-option-id="0"].selected { 
+    box-shadow: 0 0 0 4px #ffffff, 0 0 20px var(--game-red), inset 0 0 20px rgba(255,255,255,0.4) !important; 
+}
+.option-btn[data-option-id="1"].selected { 
+    box-shadow: 0 0 0 4px #ffffff, 0 0 20px var(--game-blue), inset 0 0 20px rgba(255,255,255,0.4) !important; 
+}
+.option-btn[data-option-id="2"].selected { 
+    box-shadow: 0 0 0 4px #ffffff, 0 0 20px var(--game-yellow), inset 0 0 20px rgba(255,255,255,0.4) !important; 
+}
+.option-btn[data-option-id="3"].selected { 
+    box-shadow: 0 0 0 4px #ffffff, 0 0 20px var(--game-green), inset 0 0 20px rgba(255,255,255,0.4) !important; 
+}
 
 .option-label { display: none !important; }
 
 /* =========================================
-   8. ACTION BUTTONS (Side-by-Side Layout)
-   ========================================= */
-.quiz-actions {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Space between buttons */
-    border-top: 2px dashed var(--quiz-border);
-    padding-top: 2rem;
-    width: 100%;
-    box-sizing: border-box;
-    transform: translateZ(20px);
-}
-
-/* Common Button Styles */
-.btn {
-    border: none;
-    border-radius: 16px; /* Slightly rounder */
-    padding: 16px 24px;  /* Taller touch target */
-    font-weight: 800;
-    font-size: 1rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: transform 0.1s, filter 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-/* HINT BUTTON (The Lightbulb) */
-#hint-btn {
-    background: var(--hint-btn-bg);
-    border: 2px solid var(--hint-btn-border);
-    color: var(--hint-btn-text);
-    box-shadow: 0 4px 0 var(--quiz-border);
-    
-    flex: 0 0 auto; 
-    min-width: 60px;
-    
-    /* Smooth transition for the light effect */
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: visible; /* Allows the glow to shine outside the button */
-}
-
-/* 1. HOVER: Soft Warm Glow (Pre-heating) */
-#hint-btn:hover {
-    border-color: #fbbf24; /* Gold Border */
-    background: #fffbeb;   /* Very Pale Yellow Background */
-    color: #d97706;        /* Darker Yellow Icon */
-    
-    /* The Soft Glow */
-    box-shadow: 
-        0 0 15px rgba(251, 191, 36, 0.5), /* Yellow aura */
-        0 4px 0 var(--quiz-border);       /* Keep the 3D depth */
-        
-    transform: translateY(-2px) scale(1.05);
-}
-
-/* 2. CLICK: LIGHTS UP (Intense Brightness) */
-#hint-btn:active {
-    background: #fbbf24; /* Bright Yellow Bulb Color */
-    border-color: #f59e0b;
-    color: #ffffff;      /* White Filament/Icon */
-    
-    /* THE LIGHT BURST EFFECT */
-    box-shadow: 
-        0 0 20px #fbbf24,  /* Inner Glow */
-        0 0 50px #fbbf24,  /* Outer Glow */
-        inset 0 0 10px rgba(255, 255, 255, 1); /* Internal light reflection */
-
-    transform: translateY(2px) scale(0.95); /* Press down effect */
-}
-
-/* Dark Mode Adjustment */
-[data-theme="dark"] #hint-btn:hover {
-    background: rgba(251, 191, 36, 0.1); /* Darker yellow tint */
-    color: #fbbf24;
-}
-
-/* SUBMIT & NEXT BUTTONS (Primary - Right Side - Grows to fill space) */
-#submit-btn, #next-btn {
-    background: var(--submit-btn-bg);
-    color: var(--submit-btn-text);
-    box-shadow: 0 6px 0 rgba(0,0,0,0.3); /* Thicker shadow for primary */
-    /* Grow to fill remaining space */
-    flex: 1; 
-}
-
-#submit-btn:hover, #next-btn:hover {
-    filter: brightness(1.2);
-    transform: translateY(-2px);
-}
-
-#submit-btn:active, #next-btn:active {
-    transform: translateY(4px);
-    box-shadow: none !important;
-}
-
-/* Disabled State */
-.btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none !important;
-    box-shadow: none !important;
-    filter: grayscale(1);
-}
-
-/* =========================================
-   9. GAMIFICATION HEADER (Glossy + High Visibility)
+   FEEDBACK AREA
    ========================================= */
 
-.gamification-header {
-    /* LIGHT MODE: Off-White Glass (Visible against white bg) */
-    background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
-    
-    /* Keep the blur */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    
-    border-radius: 20px;
-    padding: 15px 30px;
-    margin-bottom: 2rem;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    
-    /* VISIBILITY FIXES: */
-    /* 1. Grey Border instead of White (Defines the shape) */
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    
-    /* 2. Stronger Shadow (Lifts it up) */
-    box-shadow: 
-        0 10px 25px -5px rgba(0, 0, 0, 0.1), /* Main Shadow */
-        0 8px 10px -6px rgba(0, 0, 0, 0.1),  /* Detail Shadow */
-        inset 0 1px 0 rgba(255, 255, 255, 1); /* Shiny Top Edge */
-        
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+.question-section {
+    position: relative; display: flex; flex-direction: column; gap: 20px; perspective: 1000px;
 }
 
-/* DARK MODE: Dark Polished Glass (Stays the same) */
-[data-theme="dark"] .gamification-header {
-    background: linear-gradient(145deg, rgba(30, 30, 50, 0.9), rgba(15, 15, 25, 0.8));
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+#feedback-area {
+    position: relative; width: 100%; margin-top: 10px; z-index: 100; display: none; 
 }
 
-/* --- THE SHIMMER BEAM --- */
-.gamification-header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 100%;
-    
-    /* White Beam */
-    background: linear-gradient(
-        to right, 
-        transparent, 
-        rgba(255, 255, 255, 0.6), 
-        transparent
-    );
-    
-    transform: skewX(-20deg);
-    animation: headerShimmer 6s infinite linear; 
-    pointer-events: none;
+#feedback-area:not(:empty) {
+    display: block; animation: slideUpFade 0.4s ease-out forwards;
 }
 
-/* Adjust shimmer for Dark Mode */
-[data-theme="dark"] .gamification-header::after {
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
-}
-
-@keyframes headerShimmer {
-    0% { left: -100px; }
-    20% { left: 120%; }
-    100% { left: 120%; }
-}
-
-/* --- CONTENT STYLING --- */
-.header-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    position: relative;
-    z-index: 2; 
-}
-
-/* 1. EMOJI */
-.stat-icon {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-    animation: simpleBounce 2s infinite ease-in-out;
-}
-
-/* 2. LABEL */
-.stat-label {
-    font-family: inherit; 
-    font-weight: 800; 
-    text-transform: uppercase;
-    font-size: 0.75rem; 
-    letter-spacing: 1px;
-    color: #64748b; 
-    margin-bottom: 4px;
-}
-[data-theme="dark"] .stat-label { color: #94a3b8; }
-
-/* 3. VALUE */
-.stat-value {
-    font-size: 1.5rem;
-    font-weight: 900;
-    line-height: 1;
-    color: #1e293b; /* Dark text for light mode */
-    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-}
-[data-theme="dark"] .stat-value {
-    color: #ffffff; 
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-/* Streak Gold Text */
-.gold-text { color: #f59e0b !important; }
-
-@keyframes simpleBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
-}
-
-@media (max-width: 500px) {
-    .gamification-header { padding: 12px 15px; }
-    .stat-icon { font-size: 1.2rem; margin-bottom: 4px; }
-    .stat-label { font-size: 0.6rem; }
-    .stat-value { font-size: 1.2rem; }
-}
-
-/* =========================================
-   GAMIFIED FEEDBACK CARD (V2)
-   ========================================= */
-
-#feedback-container {
-    margin-top: 2rem;
-    perspective: 1000px;
-    display: none;
-}
-
-/* The Card Wrapper */
 .feedback-card {
-    background: var(--quiz-bg-color); /* White (Light) or Navy (Dark) */
-    border-radius: 20px;
-    overflow: hidden; /* Clips the header inside */
-    box-shadow: 0 10px 0 rgba(0,0,0,0.2); /* Thick "Game" shadow */
-    position: relative;
-    border: 4px solid transparent; /* Placeholder for color */
-    transform-origin: top center;
+    width: 100%; background: var(--quiz-bg-color); border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); border: 2px solid transparent; overflow: hidden;
 }
 
-/* --- VARIANT: CORRECT --- */
-.feedback-card.correct {
-    border-color: var(--game-green);
-}
+.feedback-card.correct { border-color: var(--game-green); }
 .feedback-card.correct .feedback-header {
-    background: var(--game-green);
-    color: #fff;
-    box-shadow: 0 4px 0 var(--game-green-shadow);
+    background: var(--game-green); color: #fff; box-shadow: 0 4px 0 var(--game-green-shadow);
 }
+.feedback-card.correct { animation: rubberBand 0.8s; }
 
-/* --- VARIANT: INCORRECT --- */
-.feedback-card.incorrect {
-    border-color: var(--game-red);
-}
+.feedback-card.incorrect { border-color: var(--game-red); }
 .feedback-card.incorrect .feedback-header {
-    background: var(--game-red);
-    color: #fff;
-    box-shadow: 0 4px 0 var(--game-red-shadow);
+    background: var(--game-red); color: #fff; box-shadow: 0 4px 0 var(--game-red-shadow);
+}
+.feedback-card.incorrect {
+    animation: slideUpFade 0.4s ease-out, headShake 0.5s ease-in-out 0.4s;
 }
 
-/* 1. The Colorful Top Banner */
 .feedback-header {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    font-size: 1.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 0 rgba(0,0,0,0.2);
-    position: relative;
-    z-index: 2;
+    padding: 1rem; display: flex; align-items: center; justify-content: center; gap: 12px;
+    font-size: 1.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.2); position: relative; z-index: 2;
 }
 
 .feedback-icon {
-    background: rgba(255,255,255,0.2);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    box-shadow: inset 0 2px 0 rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.2); width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; box-shadow: inset 0 2px 0 rgba(0,0,0,0.2);
 }
 
-/* 2. The Content Body */
 .feedback-body {
-    padding: 2rem 1.5rem;
-    text-align: center;
-    color: var(--quiz-text-primary);
-    font-weight: 700;
-    font-size: 1.1rem;
-    line-height: 1.5;
+    padding: 2rem 1.5rem; text-align: center;
+    color: var(--quiz-text-primary); font-weight: 700; font-size: 1.1rem; line-height: 1.5;
 }
 
-/* 3. The Points Badge */
 .points-badge {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 8px 20px;
-    border-radius: 12px;
-    font-weight: 900;
+    display: inline-block; margin-top: 1rem; padding: 8px 20px;
+    border-radius: 12px; font-weight: 900; text-transform: uppercase; font-size: 0.9rem;
+    background: var(--quiz-border); color: var(--quiz-text-secondary);
+}
+
+/* =========================================
+   8. ACTION BUTTONS 
+   ========================================= */
+
+.quiz-actions {
+    margin-top: 2rem; display: flex; align-items: center; justify-content: space-between;
+    gap: 15px; border-top: 2px dashed var(--quiz-border); padding-top: 2rem;
+    width: 100%; box-sizing: border-box; transform: translateZ(20px);
+}
+
+/* HINT BUTTON */
+#hint-btn {
+    flex: 0 0 auto; min-width: 60px; height: 60px; padding: 0;
+    background: var(--hint-btn-bg); border: 2px solid var(--hint-btn-border);
+    color: var(--hint-btn-text); box-shadow: 0 4px 0 var(--quiz-border);
+    display: flex; align-items: center; justify-content: center; border-radius: 16px;
+    font-size: 1.5rem; transition: all 0.2s ease; position: relative;
+}
+#hint-btn:hover {
+    border-color: #fbbf24; background: #fffbeb; color: #d97706; 
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.5), 0 6px 0 var(--quiz-border);
+    transform: translateY(-2px); 
+}
+#hint-btn:active {
+    background: #fbbf24; border-color: #f59e0b; color: #ffffff;
+    box-shadow: 0 0 20px #fbbf24, inset 0 0 10px rgba(255, 255, 255, 1);
+    transform: translateY(4px); 
+}
+
+/* SUBMIT & NEXT BUTTONS */
+.action-center { flex: 1; display: flex; justify-content: center; }
+
+#submit-btn, #next-btn {
+    width: 100%; height: 60px; padding: 0 2rem; 
+    font-size: 1.2rem; font-weight: 800; border-radius: 16px;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    background: var(--quiz-border);
-    color: var(--quiz-text-secondary);
+    background: var(--submit-btn-bg); color: var(--submit-btn-text);
+    box-shadow: 0 6px 0 rgba(0,0,0,0.3); border: none; cursor: pointer;
+    transition: transform 0.1s, filter 0.2s;
+    display: flex; align-items: center; justify-content: center;
+}
+#submit-btn:hover:not(:disabled), #next-btn:hover {
+    filter: brightness(1.2); transform: translateY(-2px);
+}
+#submit-btn:active, #next-btn:active {
+    transform: translateY(4px); box-shadow: none !important;
+}
+#submit-btn:disabled {
+    opacity: 0.5; cursor: not-allowed; transform: none !important; 
+    box-shadow: none !important; filter: grayscale(1);
 }
 
-/* --- ANIMATIONS --- */
-
-/* Shake for Incorrect */
-@keyframes headShake {
-    0% { transform: translateX(0); }
-    6.5% { transform: translateX(-6px) rotateY(-9deg); }
-    18.5% { transform: translateX(5px) rotateY(7deg); }
-    31.5% { transform: translateX(-3px) rotateY(-5deg); }
-    43.5% { transform: translateX(2px) rotateY(3deg); }
-    50% { transform: translateX(0); }
+/* STOP BUTTON */
+.btn-stop {
+    flex: 0 0 auto; width: 60px; height: 60px; padding: 0;
+    background: var(--hint-btn-bg); border: 2px solid var(--hint-btn-border);
+    box-shadow: 0 4px 0 var(--quiz-border); color: #ff4b4b; 
+    display: flex; align-items: center; justify-content: center; border-radius: 16px;
+    font-size: 1.5rem; line-height: 1; cursor: pointer; transition: all 0.2s ease;
+}
+.btn-stop:hover {
+    border-color: #ff4b4b; background: #fff1f2; 
+    box-shadow: 0 0 15px rgba(255, 75, 75, 0.3), 0 6px 0 var(--quiz-border);
+    transform: translateY(-2px);
+}
+.btn-stop:active {
+    background: #ff4b4b; border-color: #dc2626;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: translateY(4px);
 }
 
-.feedback-card.incorrect {
-    animation: headShake 0.5s ease-in-out;
-}
-
-/* Pop-In for Correct */
-@keyframes rubberBand {
-    0% { transform: scale3d(1, 1, 1); }
-    30% { transform: scale3d(1.25, 0.75, 1); }
-    40% { transform: scale3d(0.75, 1.25, 1); }
-    50% { transform: scale3d(1.15, 0.85, 1); }
-    65% { transform: scale3d(0.95, 1.05, 1); }
-    75% { transform: scale3d(1.05, 0.95, 1); }
-    100% { transform: scale3d(1, 1, 1); }
-}
-
-.feedback-card.correct {
-    animation: rubberBand 0.8s;
-}
-
-/* =========================================
-   NEW: COLORFUL FLOATING BACKGROUND SHAPES
-   ========================================= */
-
-#background-shapes {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 0; /* Behind content */
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.bg-shape {
-    position: absolute;
-    border-radius: 50%; /* Circle by default */
-    
-    /* GLASS EFFECT FOR SHAPES */
-    backdrop-filter: blur(2px); 
-    mix-blend-mode: multiply; /* Blends nicely in light mode */
-    
-    /* Animation definition */
-    animation: shapeFloat ease-in-out forwards;
-}
-
-/* Dark mode blend adjustment */
-[data-theme="dark"] .bg-shape {
-    mix-blend-mode: screen; /* Makes colors glow in dark mode */
-    filter: brightness(1.2);
-}
-
-/* SMOOTH APPEAR & DISAPPEAR ANIMATION */
-@keyframes shapeFloat {
-    0% { 
-        opacity: 0;
-        transform: scale(0.5) translateY(50px) rotate(0deg);
-    }
-    30% { 
-        opacity: 0.6; /* Visible peak (adjust if too bright) */
-    }
-    70% {
-        opacity: 0.6; /* Stay visible for a while */
-    }
-    100% { 
-        opacity: 0;
-        transform: scale(1.2) translateY(-100px) rotate(45deg);
-    }
-
-    
+@media (max-width: 600px) {
+    .quiz-actions { gap: 10px; }
+    #hint-btn, .btn-stop { width: 50px; height: 50px; border-radius: 12px; }
+    #submit-btn, #next-btn { height: 50px; font-size: 0.9rem; border-radius: 12px; }
 }
 
 /* =========================================
-   TOP NAVIGATION: EDGE-TO-EDGE (Fixed)
+   9. GAMIFICATION HEADER
    ========================================= */
 
-/* 1. The Main Header Bar */
+.gamification-header {
+    background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px; padding: 15px 30px; margin-bottom: 2rem;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
+    position: relative; overflow: hidden; transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .gamification-header {
+    background: linear-gradient(145deg, rgba(30, 30, 50, 0.9), rgba(15, 15, 25, 0.8));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.gamification-header::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 60px; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: skewX(-20deg); animation: headerShimmer 6s infinite linear; pointer-events: none;
+}
+[data-theme="dark"] .gamification-header::after {
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+@keyframes headerShimmer { 0% { left: -100px; } 20% { left: 120%; } 100% { left: 120%; } }
+
+.header-stat {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    flex: 1; position: relative; z-index: 2; 
+}
+.stat-icon {
+    font-size: 1.5rem; margin-bottom: 8px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    animation: simpleBounce 2s infinite ease-in-out;
+}
+.stat-label {
+    font-family: inherit; font-weight: 800; text-transform: uppercase;
+    font-size: 0.75rem; letter-spacing: 1px; color: #64748b; margin-bottom: 4px;
+}
+[data-theme="dark"] .stat-label { color: #94a3b8; }
+.stat-value {
+    font-size: 1.5rem; font-weight: 900; line-height: 1;
+    color: #1e293b; text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+[data-theme="dark"] .stat-value { color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+
+@keyframes simpleBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+/* =========================================
+   10. HEADER & NAV (Centered Layout Fix)
+   ========================================= */
+
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;       /* Full viewport width */
-    height: 80px;
-    z-index: 1000;
-    
-    /* Minimal padding to stick to edges (Adjust to 10px or 0px if needed) */
-    padding: 0 30px; 
-    
-    display: flex;
-    align-items: center;
-    
-    pointer-events: none; /* Clicks pass through empty space */
-    box-sizing: border-box;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 80px; z-index: 1000;
+    padding: 0 30px; display: flex; align-items: center;
+    pointer-events: none; box-sizing: border-box;
 }
 
-/* 2. The Nav Wrapper (CRITICAL FIX) */
-/* This ensures the middle layer stretches full width */
-.nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
+.nav { width: 100%; display: flex; align-items: center; }
 
-/* 3. The Inner Container (Visual Layout) */
 .nav-container {
-    width: 100%;        /* Take up 100% of the .nav */
-    max-width: none;    /* UNLOCK: No width limit */
-    margin: 0;          /* No centering margins */
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Pushes content to EXTREME edges */
-    
-    pointer-events: auto; /* Re-enable clicks */
+    width: 100%; max-width: none; margin: 0;
+    display: flex; align-items: center; justify-content: space-between;
+    pointer-events: auto;
 }
 
-/* 4. LOGO (Sticks to Far Left) */
+/* LOGO: Fixed width to balance the Nav */
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    
-    /* Make it stand out */
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-    transition: transform 0.2s ease;
+    flex: 0 0 280px; /* Forces Left side to match Right side width */
+    display: flex; align-items: center; gap: 15px; text-decoration: none;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); transition: transform 0.2s ease;
 }
-
-.logo-container:hover {
-    transform: scale(1.05);
-}
-
-.logo {
-    height: 45px;
-    width: auto;
-}
+.logo-container:hover { transform: scale(1.05); }
+.logo { height: 45px; width: auto; }
 
 .brand-name {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
-    font-size: 1.8rem;
-    color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    letter-spacing: -0.5px;
-    white-space: nowrap; /* Prevents wrapping */
-}
-
-/* 5. NAV MENU (Sticks to Far Right) */
-.nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 6px 8px;
-    
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    
-    /* Glass Pill Style */
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    
-    border-radius: 50px;
-}
-
-/* 6. NAV LINKS */
-.nav-link {
-    text-decoration: none;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 800;
-    font-size: 1rem;
-    padding: 10px 25px;
-    border-radius: 40px;
-    
-    color: #cbd5e1;
-    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.8rem;
+    color: var(--brand-color); text-shadow: 0 2px 8px rgba(0,0,0,0.5); letter-spacing: -0.5px;
     white-space: nowrap;
 }
 
-.nav-link:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.15);
+/* NAV MENU: Fixed width to balance the Logo */
+.nav-menu {
+    flex: 0 0 280px; /* Forces Right side to match Left side width */
+    justify-content: flex-end; /* Keeps text aligned to the right inside the box */
+    
+    position: relative; list-style: none; margin: 0; padding: 5px;
+    display: flex; align-items: center; gap: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-radius: 50px; margin-right: 0;
+}
+[data-theme="dark"] .nav-menu {
+    background: rgba(15, 23, 42, 0.6); border-color: rgba(255, 255, 255, 0.1);
 }
 
-.nav-link.active {
-    background: #ffffff;
-    color: #0f172a;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-    transform: scale(1.05);
+.nav-marker {
+    position: absolute; left: 5px; top: 5px; height: calc(100% - 10px);
+    border-radius: 40px; z-index: 1;
+    background: var(--game-blue); 
+    box-shadow: 0 4px 12px rgba(28, 176, 246, 0.4);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    width: 0; opacity: 0; 
 }
+[data-theme="dark"] .nav-marker { background: #4c1d95; }
 
-/* --- LIGHT MODE ADJUSTMENTS --- */
-body:not([data-theme="dark"]) .brand-name {
-    color: #1e293b;
-    text-shadow: none;
+.nav-link {
+    position: relative; z-index: 2; display: block;
+    text-decoration: none; font-family: 'Nunito', sans-serif;
+    font-weight: 800; font-size: 0.95rem; padding: 10px 24px;
+    border-radius: 40px; transition: color 0.2s ease; white-space: nowrap;
+    color: #64748b !important; background: transparent !important; box-shadow: none !important;
 }
-body:not([data-theme="dark"]) .nav-menu {
-    background: rgba(255, 255, 255, 0.9); 
-    border-color: rgba(0,0,0,0.1);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-body:not([data-theme="dark"]) .nav-link { color: #64748b; }
-body:not([data-theme="dark"]) .nav-link:hover { 
-    color: #0f172a; background: rgba(0,0,0,0.05); 
-}
-body:not([data-theme="dark"]) .nav-link.active {
-    background: #0f172a;
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.3);
-}
+.nav-link:hover, .nav-link.active { color: #ffffff !important; }
+.nav-menu:hover .nav-link.active:not(:hover) { color: #64748b !important; }
+[data-theme="dark"] .nav-link { color: #94a3b8 !important; }
+[data-theme="dark"] .nav-link:hover, [data-theme="dark"] .nav-link.active { color: #ffffff !important; }
+[data-theme="dark"] .nav-menu:hover .nav-link.active:not(:hover) { color: #94a3b8 !important; }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .header { padding: 0 15px; height: 70px; } /* Reduce padding on mobile */
-    .brand-name { display: none; }
-    .nav-link { padding: 8px 16px; font-size: 0.9rem; }
+/* Mobile Reset: Remove fixed widths on small screens so they don't break layout */
+@media (max-width: 900px) {
+    .logo-container, .nav-menu {
+        flex: 0 0 auto;
+    }
 }
 
 /* =========================================
-   DINO RUNNER: ADAPTIVE THEME (Final Fix)
+   12. DINO RUNNER: ADAPTIVE THEME (EXACT CODE)
    ========================================= */
 
-/* --- 1. DEFAULT: LIGHT MODE (Day Theme) --- */
-
-/* The Stage (Blue Sky) */
 .mid-header-animation {
-    flex-grow: 1;
-    height: 70px;
-    margin: 0 40px;
-    position: relative;
-    overflow: hidden;
-    
-    /* Day Sky */
+    flex-grow: 1; height: 70px; margin: 0 40px; position: relative; overflow: hidden;
     background: linear-gradient(to bottom, #bae6fd 0%, #f0f9ff 100%);
-    border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.1);
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
 }
 
-/* Parallax Sky */
 .dino-sky { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
 .cloud {
-    position: absolute;
-    background: #ffffff; /* White Clouds */
-    border-radius: 20px;
-    opacity: 0.9;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    animation: sceneryScroll linear infinite;
+    position: absolute; background: #ffffff; border-radius: 20px; opacity: 0.9;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); animation: sceneryScroll linear infinite;
 }
 .cloud-1 { width: 50px; height: 14px; top: 15px; left: 100%; animation-duration: 15s; }
 .cloud-2 { width: 30px; height: 10px; top: 30px; left: 100%; animation-duration: 20s; animation-delay: 5s; }
 
-/* Stars (Hidden in Day) */
 .star {
     position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%;
-    animation: twinkle 3s infinite alternate;
-    opacity: 0; /* Invisible by default */
+    animation: twinkle 3s infinite alternate; opacity: 0; 
 }
 .star-1 { top: 10px; left: 20%; }
 .star-2 { top: 20px; left: 60%; animation-duration: 2s; }
 
-/* The Ground (Dark Lines) */
 .dino-ground {
     position: absolute; bottom: 0; left: 0; width: 200%; height: 10px;
-    /* Darkish Ground Lines */
     background: repeating-linear-gradient(90deg, transparent 0, transparent 195px, rgba(0,0,0,0.1) 195px, rgba(0,0,0,0.1) 200px);
-    border-top: 1px solid rgba(0,0,0,0.1);
-    animation: groundScroll 3s linear infinite;
+    border-top: 1px solid rgba(0,0,0,0.1); animation: groundScroll 3s linear infinite;
 }
 
-/* OBSTACLES (Dark/Flat colors for Day) */
 .obstacle-cactus {
-    position: absolute; bottom: 10px; left: 100%;
-    width: 16px; height: 24px;
-    background: #22c55e; /* Green */
+    position: absolute; bottom: 10px; left: 100%; width: 16px; height: 24px;
+    background: #22c55e; 
     clip-path: polygon(30% 0, 70% 0, 70% 100%, 30% 100%, 30% 60%, 0% 50%, 0% 30%, 30% 40%, 70% 40%, 100% 30%, 100% 50%, 70% 60%);
-    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
-    animation: cactusMove 6s linear infinite;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2)); animation: cactusMove 6s linear infinite;
 }
 
 .obstacle-bird {
-    position: absolute; bottom: 35px; left: 100%;
-    width: 24px; height: 16px;
-    background: #e11d48; /* Red */
+    position: absolute; bottom: 35px; left: 100%; width: 24px; height: 16px; background: #e11d48;
     clip-path: polygon(0 40%, 30% 40%, 60% 60%, 100% 30%, 80% 60%, 40% 70%, 20% 60%);
-    filter: drop-shadow(0 4px 3px rgba(0,0,0,0.2));
-    animation: birdMove 6s linear infinite;
+    filter: drop-shadow(0 4px 3px rgba(0,0,0,0.2)); animation: birdMove 6s linear infinite;
 }
 .bird-wing {
     position: absolute; top: -5px; left: 5px; width: 10px; height: 10px; background: #e11d48;
-    clip-path: polygon(0 100%, 50% 0, 100% 100%);
-    animation: wingFlap 0.3s infinite alternate;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%); animation: wingFlap 0.3s infinite alternate;
 }
 
-/* DINO (Dark Charcoal for Day) */
 .dino-rex {
-    position: absolute; bottom: 10px; left: 40px; 
-    width: 44px; height: 44px; z-index: 10;
+    position: absolute; bottom: 10px; left: 40px; width: 44px; height: 44px; z-index: 10;
     animation: dinoJumpLoop 6s ease-in-out infinite;
 }
 .rex-body-wrapper {
-    width: 100%; height: 100%; transform-origin: bottom center;
-    animation: dinoDuckLoop 6s ease-in-out infinite;
+    width: 100%; height: 100%; transform-origin: bottom center; animation: dinoDuckLoop 6s ease-in-out infinite;
 }
 .rex-shape {
-    width: 100%; height: 100%; 
-    background: #334155; /* Dark Grey */
+    width: 100%; height: 100%; background: #334155; 
     clip-path: polygon(50% 0, 100% 0, 100% 35%, 65% 35%, 65% 45%, 90% 45%, 90% 55%, 50% 55%, 50% 65%, 20% 50%, 0 55%, 20% 80%, 20% 100%, 55% 100%, 55% 80%);
 }
-.rex-eye { position: absolute; top: 5px; right: 12px; width: 3px; height: 3px; background: #fff; } /* White Eye */
+.rex-eye { position: absolute; top: 5px; right: 12px; width: 3px; height: 3px; background: #fff; }
 .rex-arm { position: absolute; top: 25px; right: 14px; width: 4px; height: 2px; background: #fff; }
 .rex-leg { position: absolute; bottom: -4px; width: 6px; height: 10px; background: #334155; }
 .leg-left  { left: 22px; animation: runLegs 0.2s infinite alternate; }
 .leg-right { left: 32px; animation: runLegs 0.2s infinite alternate-reverse; }
 
-
-/* --- 2. DARK MODE OVERRIDES (Night Theme) --- */
-/* This selector works regardless of where 'data-theme' is located (html or body) */
+/* Dark Mode Dino */
 [data-theme="dark"] .mid-header-animation {
-    background: linear-gradient(to bottom, #020617 0%, #1e293b 100%); /* Deep Space */
-    border-color: rgba(255,255,255,0.15);
-    box-shadow: inset 0 0 30px rgba(0,0,0,0.6);
+    background: linear-gradient(to bottom, #020617 0%, #1e293b 100%);
+    border-color: rgba(255,255,255,0.15); box-shadow: inset 0 0 30px rgba(0,0,0,0.6);
 }
-
-[data-theme="dark"] .star { opacity: 1; } /* Show Stars */
-
-[data-theme="dark"] .cloud {
-    background: rgba(255, 255, 255, 0.05); /* Faint Clouds */
-    box-shadow: none;
-}
-
+[data-theme="dark"] .star { opacity: 1; }
+[data-theme="dark"] .cloud { background: rgba(255, 255, 255, 0.05); box-shadow: none; }
 [data-theme="dark"] .dino-ground {
-    /* White/Neon Ground Lines */
     background: repeating-linear-gradient(90deg, transparent 0, transparent 195px, rgba(255,255,255,0.3) 195px, rgba(255,255,255,0.3) 200px);
     border-top-color: rgba(255,255,255,0.2);
 }
+[data-theme="dark"] .obstacle-cactus { background: #2bde73; box-shadow: 0 0 10px #2bde73; filter: none; }
+[data-theme="dark"] .obstacle-bird, [data-theme="dark"] .bird-wing { background: #f43f5e; filter: drop-shadow(0 0 5px #f43f5e); }
+[data-theme="dark"] .rex-shape, [data-theme="dark"] .rex-leg { background: #cbd5e1; filter: drop-shadow(0 0 5px rgba(255,255,255,0.4)); }
+[data-theme="dark"] .rex-eye, [data-theme="dark"] .rex-arm { background: #0f172a; }
 
-[data-theme="dark"] .obstacle-cactus {
-    background: #2bde73; /* Neon Green */
-    box-shadow: 0 0 10px #2bde73; /* Glow */
-    filter: none;
-}
-
-[data-theme="dark"] .obstacle-bird, [data-theme="dark"] .bird-wing {
-    background: #f43f5e; /* Neon Red */
-    filter: drop-shadow(0 0 5px #f43f5e); /* Glow */
-}
-
-[data-theme="dark"] .rex-shape, [data-theme="dark"] .rex-leg {
-    background: #cbd5e1; /* Light Grey Dino */
-    filter: drop-shadow(0 0 5px rgba(255,255,255,0.4)); /* Glow */
-}
-
-[data-theme="dark"] .rex-eye, [data-theme="dark"] .rex-arm {
-    background: #0f172a; /* Dark Eye */
-}
-
-
-/* --- 3. ANIMATION TIMING (6 Seconds Loop) --- */
-/* (Unchanged from previous strict timing) */
-@keyframes cactusMove {
-    0%    { left: 100%; }
-    21.67% { left: 40px; } 
-    35%   { left: -20%; } 
-    100%  { left: -20%; }
-}
-@keyframes dinoJumpLoop {
-    0%, 15%  { transform: translateY(0); } 
-    21.67%    { transform: translateY(-55px); }
-    28%      { transform: translateY(0); }   
-    100%     { transform: translateY(0); }
-}
-@keyframes birdMove {
-    0%, 50%  { left: 100%; }
-    71.67%    { left: 40px; } 
-    85%      { left: -20%; }
-    100%     { left: -20%; }
-}
-@keyframes dinoDuckLoop {
-    0%, 65%  { transform: scale(1, 1); }
-    71.67%    { transform: scale(1.3, 0.5) translateY(15px); } 
-    78%      { transform: scale(1, 1); }
-    100%     { transform: scale(1, 1); }
-}
-
+/* Animation Keyframes */
+@keyframes cactusMove { 0% { left: 100%; } 21.67% { left: 40px; } 35% { left: -20%; } 100% { left: -20%; } }
+@keyframes dinoJumpLoop { 0%, 8% { transform: translateY(0); } 21.67% { transform: translateY(-55px); } 28% { transform: translateY(0); } 100% { transform: translateY(0); } }
+@keyframes birdMove { 0%, 50% { left: 100%; } 71.67% { left: 40px; } 85% { left: -20%; } 100% { left: -20%; } }
+@keyframes dinoDuckLoop { 0%, 55% { transform: scale(1, 1); } 71.67% { transform: scale(1.3, 0.5) translateY(15px); } 78% { transform: scale(1, 1); } 100% { transform: scale(1, 1); } }
 @keyframes sceneryScroll { 0% { left: 100%; } 100% { left: -20%; } }
 @keyframes groundScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 @keyframes twinkle { 0% { opacity: 0.3; } 100% { opacity: 1; } }
@@ -1022,3 +656,306 @@ body:not([data-theme="dark"]) .nav-link.active {
 @keyframes runLegs { 0% { height: 10px; transform: translateY(0); } 100% { height: 6px; transform: translateY(-4px); } }
 
 @media (max-width: 1100px) { .mid-header-animation { display: none; } }
+
+/* =========================================
+   PAGE TRANSITIONS & EFFECTS
+   ========================================= */
+
+.anim-exit { animation: slideOutLeft 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards; pointer-events: none; }
+.anim-enter { animation: slideInRight 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.anim-feedback-exit { animation: dropFadeOut 0.3s ease-in forwards; }
+.btn-enter { animation: btnPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+@keyframes slideOutLeft { 0% { opacity: 1; transform: translateX(0) scale(1); } 100% { opacity: 0; transform: translateX(-50px) scale(0.95); } }
+@keyframes slideInRight { 0% { opacity: 0; transform: translateX(50px) scale(0.95); } 100% { opacity: 1; transform: translateX(0) scale(1); } }
+@keyframes dropFadeOut { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(20px); } }
+@keyframes btnPopIn { 0% { opacity: 0; transform: translateY(10px) scale(0.9); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+
+.hidden { display: none !important; }
+
+/* =========================================
+   CUSTOM MODAL / POPUP STYLES
+   ========================================= */
+
+.custom-modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); z-index: 10000;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+}
+.custom-modal-overlay.active { opacity: 1; pointer-events: auto; }
+
+.custom-modal-card {
+    background: var(--quiz-bg-color); width: 90%; max-width: 400px; border-radius: 24px; padding: 2rem;
+    text-align: center; border: 2px solid var(--quiz-border); box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    transform: scale(0.9) translateY(20px); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.custom-modal-overlay.active .custom-modal-card { transform: scale(1) translateY(0); }
+
+.modal-header { margin-bottom: 1rem; }
+.modal-icon { font-size: 3rem; display: block; margin-bottom: 0.5rem; animation: floatIcon 3s ease-in-out infinite; }
+.modal-title { font-size: 1.5rem; font-weight: 900; color: var(--quiz-text-primary); margin: 0; text-transform: uppercase; }
+
+.modal-body p {
+    color: var(--quiz-text-primary); /* Ensures White Text in Dark Mode */
+    font-size: 1.1rem; font-weight: 600; line-height: 1.5; margin-bottom: 2rem;
+}
+
+.modal-footer { display: flex; gap: 10px; justify-content: center; }
+
+.btn-modal {
+    border: none; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 1rem;
+    cursor: pointer; transition: transform 0.2s, filter 0.2s; flex: 1;
+}
+.btn-modal:hover { transform: translateY(-2px); }
+.btn-modal:active { transform: translateY(0); }
+
+.btn-modal-primary { background: var(--game-blue); color: white; box-shadow: 0 4px 0 var(--game-blue-shadow); }
+.btn-modal-danger { background: var(--game-red); color: white; box-shadow: 0 4px 0 var(--game-red-shadow); }
+.btn-modal-secondary { background: var(--quiz-border); color: var(--quiz-text-secondary); }
+
+@keyframes floatIcon { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+/* =========================================
+   NEW: COLORFUL FLOATING BACKGROUND SHAPES
+   ========================================= */
+
+#background-shapes {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0; pointer-events: none; overflow: hidden;
+}
+
+.bg-shape {
+    position: absolute; border-radius: 50%;
+    backdrop-filter: blur(2px); mix-blend-mode: multiply; 
+    animation: shapeFloat ease-in-out forwards;
+}
+
+[data-theme="dark"] .bg-shape { mix-blend-mode: screen; filter: brightness(1.2); }
+
+@keyframes shapeFloat {
+    0% { opacity: 0; transform: scale(0.5) translateY(50px) rotate(0deg); }
+    30% { opacity: 0.6; } 70% { opacity: 0.6; }
+    100% { opacity: 0; transform: scale(1.2) translateY(-100px) rotate(45deg); }
+}
+
+/* =========================================
+   DYNAMIC ICON EFFECTS (VFX)
+   ========================================= */
+
+/* Base Icon Styling (Perfect Alignment) */
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth Transition */
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/* --- 1. LEVEL EFFECTS (Star ⭐) --- */
+/* Tier 1: Normal */
+.fx-level-1 { filter: none !important; transform: scale(1); }
+
+/* Tier 2: Gold Glow */
+.fx-level-2 { 
+    filter: drop-shadow(0 0 5px #fbbf24); 
+    transform: scale(1.1); 
+    animation: breatheGold 3s infinite ease-in-out;
+}
+
+/* Tier 3: Intense Pulse */
+.fx-level-3 { 
+    filter: drop-shadow(0 0 10px #f59e0b) brightness(1.2); 
+    transform: scale(1.25);
+    animation: starSpin 5s infinite linear; 
+}
+.fx-level-3::after {
+    content: '✨';
+    position: absolute;
+    top: -10px; right: -10px;
+    font-size: 1rem;
+    animation: sparkleBlink 0.8s infinite alternate;
+}
+
+/* Tier 4: Cosmic Spin (High Level) */
+.fx-level-4 { 
+    filter: drop-shadow(0 0 15px #d946ef) hue-rotate(30deg);
+    animation: spinSlow 4s infinite linear; 
+}
+
+/* --- 2. STREAK EFFECTS (Fire 🔥) --- */
+/* Tier 1: No Streak (Dim) */
+.fx-streak-0 { opacity: 0.3; filter: grayscale(1); transform: scale(0.9); }
+
+/* Tier 2: Lit (Orange) */
+.fx-streak-1 { 
+    opacity: 1; 
+    filter: drop-shadow(0 0 5px #f97316); 
+    transform: scale(1); 
+}
+
+/* Tier 3: Blazing (Red + Shake) */
+.fx-streak-2 { 
+    filter: drop-shadow(0 0 12px #ef4444) brightness(1.3); 
+    transform: scale(1.15);
+    animation: flicker 0.1s infinite alternate; /* Fast flicker */
+}
+
+/* Tier 4: Blue Plasma (Hottest Fire) */
+.fx-streak-3 { 
+    filter: drop-shadow(0 0 15px #3b82f6) hue-rotate(180deg) brightness(1.5); 
+    transform: scale(1.2);
+    animation: pulseBlue 1s infinite alternate; 
+}
+
+/* --- 3. POINTS EFFECTS (Diamond 💎) --- */
+/* Tier 1: Normal */
+.fx-points-1 { filter: none; }
+
+/* Tier 2: Cyan Shine */
+.fx-points-2 { 
+    filter: drop-shadow(0 0 8px #06b6d4); 
+    transform: scale(1.1); 
+}
+
+/* Tier 3: Purple Radiance */
+.fx-points-3 { 
+    filter: drop-shadow(0 0 12px #a855f7); 
+    transform: scale(1.15); 
+}
+
+/* Tier 4: Rainbow Prismatic */
+.fx-points-4 { 
+    filter: drop-shadow(0 0 15px #ec4899); 
+    animation: rainbowShift 3s infinite linear; 
+    transform: scale(1.2);
+}
+
+/* --- ANIMATIONS --- */
+@keyframes breatheGold { 0%, 100% { transform: scale(1.1); } 50% { transform: scale(1.15); } }
+@keyframes pulseBlue { 0% { transform: scale(1.2); } 100% { transform: scale(1.35); } }
+@keyframes spinSlow { 0% { transform: rotate(0deg) scale(1.2); } 100% { transform: rotate(360deg) scale(1.2); } }
+@keyframes flicker { 0% { opacity: 0.9; transform: scale(1.15) rotate(-2deg); } 100% { opacity: 1; transform: scale(1.15) rotate(2deg); } }
+@keyframes rainbowShift { 0% { filter: hue-rotate(0deg) drop-shadow(0 0 10px white); } 100% { filter: hue-rotate(360deg) drop-shadow(0 0 10px white); } }
+@keyframes starSpin { 0% { transform: rotate(0deg) scale(1.25); } 100% { transform: rotate(360deg) scale(1.25); } }
+@keyframes sparkleBlink { 0% { opacity: 0; transform: scale(0.5); } 100% { opacity: 1; transform: scale(1.2); } }
+
+/* =========================================
+   NEW: 3-STATE THEME TOGGLE (SLIDER)
+   ========================================= */
+
+/* The Floating Container */
+.theme-segmented-control {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6); /* Glass background */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    padding: 4px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode Container Background */
+:root[data-theme="dark"] .theme-segmented-control {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Hide the actual radio buttons */
+.theme-input {
+    display: none;
+}
+
+/* The Clickable Labels (Icons) */
+.theme-label {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; /* Sit on top of slider */
+    color: var(--quiz-text-secondary);
+    transition: color 0.3s ease;
+}
+
+.theme-label svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+}
+
+/* Hover Effect */
+.theme-label:hover {
+    color: var(--game-blue);
+}
+
+/* --- THE SLIDING PILL (BACKGROUND) --- */
+.theme-slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy spring effect */
+    z-index: 1;
+}
+
+:root[data-theme="dark"] .theme-slider {
+    background: #334155; /* Dark grey for dark mode */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* --- SLIDING LOGIC & COLORS --- */
+
+/* Position 1: System (Default) - No transform */
+#theme-system:checked ~ .theme-slider {
+    transform: translateX(0);
+}
+#theme-system:checked + .theme-label {
+    color: var(--game-blue);
+}
+
+/* Position 2: Light Mode - Slide Middle */
+#theme-light:checked ~ .theme-slider {
+    transform: translateX(40px); /* Move 1 icon width to right */
+}
+#theme-light:checked + .theme-label {
+    color: #f59e0b; /* Sun Yellow */
+}
+
+/* Position 3: Dark Mode - Slide Right */
+#theme-dark:checked ~ .theme-slider {
+    transform: translateX(80px); /* Move 2 icon widths to right */
+}
+/* White-Greyish Moon Icon Color */
+#theme-dark:checked + .theme-label {
+    color: #e2e8f0; 
+}
+
+/* Mobile Adjustment */
+@media (max-width: 600px) {
+    .theme-segmented-control {
+        bottom: 20px;
+        right: 20px;
+        transform: scale(0.9); /* Slightly smaller on phone */
+    }
+}

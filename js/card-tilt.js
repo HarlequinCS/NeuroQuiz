@@ -8,7 +8,7 @@ const card = document.getElementById('question-card');
 
 if (card) {
     // 1. Settings
-    const sensitivity = 20; // Tilt intensity
+    const sensitivity = 8; // Tilt intensity
     
     // 2. Create Glare Effect Layer
     const glare = document.createElement('div');
@@ -39,11 +39,11 @@ if (card) {
             // Apply 3D Tilt
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
             
-            // Apply Glare (Adjusted for smaller size)
+            // Apply Glare (SIZE REDUCED HERE)
             glare.style.background = `radial-gradient(
                 circle at ${glareX}px ${glareY}px, 
-                rgba(255, 255, 255, 0.3) 0%,   /* Slightly reduced intensity */
-                transparent 40%                /* Reduced spread (was 80%) */
+                rgba(255, 255, 255, 0.3) 0%,   
+                transparent 15%                /* CHANGED: Reduced from 40% to 15% */
             )`;
         });
     });

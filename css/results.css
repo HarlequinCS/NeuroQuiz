@@ -1318,3 +1318,270 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   ENHANCED STYLING - INSPIRED BY QUIZ.CSS
+   ========================================= */
+
+/* 1. THEME VARIABLES SETUP (Matching Quiz.css) */
+:root {
+    /* --- CORE GAME COLORS --- */
+    --game-red: #ff4b4b;    --game-red-shadow: #c50000;
+    --game-blue: #1cb0f6;   --game-blue-shadow: #118cc6;
+    --game-yellow: #ffc800; --game-yellow-shadow: #cc8e00;
+    --game-green: #2bde73;  --game-green-shadow: #1ba653;
+
+    /* --- LIGHT MODE DEFAULTS --- */
+    --page-bg-color: #4487de;            /* Vibrant Blue */
+    
+    --quiz-bg-color: #ffffff;            
+    --quiz-text-primary: #2c2c2c;        
+    --quiz-text-secondary: #4b5563;      
+    --quiz-border: rgba(0,0,0,0.1);      
+    --quiz-shadow: rgba(0,0,0,0.1);      
+    --progress-track: #e5e5e5;           
+    --brand-color: #1e293b;
+
+    /* Button Themes (Light) */
+    --hint-btn-bg: #ffffff;
+    --hint-btn-text: #6b7280;
+    --hint-btn-border: #e5e7e5;
+    --submit-btn-bg: #2c2c2c;            
+    --submit-btn-text: #ffffff;
+}
+
+/* --- DARK MODE OVERRIDES --- */
+:root[data-theme="dark"] {
+    --page-bg-color: #2e0249;            /* Deep Purple */
+    
+    --quiz-bg-color: #1a1a2e;            
+    --quiz-text-primary: #ffffff;        
+    --quiz-text-secondary: #a78bfa;      
+    --quiz-border: rgba(255,255,255,0.1);
+    --quiz-shadow: rgba(0,0,0,0.5);      
+    --progress-track: rgba(255,255,255,0.1);
+    --brand-color: #ffffff;
+
+    --hint-btn-bg: rgba(255,255,255,0.05);
+    --hint-btn-text: #cccccc;
+    --hint-btn-border: rgba(255,255,255,0.2);
+    --submit-btn-bg: #ffffff;            
+    --submit-btn-text: #2e0249;
+}
+
+/* 2. PAGE BACKGROUND (Interactive, Matching Quiz.css) */
+body {
+    background-color: var(--page-bg-color) !important;
+    background-image: none !important; 
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Canvas Styling for Neural Background */
+#neural-bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1; pointer-events: none;
+}
+
+/* 3. ENHANCED CONTAINERS WITH GLASSMORPHISM */
+.results-main {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background: transparent; /* Let body handle background */
+    position: relative;
+    z-index: 1;
+}
+
+.results-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Enhanced Cards with Glass Effect */
+section, .score-card, .quick-stat-card, .achievement-badge, .cognitive-section, .cognitive-summary-box, .cognitive-info-panel {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+[data-theme="dark"] section, [data-theme="dark"] .score-card, [data-theme="dark"] .quick-stat-card, [data-theme="dark"] .achievement-badge, [data-theme="dark"] .cognitive-section, [data-theme="dark"] .cognitive-summary-box, [data-theme="dark"] .cognitive-info-panel {
+    background: rgba(30, 30, 50, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Hover Effects for Cards */
+section:hover, .score-card:hover, .quick-stat-card:hover, .achievement-badge:hover, .cognitive-section:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 4. ENHANCED TYPOGRAPHY */
+.results-title, .section-title, .cognitive-main-title {
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 900 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="dark"] .results-title, [data-theme="dark"] .section-title, [data-theme="dark"] .cognitive-main-title {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 5. ENHANCED BUTTONS */
+.btn, .btn-primary, .btn-secondary, .btn-outline, .help-link-btn, .cognitive-info-toggle, .review-toggle {
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2) !important;
+    border-radius: 12px !important;
+}
+
+.btn:hover, .btn-primary:hover, .btn-secondary:hover, .btn-outline:hover, .help-link-btn:hover, .cognitive-info-toggle:hover, .review-toggle:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn:active, .btn-primary:active, .btn-secondary:active, .btn-outline:active {
+    transform: translateY(2px) !important;
+    box-shadow: none !important;
+}
+
+/* Specific Button Colors */
+.btn-primary {
+    background: var(--game-blue) !important;
+    color: white !important;
+    box-shadow: 0 4px 0 var(--game-blue-shadow) !important;
+}
+
+.btn-secondary {
+    background: var(--game-green) !important;
+    color: white !important;
+    box-shadow: 0 4px 0 var(--game-green-shadow) !important;
+}
+
+/* 6. ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.results-header, section, .score-section, .cognitive-primary {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Stagger animations */
+.results-header { animation-delay: 0.1s; }
+.score-section { animation-delay: 0.2s; }
+.cognitive-primary { animation-delay: 0.3s; }
+section:nth-child(2) { animation-delay: 0.4s; }
+section:nth-child(3) { animation-delay: 0.5s; }
+
+/* 7. SCORE CIRCLE ENHANCEMENT */
+.score-circle {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.score-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.3));
+}
+
+/* 8. COGNITIVE SECTION ENHANCEMENTS */
+.cognitive-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    padding: 3.5rem 2.5rem !important;
+    border-radius: 20px !important;
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4) !important;
+    margin-bottom: 3rem !important;
+    border: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.cognitive-primary::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+/* 9. RESPONSIVE ENHANCEMENTS */
+@media (max-width: 768px) {
+    .results-main {
+        padding: 1rem 0.5rem;
+    }
+    
+    section, .score-card {
+        padding: 1.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .cognitive-primary {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    .btn, .btn-primary, .btn-secondary, .btn-outline {
+        width: 100% !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+/* 10. ADDITIONAL EFFECTS */
+.card-glare {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    z-index: 2;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+}
+
+/* Add glare to main cards */
+.score-card, section, .cognitive-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.score-card::before, section::before, .cognitive-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.score-card:hover::before, section:hover::before, .cognitive-section:hover::before {
+    left: 100%;
+}

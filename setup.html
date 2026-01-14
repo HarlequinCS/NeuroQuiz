@@ -8,73 +8,21 @@
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/setup.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <style>
-        .setup-container {
-            max-width: 600px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: var(--card-bg, #fff);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .setup-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .form-group label {
-            font-weight: 600;
-            color: var(--text-primary, #333);
-        }
-        .form-group input[type="text"],
-        .form-group select {
-            padding: 0.75rem;
-            border: 2px solid var(--border-color, #ddd);
-            border-radius: 8px;
-            font-size: 1rem;
-            background: var(--bg-primary, #fff);
-            color: var(--text-primary, #333);
-        }
-        .form-group input[type="text"]:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-color, #2563eb);
-        }
-        .form-help {
-            font-size: 0.875rem;
-            color: var(--text-secondary, #666);
-            margin-top: 0.25rem;
-        }
-        .setup-actions {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .setup-title {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .setup-title h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        .setup-title p {
-            color: var(--text-secondary, #666);
-        }
-    </style>
 </head>
 <body>
+    <!-- Animated Particle Background -->
+    <div class="setup-particles"></div>
+
+    <!-- Neural Canvas -->
+    <canvas id="neural-bg"></canvas>
+
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="logo-container">
-                    <span class="brand-name">NeuroQuiz™</span>
+                    <a href="index.html" class="brand-name">NeuroQuiz™</a>
                 </div>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
@@ -94,13 +42,19 @@
 
             <form class="setup-form" id="setup-form">
                 <div class="form-group">
-                    <label for="name-input">Your Name</label>
+                    <label for="name-input">
+                        <span class="label-icon">👤</span>
+                        Your Name
+                    </label>
                     <input type="text" id="name-input" name="name" placeholder="Enter your name" required maxlength="50">
                     <div class="form-help">We'll use this to personalize your experience</div>
                 </div>
 
                 <div class="form-group">
-                    <label for="level-select">Education Level</label>
+                    <label for="level-select">
+                        <span class="label-icon">🎓</span>
+                        Education Level
+                    </label>
                     <select id="level-select" name="level" required>
                         <option value="">Select your level</option>
                         <option value="1">Elementary (Level 1)</option>
@@ -111,7 +65,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="category-select">Category</label>
+                    <label for="category-select">
+                        <span class="label-icon">📚</span>
+                        Category
+                    </label>
                     <select id="category-select" name="category" required>
                         <option value="">Select a category</option>
                         <option value="Logic">Logic</option>
@@ -124,7 +81,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="literacy-select">Literacy Level</label>
+                    <label for="literacy-select">
+                        <span class="label-icon">🧠</span>
+                        Literacy Level
+                    </label>
                     <select id="literacy-select" name="literacyLevel" required>
                         <option value="">Select your literacy level</option>
                         <option value="Beginner">Beginner</option>

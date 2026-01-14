@@ -1,0 +1,724 @@
+/* =========================================
+   NEUROQUIZ™ - SETUP PAGE STYLES
+   Enhanced with modern design elements
+   ========================================= */
+
+/* =========================================
+   THEME VARIABLES & SETUP
+   ========================================= */
+
+:root {
+    /* --- LIGHT MODE DEFAULTS --- */
+    --page-bg-color: #4487de;            /* Vibrant Blue */
+    --quiz-bg-color: #ffffff;
+    --quiz-text-primary: #2c2c2c;
+    --quiz-text-secondary: #4b5563;
+    --quiz-border: rgba(0,0,0,0.1);
+    --quiz-shadow: rgba(0,0,0,0.1);
+    --progress-track: #e5e5e5;
+    --brand-color: #1e293b;
+
+    /* Button Themes (Light) */
+    --hint-btn-bg: #ffffff;
+    --hint-btn-text: #6b7280;
+    --hint-btn-border: #e5e7eb;
+    --submit-btn-bg: #2c2c2c;
+    --submit-btn-text: #ffffff;
+
+    /* Core Game Colors */
+    --game-red: #ff4b4b;
+    --game-red-shadow: #c50000;
+    --game-blue: #1cb0f6;
+    --game-blue-shadow: #118cc6;
+    --game-yellow: #ffc800;
+    --game-yellow-shadow: #cc8e00;
+    --game-green: #2bde73;
+    --game-green-shadow: #1ba653;
+}
+
+/* --- DARK MODE OVERRIDES --- */
+[data-theme="dark"] {
+    --page-bg-color: #2e0249;            /* Deep Purple */
+    --quiz-bg-color: #1a1a2e;
+    --quiz-text-primary: #ffffff;
+    --quiz-text-secondary: #a78bfa;
+    --quiz-border: rgba(255,255,255,0.1);
+    --quiz-shadow: rgba(0,0,0,0.5);
+    --progress-track: rgba(255,255,255,0.1);
+    --brand-color: #ffffff;
+
+    --hint-btn-bg: rgba(255,255,255,0.05);
+    --hint-btn-text: #cccccc;
+    --hint-btn-border: rgba(255,255,255,0.2);
+    --submit-btn-bg: #ffffff;
+    --submit-btn-text: #2e0249;
+}
+
+/* =========================================
+   LIGHT MODE SPECIFIC STYLES
+   ========================================= */
+
+.header {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header .brand-name {
+    color: #000000 !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+.header .brand-name:hover {
+    color: #0066cc !important;
+}
+
+.setup-container {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.setup-container::before {
+    opacity: 0.3;
+}
+
+.form-group label {
+    color: var(--quiz-text-primary) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: var(--quiz-border) !important;
+    color: var(--quiz-text-primary) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-help {
+    color: var(--quiz-text-secondary) !important;
+}
+
+.setup-title h1 {
+    background: linear-gradient(135deg, #0066cc, #00aa44, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #0066cc; /* Darker fallback color */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.setup-title p {
+    color: var(--quiz-text-secondary) !important;
+}
+
+.setup-container::after {
+    background: radial-gradient(circle, rgba(28, 176, 246, 0.1) 0%, transparent 70%);
+}
+
+.setup-container::before {
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+}
+
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   DARK MODE SPECIFIC STYLES
+   ========================================= */
+
+[data-theme="dark"] .header {
+    background: rgba(31, 41, 55, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .header .brand-name {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .header .brand-name:hover {
+    color: #60a5fa !important;
+}
+
+[data-theme="dark"] .setup-container {
+    background: rgba(30, 30, 50, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .setup-container::before {
+    opacity: 0.5;
+}
+
+[data-theme="dark"] .form-group label {
+    color: var(--quiz-text-primary) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .form-group input[type="text"],
+[data-theme="dark"] .form-group select {
+    background: rgba(30, 30, 50, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: var(--quiz-text-primary) !important;
+}
+
+[data-theme="dark"] .form-help {
+    color: var(--quiz-text-secondary) !important;
+}
+
+[data-theme="dark"] .setup-title h1 {
+    background: linear-gradient(135deg, #60a5fa, #34d399, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #60a5fa; /* Fallback color */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .setup-title p {
+    color: var(--quiz-text-secondary) !important;
+}
+
+[data-theme="dark"] .setup-container::after {
+    background: radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .setup-container::before {
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: rgba(31, 41, 55, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: rgba(31, 41, 55, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   GENERAL STYLES (Apply to Both Themes)
+   ========================================= */
+
+/* 2. PAGE BACKGROUND (Interactive) */
+body {
+    background-color: var(--page-bg-color) !important;
+    background-image: none !important;
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Canvas Styling */
+#neural-bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1; pointer-events: none;
+}
+
+/* Video Background Styling */
+.setup-video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.4;
+    filter: blur(1px) brightness(0.7);
+    transition: opacity 0.3s ease;
+}
+
+.setup-video-bg:hover {
+    opacity: 0.6;
+}
+
+/* Alternative: Animated particle background if no video */
+.setup-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: linear-gradient(45deg, var(--page-bg-color), var(--game-blue));
+    overflow: hidden;
+}
+
+.setup-particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    animation: particleFloat 8s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* 3. ENHANCED SETUP CONTAINER */
+.setup-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-radius: 20px !important;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out;
+    transition: all 0.3s ease;
+}
+
+.setup-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Add glare effect */
+.setup-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.setup-container:hover::before {
+    left: 100%;
+}
+
+/* 4. ENHANCED FORM STYLES */
+.setup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    animation: slideInUp 0.6s ease-out both;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+
+.form-group input[type="text"],
+.form-group select {
+    padding: 1rem !important;
+    border: 2px solid var(--quiz-border) !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    backdrop-filter: blur(10px) !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    outline: none !important;
+    border-color: var(--game-blue) !important;
+    box-shadow: 0 0 0 3px rgba(28, 176, 246, 0.2), 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px) !important;
+}
+
+.form-help {
+    font-size: 0.875rem !important;
+    margin-top: 0.25rem !important;
+    font-style: italic !important;
+    animation: fadeIn 0.5s ease-out 0.5s both;
+}
+
+/* 5. ENHANCED ACTIONS */
+.setup-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.setup-actions button,
+.setup-actions a {
+    padding: 1rem 2rem !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2) !important;
+    position: relative;
+    overflow: hidden;
+    animation: btnPopIn 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.setup-actions button:nth-child(1),
+.setup-actions a:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.setup-actions button:nth-child(2),
+.setup-actions a:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.setup-actions button:hover,
+.setup-actions a:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15), 0 0 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.setup-actions button:active,
+.setup-actions a:active {
+    transform: translateY(3px) !important;
+    box-shadow: none !important;
+}
+
+/* Primary button */
+.setup-actions button[type="submit"],
+.setup-actions a[href*="quiz"] {
+    background: var(--game-green) !important;
+    color: white !important;
+    box-shadow: 0 6px 0 var(--game-green-shadow) !important;
+}
+
+/* Secondary button */
+.setup-actions button[type="button"],
+.setup-actions a:not([href*="quiz"]) {
+    background: var(--game-red) !important;
+    color: white !important;
+    box-shadow: 0 6px 0 var(--game-red-shadow) !important;
+}
+
+/* 6. ENHANCED TITLE */
+.setup-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.setup-title h1 {
+    font-size: 2.5rem !important;
+    margin-bottom: 0.5rem !important;
+    font-weight: 900 !important;
+    text-align: center;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    from { filter: drop-shadow(0 0 5px rgba(28, 176, 246, 0.5)); }
+    to { filter: drop-shadow(0 0 20px rgba(28, 176, 246, 0.8)); }
+}
+
+.setup-title p {
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    text-align: center;
+    font-style: italic;
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+/* 7. ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes btnPopIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 8. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .setup-container {
+        margin: 1rem auto !important;
+        padding: 1.5rem !important;
+        max-width: 90% !important;
+    }
+
+    .setup-title h1 {
+        font-size: 2rem !important;
+    }
+
+    .setup-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .setup-actions button,
+    .setup-actions a {
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .setup-container {
+        padding: 1rem !important;
+    }
+
+    .setup-title h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .form-group input[type="text"],
+    .form-group select {
+        padding: 0.875rem !important;
+    }
+}
+
+/* 9. ADDITIONAL VISUAL EFFECTS */
+.setup-container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(5deg); }
+}
+
+/* Focus ring for accessibility */
+.form-group input[type="text"]:focus::after,
+.form-group select:focus::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 14px;
+    background: linear-gradient(45deg, var(--game-blue), var(--game-green));
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Select Options Styling */
+.form-group select option {
+    padding: 0.75rem 1rem !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    border: 1px solid transparent !important;
+    margin: 2px 0 !important;
+    position: relative !important;
+}
+
+/* =========================================
+   FORM GROUP ANIMATIONS & EFFECTS
+   ========================================= */
+
+/* =========================================
+   ENHANCED BUTTON STYLING
+   ========================================= */
+
+.setup-actions::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--game-blue), transparent);
+    opacity: 0.5;
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(28, 176, 246, 0.4);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--color-error), var(--color-error-dark));
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+}
+
+/* =========================================
+   THEME TOGGLE ENHANCEMENT
+   ========================================= */
+
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* =========================================
+   CONTAINER GLOW EFFECT
+   ========================================= */
+
+.setup-container::before {
+    background: linear-gradient(45deg, var(--game-blue), var(--game-green), var(--game-purple), var(--game-blue));
+    border-radius: 20px;
+    z-index: -1;
+    filter: blur(8px);
+    animation: glowRotate 3s linear infinite;
+}
+
+@keyframes glowRotate {
+    0% { filter: hue-rotate(0deg) blur(8px); }
+    100% { filter: hue-rotate(360deg) blur(8px); }
+}
+
+/* =========================================
+   LABEL ICONS & ENHANCED LABELS
+   ========================================= */
+
+.label-icon {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 0.5rem !important;
+    transition: color 0.3s ease;
+}

@@ -1,0 +1,4502 @@
+[
+  {
+    "id": 2001,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If all cats are animals, and Fluffy is a cat, then Fluffy is...",
+    "options": [
+      "an animal",
+      "a bird",
+      "a dog",
+      "not an animal"
+    ],
+    "answer": 0,
+    "explanation": "If all cats are animals and Fluffy is a cat, then Fluffy must be an animal"
+  },
+  {
+    "id": 2002,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What comes next: 2, 4, 6, 8, ?",
+    "options": [
+      "12",
+      "11",
+      "10",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "The pattern increases by 2 each time, so 8 + 2 = 10"
+  },
+  {
+    "id": 2003,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If today is Monday, what day will it be in 3 days?",
+    "options": [
+      "Thursday",
+      "Saturday",
+      "Friday",
+      "Wednesday"
+    ],
+    "answer": 0,
+    "explanation": "Monday + 3 days = Thursday"
+  },
+  {
+    "id": 2004,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which shape has 4 equal sides?",
+    "options": [
+      "Square",
+      "Rectangle",
+      "Circle",
+      "Triangle"
+    ],
+    "answer": 0,
+    "explanation": "A square has 4 equal sides"
+  },
+  {
+    "id": 2005,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If you have 5 apples and eat 2, how many are left?",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "5 - 2 = 3 apples"
+  },
+  {
+    "id": 2006,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What comes next: A, B, C, D, ?",
+    "options": [
+      "E",
+      "H",
+      "G",
+      "F"
+    ],
+    "answer": 0,
+    "explanation": "The pattern follows the alphabet, so next is E"
+  },
+  {
+    "id": 2007,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If all birds can fly, and a penguin is a bird, can a penguin fly?",
+    "options": [
+      "Sometimes",
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    "answer": 2,
+    "explanation": "This is a trick question - penguins are birds but cannot fly"
+  },
+  {
+    "id": 2008,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which number is odd?",
+    "options": [
+      "6",
+      "5",
+      "2",
+      "4"
+    ],
+    "answer": 1,
+    "explanation": "5 is an odd number (not divisible by 2)"
+  },
+  {
+    "id": 2009,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If red means stop and green means go, what does yellow mean?",
+    "options": [
+      "Go",
+      "Stop",
+      "Turn",
+      "Slow down"
+    ],
+    "answer": 3,
+    "explanation": "Yellow typically means slow down or prepare to stop"
+  },
+  {
+    "id": 2010,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What comes next: 1, 3, 5, 7, ?",
+    "options": [
+      "11",
+      "10",
+      "9",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "The pattern shows odd numbers, so next is 9"
+  },
+  {
+    "id": 2011,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If you face north and turn right, which direction are you facing?",
+    "options": [
+      "South",
+      "West",
+      "North",
+      "East"
+    ],
+    "answer": 3,
+    "explanation": "Turning right from north faces you east"
+  },
+  {
+    "id": 2012,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which comes first: breakfast, lunch, or dinner?",
+    "options": [
+      "Dinner",
+      "Lunch",
+      "Breakfast",
+      "They're the same"
+    ],
+    "answer": 2,
+    "explanation": "Breakfast comes first in the day"
+  },
+  {
+    "id": 2013,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What comes next: 10, 20, 30, 40, ?",
+    "options": [
+      "60",
+      "45",
+      "55",
+      "50"
+    ],
+    "answer": 3,
+    "explanation": "The pattern increases by 10, so 40 + 10 = 50"
+  },
+  {
+    "id": 2014,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If all roses are flowers, and this is a rose, then this is...",
+    "options": [
+      "an animal",
+      "not a flower",
+      "a tree",
+      "a flower"
+    ],
+    "answer": 3,
+    "explanation": "If all roses are flowers and this is a rose, it must be a flower"
+  },
+  {
+    "id": 2015,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which is bigger: a cat or a mouse?",
+    "options": [
+      "Same size",
+      "Cat",
+      "Mouse",
+      "Cannot tell"
+    ],
+    "answer": 1,
+    "explanation": "Generally, cats are bigger than mice"
+  },
+  {
+    "id": 2016,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What comes next: O, T, T, F, F, ?",
+    "options": [
+      "V",
+      "T",
+      "S",
+      "U"
+    ],
+    "answer": 2,
+    "explanation": "This is the pattern of numbers: One, Two, Three, Four, Five, so next is S (Six)"
+  },
+  {
+    "id": 2017,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If you have 3 cookies and get 2 more, how many do you have?",
+    "options": [
+      "5",
+      "7",
+      "4",
+      "6"
+    ],
+    "answer": 0,
+    "explanation": "3 + 2 = 5 cookies"
+  },
+  {
+    "id": 2018,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which season comes after winter?",
+    "options": [
+      "Winter again",
+      "Fall",
+      "Summer",
+      "Spring"
+    ],
+    "answer": 3,
+    "explanation": "Spring comes after winter"
+  },
+  {
+    "id": 2019,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What comes next: 5, 10, 15, 20, ?",
+    "options": [
+      "30",
+      "25",
+      "27",
+      "22"
+    ],
+    "answer": 1,
+    "explanation": "The pattern increases by 5, so 20 + 5 = 25"
+  },
+  {
+    "id": 2020,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If all dogs bark, and Max is a dog, does Max bark?",
+    "options": [
+      "No",
+      "Yes",
+      "Maybe",
+      "Sometimes"
+    ],
+    "answer": 1,
+    "explanation": "If all dogs bark and Max is a dog, then Max barks"
+  },
+  {
+    "id": 2021,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which number is even?",
+    "options": [
+      "8",
+      "7",
+      "5",
+      "3"
+    ],
+    "answer": 0,
+    "explanation": "8 is an even number (divisible by 2)"
+  },
+  {
+    "id": 2022,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What comes next: 100, 200, 300, 400, ?",
+    "options": [
+      "500",
+      "600",
+      "450",
+      "550"
+    ],
+    "answer": 0,
+    "explanation": "The pattern increases by 100, so 400 + 100 = 500"
+  },
+  {
+    "id": 2023,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If you're facing east and turn left, which direction are you facing?",
+    "options": [
+      "West",
+      "East",
+      "South",
+      "North"
+    ],
+    "answer": 3,
+    "explanation": "Turning left from east faces you north"
+  },
+  {
+    "id": 2024,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which is smaller: an elephant or a mouse?",
+    "options": [
+      "Mouse",
+      "Elephant",
+      "Same size",
+      "Cannot tell"
+    ],
+    "answer": 0,
+    "explanation": "A mouse is much smaller than an elephant"
+  },
+  {
+    "id": 2025,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What comes next: 1, 2, 4, 8, ?",
+    "options": [
+      "10",
+      "16",
+      "12",
+      "20"
+    ],
+    "answer": 1,
+    "explanation": "The pattern doubles each time, so 8 × 2 = 16"
+  },
+  {
+    "id": 2026,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If all fish live in water, and Nemo is a fish, where does Nemo live?",
+    "options": [
+      "In water",
+      "Underground",
+      "In the sky",
+      "On land"
+    ],
+    "answer": 0,
+    "explanation": "If all fish live in water and Nemo is a fish, Nemo lives in water"
+  },
+  {
+    "id": 2027,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which comes last: morning, afternoon, or evening?",
+    "options": [
+      "They're the same",
+      "Evening",
+      "Afternoon",
+      "Morning"
+    ],
+    "answer": 1,
+    "explanation": "Evening comes last in the day"
+  },
+  {
+    "id": 2028,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What comes next: 0, 1, 1, 2, 3, 5, ?",
+    "options": [
+      "8",
+      "9",
+      "7",
+      "6"
+    ],
+    "answer": 0,
+    "explanation": "This is the Fibonacci sequence where each number is the sum of the two before it: 3 + 5 = 8"
+  },
+  {
+    "id": 2029,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If you have 10 toys and give away 4, how many are left?",
+    "options": [
+      "7",
+      "5",
+      "6",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "10 - 4 = 6 toys"
+  },
+  {
+    "id": 2030,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which shape has 3 sides?",
+    "options": [
+      "Rectangle",
+      "Square",
+      "Circle",
+      "Triangle"
+    ],
+    "answer": 3,
+    "explanation": "A triangle has 3 sides"
+  },
+  {
+    "id": 2031,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What comes next: 50, 45, 40, 35, ?",
+    "options": [
+      "32",
+      "34",
+      "33",
+      "30"
+    ],
+    "answer": 3,
+    "explanation": "The pattern decreases by 5, so 35 - 5 = 30"
+  },
+  {
+    "id": 2032,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If all books have pages, and this is a book, then this has...",
+    "options": [
+      "no pages",
+      "wheels",
+      "pages",
+      "wings"
+    ],
+    "answer": 2,
+    "explanation": "If all books have pages and this is a book, it has pages"
+  },
+  {
+    "id": 2033,
+    "level": 1,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which is faster: walking or running?",
+    "options": [
+      "Walking",
+      "Same speed",
+      "Running",
+      "Cannot tell"
+    ],
+    "answer": 2,
+    "explanation": "Running is generally faster than walking"
+  },
+  {
+    "id": 2034,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If A > B and B > C, then A is...",
+    "options": [
+      "Less than C",
+      "Cannot determine",
+      "Greater than C",
+      "Equal to C"
+    ],
+    "answer": 2,
+    "explanation": "If A > B and B > C, then by transitivity, A > C"
+  },
+  {
+    "id": 2035,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 1, 4, 9, 16, ?",
+    "options": [
+      "20",
+      "25",
+      "35",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "These are perfect squares: 1², 2², 3², 4², so next is 5² = 25"
+  },
+  {
+    "id": 2036,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If all students study, and some students play sports, then...",
+    "options": [
+      "Some students both study and play sports",
+      "All students play sports",
+      "No students play sports",
+      "Cannot determine"
+    ],
+    "answer": 0,
+    "explanation": "Some students can both study and play sports"
+  },
+  {
+    "id": 2037,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "A farmer has 17 sheep. All but 9 die. How many are left?",
+    "options": [
+      "8",
+      "17",
+      "9",
+      "26"
+    ],
+    "answer": 2,
+    "explanation": "'All but 9 die' means 9 are left alive"
+  },
+  {
+    "id": 2038,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 2, 6, 12, 20, ?",
+    "options": [
+      "28",
+      "32",
+      "30",
+      "34"
+    ],
+    "answer": 2,
+    "explanation": "The pattern is n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20, so 5×6=30"
+  },
+  {
+    "id": 2039,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If today is Wednesday, what day was it 2 days ago?",
+    "options": [
+      "Thursday",
+      "Tuesday",
+      "Monday",
+      "Friday"
+    ],
+    "answer": 2,
+    "explanation": "Wednesday - 2 days = Monday"
+  },
+  {
+    "id": 2040,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: Z, Y, X, W, ?",
+    "options": [
+      "V",
+      "T",
+      "U",
+      "S"
+    ],
+    "answer": 0,
+    "explanation": "The pattern goes backwards through the alphabet, so next is V"
+  },
+  {
+    "id": 2041,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If all apples are fruits, and some fruits are red, then...",
+    "options": [
+      "All apples are red",
+      "Cannot determine",
+      "No apples are red",
+      "Some apples are red"
+    ],
+    "answer": 3,
+    "explanation": "Some apples could be red, but not necessarily all"
+  },
+  {
+    "id": 2042,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 1, 8, 27, 64, ?",
+    "options": [
+      "175",
+      "125",
+      "150",
+      "100"
+    ],
+    "answer": 1,
+    "explanation": "These are perfect cubes: 1³, 2³, 3³, 4³, so next is 5³ = 125"
+  },
+  {
+    "id": 2043,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If you're facing north and turn right twice, which direction are you facing?",
+    "options": [
+      "North",
+      "South",
+      "East",
+      "West"
+    ],
+    "answer": 1,
+    "explanation": "North → right (East) → right (South)"
+  },
+  {
+    "id": 2044,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 3, 6, 12, 24, ?",
+    "options": [
+      "36",
+      "50",
+      "48",
+      "52"
+    ],
+    "answer": 2,
+    "explanation": "The pattern doubles each time, so 24 × 2 = 48"
+  },
+  {
+    "id": 2045,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If all birds have wings, and a penguin is a bird, then a penguin has...",
+    "options": [
+      "no wings",
+      "wings",
+      "cannot determine",
+      "fins"
+    ],
+    "answer": 1,
+    "explanation": "If all birds have wings and a penguin is a bird, it has wings (even if it doesn't fly)"
+  },
+  {
+    "id": 2046,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 1, 3, 6, 10, ?",
+    "options": [
+      "15",
+      "17",
+      "13",
+      "19"
+    ],
+    "answer": 0,
+    "explanation": "These are triangular numbers: 1, 1+2=3, 1+2+3=6, 1+2+3+4=10, so 1+2+3+4+5=15"
+  },
+  {
+    "id": 2047,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If A = B and B = C, then A is...",
+    "options": [
+      "Greater than C",
+      "Cannot determine",
+      "Equal to C",
+      "Less than C"
+    ],
+    "answer": 2,
+    "explanation": "By transitivity, if A = B and B = C, then A = C"
+  },
+  {
+    "id": 2048,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 5, 25, 125, 625, ?",
+    "options": [
+      "4000",
+      "3500",
+      "3000",
+      "3125"
+    ],
+    "answer": 3,
+    "explanation": "The pattern multiplies by 5 each time: 5, 25, 125, 625, so 625 × 5 = 3125"
+  },
+  {
+    "id": 2049,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If you have 3 red balls and 2 blue balls, what's the probability of picking a red ball?",
+    "options": [
+      "1/5",
+      "2/5",
+      "4/5",
+      "3/5"
+    ],
+    "answer": 3,
+    "explanation": "3 red out of 5 total = 3/5 probability"
+  },
+  {
+    "id": 2050,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 1, 2, 4, 7, 11, ?",
+    "options": [
+      "17",
+      "16",
+      "15",
+      "14"
+    ],
+    "answer": 1,
+    "explanation": "The differences increase by 1: +1, +2, +3, +4, so +5 gives 16"
+  },
+  {
+    "id": 2051,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If all squares are rectangles, and this is a square, then this is...",
+    "options": [
+      "not a rectangle",
+      "cannot determine",
+      "a rectangle",
+      "a circle"
+    ],
+    "answer": 2,
+    "explanation": "If all squares are rectangles and this is a square, it is a rectangle"
+  },
+  {
+    "id": 2052,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 10, 20, 40, 80, ?",
+    "options": [
+      "120",
+      "240",
+      "160",
+      "200"
+    ],
+    "answer": 2,
+    "explanation": "The pattern doubles each time, so 80 × 2 = 160"
+  },
+  {
+    "id": 2053,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If you're facing south and turn left three times, which direction are you facing?",
+    "options": [
+      "North",
+      "South",
+      "West",
+      "East"
+    ],
+    "answer": 2,
+    "explanation": "South → left (East) → left (North) → left (West)"
+  },
+  {
+    "id": 2054,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 2, 5, 10, 17, ?",
+    "options": [
+      "26",
+      "24",
+      "30",
+      "28"
+    ],
+    "answer": 0,
+    "explanation": "The pattern adds odd numbers: +3, +5, +7, so +9 gives 26"
+  },
+  {
+    "id": 2055,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If all dogs are mammals, and some mammals are pets, then...",
+    "options": [
+      "Some dogs are pets",
+      "All dogs are pets",
+      "Cannot determine",
+      "No dogs are pets"
+    ],
+    "answer": 0,
+    "explanation": "Some dogs could be pets, but not necessarily all"
+  },
+  {
+    "id": 2056,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 1, 4, 13, 40, ?",
+    "options": [
+      "100",
+      "169",
+      "144",
+      "121"
+    ],
+    "answer": 3,
+    "explanation": "Pattern: 1×3+1=4, 4×3+1=13, 13×3+1=40, so 40×3+1=121"
+  },
+  {
+    "id": 2057,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If A is taller than B, and B is taller than C, then A is...",
+    "options": [
+      "Shorter than C",
+      "Cannot determine",
+      "Taller than C",
+      "Same height as C"
+    ],
+    "answer": 2,
+    "explanation": "By transitivity, if A > B and B > C, then A > C"
+  },
+  {
+    "id": 2058,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 7, 14, 28, 56, ?",
+    "options": [
+      "128",
+      "100",
+      "120",
+      "112"
+    ],
+    "answer": 3,
+    "explanation": "The pattern doubles each time, so 56 × 2 = 112"
+  },
+  {
+    "id": 2059,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If you flip a coin twice, what's the probability of getting heads both times?",
+    "options": [
+      "1/3",
+      "1/4",
+      "1/5",
+      "1/2"
+    ],
+    "answer": 1,
+    "explanation": "Probability of two independent events: (1/2) × (1/2) = 1/4"
+  },
+  {
+    "id": 2060,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 0, 1, 3, 6, 10, ?",
+    "options": [
+      "17",
+      "19",
+      "13",
+      "15"
+    ],
+    "answer": 3,
+    "explanation": "Triangular numbers: differences increase by 1, so +5 gives 15"
+  },
+  {
+    "id": 2061,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If all teachers are educated, and some teachers are kind, then...",
+    "options": [
+      "All teachers are kind",
+      "No teachers are kind",
+      "Some teachers are both educated and kind",
+      "Cannot determine"
+    ],
+    "answer": 2,
+    "explanation": "Some teachers can be both educated and kind"
+  },
+  {
+    "id": 2062,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 11, 22, 44, 88, ?",
+    "options": [
+      "166",
+      "176",
+      "186",
+      "196"
+    ],
+    "answer": 1,
+    "explanation": "The pattern doubles each time, so 88 × 2 = 176"
+  },
+  {
+    "id": 2063,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If you're facing west and turn right four times, which direction are you facing?",
+    "options": [
+      "West",
+      "South",
+      "North",
+      "East"
+    ],
+    "answer": 0,
+    "explanation": "Four right turns = full circle, so back to West"
+  },
+  {
+    "id": 2064,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What comes next: 1, 5, 13, 25, ?",
+    "options": [
+      "41",
+      "45",
+      "50",
+      "38"
+    ],
+    "answer": 0,
+    "explanation": "Differences: +4, +8, +12, so +16 gives 41"
+  },
+  {
+    "id": 2065,
+    "level": 1,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If all cars have wheels, and this vehicle has wheels, then...",
+    "options": [
+      "This might be a car",
+      "Cannot determine",
+      "This is not a car",
+      "This is definitely a car"
+    ],
+    "answer": 0,
+    "explanation": "Having wheels doesn't guarantee it's a car (could be a bike, etc.)"
+  },
+  {
+    "id": 2066,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If all A are B, and no B are C, then...",
+    "options": [
+      "Cannot determine",
+      "No A are C",
+      "Some A are C",
+      "All A are C"
+    ],
+    "answer": 1,
+    "explanation": "If all A are B and no B are C, then no A can be C"
+  },
+  {
+    "id": 2067,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 1, 1, 2, 3, 5, 8, 13, ?",
+    "options": [
+      "21",
+      "18",
+      "22",
+      "20"
+    ],
+    "answer": 0,
+    "explanation": "Fibonacci sequence: each number is sum of previous two, so 8 + 13 = 21"
+  },
+  {
+    "id": 2068,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If some A are B, and all B are C, then...",
+    "options": [
+      "No A are C",
+      "Cannot determine",
+      "All A are C",
+      "Some A are C"
+    ],
+    "answer": 3,
+    "explanation": "If some A are B and all B are C, then some A must be C"
+  },
+  {
+    "id": 2069,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 2, 3, 5, 7, 11, 13, ?",
+    "options": [
+      "19",
+      "15",
+      "21",
+      "17"
+    ],
+    "answer": 3,
+    "explanation": "These are prime numbers, so next is 17"
+  },
+  {
+    "id": 2070,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "A clock shows 3:15. What is the angle between the hands?",
+    "options": [
+      "7.5°",
+      "30°",
+      "0°",
+      "15°"
+    ],
+    "answer": 0,
+    "explanation": "At 3:15, hour hand is at 97.5°, minute hand at 90°, difference = 7.5°"
+  },
+  {
+    "id": 2071,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 1, 2, 6, 24, 120, ?",
+    "options": [
+      "960",
+      "600",
+      "720",
+      "840"
+    ],
+    "answer": 2,
+    "explanation": "These are factorials: 1!, 2!, 3!, 4!, 5!, so next is 6! = 720"
+  },
+  {
+    "id": 2072,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If all X are Y, and some Y are Z, then...",
+    "options": [
+      "All X are Z",
+      "Cannot determine",
+      "No X are Z",
+      "Some X are Z"
+    ],
+    "answer": 1,
+    "explanation": "We cannot determine if any X are Z from this information"
+  },
+  {
+    "id": 2073,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 1, 3, 7, 15, 31, ?",
+    "options": [
+      "65",
+      "60",
+      "67",
+      "63"
+    ],
+    "answer": 3,
+    "explanation": "Pattern: 2ⁿ - 1, so 2⁶ - 1 = 63"
+  },
+  {
+    "id": 2074,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If A implies B, and B implies C, then A implies...",
+    "options": [
+      "Neither",
+      "Both B and C",
+      "C",
+      "B"
+    ],
+    "answer": 2,
+    "explanation": "By transitivity of implication, if A→B and B→C, then A→C"
+  },
+  {
+    "id": 2075,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 0, 1, 1, 2, 1, 3, 1, 4, 1, ?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "7"
+    ],
+    "answer": 2,
+    "explanation": "Pattern alternates: 0, then 1,1, then 2,1, then 3,1, then 4,1, so next is 5"
+  },
+  {
+    "id": 2076,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If not all A are B, then...",
+    "options": [
+      "Some A are not B",
+      "Cannot determine",
+      "No A are B",
+      "All A are not B"
+    ],
+    "answer": 0,
+    "explanation": "'Not all A are B' means some A are not B"
+  },
+  {
+    "id": 2077,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 1, 4, 10, 20, 35, ?",
+    "options": [
+      "50",
+      "64",
+      "60",
+      "56"
+    ],
+    "answer": 3,
+    "explanation": "Differences of differences: +3, +6, +10, +15, so next difference +21 gives 56"
+  },
+  {
+    "id": 2078,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If A and B are both true, and B or C is true, then...",
+    "options": [
+      "C must be true",
+      "Cannot determine",
+      "C is false",
+      "C might be true"
+    ],
+    "answer": 3,
+    "explanation": "If B is true, then 'B or C' is true regardless of C, so C might be true or false"
+  },
+  {
+    "id": 2079,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 2, 6, 18, 54, ?",
+    "options": [
+      "150",
+      "186",
+      "162",
+      "174"
+    ],
+    "answer": 2,
+    "explanation": "The pattern multiplies by 3 each time, so 54 × 3 = 162"
+  },
+  {
+    "id": 2080,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If A is necessary for B, and B is necessary for C, then A is...",
+    "options": [
+      "Not related to C",
+      "Cannot determine",
+      "Necessary for C",
+      "Sufficient for C"
+    ],
+    "answer": 2,
+    "explanation": "If A is necessary for B and B is necessary for C, then A is necessary for C"
+  },
+  {
+    "id": 2081,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 1, 2, 4, 8, 16, 32, ?",
+    "options": [
+      "68",
+      "72",
+      "60",
+      "64"
+    ],
+    "answer": 3,
+    "explanation": "Powers of 2: 2⁰, 2¹, 2², 2³, 2⁴, 2⁵, so next is 2⁶ = 64"
+  },
+  {
+    "id": 2082,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If all A are B, and some B are not C, then...",
+    "options": [
+      "Cannot determine",
+      "No A are C",
+      "Some A are not C",
+      "All A are C"
+    ],
+    "answer": 0,
+    "explanation": "We cannot determine the relationship between A and C"
+  },
+  {
+    "id": 2083,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 3, 9, 27, 81, ?",
+    "options": [
+      "260",
+      "250",
+      "240",
+      "243"
+    ],
+    "answer": 3,
+    "explanation": "Powers of 3: 3¹, 3², 3³, 3⁴, so next is 3⁵ = 243"
+  },
+  {
+    "id": 2084,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If A if and only if B, and B if and only if C, then A if and only if...",
+    "options": [
+      "C",
+      "Both",
+      "B",
+      "Neither"
+    ],
+    "answer": 0,
+    "explanation": "By transitivity of biconditional, A ↔ B and B ↔ C implies A ↔ C"
+  },
+  {
+    "id": 2085,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 1, 5, 14, 30, 55, ?",
+    "options": [
+      "91",
+      "95",
+      "100",
+      "85"
+    ],
+    "answer": 0,
+    "explanation": "Differences: +4, +9, +16, +25 (squares), so +36 gives 91"
+  },
+  {
+    "id": 2086,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If not (A and B), then...",
+    "options": [
+      "Not A or not B",
+      "Cannot determine",
+      "Not A and not B",
+      "A or B"
+    ],
+    "answer": 0,
+    "explanation": "By De Morgan's law, not (A and B) = (not A) or (not B)"
+  },
+  {
+    "id": 2087,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 0, 1, 4, 9, 16, 25, ?",
+    "options": [
+      "36",
+      "34",
+      "40",
+      "38"
+    ],
+    "answer": 0,
+    "explanation": "Perfect squares: 0², 1², 2², 3², 4², 5², so next is 6² = 36"
+  },
+  {
+    "id": 2088,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If A or B is true, and A is false, then...",
+    "options": [
+      "Cannot determine",
+      "B might be true",
+      "B must be false",
+      "B must be true"
+    ],
+    "answer": 3,
+    "explanation": "If 'A or B' is true and A is false, then B must be true"
+  },
+  {
+    "id": 2089,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 1, 8, 27, 64, 125, ?",
+    "options": [
+      "225",
+      "250",
+      "200",
+      "216"
+    ],
+    "answer": 3,
+    "explanation": "Perfect cubes: 1³, 2³, 3³, 4³, 5³, so next is 6³ = 216"
+  },
+  {
+    "id": 2090,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If A implies B, and not B, then...",
+    "options": [
+      "Cannot determine",
+      "Not A",
+      "B is true",
+      "A is true"
+    ],
+    "answer": 1,
+    "explanation": "By modus tollens, if A→B and not B, then not A"
+  },
+  {
+    "id": 2091,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 2, 5, 11, 23, 47, ?",
+    "options": [
+      "105",
+      "100",
+      "90",
+      "95"
+    ],
+    "answer": 3,
+    "explanation": "Pattern: multiply by 2 and add 1, so 47 × 2 + 1 = 95"
+  },
+  {
+    "id": 2092,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If all A are B, and no A are C, then...",
+    "options": [
+      "Some B are not C",
+      "All B are C",
+      "Cannot determine",
+      "No B are C"
+    ],
+    "answer": 0,
+    "explanation": "If all A are B and no A are C, then some B (the A's) are not C"
+  },
+  {
+    "id": 2093,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 1, 3, 9, 27, 81, ?",
+    "options": [
+      "243",
+      "260",
+      "240",
+      "250"
+    ],
+    "answer": 0,
+    "explanation": "Powers of 3: 3⁰, 3¹, 3², 3³, 3⁴, so next is 3⁵ = 243"
+  },
+  {
+    "id": 2094,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If A and B are mutually exclusive, and A is true, then...",
+    "options": [
+      "B might be true",
+      "B must be true",
+      "B must be false",
+      "Cannot determine"
+    ],
+    "answer": 2,
+    "explanation": "If A and B are mutually exclusive and A is true, then B must be false"
+  },
+  {
+    "id": 2095,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 1, 2, 6, 24, 120, 720, ?",
+    "options": [
+      "5040",
+      "7200",
+      "10080",
+      "3600"
+    ],
+    "answer": 0,
+    "explanation": "Factorials: 1!, 2!, 3!, 4!, 5!, 6!, so next is 7! = 5040"
+  },
+  {
+    "id": 2096,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If A is sufficient for B, and B is sufficient for C, then A is...",
+    "options": [
+      "Cannot determine",
+      "Not related to C",
+      "Necessary for C",
+      "Sufficient for C"
+    ],
+    "answer": 3,
+    "explanation": "If A→B and B→C, then A→C, so A is sufficient for C"
+  },
+  {
+    "id": 2097,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 0, 1, 1, 2, 3, 5, 8, 13, 21, ?",
+    "options": [
+      "34",
+      "35",
+      "36",
+      "32"
+    ],
+    "answer": 0,
+    "explanation": "Fibonacci: 13 + 21 = 34"
+  },
+  {
+    "id": 2098,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If not (A or B), then...",
+    "options": [
+      "Not A and not B",
+      "Cannot determine",
+      "Not A or not B",
+      "A and B"
+    ],
+    "answer": 0,
+    "explanation": "By De Morgan's law, not (A or B) = (not A) and (not B)"
+  },
+  {
+    "id": 2099,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What comes next: 1, 4, 9, 16, 25, 36, ?",
+    "options": [
+      "50",
+      "47",
+      "49",
+      "52"
+    ],
+    "answer": 2,
+    "explanation": "Perfect squares: 1², 2², 3², 4², 5², 6², so next is 7² = 49"
+  },
+  {
+    "id": 2100,
+    "level": 1,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "If A implies B, and B implies A, then A and B are...",
+    "options": [
+      "Contradictory",
+      "Equivalent",
+      "Independent",
+      "Cannot determine"
+    ],
+    "answer": 1,
+    "explanation": "If A→B and B→A, then A↔B, meaning A and B are equivalent"
+  },
+  {
+    "id": 2101,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which logical connective represents 'AND'?",
+    "options": [
+      "∨",
+      "∧",
+      "¬",
+      "→"
+    ],
+    "answer": 1,
+    "explanation": "∧ is the symbol for logical conjunction (AND)"
+  },
+  {
+    "id": 2102,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which logical connective represents 'OR'?",
+    "options": [
+      "¬",
+      "→",
+      "∧",
+      "∨"
+    ],
+    "answer": 3,
+    "explanation": "∨ is the symbol for logical disjunction (OR)"
+  },
+  {
+    "id": 2103,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the negation of 'All cats are black'?",
+    "options": [
+      "Some cats are black",
+      "No cats are black",
+      "Some cats are not black",
+      "All cats are white"
+    ],
+    "answer": 2,
+    "explanation": "The negation of 'All X are Y' is 'Some X are not Y'"
+  },
+  {
+    "id": 2104,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "In a truth table, how many rows are needed for 2 variables?",
+    "options": [
+      "6",
+      "2",
+      "4",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "With 2 variables, we need 2² = 4 rows"
+  },
+  {
+    "id": 2105,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the contrapositive of 'If it rains, the ground is wet'?",
+    "options": [
+      "If no rain, not wet",
+      "If wet, no rain",
+      "If wet, it rained",
+      "If not wet, no rain"
+    ],
+    "answer": 3,
+    "explanation": "Contrapositive of P→Q is ¬Q→¬P"
+  },
+  {
+    "id": 2106,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which set operation gives elements in A but not in B?",
+    "options": [
+      "A × B",
+      "A ∩ B",
+      "A ∪ B",
+      "A - B"
+    ],
+    "answer": 3,
+    "explanation": "A - B (set difference) gives elements in A but not in B"
+  },
+  {
+    "id": 2107,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is P ∧ True equal to?",
+    "options": [
+      "P",
+      "¬P",
+      "True",
+      "False"
+    ],
+    "answer": 0,
+    "explanation": "P AND True = P (True is the identity for AND)"
+  },
+  {
+    "id": 2108,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is P ∨ False equal to?",
+    "options": [
+      "True",
+      "False",
+      "P",
+      "¬P"
+    ],
+    "answer": 2,
+    "explanation": "P OR False = P (False is the identity for OR)"
+  },
+  {
+    "id": 2109,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "How many elements are in the power set of {a, b}?",
+    "options": [
+      "2",
+      "3",
+      "6",
+      "4"
+    ],
+    "answer": 3,
+    "explanation": "Power set has 2^n elements, so 2² = 4"
+  },
+  {
+    "id": 2110,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If A = {1, 2} and B = {2, 3}, what is A ∩ B?",
+    "options": [
+      "{1}",
+      "{3}",
+      "{2}",
+      "{1, 2, 3}"
+    ],
+    "answer": 2,
+    "explanation": "Intersection contains elements in both: {2}"
+  },
+  {
+    "id": 2111,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What type of argument is 'All men are mortal. Socrates is a man. Therefore, Socrates is mortal'?",
+    "options": [
+      "Inductive",
+      "Analogical",
+      "Deductive",
+      "Abductive"
+    ],
+    "answer": 2,
+    "explanation": "This is a classic deductive syllogism"
+  },
+  {
+    "id": 2112,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the symbol for logical negation?",
+    "options": [
+      "∧",
+      "∨",
+      "→",
+      "¬"
+    ],
+    "answer": 3,
+    "explanation": "¬ is the symbol for NOT (negation)"
+  },
+  {
+    "id": 2113,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If P is True and Q is False, what is P ∧ Q?",
+    "options": [
+      "True",
+      "Both",
+      "Undefined",
+      "False"
+    ],
+    "answer": 3,
+    "explanation": "AND requires both to be true, so True AND False = False"
+  },
+  {
+    "id": 2114,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If P is True and Q is False, what is P ∨ Q?",
+    "options": [
+      "Neither",
+      "False",
+      "True",
+      "Undefined"
+    ],
+    "answer": 2,
+    "explanation": "OR requires at least one true, so True OR False = True"
+  },
+  {
+    "id": 2115,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the negation of 'Some birds can fly'?",
+    "options": [
+      "All birds can fly",
+      "All birds cannot fly",
+      "No birds can fly",
+      "Some birds cannot fly"
+    ],
+    "answer": 2,
+    "explanation": "The negation of 'Some X are Y' is 'No X are Y'"
+  },
+  {
+    "id": 2116,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "In set theory, what does A ⊆ B mean?",
+    "options": [
+      "A contains B",
+      "A and B are disjoint",
+      "A equals B",
+      "A is subset of B"
+    ],
+    "answer": 3,
+    "explanation": "A ⊆ B means A is a subset of (or equal to) B"
+  },
+  {
+    "id": 2117,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is P ∧ ¬P equal to?",
+    "options": [
+      "P",
+      "¬P",
+      "True",
+      "False"
+    ],
+    "answer": 3,
+    "explanation": "P AND NOT P is always false (contradiction)"
+  },
+  {
+    "id": 2118,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is P ∨ ¬P equal to?",
+    "options": [
+      "False",
+      "¬P",
+      "P",
+      "True"
+    ],
+    "answer": 3,
+    "explanation": "P OR NOT P is always true (tautology, Law of Excluded Middle)"
+  },
+  {
+    "id": 2119,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If A = {1, 2} and B = {2, 3}, what is A ∪ B?",
+    "options": [
+      "{1, 3}",
+      "{2}",
+      "{1, 2, 2, 3}",
+      "{1, 2, 3}"
+    ],
+    "answer": 3,
+    "explanation": "Union contains all elements from both: {1, 2, 3}"
+  },
+  {
+    "id": 2120,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the symbol for 'implies' or 'if...then'?",
+    "options": [
+      "∨",
+      "↔",
+      "∧",
+      "→"
+    ],
+    "answer": 3,
+    "explanation": "→ represents implication (if...then)"
+  },
+  {
+    "id": 2121,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is False → True?",
+    "options": [
+      "False",
+      "Undefined",
+      "Depends",
+      "True"
+    ],
+    "answer": 3,
+    "explanation": "An implication is only false when antecedent is true and consequent is false"
+  },
+  {
+    "id": 2122,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the cardinality of set {a, b, c, a}?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "2"
+    ],
+    "answer": 0,
+    "explanation": "Sets don't have duplicates, so {a, b, c, a} = {a, b, c} with 3 elements"
+  },
+  {
+    "id": 2123,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the converse of 'If it rains, the ground is wet'?",
+    "options": [
+      "If wet, it rained",
+      "If not wet, no rain",
+      "If no rain, not wet",
+      "If not rain, wet"
+    ],
+    "answer": 0,
+    "explanation": "Converse of P→Q is Q→P"
+  },
+  {
+    "id": 2124,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which fallacy assumes the conclusion in the premise?",
+    "options": [
+      "Straw man",
+      "Begging the question",
+      "Ad hominem",
+      "False dilemma"
+    ],
+    "answer": 1,
+    "explanation": "Begging the question (circular reasoning) assumes what it tries to prove"
+  },
+  {
+    "id": 2125,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is ¬¬P equal to?",
+    "options": [
+      "¬P",
+      "P",
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Double negation: NOT NOT P = P"
+  },
+  {
+    "id": 2126,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "If the universal set U = {1,2,3,4,5} and A = {1,2}, what is A'?",
+    "options": [
+      "{1, 2}",
+      "{1, 2, 3, 4, 5}",
+      "{}",
+      "{3, 4, 5}"
+    ],
+    "answer": 3,
+    "explanation": "Complement A' contains elements in U but not in A: {3, 4, 5}"
+  },
+  {
+    "id": 2127,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "How many rows in a truth table for 3 variables?",
+    "options": [
+      "6",
+      "16",
+      "4",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "With 3 variables: 2³ = 8 rows"
+  },
+  {
+    "id": 2128,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the empty set denoted as?",
+    "options": [
+      "∅",
+      "∞",
+      "ε",
+      "Ω"
+    ],
+    "answer": 0,
+    "explanation": "∅ or {} represents the empty set"
+  },
+  {
+    "id": 2129,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is P ∧ False equal to?",
+    "options": [
+      "¬P",
+      "False",
+      "P",
+      "True"
+    ],
+    "answer": 1,
+    "explanation": "P AND False = False (False is absorbing for AND)"
+  },
+  {
+    "id": 2130,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is P ∨ True equal to?",
+    "options": [
+      "True",
+      "¬P",
+      "P",
+      "False"
+    ],
+    "answer": 0,
+    "explanation": "P OR True = True (True is absorbing for OR)"
+  },
+  {
+    "id": 2131,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What type of logic uses True/False values?",
+    "options": [
+      "Modal logic",
+      "Fuzzy logic",
+      "Boolean logic",
+      "Predicate logic"
+    ],
+    "answer": 2,
+    "explanation": "Boolean logic uses binary True/False values"
+  },
+  {
+    "id": 2132,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the inverse of 'If it rains, the ground is wet'?",
+    "options": [
+      "If wet, it rained",
+      "If no rain, not wet",
+      "If not wet, no rain",
+      "If wet, no rain"
+    ],
+    "answer": 1,
+    "explanation": "Inverse of P→Q is ¬P→¬Q"
+  },
+  {
+    "id": 2133,
+    "level": 2,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "Which symbol means 'for all' in logic?",
+    "options": [
+      "∈",
+      "∃",
+      "⊂",
+      "∀"
+    ],
+    "answer": 3,
+    "explanation": "∀ is the universal quantifier meaning 'for all'"
+  },
+  {
+    "id": 2134,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "By De Morgan's law, ¬(P ∧ Q) equals?",
+    "options": [
+      "P ∧ Q",
+      "¬P ∨ ¬Q",
+      "P ∨ Q",
+      "¬P ∧ ¬Q"
+    ],
+    "answer": 1,
+    "explanation": "De Morgan: ¬(P ∧ Q) ≡ ¬P ∨ ¬Q"
+  },
+  {
+    "id": 2135,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "By De Morgan's law, ¬(P ∨ Q) equals?",
+    "options": [
+      "¬P ∧ ¬Q",
+      "P ∨ Q",
+      "P ∧ Q",
+      "¬P ∨ ¬Q"
+    ],
+    "answer": 0,
+    "explanation": "De Morgan: ¬(P ∨ Q) ≡ ¬P ∧ ¬Q"
+  },
+  {
+    "id": 2136,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is (P → Q) ∧ (Q → P) equivalent to?",
+    "options": [
+      "P ↔ Q",
+      "P → Q",
+      "P ∨ Q",
+      "P ∧ Q"
+    ],
+    "answer": 0,
+    "explanation": "Biconditional: (P → Q) ∧ (Q → P) ≡ P ↔ Q"
+  },
+  {
+    "id": 2137,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "How many subsets does a set of 4 elements have?",
+    "options": [
+      "8",
+      "12",
+      "16",
+      "24"
+    ],
+    "answer": 2,
+    "explanation": "A set of n elements has 2^n subsets: 2⁴ = 16"
+  },
+  {
+    "id": 2138,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is P → Q logically equivalent to?",
+    "options": [
+      "P ∧ Q",
+      "¬P ∨ Q",
+      "¬P ∧ Q",
+      "P ∨ ¬Q"
+    ],
+    "answer": 1,
+    "explanation": "Material implication: P → Q ≡ ¬P ∨ Q"
+  },
+  {
+    "id": 2139,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If |A| = 5 and |B| = 3 and |A ∩ B| = 2, what is |A ∪ B|?",
+    "options": [
+      "8",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "Inclusion-exclusion: |A ∪ B| = |A| + |B| - |A ∩ B| = 5 + 3 - 2 = 6"
+  },
+  {
+    "id": 2140,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "Which fallacy attacks the person instead of the argument?",
+    "options": [
+      "False cause",
+      "Straw man",
+      "Ad hominem",
+      "Slippery slope"
+    ],
+    "answer": 2,
+    "explanation": "Ad hominem attacks the person rather than addressing the argument"
+  },
+  {
+    "id": 2141,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the truth value of True ↔ True?",
+    "options": [
+      "Neither",
+      "Undefined",
+      "True",
+      "False"
+    ],
+    "answer": 2,
+    "explanation": "Biconditional is true when both sides have the same truth value"
+  },
+  {
+    "id": 2142,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the truth value of True ↔ False?",
+    "options": [
+      "Neither",
+      "Undefined",
+      "True",
+      "False"
+    ],
+    "answer": 3,
+    "explanation": "Biconditional is false when truth values differ"
+  },
+  {
+    "id": 2143,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "Which law states P ∧ (Q ∨ R) = (P ∧ Q) ∨ (P ∧ R)?",
+    "options": [
+      "Distributive",
+      "Identity",
+      "Commutative",
+      "Associative"
+    ],
+    "answer": 0,
+    "explanation": "This is the distributive law for AND over OR"
+  },
+  {
+    "id": 2144,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "In probability, if P(A) = 0.3 and P(B) = 0.4 and A,B are independent, what is P(A ∩ B)?",
+    "options": [
+      "0.07",
+      "0.12",
+      "0.7",
+      "0.1"
+    ],
+    "answer": 1,
+    "explanation": "For independent events: P(A ∩ B) = P(A) × P(B) = 0.3 × 0.4 = 0.12"
+  },
+  {
+    "id": 2145,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the contrapositive of (P ∧ Q) → R?",
+    "options": [
+      "¬R → ¬(P ∧ Q)",
+      "R → (P ∧ Q)",
+      "¬R → (¬P ∨ ¬Q)",
+      "¬R → (¬P ∧ ¬Q)"
+    ],
+    "answer": 2,
+    "explanation": "Contrapositive: ¬R → ¬(P ∧ Q), and ¬(P ∧ Q) ≡ ¬P ∨ ¬Q"
+  },
+  {
+    "id": 2146,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the negation of ∀x P(x)?",
+    "options": [
+      "∃x P(x)",
+      "∀x ¬P(x)",
+      "¬∃x P(x)",
+      "∃x ¬P(x)"
+    ],
+    "answer": 3,
+    "explanation": "Negation of 'for all' is 'there exists... not': ¬∀x P(x) ≡ ∃x ¬P(x)"
+  },
+  {
+    "id": 2147,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the negation of ∃x P(x)?",
+    "options": [
+      "¬∀x P(x)",
+      "∀x ¬P(x)",
+      "∀x P(x)",
+      "∃x ¬P(x)"
+    ],
+    "answer": 1,
+    "explanation": "Negation of 'there exists' is 'for all... not': ¬∃x P(x) ≡ ∀x ¬P(x)"
+  },
+  {
+    "id": 2148,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "Which fallacy presents only two options when more exist?",
+    "options": [
+      "Ad hominem",
+      "Straw man",
+      "False dilemma",
+      "Red herring"
+    ],
+    "answer": 2,
+    "explanation": "False dilemma (false dichotomy) presents only two options ignoring other possibilities"
+  },
+  {
+    "id": 2149,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is A × B called in set theory?",
+    "options": [
+      "Union",
+      "Cartesian product",
+      "Power set",
+      "Intersection"
+    ],
+    "answer": 1,
+    "explanation": "A × B is the Cartesian product, set of all ordered pairs (a, b)"
+  },
+  {
+    "id": 2150,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If |A| = 3 and |B| = 4, what is |A × B|?",
+    "options": [
+      "16",
+      "7",
+      "12",
+      "81"
+    ],
+    "answer": 2,
+    "explanation": "|A × B| = |A| × |B| = 3 × 4 = 12"
+  },
+  {
+    "id": 2151,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "Which rule of inference is: P, P → Q, therefore Q?",
+    "options": [
+      "Modus tollens",
+      "Modus ponens",
+      "Hypothetical syllogism",
+      "Disjunctive syllogism"
+    ],
+    "answer": 1,
+    "explanation": "Modus ponens: from P and P → Q, conclude Q"
+  },
+  {
+    "id": 2152,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "Which rule of inference is: P → Q, ¬Q, therefore ¬P?",
+    "options": [
+      "Hypothetical syllogism",
+      "Disjunctive syllogism",
+      "Modus ponens",
+      "Modus tollens"
+    ],
+    "answer": 3,
+    "explanation": "Modus tollens: from P → Q and ¬Q, conclude ¬P"
+  },
+  {
+    "id": 2153,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What type of proof assumes the opposite and derives a contradiction?",
+    "options": [
+      "Proof by induction",
+      "Direct proof",
+      "Proof by contradiction",
+      "Constructive proof"
+    ],
+    "answer": 2,
+    "explanation": "Proof by contradiction (reductio ad absurdum) assumes ¬P and derives a contradiction"
+  },
+  {
+    "id": 2154,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "In a valid argument, if premises are true, the conclusion must be?",
+    "options": [
+      "Possibly true",
+      "Unknown",
+      "False",
+      "True"
+    ],
+    "answer": 3,
+    "explanation": "Validity guarantees that true premises lead to a true conclusion"
+  },
+  {
+    "id": 2155,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is (P ∨ Q) ∧ ¬P logically equivalent to?",
+    "options": [
+      "¬Q",
+      "¬P",
+      "P",
+      "Q"
+    ],
+    "answer": 3,
+    "explanation": "If P ∨ Q is true and P is false, then Q must be true"
+  },
+  {
+    "id": 2156,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "Which law states P ∧ (P ∨ Q) = P?",
+    "options": [
+      "Absorption",
+      "Idempotent",
+      "Complement",
+      "Identity"
+    ],
+    "answer": 0,
+    "explanation": "This is the absorption law"
+  },
+  {
+    "id": 2157,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is P ∨ (P ∧ Q) equivalent to?",
+    "options": [
+      "P ∨ Q",
+      "P",
+      "Q",
+      "P ∧ Q"
+    ],
+    "answer": 1,
+    "explanation": "By absorption law: P ∨ (P ∧ Q) = P"
+  },
+  {
+    "id": 2158,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "Which symbol means 'there exists' in logic?",
+    "options": [
+      "∃",
+      "∈",
+      "∀",
+      "⊂"
+    ],
+    "answer": 0,
+    "explanation": "∃ is the existential quantifier meaning 'there exists'"
+  },
+  {
+    "id": 2159,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the symmetric difference A Δ B?",
+    "options": [
+      "A - B",
+      "A ∪ B",
+      "A ∩ B",
+      "(A ∪ B) - (A ∩ B)"
+    ],
+    "answer": 3,
+    "explanation": "Symmetric difference: elements in A or B but not both"
+  },
+  {
+    "id": 2160,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "In probability, P(A') equals?",
+    "options": [
+      "1 + P(A)",
+      "1 - P(A)",
+      "P(A)/2",
+      "P(A)"
+    ],
+    "answer": 1,
+    "explanation": "Complement rule: P(A') = 1 - P(A)"
+  },
+  {
+    "id": 2161,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "Which law states P ∧ Q = Q ∧ P?",
+    "options": [
+      "Commutative",
+      "Identity",
+      "Associative",
+      "Distributive"
+    ],
+    "answer": 0,
+    "explanation": "This is the commutative law for conjunction"
+  },
+  {
+    "id": 2162,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is (P → Q) ∨ (Q → P) always equal to?",
+    "options": [
+      "Depends on P and Q",
+      "False",
+      "True",
+      "P ∧ Q"
+    ],
+    "answer": 2,
+    "explanation": "This is a tautology - at least one implication is always true"
+  },
+  {
+    "id": 2163,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "If A ⊂ B, what is A ∩ B?",
+    "options": [
+      "A ∪ B",
+      "∅",
+      "B",
+      "A"
+    ],
+    "answer": 3,
+    "explanation": "If A is a proper subset of B, then A ∩ B = A"
+  },
+  {
+    "id": 2164,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "Which fallacy draws a conclusion from insufficient evidence?",
+    "options": [
+      "Ad hominem",
+      "Red herring",
+      "Hasty generalization",
+      "Straw man"
+    ],
+    "answer": 2,
+    "explanation": "Hasty generalization draws conclusions from too few examples"
+  },
+  {
+    "id": 2165,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is P XOR Q true when?",
+    "options": [
+      "At least one true",
+      "Exactly one true",
+      "Both false",
+      "Both true"
+    ],
+    "answer": 1,
+    "explanation": "XOR (exclusive or) is true when exactly one operand is true"
+  },
+  {
+    "id": 2166,
+    "level": 2,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the idempotent law for AND?",
+    "options": [
+      "P ∧ P = P",
+      "P ∧ True = P",
+      "P ∧ False = False",
+      "P ∧ Q = Q ∧ P"
+    ],
+    "answer": 0,
+    "explanation": "Idempotent law: P ∧ P = P"
+  },
+  {
+    "id": 2167,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the logical form of the statement 'All men are mortal'?",
+    "options": [
+      "∃x (M(x) → H(x))",
+      "∀x (M(x) ∧ H(x))",
+      "∀x (M(x) → H(x))",
+      "∃x (M(x) ∧ H(x))"
+    ],
+    "answer": 2,
+    "explanation": "Universal statements use ∀ with implication: For all x, if x is a man then x is mortal"
+  },
+  {
+    "id": 2168,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the logical form of 'Some cats are black'?",
+    "options": [
+      "∀x (C(x) → B(x))",
+      "∃x (C(x) → B(x))",
+      "∃x (C(x) ∧ B(x))",
+      "∀x (C(x) ∧ B(x))"
+    ],
+    "answer": 2,
+    "explanation": "Existential statements use ∃ with conjunction: There exists x such that x is a cat and x is black"
+  },
+  {
+    "id": 2169,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "Which of these is logically equivalent to ¬(P → Q)?",
+    "options": [
+      "¬P ∧ Q",
+      "¬P ∨ ¬Q",
+      "P → ¬Q",
+      "P ∧ ¬Q"
+    ],
+    "answer": 3,
+    "explanation": "¬(P → Q) ≡ ¬(¬P ∨ Q) ≡ P ∧ ¬Q"
+  },
+  {
+    "id": 2170,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "Using resolution, what can be derived from (P ∨ Q) and (¬P ∨ R)?",
+    "options": [
+      "Nothing",
+      "P ∨ R",
+      "Q ∧ R",
+      "Q ∨ R"
+    ],
+    "answer": 3,
+    "explanation": "Resolution: (P ∨ Q) and (¬P ∨ R) resolve to Q ∨ R"
+  },
+  {
+    "id": 2171,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the principle of explosion in logic?",
+    "options": [
+      "Truth leads to truth",
+      "From contradiction, anything follows",
+      "Tautologies are provable",
+      "False implies true"
+    ],
+    "answer": 1,
+    "explanation": "Ex falso quodlibet: from a contradiction, any proposition can be derived"
+  },
+  {
+    "id": 2172,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "In a Knights and Knaves puzzle, knights always tell the truth and knaves always lie. A says 'I am a knave.' What is A?",
+    "options": [
+      "Cannot determine",
+      "Knave",
+      "Neither",
+      "Knight"
+    ],
+    "answer": 2,
+    "explanation": "Paradox: A knight can't say they're a knave (lie), a knave can't say they're a knave (truth). Statement is impossible."
+  },
+  {
+    "id": 2173,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is (P → Q) ∧ (P → ¬Q) equivalent to?",
+    "options": [
+      "Q",
+      "¬P",
+      "¬Q",
+      "P"
+    ],
+    "answer": 1,
+    "explanation": "If P implies both Q and ¬Q, then P must be false"
+  },
+  {
+    "id": 2174,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the dual of P ∧ (Q ∨ R)?",
+    "options": [
+      "¬P ∧ (Q ∨ R)",
+      "¬P ∨ (¬Q ∧ ¬R)",
+      "P ∧ (Q ∧ R)",
+      "P ∨ (Q ∧ R)"
+    ],
+    "answer": 3,
+    "explanation": "Dual swaps ∧ with ∨: P ∧ (Q ∨ R) → P ∨ (Q ∧ R)"
+  },
+  {
+    "id": 2175,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What rule is: P → Q, Q → R, therefore P → R?",
+    "options": [
+      "Modus tollens",
+      "Hypothetical syllogism",
+      "Disjunctive syllogism",
+      "Modus ponens"
+    ],
+    "answer": 1,
+    "explanation": "Hypothetical syllogism chains implications"
+  },
+  {
+    "id": 2176,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the normal form where all OR clauses are at the top?",
+    "options": [
+      "CNF",
+      "DNF",
+      "PNF",
+      "NNF"
+    ],
+    "answer": 1,
+    "explanation": "DNF (Disjunctive Normal Form) has OR at top level"
+  },
+  {
+    "id": 2177,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the normal form where all AND clauses are at the top?",
+    "options": [
+      "PNF",
+      "NNF",
+      "CNF",
+      "DNF"
+    ],
+    "answer": 2,
+    "explanation": "CNF (Conjunctive Normal Form) has AND at top level"
+  },
+  {
+    "id": 2178,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "In modal logic, □P means?",
+    "options": [
+      "P is necessary",
+      "P is possible",
+      "P is unknown",
+      "P is false"
+    ],
+    "answer": 0,
+    "explanation": "□ (box) represents necessity: P is necessarily true"
+  },
+  {
+    "id": 2179,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "In modal logic, ◇P means?",
+    "options": [
+      "P is necessary",
+      "P is impossible",
+      "P is contingent",
+      "P is possible"
+    ],
+    "answer": 3,
+    "explanation": "◇ (diamond) represents possibility: P is possibly true"
+  },
+  {
+    "id": 2180,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is P NAND Q defined as?",
+    "options": [
+      "¬(P ∨ Q)",
+      "¬(P ∧ Q)",
+      "P ∧ Q",
+      "P ∨ Q"
+    ],
+    "answer": 1,
+    "explanation": "NAND is negated AND: ¬(P ∧ Q)"
+  },
+  {
+    "id": 2181,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "NAND is functionally complete. What does this mean?",
+    "options": [
+      "It's always true",
+      "All logic gates can be built from it",
+      "It's commutative",
+      "It's associative"
+    ],
+    "answer": 1,
+    "explanation": "Functional completeness means any Boolean function can be expressed using only NAND"
+  },
+  {
+    "id": 2182,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is P NOR Q defined as?",
+    "options": [
+      "¬(P ∧ Q)",
+      "P ∨ Q",
+      "¬(P ∨ Q)",
+      "P ∧ Q"
+    ],
+    "answer": 2,
+    "explanation": "NOR is negated OR: ¬(P ∨ Q)"
+  },
+  {
+    "id": 2183,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "In the Sheffer stroke notation, P|Q equals?",
+    "options": [
+      "¬(P ∧ Q)",
+      "P ∨ Q",
+      "P → Q",
+      "P ∧ Q"
+    ],
+    "answer": 0,
+    "explanation": "Sheffer stroke (|) is NAND: P|Q = ¬(P ∧ Q)"
+  },
+  {
+    "id": 2184,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the Peirce arrow (↓) operation?",
+    "options": [
+      "AND",
+      "NAND",
+      "OR",
+      "NOR"
+    ],
+    "answer": 3,
+    "explanation": "Peirce arrow is NOR: P↓Q = ¬(P ∨ Q)"
+  },
+  {
+    "id": 2185,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What logical equivalence is ¬(P ↔ Q)?",
+    "options": [
+      "¬P ↔ Q",
+      "P ↔ ¬Q",
+      "P XOR Q",
+      "All of the above"
+    ],
+    "answer": 3,
+    "explanation": "¬(P ↔ Q) ≡ (P ↔ ¬Q) ≡ (¬P ↔ Q) ≡ P XOR Q"
+  },
+  {
+    "id": 2186,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "In Boolean algebra, what is the complement of x'?",
+    "options": [
+      "1",
+      "0",
+      "x'",
+      "x"
+    ],
+    "answer": 3,
+    "explanation": "Double complement: (x')' = x"
+  },
+  {
+    "id": 2187,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the satisfiability problem (SAT)?",
+    "options": [
+      "Finding all true formulas",
+      "Simplifying expressions",
+      "Proving a tautology",
+      "Finding if a formula can be true"
+    ],
+    "answer": 3,
+    "explanation": "SAT asks if there exists an assignment making a formula true"
+  },
+  {
+    "id": 2188,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is a Horn clause?",
+    "options": [
+      "Clause with no literals",
+      "Clause with exactly two literals",
+      "Clause with all positive literals",
+      "Clause with at most one positive literal"
+    ],
+    "answer": 3,
+    "explanation": "A Horn clause has at most one positive literal"
+  },
+  {
+    "id": 2189,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the closed-world assumption?",
+    "options": [
+      "All statements are true",
+      "Everything true is stated",
+      "No contradictions exist",
+      "Unstated facts are false"
+    ],
+    "answer": 3,
+    "explanation": "Closed-world assumption: what is not known to be true is assumed false"
+  },
+  {
+    "id": 2190,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is unification in logic?",
+    "options": [
+      "Finding substitutions making terms equal",
+      "Simplifying formulas",
+      "Combining true statements",
+      "Proving equivalence"
+    ],
+    "answer": 0,
+    "explanation": "Unification finds substitutions that make different terms identical"
+  },
+  {
+    "id": 2191,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is a Herbrand universe?",
+    "options": [
+      "Set of all ground terms",
+      "Set of all predicates",
+      "Set of all variables",
+      "Set of all clauses"
+    ],
+    "answer": 0,
+    "explanation": "Herbrand universe is the set of all ground terms constructible from constants and functions"
+  },
+  {
+    "id": 2192,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is P → (Q → P) always equal to?",
+    "options": [
+      "P",
+      "Q",
+      "True",
+      "False"
+    ],
+    "answer": 2,
+    "explanation": "This is a tautology, provable by truth table"
+  },
+  {
+    "id": 2193,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the exportation law?",
+    "options": [
+      "P → Q ≡ ¬Q → ¬P",
+      "P ∧ Q ≡ Q ∧ P",
+      "(P ∧ Q) → R ≡ P → (Q → R)",
+      "(P ∨ Q) → R ≡ P → (Q → R)"
+    ],
+    "answer": 2,
+    "explanation": "Exportation: (P ∧ Q) → R ≡ P → (Q → R)"
+  },
+  {
+    "id": 2194,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What type of logic handles partial truth?",
+    "options": [
+      "Temporal logic",
+      "Fuzzy logic",
+      "Modal logic",
+      "Boolean logic"
+    ],
+    "answer": 1,
+    "explanation": "Fuzzy logic handles degrees of truth between 0 and 1"
+  },
+  {
+    "id": 2195,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is semantic entailment denoted by?",
+    "options": [
+      "⊢",
+      "⊨",
+      "≡",
+      "→"
+    ],
+    "answer": 1,
+    "explanation": "⊨ (double turnstile) denotes semantic entailment"
+  },
+  {
+    "id": 2196,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is syntactic derivability denoted by?",
+    "options": [
+      "⊢",
+      "⊨",
+      "≡",
+      "→"
+    ],
+    "answer": 0,
+    "explanation": "⊢ (single turnstile) denotes syntactic derivability"
+  },
+  {
+    "id": 2197,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What does soundness of a logical system mean?",
+    "options": [
+      "All provable things are true",
+      "System has no contradictions",
+      "System is complete",
+      "All true things are provable"
+    ],
+    "answer": 0,
+    "explanation": "Soundness: if ⊢φ then ⊨φ (provable implies true)"
+  },
+  {
+    "id": 2198,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What does completeness of a logical system mean?",
+    "options": [
+      "System is sound",
+      "All provable things are true",
+      "All true things are provable",
+      "System is consistent"
+    ],
+    "answer": 2,
+    "explanation": "Completeness: if ⊨φ then ⊢φ (true implies provable)"
+  },
+  {
+    "id": 2199,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the constructive dilemma rule?",
+    "options": [
+      "P∨Q, ¬P ⊢ Q",
+      "P→Q, Q→R ⊢ P→R",
+      "(P→Q)∧(R→S), P∨R ⊢ Q∨S",
+      "(P→Q)∧(R→S), ¬Q∨¬S ⊢ ¬P∨¬R"
+    ],
+    "answer": 2,
+    "explanation": "Constructive dilemma: from (P→Q)∧(R→S) and P∨R, derive Q∨S"
+  },
+  {
+    "id": 2200,
+    "level": 2,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the destructive dilemma rule?",
+    "options": [
+      "(P→Q)∧(R→S), P∨R ⊢ Q∨S",
+      "P∨Q, ¬P ⊢ Q",
+      "P→Q, Q→R ⊢ P→R",
+      "(P→Q)∧(R→S), ¬Q∨¬S ⊢ ¬P∨¬R"
+    ],
+    "answer": 3,
+    "explanation": "Destructive dilemma: from (P→Q)∧(R→S) and ¬Q∨¬S, derive ¬P∨¬R"
+  },
+  {
+    "id": 2201,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a well-formed formula (WFF)?",
+    "options": [
+      "A provable formula",
+      "Any logical expression",
+      "A syntactically correct formula",
+      "A true formula"
+    ],
+    "answer": 2,
+    "explanation": "A WFF is a formula constructed according to syntax rules of the formal language"
+  },
+  {
+    "id": 2202,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a tautology?",
+    "options": [
+      "Sometimes true formula",
+      "Always true formula",
+      "Always false formula",
+      "Unprovable formula"
+    ],
+    "answer": 1,
+    "explanation": "A tautology is a formula that is true under all interpretations"
+  },
+  {
+    "id": 2203,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a contradiction in logic?",
+    "options": [
+      "Inconsistent argument",
+      "Always false formula",
+      "Invalid inference",
+      "Always true formula"
+    ],
+    "answer": 1,
+    "explanation": "A contradiction is a formula that is false under all interpretations"
+  },
+  {
+    "id": 2204,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a contingency in logic?",
+    "options": [
+      "Tautology",
+      "Neither tautology nor contradiction",
+      "Contradiction",
+      "Invalid formula"
+    ],
+    "answer": 1,
+    "explanation": "A contingency is true in some interpretations and false in others"
+  },
+  {
+    "id": 2205,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the principle of bivalence?",
+    "options": [
+      "Logic has two operators",
+      "Sets have two elements",
+      "Every proposition is true or false",
+      "Every proposition is provable"
+    ],
+    "answer": 2,
+    "explanation": "Bivalence: every proposition is either true or false, not both"
+  },
+  {
+    "id": 2206,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a predicate in first-order logic?",
+    "options": [
+      "A quantifier",
+      "A connective",
+      "A property or relation",
+      "A variable"
+    ],
+    "answer": 2,
+    "explanation": "A predicate expresses a property of objects or a relation between objects"
+  },
+  {
+    "id": 2207,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the domain of discourse?",
+    "options": [
+      "Set of objects we're reasoning about",
+      "Set of connectives",
+      "Set of predicates",
+      "Set of quantifiers"
+    ],
+    "answer": 0,
+    "explanation": "The domain of discourse is the universe of objects under consideration"
+  },
+  {
+    "id": 2208,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a free variable?",
+    "options": [
+      "Variable bound by ∃",
+      "Variable with no value",
+      "Variable not bound by any quantifier",
+      "Variable bound by ∀"
+    ],
+    "answer": 2,
+    "explanation": "A free variable is not within the scope of any quantifier"
+  },
+  {
+    "id": 2209,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a bound variable?",
+    "options": [
+      "Variable that can't change",
+      "Variable in scope of a quantifier",
+      "Constant symbol",
+      "Variable with a fixed value"
+    ],
+    "answer": 1,
+    "explanation": "A bound variable is within the scope of a quantifier"
+  },
+  {
+    "id": 2210,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a ground term?",
+    "options": [
+      "Term in DNF",
+      "Term with no variables",
+      "Term with all variables",
+      "Term in CNF"
+    ],
+    "answer": 1,
+    "explanation": "A ground term contains no variables, only constants and function symbols"
+  },
+  {
+    "id": 2211,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a literal in propositional logic?",
+    "options": [
+      "A formula",
+      "A constant",
+      "A clause",
+      "An atom or its negation"
+    ],
+    "answer": 3,
+    "explanation": "A literal is an atomic proposition or its negation"
+  },
+  {
+    "id": 2212,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a clause in propositional logic?",
+    "options": [
+      "A single literal",
+      "A formula",
+      "A disjunction of literals",
+      "A conjunction of literals"
+    ],
+    "answer": 2,
+    "explanation": "A clause is a disjunction (OR) of literals"
+  },
+  {
+    "id": 2213,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is an interpretation in logic?",
+    "options": [
+      "A derivation",
+      "An assignment of truth values",
+      "A theorem",
+      "A proof"
+    ],
+    "answer": 1,
+    "explanation": "An interpretation assigns truth values to atomic propositions"
+  },
+  {
+    "id": 2214,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a model in logic?",
+    "options": [
+      "A connective",
+      "A logical rule",
+      "An interpretation satisfying a formula",
+      "A proof of a theorem"
+    ],
+    "answer": 2,
+    "explanation": "A model is an interpretation that makes a formula true"
+  },
+  {
+    "id": 2215,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is satisfiability?",
+    "options": [
+      "Being a contradiction",
+      "Being provable",
+      "Having a model",
+      "Being a tautology"
+    ],
+    "answer": 2,
+    "explanation": "A formula is satisfiable if there exists an interpretation making it true"
+  },
+  {
+    "id": 2216,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is validity in propositional logic?",
+    "options": [
+      "Having a model",
+      "Being true in some interpretation",
+      "Being true in all interpretations",
+      "Being provable"
+    ],
+    "answer": 2,
+    "explanation": "A valid formula (tautology) is true in all interpretations"
+  },
+  {
+    "id": 2217,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a proof in formal logic?",
+    "options": [
+      "A sequence of valid inferences",
+      "A model",
+      "A true statement",
+      "An interpretation"
+    ],
+    "answer": 0,
+    "explanation": "A proof is a finite sequence of formulas derived by inference rules from axioms"
+  },
+  {
+    "id": 2218,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is an axiom in a formal system?",
+    "options": [
+      "A definition",
+      "An assumed starting formula",
+      "A provable theorem",
+      "A derived rule"
+    ],
+    "answer": 1,
+    "explanation": "An axiom is a formula assumed true without proof"
+  },
+  {
+    "id": 2219,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a theorem in formal logic?",
+    "options": [
+      "A rule of inference",
+      "An interpretation",
+      "A provable formula",
+      "An axiom"
+    ],
+    "answer": 2,
+    "explanation": "A theorem is a formula that can be derived from axioms using inference rules"
+  },
+  {
+    "id": 2220,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What does decidable mean for a logical theory?",
+    "options": [
+      "There's an algorithm to determine truth",
+      "All formulas are provable",
+      "All formulas are true",
+      "Theory is consistent"
+    ],
+    "answer": 0,
+    "explanation": "A theory is decidable if there exists an algorithm to determine if any formula is provable"
+  },
+  {
+    "id": 2221,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the arity of a predicate?",
+    "options": [
+      "Its truth value",
+      "Its negation",
+      "Number of arguments it takes",
+      "Its scope"
+    ],
+    "answer": 2,
+    "explanation": "Arity is the number of arguments a predicate or function takes"
+  },
+  {
+    "id": 2222,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a nullary predicate?",
+    "options": [
+      "Empty predicate",
+      "False predicate",
+      "Undefined predicate",
+      "Predicate with no arguments"
+    ],
+    "answer": 3,
+    "explanation": "A nullary (0-ary) predicate takes no arguments, behaving like a proposition"
+  },
+  {
+    "id": 2223,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a unary predicate?",
+    "options": [
+      "Binary predicate",
+      "Predicate with one argument",
+      "Predicate with two arguments",
+      "Universal predicate"
+    ],
+    "answer": 1,
+    "explanation": "A unary (1-ary) predicate takes one argument"
+  },
+  {
+    "id": 2224,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a binary relation?",
+    "options": [
+      "Boolean relation",
+      "Bitwise relation",
+      "Relation with two arguments",
+      "Relation with one argument"
+    ],
+    "answer": 2,
+    "explanation": "A binary (2-ary) relation relates pairs of objects"
+  },
+  {
+    "id": 2225,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a constant symbol in first-order logic?",
+    "options": [
+      "A variable",
+      "A symbol denoting a specific object",
+      "A quantifier",
+      "A predicate"
+    ],
+    "answer": 1,
+    "explanation": "A constant symbol refers to a specific individual in the domain"
+  },
+  {
+    "id": 2226,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a function symbol in first-order logic?",
+    "options": [
+      "A connective",
+      "A predicate",
+      "Maps objects to objects",
+      "A quantifier"
+    ],
+    "answer": 2,
+    "explanation": "A function symbol maps tuples of objects to objects"
+  },
+  {
+    "id": 2227,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What does 'closed formula' mean?",
+    "options": [
+      "Formula with no free variables",
+      "False formula",
+      "Formula with no variables",
+      "Invalid formula"
+    ],
+    "answer": 0,
+    "explanation": "A closed formula (sentence) has no free variables"
+  },
+  {
+    "id": 2228,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the law of non-contradiction?",
+    "options": [
+      "P → P",
+      "P ↔ P",
+      "P ∨ ¬P",
+      "¬(P ∧ ¬P)"
+    ],
+    "answer": 3,
+    "explanation": "Law of non-contradiction: it is not the case that both P and not-P"
+  },
+  {
+    "id": 2229,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the law of identity?",
+    "options": [
+      "P ∨ ¬P",
+      "¬(P ∧ ¬P)",
+      "P → P",
+      "P ↔ ¬P"
+    ],
+    "answer": 2,
+    "explanation": "Law of identity: P implies P (every proposition implies itself)"
+  },
+  {
+    "id": 2230,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is the law of excluded middle?",
+    "options": [
+      "¬(P ∧ ¬P)",
+      "P → P",
+      "P ↔ P",
+      "P ∨ ¬P"
+    ],
+    "answer": 3,
+    "explanation": "Law of excluded middle: P or not-P (no third option)"
+  },
+  {
+    "id": 2231,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What type of logic rejects the law of excluded middle?",
+    "options": [
+      "Classical logic",
+      "Modal logic",
+      "Intuitionistic logic",
+      "Fuzzy logic"
+    ],
+    "answer": 2,
+    "explanation": "Intuitionistic logic does not accept P ∨ ¬P as an axiom"
+  },
+  {
+    "id": 2232,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is a sequent in proof theory?",
+    "options": [
+      "A single formula",
+      "A sequence of formulas",
+      "A pair Γ ⊢ Δ of formula sets",
+      "An axiom"
+    ],
+    "answer": 2,
+    "explanation": "A sequent Γ ⊢ Δ expresses that if all of Γ hold, at least one of Δ holds"
+  },
+  {
+    "id": 2233,
+    "level": 3,
+    "difficulty": "easy",
+    "category": "Logic",
+    "question": "What is natural deduction?",
+    "options": [
+      "A proof system mimicking natural reasoning",
+      "Resolution refutation",
+      "Automated theorem proving",
+      "Model checking"
+    ],
+    "answer": 0,
+    "explanation": "Natural deduction uses introduction/elimination rules resembling informal reasoning"
+  },
+  {
+    "id": 2234,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the prenex normal form?",
+    "options": [
+      "No quantifiers",
+      "Alternating quantifiers",
+      "All quantifiers at the beginning",
+      "All quantifiers at the end"
+    ],
+    "answer": 2,
+    "explanation": "Prenex form has all quantifiers at the front, followed by a quantifier-free formula"
+  },
+  {
+    "id": 2235,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is Skolemization?",
+    "options": [
+      "Converting to CNF",
+      "Removing existential quantifiers using functions",
+      "Adding existential quantifiers",
+      "Simplifying formulas"
+    ],
+    "answer": 1,
+    "explanation": "Skolemization eliminates existential quantifiers by introducing Skolem functions"
+  },
+  {
+    "id": 2236,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the resolution rule for clauses?",
+    "options": [
+      "C₁ ∧ P, C₂ ∧ ¬P ⊢ C₁ ∧ C₂",
+      "C₁ → P, P → C₂ ⊢ C₁ → C₂",
+      "C₁ ∨ P, C₂ ∨ ¬P ⊢ C₁ ∨ C₂",
+      "None of these"
+    ],
+    "answer": 2,
+    "explanation": "Resolution combines two clauses with complementary literals"
+  },
+  {
+    "id": 2237,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is a refutation proof?",
+    "options": [
+      "Proof by example",
+      "Proof by induction",
+      "Proof by deriving a contradiction",
+      "Direct proof"
+    ],
+    "answer": 2,
+    "explanation": "Refutation proves by deriving the empty clause (contradiction) from negated goal"
+  },
+  {
+    "id": 2238,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What does compactness theorem state?",
+    "options": [
+      "All models are finite",
+      "Finite sets are satisfiable",
+      "If every finite subset is satisfiable, the whole set is",
+      "Infinite sets are unsatisfiable"
+    ],
+    "answer": 2,
+    "explanation": "Compactness: Γ is satisfiable iff every finite subset is satisfiable"
+  },
+  {
+    "id": 2239,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the Löwenheim-Skolem theorem about?",
+    "options": [
+      "Decidability",
+      "Size of models",
+      "Completeness",
+      "Proof complexity"
+    ],
+    "answer": 1,
+    "explanation": "Löwenheim-Skolem: If a first-order theory has an infinite model, it has models of all infinite cardinalities"
+  },
+  {
+    "id": 2240,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is an omega-consistent theory?",
+    "options": [
+      "Incomplete theory",
+      "Theory about ordinals",
+      "Theory where if ⊢P(0),P(1),... then ¬⊢∃x¬P(x)",
+      "Theory with ω axioms"
+    ],
+    "answer": 2,
+    "explanation": "ω-consistency: cannot prove ∃x¬P(x) if P(n) is proved for all numerals n"
+  },
+  {
+    "id": 2241,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is Craig's interpolation theorem?",
+    "options": [
+      "Every formula is decidable",
+      "Every proof is finite",
+      "Every valid implication has an interpolant",
+      "Every theory is complete"
+    ],
+    "answer": 2,
+    "explanation": "If A→B is valid, there exists formula C using only common symbols such that A→C and C→B"
+  },
+  {
+    "id": 2242,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the cut rule in sequent calculus?",
+    "options": [
+      "Weakening the antecedent",
+      "Adding assumptions",
+      "Removing conclusions",
+      "Γ⊢A and A,Δ⊢B implies Γ,Δ⊢B"
+    ],
+    "answer": 3,
+    "explanation": "Cut allows reasoning through an intermediate lemma A"
+  },
+  {
+    "id": 2243,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What does cut-elimination mean?",
+    "options": [
+      "Cuts speed up proofs",
+      "Cuts are always needed",
+      "Cuts make proofs shorter",
+      "Cuts are unnecessary for completeness"
+    ],
+    "answer": 3,
+    "explanation": "Cut-elimination: every provable sequent has a cut-free proof (Gentzen's Hauptsatz)"
+  },
+  {
+    "id": 2244,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is a recursive function in computability?",
+    "options": [
+      "Turing-computable function",
+      "Total function",
+      "Primitive function",
+      "Function defined by recursion"
+    ],
+    "answer": 0,
+    "explanation": "Recursive (computable) functions are exactly those computable by Turing machines"
+  },
+  {
+    "id": 2245,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the halting problem?",
+    "options": [
+      "Optimizing code",
+      "Finding the fastest algorithm",
+      "Detecting infinite loops",
+      "Determining if a program halts"
+    ],
+    "answer": 3,
+    "explanation": "Halting problem: given a program and input, determine if it halts (undecidable)"
+  },
+  {
+    "id": 2246,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is Church's thesis?",
+    "options": [
+      "Logic is complete",
+      "Mathematics is consistent",
+      "All proofs are finite",
+      "Effective computability equals Turing computability"
+    ],
+    "answer": 3,
+    "explanation": "Church-Turing thesis: intuitive notion of computability is captured by Turing machines"
+  },
+  {
+    "id": 2247,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is a primitive recursive function?",
+    "options": [
+      "Function definable without unbounded search",
+      "Non-computable function",
+      "Recursive function",
+      "Any computable function"
+    ],
+    "answer": 0,
+    "explanation": "Primitive recursive functions use only bounded recursion (no unbounded minimization)"
+  },
+  {
+    "id": 2248,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the μ-operator in recursion theory?",
+    "options": [
+      "Unbounded minimization",
+      "Modulo operation",
+      "Maximum function",
+      "Multiplication"
+    ],
+    "answer": 0,
+    "explanation": "μ-operator finds the least number satisfying a condition (unbounded search)"
+  },
+  {
+    "id": 2249,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is a recursive set?",
+    "options": [
+      "Finite set",
+      "Set with a decidable membership",
+      "Empty set",
+      "Infinite set"
+    ],
+    "answer": 1,
+    "explanation": "A recursive (decidable) set has a total computable characteristic function"
+  },
+  {
+    "id": 2250,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is a recursively enumerable (r.e.) set?",
+    "options": [
+      "Set that can be listed by a computable function",
+      "Decidable set",
+      "Finite set",
+      "Recursive set"
+    ],
+    "answer": 0,
+    "explanation": "R.e. sets are domains of partial computable functions (may not be decidable)"
+  },
+  {
+    "id": 2251,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the relationship between recursive and r.e. sets?",
+    "options": [
+      "Recursive ⊂ r.e.",
+      "Disjoint",
+      "Same thing",
+      "R.e. ⊂ recursive"
+    ],
+    "answer": 0,
+    "explanation": "Every recursive set is r.e., but not vice versa (halting set is r.e. but not recursive)"
+  },
+  {
+    "id": 2252,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is Peano Arithmetic (PA)?",
+    "options": [
+      "First-order theory of natural numbers",
+      "Second-order logic",
+      "Modal logic",
+      "Set theory axioms"
+    ],
+    "answer": 0,
+    "explanation": "PA is a first-order axiomatization of natural number arithmetic"
+  },
+  {
+    "id": 2253,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is ZFC in set theory?",
+    "options": [
+      "Zero-Free Calculus",
+      "Zone-Free Consistency",
+      "Zermelo-Fraenkel with Choice",
+      "Zeroth-order logic"
+    ],
+    "answer": 2,
+    "explanation": "ZFC = Zermelo-Fraenkel set theory with Axiom of Choice"
+  },
+  {
+    "id": 2254,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the Axiom of Choice?",
+    "options": [
+      "Product of non-empty sets is non-empty",
+      "Both B and C",
+      "Every set can be well-ordered",
+      "Every set is countable"
+    ],
+    "answer": 1,
+    "explanation": "AC is equivalent to well-ordering and non-empty products of non-empty sets"
+  },
+  {
+    "id": 2255,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is a well-ordering?",
+    "options": [
+      "Any total order",
+      "Dense order",
+      "Partial order",
+      "Total order where every non-empty subset has a minimum"
+    ],
+    "answer": 3,
+    "explanation": "Well-ordering: every non-empty subset has a least element"
+  },
+  {
+    "id": 2256,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is transfinite induction?",
+    "options": [
+      "Induction on rationals",
+      "Induction on ordinals",
+      "Strong induction",
+      "Induction on natural numbers"
+    ],
+    "answer": 1,
+    "explanation": "Transfinite induction proves properties for all ordinals"
+  },
+  {
+    "id": 2257,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is an ordinal number?",
+    "options": [
+      "A cardinal",
+      "A natural number",
+      "A real number",
+      "An equivalence class of well-orderings"
+    ],
+    "answer": 3,
+    "explanation": "Ordinals are order types of well-ordered sets"
+  },
+  {
+    "id": 2258,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is a cardinal number?",
+    "options": [
+      "A prime number",
+      "An integer",
+      "Measure of set size up to bijection",
+      "An ordinal"
+    ],
+    "answer": 2,
+    "explanation": "Cardinals measure the 'size' of sets, with two sets having the same cardinal iff bijection exists"
+  },
+  {
+    "id": 2259,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the Continuum Hypothesis?",
+    "options": [
+      "ℕ is countable",
+      "No set has cardinality between ℵ₀ and 2^ℵ₀",
+      "All infinities are equal",
+      "ℝ is countable"
+    ],
+    "answer": 1,
+    "explanation": "CH: there is no cardinal strictly between ℵ₀ and the continuum"
+  },
+  {
+    "id": 2260,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What did Gödel and Cohen prove about CH?",
+    "options": [
+      "CH is independent of ZFC",
+      "CH is false",
+      "CH is true",
+      "CH is undecidable"
+    ],
+    "answer": 0,
+    "explanation": "CH is independent: cannot be proved or disproved from ZFC"
+  },
+  {
+    "id": 2261,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is forcing in set theory?",
+    "options": [
+      "Logical connective",
+      "Type of axiom",
+      "Method for constructing models",
+      "A proof technique"
+    ],
+    "answer": 2,
+    "explanation": "Forcing constructs models of set theory to prove independence results"
+  },
+  {
+    "id": 2262,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is second-order logic?",
+    "options": [
+      "Two-valued logic",
+      "Logic quantifying over predicates/sets",
+      "Logic with two variables",
+      "Binary logic"
+    ],
+    "answer": 1,
+    "explanation": "Second-order logic allows quantification over predicates and relations"
+  },
+  {
+    "id": 2263,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "Is second-order logic complete?",
+    "options": [
+      "No, with standard semantics",
+      "Yes, with standard semantics",
+      "Always",
+      "Only for finite domains"
+    ],
+    "answer": 0,
+    "explanation": "Second-order logic with standard semantics is incomplete (no complete proof system)"
+  },
+  {
+    "id": 2264,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is Henkin semantics?",
+    "options": [
+      "Standard second-order semantics",
+      "First-order semantics",
+      "Semantics where predicate variables range over a subset",
+      "Modal semantics"
+    ],
+    "answer": 2,
+    "explanation": "Henkin semantics restricts second-order quantifiers to a specified set of relations"
+  },
+  {
+    "id": 2265,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is lambda calculus?",
+    "options": [
+      "A proof system",
+      "A set theory",
+      "A modal logic",
+      "A model of computation using functions"
+    ],
+    "answer": 3,
+    "explanation": "Lambda calculus is a formal system for expressing computation via function abstraction"
+  },
+  {
+    "id": 2266,
+    "level": 3,
+    "difficulty": "medium",
+    "category": "Logic",
+    "question": "What is the Y combinator?",
+    "options": [
+      "A parser",
+      "A fixed-point combinator enabling recursion",
+      "A compiler",
+      "A type system"
+    ],
+    "answer": 1,
+    "explanation": "Y combinator: Y f = f (Y f), enabling recursion in lambda calculus"
+  },
+  {
+    "id": 2267,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What does Gödel's first incompleteness theorem state?",
+    "options": [
+      "Arithmetic is inconsistent",
+      "Any consistent recursive axiomatization of arithmetic is incomplete",
+      "All true statements are provable",
+      "Arithmetic is decidable"
+    ],
+    "answer": 1,
+    "explanation": "Gödel I: any consistent, sufficiently strong recursive theory has true unprovable statements"
+  },
+  {
+    "id": 2268,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What does Gödel's second incompleteness theorem state?",
+    "options": [
+      "Arithmetic is complete",
+      "A consistent theory cannot prove its own consistency",
+      "Every formula is decidable",
+      "All proofs are finite"
+    ],
+    "answer": 1,
+    "explanation": "Gödel II: if T is consistent and sufficiently strong, T cannot prove Con(T)"
+  },
+  {
+    "id": 2269,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is a Gödel sentence?",
+    "options": [
+      "An axiom",
+      "A sentence expressing 'I am not provable'",
+      "A true sentence",
+      "A theorem"
+    ],
+    "answer": 1,
+    "explanation": "Gödel sentence G says 'G is not provable in T' - true but unprovable if T is consistent"
+  },
+  {
+    "id": 2270,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is Tarski's undefinability theorem?",
+    "options": [
+      "Truth predicate for a language cannot be defined in that language",
+      "Syntax determines semantics",
+      "Truth is definable",
+      "All predicates are definable"
+    ],
+    "answer": 0,
+    "explanation": "Tarski: no sufficiently expressive language can define its own truth predicate"
+  },
+  {
+    "id": 2271,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the fixed-point lemma (diagonalization)?",
+    "options": [
+      "Diagonal matrices are special",
+      "For any formula φ(x), there exists ψ with T⊢ψ↔φ(⌜ψ⌝)",
+      "Every function has a fixed point",
+      "Self-reference is impossible"
+    ],
+    "answer": 1,
+    "explanation": "Fixed-point lemma: for any φ, there's a sentence ψ 'saying' φ holds of itself"
+  },
+  {
+    "id": 2272,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is Löb's theorem?",
+    "options": [
+      "All theorems are provable",
+      "Completeness implies decidability",
+      "PA⊢(□P→P)→P",
+      "Consistency is provable"
+    ],
+    "answer": 2,
+    "explanation": "Löb: if PA proves 'if P is provable then P', then PA proves P"
+  },
+  {
+    "id": 2273,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the arithmetical hierarchy?",
+    "options": [
+      "Classification of sets by quantifier complexity",
+      "Hierarchy of number systems",
+      "Order of arithmetic operations",
+      "Classification of axioms"
+    ],
+    "answer": 0,
+    "explanation": "Arithmetical hierarchy classifies sets by number of quantifier alternations (Σₙ, Πₙ)"
+  },
+  {
+    "id": 2274,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What are Σ₁ sets?",
+    "options": [
+      "Recursively enumerable sets",
+      "Decidable sets",
+      "Finite sets",
+      "Recursive sets"
+    ],
+    "answer": 0,
+    "explanation": "Σ₁ = r.e. sets = sets definable by ∃-formula"
+  },
+  {
+    "id": 2275,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What are Π₁ sets?",
+    "options": [
+      "All sets",
+      "Co-r.e. sets (complements of r.e.)",
+      "Recursive sets",
+      "R.e. sets"
+    ],
+    "answer": 1,
+    "explanation": "Π₁ = complements of Σ₁ = co-r.e. sets"
+  },
+  {
+    "id": 2276,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the Post correspondence problem?",
+    "options": [
+      "A complete problem",
+      "An undecidable problem about string matching",
+      "A decidable problem",
+      "A polynomial problem"
+    ],
+    "answer": 1,
+    "explanation": "PCP is undecidable: given pairs of strings, find sequence making concatenations equal"
+  },
+  {
+    "id": 2277,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is Rice's theorem?",
+    "options": [
+      "All non-trivial semantic properties of programs are undecidable",
+      "All properties of programs are decidable",
+      "Programs always halt",
+      "Type checking is decidable"
+    ],
+    "answer": 0,
+    "explanation": "Rice: any non-trivial property of the function computed by a program is undecidable"
+  },
+  {
+    "id": 2278,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the Curry-Howard correspondence?",
+    "options": [
+      "Curry is Howard",
+      "Logic equals arithmetic",
+      "Sets equal functions",
+      "Proofs correspond to programs"
+    ],
+    "answer": 3,
+    "explanation": "Curry-Howard: proofs as programs, propositions as types"
+  },
+  {
+    "id": 2279,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is intuitionistic propositional logic (IPL)?",
+    "options": [
+      "Three-valued logic",
+      "Logic without excluded middle",
+      "Modal logic",
+      "Classical logic"
+    ],
+    "answer": 1,
+    "explanation": "IPL is constructive logic not assuming P ∨ ¬P"
+  },
+  {
+    "id": 2280,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the BHK interpretation?",
+    "options": [
+      "Model-theoretic semantics",
+      "Classical interpretation",
+      "Proof interpretation of intuitionistic logic",
+      "Boolean algebra semantics"
+    ],
+    "answer": 2,
+    "explanation": "Brouwer-Heyting-Kolmogorov: proofs of A→B are functions transforming proofs of A to proofs of B"
+  },
+  {
+    "id": 2281,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is Kripke semantics for modal logic?",
+    "options": [
+      "Truth-table semantics",
+      "Algebraic semantics",
+      "Possible worlds semantics with accessibility",
+      "Game semantics"
+    ],
+    "answer": 2,
+    "explanation": "Kripke frames: possible worlds with accessibility relations interpreting □ and ◇"
+  },
+  {
+    "id": 2282,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the K axiom in modal logic?",
+    "options": [
+      "P→□◇P",
+      "□P→□□P",
+      "□(P→Q)→(□P→□Q)",
+      "□P→P"
+    ],
+    "answer": 2,
+    "explanation": "K axiom: necessity distributes over implication"
+  },
+  {
+    "id": 2283,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the T axiom in modal logic?",
+    "options": [
+      "□(P→Q)→(□P→□Q)",
+      "□P→P",
+      "P→◇P",
+      "□P→□□P"
+    ],
+    "answer": 1,
+    "explanation": "T axiom: what is necessary is true (reflexive frames)"
+  },
+  {
+    "id": 2284,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is S4 modal logic?",
+    "options": [
+      "Basic modal logic",
+      "K + T",
+      "K + T + □P→□□P",
+      "K + □P→P"
+    ],
+    "answer": 2,
+    "explanation": "S4 = K + T + 4 (4: □P→□□P, reflexive and transitive frames)"
+  },
+  {
+    "id": 2285,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is S5 modal logic?",
+    "options": [
+      "K + T",
+      "S4 + ◇P→□◇P",
+      "Intuitionistic logic",
+      "K only"
+    ],
+    "answer": 1,
+    "explanation": "S5 = S4 + 5 (5: ◇P→□◇P, equivalence relation frames)"
+  },
+  {
+    "id": 2286,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is temporal logic used for?",
+    "options": [
+      "Arithmetic",
+      "Reasoning about space",
+      "Set theory",
+      "Reasoning about time and sequences"
+    ],
+    "answer": 3,
+    "explanation": "Temporal logic reasons about propositions over time (e.g., 'always', 'eventually')"
+  },
+  {
+    "id": 2287,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What does LTL stand for in logic?",
+    "options": [
+      "Logical Truth Language",
+      "Least Type Lattice",
+      "Lambda Type Logic",
+      "Linear Temporal Logic"
+    ],
+    "answer": 3,
+    "explanation": "LTL = Linear Temporal Logic for reasoning about linear time sequences"
+  },
+  {
+    "id": 2288,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What does CTL stand for in logic?",
+    "options": [
+      "Complete Truth Logic",
+      "Classical Type Logic",
+      "Computation Tree Logic",
+      "Constructive Type Logic"
+    ],
+    "answer": 2,
+    "explanation": "CTL = Computation Tree Logic for branching time"
+  },
+  {
+    "id": 2289,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the omega rule in proof theory?",
+    "options": [
+      "Finite induction",
+      "From P(0),P(1),P(2),... infer ∀nP(n)",
+      "Bounded induction",
+      "Structural induction"
+    ],
+    "answer": 1,
+    "explanation": "Omega rule: infinitary rule inferring ∀ from all instances"
+  },
+  {
+    "id": 2290,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is proof-theoretic ordinal?",
+    "options": [
+      "Any ordinal",
+      "Ordinal measuring proof complexity",
+      "First infinite ordinal",
+      "Finite ordinal"
+    ],
+    "answer": 1,
+    "explanation": "Proof-theoretic ordinal measures the 'strength' of a formal system"
+  },
+  {
+    "id": 2291,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is ε₀ (epsilon-naught)?",
+    "options": [
+      "Proof-theoretic ordinal of PA",
+      "The smallest ordinal",
+      "A real number",
+      "Zero"
+    ],
+    "answer": 0,
+    "explanation": "ε₀ is the proof-theoretic ordinal of Peano Arithmetic"
+  },
+  {
+    "id": 2292,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is Gentzen's consistency proof?",
+    "options": [
+      "Disproved Gödel",
+      "Proved PA inconsistent",
+      "Proved ZFC consistent",
+      "Proved PA consistent using transfinite induction up to ε₀"
+    ],
+    "answer": 3,
+    "explanation": "Gentzen proved PA consistent using induction up to ε₀ (beyond PA's strength)"
+  },
+  {
+    "id": 2293,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is reverse mathematics?",
+    "options": [
+      "Reversing proofs",
+      "Backward chaining",
+      "Proving axioms from theorems",
+      "Finding minimal axioms to prove theorems"
+    ],
+    "answer": 3,
+    "explanation": "Reverse mathematics determines which axioms are needed to prove theorems"
+  },
+  {
+    "id": 2294,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the base system in reverse mathematics?",
+    "options": [
+      "RCA₀",
+      "ZFC",
+      "PA",
+      "Set theory"
+    ],
+    "answer": 0,
+    "explanation": "RCA₀ (Recursive Comprehension Axiom) is the base system"
+  },
+  {
+    "id": 2295,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the Berry paradox about?",
+    "options": [
+      "Set membership",
+      "Proof complexity",
+      "The smallest number not definable in few words",
+      "Logical connectives"
+    ],
+    "answer": 2,
+    "explanation": "Berry: 'the smallest positive integer not definable in under 20 words' is self-contradictory"
+  },
+  {
+    "id": 2296,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the Richard paradox?",
+    "options": [
+      "About sets",
+      "About truth",
+      "About types",
+      "About definability of reals"
+    ],
+    "answer": 3,
+    "explanation": "Richard: diagonal argument on definable reals leads to contradiction"
+  },
+  {
+    "id": 2297,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is Cantor's theorem?",
+    "options": [
+      "All sets are countable",
+      "|A| < |P(A)| for any set A",
+      "ℕ is the largest set",
+      "|ℕ| = |ℝ|"
+    ],
+    "answer": 1,
+    "explanation": "Cantor: every set is strictly smaller than its power set"
+  },
+  {
+    "id": 2298,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is the diagonal argument?",
+    "options": [
+      "Matrix operation",
+      "Proof technique using self-reference",
+      "Graph algorithm",
+      "Linear algebra method"
+    ],
+    "answer": 1,
+    "explanation": "Diagonal argument constructs object differing from all in a list (Cantor, Gödel, Turing)"
+  },
+  {
+    "id": 2299,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "What is Russell's paradox?",
+    "options": [
+      "About truth",
+      "Set of all sets not containing themselves",
+      "About numbers",
+      "About time"
+    ],
+    "answer": 1,
+    "explanation": "Russell: Does R = {x : x ∉ x} contain itself? Neither answer works"
+  },
+  {
+    "id": 2300,
+    "level": 3,
+    "difficulty": "hard",
+    "category": "Logic",
+    "question": "How did Russell resolve his paradox?",
+    "options": [
+      "Type theory restricting self-reference",
+      "Ignored it",
+      "Changed set definition",
+      "Proved it false"
+    ],
+    "answer": 0,
+    "explanation": "Russell introduced type theory to prevent self-referential set definitions"
+  }
+]

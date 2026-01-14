@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NeuroQuiz™ - Quiz Setup">
+    <title>NeuroQuiz™ - Setup</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <style>
+        .setup-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg, #fff);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .setup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .form-group label {
+            font-weight: 600;
+            color: var(--text-primary, #333);
+        }
+        .form-group input[type="text"],
+        .form-group select {
+            padding: 0.75rem;
+            border: 2px solid var(--border-color, #ddd);
+            border-radius: 8px;
+            font-size: 1rem;
+            background: var(--bg-primary, #fff);
+            color: var(--text-primary, #333);
+        }
+        .form-group input[type="text"]:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color, #2563eb);
+        }
+        .form-help {
+            font-size: 0.875rem;
+            color: var(--text-secondary, #666);
+            margin-top: 0.25rem;
+        }
+        .setup-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .setup-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .setup-title h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .setup-title p {
+            color: var(--text-secondary, #666);
+        }
+    </style>
+</head>
+<body>
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <span class="brand-name">NeuroQuiz™</span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content" role="main">
+        <div class="setup-container">
+            <div class="setup-title">
+                <h1>Quiz Setup</h1>
+                <p>Configure your quiz preferences to get started</p>
+            </div>
+
+            <form class="setup-form" id="setup-form">
+                <div class="form-group">
+                    <label for="name-input">Your Name</label>
+                    <input type="text" id="name-input" name="name" placeholder="Enter your name" required maxlength="50">
+                    <div class="form-help">We'll use this to personalize your experience</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="level-select">Education Level</label>
+                    <select id="level-select" name="level" required>
+                        <option value="">Select your level</option>
+                        <option value="1">Elementary (Level 1)</option>
+                        <option value="2">Secondary (Level 2)</option>
+                        <option value="3">University (Level 3)</option>
+                    </select>
+                    <div class="form-help">Choose your current education level</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="category-select">Category</label>
+                    <select id="category-select" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Logic">Logic</option>
+                        <option value="Math">Math</option>
+                        <option value="STEM">STEM</option>
+                        <option value="Literature">Literature</option>
+                        <option value="General Knowledge">General Knowledge</option>
+                    </select>
+                    <div class="form-help">Choose the subject you want to practice</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="literacy-select">Literacy Level</label>
+                    <select id="literacy-select" name="literacyLevel" required>
+                        <option value="">Select your literacy level</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Expert">Expert</option>
+                    </select>
+                    <div class="form-help">This determines your starting difficulty (Beginner=1, Intermediate=2, Expert=3)</div>
+                </div>
+
+                <div class="setup-actions">
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Start Quiz</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon" id="theme-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </span>
+    </button>
+
+    <script src="js/theme.js"></script>
+    <script>
+        document.getElementById('setup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const setup = {
+                name: formData.get('name').trim() || 'User',
+                level: parseInt(formData.get('level')),
+                category: formData.get('category'),
+                literacyLevel: formData.get('literacyLevel')
+            };
+            
+            localStorage.setItem('neuroquizUserSetup', JSON.stringify(setup));
+            console.log('[RB-ADA] user_setup_saved', setup);
+            
+            window.location.href = 'quiz.html';
+        });
+
+        const stored = localStorage.getItem('neuroquizUserSetup');
+        if (stored) {
+            try {
+                const parsed = JSON.parse(stored);
+                if (parsed.name) document.getElementById('name-input').value = parsed.name;
+                if (parsed.level) document.getElementById('level-select').value = parsed.level;
+                if (parsed.category) document.getElementById('category-select').value = parsed.category;
+                if (parsed.literacyLevel) document.getElementById('literacy-select').value = parsed.literacyLevel;
+            } catch (e) {
+                console.warn('Failed to load stored setup:', e);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -16,7 +16,6 @@
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="logo-container">
-                    <img src="assets/images/logo.png" alt="NeuroQuiz Logo" class="logo" id="logo">
                     <span class="brand-name">NeuroQuiz™</span>
                 </div>
                 <ul class="nav-menu" id="nav-menu">
@@ -32,6 +31,14 @@
     <main class="quiz-main" role="main">
         <div class="quiz-container" id="quiz-container">
             
+            <!-- User Welcome Section -->
+            <section class="user-welcome-section" id="user-welcome-section">
+                <div class="user-greeting" id="user-greeting">
+                    <span class="greeting-text">Welcome, </span>
+                    <span class="user-name" id="user-name">User</span>
+                </div>
+            </section>
+
             <!-- Progress Bar Section -->
             <section class="progress-section" id="progress-section">
                 <div class="progress-container" id="progress-container">
@@ -91,7 +98,17 @@
                 <div class="action-buttons" id="action-buttons">
                     <!-- UI Team: Button styling only - functionality in quiz-ui.js -->
                     <button class="btn btn-secondary" id="hint-btn" disabled>
-                        <span class="btn-icon">💡</span>
+                        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            <circle cx="12" cy="12" r="5"></circle>
+                        </svg>
                         <span class="btn-text">Hint</span>
                     </button>
                     <button class="btn btn-primary" id="submit-btn" disabled>
@@ -99,6 +116,10 @@
                     </button>
                     <button class="btn btn-secondary" id="next-btn" style="display: none;">
                         <span class="btn-text">Next Question</span>
+                    </button>
+                    <button class="btn btn-outline" id="stop-btn" style="margin-left: auto;">
+                        <span class="btn-icon">⏹️</span>
+                        <span class="btn-text">Stop Quiz</span>
                     </button>
                 </div>
             </section>
@@ -134,15 +155,27 @@
 
     <!-- Theme Toggle -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon" id="theme-icon">🌙</span>
+        <span class="theme-icon" id="theme-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </span>
     </button>
 
     <!-- Scripts -->
-    <!-- IMPORTANT: Load order matters - data.js first, then engine.js, then UI -->
+    <!-- IMPORTANT: Load order matters - data.js first, then cognitive-analyzer.js, then engine.js, then UI -->
     <script src="js/data.js"></script>
+    <script src="js/cognitive-analyzer.js"></script>
     <script src="js/engine.js"></script>
     <script src="js/quiz-ui.js"></script>
     <script src="js/theme.js"></script>
+    <script>
+        const stored = localStorage.getItem('neuroquizUserSetup');
+        if (!stored) {
+            console.log('[RB-ADA] no_setup_found, redirecting to setup');
+            window.location.href = 'setup.html';
+        }
+    </script>
 </body>
 </html>
 

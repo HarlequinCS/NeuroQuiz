@@ -52,7 +52,7 @@ class QuizUIController {
     async init() {
         this.showLoading();
         
-        // Initialize Sliding Navigation
+        // 1. Initialize Your Sliding Navigation
         this.setupNavigationMarker(); 
         
         try {
@@ -60,6 +60,10 @@ class QuizUIController {
             const userSetup = await this.ensureUserSetup(questionBank);
             this.engine = new QuizEngine({ ...userSetup, questionBank });
             this.hideLoading();
+            
+            // 2. LEADER INTEGRATION: Display User Name
+            this.displayUserName(userSetup.name);
+            
             this.loadQuestion();
             this.setupEventListeners();
         } catch (error) {
@@ -68,7 +72,15 @@ class QuizUIController {
         }
     }
     
-    // --- Sliding Marker Logic ---
+    // --- LEADER FEATURE: Display Name ---
+    displayUserName(name) {
+        const userNameElement = document.getElementById('user-name');
+        if (userNameElement && name) {
+            userNameElement.textContent = name;
+        }
+    }
+
+    // --- YOUR UI: Sliding Marker Logic ---
     setupNavigationMarker() {
         const navMenu = document.querySelector('.nav-menu');
         const marker = document.querySelector('.nav-marker');
@@ -284,7 +296,7 @@ class QuizUIController {
         if (type === 'level') {
             if (value >= 3) tier = 3;       // Legendary Spin
             else if (value === 2) tier = 2; // Gold Pulse
-            else tier = 1;                  // Normal
+            else tier = 1;                  // Normal (No Effect)
             
             element.classList.add(`fx-level-${tier}`);
         }
@@ -443,6 +455,7 @@ class QuizUIController {
         }
     }
     
+    // --- YOUR UI: Card Style Feedback ---
     showFeedback(result) {
         const container = this.elements.feedbackArea;
         const isCorrect = result.isCorrect;
@@ -558,6 +571,7 @@ class QuizUIController {
         const fallbackCategory = validCategories.length ? validCategories[0] : ((window.QUESTION_BANK && window.QUESTION_BANK[0] && window.QUESTION_BANK[0].category) ? window.QUESTION_BANK[0].category : null);
         const normalizedCategory = validCategories.includes(parsed.category) ? parsed.category : fallbackCategory;
         return {
+            name: parsed.name || 'User', // Include Name for Welcome Section
             level: this.normalizeLevel(parsed.level),
             category: normalizedCategory,
             literacyLevel: this.normalizeLiteracy(parsed.literacyLevel)

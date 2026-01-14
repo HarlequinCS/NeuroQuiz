@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NeuroQuiz™ - Take the Adaptive Quiz">
     <title>NeuroQuiz™ - Quiz</title>
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/animations.css">
+    
     <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
@@ -18,8 +17,8 @@
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
+                
                 <a href="index.html" class="logo-container">
-                    <img src="assets/images/logo.png" alt="NeuroQuiz Logo" class="logo" id="logo">
                     <span class="brand-name">NeuroQuiz™</span>
                 </a>
 
@@ -29,7 +28,6 @@
                         <div class="cloud cloud-2"></div>
                         <div class="star star-1"></div>
                         <div class="star star-2"></div>
-                        <div class="star star-3"></div>
                     </div>
                     <div class="dino-ground"></div>
                     <div class="obstacle-cactus"></div>
@@ -60,28 +58,36 @@
 
     <main class="quiz-main" role="main">
         <div class="quiz-container" id="quiz-container">
-    
-            <div class="gamification-header">
-        
-                    <div class="header-stat">
-                        <div class="stat-icon" id="level-icon">⭐</div> 
-                        <div class="stat-label">Level</div>
-                        <div class="stat-value" id="level-value">1</div>
-                    </div>
-
-                    <div class="header-stat">
-                        <div class="stat-icon" id="streak-icon">🔥</div> 
-                        <div class="stat-label">Streak</div>
-                        <div class="stat-value" id="streak-value">0</div>
-                    </div>
-
-                    <div class="header-stat">
-                        <div class="stat-icon" id="points-icon">💎</div>
-                        <div class="stat-label">Points</div>
-                        <div class="stat-value" id="points-value">0</div>
-                    </div>
-
+            
+            <section class="user-welcome-section" id="user-welcome-section">
+                <div class="user-greeting" id="user-greeting">
+                    <span class="greeting-text">Welcome back,</span>
+                    <span class="user-name" id="user-name">Learner</span>
                 </div>
+                <div class="cognitive-status">
+                    🧠 Cognitive Analysis Active
+                </div>
+            </section>
+
+            <div class="gamification-header">
+                <div class="header-stat">
+                    <div class="stat-icon" id="level-icon">⭐</div> 
+                    <div class="stat-label">Level</div>
+                    <div class="stat-value" id="level-value">1</div>
+                </div>
+
+                <div class="header-stat">
+                    <div class="stat-icon" id="streak-icon">🔥</div> 
+                    <div class="stat-label">Streak</div>
+                    <div class="stat-value" id="streak-value">0</div>
+                </div>
+
+                <div class="header-stat">
+                    <div class="stat-icon" id="points-icon">💎</div> 
+                    <div class="stat-label">Points</div>
+                    <div class="stat-value" id="points-value">0</div>
+                </div>
+            </div>
 
             <section class="progress-section" id="progress-section">
                 <div class="progress-container" id="progress-container">
@@ -99,6 +105,7 @@
 
             <section class="question-section" id="question-section">
                 <div class="question-card" id="question-card">
+                    <div class="card-glare"></div>
                     <div class="question-badge" id="question-badge">
                         <span class="badge-text" id="badge-text">Q1</span>
                     </div>
@@ -112,14 +119,15 @@
                     </div>
 
                     <div class="options-container" id="options-container" role="radiogroup">
-                    </div>
+                        </div>
                 </div>
 
                 <div class="feedback-area" id="feedback-area" aria-live="polite"></div>
             </section>
 
             <section class="quiz-actions" id="quiz-actions">
-                <button class="btn" id="hint-btn" aria-label="Get a Hint">
+                
+                <button class="btn" id="hint-btn" aria-label="Get a Hint" data-tooltip="Hint">
                     <span class="btn-icon">💡</span>
                 </button>
 
@@ -133,7 +141,7 @@
                     </button>
                 </div>
 
-                <button class="btn btn-stop" id="stop-btn" aria-label="Stop Quiz">
+                <button class="btn btn-stop" id="stop-btn" aria-label="Stop Quiz" data-tooltip="Stop Quiz">
                     <span class="btn-icon">🛑</span>
                 </button>
             </section>
@@ -144,13 +152,29 @@
     <div class="loading-overlay" id="loading-overlay" aria-hidden="true">
         <div class="loading-spinner" id="loading-spinner">
             <div class="spinner"></div>
-            <p class="loading-text">Loading quiz...</p>
+            <p class="loading-text">Calibrating RB-ADA Model...</p>
         </div>
     </div>
 
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon" id="theme-icon">🌙</span>
-    </button>
+    <div class="theme-segmented-control" role="radiogroup" aria-label="Theme Switcher">
+        
+        <input type="radio" class="theme-input" name="theme" id="theme-system" value="system" checked>
+        <label for="theme-system" class="theme-label" aria-label="System Default">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-light" value="light">
+        <label for="theme-light" class="theme-label" aria-label="Light Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-dark" value="dark">
+        <label for="theme-dark" class="theme-label" aria-label="Dark Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </label>
+
+        <div class="theme-slider"></div>
+    </div>
 
     <div class="custom-modal-overlay" id="modal-overlay" aria-hidden="true">
         <div class="custom-modal-card">
@@ -158,29 +182,62 @@
                 <span class="modal-icon" id="modal-icon">💡</span>
                 <h3 class="modal-title" id="modal-title">Hint</h3>
             </div>
-            
             <div class="modal-body">
                 <p id="modal-message">Here is a helpful hint for you!</p>
             </div>
-            
-            <div class="modal-footer" id="modal-footer">
-                </div>
+            <div class="modal-footer" id="modal-footer"></div>
         </div>
     </div>
 
     <script src="js/data.js"></script>
-    <script src="js/engine.js"></script>
-    <script src="js/quiz-ui.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="js/cognitive-analyzer.js"></script> <script src="js/engine.js"></script>
+    <script src="js/quiz-ui.js"></script> <script src="js/theme.js"></script>
     <script src="js/background-effects.js"></script>
     <script src="js/card-tilt.js"></script>
 
     <script>
-        const stored = localStorage.getItem('neuroquizUserSetup');
-        if (!stored) {
-            console.log('[RB-ADA] no_setup_found, redirecting to setup');
-            window.location.href = 'setup.html';
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            // Setup Check
+            const stored = localStorage.getItem('neuroquizUserSetup');
+            if (!stored) {
+                console.log('[RB-ADA] no_setup_found, redirecting to setup');
+                window.location.href = 'setup.html';
+            }
+
+            // --- THEME LOGIC START ---
+            const themeInputs = document.querySelectorAll('input[name="theme"]');
+            // FIX: Target ROOT (html) so CSS variables apply globally
+            const root = document.documentElement; 
+
+            const applyTheme = (theme) => {
+                if (theme === 'system') {
+                    // Check OS preference
+                    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    root.setAttribute('data-theme', systemDark ? 'dark' : 'light');
+                } else {
+                    root.setAttribute('data-theme', theme);
+                }
+                localStorage.setItem('neuroquizTheme', theme);
+            };
+
+            // Load saved preference
+            const savedTheme = localStorage.getItem('neuroquizTheme') || 'system';
+            
+            // Check the correct radio button visually
+            const activeInput = document.getElementById(`theme-${savedTheme}`);
+            if (activeInput) activeInput.checked = true;
+            
+            // Apply immediate
+            applyTheme(savedTheme);
+
+            // Listen for changes
+            themeInputs.forEach(input => {
+                input.addEventListener('change', (e) => {
+                    applyTheme(e.target.value);
+                });
+            });
+            // --- THEME LOGIC END ---
+        });
     </script>
 </body>
 </html>

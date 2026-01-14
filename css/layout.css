@@ -217,6 +217,32 @@
    QUIZ LAYOUT
    ============================================ */
 
+/* User Welcome Section */
+.user-welcome-section {
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.user-greeting {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--color-text-primary, #111827);
+    font-weight: 500;
+}
+
+.greeting-text {
+    color: var(--color-text-secondary, #6b7280);
+}
+
+.user-name {
+    color: var(--color-primary, #2563eb);
+    font-weight: 600;
+}
+
+
 .quiz-main {
     min-height: calc(100vh - 200px);
     padding: var(--spacing-xl) var(--spacing-md);

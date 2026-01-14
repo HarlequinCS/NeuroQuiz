@@ -12,17 +12,12 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
 </head>
-<style>
-   .hero-kayenta {
-       background-image: url('assets/images/aboutbackground.jpg') !important;
-       background-size: cover !important;
-       background-position: center !important;
-       background-repeat: no-repeat !important;
-       min-height: 100vh;
-   }
-</style>
 <body class="bg-primary">
+    <canvas id="neural-bg"></canvas>
+
+    <div id="background-shapes"></div>
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
@@ -41,16 +36,18 @@
 
     <main class="about-main" role="main">
         
-        <section class="hero-section hero-kayenta">
-        <div class="container flex" style="align-items: center; text-align: left;">
-            <div style="flex: 1;">
-                <h1 class="hero-title-giant">About Us</h1>
-                <p class="description-text">
+       <section class="hero-section hero-kayenta">
+            <canvas id="neuro-web-canvas"></canvas>
+
+            <div class="container hero-content centered-layout">
+                <h1 class="hero-title-giant scroll-move-right">About Us</h1>
+                <p class="description-text scroll-move-left">
                     NeuroQuiz™ is an innovative adaptive gamified quiz platform that combines 
                     cutting-edge cognitive science research with engaging game mechanics.
                 </p>
-                <a href="#app-description" class="learn-more-btn">Learn More</a>
-            </div>
+                <div class="btn-wrapper">
+                    <a href="#app-description" class="learn-more-btn">Learn More</a>
+                </div>
             </div>
         </section>
 
@@ -92,7 +89,10 @@
     </div>
 </section>
 
-<section class="tech-section" style="padding: var(--spacing-2xl) 0;">
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
+
+
+           <section class="tech-section" style="padding: var(--spacing-2xl) 0;">
     <h2 class="text-tertiary" style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.875rem; margin-bottom: var(--spacing-lg);">The Tech Stack</h2>
 
                 <div class="tech-grid">
@@ -110,7 +110,7 @@
 
                     <div class="tech-card">
                         <div class="tech-icon">⚡</div>
-                        <h3 class="tech-name">JavaScript (ES6+)</h3>
+                        <h3 class="tech-name">JavaScript</h3>
                         <p class="tech-desc">Core logic and adaptive quiz engine.</p>
                     </div>
 
@@ -122,11 +122,11 @@
                 </div>
             </section> 
 
-            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
+             <hr style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
 
-           <section class="team-section" id="team-section">
+            <section class="team-section" id="team-section">
     <div class="container">
-        <h2 class="text-tertiary" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem; margin-bottom: var(--spacing-xl);">
+        <h2 class="text-tertiary" style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.875rem; margin-bottom: var(--spacing-lg);">
             Team Members
         </h2>
         <div class="team-slider-wrapper" style="position: relative; display: flex; align-items: center;">
@@ -196,11 +196,6 @@
 
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
         <span id="theme-icon">🌙</span>
-        <span class="theme-icon" id="theme-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </span>
     </button>
 
     <script src="js/theme.js"></script>

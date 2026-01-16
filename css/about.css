@@ -1,418 +1,427 @@
-/* Styling based on Team Members reference image */
-/* Container untuk memusatkan semua benda */
+/* ============================================
+   ABOUT US SECTION (Updated for 3 Modes)
+   ============================================ */
 
-/* Research Section Styling */
-.research-section {
-    padding: 60px 0;
+.hero-kayenta {
+    position: relative;
+    overflow: hidden;
+    background: #0a0e17; /* Deep midnight blue */
+}
+
+#neuro-web-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
 }
 
-.research-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center; /* Rule: Strive for Consistency */
-    margin-top: 40px;
-}
-
-/* Glass Panel Card Style for Research */
-.glass-panel-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 30px;
-    width: 320px; /* Saiz yang seimbang untuk teks panjang */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.hero-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: center; /* Centers everything horizontally */
+    justify-content: center;
+    text-align: center; /* Ensures text alignment is centered */
+    min-height: 70vh; /* Gives it more breathing room */
+    padding: 0 20px;
+}
+/* Add a radial glow behind the text to improve readability */
+.hero-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+/* Light Mode & High Contrast Overlay Adjustment */
+[data-theme="light"] .hero-kayenta::before,
+[data-theme="high-contrast"] .hero-kayenta::before {
+    background: rgba(255, 255, 255, 0.8); /* Strong light overlay so dark text is visible */
 }
 
-/* Rule 3: Informative Feedback (Hover Effect) */
-.glass-panel-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    border-color: #ff00ff; /* Pink Neon */
-    box-shadow: 0 15px 35px rgba(255, 0, 255, 0.2);
+.hero-title-giant {
+    font-family: 'Orbitron', sans-serif; /* Your new high-tech font */
+    font-size: clamp(4rem, 12vw, 8rem); /* Make it significantly larger */
+    margin-bottom: 1.5rem;
+    line-height: 1;
 }
 
-.research-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-}
-
-.research-item-title {
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.research-item-desc {
-    color: #94a3b8;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-/* Research Link Button - Unique Style */
-.research-link-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: linear-gradient(90deg, #3b82f6, #ff00ff);
-    color: white;
-    text-decoration: none;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-weight: bold;
-    margin-top: 30px;
-    transition: 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.research-link-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
-}
-/* Container Utama untuk pemusatan kandungan */
-.description-content-wrapper {
-    display: flex;
-    justify-content: center; /* Rule: Strive for Consistency in layout */
-    padding: 20px;
-    width: 100%;
-}
-
-/* Panel Glassmorphism - Memberi kesan moden & interaktif */
-.glass-panel {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px);
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 850px; /* Sempadan supaya tidak terlalu ketepi */
-    transition: all 0.4s ease; /* Rule 3: Informative Feedback */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Kesan interaktif apabila user menghalakan tetikus */
-.glass-panel:hover {
-    transform: translateY(-5px) scale(1.01);
-    background: rgba(255, 255, 255, 0.06);
-    border-color: #3b82f6; /* Warna biru tema NeuroQuiz */
-    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
-}
-
-/* Typography untuk Description */
 .description-text {
-    color: #94a3b8; /* Muted text color untuk keselesaan mata */
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
+    max-width: 750px; /* Limits width to match the mission section's text weight */
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+/* Update this in your stylesheet */
+.learn-more-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    
+    /* Use the primary blue from your theme.css */
+    background-color: var(--color-primary) !important; 
+    
+    /* Force white text so it's always visible on the blue button */
+    color: #ffffff !important; 
+    
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    border-radius: 50px;
+    text-decoration: none;
+    
+    /* Use the shadow variable from your theme */
+    box-shadow: var(--shadow-md);
+    
+    margin-top: var(--spacing-lg);
+    position: relative;
+    z-index: 5; /* Ensures it stays above the hero overlay */
+    transition: all var(--transition-base);
 }
 
-.description-text strong {
-    color: #ffffff; /* Highlight kata kunci penting */
+/* Hover effect */
+.learn-more-btn:hover {
+    background-color: var(--color-primary-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    color: #ffffff !important;
 }
 
-/* Heading Neon Style sesuai dengan gambar rujukan */
-.neon-heading {
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px #ff00ff;
-    margin-bottom: 20px;
-    font-weight: 800;
+html {
+    scroll-behavior: smooth !important;
 }
-/* Tech Stack Grid */
-/* Container utama untuk memastikan semua kandungan di tengah */
-.main-content-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+
+/* ============================================
+   OUR MISSION SECTION
+   ============================================ */
+
+.hero-kayenta {
+    /* 1. Use url() instead of src */
+    background-image: url('assets/images/aboutbackground.jpg') !important;
+    
+    /* 2. Set the size and position so it fills the screen */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    
+    /* 3. Layout settings */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Memusatkan semua section secara horizontal */
+    justify-content: center;
+    padding-left: 10%;
+    position: relative;
+    
+    /* Remove any background-color that might be hiding the image */
+    background-color: transparent !important;
 }
 
-/* Grid Pasukan - Ini kunci untuk memusatkan kad */
+    /* 4. The Overlay (Important for text readability) */
+    .hero-kayenta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adds a 50% dark tint */
+        z-index: 1;
+    }
+
+    /* 5. Keep text on top of the tint */
+    .hero-kayenta .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-title-giant {
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    /* This adds a soft depth behind the letters */
+}
+
+#app-description {
+    /* Adjust '100px' to match the actual height of your header */
+    scroll-margin-top: 100px; 
+}
+
+.mission-interactive-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.mission-card {
+    perspective: 1000px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-front {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.card-back {
+    background: var(--color-primary);
+    color: white;
+    transform: rotateX(180deg);
+}
+
+.mission-card:hover .card-front, .mission-card.flipped .card-front {
+    transform: rotateX(180deg);
+}
+
+.mission-card:hover .card-back, .mission-card.flipped .card-back {
+    transform: rotateX(0deg);
+}
+
+.mission-icon {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.tap-indicator {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    margin-top: var(--spacing-sm);
+}
+
+
+
+/* ============================================
+   TEAM MEMBERS HORIZONTAL SLIDER
+   ============================================ */
+
+/* Ensure the grid doesn't show scrollbars but still allows scrolling */
 .team-grid {
     display: flex;
-    flex-wrap: wrap; /* Benarkan kad turun bawah jika skrin kecil (responsif) */
-    justify-content: center; /* Memusatkan kad di tengah barisan */
-    gap: 20px;
-    width: 100%;
-    margin-top: 40px;
+    flex-wrap: nowrap;
+    overflow-x: hidden; /* Changed to hidden to let buttons handle it */
+    scroll-behavior: smooth;
+    gap: var(--spacing-lg);
+    padding: 20px 0;
+}
+/* Navigation Buttons Styling */
+/* Navigation Arrows Styling */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent; /* Removes the circle background */
+    border: none;             /* Removes the border */
+    color: var(--color-primary);
+    font-size: 2.5rem;        /* Makes the arrow icon larger */
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    /* Soft glow on the arrow itself */
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
 }
 
-/* Memastikan kad mempunyai saiz yang seragam */
-.team-member-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    width: 250px; /* Saiz tetap supaya 5 ahli muat dalam baris yang lebar */
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.nav-btn:hover {
+    color: var(--color-primary-light);
+    /* Slightly grow and brighten the glow on hover */
+    transform: translateY(-50%) scale(1.2);
+    text-shadow: 0 0 20px rgba(37, 99, 235, 0.8);
 }
+
+/* Adjust distance from the edges so they sit nicely next to the cards */
+.prev-btn { 
+    left: -40px; 
+}
+
+.next-btn { 
+    right: -40px; 
+}
+
+/* Ensure the container doesn't cut off the arrows */
+.team-slider-wrapper {
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Optional: Hide scrollbar for Chrome/Safari for a cleaner "app" look */
+.team-grid::-webkit-scrollbar {
+    height: 6px;
+}
+.team-grid::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: var(--radius-full);
+}
+
+.team-member {
+    flex: 0 0 300px;            /* Fix width so they don't shrink */
+    min-width: 280px;           /* */
+    text-align: center;         /* */
+    transition: transform var(--transition-base); /* */
+}
+
+/* Ensure images stay uniform in the slider */
+.avatar-frame img {
+    width: 100%;
+    height: 250px;              /* Standard height */
+    object-fit: cover;          /* */
+    border-radius: var(--radius-md); /* */
+}
+
+[data-theme="high-contrast"] .team-member.question-card {
+    border: 2px solid #000000 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+}
+
+[data-theme="high-contrast"] .team-member.question-card h3 {
+    color: #000000 !important;
+}
+
+/* ============================================
+   TEAM MEMBER HOVER LIGHTING
+   ============================================ */
+
+/* 1. Set the base transition for a smooth "light up" */
+.team-member.question-card {
+    transition: transform 0.3s ease, 
+                box-shadow 0.3s ease, 
+                border-color 0.3s ease !important;
+    cursor: pointer;
+}
+
+/* 2. The Lighting Effect (Triggered on cursor reach) */
+.team-member.question-card:hover {
+    transform: translateY(-10px); /* Lifts the card up slightly */
+    
+    /* Matches the Tech Stack glow using your primary blue variable */
+    border-color: var(--color-primary) !important; 
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4), 
+                0 0 40px rgba(37, 99, 235, 0.1) !important; 
+}
+
+/* 3. Optional: Make the avatar image brighten slightly on hover */
+.team-member.question-card:hover .avatar-frame img {
+    filter: brightness(1.1);
+    transition: filter 0.3s ease;
+}
+
+
+/* ============================================
+   TECHNOLOGY STACK 
+   ============================================ */
+
 
 .tech-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
 }
 
-/* Tech Card Styling - Matches Team Card Glass Effect */
 .tech-card {
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 25px;
-    width: 220px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Hover Effect - Rule 3: Informative Feedback */
 .tech-card:hover {
+    background: rgba(37, 99, 235, 0.1);
+    border-color: var(--color-primary);
     transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.08);
-    border-color: #3b82f6; /* NeuroQuiz Blue */
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
 }
 
 .tech-icon {
     font-size: 2.5rem;
-    margin-bottom: 15px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+.tech-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
 }
 
-.tech-name {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-    font-weight: bold;
+.tech-card:hover {
+    transform: translateY(-10px); /* Lifts the card up */
+    border-color: var(--color-primary); /* Brighter blue border */
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4); /* Neon glow effect */
 }
 
-.tech-desc {
-    font-size: 0.85rem;
-    color: #94a3b8; /* Muted text color */
-    line-height: 1.4;
+.tech-card i {
+    transition: transform 0.5s ease;
 }
 
-.main-content-wrapper {
-    max-width: 1200px; /* Hadkan lebar supaya tak terlalu ketepi */
-    margin: 0 auto;    /* Center kan container */
-    padding: 40px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Border halus di sekeliling */
-    border-radius: 20px;
-    background: rgba(15, 23, 42, 0.5); /* Latar belakang sedikit gelap */
+.tech-card:hover i {
+    transform: rotateY(360deg); /* Spins the icon once on hover */
 }
 
-/* Interaktif Intro (About NeuroQuiz) */
-.interactive-intro {
-    text-align: center;
-    margin-bottom: 80px;
-}
+/* ============================================
+   BACKGROUND
+   ============================================ */
 
-.glass-panel {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block; /* Supaya dia ikut lebar teks */
-    max-width: 800px;
-}
-
-.glass-panel:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
-    border-color: #3b82f6;
-}
-
-/* Team Grid - Centering cards */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    justify-content: center; /* Center kan kad jika tak cukup row */
-    margin-top: 50px;
-}
-
-/* Member Card - Glassmorphism style */
-.team-member-card {
-    background: #1e293b;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-/* Container Utama */
-.main-content-wrapper {
-    max-width: 1250px;
-    margin: 50px auto;
-    padding: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    background: rgba(15, 23, 42, 0.6);
-}
-
-/* Grid Susunan Ahli  */
-.team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* Memastikan semua kad berada di tengah */
-    align-items: stretch;
-    margin-top: 40px;
-}
-
-/* Kad Ahli */
-.team-member-card {
-    background: #1e293b;
-    width: 230px; /* Saiz tetap supaya muat dalam barisan */
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.team-member-card:hover {
-    transform: translateY(-10px);
-    border-color: #ff00ff; /* Kesan neon  */
-}
-
-.member-image-box {
-    width: 100%;
-    height: 280px;
-}
-
-.avatar-img {
+/* Ensure the canvas covers the whole screen and stays in the back */
+#neural-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
+    z-index: -1; /* Behind everything */
+    pointer-events: none; /* Let clicks pass through to buttons */
 }
 
-.team-member-card:hover .avatar-img {
-    filter: grayscale(0%);
-}
-
-.member-info {
-    padding: 15px;
-    text-align: left;
-}
-
-.member-info h3 {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    color: #fff;
-}
-
-.team-member-card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border-color: #ff00ff; /* Border warna neon masa hover */
-}
-
-.avatar-img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
-}
-
-.team-member-card:hover .avatar-img {
-    filter: grayscale(0%); /* Gambar jadi warna bila hover */
-}
-
-.neon-heading {
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.5);
-    text-transform: uppercase;
-    font-weight: 800;
-}
-
-.accent-text {
-    color: #ff00ff; /* Pink neon color from reference */
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 0;
-}
-
-.section-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #ffffff;
-    text-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
-    margin-top: 0;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px 0;
-}
-
-.member-card-inner {
-    background: rgba(255, 255, 255, 0.05); /* Glass effect */
-    border-radius: 20px;
-    overflow: hidden;
-    height: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease; /* Rule: Informative feedback */
-}
-
-.member-card-inner:hover {
-    transform: translateY(-10px);
-    border-color: #00d4ff; /* Blue glow on hover */
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
-}
-
-.member-avatar {
-    height: 300px;
-    overflow: hidden;
-}
-
-.avatar-img {
+/* Container for the floating game shapes */
+#background-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%); /* Matches the black & white style in reference */
-    transition: filter 0.3s ease;
+    z-index: -2; /* Behind the neural network */
+    overflow: hidden;
+    pointer-events: none;
 }
 
-.member-card-inner:hover .avatar-img {
-    filter: grayscale(0%); /* Turns back to color on hover */
+/* Style for the shapes generated by your friend's JS */
+.bg-shape {
+    position: absolute;
+    opacity: 0.15; /* Keep it subtle so it's not distracting */
+    animation: floatShape linear infinite;
+    filter: blur(2px); /* Makes them look "soft" and distant */
 }
 
-.member-info {
-    padding: 20px;
-    text-align: left;
+@keyframes floatShape {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    20% { opacity: 0.15; }
+    80% { opacity: 0.15; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
 }
 
-.member-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
-
-.member-role {
-    color: #00d4ff; /* Cyan color for roles */
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.member-edu {
-    color: #94a3b8;
-    font-size: 0.8rem;
-    line-height: 1.4;
+#neural-bg {
+    opacity: 0.4; /* Makes the lines and confetti softer */
 }

@@ -117,42 +117,42 @@
     }
 }
 
-/* Correct answer animation */
+/* Correct answer animation - Pop with sparkle */
 .option-btn.correct {
     border-color: var(--color-success);
     background-color: rgba(16, 185, 129, 0.1);
-    animation: correctAnswer 0.5s ease-out;
+    animation: correctPop 0.6s ease-out;
 }
 
-@keyframes correctAnswer {
+@keyframes correctPop {
     0% {
         transform: scale(1);
     }
     50% {
         transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
     }
     100% {
         transform: scale(1);
     }
 }
 
-/* Wrong answer animation */
+/* Wrong answer animation - Gentle shake */
 .option-btn.wrong {
     border-color: var(--color-error);
     background-color: rgba(239, 68, 68, 0.1);
-    animation: wrongAnswer 0.5s ease-out;
+    animation: gentleShake 0.5s ease-in-out;
 }
 
-@keyframes wrongAnswer {
+@keyframes gentleShake {
     0%, 100% {
         transform: translateX(0);
     }
-    25% {
-        transform: translateX(-10px);
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-4px);
     }
-    75% {
-        transform: translateX(10px);
+    20%, 40%, 60%, 80% {
+        transform: translateX(4px);
     }
 }
 

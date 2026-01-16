@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NeuroQuiz™ - Your Results">
     <title>NeuroQuiz™ - Results</title>
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/results.css">
+    <link rel="stylesheet" href="css/theme.css?v=1.0.9">
+    <link rel="stylesheet" href="css/layout.css?v=1.0.9">
+    <link rel="stylesheet" href="css/animations.css?v=1.0.9">
+    <link rel="stylesheet" href="css/results.css?v=1.0.9">
+    <link rel="stylesheet" href="css/quiz.css?v=1.0.9">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
@@ -17,17 +18,28 @@
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
-                <div class="logo-container">
+                <a href="index.html" class="logo-container">
+                    <div class="logo-placeholder" aria-label="NeuroQuiz Logo">
+                        <span class="logo-text">NQ</span>
+                    </div>
                     <span class="brand-name">NeuroQuiz™</span>
-                </div>
+                </a>
+
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-menu" id="nav-menu">
+                    <div class="nav-marker"></div>
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="quiz.html" class="nav-link cta-button">Retake Quiz</a></li>
+                    <li><a href="setup.html" class="nav-link active" aria-current="page">Retake Quiz</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
 
     <!-- Main Results Container -->
     <main class="results-main" role="main">
@@ -186,12 +198,6 @@
 
             <!-- Detailed Review Section -->
             <section class="review-section" id="review-section">
-                <button class="review-toggle" id="review-toggle" aria-expanded="false">
-                    <span class="toggle-text">View Detailed Review</span>
-                    <svg class="toggle-icon" id="toggle-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
                 <div class="review-content" id="review-content" aria-hidden="true">
                     <div class="review-list" id="review-list"></div>
                 </div>
@@ -203,27 +209,161 @@
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="footer-container">
-            <p class="footer-text">&copy; 2024 NeuroQuiz™. All rights reserved.</p>
+            <div class="footer-main">
+                <div class="footer-section">
+                    <div class="footer-brand">NeuroQuiz™</div>
+                    <div class="footer-copyright">
+                        &copy; 2026 NeuroQuiz™. All rights reserved.
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-section-title">Development</div>
+                    <div class="footer-section-content">
+                        <p>Developed by students of <strong>Universiti Teknologi Mara</strong></p>
+                        <p><span class="footer-accent">Melaka Branch, Jasin Campus</span></p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-section-title">Academic Information</div>
+                    <div class="footer-section-content">
+                        <p><strong>Students of Faculty of Computer and Mathematical Sciences</strong></p>
+                        <p>Course code: <span class="footer-accent">CDCS251</span></p>
+                        <p>Bachelor of Computer Sciences (Hons) Netcentric Computing</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-section-title">Subject</div>
+                    <div class="footer-section-content">
+                        <p>Subject: <span class="footer-accent">ITT588</span></p>
+                        <p>Front End Technology</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Educational project for academic purposes</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon" id="theme-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </span>
-    </button>
+
+    <!-- Theme Switcher (Same as Quiz Page) -->
+    <div class="theme-segmented-control" role="radiogroup" aria-label="Theme Switcher">
+        <input type="radio" class="theme-input" name="theme" id="theme-system-result" value="system" checked>
+        <label for="theme-system-result" class="theme-label" aria-label="System Default">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-light-result" value="light">
+        <label for="theme-light-result" class="theme-label" aria-label="Light Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-dark-result" value="dark">
+        <label for="theme-dark-result" class="theme-label" aria-label="Dark Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </label>
+
+        <div class="theme-slider"></div>
+    </div>
 
     <!-- Scripts -->
-    <script src="js/cognitive-analyzer.js"></script>
-    <script src="js/results-ui.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="js/setup-check.js?v=1.0.9"></script>
+    <script src="js/cognitive-analyzer.js?v=1.0.9"></script>
+    <script src="js/results-ui.js?v=1.0.9"></script>
+    <script src="js/theme.js?v=1.0.9"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    const isActive = navMenu.classList.toggle('active');
+                    mobileMenuToggle.classList.toggle('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', isActive);
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = navMenu.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            // Initialize navigation marker
+            const marker = document.querySelector('.nav-marker');
+            const links = document.querySelectorAll('.nav-link');
+
+            if (navMenu && marker && links.length) {
+                const moveMarker = (element) => {
+                    marker.style.width = `${element.offsetWidth}px`;
+                    marker.style.left = `${element.offsetLeft}px`;
+                    marker.style.opacity = '1';
+                };
+
+                const activeLink = document.querySelector('.nav-link.active');
+                if (activeLink) {
+                    setTimeout(() => moveMarker(activeLink), 50);
+                }
+
+                links.forEach(link => {
+                    link.addEventListener('mouseenter', (e) => {
+                        moveMarker(e.target);
+                    });
+                });
+
+                navMenu.addEventListener('mouseleave', () => {
+                    if (activeLink) {
+                        moveMarker(activeLink);
+                    } else {
+                        marker.style.opacity = '0';
+                    }
+                });
+            }
+
+            // Initialize results controller
             const controller = new ResultsUIController();
             controller.init();
+
+            // --- THEME LOGIC (Same as Quiz Page) ---
+            const themeInputs = document.querySelectorAll('input[name="theme"]');
+            const root = document.documentElement;
+
+            const applyTheme = (theme) => {
+                if (theme === 'system') {
+                    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    root.setAttribute('data-theme', systemDark ? 'dark' : 'light');
+                } else {
+                    root.setAttribute('data-theme', theme);
+                }
+                localStorage.setItem('neuroquizTheme', theme);
+            };
+
+            const savedTheme = localStorage.getItem('neuroquizTheme') || 'system';
+            const activeInput = document.querySelector(`input[name="theme"][value="${savedTheme}"]`);
+            if (activeInput) activeInput.checked = true;
+
+            applyTheme(savedTheme);
+
+            themeInputs.forEach(input => {
+                input.addEventListener('change', (e) => {
+                    applyTheme(e.target.value);
+                });
+            });
         });
     </script>
 </body>

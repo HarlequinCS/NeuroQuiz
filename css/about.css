@@ -1,6 +1,10 @@
 /* Styling based on Team Members reference image */
 /* Container untuk memusatkan semua benda */
 
+.about-main {
+    padding-top: 70px; /* Clear fixed header */
+}
+
 /* Research Section Styling */
 .research-section {
     padding: 60px 0;
@@ -128,7 +132,7 @@
 .main-content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: calc(80px + 40px) 20px 40px;
     display: flex;
     flex-direction: column;
     align-items: center; /* Memusatkan semua section secara horizontal */
@@ -204,7 +208,7 @@
 .main-content-wrapper {
     max-width: 1200px; /* Hadkan lebar supaya tak terlalu ketepi */
     margin: 0 auto;    /* Center kan container */
-    padding: 40px 20px;
+    padding: calc(80px + 40px) 20px 40px;
     border: 1px solid rgba(255, 255, 255, 0.1); /* Border halus di sekeliling */
     border-radius: 20px;
     background: rgba(15, 23, 42, 0.5); /* Latar belakang sedikit gelap */
@@ -253,7 +257,7 @@
 /* Container Utama */
 .main-content-wrapper {
     max-width: 1250px;
-    margin: 50px auto;
+    margin: calc(80px + 50px) auto 50px;
     padding: 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;

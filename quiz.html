@@ -6,8 +6,8 @@
     <meta name="description" content="NeuroQuiz™ - Take the Adaptive Quiz">
     <title>NeuroQuiz™ - Quiz</title>
     
-    <link rel="stylesheet" href="css/quiz.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/quiz.css?v=1.0.9">
+    <link rel="stylesheet" href="css/animations.css?v=1.0.9">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
@@ -17,8 +17,10 @@
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
-                
                 <a href="index.html" class="logo-container">
+                    <div class="logo-placeholder" aria-label="NeuroQuiz Logo">
+                        <span class="logo-text">NQ</span>
+                    </div>
                     <span class="brand-name">NeuroQuiz™</span>
                 </a>
 
@@ -46,11 +48,15 @@
                     </div>
                 </div>
 
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-menu" id="nav-menu">
                     <div class="nav-marker"></div>
                     <li><a href="index.html" class="nav-link" data-color="#ffc800">Home</a></li>
                     <li><a href="about.html" class="nav-link" data-color="#2bde73">About</a></li>
-                    <li><a href="#" class="nav-link active" data-color="#1cb0f6">Quiz</a></li>
                 </ul>
             </div>
         </nav>
@@ -189,19 +195,50 @@
         </div>
     </div>
 
-    <script src="js/data.js"></script>
-    <script src="js/cognitive-analyzer.js"></script> <script src="js/engine.js"></script>
-    <script src="js/quiz-ui.js"></script> <script src="js/theme.js"></script>
-    <script src="js/background-effects.js"></script>
-    <script src="js/card-tilt.js"></script>
+    <script src="js/setup-check.js?v=1.0.9"></script>
+    <script src="js/data.js?v=1.0.9"></script>
+    <script src="js/cognitive-analyzer.js?v=1.0.9"></script> <script src="js/engine.js?v=1.0.9"></script>
+    <script src="js/quiz-ui.js?v=1.0.9"></script> <script src="js/theme.js?v=1.0.9"></script>
+    <script src="js/background-effects.js?v=1.0.9"></script>
+    <script src="js/card-tilt.js?v=1.0.9"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Setup Check
-            const stored = localStorage.getItem('neuroquizUserSetup');
-            if (!stored) {
-                console.log('[RB-ADA] no_setup_found, redirecting to setup');
-                window.location.href = 'setup.html';
+            // Setup Check - Must complete setup before accessing quiz
+            if (!window.NeuroQuizSetupCheck || !window.NeuroQuizSetupCheck.requireSetup()) {
+                return; // Redirected to setup page
+            }
+
+            // Mobile menu toggle - CRITICAL: Must be first
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isActive = navMenu.classList.toggle('active');
+                    mobileMenuToggle.classList.toggle('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', isActive);
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = navMenu.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
             }
 
             // --- THEME LOGIC START ---
@@ -223,8 +260,8 @@
             // Load saved preference
             const savedTheme = localStorage.getItem('neuroquizTheme') || 'system';
             
-            // Check the correct radio button visually
-            const activeInput = document.getElementById(`theme-${savedTheme}`);
+            // Check the correct radio button visually (works with any ID)
+            const activeInput = document.querySelector(`input[name="theme"][value="${savedTheme}"]`);
             if (activeInput) activeInput.checked = true;
             
             // Apply immediate

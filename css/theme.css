@@ -1,81 +1,156 @@
 /**
- * NeuroQuiz™ - Theme Stylesheet
+ * NeuroQuiz™ - Global Theme System
  * 
- * UI Team: This file contains color palettes, theme variables, and accessibility features.
- * You can modify colors, but maintain high contrast ratios (WCAG AA minimum).
- * 
- * IMPORTANT: Do not modify CSS custom properties used by theme.js for theme switching.
+ * Mario-Inspired Gaming Theme
+ * Bright, cheerful, playful colors with pixel-style elements
  */
 
+/* Import Pixel/Retro Game Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;600;700;800&display=swap');
+
 /* ============================================
-   CSS CUSTOM PROPERTIES (THEME VARIABLES)
+   LIGHT MODE (Default) - Mario Theme
    ============================================ */
 
 :root {
-    /* Light Theme Colors - High Contrast, Color-Blind Safe */
-    --color-primary: #2563eb;        /* Blue - Primary actions */
-    --color-primary-dark: #1e40af;   /* Darker blue for hover */
-    --color-primary-light: #3b82f6;  /* Lighter blue for active states */
+    /* Background Colors - Bright & Cheerful */
+    --bg-primary: #F0F8FF;              /* Alice Blue - Sky-like */
+    --bg-secondary: #FFFFFF;            /* Pure white cards */
+    --bg-tertiary: #FFF8DC;            /* Cornsilk - Warm light */
     
-    --color-secondary: #7c3aed;      /* Purple - Secondary actions */
-    --color-secondary-dark: #6d28d9;
-    --color-secondary-light: #8b5cf6;
+    /* Text Colors - High readability */
+    --text-primary: #1a1a1a;            /* Near black - main text */
+    --text-secondary: #4a4a4a;          /* Dark gray - secondary */
+    --text-tertiary: #6a6a6a;           /* Medium gray - tertiary */
+    --text-inverse: #FFFFFF;            /* White on colored backgrounds */
     
-    --color-success: #10b981;        /* Green - Correct answers, success */
-    --color-success-dark: #059669;
-    --color-success-light: #34d399;
+    /* Mario-Inspired Semantic Colors - Bright & Vibrant */
+    --color-success: #00A651;           /* Mario Green - correct/success */
+    --color-success-hover: #008040;     /* Darker green */
+    --color-error: #E52521;             /* Mario Red - wrong/error */
+    --color-error-hover: #C41E1A;      /* Darker red */
+    --color-primary: #1E90FF;          /* Mario Blue - interaction */
+    --color-primary-hover: #0066CC;     /* Darker blue */
+    --color-warning: #FFD700;           /* Mario Gold - progress/attention */
+    --color-warning-hover: #FFA500;     /* Orange gold */
     
-    --color-error: #ef4444;          /* Red - Wrong answers, errors */
-    --color-error-dark: #dc2626;
-    --color-error-light: #f87171;
+    /* Mario Color Palette */
+    --mario-red: #E52521;
+    --mario-blue: #1E90FF;
+    --mario-yellow: #FFD700;
+    --mario-green: #00A651;
+    --mario-brown: #8B4513;
+    --mario-sky: #87CEEB;
     
-    --color-warning: #f59e0b;        /* Amber - Warnings, hints */
-    --color-warning-dark: #d97706;
-    --color-warning-light: #fbbf24;
+    /* Borders - Pixel Style */
+    --border-color: #8B4513;            /* Mario Brown - block borders */
+    --border-color-dark: #654321;       /* Darker brown */
+    --border-color-light: #D2691E;     /* Lighter brown */
     
-    /* Neutral Colors */
-    --color-bg-primary: #ffffff;      /* Main background */
-    --color-bg-secondary: #f9fafb;    /* Secondary background */
-    --color-bg-tertiary: #f3f4f6;     /* Tertiary background */
+    /* Shadows - Block-like 3D Effect */
+    --shadow-sm: 0 2px 0 rgba(139, 69, 19, 0.3);
+    --shadow-md: 0 4px 0 rgba(139, 69, 19, 0.4), 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 6px 0 rgba(139, 69, 19, 0.5), 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 8px 0 rgba(139, 69, 19, 0.6), 0 6px 12px rgba(0, 0, 0, 0.2);
     
-    --color-text-primary: #111827;    /* Main text - high contrast */
-    --color-text-secondary: #4b5563;  /* Secondary text */
-    --color-text-tertiary: #6b7280;   /* Tertiary text */
-    --color-text-inverse: #ffffff;     /* Text on dark backgrounds */
+    /* Navbar Specific */
+    --nav-bg: var(--bg-secondary);
+    --nav-border: var(--border-color);
+    --nav-text: var(--text-primary);
+    --nav-text-hover: var(--text-primary);
+    --nav-active-bg: var(--bg-tertiary);
+    --nav-active-text: var(--text-primary);
+    --nav-shadow: var(--shadow-sm);
     
-    --color-border: #e5e7eb;          /* Borders */
-    --color-border-dark: #d1d5db;     /* Darker borders */
+    /* Mode Button */
+    --mode-btn-bg: var(--bg-tertiary);
+    --mode-btn-text: var(--text-secondary);
+    --mode-btn-border: var(--border-color);
+    --mode-btn-active-bg: var(--color-primary);
+    --mode-btn-active-text: var(--text-inverse);
+    --mode-btn-hover-bg: var(--bg-tertiary);
     
-    /* Gamification Colors */
-    --color-gold: #fbbf24;            /* Gold for achievements */
-    --color-silver: #9ca3af;          /* Silver for achievements */
-    --color-bronze: #d97706;          /* Bronze for achievements */
+    /* Adaptive Spacing - Scales with viewport */
+    --spacing-xs: clamp(0.25rem, 0.5vw, 0.375rem);
+    --spacing-sm: clamp(0.5rem, 1vw, 0.75rem);
+    --spacing-md: clamp(0.75rem, 1.5vw, 1.25rem);
+    --spacing-lg: clamp(1rem, 2vw, 2rem);
+    --spacing-xl: clamp(1.5rem, 3vw, 2.5rem);
+    --spacing-2xl: clamp(2rem, 4vw, 3.5rem);
+    --spacing-3xl: clamp(2.5rem, 5vw, 4.5rem);
     
-    /* Shadow Colors */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    
-    /* Spacing Scale */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-2xl: 3rem;
-    
-    /* Border Radius */
-    --radius-sm: 0.25rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
-    --radius-xl: 1rem;
+    /* Adaptive Border Radius */
+    --radius-sm: clamp(0.25rem, 0.5vw, 0.375rem);
+    --radius-md: clamp(0.5rem, 1vw, 0.75rem);
+    --radius-lg: clamp(0.75rem, 1.5vw, 1rem);
+    --radius-xl: clamp(1rem, 2vw, 1.5rem);
     --radius-full: 9999px;
     
-    /* Typography */
+    /* Adaptive Typography - Fluid scaling */
+    --font-size-xs: clamp(0.75rem, 1.5vw, 0.875rem);      /* 12-14px */
+    --font-size-sm: clamp(0.875rem, 2vw, 1rem);          /* 14-16px */
+    --font-size-base: clamp(1rem, 2.5vw, 1.125rem);     /* 16-18px */
+    --font-size-lg: clamp(1.125rem, 3vw, 1.25rem);       /* 18-20px */
+    --font-size-xl: clamp(1.25rem, 3.5vw, 1.5rem);       /* 20-24px */
+    --font-size-2xl: clamp(1.5rem, 4vw, 2rem);           /* 24-32px */
+    --font-size-3xl: clamp(1.875rem, 5vw, 2.5rem);       /* 30-40px */
+    --font-size-4xl: clamp(2.25rem, 6vw, 3rem);          /* 36-48px */
+    --font-size-5xl: clamp(2.5rem, 7vw, 3.5rem);         /* 40-56px */
+    
+    /* Adaptive Heading Sizes - Pixel font scales appropriately */
+    --heading-h1: clamp(1.75rem, 5vw, 3rem);             /* 28-48px */
+    --heading-h2: clamp(1.5rem, 4vw, 2.5rem);           /* 24-40px */
+    --heading-h3: clamp(1.25rem, 3.5vw, 2rem);          /* 20-32px */
+    --heading-h4: clamp(1.125rem, 3vw, 1.75rem);        /* 18-28px */
+    --heading-h5: clamp(1rem, 2.5vw, 1.5rem);           /* 16-24px */
+    --heading-h6: clamp(0.875rem, 2vw, 1.25rem);        /* 14-20px */
+    
+    /* Typography - Mario Style */
     --font-family-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    --font-family-heading: var(--font-family-primary);
-    --font-family-mono: 'Courier New', Courier, monospace;
+    --font-family-heading: 'Press Start 2P', 'Orbitron', var(--font-family-primary);
+    --font-family-pixel: 'Press Start 2P', monospace;
+    
+    /* Adaptive Button Sizes */
+    --btn-height-sm: clamp(36px, 8vw, 40px);
+    --btn-height-md: clamp(44px, 9vw, 48px);
+    --btn-height-lg: clamp(48px, 10vw, 56px);
+    --btn-padding-x-sm: clamp(0.75rem, 2vw, 1rem);
+    --btn-padding-x-md: clamp(1rem, 2.5vw, 1.5rem);
+    --btn-padding-x-lg: clamp(1.25rem, 3vw, 2rem);
+    --btn-font-size: clamp(0.875rem, 2vw, 1rem);
+    
+    /* Adaptive Icon Sizes */
+    --icon-xs: clamp(12px, 2.5vw, 16px);
+    --icon-sm: clamp(16px, 3vw, 20px);
+    --icon-md: clamp(20px, 4vw, 24px);
+    --icon-lg: clamp(24px, 5vw, 32px);
+    --icon-xl: clamp(32px, 6vw, 40px);
+    
+    /* Adaptive Container Widths */
+    --container-xs: 100%;
+    --container-sm: clamp(100%, 100%, 540px);
+    --container-md: clamp(100%, 100%, 720px);
+    --container-lg: clamp(100%, 100%, 960px);
+    --container-xl: clamp(100%, 100%, 1140px);
+    --container-2xl: clamp(100%, 100%, 1320px);
+    
+    /* Adaptive Card Dimensions */
+    --card-padding-sm: clamp(0.75rem, 2vw, 1rem);
+    --card-padding-md: clamp(1rem, 2.5vw, 1.5rem);
+    --card-padding-lg: clamp(1.5rem, 3vw, 2.5rem);
+    --card-padding-xl: clamp(2rem, 4vw, 3rem);
+    --card-border-width: clamp(2px, 0.5vw, 4px);
+    --card-gap: clamp(0.75rem, 2vw, 1.5rem);
+    
+    /* Adaptive Navbar */
+    --nav-height-mobile: clamp(56px, 12vw, 60px);
+    --nav-height-desktop: clamp(64px, 13vw, 70px);
+    --nav-logo-size: clamp(32px, 7vw, 40px);
+    --nav-font-size: clamp(0.875rem, 2vw, 1rem);
+    
+    /* Adaptive Footer */
+    --footer-padding: clamp(1.5rem, 3vw, 2.5rem);
+    --footer-font-size: clamp(0.8125rem, 1.8vw, 0.875rem);
     
     /* Transitions */
     --transition-fast: 150ms ease-in-out;
@@ -83,36 +158,122 @@
     --transition-slow: 350ms ease-in-out;
 }
 
-/* Dark Theme - Automatically applied via theme.js */
+/* ============================================
+   DARK MODE - Mario Theme (Night Mode)
+   ============================================ */
+
 [data-theme="dark"] {
-    --color-bg-primary: #111827;
-    --color-bg-secondary: #1f2937;
-    --color-bg-tertiary: #374151;
+    /* Background Colors - Dark but Colorful */
+    --bg-primary: #1a1a2e;              /* Deep dark blue */
+    --bg-secondary: #2d2d44;            /* Dark purple-gray cards */
+    --bg-tertiary: #3d3d5c;             /* Medium dark surfaces */
     
-    --color-text-primary: #f9fafb;
-    --color-text-secondary: #d1d5db;
-    --color-text-tertiary: #9ca3af;
-    --color-text-inverse: #111827;
+    /* Text Colors - Bright for contrast */
+    --text-primary: #FFFFFF;            /* Pure white - main text */
+    --text-secondary: #E0E0E0;         /* Light gray - secondary */
+    --text-tertiary: #C0C0C0;           /* Medium gray - tertiary */
+    --text-inverse: #1a1a2e;            /* Dark on light backgrounds */
     
-    --color-border: #374151;
-    --color-border-dark: #4b5563;
+    /* Semantic Colors - Bright Mario Colors */
+    --color-success: #4CAF50;           /* Bright green */
+    --color-success-hover: #45a049;
+    --color-error: #F44336;             /* Bright red */
+    --color-error-hover: #E53935;
+    --color-primary: #2196F3;          /* Bright blue */
+    --color-primary-hover: #1976D2;
+    --color-warning: #FFC107;           /* Bright yellow */
+    --color-warning-hover: #FFB300;
     
-    /* Adjust shadows for dark theme */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+    /* Mario Color Palette - Dark Mode */
+    --mario-red: #F44336;
+    --mario-blue: #2196F3;
+    --mario-yellow: #FFC107;
+    --mario-green: #4CAF50;
+    --mario-brown: #6D4C41;
+    --mario-sky: #64B5F6;
+    
+    /* Borders - Lighter for visibility */
+    --border-color: #6D4C41;            /* Brown borders */
+    --border-color-dark: #8B4513;      /* Lighter brown */
+    --border-color-light: #5D4037;     /* Darker brown */
+    
+    /* Shadows - Block-like 3D Effect (Darker) */
+    --shadow-sm: 0 2px 0 rgba(109, 76, 65, 0.5);
+    --shadow-md: 0 4px 0 rgba(109, 76, 65, 0.6), 0 2px 4px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 6px 0 rgba(109, 76, 65, 0.7), 0 4px 8px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 8px 0 rgba(109, 76, 65, 0.8), 0 6px 12px rgba(0, 0, 0, 0.6);
+    
+    /* Navbar */
+    --nav-bg: var(--bg-secondary);
+    --nav-border: var(--border-color);
+    --nav-text: var(--text-primary);
+    --nav-text-hover: var(--text-primary);
+    --nav-active-bg: var(--bg-tertiary);
+    --nav-active-text: var(--text-primary);
+    --nav-shadow: var(--shadow-sm);
+    
+    /* Mode Button */
+    --mode-btn-bg: var(--bg-tertiary);
+    --mode-btn-text: var(--text-secondary);
+    --mode-btn-border: var(--border-color);
+    --mode-btn-active-bg: var(--color-primary);
+    --mode-btn-active-text: var(--text-inverse);
+    --mode-btn-hover-bg: var(--bg-tertiary);
 }
 
-/* High Contrast Theme - For accessibility */
-[data-theme="high-contrast"] {
-    --color-primary: #0066cc;
-    --color-bg-primary: #ffffff;
-    --color-bg-secondary: #ffffff;
-    --color-text-primary: #000000;
-    --color-text-secondary: #000000;
-    --color-border: #000000;
-    --color-border-dark: #000000;
+/* ============================================
+   COLOR BLIND MODE
+   ============================================ */
+
+[data-theme="colorblind"] {
+    /* Background Colors - Neutral light */
+    --bg-primary: #f7fafc;              /* Very light neutral */
+    --bg-secondary: #ffffff;            /* Pure white */
+    --bg-tertiary: #edf2f7;             /* Light gray */
+    
+    /* Text Colors - High contrast */
+    --text-primary: #2d3748;            /* Dark blue-gray */
+    --text-secondary: #4a5568;          /* Medium blue-gray */
+    --text-tertiary: #718096;           /* Light blue-gray */
+    --text-inverse: #ffffff;            /* White on colored */
+    
+    /* Semantic Colors - Blue/Yellow hierarchy */
+    --color-success: #3182ce;           /* Blue for success */
+    --color-success-hover: #2c5282;
+    --color-error: #d69e2e;             /* Yellow-orange for error */
+    --color-error-hover: #b7791f;
+    --color-primary: #3182ce;           /* Blue for interaction */
+    --color-primary-hover: #2c5282;
+    --color-warning: #d69e2e;           /* Yellow for attention */
+    --color-warning-hover: #b7791f;
+    
+    /* Borders - Blue for visibility */
+    --border-color: #cbd5e0;            /* Light gray */
+    --border-color-dark: #4a90e2;      /* Blue for emphasis */
+    --border-color-light: #e2e8f0;     /* Very light */
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    
+    /* Navbar */
+    --nav-bg: var(--bg-secondary);
+    --nav-border: var(--border-color-dark);
+    --nav-text: var(--text-primary);
+    --nav-text-hover: var(--text-primary);
+    --nav-active-bg: #fef3c7;          /* Light yellow active */
+    --nav-active-text: var(--text-primary);
+    --nav-shadow: var(--shadow-sm);
+    
+    /* Mode Button */
+    --mode-btn-bg: var(--bg-tertiary);
+    --mode-btn-text: var(--text-secondary);
+    --mode-btn-border: var(--border-color-dark);
+    --mode-btn-active-bg: #fef3c7;     /* Light yellow active */
+    --mode-btn-active-text: var(--text-primary);
+    --mode-btn-hover-bg: var(--bg-tertiary);
 }
 
 /* ============================================
@@ -125,25 +286,29 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease;
+}
+
 body {
     font-family: var(--font-family-primary);
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     line-height: 1.6;
-    transition: background-color var(--transition-base), color var(--transition-base);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ============================================
-   ACCESSIBILITY FEATURES
+   ACCESSIBILITY
    ============================================ */
 
-/* Focus indicators - High visibility for keyboard navigation */
 *:focus-visible {
-    outline: 3px solid var(--color-primary);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
+    border-radius: var(--radius-sm);
 }
 
-/* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -154,25 +319,150 @@ body {
     }
 }
 
-/* Color-blind safe: Use patterns/icons in addition to color */
-/* UI Team: Ensure all status indicators have icons or text labels, not just color */
+/* ============================================
+   MINIMAL MICRO-INTERACTIONS
+   ============================================ */
+
+/* Mario-Style Button Interactions */
+button:not(:disabled),
+.btn:not(:disabled) {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    border: 3px solid var(--border-color);
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+button:not(:disabled):hover,
+.btn:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+button:not(:disabled):active,
+.btn:not(:disabled):active {
+    transform: translateY(2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Subtle link hover */
+a:not(.nav-link) {
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:not(.nav-link):hover {
+    opacity: 0.8;
+}
+
+/* Card hover (if applicable) */
+.card,
+.quiz-container {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover,
+.quiz-container:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Input focus */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-color: var(--color-primary);
+}
 
 /* ============================================
    UTILITY CLASSES
    ============================================ */
 
-/* Text Colors */
-.text-primary { color: var(--color-text-primary); }
-.text-secondary { color: var(--color-text-secondary); }
-.text-tertiary { color: var(--color-text-tertiary); }
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
 .text-success { color: var(--color-success); }
 .text-error { color: var(--color-error); }
 .text-warning { color: var(--color-warning); }
 
-/* Background Colors */
-.bg-primary { background-color: var(--color-bg-primary); }
-.bg-secondary { background-color: var(--color-bg-secondary); }
-.bg-tertiary { background-color: var(--color-bg-tertiary); }
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-tertiary { background-color: var(--bg-tertiary); }
 
-/* UI Team: Add more utility classes as needed for your design system */
+/* ============================================
+   MODE BUTTONS - Fixed Position (Global)
+   ============================================ */
 
+.theme-mode-buttons {
+    position: fixed;
+    top: 85px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: var(--mode-btn-bg);
+    border: 1px solid var(--mode-btn-border);
+    border-radius: 12px;
+    padding: 8px;
+    z-index: 999;
+    box-shadow: var(--shadow-lg);
+}
+
+.mode-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--mode-btn-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.mode-btn:hover {
+    background: var(--mode-btn-hover-bg);
+    transform: scale(1.1);
+}
+
+.mode-btn.active {
+    background: var(--mode-btn-active-bg);
+    color: var(--mode-btn-active-text);
+}
+
+.mode-btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Color Blind Mode: Add pattern indicator */
+[data-theme="colorblind"] .mode-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background: var(--mode-btn-active-text);
+    border-radius: 1px;
+}
+
+/* Mobile: Position at bottom right */
+@media (max-width: 768px) {
+    .theme-mode-buttons {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        flex-direction: row;
+    }
+}

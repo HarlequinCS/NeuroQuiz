@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NeuroQuiz™ - Quiz Setup">
     <title>NeuroQuiz™ - Setup</title>
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/setup.css">
+    <script>
+        // Version control for cache busting
+        const VERSION = '1.0.9';
+        const styles = [
+            'css/theme.css',
+            'css/layout.css',
+            'css/animations.css',
+            'css/setup.css',
+            'css/quiz.css'
+        ];
+        styles.forEach(href => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = href + '?v=' + VERSION;
+            document.head.appendChild(link);
+        });
+    </script>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
-<body>
+<body class="setup-page">
     <!-- Animated Particle Background -->
     <div class="setup-particles"></div>
 
@@ -21,106 +34,444 @@
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
-                <div class="logo-container">
-                    <a href="index.html" class="brand-name">NeuroQuiz™</a>
-                </div>
+                <a href="index.html" class="logo-container">
+                    <div class="logo-placeholder" aria-label="NeuroQuiz Logo">
+                        <span class="logo-text">NQ</span>
+                    </div>
+                    <span class="brand-name">NeuroQuiz™</span>
+                </a>
+
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-menu" id="nav-menu">
+                    <div class="nav-marker"></div>
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="quiz.html" class="nav-link">Quiz</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
+
     <main class="main-content" role="main">
-        <div class="setup-container">
-            <div class="setup-title">
-                <h1>Quiz Setup</h1>
-                <p>Configure your quiz preferences to get started</p>
+        <div class="setup-wrapper">
+            <!-- Setup Header -->
+            <div class="setup-header">
+                <div class="setup-badge">Ready to Play?</div>
+                <h1 class="setup-heading">Create Your Profile</h1>
+                <p class="setup-subtitle">Let's set up your quiz experience</p>
             </div>
 
-            <form class="setup-form" id="setup-form">
-                <div class="form-group">
-                    <label for="name-input">
-                        <span class="label-icon">👤</span>
-                        Your Name
-                    </label>
-                    <input type="text" id="name-input" name="name" placeholder="Enter your name" required maxlength="50">
-                    <div class="form-help">We'll use this to personalize your experience</div>
-                </div>
+            <!-- Setup Form Card -->
+            <div class="setup-card">
+                <form class="setup-form" id="setup-form">
+                    <!-- Name Field -->
+                    <div class="form-field">
+                        <div class="field-header">
+                            <label for="name-input" class="field-label">
+                                <span class="field-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </span>
+                                Your Name
+                            </label>
+                        </div>
+                        <input 
+                            type="text" 
+                            id="name-input" 
+                            name="name" 
+                            class="form-input"
+                            placeholder="Enter your name"
+                            required 
+                            maxlength="50"
+                        >
+                        <span class="field-hint">We'll personalize your experience</span>
+                    </div>
 
-                <div class="form-group">
-                    <label for="level-select">
-                        <span class="label-icon">🎓</span>
-                        Education Level
-                    </label>
-                    <select id="level-select" name="level" required>
-                        <option value="">Select your level</option>
-                        <option value="1">Elementary (Level 1)</option>
-                        <option value="2">Secondary (Level 2)</option>
-                        <option value="3">University (Level 3)</option>
-                    </select>
-                    <div class="form-help">Choose your current education level</div>
-                </div>
+                    <!-- Education Level Field -->
+                    <div class="form-field">
+                        <div class="field-header">
+                            <label for="level-select" class="field-label">
+                                <span class="field-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                    </svg>
+                                </span>
+                                Education Level
+                            </label>
+                        </div>
+                        <div class="select-wrapper">
+                            <select id="level-select" name="level" class="form-select" required>
+                                <option value="">Choose your level</option>
+                                <option value="1">Elementary (Level 1)</option>
+                                <option value="2">Secondary (Level 2)</option>
+                                <option value="3">University (Level 3)</option>
+                            </select>
+                        </div>
+                        <span class="field-hint">Select your current education level</span>
+                    </div>
 
-                <div class="form-group">
-                    <label for="category-select">
-                        <span class="label-icon">📚</span>
-                        Category
-                    </label>
-                    <select id="category-select" name="category" required>
-                        <option value="">Select a category</option>
-                        <option value="Logic">Logic</option>
-                        <option value="Math">Math</option>
-                        <option value="STEM">STEM</option>
-                        <option value="Literature">Literature</option>
-                        <option value="General Knowledge">General Knowledge</option>
-                    </select>
-                    <div class="form-help">Choose the subject you want to practice</div>
-                </div>
+                    <!-- Category Field -->
+                    <div class="form-field">
+                        <div class="field-header">
+                            <label for="category-select" class="field-label">
+                                <span class="field-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                    </svg>
+                                </span>
+                                Category
+                            </label>
+                        </div>
+                        <div class="select-wrapper">
+                            <select id="category-select" name="category" class="form-select" required>
+                                <option value="">Choose a subject</option>
+                                <option value="Logic">Logic</option>
+                                <option value="Math">Math</option>
+                                <option value="STEM">STEM</option>
+                                <option value="Literature">Literature</option>
+                                <option value="General Knowledge">General Knowledge</option>
+                            </select>
+                        </div>
+                        <span class="field-hint">Pick the subject you want to practice</span>
+                    </div>
 
-                <div class="form-group">
-                    <label for="literacy-select">
-                        <span class="label-icon">🧠</span>
-                        Literacy Level
-                    </label>
-                    <select id="literacy-select" name="literacyLevel" required>
-                        <option value="">Select your literacy level</option>
-                        <option value="Beginner">Beginner</option>
-                        <option value="Intermediate">Intermediate</option>
-                        <option value="Expert">Expert</option>
-                    </select>
-                    <div class="form-help">This determines your starting difficulty (Beginner=1, Intermediate=2, Expert=3)</div>
-                </div>
+                    <!-- Literacy Level Field -->
+                    <div class="form-field">
+                        <div class="field-header">
+                            <label for="literacy-select" class="field-label">
+                                <span class="field-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 10C2 5.03 6.03 1 11 1c.74 0 1.47.08 2.17.23"></path>
+                                        <path d="M21 10c0 5.18-3.95 9.45-9 9.95"></path>
+                                        <path d="M19 2v6h6"></path>
+                                    </svg>
+                                </span>
+                                Difficulty Level
+                            </label>
+                        </div>
+                        <div class="select-wrapper">
+                            <select id="literacy-select" name="literacyLevel" class="form-select" required>
+                                <option value="">Select difficulty</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Expert">Expert</option>
+                            </select>
+                        </div>
+                        <span class="field-hint">Sets your starting difficulty (Beginner=1, Intermediate=2, Expert=3)</span>
+                    </div>
 
-                <div class="setup-actions">
-                    <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Start Quiz</button>
-                </div>
-            </form>
+                    <!-- Action Buttons -->
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel" onclick="window.location.href='index.html'">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn-start">
+                            <span>Start Quiz</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon" id="theme-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </span>
-    </button>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <div class="footer-brand">NeuroQuiz™</div>
+                    <div class="footer-copyright">
+                        &copy; 2026 NeuroQuiz™. All rights reserved.
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-section-title">Development</div>
+                    <div class="footer-section-content">
+                        <p>Developed by students of <strong>Universiti Teknologi Mara</strong></p>
+                        <p><span class="footer-accent">Melaka Branch, Jasin Campus</span></p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-section-title">Academic Information</div>
+                    <div class="footer-section-content">
+                        <p><strong>Students of Faculty of Computer and Mathematical Sciences</strong></p>
+                        <p>Course code: <span class="footer-accent">CDCS251</span></p>
+                        <p>Bachelor of Computer Sciences (Hons) Netcentric Computing</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-section-title">Subject</div>
+                    <div class="footer-section-content">
+                        <p>Subject: <span class="footer-accent">ITT588</span></p>
+                        <p>Front End Technology</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Educational project for academic purposes</p>
+            </div>
+        </div>
+    </footer>
 
-    <script src="js/theme.js"></script>
+    <!-- Theme Switcher (Same as Quiz Page) -->
+    <div class="theme-segmented-control" role="radiogroup" aria-label="Theme Switcher">
+        <input type="radio" class="theme-input" name="theme" id="theme-system-setup" value="system" checked>
+        <label for="theme-system-setup" class="theme-label" aria-label="System Default">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-light-setup" value="light">
+        <label for="theme-light-setup" class="theme-label" aria-label="Light Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-dark-setup" value="dark">
+        <label for="theme-dark-setup" class="theme-label" aria-label="Dark Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </label>
+
+        <div class="theme-slider"></div>
+    </div>
+
     <script>
-        document.getElementById('setup-form').addEventListener('submit', function(e) {
+        // Load theme.js with version control
+        const script = document.createElement('script');
+        script.src = 'js/theme.js?v=' + VERSION;
+        document.body.appendChild(script);
+    </script>
+    <script src="js/setup-check.js?v=1.0.9"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize navigation marker
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    const isActive = navMenu.classList.toggle('active');
+                    mobileMenuToggle.classList.toggle('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', isActive);
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = navMenu.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            const marker = document.querySelector('.nav-marker');
+            const links = document.querySelectorAll('.nav-link');
+
+            if (navMenu && marker && links.length) {
+                const moveMarker = (element) => {
+                    marker.style.width = `${element.offsetWidth}px`;
+                    marker.style.left = `${element.offsetLeft}px`;
+                    marker.style.opacity = '1';
+                };
+
+                const activeLink = document.querySelector('.nav-link.active');
+                if (activeLink) {
+                    setTimeout(() => moveMarker(activeLink), 50);
+                }
+
+                links.forEach(link => {
+                    link.addEventListener('mouseenter', (e) => {
+                        moveMarker(e.target);
+                    });
+                });
+
+                navMenu.addEventListener('mouseleave', () => {
+                    if (activeLink) {
+                        moveMarker(activeLink);
+                    } else {
+                        marker.style.opacity = '0';
+                    }
+                });
+            }
+
+            // --- THEME LOGIC (Same as Quiz Page) ---
+            const themeInputs = document.querySelectorAll('input[name="theme"]');
+            const root = document.documentElement;
+
+            const applyTheme = (theme) => {
+                if (theme === 'system') {
+                    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    root.setAttribute('data-theme', systemDark ? 'dark' : 'light');
+                } else {
+                    root.setAttribute('data-theme', theme);
+                }
+                localStorage.setItem('neuroquizTheme', theme);
+            };
+
+            const savedTheme = localStorage.getItem('neuroquizTheme') || 'system';
+            const activeInput = document.querySelector(`input[name="theme"][value="${savedTheme}"]`);
+            if (activeInput) activeInput.checked = true;
+
+            applyTheme(savedTheme);
+
+            themeInputs.forEach(input => {
+                input.addEventListener('change', (e) => {
+                    applyTheme(e.target.value);
+                });
+            });
+        });
+    </script>
+    <script>
+        // Form validation and submission
+        const setupForm = document.getElementById('setup-form');
+        const nameInput = document.getElementById('name-input');
+        const levelSelect = document.getElementById('level-select');
+        const categorySelect = document.getElementById('category-select');
+        const literacySelect = document.getElementById('literacy-select');
+
+        // Helper function to show error
+        function showError(input, message) {
+            // Remove existing error
+            const existingError = input.parentElement.querySelector('.error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+            
+            // Add error styling
+            input.classList.add('error');
+            
+            // Create and show error message
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.textContent = message;
+            errorDiv.style.color = '#ef4444';
+            errorDiv.style.fontSize = '0.875rem';
+            errorDiv.style.marginTop = '0.25rem';
+            input.parentElement.appendChild(errorDiv);
+        }
+
+        // Helper function to clear error
+        function clearError(input) {
+            input.classList.remove('error');
+            const errorMessage = input.parentElement.querySelector('.error-message');
+            if (errorMessage) {
+                errorMessage.remove();
+            }
+        }
+
+        // Real-time validation
+        nameInput.addEventListener('blur', function() {
+            const value = this.value.trim();
+            if (!value) {
+                showError(this, 'Name is required');
+            } else if (value.length < 2) {
+                showError(this, 'Name must be at least 2 characters');
+            } else {
+                clearError(this);
+            }
+        });
+
+        levelSelect.addEventListener('change', function() {
+            if (!this.value) {
+                showError(this, 'Please select an education level');
+            } else {
+                clearError(this);
+            }
+        });
+
+        categorySelect.addEventListener('change', function() {
+            if (!this.value) {
+                showError(this, 'Please select a category');
+            } else {
+                clearError(this);
+            }
+        });
+
+        literacySelect.addEventListener('change', function() {
+            if (!this.value) {
+                showError(this, 'Please select a difficulty level');
+            } else {
+                clearError(this);
+            }
+        });
+
+        // Form submission with validation
+        setupForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const formData = new FormData(e.target);
+            // Clear all previous errors
+            [nameInput, levelSelect, categorySelect, literacySelect].forEach(clearError);
+            
+            let isValid = true;
+            
+            // Validate name
+            const name = nameInput.value.trim();
+            if (!name) {
+                showError(nameInput, 'Name is required');
+                isValid = false;
+            } else if (name.length < 2) {
+                showError(nameInput, 'Name must be at least 2 characters');
+                isValid = false;
+            }
+            
+            // Validate level
+            const level = levelSelect.value;
+            if (!level) {
+                showError(levelSelect, 'Please select an education level');
+                isValid = false;
+            }
+            
+            // Validate category
+            const category = categorySelect.value;
+            if (!category) {
+                showError(categorySelect, 'Please select a category');
+                isValid = false;
+            }
+            
+            // Validate literacy level
+            const literacyLevel = literacySelect.value;
+            if (!literacyLevel) {
+                showError(literacySelect, 'Please select a difficulty level');
+                isValid = false;
+            }
+            
+            // If validation fails, focus on first error field
+            if (!isValid) {
+                const firstError = setupForm.querySelector('.error');
+                if (firstError) {
+                    firstError.focus();
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return;
+            }
+            
+            // All validation passed - save and redirect
             const setup = {
-                name: formData.get('name').trim() || 'User',
-                level: parseInt(formData.get('level')),
-                category: formData.get('category'),
-                literacyLevel: formData.get('literacyLevel')
+                name: name,
+                level: parseInt(level),
+                category: category,
+                literacyLevel: literacyLevel
             };
             
             localStorage.setItem('neuroquizUserSetup', JSON.stringify(setup));

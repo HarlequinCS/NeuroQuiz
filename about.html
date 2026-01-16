@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NeuroQuiz™ - About Us">
     <title>NeuroQuiz™ - About</title>
-    
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/about.css">
-    
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-primary">
+    <canvas id="neural-bg"></canvas>
+
+    <div id="background-shapes"></div>
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="logo-container">
+                    <img src="assets/images/logo.png" alt="NeuroQuiz Logo" class="logo">
                     <span class="brand-name">NeuroQuiz™</span>
                 </div>
-                <ul class="nav-menu" id="nav-menu">
+                <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
                     <li><a href="quiz.html" class="nav-link cta-button">Start Quiz</a></li>
@@ -30,105 +35,66 @@
     </header>
 
     <main class="about-main" role="main">
-        <div class="about-container" id="about-container">
-            
-           <section class="app-description interactive-intro" id="app-description">
-                <br><p class="accent-text text-center">DISCOVER OUR MISSION</p>
-                <h1 class="page-title main-heading neon-heading text-center" id="page-title">About NeuroQuiz™</h1>
-                
-                <div class="description-content-wrapper text-center">
-                    <div class="description-content glass-panel" id="description-content">
-                        <p class="description-text">
-                            <strong>NeuroQuiz™</strong> is an innovative adaptive gamified quiz platform. 
-                            We combine cutting-edge cognitive science with engaging game mechanics to create an optimal 
-                            learning experience for all, including <strong>kids</strong> and <strong>color-blind people</strong>.
-                        </p>
-                        <p class="description-text">
-                            Our platform adapts to your performance in real-time, adjusting difficulty based on 
-                            <strong>cognitive load theory</strong> and implementing <strong>spaced repetition</strong> 
-                            to enhance long-term memory retention.
-                        </p>
-                    </div>
-                </div>
-            </section>
+        
+       <section class="hero-section hero-kayenta">
+            <canvas id="neuro-web-canvas"></canvas>
 
-            <section class="team-section" id="team-section">
-                <h1 class="section-title text-center" id="team-title">TEAM MEMBERS</h1>
-                <p class="description-text text-center">
-                    This project is proudly built by passionate Computer Science students, 
-                    committed to revolutionizing digital education through NeuroQuiz™.
+            <div class="container hero-content centered-layout">
+                <h1 class="hero-title-giant scroll-move-right">About Us</h1>
+                <p class="description-text scroll-move-left">
+                    NeuroQuiz™ is an innovative adaptive gamified quiz platform that combines 
+                    cutting-edge cognitive science research with engaging game mechanics.
                 </p>
-
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-card-inner">
-                            <div class="member-avatar">
-                                <img src="assets/images/iqbal.jpg" alt="Iqbal" class="avatar-img">
-                            </div>
-                            <div class="member-info">
-                                <h3 class="member-name">MUHAMMAD SAIFUL IQBAL ABDUL RANI</h3>
-                                <p class="member-role">Project Lead / Developer</p>
-                                <p class="member-edu">BSc (Hons) Computer Science (Netcentric Computing)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="member-card-inner">
-                            <div class="member-avatar">
-                                <img src="assets/images/jannah.jpg" alt="Jannah" class="avatar-img">
-                            </div>
-                            <div class="member-info">
-                                <h3 class="member-name">NURUL JANNAH IDRIS</h3>
-                                <p class="member-role">UI/UX Designer </p>
-                                <p class="member-edu">BSc (Hons) Computer Science (Netcentric Computing)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="member-card-inner">
-                            <div class="member-avatar">
-                                <img src="assets/images/khai.jpg" alt="Khai" class="avatar-img">
-                            </div>
-                            <div class="member-info">
-                                <h3 class="member-name">KHAIR IZZ KHAN MAHADHIR</h3>
-                                <p class="member-role">Visual & Interaction Designer</p>
-                                <p class="member-edu">BSc (Hons) Computer Science (Netcentric Computing)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="member-card-inner">
-                            <div class="member-avatar">
-                                <img src="assets/images/aiman.jpg" alt="Aiman" class="avatar-img">
-                            </div>
-                            <div class="member-info">
-                                <h3 class="member-name">MUHAMMAD AIMAN MOHD NAZRI</h3>
-                                <p class="member-role">Content & Research Lead</p>
-                                <p class="member-edu">BSc (Hons) Computer Science (Netcentric Computing)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="member-card-inner">
-                            <div class="member-avatar">
-                                <img src="assets/images/nisa.jpg" alt="Nisa" class="avatar-img">
-                            </div>
-                            <div class="member-info">
-                                <h3 class="member-name">SITI ALYA HANISAH LATIF</h3>
-                                <p class="member-role">Tester & Documentation</p>
-                                <p class="member-edu">BSc (Hons) Computer Science (Netcentric Computing)</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="btn-wrapper">
+                    <a href="#app-description" class="learn-more-btn">Learn More</a>
                 </div>
-            </section>
+            </div>
+        </section>
 
-           <section class="tech-section container" id="tech-section">
-                <h2 class="section-title text-center neon-heading" id="tech-title">TECHNOLOGY STACK</h2>
+        <div class="container">
+            
+            <section class="app-description" id="app-description" style="padding: var(--spacing-2xl) 0;">
+    <div class="grid grid-2">
+        <div>
+            <h2 class="text-primary" style="font-size: 3.5rem; line-height: 1.1; font-weight: 800; text-transform: uppercase;">Our Mission in Cognitive Excellence.</h2>
+            <p class="text-secondary" style="margin-top: var(--spacing-md); font-size: 1.1rem;">
+                Transforming rote memorization into a dynamic, personalized journey.
+            </p>
+        </div>
+        <div class="mission-interactive-grid">
+            <div class="mission-card" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <div class="mission-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Cognitive Load Theory</h3>
+                    <p>Real-time difficulty adjustment.</p>
+                    <span class="tap-indicator">Tap to learn more</span>
+                </div>
+                <div class="card-back">
+                    <p>We analyze your learning patterns to ensure you're always challenged but never overwhelmed, fostering a state of "flow."</p>
+                </div>
+            </div>
+
+            <div class="mission-card" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <div class="mission-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>Spaced Repetition</h3>
+                    <p>Long-term memory retention.</p>
+                    <span class="tap-indicator">Tap to learn more</span>
+                </div>
+                <div class="card-back">
+                    <p>Our algorithms optimize the timing of reviews to maximize recall and solidify knowledge acquisition.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
+
+
+           <section class="tech-section" style="padding: var(--spacing-2xl) 0;">
+    <h2 class="text-tertiary" style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.875rem; margin-bottom: var(--spacing-lg);">The Tech Stack</h2>
+
                 <div class="tech-grid">
                     <div class="tech-card">
                         <div class="tech-icon">🌐</div>
@@ -144,7 +110,7 @@
 
                     <div class="tech-card">
                         <div class="tech-icon">⚡</div>
-                        <h3 class="tech-name">JavaScript (ES6+)</h3>
+                        <h3 class="tech-name">JavaScript</h3>
                         <p class="tech-desc">Core logic and adaptive quiz engine.</p>
                     </div>
 
@@ -155,51 +121,73 @@
                     </div>
                 </div>
             </section> 
-                
-           <section class="research-section container" id="research">
-                <h2 class="section-title text-center neon-heading">RESEARCH & REFERENCES</h2>
-                
-                <div class="research-grid">
-                    <div class="research-card glass-panel-card">
-                        <div class="research-icon">⚙️</div>
-                        <h3 class="research-item-title">Adaptive Learning</h3>
-                        <p class="research-item-desc">
-                            Based on cognitive load theory and personalized learning algorithms that adjust content difficulty in real-time based on user performance.
-                        </p>
-                    </div>
 
-                    <div class="research-card glass-panel-card">
-                        <div class="research-icon">🎮</div>
-                        <h3 class="research-item-title">Gamification</h3>
-                        <p class="research-item-desc">
-                            Implements proven game mechanics including points, badges, levels, and immediate feedback to enhance user motivation and engagement.
-                        </p>
-                    </div>
+             <hr style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
 
-                    <div class="research-card glass-panel-card">
-                        <div class="research-icon">🧠</div>
-                        <h3 class="research-item-title">Spaced Repetition</h3>
-                        <p class="research-item-desc">
-                            Utilizes spaced repetition algorithms to optimize memory retention and enhance long-term knowledge acquisition.
-                        </p>
-                    </div>
+            <section class="team-section" id="team-section">
+    <div class="container">
+        <h2 class="text-tertiary" style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.875rem; margin-bottom: var(--spacing-lg);">
+            Team Members
+        </h2>
+        <div class="team-slider-wrapper" style="position: relative; display: flex; align-items: center;">
+            
+           <button class="nav-btn prev-btn" id="prevTeam" aria-label="Previous">
+        <i class="fas fa-chevron-left"></i> </button>
+
+        <div class="team-grid">
+            <div class="team-member question-card">
+                <div class="avatar-frame">
+                    <img src="assets/images/saiful.jpg" alt="Saiful Iqbal - Project Lead">
                 </div>
+                <h3 class="text-primary">SAIFUL IQBAL</h3>
+                <p class="text-tertiary">Project Lead / Developer</p>
+            </div>
 
-                <div class="research-docs text-center">
-                    <a href="docs/research.pdf" class="research-link-btn" target="_blank">
-                        <span class="link-icon">📄</span>
-                        <span class="link-text">View Full Research Document</span>
-                    </a>
+            <div class="team-member question-card">
+                <div class="avatar-frame">
+                    <img src="assets/images/khai.jpg" alt="Khair Izz Khan - Developer">
                 </div>
-            </section>
+                <h3 class="text-primary">KHAIR IZZ KHAN</h3>
+                <p class="text-tertiary">Developer</p>
+            </div>
+
+            <div class="team-member question-card">
+                <div class="avatar-frame">
+                    <img src="assets/images/aiman.jpg" alt="Muhammad Aiman - Developer">
+                </div>
+                <h3 class="text-primary">MUHAMMAD AIMAN</h3>
+                <p class="text-tertiary">Developer</p>
+            </div>
+
+            <div class="team-member question-card">
+                <div class="avatar-frame">
+                    <img src="assets/images/jannah.jpg" alt="Nurul Jannah - Developer">
+                </div>
+                <h3 class="text-primary">NURUL JANNAH</h3>
+                <p class="text-tertiary">Developer</p>
+            </div>
+
+            <div class="team-member question-card">
+                <div class="avatar-frame">
+                    <img src="assets/images/nisa.jpg" alt="Alya Hanisah - Developer">
+                </div>
+                <h3 class="text-primary">ALYA HANISAH</h3>
+                <p class="text-tertiary">Developer</p>
+            </div>
+
+           <button class="nav-btn next-btn" id="nextTeam" aria-label="Next">
+        <i class="fas fa-chevron-right"></i> </button>
+        </div>
+    </div>
+</section>
 
         </div>
     </main>
 
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
         <div class="footer-container">
-            <p class="footer-text">&copy; 2026 NeuroQuiz™. All rights reserved.</p>
-            <div class="footer-links" id="footer-links">
+            <p class="text-secondary">&copy; 2024 NeuroQuiz™. All rights reserved.</p>
+            <div class="footer-links">
                 <a href="index.html" class="footer-link">Home</a>
                 <a href="docs/research.pdf" class="footer-link" target="_blank">Research</a>
             </div>
@@ -207,13 +195,10 @@
     </footer>
 
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon" id="theme-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </span>
+        <span id="theme-icon">🌙</span>
     </button>
 
     <script src="js/theme.js"></script>
+    <script src="js/about.js"></script>
 </body>
 </html>

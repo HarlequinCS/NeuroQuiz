@@ -1,0 +1,707 @@
+/* ==========================================================================
+   1. GLOBAL SETTINGS & VARIABLES
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+:root {
+    --titan-purple-deep: rgba(10, 25, 60, 0.95);
+    --titan-purple-light: rgba(30, 60, 120, 0.85);
+    --titan-solid: #2563eb; /* Electric Blue */
+    --text-white: #ffffff;
+    --hero-dark-blue: #0a285a;
+    --hero-deep-navy: #020617;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+.nav-link.cta-button {
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 8px 20px;
+}
+
+.nav-link.cta-button:hover {
+    background: white !important;
+    color: var(--titan-solid);
+}
+
+[data-theme="light"] .logo {
+    filter: invert(1) brightness(0);
+}
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
+.hero-section {
+    padding: 0; 
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.85), rgba(10, 40, 90, 0.8)),
+                url('../assets/images/landing-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 100vw;
+    overflow: visible;
+    padding: 0 15px;
+}
+
+.hero-text-line {
+    font-size: clamp(2rem, 9vw, 5.5rem); 
+    line-height: 1.1;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    transition: transform 0.1s ease-out;
+    text-align: center;
+    white-space: nowrap;
+    color: #ffffff !important; 
+}
+
+.outline-text {
+    color: transparent !important; 
+    -webkit-text-stroke: 2px #ffffff;
+}
+
+.hero-subtitle {
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    color: #ffffff !important;
+}
+
+.btn-primary {
+    background: transparent !important;
+    color: var(--text-white) !important;
+    border: 1px solid var(--text-white) !important;
+    border-radius: 50px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem !important;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--text-white) !important;
+    color: var(--titan-solid) !important; 
+    transform: translateY(-3px);
+    box-shadow: none !important;
+}
+
+/* ==========================================================================
+   4. ACCORDION SECTION (RESEARCH INTRO)
+   ========================================================================== */
+.research-intro {
+    padding-top: 80px; 
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+/* Light/Dark Mode Backgrounds */
+[data-theme="light"] .research-intro { background: #ffffff !important; }
+[data-theme="dark"] .research-intro { background: transparent; }
+
+.accordion-container {
+    display: flex;
+    height: 400px; 
+    width: 100%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: rgba(255,255,255,0.1); 
+}
+
+[data-theme="light"] .accordion-container {
+    border-color: #e2e8f0;
+}
+
+.accordion-card {
+    flex: 1;
+    position: relative;
+    border-right: 1px solid;
+    border-color: rgba(255,255,255,0.1); 
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;    
+    padding: 20px; 
+    text-align: center;      
+}
+
+/* Card Themes */
+[data-theme="light"] .accordion-card { background: #ffffff; border-color: #e2e8f0; }
+[data-theme="dark"] .accordion-card { background: rgba(255, 255, 255, 0.03); }
+.accordion-card:last-child { border-right: none; }
+
+/* Text Styling */
+.accordion-card h3 { font-size: 1.8rem; font-weight: 700; margin: 0 0 10px 0; white-space: nowrap; transition: color 0.3s; z-index: 10; }
+.card-content p { font-size: 1rem; line-height: 1.6; margin-bottom: 25px; transition: color 0.3s; }
+
+/* Colors */
+[data-theme="light"] .accordion-card h3 { color: #1e293b; }
+[data-theme="light"] .card-content p { color: #475569; }
+[data-theme="dark"] .accordion-card h3 { color: #ffffff; }
+[data-theme="dark"] .card-content p { color: #ffffff; }
+
+/* HOVER EFFECT (MOVING HERO GRADIENT) */
+.accordion-card:hover {
+    flex: 3; 
+    /* Gradient from Dark -> Blue Hero -> Dark */
+    background: linear-gradient(120deg, #020617 0%, #1e40af 50%, #020617 100%) !important;
+    background-size: 200% 200% !important; 
+    animation: gradientMove 3s ease infinite; 
+    
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.4); /* Glow blue */
+    z-index: 10;
+}
+
+/* Force text to White on hover */
+.accordion-card:hover h3,
+.accordion-card:hover .card-content p {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.accordion-card:hover .card-content {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+}
+
+.card-content {
+    opacity: 0; max-height: 0; transform: translateY(20px);
+    transition: all 0.4s ease 0.1s; z-index: 10; max-width: 450px; width: 100%;
+}
+
+/* Icon Styling */
+.icon-display {
+    font-size: 6rem;
+    color: var(--titan-solid); 
+    opacity: 1;
+    transition: all 0.5s ease;
+    margin: 30px 0;
+    filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
+}
+
+.accordion-card:not(:hover) .icon-display { transform: scale(1); }
+
+/* Icon becomes watermark on hover */
+.accordion-card:hover .icon-display {
+    position: absolute; bottom: -30px; right: -30px;
+    font-size: 18rem; opacity: 0.1; color: #ffffff;
+    transform: rotate(-15deg) scale(1.1); margin: 0; pointer-events: none; 
+}
+
+/* ==========================================================================
+   5. FEATURES SECTION & CARDS
+   ========================================================================== */
+
+/* Animation Keyframe for Gradient */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Section Container */
+.features-section {
+    padding: 100px 20px;
+    perspective: 1000px;
+    transition: background 0.3s ease;
+}
+
+/* Default (Dark/Stars) Background */
+.features-section {
+    background-color: #020617 !important; 
+}
+
+/* Light Mode Override */
+[data-theme="light"] .features-section {
+    background: #f8fafc !important; /* Light Grey */
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    position: relative;
+    color: #ffffff; /* Default White */
+}
+
+/* Light Mode Title */
+[data-theme="light"] .section-title { 
+    color: #1e293b !important; 
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--titan-solid);
+    margin: 20px auto 0 auto;
+    border-radius: 2px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Feature Card (Default / Dark Mode) */
+.feature-card {
+    flex: 1;
+    min-width: 300px;
+    min-height: 400px;
+    border-radius: 30px;
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    
+    /* Default Dark Mode Styles */
+    background: rgba(255, 255, 255, 0.03); /* Glass */
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* GRADIENT HOVER */
+.feature-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    
+    /* Shared Gradient */
+    background: linear-gradient(120deg, #020617 0%, #1e40af 50%, #020617 100%) !important;
+    background-size: 200% 200% !important;
+    animation: gradientMove 3s ease infinite;
+    
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 30px 60px rgba(37, 99, 235, 0.3) !important; 
+    z-index: 10;
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] .feature-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+[data-theme="light"] .feature-card:hover {
+    transform: translateY(-15px);
+    border-color: #2563eb !important;
+    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.2) !important; 
+}
+
+/* Icons */
+.card-icon-bg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    color: var(--titan-solid); 
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
+    transition: all 0.3s ease;
+    transform: translateZ(20px);
+}
+
+/* Hover Icon: Turns White Bubble with Blue Icon */
+.feature-card:hover .card-icon-bg {
+    background: #ffffff !important; 
+    color: #2563eb !important; 
+    transform: scale(1.1) translateZ(30px);
+    box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
+/* Feature Text Styling */
+.feature-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    transform: translateZ(10px);
+    transition: color 0.3s ease;
+    color: #ffffff; /* Default White */
+}
+
+.feature-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    transform: translateZ(10px);
+    transition: color 0.3s ease;
+    color: rgba(255,255,255,0.8); /* Default Transparent White */
+}
+
+/* Dark Mode Hover Text (Always White) */
+.feature-card:hover .feature-title,
+.feature-card:hover .feature-description {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Light Mode Text Overrides */
+[data-theme="light"] .feature-title { color: #1e293b; }
+[data-theme="light"] .feature-description { color: #64748b; }
+
+/* ==========================================================================
+   6. TITLE ANIMATION (GLACIER EFFECT)
+   ========================================================================== */
+
+.upscale-text-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 50px 0; 
+    overflow: hidden;
+}
+
+.glacier-title {
+    display: inline-block;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    cursor: default;
+    letter-spacing: 2px;
+    margin-bottom: 0 !important; 
+}
+
+/* Hover effect on title container */
+.upscale-text-container:hover .glacier-title {
+    letter-spacing: 15px; /* Huruf menjarak (Glacier effect) */
+    transform: scale(1.1); /* Membesar sedikit */
+    text-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Mobile title adjustment */
+@media (max-width: 768px) {
+    .upscale-text-container:hover .glacier-title {
+        letter-spacing: 5px;
+        transform: scale(1.05);
+    }
+}
+
+/* ==========================================================================
+   7. BACKGROUND ANIMATION 1: SHINY STARS (LEGACY)
+   ========================================================================== */
+
+/* Dark Background Base */
+.research-intro,
+.features-section {
+    position: relative !important;
+    background-color: #020617 !important; /* Deep Navy/Black Void */
+    overflow: hidden !important;
+    z-index: 1 !important;
+}
+
+/* Animation for Moving Gradient */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Layer 1: Big Stars */
+.research-intro::before,
+.features-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 
+        10vw 10vh 4px #fff, 20vw 20vh 0 #fff, 30vw 15vh 4px #e2e8f0,
+        40vw 25vh 0 #fff, 50vw 10vh 4px #fff, 60vw 30vh 0 #fff,
+        70vw 15vh 4px #e2e8f0, 80vw 25vh 0 #fff, 90vw 10vh 4px #fff,
+        5vw 40vh 0 #fff, 15vw 50vh 4px #e2e8f0, 25vw 45vh 0 #fff,
+        35vw 55vh 4px #fff, 45vw 40vh 0 #fff, 55vw 50vh 4px #e2e8f0,
+        65vw 45vh 0 #fff, 75vw 55vh 4px #fff, 85vw 40vh 0 #fff,
+        95vw 50vh 4px #e2e8f0, 10vw 70vh 0 #fff, 20vw 80vh 4px #fff,
+        30vw 75vh 0 #fff, 40vw 85vh 4px #e2e8f0, 50vw 70vh 0 #fff,
+        60vw 80vh 4px #fff, 70vw 75vh 0 #fff, 80vw 85vh 4px #e2e8f0,
+        90vw 70vh 0 #fff, 12vw 33vh 4px #fff, 38vw 66vh 0 #fff,
+        62vw 12vh 4px #e2e8f0, 88vw 44vh 0 #fff, 22vw 92vh 4px #fff;
+    animation: starMoveRandom 30s linear infinite alternate; 
+    opacity: 1; 
+}
+
+/* Layer 2: Dust Stars */
+.research-intro::after,
+.features-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 
+        5vw 5vh 1px #fff, 15vw 15vh 0 #94a3b8, 25vw 5vh 1px #fff,
+        35vw 15vh 0 #94a3b8, 45vw 5vh 1px #fff, 55vw 15vh 0 #94a3b8,
+        65vw 5vh 1px #fff, 75vw 15vh 0 #94a3b8, 85vw 5vh 1px #fff,
+        95vw 15vh 0 #94a3b8, 5vw 35vh 1px #fff, 15vw 45vh 0 #94a3b8,
+        25vw 35vh 1px #fff, 35vw 45vh 0 #94a3b8, 45vw 35vh 1px #fff,
+        55vw 45vh 0 #94a3b8, 65vw 35vh 1px #fff, 75vw 45vh 0 #94a3b8,
+        85vw 35vh 1px #fff, 95vw 45vh 0 #94a3b8, 5vw 65vh 1px #fff,
+        15vw 75vh 0 #94a3b8, 25vw 65vh 1px #fff, 35vw 75vh 0 #94a3b8,
+        45vw 65vh 1px #fff, 55vw 75vh 0 #94a3b8, 65vw 65vh 1px #fff,
+        75vw 75vh 0 #94a3b8, 85vw 65vh 1px #fff, 95vw 75vh 0 #94a3b8,
+        10vw 90vh 1px #fff, 20vw 95vh 0 #94a3b8, 30vw 90vh 1px #fff,
+        40vw 95vh 0 #94a3b8, 50vw 90vh 1px #fff, 60vw 95vh 0 #94a3b8;
+    animation: starMoveRandom 45s linear infinite alternate-reverse; 
+    opacity: 0.8; 
+}
+
+@keyframes starMoveRandom {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(15px, -20px); }
+    50% { transform: translate(-10px, -40px); }
+    75% { transform: translate(-20px, -20px); }
+    100% { transform: translate(5px, -50px); }
+}
+
+/* ==========================================================================
+   8. BACKGROUND ANIMATION 2: PURE CSS ANIMATED CIRCLES (NEURO STYLE)
+   ========================================================================== */
+
+.research-intro, .features-section {
+    position: relative;
+    overflow: hidden; /* Ensure circles don't overflow */
+}
+
+/* Ensure content sits above circles */
+.research-intro .container-fluid, 
+.features-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.circles {
+    position: absolute;
+    bottom: 0; /* Start from bottom */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Behind content */
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(37, 99, 235, 0.15); /* NeuroQuiz Blue Transparent */
+    animation: animateCircles 25s linear infinite;
+    bottom: -150px;
+}
+
+/* Circle Positions */
+.circles li:nth-child(1){ left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+.circles li:nth-child(2){ left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+.circles li:nth-child(3){ left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+.circles li:nth-child(4){ left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+.circles li:nth-child(5){ left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+.circles li:nth-child(6){ left: 75%; width: 90px; height: 90px; animation-delay: 3s; }
+.circles li:nth-child(7){ left: 35%; width: 120px; height: 120px; animation-delay: 7s; }
+.circles li:nth-child(8){ left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
+.circles li:nth-child(9){ left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
+.circles li:nth-child(10){ left: 85%; width: 120px; height: 120px; animation-delay: 0s; animation-duration: 11s; }
+.circles li:nth-child(11){ left: 5%; width: 40px; height: 40px; animation-delay: 4s; }
+.circles li:nth-child(12){ left: 55%; width: 100px; height: 100px; animation-delay: 8s; animation-duration: 20s; }
+.circles li:nth-child(13){ left: 92%; width: 30px; height: 30px; animation-delay: 1s; }
+.circles li:nth-child(14){ left: 18%; width: 70px; height: 70px; animation-delay: 5s; animation-duration: 15s; }
+.circles li:nth-child(15){ left: 80%; width: 50px; height: 50px; animation-delay: 2s; }
+
+.circles li:nth-child(even) {
+    background: rgba(59, 130, 246, 0.1); /* Softer blue for depth */
+}
+
+@keyframes animateCircles {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 20%; 
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%; 
+    }
+}
+
+/* ==========================================================================
+   9. HIGH CONTRAST MODE
+   ========================================================================== */
+
+/* 1. Remove Background Animations & Stars */
+[data-theme="high-contrast"] .neon-wrapper,
+[data-theme="high-contrast"] .star-bg::before,
+[data-theme="high-contrast"] .star-bg::after,
+[data-theme="high-contrast"] .research-intro::before, 
+[data-theme="high-contrast"] .research-intro::after,
+[data-theme="high-contrast"] .features-section::before, 
+[data-theme="high-contrast"] .features-section::after {
+    display: none !important;
+}
+
+/* 2. Set Darkest Blue Background */
+[data-theme="high-contrast"] body,
+[data-theme="high-contrast"] .research-intro,
+[data-theme="high-contrast"] .features-section {
+    background-color: #010409 !important;
+}
+
+/* 3. Header & Nav Link */
+[data-theme="high-contrast"] .header {
+    background-color: #000000 !important;
+    border-bottom: 2px solid #58a6ff !important;
+}
+
+[data-theme="high-contrast"] .brand-name {
+    color: #58a6ff !important;
+    font-weight: 800 !important;
+}
+
+/* Reset links to white/transparent */
+[data-theme="high-contrast"] .nav-link {
+    color: #ffffff !important; 
+    background-color: transparent !important; 
+    font-weight: 700 !important;
+    border: 2px solid transparent !important;
+    opacity: 1 !important; 
+}
+
+/* Hover/Active State */
+[data-theme="high-contrast"] .nav-link:hover, 
+[data-theme="high-contrast"] .nav-link.active {
+    background-color: #1f6feb !important; 
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important; 
+    border-radius: 4px;
+}
+
+/* 4. Start Quiz Button */
+[data-theme="high-contrast"] .nav-link.cta-button {
+    border: 2px solid #58a6ff !important;
+    background-color: transparent !important;
+    color: #58a6ff !important;
+    margin-left: 10px;
+}
+
+[data-theme="high-contrast"] .nav-link.cta-button:hover {
+    background-color: #58a6ff !important;
+    color: #000000 !important;
+}
+
+/* 5. Logo  */
+[data-theme="high-contrast"] .logo {
+    filter: brightness(0) invert(1);
+}
+
+/* 6. Card  */
+[data-theme="high-contrast"] .accordion-card,
+[data-theme="high-contrast"] .feature-card,
+[data-theme="high-contrast"] .research-card {
+    background: #0d1117 !important;
+    border: 3px solid #1f6feb !important;
+    box-shadow: none !important;
+}
+
+[data-theme="high-contrast"] .card-title, 
+[data-theme="high-contrast"] .feature-title,
+[data-theme="high-contrast"] h3,
+[data-theme="high-contrast"] .section-title {
+    color: #58a6ff !important;
+}
+
+[data-theme="high-contrast"] .card-text, 
+[data-theme="high-contrast"] .feature-description,
+[data-theme="high-contrast"] p {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Card Hover */
+[data-theme="high-contrast"] .accordion-card:hover,
+[data-theme="high-contrast"] .feature-card:hover {
+    background: #1f6feb !important;
+}
+
+.footer {
+    margin-top: 0;
+}
+
+/* 7. Hide Circles in High Contrast */
+[data-theme="high-contrast"] .circles { 
+    display: none !important; 
+}
+
+/* ==========================================================================
+   10. MOBILE RESPONSIVENESS OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .outline-text { -webkit-text-stroke: 1px #ffffff; }
+    .hero-title-container { padding: 0 10px; }
+    
+    .accordion-container { flex-direction: column; height: auto; }
+    .accordion-card {
+        height: 120px;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    
+    .accordion-card:hover {
+        flex: none;
+        height: 400px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .icon-display { font-size: 3rem; margin-top: 0; }
+    .accordion-card:hover .icon-display { font-size: 10rem; }
+}

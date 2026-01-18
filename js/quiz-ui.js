@@ -115,57 +115,45 @@ class QuizUIController {
         });
     }
 
-    // Attach event listeners directly to a button - called when button is created
     attachButtonEventListeners(btn) {
-        // Store reference to avoid closure issues
-        const button = btn;
+        if (!btn || btn.hasAttribute('data-listener-attached')) return btn;
         
-        // Single unified handler for all events - called immediately without delays
         const handleClick = (e) => {
-            if (this.isAnswered || button.disabled) return;
-            
-            e.preventDefault();
+            if (this.isAnswered || btn.disabled) return;
             e.stopPropagation();
-            e.stopImmediatePropagation();
-            
-            // Call selectOption immediately
-            this.selectOption(button);
-            
-            return false;
+            this.selectOption(btn);
         };
         
-        // Attach all event types for maximum reliability - use capture phase
-        btn.addEventListener('click', handleClick, { capture: true, once: false });
-        btn.addEventListener('mousedown', handleClick, { capture: true, once: false });
-        btn.addEventListener('touchend', handleClick, { passive: false, capture: true, once: false });
-        btn.addEventListener('touchstart', (e) => { 
-            if (!this.isAnswered && !button.disabled) {
-                e.preventDefault(); 
+        btn.addEventListener('click', handleClick, false);
+        btn.addEventListener('touchend', (e) => {
+            if (!this.isAnswered && !btn.disabled) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.selectOption(btn);
             }
         }, { passive: false });
         
+        btn.setAttribute('data-listener-attached', 'true');
         return btn;
     }
     
     setupEventListeners() {
-        // Event delegation as backup - capture phase for better catching
         const handleOptionClick = (e) => {
             if (this.isAnswered) return;
-            
             const optionBtn = e.target.closest('.option-btn');
             if (!optionBtn || optionBtn.disabled) return;
-            
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
             this.selectOption(optionBtn);
-            return false;
         };
         
-        this.elements.optionsContainer.addEventListener('click', handleOptionClick, true);
-        this.elements.optionsContainer.addEventListener('mousedown', handleOptionClick, true);
+        this.elements.optionsContainer.addEventListener('click', handleOptionClick, false);
         if ('ontouchstart' in window) {
-            this.elements.optionsContainer.addEventListener('touchend', handleOptionClick, { passive: false, capture: true });
+            this.elements.optionsContainer.addEventListener('touchend', (e) => {
+                if (this.isAnswered) return;
+                const optionBtn = e.target.closest('.option-btn');
+                if (!optionBtn || optionBtn.disabled) return;
+                e.preventDefault();
+                this.selectOption(optionBtn);
+            }, { passive: false });
         }
         
         // Keyboard navigation for options
@@ -260,23 +248,21 @@ class QuizUIController {
             
             // Build options efficiently using documentFragment
             const fragment = document.createDocumentFragment();
-            const buttons = [];
             question.options.forEach((option, index) => {
                 const btn = this.createOptionButton(option, index);
                 fragment.appendChild(btn);
-                buttons.push(btn);
             });
             this.elements.optionsContainer.innerHTML = '';
             this.elements.optionsContainer.appendChild(fragment);
             
-            // Attach event listeners directly to each button - MOST RELIABLE METHOD
-            buttons.forEach((btn, index) => {
-                const newBtn = this.attachButtonEventListeners(btn);
-                buttons[index] = newBtn; // Update reference
+            // Attach event listeners directly to each button AFTER they're in DOM
+            const buttonsInDOM = this.elements.optionsContainer.querySelectorAll('.option-btn');
+            buttonsInDOM.forEach((btn) => {
+                this.attachButtonEventListeners(btn);
             });
             
             // Set first option as focusable
-            const firstOption = buttons[0] || this.elements.optionsContainer.querySelector('.option-btn');
+            const firstOption = this.elements.optionsContainer.querySelector('.option-btn');
             if (firstOption) {
                 firstOption.setAttribute('tabindex', '0');
             }

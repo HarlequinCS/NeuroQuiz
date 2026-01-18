@@ -147,7 +147,9 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transform: none !important;
     position: relative;
-    overflow: visible; /* Changed from hidden to visible to prevent clipping click areas */
+    overflow: visible !important; /* Changed from hidden to visible to prevent clipping click areas */
+    pointer-events: auto !important;
+    z-index: 1;
 }
 
 /* Responsive Question Card */
@@ -170,8 +172,7 @@ body {
 }
 
 .card-glare {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    border-radius: 20px; pointer-events: none; mix-blend-mode: overlay; z-index: 2;
+    display: none !important;
 }
 
 /* 4. USER WELCOME SECTION */
@@ -381,6 +382,9 @@ body {
     border-radius: 20px; font-weight: 900; font-size: 0.9rem;
     display: inline-block; margin-bottom: 1rem;
     box-shadow: 0 4px 0 #a14add; transform: translateZ(20px); 
+    pointer-events: none; /* Don't block clicks */
+    position: relative;
+    z-index: 1;
 }
 
 .question-title {
@@ -394,6 +398,21 @@ body {
     transform: translateZ(30px);
     word-wrap: break-word;
     overflow-wrap: break-word;
+    pointer-events: none; /* Don't block clicks */
+    position: relative;
+    z-index: 1;
+}
+
+.question-description {
+    pointer-events: none; /* Don't block clicks */
+    position: relative;
+    z-index: 1;
+}
+
+#question-content {
+    pointer-events: none; /* Don't block clicks to buttons */
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 480px) {
@@ -408,10 +427,9 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
-    transform: translateZ(20px);
     position: relative;
-    z-index: 10; /* Higher z-index to ensure buttons are above everything */
-    isolation: isolate; /* Create new stacking context */
+    z-index: 999 !important;
+    pointer-events: auto !important;
 }
 
 @media (min-width: 600px) {
@@ -433,29 +451,26 @@ body {
     text-align: left;
     display: flex;
     align-items: center;
-    min-height: 88px; /* Large hitbox — easy to tap */
+    min-height: 88px;
     min-width: 100%;
     width: 100%;
-    transition: transform 0.1s !important, outline 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.1s !important;
     box-shadow: 0 6px 0 rgba(0,0,0,0.2);
-    z-index: 10 !important; /* Force higher z-index */
-    outline: 2px solid transparent;
-    outline-offset: 3px; /* Slightly larger focus area */
-    pointer-events: auto !important; /* Force button to be clickable - CRITICAL */
-    touch-action: manipulation !important; /* Prevent double-tap zoom on mobile */
-    overflow: visible !important; /* Ensure click area extends to full button */
+    z-index: 1000 !important;
+    outline: none;
+    outline-offset: 0;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    overflow: visible !important;
     box-sizing: border-box;
-    isolation: isolate; /* Create new stacking context for each button */
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
-    user-select: none; /* Prevent text selection */
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
-/* Ensure first button is also clickable - specifically target it */
 .option-btn:first-child,
 .option-btn:nth-child(1) {
-    z-index: 10 !important;
+    z-index: 1000 !important;
     pointer-events: auto !important;
-    position: relative;
 }
 
 /* Tablet */
@@ -475,26 +490,23 @@ body {
         min-height: 80px;
         padding: 1.25rem 1rem;
         font-size: clamp(1rem, 4vw, 1.125rem);
-        outline-offset: 4px;
+        outline-offset: 0;
     }
 }
 
 .option-btn:focus-visible {
-    outline: 3px solid var(--game-blue);
-    outline-offset: 2px;
-    box-shadow: 0 6px 0 rgba(0,0,0,0.2), 0 0 0 4px rgba(28, 176, 246, 0.3);
+    outline: none;
+    outline-offset: 0;
 }
 
 .option-btn[aria-checked="true"] {
-    outline: 3px solid var(--game-blue);
-    outline-offset: 2px;
+    outline: none;
+    outline-offset: 0;
 }
 
 .option-btn::before {
-    position: static !important; content: '' !important; display: inline-block !important;
-    width: 40px !important; height: 40px !important; margin-right: 15px !important;
-    background: rgba(0,0,0,0.2) !important; border-radius: 8px !important;
-    pointer-events: none; /* Allow clicks to pass through to button */
+    pointer-events: none !important;
+    z-index: -1 !important;
 }
 
 /* Option Colors */
@@ -509,36 +521,15 @@ body {
 .option-btn[data-option-id="2"]::before { content: '●' !important; font-size: 24px; text-align: center; line-height: 40px; }
 .option-btn[data-option-id="3"]::before { content: '■' !important; font-size: 24px; text-align: center; line-height: 35px; }
 
-/* HOVER STATE: White Outline */
 .option-btn:hover:not(:disabled) {
-    transform: translate3d(0, -4px, 10px); /* Use 3d for better performance */
-    filter: brightness(1.1); 
-    /* White outline + shadow */
-    box-shadow: 0 10px 0 rgba(0,0,0,0.1), 0 0 0 4px #ffffff !important; 
-    z-index: 10;
-    will-change: transform; /* Optimize transform only on hover */
+    transform: translate3d(0, -4px, 10px);
+    z-index: 1000 !important;
 }
 
-/* ACTIVE / SELECTED STATE: White Outline + Glow */
 .option-btn:active:not(:disabled), .option-btn.selected {
-    transform: translate3d(0, 2px, 0); /* Use 3d for better performance */
-    filter: brightness(1.2) contrast(1.1);
-    border: none; 
-    will-change: transform; /* Optimize transform during interaction */
-}
-
-/* Selected States with White Outline + Color Glow */
-.option-btn[data-option-id="0"].selected { 
-    box-shadow: 0 0 0 4px #ffffff, 0 0 20px var(--game-red), inset 0 0 20px rgba(255,255,255,0.4) !important; 
-}
-.option-btn[data-option-id="1"].selected { 
-    box-shadow: 0 0 0 4px #ffffff, 0 0 20px var(--game-blue), inset 0 0 20px rgba(255,255,255,0.4) !important; 
-}
-.option-btn[data-option-id="2"].selected { 
-    box-shadow: 0 0 0 4px #ffffff, 0 0 20px var(--game-yellow), inset 0 0 20px rgba(255,255,255,0.4) !important; 
-}
-.option-btn[data-option-id="3"].selected { 
-    box-shadow: 0 0 0 4px #ffffff, 0 0 20px var(--game-green), inset 0 0 20px rgba(255,255,255,0.4) !important; 
+    transform: translate3d(0, 2px, 0);
+    border: 3px solid #ffffff !important;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.3), 0 0 0 2px rgba(255,255,255,0.5) !important;
 }
 
 .option-label { 
@@ -556,7 +547,8 @@ body {
    ========================================= */
 
 .question-section {
-    position: relative; display: flex; flex-direction: column; gap: 20px; perspective: 1000px;
+    position: relative; display: flex; flex-direction: column; gap: 20px;
+    pointer-events: auto !important;
 }
 
 #feedback-area {

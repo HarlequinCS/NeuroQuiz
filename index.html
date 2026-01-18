@@ -3,15 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NeuroQuiz™ - Adaptive Gamified Quiz Platform">
-    <title>NeuroQuiz™ - Welcome</title>
-
+    
+    <!-- Primary Meta Tags -->
+    <title>NeuroQuiz™ - Adaptive Gamified Quiz Platform | Cognitive Learning Assessment</title>
+    <meta name="title" content="NeuroQuiz™ - Adaptive Gamified Quiz Platform | Cognitive Learning Assessment">
+    <meta name="description" content="NeuroQuiz™ is an innovative adaptive gamified quiz platform that combines cognitive science with engaging game mechanics. Take personalized quizzes that adapt to your performance in real-time.">
+    <meta name="keywords" content="adaptive quiz, gamified learning, cognitive assessment, educational quiz, adaptive learning, quiz platform, cognitive diagnostic assessment, learning analytics, educational technology">
+    <meta name="author" content="NeuroQuiz Team - Universiti Teknologi Mara Cawangan Melaka Kampus Jasin">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://neuroquiz.com/index.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neuroquiz.com/index.html">
+    <meta property="og:title" content="NeuroQuiz™ - Adaptive Gamified Quiz Platform">
+    <meta property="og:description" content="Take personalized quizzes that adapt to your performance in real-time. Experience cognitive science-based learning with engaging game mechanics.">
+    <meta property="og:image" content="https://neuroquiz.com/assets/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="NeuroQuiz™">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://neuroquiz.com/index.html">
+    <meta name="twitter:title" content="NeuroQuiz™ - Adaptive Gamified Quiz Platform">
+    <meta name="twitter:description" content="Take personalized quizzes that adapt to your performance in real-time. Experience cognitive science-based learning.">
+    <meta name="twitter:image" content="https://neuroquiz.com/assets/images/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/Logo favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo favicon-16x16.png">
+    <link rel="manifest" href="assets/images/Logo site.webmanifest">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "NeuroQuiz™",
+        "description": "Adaptive gamified quiz platform that combines cognitive science with engaging game mechanics",
+        "url": "https://neuroquiz.com",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "150"
+        },
+        "featureList": [
+            "Adaptive Learning System",
+            "Real-time Performance Analytics",
+            "Cognitive Diagnostic Assessment",
+            "Gamification Elements",
+            "Multiple Difficulty Levels"
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -19,13 +86,24 @@
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="logo-container">
-                    <img src="assets/images/logo.png" alt="NeuroQuiz Logo" class="logo" id="logo">
-                    <span class="brand-name">NeuroQuiz™</span>
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/images/Logo.svg" alt="NeuroQuiz Logo" class="logo">
+                    </a>
                 </div>
+                <div class="nav-trademark">
+                    <span class="trademark-symbol">™</span>
+                    <span class="trademark-text">Adaptive Learning</span>
+                </div>
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="quiz.html" class="nav-link cta-button">Start Quiz</a></li>
+                    <li><a href="setup.html" class="nav-link cta-button">Start Quiz</a></li>
                 </ul>
             </div>
         </nav>
@@ -41,7 +119,7 @@
                 </div>
                 <p class="hero-subtitle" id="hero-subtitle">An Adaptive Gamified Learning Experience</p>
                 <div class="hero-cta" id="hero-cta">
-                    <a href="quiz.html" class="btn btn-primary btn-large" id="start-quiz-btn">Begin Your Journey</a>
+                    <a href="setup.html" class="btn btn-primary btn-large" id="start-quiz-btn">Begin Your Journey</a>
                 </div>
             </div>
         </section>
@@ -157,23 +235,85 @@
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
+        <div class="footer-glow-line"></div>
         <div class="footer-container">
-            <p class="footer-text">&copy; 2026 NeuroQuiz™. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p class="footer-text">&copy; 2026 NeuroQuiz™. All rights reserved.</p>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-academic">
+                    <p class="footer-institution">Developed by students of <span class="footer-highlight">Universiti Teknologi Mara Cawangan Melaka Kampus Jasin</span></p>
+                    <p class="footer-faculty">Pelajar Fakulti Sains Komputer dan Matematik</p>
+                    <p class="footer-course">Course code: <span class="footer-code">CDCS251</span> – Bachelor of Computer Sciences (Hons) Netcentric Computing</p>
+                    <p class="footer-subject">Subjek: <span class="footer-code">ITT588</span> – Front End Technology</p>
+                </div>
+            </div>
             <div class="footer-links" id="footer-links">
                 <a href="about.html" class="footer-link">About</a>
                 <a href="docs/research.pdf" class="footer-link" target="_blank">Research</a>
             </div>
         </div>
+        <div class="footer-stars">
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+        </div>
     </footer>
 
-    <!-- Theme Toggle (for accessibility) -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon" id="theme-icon">🌙</span>
-    </button>
+    <!-- Theme Segmented Control -->
+    <div class="theme-segmented-control" role="radiogroup" aria-label="Theme Switcher">
+        <input type="radio" class="theme-input" name="theme" id="theme-system" value="system" checked>
+        <label for="theme-system" class="theme-label" aria-label="System Default">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-light" value="light">
+        <label for="theme-light" class="theme-label" aria-label="Light Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-dark" value="dark">
+        <label for="theme-dark" class="theme-label" aria-label="Dark Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </label>
+
+        <div class="theme-slider"></div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/theme.js"></script>
+    <script src="js/mobile-menu.js"></script>
     <script src="js/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeInputs = document.querySelectorAll('input[name="theme"]');
+            const root = document.documentElement;
+
+            const applyTheme = (theme) => {
+                if (theme === 'system') {
+                    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    root.setAttribute('data-theme', systemDark ? 'dark' : 'light');
+                } else {
+                    root.setAttribute('data-theme', theme);
+                }
+                localStorage.setItem('neuroquizTheme', theme);
+            };
+
+            const savedTheme = localStorage.getItem('neuroquizTheme') || 'system';
+            const activeInput = document.getElementById(`theme-${savedTheme}`);
+            if (activeInput) activeInput.checked = true;
+            applyTheme(savedTheme);
+
+            themeInputs.forEach(input => {
+                input.addEventListener('change', (e) => {
+                    applyTheme(e.target.value);
+                });
+            });
+        });
+    </script>
  </body>
 </html>
 

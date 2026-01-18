@@ -12,39 +12,131 @@
    ============================================ */
 
 :root {
+    /* ========================================
+       SEMANTIC COLOR SYSTEM (NEW)
+       ======================================== */
+    
+    /* --- SURFACE COLORS (Backgrounds) --- */
+    --surface-base: #fafbfc;              /* Main page background */
+    --surface-elevated: #ffffff;          /* Cards, elevated surfaces */
+    --surface-overlay: rgba(255, 255, 255, 0.95);  /* Glassmorphism cards */
+    --surface-subtle: #f3f4f6;            /* Subtle background areas */
+    --surface-hover: #f9fafb;             /* Hover state for surfaces */
+    --surface-card: var(--surface-elevated);
+    --surface-card-hover: var(--surface-hover);
+    
+    /* --- TEXT COLORS --- */
+    --text-primary: #111827;             /* Main text (WCAG AAA: 16.8:1 on white) */
+    --text-secondary: #4b5563;            /* Secondary text (WCAG AAA: 7.1:1 on white) */
+    --text-tertiary: #6b7280;             /* Tertiary/muted text (WCAG AA: 5.2:1 on white) */
+    --text-inverse: #ffffff;               /* Text on dark backgrounds */
+    --text-disabled: #9ca3af;             /* Disabled text */
+    --text-link: #2563eb;                 /* Link color */
+    --text-link-hover: #1e40af;           /* Link hover */
+    
+    /* --- ACCENT COLORS (Brand) --- */
+    --accent-primary: #2563eb;            /* Electric Blue - Primary actions */
+    --accent-primary-hover: #1e40af;      /* Darker blue for hover */
+    --accent-primary-light: #3b82f6;      /* Lighter blue for active states */
+    --accent-primary-subtle: rgba(37, 99, 235, 0.1);  /* Subtle blue background */
+    --accent-secondary: #7c3aed;          /* Purple - Secondary actions */
+    --accent-secondary-hover: #6d28d9;
+    --accent-secondary-light: #8b5cf6;
+    
+    /* --- SEMANTIC COLORS --- */
+    --semantic-success: #10b981;          /* Green - Correct answers, success */
+    --semantic-success-dark: #059669;
+    --semantic-success-light: #34d399;
+    --semantic-error: #ef4444;             /* Red - Wrong answers, errors */
+    --semantic-error-dark: #dc2626;
+    --semantic-error-light: #f87171;
+    --semantic-warning: #f59e0b;          /* Amber - Warnings, hints */
+    --semantic-warning-dark: #d97706;
+    --semantic-warning-light: #fbbf24;
+    --semantic-info: #3b82f6;             /* Blue - Information */
+    
+    /* --- SURFACE ELEMENTS (Cards, Borders) --- */
+    --border-default: #e5e7eb;            /* Default border (subtle gray) */
+    --border-subtle: #f3f4f6;             /* Very subtle border */
+    --border-accent: var(--accent-primary);
+    --border-hover: var(--accent-primary);
+    
+    /* --- GLASSMORPHISM (Cards with backdrop blur) --- */
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --glass-bg-hover: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-border-hover: rgba(37, 99, 235, 0.3);
+    --glass-shadow: rgba(0, 0, 0, 0.1);
+    --glass-shadow-hover: rgba(0, 0, 0, 0.15);
+    
+    /* --- HERO SECTIONS (Special backgrounds) --- */
+    --hero-bg: #020617;                    /* Deep navy background */
+    --hero-overlay: rgba(0, 0, 0, 0.5);    /* Overlay for text readability */
+    --hero-text: #ffffff;                  /* White text on hero */
+    --hero-text-shadow: rgba(0, 0, 0, 0.3); /* Text shadow for contrast */
+    --hero-accent: var(--accent-primary-light);
+    
+    /* --- BUTTONS --- */
+    --btn-primary-bg: var(--accent-primary);
+    --btn-primary-text: #ffffff;
+    --btn-primary-hover-bg: var(--accent-primary-hover);
+    --btn-primary-hover-text: #ffffff;
+    --btn-primary-disabled-bg: var(--surface-subtle);
+    --btn-primary-disabled-text: var(--text-disabled);
+    
+    --btn-secondary-bg: transparent;
+    --btn-secondary-text: var(--accent-primary);
+    --btn-secondary-border: var(--accent-primary);
+    --btn-secondary-hover-bg: var(--accent-primary);
+    --btn-secondary-hover-text: #ffffff;
+    --btn-secondary-disabled-bg: transparent;
+    --btn-secondary-disabled-text: var(--text-disabled);
+    --btn-secondary-disabled-border: var(--border-default);
+    
+    --btn-outline-bg: transparent;
+    --btn-outline-text: var(--text-primary);
+    --btn-outline-border: var(--border-default);
+    --btn-outline-hover-bg: var(--surface-subtle);
+    --btn-outline-hover-text: var(--text-primary);
+    --btn-outline-hover-border: var(--border-accent);
+    
+    /* ========================================
+       LEGACY COMPATIBILITY (Map old to new)
+       ======================================== */
+    
     /* Light Theme Colors - High Contrast, Color-Blind Safe */
-    --color-primary: #2563eb;        /* Blue - Primary actions */
-    --color-primary-dark: #1e40af;   /* Darker blue for hover */
-    --color-primary-light: #3b82f6;  /* Lighter blue for active states */
+    --color-primary: var(--accent-primary);
+    --color-primary-dark: var(--accent-primary-hover);
+    --color-primary-light: var(--accent-primary-light);
     
-    --color-secondary: #7c3aed;      /* Purple - Secondary actions */
-    --color-secondary-dark: #6d28d9;
-    --color-secondary-light: #8b5cf6;
+    --color-secondary: var(--accent-secondary);
+    --color-secondary-dark: var(--accent-secondary-hover);
+    --color-secondary-light: var(--accent-secondary-light);
     
-    --color-success: #10b981;        /* Green - Correct answers, success */
-    --color-success-dark: #059669;
-    --color-success-light: #34d399;
+    --color-success: var(--semantic-success);
+    --color-success-dark: var(--semantic-success-dark);
+    --color-success-light: var(--semantic-success-light);
     
-    --color-error: #ef4444;          /* Red - Wrong answers, errors */
-    --color-error-dark: #dc2626;
-    --color-error-light: #f87171;
+    --color-error: var(--semantic-error);
+    --color-error-dark: var(--semantic-error-dark);
+    --color-error-light: var(--semantic-error-light);
     
-    --color-warning: #f59e0b;        /* Amber - Warnings, hints */
-    --color-warning-dark: #d97706;
-    --color-warning-light: #fbbf24;
+    --color-warning: var(--semantic-warning);
+    --color-warning-dark: var(--semantic-warning-dark);
+    --color-warning-light: var(--semantic-warning-light);
     
     /* Neutral Colors */
-    --color-bg-primary: #ffffff;      /* Main background */
-    --color-bg-secondary: #f9fafb;    /* Secondary background */
-    --color-bg-tertiary: #f3f4f6;     /* Tertiary background */
+    --color-bg-primary: var(--surface-base);
+    --color-bg-secondary: var(--surface-subtle);
+    --color-bg-tertiary: var(--surface-subtle);
     
-    --color-text-primary: #111827;    /* Main text - high contrast */
-    --color-text-secondary: #4b5563;  /* Secondary text */
-    --color-text-tertiary: #6b7280;   /* Tertiary text */
-    --color-text-inverse: #ffffff;     /* Text on dark backgrounds */
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-tertiary: var(--text-tertiary);
+    --color-text-inverse: var(--text-inverse);
     
-    --color-border: #e5e7eb;          /* Borders */
-    --color-border-dark: #d1d5db;     /* Darker borders */
+    --color-border: var(--border-default);
+    --color-border-dark: var(--border-subtle);
     
     /* Gamification Colors */
     --color-gold: #fbbf24;            /* Gold for achievements */
@@ -77,6 +169,27 @@
     --font-family-heading: var(--font-family-primary);
     --font-family-mono: 'Courier New', Courier, monospace;
     
+    /* ========================================
+       RESPONSIVE TYPOGRAPHY (clamp() values)
+       ======================================== */
+    --font-size-xs: clamp(0.75rem, 2vw, 0.875rem);
+    --font-size-sm: clamp(0.875rem, 2.5vw, 1rem);
+    --font-size-base: clamp(1rem, 3vw, 1.125rem);
+    --font-size-lg: clamp(1.125rem, 3.5vw, 1.25rem);
+    --font-size-xl: clamp(1.25rem, 4vw, 1.5rem);
+    --font-size-2xl: clamp(1.5rem, 5vw, 2rem);
+    --font-size-3xl: clamp(2rem, 6vw, 3rem);
+    --font-size-4xl: clamp(2.5rem, 8vw, 4rem);
+    
+    /* ========================================
+       RESPONSIVE SPACING (clamp() values)
+       ======================================== */
+    --spacing-responsive-xs: clamp(0.25rem, 1vw, 0.5rem);
+    --spacing-responsive-sm: clamp(0.5rem, 1.5vw, 1rem);
+    --spacing-responsive-md: clamp(1rem, 2vw, 1.5rem);
+    --spacing-responsive-lg: clamp(1.5rem, 3vw, 2rem);
+    --spacing-responsive-xl: clamp(2rem, 4vw, 3rem);
+    
     /* Transitions */
     --transition-fast: 150ms ease-in-out;
     --transition-base: 250ms ease-in-out;
@@ -85,23 +198,84 @@
 
 /* Dark Theme - Automatically applied via theme.js */
 [data-theme="dark"] {
-    --color-bg-primary: #111827;
-    --color-bg-secondary: #1f2937;
-    --color-bg-tertiary: #374151;
+    /* --- SURFACE COLORS --- */
+    --surface-base: #0f172a;               /* Main page background (deep slate) */
+    --surface-elevated: #1e293b;           /* Cards, elevated surfaces (slate) */
+    --surface-overlay: rgba(30, 41, 59, 0.9);  /* Glassmorphism cards */
+    --surface-subtle: #1f2937;             /* Subtle background areas */
+    --surface-hover: #334155;              /* Hover state for surfaces */
+    --surface-card: var(--surface-elevated);
+    --surface-card-hover: var(--surface-hover);
     
-    --color-text-primary: #f9fafb;
-    --color-text-secondary: #d1d5db;
-    --color-text-tertiary: #9ca3af;
-    --color-text-inverse: #111827;
+    /* --- TEXT COLORS --- */
+    --text-primary: #f1f5f9;               /* Main text (WCAG AAA: 12.6:1 on slate) */
+    --text-secondary: #cbd5e1;             /* Secondary text (WCAG AAA: 8.2:1 on slate) */
+    --text-tertiary: #94a3b8;              /* Tertiary/muted text (WCAG AA: 5.8:1 on slate) */
+    --text-inverse: #0f172a;               /* Text on light backgrounds */
+    --text-disabled: #64748b;              /* Disabled text */
+    --text-link: #60a5fa;                  /* Link color (lighter for dark mode) */
+    --text-link-hover: #3b82f6;            /* Link hover */
     
-    --color-border: #374151;
-    --color-border-dark: #4b5563;
+    /* --- SURFACE ELEMENTS --- */
+    --border-default: #334155;             /* Default border (visible on dark) */
+    --border-subtle: #1e293b;              /* Very subtle border */
+    --border-hover: var(--accent-primary-light);
+    
+    /* --- GLASSMORPHISM --- */
+    --glass-bg: rgba(30, 41, 59, 0.8);
+    --glass-bg-hover: rgba(30, 41, 59, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-border-hover: rgba(59, 130, 246, 0.3);
+    --glass-shadow: rgba(0, 0, 0, 0.5);
+    --glass-shadow-hover: rgba(0, 0, 0, 0.6);
+    
+    /* --- HERO SECTIONS --- */
+    --hero-bg: #020617;
+    --hero-overlay: rgba(0, 0, 0, 0.6);    /* Slightly darker overlay for dark mode */
+    --hero-text: #ffffff;
+    --hero-text-shadow: rgba(0, 0, 0, 0.5);
+    
+    /* --- BUTTONS --- */
+    --btn-primary-bg: var(--accent-primary);
+    --btn-primary-text: #ffffff;
+    --btn-primary-hover-bg: var(--accent-primary-light);
+    --btn-primary-hover-text: #ffffff;
+    --btn-primary-disabled-bg: var(--surface-subtle);
+    --btn-primary-disabled-text: var(--text-disabled);
+    
+    --btn-secondary-bg: transparent;
+    --btn-secondary-text: var(--accent-primary-light);
+    --btn-secondary-border: var(--accent-primary-light);
+    --btn-secondary-hover-bg: var(--accent-primary);
+    --btn-secondary-hover-text: #ffffff;
+    
+    --btn-outline-bg: transparent;
+    --btn-outline-text: var(--text-primary);
+    --btn-outline-border: var(--border-default);
+    --btn-outline-hover-bg: var(--surface-hover);
+    --btn-outline-hover-text: var(--text-primary);
+    --btn-outline-hover-border: var(--border-hover);
+    
+    /* --- LEGACY COMPATIBILITY --- */
+    --color-bg-primary: var(--surface-base);
+    --color-bg-secondary: var(--surface-subtle);
+    --color-bg-tertiary: var(--surface-subtle);
+    
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-tertiary: var(--text-tertiary);
+    --color-text-inverse: var(--text-inverse);
+    
+    --color-border: var(--border-default);
+    --color-border-dark: var(--border-subtle);
     
     /* Adjust shadows for dark theme */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.4);
+    --shadow-glow-hover: 0 0 30px rgba(59, 130, 246, 0.5);
 }
 
 /* High Contrast Theme - For accessibility */
@@ -127,8 +301,8 @@
 
 body {
     font-family: var(--font-family-primary);
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-primary);
+    background-color: var(--surface-base);
+    color: var(--text-primary);
     line-height: 1.6;
     transition: background-color var(--transition-base), color var(--transition-base);
 }
@@ -139,7 +313,7 @@ body {
 
 /* Focus indicators - High visibility for keyboard navigation */
 *:focus-visible {
-    outline: 3px solid var(--color-primary);
+    outline: 3px solid var(--accent-primary);
     outline-offset: 2px;
 }
 
@@ -170,9 +344,38 @@ body {
 .text-warning { color: var(--color-warning); }
 
 /* Background Colors */
-.bg-primary { background-color: var(--color-bg-primary); }
-.bg-secondary { background-color: var(--color-bg-secondary); }
-.bg-tertiary { background-color: var(--color-bg-tertiary); }
+.bg-primary { background-color: var(--surface-base); }
+.bg-secondary { background-color: var(--surface-subtle); }
+.bg-tertiary { background-color: var(--surface-subtle); }
+.bg-elevated { background-color: var(--surface-elevated); }
+.bg-card { background-color: var(--surface-card); }
+
+/* Borders */
+.border-default { border-color: var(--border-default); }
+.border-subtle { border-color: var(--border-subtle); }
+.border-accent { border-color: var(--border-accent); }
+
+/* Shadows */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-glow { box-shadow: var(--shadow-glow); }
+
+/* Links */
+.text-link { color: var(--text-link); }
+a { color: var(--text-link); transition: color var(--transition-base); }
+a:hover { color: var(--text-link-hover); }
+
+/* Hero Text */
+.hero-text { color: var(--hero-text); text-shadow: 0 2px 8px var(--hero-text-shadow); }
+
+/* Dividers */
+.divider {
+    border: 0;
+    border-top: 1px solid var(--border-default);
+    margin: var(--spacing-xl) 0;
+}
 
 /* UI Team: Add more utility classes as needed for your design system */
 

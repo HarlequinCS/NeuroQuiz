@@ -7,26 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Run the function once on load to set initial positions
         updateTextPosition();
-
-        // Listen for scroll events
-        window.addEventListener('scroll', () => {
-            updateTextPosition();
-        });
+        window.addEventListener('scroll', updateTextPosition);
+        window.addEventListener('resize', updateTextPosition);
     }
 
     function updateTextPosition() {
+        // On phone/tablet: no animation — keep title static for readability
+        if (window.innerWidth < 768) {
+            leftLine.style.transform = '';
+            rightLine.style.transform = '';
+            return;
+        }
         const scrollPosition = window.scrollY;
-
-        // ANIMATION LOGIC:
-        // 1. We start with an offset of 150px (Text is separated).
-        // 2. As you scroll down (* 0.5 speed), the number gets smaller.
-        // 3. Math.max(0, ...) ensures it stops at 0 (Center) and doesn't cross over.
-        let offset = Math.max(0, 150 - scrollPosition * 0.5);
-
-        // Move "WELCOME TO" to the Left (-)
+        const offset = Math.max(0, 150 - scrollPosition * 0.5);
         leftLine.style.transform = `translateX(-${offset}px)`;
-
-        // Move "NEUROQUIZ" to the Right (+)
         rightLine.style.transform = `translateX(${offset}px)`;
     }
 

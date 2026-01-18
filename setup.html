@@ -3,47 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NeuroQuiz™ - Quiz Setup">
-    <title>NeuroQuiz™ - Setup</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>NeuroQuiz™ - Quiz Setup | Configure Your Learning Experience</title>
+    <meta name="title" content="NeuroQuiz™ - Quiz Setup | Configure Your Learning Experience">
+    <meta name="description" content="Configure your NeuroQuiz experience. Choose your difficulty level, subject category, and quiz settings to start your adaptive learning journey.">
+    <meta name="keywords" content="quiz setup, adaptive quiz configuration, learning settings, quiz customization, educational quiz setup">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://neuroquiz.com/setup.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neuroquiz.com/setup.html">
+    <meta property="og:title" content="NeuroQuiz™ - Quiz Setup">
+    <meta property="og:description" content="Configure your adaptive quiz experience. Choose difficulty level and subject category.">
+    <meta property="og:image" content="https://neuroquiz.com/assets/images/logo.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="NeuroQuiz™ - Quiz Setup">
+    <meta name="twitter:description" content="Configure your adaptive quiz experience and start learning.">
+    <meta name="twitter:image" content="https://neuroquiz.com/assets/images/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/Logo favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo favicon-16x16.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/setup.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
-    <!-- Animated Particle Background -->
-    <div class="setup-particles"></div>
-
-    <!-- Neural Canvas -->
-    <canvas id="neural-bg"></canvas>
-
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="logo-container">
-                    <a href="index.html" class="brand-name">NeuroQuiz™</a>
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/images/Logo.svg" alt="NeuroQuiz Logo" class="logo">
+                    </a>
                 </div>
+                <div class="nav-trademark">
+                    <span class="trademark-symbol">™</span>
+                    <span class="trademark-text">Adaptive Learning</span>
+                </div>
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                    <li><a href="setup.html" class="nav-link cta-button active" aria-current="page">Start Quiz</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main class="main-content" role="main">
-        <div class="setup-container">
-            <div class="setup-title">
-                <h1>Quiz Setup</h1>
-                <p>Configure your quiz preferences to get started</p>
+    <!-- Tutorial Modal -->
+    <div class="tutorial-overlay" id="tutorial-overlay" aria-hidden="true">
+        <div class="tutorial-modal">
+            <div class="tutorial-header">
+                <h2 class="tutorial-title">
+                    <svg class="tutorial-title-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"></path>
+                        <line x1="6" y1="12" x2="18" y2="12"></line>
+                    </svg>
+                    Welcome to NeuroQuiz™
+                </h2>
+                <button class="tutorial-close" id="tutorial-close" aria-label="Close tutorial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
             </div>
+            <div class="tutorial-content">
+                <div class="tutorial-section">
+                    <h3>
+                        <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        How It Works
+                    </h3>
+                    <p>NeuroQuiz™ is a smart quiz that <strong>automatically adjusts</strong> to your skill level. Answer questions correctly, and it gets harder. Answer incorrectly, and it gets easier. It's like having a personal tutor that knows exactly how to challenge you!</p>
+                </div>
+                
+                <div class="tutorial-section">
+                    <h3>
+                        <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                        How Difficulty Changes
+                    </h3>
+                    <ul class="tutorial-list">
+                        <li><strong>Get it right?</strong> The next question will be a bit harder</li>
+                        <li><strong>Get it wrong?</strong> The next question will be a bit easier</li>
+                        <li><strong>Answer 7 in a row correctly?</strong> You'll jump to harder questions faster!</li>
+                        <li><strong>Struggling too much?</strong> You'll move to an easier level, but start at the hardest difficulty of that level</li>
+                    </ul>
+                </div>
+                
+                <div class="tutorial-section">
+                    <h3>
+                        <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                            <path d="M4 22h16"></path>
+                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                        </svg>
+                        Special Bonus: Level Up Offer
+                    </h3>
+                    <p>If you answer <strong>10 questions correctly in a row</strong> on the hardest difficulty, you'll get a special offer:</p>
+                    <ul class="tutorial-list">
+                        <li>Keep playing at your current level</li>
+                        <li>Move up to the next level (like going from Elementary to Secondary)</li>
+                    </ul>
+                </div>
+                
+                <div class="tutorial-section">
+                    <h3>
+                        <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                        What Are Education Levels?
+                    </h3>
+                    <ul class="tutorial-list">
+                        <li><strong>Elementary (Level 1):</strong> Easy questions for beginners</li>
+                        <li><strong>Secondary (Level 2):</strong> Medium questions for intermediate learners</li>
+                        <li><strong>University (Level 3):</strong> Hard questions for advanced learners</li>
+                    </ul>
+                </div>
+                
+                <div class="tutorial-section">
+                    <h3>
+                        <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 22"></path>
+                            <path d="M21 12h-3l-2-5a2.5 2.5 0 0 1 2.83-3.5"></path>
+                            <path d="M22 8h-4l-1-3a2.5 2.5 0 0 1 2.83-3.5"></path>
+                        </svg>
+                        What Are Difficulty Levels?
+                    </h3>
+                    <ul class="tutorial-list">
+                        <li><strong>Beginner:</strong> Start here if you're new to the topic</li>
+                        <li><strong>Intermediate:</strong> You know the basics and want more challenge</li>
+                        <li><strong>Expert:</strong> You're really good and want the toughest questions</li>
+                    </ul>
+                </div>
+                
+                <div class="tutorial-section">
+                    <h3>
+                        <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        What You'll See While Playing
+                    </h3>
+                    <ul class="tutorial-list">
+                        <li>Your <strong>streak</strong> - how many you got right in a row</li>
+                        <li>Your <strong>points</strong> - harder questions give more points</li>
+                        <li>Your current <strong>level</strong> - which level you're playing at</li>
+                        <li>After finishing, you'll get a detailed <strong>performance report</strong> showing how well you did</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tutorial-footer">
+                <button class="btn btn-primary" id="tutorial-start-btn">Got It! Let's Start</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section (index.html philosophy) -->
+    <section class="setup-hero-section hero-section" id="setup-hero">
+        <div class="hero-container">
+            <div class="hero-title-container">
+                <h1 class="hero-text-line left-line">QUIZ</h1>
+                <h1 class="hero-text-line right-line outline-text">SETUP</h1>
+            </div>
+            <p class="hero-subtitle">Configure your preferences to begin your journey</p>
+            <div class="hero-cta">
+                <a href="#setup-form-section" class="btn btn-primary btn-large">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section with neuro-particles (index research-intro / features pattern) -->
+    <section class="setup-form-section neuro-particles" id="setup-form-section">
+        <ul class="circles" aria-hidden="true">
+            <li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li>
+        </ul>
+        <div class="container">
+            <div class="upscale-text-container">
+                <h2 class="section-title glacier-title">Configure Your Quiz</h2>
+            </div>
+
+            <div class="setup-container setup-card">
+                <div class="setup-title">
+                    <button class="tutorial-show-again" id="show-tutorial-again" aria-label="Show tutorial again">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        Show Tutorial Again
+                    </button>
+                </div>
 
             <form class="setup-form" id="setup-form">
                 <div class="form-group">
                     <label for="name-input">
-                        <span class="label-icon">👤</span>
+                        <span class="label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </span>
                         Your Name
                     </label>
                     <input type="text" id="name-input" name="name" placeholder="Enter your name" required maxlength="50">
@@ -52,7 +242,12 @@
 
                 <div class="form-group">
                     <label for="level-select">
-                        <span class="label-icon">🎓</span>
+                        <span class="label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2v-5"></path>
+                            </svg>
+                        </span>
                         Education Level
                     </label>
                     <select id="level-select" name="level" required>
@@ -66,7 +261,12 @@
 
                 <div class="form-group">
                     <label for="category-select">
-                        <span class="label-icon">📚</span>
+                        <span class="label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </span>
                         Category
                     </label>
                     <select id="category-select" name="category" required>
@@ -82,7 +282,13 @@
 
                 <div class="form-group">
                     <label for="literacy-select">
-                        <span class="label-icon">🧠</span>
+                        <span class="label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 22"></path>
+                                <path d="M21 12h-3l-2-5a2.5 2.5 0 0 1 2.83-3.5"></path>
+                                <path d="M22 8h-4l-1-3a2.5 2.5 0 0 1 2.83-3.5"></path>
+                            </svg>
+                        </span>
                         Literacy Level
                     </label>
                     <select id="literacy-select" name="literacyLevel" required>
@@ -96,24 +302,212 @@
 
                 <div class="setup-actions">
                     <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Start Quiz</button>
+                    <button type="submit" class="btn btn-primary btn-large">Start Quiz</button>
                 </div>
             </form>
         </div>
-    </main>
+        </div>
+    </section>
 
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon" id="theme-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </span>
-    </button>
+    <!-- Footer (index.html philosophy) -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-glow-line"></div>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p class="footer-text">&copy; 2026 NeuroQuiz™. All rights reserved.</p>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-academic">
+                    <p class="footer-institution">Developed by students of <span class="footer-highlight">Universiti Teknologi Mara Cawangan Melaka Kampus Jasin</span></p>
+                    <p class="footer-faculty">Pelajar Fakulti Sains Komputer dan Matematik</p>
+                    <p class="footer-course">Course code: <span class="footer-code">CDCS251</span> – Bachelor of Computer Sciences (Hons) Netcentric Computing</p>
+                    <p class="footer-subject">Subjek: <span class="footer-code">ITT588</span> – Front End Technology</p>
+                </div>
+            </div>
+            <div class="footer-links" id="footer-links">
+                <a href="about.html" class="footer-link">About</a>
+                <a href="docs/research.pdf" class="footer-link" target="_blank">Research</a>
+            </div>
+        </div>
+        <div class="footer-stars">
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+        </div>
+    </footer>
+
+    <!-- Theme Segmented Control -->
+    <div class="theme-segmented-control" role="radiogroup" aria-label="Theme Switcher">
+        <input type="radio" class="theme-input" name="theme" id="theme-system" value="system" checked>
+        <label for="theme-system" class="theme-label" aria-label="System Default">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-light" value="light">
+        <label for="theme-light" class="theme-label" aria-label="Light Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-dark" value="dark">
+        <label for="theme-dark" class="theme-label" aria-label="Dark Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </label>
+
+        <div class="theme-slider"></div>
+    </div>
 
     <script src="js/theme.js"></script>
+    <script src="js/mobile-menu.js"></script>
     <script>
-        document.getElementById('setup-form').addEventListener('submit', function(e) {
+        // Tutorial Modal Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const tutorialOverlay = document.getElementById('tutorial-overlay');
+            const tutorialClose = document.getElementById('tutorial-close');
+            const tutorialStartBtn = document.getElementById('tutorial-start-btn');
+            const showTutorialAgainBtn = document.getElementById('show-tutorial-again');
+            
+            // Function to show tutorial
+            const showTutorial = () => {
+                tutorialOverlay.classList.add('active');
+                tutorialOverlay.setAttribute('aria-hidden', 'false');
+            };
+            
+            // Show tutorial on page load (check if user has seen it before)
+            const hasSeenTutorial = localStorage.getItem('neuroquizTutorialSeen');
+            if (!hasSeenTutorial) {
+                setTimeout(showTutorial, 300);
+            }
+            
+            // Show tutorial again button
+            if (showTutorialAgainBtn) {
+                showTutorialAgainBtn.addEventListener('click', () => {
+                    showTutorial();
+                });
+            }
+            
+            // Close tutorial handlers
+            const closeTutorial = () => {
+                tutorialOverlay.classList.remove('active');
+                tutorialOverlay.setAttribute('aria-hidden', 'true');
+                localStorage.setItem('neuroquizTutorialSeen', 'true');
+            };
+            
+            tutorialClose.addEventListener('click', closeTutorial);
+            tutorialStartBtn.addEventListener('click', closeTutorial);
+            
+            // Close on overlay click (but not on modal click)
+            tutorialOverlay.addEventListener('click', (e) => {
+                if (e.target === tutorialOverlay) {
+                    closeTutorial();
+                }
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeInputs = document.querySelectorAll('input[name="theme"]');
+            const root = document.documentElement;
+
+            const applyTheme = (theme) => {
+                if (theme === 'system') {
+                    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    root.setAttribute('data-theme', systemDark ? 'dark' : 'light');
+                } else {
+                    root.setAttribute('data-theme', theme);
+                }
+                localStorage.setItem('neuroquizTheme', theme);
+            };
+
+            const savedTheme = localStorage.getItem('neuroquizTheme') || 'system';
+            const activeInput = document.getElementById(`theme-${savedTheme}`);
+            if (activeInput) activeInput.checked = true;
+            applyTheme(savedTheme);
+
+            themeInputs.forEach(input => {
+                input.addEventListener('change', (e) => {
+                    applyTheme(e.target.value);
+                });
+            });
+        });
+    </script>
+    <script>
+        const setupForm = document.getElementById('setup-form');
+        const nameInput = document.getElementById('name-input');
+        const levelSelect = document.getElementById('level-select');
+        const categorySelect = document.getElementById('category-select');
+        const literacySelect = document.getElementById('literacy-select');
+
+        // Enhanced validation function
+        function validateForm() {
+            let isValid = true;
+            const errors = [];
+
+            // Validate name
+            const name = nameInput.value.trim();
+            if (!name || name.length < 2) {
+                errors.push('Name must be at least 2 characters long');
+                nameInput.classList.add('error');
+                isValid = false;
+            } else {
+                nameInput.classList.remove('error');
+            }
+
+            // Validate level
+            const level = parseInt(levelSelect.value);
+            if (!level || level < 1 || level > 3) {
+                errors.push('Please select a valid education level');
+                levelSelect.classList.add('error');
+                isValid = false;
+            } else {
+                levelSelect.classList.remove('error');
+            }
+
+            // Validate category
+            const category = categorySelect.value;
+            if (!category) {
+                errors.push('Please select a category');
+                categorySelect.classList.add('error');
+                isValid = false;
+            } else {
+                categorySelect.classList.remove('error');
+            }
+
+            // Validate literacy level
+            const literacyLevel = literacySelect.value;
+            const validLiteracyLevels = ['Beginner', 'Intermediate', 'Expert'];
+            if (!literacyLevel || !validLiteracyLevels.includes(literacyLevel)) {
+                errors.push('Please select a valid literacy level');
+                literacySelect.classList.add('error');
+                isValid = false;
+            } else {
+                literacySelect.classList.remove('error');
+            }
+
+            return { isValid, errors };
+        }
+
+        // Real-time validation
+        [nameInput, levelSelect, categorySelect, literacySelect].forEach(input => {
+            input.addEventListener('blur', validateForm);
+            input.addEventListener('change', function() {
+                this.classList.remove('error');
+            });
+        });
+
+        // Form submission
+        setupForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            const validation = validateForm();
+            
+            if (!validation.isValid) {
+                // Show error message
+                let errorMsg = validation.errors.join('\n');
+                alert('Please fix the following errors:\n\n' + errorMsg);
+                return;
+            }
             
             const formData = new FormData(e.target);
             const setup = {
@@ -123,20 +517,29 @@
                 literacyLevel: formData.get('literacyLevel')
             };
             
+            // Double-check all required fields
+            if (!setup.name || !setup.level || !setup.category || !setup.literacyLevel) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Save to localStorage
             localStorage.setItem('neuroquizUserSetup', JSON.stringify(setup));
             console.log('[RB-ADA] user_setup_saved', setup);
             
+            // Redirect to quiz
             window.location.href = 'quiz.html';
         });
 
+        // Load existing setup if available
         const stored = localStorage.getItem('neuroquizUserSetup');
         if (stored) {
             try {
                 const parsed = JSON.parse(stored);
-                if (parsed.name) document.getElementById('name-input').value = parsed.name;
-                if (parsed.level) document.getElementById('level-select').value = parsed.level;
-                if (parsed.category) document.getElementById('category-select').value = parsed.category;
-                if (parsed.literacyLevel) document.getElementById('literacy-select').value = parsed.literacyLevel;
+                if (parsed.name) nameInput.value = parsed.name;
+                if (parsed.level) levelSelect.value = parsed.level;
+                if (parsed.category) categorySelect.value = parsed.category;
+                if (parsed.literacyLevel) literacySelect.value = parsed.literacyLevel;
             } catch (e) {
                 console.warn('Failed to load stored setup:', e);
             }

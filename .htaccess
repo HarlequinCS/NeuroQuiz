@@ -1,0 +1,193 @@
+# NeuroQuiz™ Production .htaccess
+# Performance Optimization, Caching, and Compression
+
+# ============================================
+# ENABLE REWRITE ENGINE
+# ============================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Force HTTPS (uncomment if using SSL)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Force trailing slash for directories (optional)
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_URI} !(.*)/$
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [L,R=301]
+    
+    # Remove www (optional - uncomment if desired)
+    # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+</IfModule>
+
+# ============================================
+# COMPRESSION (Gzip/Brotli)
+# ============================================
+<IfModule mod_deflate.c>
+    # Enable Gzip compression
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/json application/xml
+    AddOutputFilterByType DEFLATE application/rss+xml application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font-ttf font/opentype image/svg+xml image/x-icon
+    
+    # Remove browser bugs (for older browsers)
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
+</IfModule>
+
+# ============================================
+# BROWSER CACHING
+# ============================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Images - Cache for 1 year
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Fonts - Cache for 1 year
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    
+    # CSS and JavaScript - Cache for 1 month (update cache-busting for production)
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    
+    # Audio and Video - Cache for 1 year
+    ExpiresByType audio/mpeg "access plus 1 year"
+    ExpiresByType audio/mp3 "access plus 1 year"
+    ExpiresByType video/mp4 "access plus 1 year"
+    
+    # HTML - Cache for 1 hour (adjust as needed)
+    ExpiresByType text/html "access plus 1 hour"
+    
+    # JSON Data - Cache for 1 day
+    ExpiresByType application/json "access plus 1 day"
+    
+    # Default - Cache for 1 week
+    ExpiresDefault "access plus 1 week"
+</IfModule>
+
+# ============================================
+# CACHE-CONTROL HEADERS
+# ============================================
+<IfModule mod_headers.c>
+    # Remove ETags (better for caching)
+    Header unset ETag
+    FileETag None
+    
+    # Cache-Control for HTML
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+    
+    # Cache-Control for CSS and JS (with cache-busting via version)
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000, immutable"
+    </FilesMatch>
+    
+    # Cache-Control for Images
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Cache-Control for Fonts
+    <FilesMatch "\.(ttf|otf|woff|woff2|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Cache-Control for Audio
+    <FilesMatch "\.(mp3|wav|ogg)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Cache-Control for JSON Data
+    <FilesMatch "\.json$">
+        Header set Cache-Control "public, max-age=86400, must-revalidate"
+    </FilesMatch>
+    
+    # Security Headers
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Preload critical resources
+    <FilesMatch "index\.html$">
+        Header add Link "</css/styles.min.css>; rel=preload; as=style"
+        Header add Link "</js/scripts.min.js>; rel=preload; as=script"
+    </FilesMatch>
+</IfModule>
+
+# ============================================
+# MIME TYPES
+# ============================================
+<IfModule mod_mime.c>
+    # JavaScript
+    AddType application/javascript js
+    AddType application/json json
+    
+    # Fonts
+    AddType font/ttf ttf
+    AddType font/otf otf
+    AddType font/woff woff
+    AddType font/woff2 wff2
+    AddType application/font-woff woff
+    AddType application/font-woff2 woff2
+    
+    # Images
+    AddType image/webp webp
+    AddType image/svg+xml svg
+    
+    # Audio
+    AddType audio/mpeg mp3
+    AddType audio/mp3 mp3
+</IfModule>
+
+# ============================================
+# PERFORMANCE OPTIMIZATIONS
+# ============================================
+
+# Disable directory browsing
+Options -Indexes
+
+# Prevent access to sensitive files
+<FilesMatch "(^\.|\.(git|md|json)$)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Enable Keep-Alive (if supported)
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+
+# ============================================
+# ERROR PAGES (Optional)
+# ============================================
+# ErrorDocument 404 /404.html
+# ErrorDocument 500 /500.html
+
+# ============================================
+# CORS HEADERS (if needed for API)
+# ============================================
+# <IfModule mod_headers.c>
+#     Header set Access-Control-Allow-Origin "*"
+#     Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+#     Header set Access-Control-Allow-Headers "Content-Type"
+# </IfModule>

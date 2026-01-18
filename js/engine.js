@@ -483,17 +483,24 @@ class QuizEngine {
 
         if (nextDifficulty < RBADA_CONSTANTS.MIN_DIFFICULTY) {
             const previousLevel = this.state.currentLevel;
+            const previousDifficulty = this.state.currentDifficulty;
+            
+            // Drop level by 1 and set difficulty to Expert (MAX_DIFFICULTY)
             this.state.currentLevel = clamp(this.state.currentLevel - 1, RBADA_CONSTANTS.MIN_LEVEL, RBADA_CONSTANTS.MAX_LEVEL);
             this.state.dropCount += 1;
             this.state.hasDroppedLevel = true;
-            nextDifficulty = RBADA_CONSTANTS.MIN_DIFFICULTY;
+            nextDifficulty = RBADA_CONSTANTS.MAX_DIFFICULTY; // Set to Expert when dropping level
+            
             if (this.state.currentLevel > previousLevel) {
                 this.state.currentLevel = previousLevel;
             }
+            
             logAdaptive('level_drop', {
                 fromLevel: previousLevel,
                 toLevel: this.state.currentLevel,
-                reason: 'difficulty_below_min',
+                fromDifficulty: previousDifficulty,
+                toDifficulty: nextDifficulty,
+                reason: 'difficulty_below_min_drop_to_expert',
                 streak: this.state.streak,
                 dropCount: this.state.dropCount
             });
@@ -530,6 +537,40 @@ class QuizEngine {
         const total = this.getQuestionCount();
         const current = Math.min(this.state.totalAnswered + (this.state.currentQuestion ? 1 : 0), total);
         return { current, total };
+    }
+
+    upgradeLevel() {
+        // Upgrade to next level with Beginner difficulty (difficulty 1)
+        const previousLevel = this.state.currentLevel;
+        const previousDifficulty = this.state.currentDifficulty;
+        
+        if (this.state.currentLevel < RBADA_CONSTANTS.MAX_LEVEL) {
+            this.state.currentLevel = clamp(this.state.currentLevel + 1, RBADA_CONSTANTS.MIN_LEVEL, RBADA_CONSTANTS.MAX_LEVEL);
+            this.state.currentDifficulty = RBADA_CONSTANTS.MIN_DIFFICULTY; // Beginner difficulty
+            this.state.promotionCount += 1;
+            
+            logAdaptive('level_upgrade_offer', {
+                fromLevel: previousLevel,
+                toLevel: this.state.currentLevel,
+                fromDifficulty: previousDifficulty,
+                toDifficulty: this.state.currentDifficulty,
+                reason: 'streak_10_expert_upgrade',
+                streak: this.state.streak
+            });
+            
+            return {
+                success: true,
+                previousLevel,
+                newLevel: this.state.currentLevel,
+                previousDifficulty,
+                newDifficulty: this.state.currentDifficulty
+            };
+        }
+        
+        return {
+            success: false,
+            reason: 'max_level_reached'
+        };
     }
 
     getState() {

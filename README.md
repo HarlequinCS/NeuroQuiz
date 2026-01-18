@@ -76,7 +76,7 @@ NeuroQuiz™ is built on research from:
 - **Attention and Focus**: Design principles that maintain user engagement
 - **Reward Systems**: Dopamine-driven motivation through achievement systems
 
-For detailed research documentation, see [`docs/research.pdf`](docs/research.pdf).
+For detailed research documentation and references, see the [`docs/`](docs/) folder.
 
 ## 👥 Team Members
 

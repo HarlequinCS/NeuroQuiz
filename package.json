@@ -1,0 +1,35 @@
+{
+  "name": "neuroquiz",
+  "version": "1.0.0",
+  "description": "NeuroQuiz™ - Adaptive Gamified Quiz Platform - Production Build",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js && npm run build:html",
+    "build:css": "npm run bundle:css && npm run minify:css",
+    "build:js": "npm run bundle:js && npm run minify:js",
+    "build:html": "npm run minify:html",
+    "bundle:css": "node build/bundle-css.js",
+    "bundle:js": "node build/bundle-js.js",
+    "minify:css": "npm run minify:css:all",
+    "minify:css:all": "node build/minify-css.js",
+    "minify:js": "npm run minify:js:all",
+    "minify:js:all": "node build/minify-js.js",
+    "minify:html": "html-minifier-terser --input-dir . --output-dir dist --file-ext html --collapse-whitespace --remove-comments --minify-css --minify-js --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes",
+    "optimize:images": "node build/optimize-images.js",
+    "copy:assets": "node build/copy-assets.js",
+    "production": "npm run build && npm run copy:assets",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "adaptive-quiz",
+    "gamified-learning",
+    "education"
+  ],
+  "author": "NeuroQuiz Team",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier-terser": "^7.2.0",
+    "rimraf": "^5.0.5",
+    "terser": "^5.31.0"
+  }
+}

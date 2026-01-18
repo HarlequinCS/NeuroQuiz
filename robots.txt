@@ -1,0 +1,19 @@
+# robots.txt for NeuroQuiz™
+# https://neuroquiz.com/robots.txt
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /setup.html
+
+# Disallow dynamic/user-specific pages
+Disallow: /quiz.html
+Disallow: /result.html
+
+# Disallow admin and private directories
+Disallow: /docs/
+Disallow: /data/
+
+# Sitemap location
+Sitemap: https://neuroquiz.com/sitemap.xml

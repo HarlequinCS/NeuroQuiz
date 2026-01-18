@@ -3,58 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NeuroQuiz™ - Take the Adaptive Quiz">
-    <title>NeuroQuiz™ - Quiz</title>
     
+    <!-- Primary Meta Tags -->
+    <title>NeuroQuiz™ - Take the Adaptive Quiz | Interactive Learning Assessment</title>
+    <meta name="title" content="NeuroQuiz™ - Take the Adaptive Quiz | Interactive Learning Assessment">
+    <meta name="description" content="Take an adaptive quiz that adjusts to your performance in real-time. Experience personalized learning with cognitive science-based question difficulty.">
+    <meta name="keywords" content="adaptive quiz, interactive quiz, cognitive assessment, learning quiz, educational quiz, real-time adaptation">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://neuroquiz.com/quiz.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neuroquiz.com/quiz.html">
+    <meta property="og:title" content="NeuroQuiz™ - Take the Adaptive Quiz">
+    <meta property="og:description" content="Experience adaptive learning with real-time difficulty adjustment.">
+    <meta property="og:image" content="https://neuroquiz.com/assets/images/logo.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="NeuroQuiz™ - Take the Adaptive Quiz">
+    <meta name="twitter:description" content="Take an adaptive quiz that adjusts to your performance.">
+    <meta name="twitter:image" content="https://neuroquiz.com/assets/images/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/Logo favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo favicon-16x16.png">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/quiz.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
     <canvas id="neural-bg"></canvas>
     <div id="background-shapes" aria-hidden="true"></div>
 
-    <header class="header" role="banner">
-        <nav class="nav" role="navigation" aria-label="Main navigation">
-            <div class="nav-container">
-                
-                <a href="index.html" class="logo-container">
-                    <span class="brand-name">NeuroQuiz™</span>
-                </a>
-
-                <div class="mid-header-animation" aria-hidden="true">
-                    <div class="dino-sky">
-                        <div class="cloud cloud-1"></div>
-                        <div class="cloud cloud-2"></div>
-                        <div class="star star-1"></div>
-                        <div class="star star-2"></div>
-                    </div>
-                    <div class="dino-ground"></div>
-                    <div class="obstacle-cactus"></div>
-                    <div class="obstacle-bird">
-                        <div class="bird-wing"></div>
-                    </div>
-                    <div class="dino-rex">
-                        <div class="rex-body-wrapper">
-                            <div class="rex-shape">
-                                <div class="rex-eye"></div>
-                                <div class="rex-arm"></div>
-                            </div>
-                        </div>
-                        <div class="rex-leg leg-left"></div>
-                        <div class="rex-leg leg-right"></div>
+    <div class="dino-animation-container" aria-hidden="true">
+        <div class="mid-header-animation">
+            <div class="dino-sky">
+                <div class="cloud cloud-1"></div>
+                <div class="cloud cloud-2"></div>
+                <div class="star star-1"></div>
+                <div class="star star-2"></div>
+            </div>
+            <div class="dino-ground"></div>
+            <div class="obstacle-cactus"></div>
+            <div class="obstacle-bird">
+                <div class="bird-wing"></div>
+            </div>
+            <div class="dino-rex">
+                <div class="rex-body-wrapper">
+                    <div class="rex-shape">
+                        <div class="rex-eye"></div>
+                        <div class="rex-arm"></div>
                     </div>
                 </div>
-
-                <ul class="nav-menu" id="nav-menu">
-                    <div class="nav-marker"></div>
-                    <li><a href="index.html" class="nav-link" data-color="#ffc800">Home</a></li>
-                    <li><a href="about.html" class="nav-link" data-color="#2bde73">About</a></li>
-                    <li><a href="#" class="nav-link active" data-color="#1cb0f6">Quiz</a></li>
-                </ul>
+                <div class="rex-leg leg-left"></div>
+                <div class="rex-leg leg-right"></div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
 
     <main class="quiz-main" role="main">
         <div class="quiz-container" id="quiz-container">
@@ -65,27 +74,44 @@
                     <span class="user-name" id="user-name">Learner</span>
                 </div>
                 <div class="cognitive-status">
-                    🧠 Cognitive Analysis Active
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 22"></path>
+                        <path d="M21 12h-3l-2-5a2.5 2.5 0 0 1 2.83-3.5"></path>
+                        <path d="M22 8h-4l-1-3a2.5 2.5 0 0 1 2.83-3.5"></path>
+                    </svg>
+                    Cognitive Analysis Active
                 </div>
             </section>
 
             <div class="gamification-header">
-                <div class="header-stat">
-                    <div class="stat-icon" id="level-icon">⭐</div> 
-                    <div class="stat-label">Level</div>
-                    <div class="stat-value" id="level-value">1</div>
-                </div>
-
-                <div class="header-stat">
-                    <div class="stat-icon" id="streak-icon">🔥</div> 
-                    <div class="stat-label">Streak</div>
-                    <div class="stat-value" id="streak-value">0</div>
-                </div>
-
-                <div class="header-stat">
-                    <div class="stat-icon" id="points-icon">💎</div> 
-                    <div class="stat-label">Points</div>
-                    <div class="stat-value" id="points-value">0</div>
+                <div class="header-stats-inner">
+                    <div class="header-stat">
+                        <div class="stat-icon" id="level-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div> 
+                        <div class="stat-label">Level</div>
+                        <div class="stat-value" id="level-value">1</div>
+                    </div>
+                    <div class="header-stat">
+                        <div class="stat-icon" id="streak-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                            </svg>
+                        </div> 
+                        <div class="stat-label">Streak</div>
+                        <div class="stat-value" id="streak-value">0</div>
+                    </div>
+                    <div class="header-stat">
+                        <div class="stat-icon" id="points-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 3h12l4 6-10 12L2 9z"></path>
+                            </svg>
+                        </div> 
+                        <div class="stat-label">Points</div>
+                        <div class="stat-value" id="points-value" aria-label="Total points: 0">0</div>
+                    </div>
                 </div>
             </div>
 
@@ -93,13 +119,19 @@
                 <div class="progress-container" id="progress-container">
                     <div class="progress-bar-wrapper" id="progress-bar-wrapper">
                         <div class="progress-bar" id="progress-bar" role="progressbar" 
-                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                            aria-label="Quiz progress">
                             <span class="progress-fill" id="progress-fill"></span>
                         </div>
                     </div>
                     <div class="progress-text" id="progress-text">
-                        <span class="question-counter" id="question-counter">Question 0 of 0</span>
+                        <span class="question-counter" id="question-counter" aria-live="polite">Question 0 of 0</span>
                     </div>
+                </div>
+                <!-- Motivational Message Section -->
+                <div class="motivation-message" id="motivation-message" role="status" aria-live="polite" aria-atomic="true">
+                    <span class="motivation-icon" id="motivation-icon"></span>
+                    <span class="motivation-text" id="motivation-text">Keep going! You're doing great!</span>
                 </div>
             </section>
 
@@ -118,36 +150,54 @@
                         </p>
                     </div>
 
-                    <div class="options-container" id="options-container" role="radiogroup">
-                        </div>
+                    <div class="options-container" id="options-container" role="radiogroup" aria-label="Answer options">
+                    </div>
                 </div>
 
                 <div class="feedback-area" id="feedback-area" aria-live="polite"></div>
             </section>
 
             <section class="quiz-actions" id="quiz-actions">
-                
-                <button class="btn" id="hint-btn" aria-label="Get a Hint" data-tooltip="Hint">
-                    <span class="btn-icon">💡</span>
-                </button>
-
                 <div class="action-center">
-                    <button class="btn" id="submit-btn" disabled>
+                    <button class="btn" id="submit-btn" disabled aria-label="Submit your answer" aria-describedby="submit-btn-help">
                         <span class="btn-text">SUBMIT ANSWER</span>
                     </button>
+                    <span id="submit-btn-help" class="sr-only">Select an answer option first to enable this button</span>
 
                     <button class="btn hidden" id="next-btn" style="display: none;"> 
                          <span class="btn-text">NEXT QUESTION ➜</span>
                     </button>
                 </div>
 
-                <button class="btn btn-stop" id="stop-btn" aria-label="Stop Quiz" data-tooltip="Stop Quiz">
-                    <span class="btn-icon">🛑</span>
+                <button class="btn btn-stop" id="stop-btn" aria-label="Stop Quiz">
+                    <span class="btn-stop-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="6" y="6" width="12" height="12" rx="2"></rect>
+                        </svg>
+                    </span>
+                    <span class="btn-stop-text">Stop Quiz</span>
                 </button>
             </section>
 
         </div>
     </main>
+
+    <!-- Theme toggle: fixed bottom-right on desktop only; hidden on mobile -->
+    <div class="theme-segmented-control" role="radiogroup" aria-label="Theme Switcher">
+        <input type="radio" class="theme-input" name="theme" id="theme-system" value="system" checked>
+        <label for="theme-system" class="theme-label" aria-label="System Default">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        </label>
+        <input type="radio" class="theme-input" name="theme" id="theme-light" value="light">
+        <label for="theme-light" class="theme-label" aria-label="Light Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </label>
+        <input type="radio" class="theme-input" name="theme" id="theme-dark" value="dark">
+        <label for="theme-dark" class="theme-label" aria-label="Dark Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </label>
+        <div class="theme-slider"></div>
+    </div>
 
     <div class="loading-overlay" id="loading-overlay" aria-hidden="true">
         <div class="loading-spinner" id="loading-spinner">
@@ -156,30 +206,22 @@
         </div>
     </div>
 
-    <div class="theme-segmented-control" role="radiogroup" aria-label="Theme Switcher">
-        
-        <input type="radio" class="theme-input" name="theme" id="theme-system" value="system" checked>
-        <label for="theme-system" class="theme-label" aria-label="System Default">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-        </label>
-
-        <input type="radio" class="theme-input" name="theme" id="theme-light" value="light">
-        <label for="theme-light" class="theme-label" aria-label="Light Mode">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </label>
-
-        <input type="radio" class="theme-input" name="theme" id="theme-dark" value="dark">
-        <label for="theme-dark" class="theme-label" aria-label="Dark Mode">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </label>
-
-        <div class="theme-slider"></div>
-    </div>
-
     <div class="custom-modal-overlay" id="modal-overlay" aria-hidden="true">
         <div class="custom-modal-card">
             <div class="modal-header">
-                <span class="modal-icon" id="modal-icon">💡</span>
+                <span class="modal-icon" id="modal-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        <path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path>
+                    </svg>
+                </span>
                 <h3 class="modal-title" id="modal-title">Hint</h3>
             </div>
             <div class="modal-body">
@@ -193,15 +235,31 @@
     <script src="js/cognitive-analyzer.js"></script> <script src="js/engine.js"></script>
     <script src="js/quiz-ui.js"></script> <script src="js/theme.js"></script>
     <script src="js/background-effects.js"></script>
-    <script src="js/card-tilt.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Setup Check
+            // Enhanced Setup Check - Validate all required fields
             const stored = localStorage.getItem('neuroquizUserSetup');
             if (!stored) {
                 console.log('[RB-ADA] no_setup_found, redirecting to setup');
                 window.location.href = 'setup.html';
+                return;
+            }
+
+            // Validate setup data structure
+            try {
+                const setup = JSON.parse(stored);
+                if (!setup.name || !setup.level || !setup.category || !setup.literacyLevel) {
+                    console.log('[RB-ADA] setup_incomplete, redirecting to setup');
+                    localStorage.removeItem('neuroquizUserSetup'); // Clear invalid setup
+                    window.location.href = 'setup.html';
+                    return;
+                }
+            } catch (e) {
+                console.error('[RB-ADA] invalid_setup_data, redirecting to setup', e);
+                localStorage.removeItem('neuroquizUserSetup'); // Clear invalid setup
+                window.location.href = 'setup.html';
+                return;
             }
 
             // --- THEME LOGIC START ---

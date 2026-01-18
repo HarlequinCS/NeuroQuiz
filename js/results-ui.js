@@ -34,10 +34,7 @@ class ResultsUIController {
             executiveMetrics: document.getElementById('executive-metrics'),
             cognitiveSection: document.getElementById('cognitive-analytics-section'),
             exportBtn: document.getElementById('export-btn'),
-            retakeBtn: document.getElementById('retake-btn'),
-            reviewToggle: document.getElementById('review-toggle'),
-            reviewContent: document.getElementById('review-content'),
-            reviewList: document.getElementById('review-list')
+            retakeBtn: document.getElementById('retake-btn')
         };
         
         this.results = null;
@@ -51,8 +48,8 @@ class ResultsUIController {
         this.loadUserName();
         
         if (!this.results) {
-            console.warn('Results data not found; redirecting to quiz page');
-            window.location.href = 'quiz.html';
+            console.warn('Results data not found; redirecting to setup page');
+            window.location.href = 'setup.html';
             return;
         }
         
@@ -132,7 +129,6 @@ class ResultsUIController {
         this.displayChart();
         this.displayTimeAnalysis();
         this.displayAchievements();
-        this.displayReview();
     }
     
     displayQuickStats() {
@@ -155,17 +151,17 @@ class ResultsUIController {
             {
                 label: 'Correct Answers',
                 value: correct,
-                icon: '✅'
+                icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>'
             },
             {
                 label: 'Accuracy',
                 value: `${percentage}%`,
-                icon: '🎯'
+                icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>'
             },
             {
                 label: 'Time Taken',
                 value: this.formatTime(timeTaken),
-                icon: '⏱️'
+                icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>'
             }
         ];
         
@@ -282,14 +278,14 @@ class ResultsUIController {
                         </div>
                     </div>
                     <div class="performance-summary-item">
-                        <div class="summary-icon">❌</div>
+                        <div class="summary-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
                         <div class="summary-text">
                             <div class="summary-label">Incorrect</div>
                             <div class="summary-number">${incorrect}</div>
                         </div>
                     </div>
                     <div class="performance-summary-item">
-                        <div class="summary-icon">📊</div>
+                        <div class="summary-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
                         <div class="summary-text">
                             <div class="summary-label">Total</div>
                             <div class="summary-number">${total}</div>
@@ -313,37 +309,37 @@ class ResultsUIController {
                 title: 'Accuracy Rate',
                 value: `${this.results.percentage || 0}%`,
                 description: `${correct} correct out of ${total} questions`,
-                icon: '🎯'
+                icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>'
             },
             {
                 title: 'Average Time',
                 value: `${Math.round(avgTime / 1000)}s`,
                 description: `Per question average`,
-                icon: '⏱️'
+                icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>'
             },
             {
                 title: 'Total Time',
                 value: this.formatTime(totalTime),
                 description: `Complete session duration`,
-                icon: '⏰'
+                icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>'
             },
             {
                 title: 'Questions/Min',
                 value: totalTime > 0 ? (total / (totalTime / 60)).toFixed(1) : '0',
                 description: `Pacing rate`,
-                icon: '📊'
+                icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>'
             },
             {
                 title: 'Best Streak',
                 value: this.calculateBestStreak(history),
                 description: `Consecutive correct answers`,
-                icon: '🔥'
+                icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>'
             },
             {
                 title: 'Score',
                 value: this.calculateTotalScore(history),
                 description: `Total points earned`,
-                icon: '⭐'
+                icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>'
             }
         ];
         
@@ -954,7 +950,7 @@ class ResultsUIController {
         
         if (percentage >= 90) {
             achievements.push({
-                icon: '🏆',
+                icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>',
                 name: 'Perfect Score',
                 description: '90% or higher accuracy'
             });
@@ -962,7 +958,7 @@ class ResultsUIController {
         
         if (bestStreak >= 10) {
             achievements.push({
-                icon: '🔥',
+                icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>',
                 name: 'Hot Streak',
                 description: `Streak of ${bestStreak} correct answers`
             });
@@ -970,7 +966,7 @@ class ResultsUIController {
         
         if (this.results.promotionCount > 0) {
             achievements.push({
-                icon: '📈',
+                icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>',
                 name: 'Level Up',
                 description: 'Promoted to higher level'
             });
@@ -978,7 +974,7 @@ class ResultsUIController {
         
         if (total >= 20) {
             achievements.push({
-                icon: '💪',
+                icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>',
                 name: 'Persistent',
                 description: 'Completed 20+ questions'
             });
@@ -998,16 +994,7 @@ class ResultsUIController {
         return badge;
     }
     
-    displayReview() {
-        const reviewData = this.results.performanceHistory || [];
-        
-        this.elements.reviewList.innerHTML = '';
-        
-        reviewData.forEach((item, index) => {
-            const reviewItem = this.createReviewItem(item, index + 1);
-            this.elements.reviewList.appendChild(reviewItem);
-        });
-    }
+    // displayReview() method removed - review section no longer displayed
     
     createReviewItem(item, questionNum) {
         const div = document.createElement('div');
@@ -1045,7 +1032,6 @@ class ResultsUIController {
         this.elements.retakeBtn?.addEventListener('click', () => {
             window.location.href = 'setup.html';
         });
-        this.elements.reviewToggle?.addEventListener('click', () => this.toggleReview());
     }
     
     exportResults() {
@@ -1272,15 +1258,7 @@ class ResultsUIController {
         doc.save(fileName);
     }
     
-    toggleReview() {
-        const isExpanded = this.elements.reviewContent.getAttribute('aria-hidden') === 'false';
-        this.elements.reviewContent.setAttribute('aria-hidden', isExpanded);
-        this.elements.reviewToggle.setAttribute('aria-expanded', !isExpanded);
-        const icon = this.elements.reviewToggle.querySelector('.toggle-icon');
-        if (icon) {
-            icon.style.transform = isExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
-        }
-    }
+    // toggleReview() method removed - review section no longer displayed
     
     formatTime(seconds) {
         const mins = Math.floor(seconds / 60);

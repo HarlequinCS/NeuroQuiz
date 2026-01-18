@@ -3,45 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NeuroQuiz™ - Your Results">
-    <title>NeuroQuiz™ - Results</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>NeuroQuiz™ - Your Results | Cognitive Assessment Report</title>
+    <meta name="title" content="NeuroQuiz™ - Your Results | Cognitive Assessment Report">
+    <meta name="description" content="View your detailed quiz results including cognitive diagnostic assessment, performance analytics, and personalized learning insights.">
+    <meta name="keywords" content="quiz results, cognitive assessment, learning analytics, performance report, adaptive quiz results">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://neuroquiz.com/result.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neuroquiz.com/result.html">
+    <meta property="og:title" content="NeuroQuiz™ - Your Results">
+    <meta property="og:description" content="View your detailed cognitive assessment and performance analytics.">
+    <meta property="og:image" content="https://neuroquiz.com/assets/images/logo.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="NeuroQuiz™ - Your Results">
+    <meta name="twitter:description" content="View your detailed quiz results and cognitive assessment.">
+    <meta name="twitter:image" content="https://neuroquiz.com/assets/images/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/Logo favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo favicon-16x16.png">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/results.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-<body>
+<body class="bg-primary">
+    <canvas id="neural-bg"></canvas>
+    <div id="background-shapes"></div>
     <!-- Header -->
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="logo-container">
-                    <span class="brand-name">NeuroQuiz™</span>
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/images/Logo.svg" alt="NeuroQuiz Logo" class="logo">
+                    </a>
                 </div>
+                <div class="nav-trademark">
+                    <span class="trademark-symbol">™</span>
+                    <span class="trademark-text">Adaptive Learning</span>
+                </div>
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="quiz.html" class="nav-link cta-button">Retake Quiz</a></li>
+                    <li><a href="setup.html" class="nav-link cta-button">Retake Quiz</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Main Results Container -->
-    <main class="results-main" role="main">
-        <div class="results-container" id="results-container">
-            
-            <!-- Results Header -->
-            <section class="results-header" id="results-header">
-                <h1 class="results-title" id="results-title">Quiz Complete, <span id="user-name-display">User</span>!</h1>
-                <p class="results-subtitle" id="results-subtitle">Here's your personalized cognitive assessment</p>
-            </section>
+    <!-- Main (about page philosophy) -->
+    <main class="results-main about-main" role="main">
+        <!-- Hero (about-style hero-kayenta) -->
+        <section class="hero-section hero-kayenta results-hero" id="results-hero">
+            <div class="container hero-content centered-layout">
+                <h1 class="hero-title-giant" id="results-title">Quiz Complete, <span id="user-name-display">User</span>!</h1>
+                <p class="description-text" id="results-subtitle">Here's your personalized cognitive assessment</p>
+                <div class="btn-wrapper">
+                    <a href="#score-section" class="learn-more-btn">View Your Score</a>
+                </div>
+            </div>
+        </section>
 
-            <!-- Score Display Section -->
-            <section class="score-section" id="score-section">
-                <div class="score-card" id="score-card">
+        <div class="container">
+            <div class="results-container" id="results-container">
+                <!-- Score Display Section -->
+                <h2 class="section-label text-tertiary">Score Overview</h2>
+                <section class="score-section" id="score-section">
+                <div class="score-card results-tech-card" id="score-card">
                     <div class="score-circle" id="score-circle">
                         <svg class="score-svg" id="score-svg" viewBox="0 0 100 100">
                             <circle class="score-circle-bg" cx="50" cy="50" r="45"></circle>
@@ -66,7 +114,10 @@
                 </div>
             </section>
 
+            <hr class="results-hr" style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
+
             <!-- Cognitive Analytics Section - PRIMARY FOCUS -->
+            <h2 class="section-label text-tertiary">Cognitive Analysis</h2>
             <section class="cognitive-analytics-section cognitive-primary" id="cognitive-analytics-section">
                 <h2 class="section-title cognitive-main-title" id="cognitive-title">Cognitive Analysis Results</h2>
                 <p class="cognitive-intro">Comprehensive assessment of your cognitive performance and learning patterns</p>
@@ -125,15 +176,21 @@
                 </div>
             </section>
 
+            <hr class="results-hr" style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
+
             <!-- Quick Stats Summary -->
+            <h2 class="section-label text-tertiary">Quick Summary</h2>
             <section class="quick-stats-section" id="quick-stats-section">
                 <h2 class="section-title">Quick Summary</h2>
                 <div class="quick-stats-grid" id="quick-stats-grid"></div>
             </section>
 
+            <hr class="results-hr" style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
+
             <!-- Performance Chart -->
+            <h2 class="section-label text-tertiary">Performance Overview</h2>
             <section class="chart-section" id="chart-section">
-                <div class="chart-container" id="chart-container">
+                <div class="chart-container results-tech-card" id="chart-container">
                     <h2 class="chart-title" id="chart-title">Performance Overview</h2>
                     <div class="chart-wrapper" id="chart-wrapper">
                         <!-- Performance visualization will be generated here -->
@@ -141,7 +198,10 @@
                 </div>
             </section>
 
+            <hr class="results-hr" style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
+
             <!-- Time Analysis Section -->
+            <h2 class="section-label text-tertiary">Time Analysis</h2>
             <section class="time-analysis-section" id="time-analysis-section">
                 <h2 class="section-title" id="time-title">Time Analysis</h2>
                 <div class="time-stats" id="time-stats"></div>
@@ -150,7 +210,10 @@
                 </div>
             </section>
 
+            <hr class="results-hr" style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
+
             <!-- Achievements Section -->
+            <h2 class="section-label text-tertiary">Achievements Unlocked</h2>
             <section class="achievements-section" id="achievements-section">
                 <h2 class="section-title" id="achievements-title">Achievements Unlocked</h2>
                 <div class="achievements-grid" id="achievements-grid"></div>
@@ -184,42 +247,93 @@
                 </div>
             </section>
 
-            <!-- Detailed Review Section -->
-            <section class="review-section" id="review-section">
-                <button class="review-toggle" id="review-toggle" aria-expanded="false">
-                    <span class="toggle-text">View Detailed Review</span>
-                    <svg class="toggle-icon" id="toggle-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <div class="review-content" id="review-content" aria-hidden="true">
-                    <div class="review-list" id="review-list"></div>
-                </div>
-            </section>
-
+            </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
+        <div class="footer-glow-line"></div>
         <div class="footer-container">
-            <p class="footer-text">&copy; 2024 NeuroQuiz™. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p class="footer-text">&copy; 2026 NeuroQuiz™. All rights reserved.</p>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-academic">
+                    <p class="footer-institution">Developed by students of <span class="footer-highlight">Universiti Teknologi Mara Cawangan Melaka Kampus Jasin</span></p>
+                    <p class="footer-faculty">Pelajar Fakulti Sains Komputer dan Matematik</p>
+                    <p class="footer-course">Course code: <span class="footer-code">CDCS251</span> – Bachelor of Computer Sciences (Hons) Netcentric Computing</p>
+                    <p class="footer-subject">Subjek: <span class="footer-code">ITT588</span> – Front End Technology</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="docs/research.pdf" class="footer-link" target="_blank">Research</a>
+            </div>
+        </div>
+        <div class="footer-stars">
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
         </div>
     </footer>
 
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon" id="theme-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </span>
-    </button>
+    <!-- Theme Segmented Control -->
+    <div class="theme-segmented-control" role="radiogroup" aria-label="Theme Switcher">
+        <input type="radio" class="theme-input" name="theme" id="theme-system" value="system" checked>
+        <label for="theme-system" class="theme-label" aria-label="System Default">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-light" value="light">
+        <label for="theme-light" class="theme-label" aria-label="Light Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </label>
+
+        <input type="radio" class="theme-input" name="theme" id="theme-dark" value="dark">
+        <label for="theme-dark" class="theme-label" aria-label="Dark Mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </label>
+
+        <div class="theme-slider"></div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/cognitive-analyzer.js"></script>
     <script src="js/results-ui.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeInputs = document.querySelectorAll('input[name="theme"]');
+            const root = document.documentElement;
+
+            const applyTheme = (theme) => {
+                if (theme === 'system') {
+                    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    root.setAttribute('data-theme', systemDark ? 'dark' : 'light');
+                } else {
+                    root.setAttribute('data-theme', theme);
+                }
+                localStorage.setItem('neuroquizTheme', theme);
+            };
+
+            const savedTheme = localStorage.getItem('neuroquizTheme') || 'system';
+            const activeInput = document.getElementById(`theme-${savedTheme}`);
+            if (activeInput) activeInput.checked = true;
+            applyTheme(savedTheme);
+
+            themeInputs.forEach(input => {
+                input.addEventListener('change', (e) => {
+                    applyTheme(e.target.value);
+                });
+            });
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const controller = new ResultsUIController();

@@ -1,52 +1,177 @@
 /**
  * NeuroQuiz™ - Results Page Styles
- * Updated to match latest module and interface
+ * Aligned with about page design philosophy
  */
 
-/* Results Container */
-.results-main {
+/* ============================================
+   ABOUT PHILOSOPHY: HERO, BACKGROUNDS, LAYOUT
+   ============================================ */
+
+html { scroll-behavior: smooth !important; }
+
+#score-section { scroll-margin-top: 100px; }
+
+/* Neural & background (about-style) */
+#neural-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+#background-shapes {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Hero (about-style hero-kayenta) */
+.results-hero.hero-kayenta {
+    position: relative;
+    overflow: hidden;
+    background-image: url('../assets/images/aboutbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    background-color: var(--hero-bg);
+}
+
+.results-hero.hero-kayenta::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: var(--hero-overlay);
+    z-index: 1;
+}
+
+.results-hero .container { position: relative; z-index: 2; }
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50vh;
+    padding: 2rem 20px;
+}
+
+.hero-title-giant {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.75rem, 5vw + 1rem, 5rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: var(--hero-text);
+    text-shadow: 2px 4px 10px var(--hero-text-shadow);
+    padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 480px) {
+    .hero-title-giant {
+        text-shadow: 2px 4px 12px var(--hero-text-shadow);
+    }
+}
+
+.hero-title-giant #user-name-display { color: var(--accent-primary-light); }
+
+.description-text {
+    max-width: 600px;
+    font-size: clamp(1rem, 2.5vw + 0.5rem, 1.2rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    padding: 0 var(--spacing-md);
+    opacity: 0.95;
+    color: var(--hero-text);
+}
+
+.btn-wrapper { margin-top: 0.5rem; }
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: var(--btn-primary-bg) !important;
+    color: var(--btn-primary-text) !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.learn-more-btn:hover {
+    background-color: var(--btn-primary-hover-bg) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    color: var(--btn-primary-hover-text) !important;
+}
+
+/* Section labels (about-style text-tertiary) */
+.section-label.text-tertiary {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-tertiary);
+}
+
+/* Results Container & Main */
+.results-main.about-main {
     min-height: 100vh;
-    padding: 2rem 1rem;
+    padding: 0 0 2rem;
     background: var(--color-bg-secondary, #f9fafb);
 }
 
+.results-main .container {
+    padding: var(--spacing-2xl) var(--spacing-md) 2rem;
+}
+
 .results-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-}
-
-/* Results Header */
-.results-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-    padding: 2rem 0;
-}
-
-.results-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--color-text-primary, #111827);
-}
-
-.results-title #user-name-display {
-    color: var(--color-primary, #2563eb);
-    font-weight: 700;
-}
-
-.results-subtitle {
-    font-size: 1.2rem;
-    color: var(--color-text-secondary, #4b5563);
 }
 
 /* Score Section */
 .score-section {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* About-style tech-card applied to results cards */
+.score-card.results-tech-card,
+.quick-stat-card,
+.chart-container.results-tech-card,
+.achievement-badge,
+.time-stat-item,
+#time-chart-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.score-card.results-tech-card:hover,
+.quick-stat-card:hover,
+.chart-container.results-tech-card:hover,
+.achievement-badge:hover,
+.time-stat-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3), 0 0 40px rgba(37, 99, 235, 0.1) !important;
 }
 
 .score-card {
     background: white;
-    border-radius: 16px;
+    border-radius: var(--radius-lg, 16px);
     padding: 2.5rem;
     box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.1));
     display: flex;
@@ -54,13 +179,40 @@
     align-items: center;
     flex-wrap: wrap;
     border: 1px solid var(--color-border, #e5e7eb);
+    max-width: 600px;
+    margin: var(--spacing-lg) auto;
+    width: 100%;
+}
+
+/* Responsive Score Card */
+@media (max-width: 768px) {
+    .score-card {
+        padding: var(--spacing-lg);
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .score-card {
+        padding: var(--spacing-md);
+        gap: var(--spacing-md);
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .score-circle {
     position: relative;
-    width: 160px;
-    height: 160px;
+    width: clamp(150px, 30vw, 250px);
+    height: clamp(150px, 30vw, 250px);
     flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .score-circle {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .score-svg {
@@ -90,9 +242,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.2rem;
+    font-size: clamp(1.75rem, 5vw, 2.2rem);
     font-weight: 700;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
 }
 
 .score-details {
@@ -112,7 +264,7 @@
 .score-label {
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--color-text-secondary, #4b5563);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -120,35 +272,50 @@
 .score-value {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
 }
 
-/* Sections */
-section {
-    margin-bottom: 3rem;
-    background: white;
-    border-radius: 16px;
-    padding: 2.5rem;
-    box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
-    border: 1px solid var(--color-border, #e5e7eb);
+/* Sections (about philosophy: section is transparent; cards inside provide the block) */
+.results-container > section:not(.cognitive-analytics-section) {
+    margin-bottom: 2rem;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.results-container > section:not(.cognitive-analytics-section):hover {
+    transform: none !important;
+}
+
+.results-container > .cognitive-analytics-section { margin-bottom: 2rem; }
+
+.results-container > .section-label + section { margin-top: 0; }
+
+/* Section cards that need their own background (cognitive has .cognitive-primary) */
+.quick-stats-section,
+.chart-section,
+.time-analysis-section,
+.achievements-section {
+    padding: 0;
 }
 
 .section-title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--color-text-primary, #111827);
-    border-bottom: 3px solid var(--color-primary, #2563eb);
+    color: var(--text-primary);
+    border-bottom: 3px solid var(--accent-primary);
     padding-bottom: 0.75rem;
 }
 
 /* Cognitive Analytics - PRIMARY FOCUS */
 .cognitive-primary {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    color: var(--hero-text); /* Always white on gradient background */
     padding: 3.5rem 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-glow);
     margin-bottom: 3rem;
     border: none;
     position: relative;
@@ -172,14 +339,14 @@ section {
 }
 
 .cognitive-main-title {
-    color: white !important;
+    color: var(--hero-text) !important;
     font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 0.75rem;
     text-align: center;
     border-bottom: 3px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 1rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 10px var(--hero-text-shadow);
     position: relative;
     z-index: 1;
 }
@@ -187,7 +354,8 @@ section {
 .cognitive-intro {
     text-align: center;
     font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--hero-text);
+    opacity: 0.95;
     margin-bottom: 1rem;
     font-weight: 400;
     line-height: 1.6;
@@ -210,20 +378,20 @@ section {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: 10px;
-    color: white;
+    border-radius: var(--radius-md);
+    color: var(--hero-text);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all var(--transition-base);
+    text-shadow: 0 1px 3px var(--hero-text-shadow);
 }
 
 .help-link-btn:hover {
     background: rgba(255, 255, 255, 0.3);
     border-color: rgba(255, 255, 255, 0.6);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-md);
 }
 
 .help-icon {
@@ -287,11 +455,11 @@ section {
 
 .cognitive-summary-text {
     font-size: 1.2rem;
-    color: white;
+    color: var(--text-primary); /* Dark text for readability on light box */
     line-height: 2;
     text-align: center;
     font-weight: 400;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for readability */
     margin: 0;
     position: relative;
     z-index: 2;
@@ -299,26 +467,40 @@ section {
     font-style: italic;
 }
 
+/* Dark mode: Use white text since the gradient shows through better */
+[data-theme="dark"] .cognitive-summary-text {
+    color: var(--hero-text);
+    text-shadow: 0 2px 8px var(--hero-text-shadow);
+}
+
 .cognitive-summary-text::before {
     content: '"';
     font-size: 3rem;
     line-height: 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--text-tertiary); /* Muted quotes that adapt to theme */
     position: absolute;
     top: -10px;
     left: -20px;
     font-family: Georgia, serif;
 }
 
+[data-theme="dark"] .cognitive-summary-text::before {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 .cognitive-summary-text::after {
     content: '"';
     font-size: 3rem;
     line-height: 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--text-tertiary); /* Muted quotes that adapt to theme */
     position: absolute;
     bottom: -30px;
     right: -20px;
     font-family: Georgia, serif;
+}
+
+[data-theme="dark"] .cognitive-summary-text::after {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .cognitive-container {
@@ -331,23 +513,25 @@ section {
 
 .cognitive-section {
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.98);
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
     backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    color: var(--text-primary);
 }
 
 .cognitive-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-glow), var(--shadow-xl);
 }
 
 .cognitive-subtitle {
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
     border-bottom: 2px solid var(--color-primary, #2563eb);
     padding-bottom: 0.75rem;
 }
@@ -356,6 +540,18 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+}
+
+/* Responsive Cognitive Metrics Grid */
+@media (max-width: 600px) {
+    .cognitive-metrics {
+        gap: var(--spacing-sm);
+    }
+    
+    .cognitive-metric-card {
+        padding: var(--spacing-md);
+        font-size: clamp(0.875rem, 3vw, 1rem);
+    }
 }
 
 .cognitive-metric-card {
@@ -689,7 +885,7 @@ section {
 
 .quick-stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
 }
 
@@ -737,12 +933,52 @@ section {
 }
 
 /* Charts - Simple Visualizations */
+.chart-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    position: relative;
+}
+
 .chart-wrapper {
     margin-top: 1.5rem;
     padding: 2rem;
     background: var(--color-bg-secondary, #f9fafb);
     border-radius: 12px;
     border: 1px solid var(--color-border, #e5e7eb);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; /* Horizontal scroll if needed */
+}
+
+.chart-wrapper canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Chart Container */
+@media (max-width: 768px) {
+    .chart-container {
+        padding: var(--spacing-md);
+    }
+    
+    .chart-wrapper {
+        padding: var(--spacing-md);
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chart-container {
+        padding: var(--spacing-sm);
+    }
+    
+    .chart-wrapper {
+        padding: var(--spacing-sm);
+        min-height: 200px;
+        transform: scale(0.95);
+        transform-origin: top left;
+    }
 }
 
 .performance-visual {
@@ -818,20 +1054,31 @@ section {
     align-items: center;
     gap: 1.2rem;
     padding: 1.5rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm, 0 1px 2px 0 rgba(0, 0, 0, 0.05));
-    border: 1px solid var(--color-border, #e5e7eb);
-    transition: transform 0.2s ease;
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-default);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    color: var(--text-primary);
 }
 
 .performance-summary-item:hover {
     transform: scale(1.02);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-accent);
 }
 
 .summary-icon {
     font-size: 2.5rem;
     line-height: 1;
+    color: var(--accent-primary);
+    flex-shrink: 0;
+}
+
+/* SVG icons inside summary-icon */
+.summary-icon svg {
+    color: var(--accent-primary);
+    stroke: currentColor;
 }
 
 .summary-text {
@@ -841,7 +1088,7 @@ section {
 .summary-label {
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--color-text-secondary, #4b5563);
+    color: var(--text-secondary);
     margin-bottom: 0.4rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -850,7 +1097,7 @@ section {
 .summary-number {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
 }
 
 /* Time Analysis */
@@ -1056,11 +1303,24 @@ section {
     justify-content: center;
 }
 
+@media (max-width: 600px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
 .btn {
     padding: 0.875rem 1.75rem;
+    min-height: 44px; /* Touch target */
+    min-width: 44px;
     border: none;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: clamp(0.95rem, 3vw, 1rem);
     font-weight: 600;
     cursor: pointer;
     display: inline-flex;
@@ -1401,18 +1661,19 @@ body {
 
 /* Enhanced Cards with Glass Effect */
 section, .score-card, .quick-stat-card, .achievement-badge, .cognitive-section, .cognitive-summary-box, .cognitive-info-panel {
-    background: rgba(255, 255, 255, 0.9) !important;
+    background: var(--glass-bg) !important;
     backdrop-filter: blur(15px) !important;
     -webkit-backdrop-filter: blur(15px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.4) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
-    transition: all 0.3s ease !important;
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: var(--glass-shadow) !important;
+    transition: all var(--transition-base) !important;
+    color: var(--text-primary);
 }
 
 [data-theme="dark"] section, [data-theme="dark"] .score-card, [data-theme="dark"] .quick-stat-card, [data-theme="dark"] .achievement-badge, [data-theme="dark"] .cognitive-section, [data-theme="dark"] .cognitive-summary-box, [data-theme="dark"] .cognitive-info-panel {
-    background: rgba(30, 30, 50, 0.8) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    background: var(--glass-bg) !important;
+    border-color: var(--glass-border) !important;
+    box-shadow: var(--glass-shadow) !important;
 }
 
 /* Hover Effects for Cards */
@@ -1451,15 +1712,27 @@ section:hover, .score-card:hover, .quick-stat-card:hover, .achievement-badge:hov
 
 /* Specific Button Colors */
 .btn-primary {
-    background: var(--game-blue) !important;
-    color: white !important;
-    box-shadow: 0 4px 0 var(--game-blue-shadow) !important;
+    background: var(--btn-primary-bg) !important;
+    color: var(--btn-primary-text) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.btn-primary:hover {
+    background: var(--btn-primary-hover-bg) !important;
+    color: var(--btn-primary-hover-text) !important;
 }
 
 .btn-secondary {
-    background: var(--game-green) !important;
-    color: white !important;
-    box-shadow: 0 4px 0 var(--game-green-shadow) !important;
+    background: var(--btn-secondary-bg) !important;
+    color: var(--btn-secondary-text) !important;
+    border: 2px solid var(--btn-secondary-border) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.btn-secondary:hover {
+    background: var(--btn-secondary-hover-bg) !important;
+    color: var(--btn-secondary-hover-text) !important;
+    border-color: var(--btn-secondary-hover-bg) !important;
 }
 
 /* 6. ANIMATIONS */

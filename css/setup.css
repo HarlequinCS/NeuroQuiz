@@ -1,31 +1,37 @@
 /* =========================================
    NEUROQUIZ™ - SETUP PAGE STYLES
-   Enhanced with modern design elements
+   Aligned with index.html design philosophy
    ========================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
 /* =========================================
-   THEME VARIABLES & SETUP
+   THEME VARIABLES (index philosophy)
    ========================================= */
 
 :root {
-    /* --- LIGHT MODE DEFAULTS --- */
-    --page-bg-color: #4487de;            /* Vibrant Blue */
-    --quiz-bg-color: #ffffff;
-    --quiz-text-primary: #2c2c2c;
-    --quiz-text-secondary: #4b5563;
-    --quiz-border: rgba(0,0,0,0.1);
-    --quiz-shadow: rgba(0,0,0,0.1);
-    --progress-track: #e5e5e5;
-    --brand-color: #1e293b;
+    /* Legacy variables mapped to theme system */
+    --titan-solid: var(--accent-primary);
+    --hero-deep-navy: var(--hero-bg);
+    --text-white: var(--hero-text);
+    
+    /* Map old quiz variables to theme (for backward compatibility) */
+    --quiz-bg-color: var(--surface-elevated);
+    --quiz-text-primary: var(--text-primary);
+    --quiz-text-secondary: var(--text-secondary);
+    --quiz-border: var(--border-default);
+    --quiz-shadow: var(--shadow-md);
+    --progress-track: var(--border-subtle);
+    --brand-color: var(--text-primary);
 
-    /* Button Themes (Light) */
-    --hint-btn-bg: #ffffff;
-    --hint-btn-text: #6b7280;
-    --hint-btn-border: #e5e7eb;
-    --submit-btn-bg: #2c2c2c;
-    --submit-btn-text: #ffffff;
+    /* Button Themes - Use theme variables */
+    --hint-btn-bg: var(--surface-elevated);
+    --hint-btn-text: var(--text-secondary);
+    --hint-btn-border: var(--border-default);
+    --submit-btn-bg: var(--btn-primary-bg);
+    --submit-btn-text: var(--btn-primary-text);
 
-    /* Core Game Colors */
+    /* Core Game Colors (keep for quiz page compatibility) */
     --game-red: #ff4b4b;
     --game-red-shadow: #c50000;
     --game-blue: #1cb0f6;
@@ -38,46 +44,32 @@
 
 /* --- DARK MODE OVERRIDES --- */
 [data-theme="dark"] {
-    --page-bg-color: #2e0249;            /* Deep Purple */
-    --quiz-bg-color: #1a1a2e;
-    --quiz-text-primary: #ffffff;
-    --quiz-text-secondary: #a78bfa;
-    --quiz-border: rgba(255,255,255,0.1);
-    --quiz-shadow: rgba(0,0,0,0.5);
-    --progress-track: rgba(255,255,255,0.1);
-    --brand-color: #ffffff;
+    /* Map old quiz variables to theme */
+    --quiz-bg-color: var(--surface-elevated);
+    --quiz-text-primary: var(--text-primary);
+    --quiz-text-secondary: var(--text-secondary);
+    --quiz-border: var(--border-default);
+    --quiz-shadow: var(--shadow-md);
+    --progress-track: var(--border-subtle);
+    --brand-color: var(--text-primary);
 
-    --hint-btn-bg: rgba(255,255,255,0.05);
-    --hint-btn-text: #cccccc;
-    --hint-btn-border: rgba(255,255,255,0.2);
-    --submit-btn-bg: #ffffff;
-    --submit-btn-text: #2e0249;
+    --hint-btn-bg: var(--glass-bg);
+    --hint-btn-text: var(--text-secondary);
+    --hint-btn-border: var(--glass-border);
+    --submit-btn-bg: var(--btn-primary-bg);
+    --submit-btn-text: var(--btn-primary-text);
 }
 
 /* =========================================
    LIGHT MODE SPECIFIC STYLES
    ========================================= */
 
-.header {
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.95) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.header .brand-name {
-    color: #000000 !important;
-    text-decoration: none !important;
-    transition: color 0.3s ease;
-}
-
-.header .brand-name:hover {
-    color: #0066cc !important;
-}
+/* Header styles now handled in layout.css - removed to avoid conflicts */
 
 .setup-container {
-    background: rgba(255, 255, 255, 0.9) !important;
-    border-color: rgba(255, 255, 255, 0.4) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+    background: var(--glass-bg) !important;
+    border-color: var(--glass-border) !important;
+    box-shadow: var(--glass-shadow) !important;
 }
 
 .setup-container::before {
@@ -85,34 +77,28 @@
 }
 
 .form-group label {
-    color: var(--quiz-text-primary) !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+    color: var(--text-primary) !important;
+    text-shadow: none !important;
 }
 
 .form-group input[type="text"],
 .form-group select {
-    background: rgba(255, 255, 255, 0.8) !important;
-    border-color: var(--quiz-border) !important;
-    color: var(--quiz-text-primary) !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    background: var(--surface-elevated) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    border-color: var(--border-accent) !important;
+    box-shadow: 0 0 0 3px var(--accent-primary-subtle), var(--shadow-sm) !important;
 }
 
 .form-help {
-    color: var(--quiz-text-secondary) !important;
+    color: var(--text-secondary) !important;
 }
 
-.setup-title h1 {
-    background: linear-gradient(135deg, #0066cc, #00aa44, #8b5cf6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: #0066cc; /* Darker fallback color */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.setup-title p {
-    color: var(--quiz-text-secondary) !important;
-}
 
 .setup-container::after {
     background: radial-gradient(circle, rgba(28, 176, 246, 0.1) 0%, transparent 70%);
@@ -137,25 +123,12 @@
    DARK MODE SPECIFIC STYLES
    ========================================= */
 
-[data-theme="dark"] .header {
-    background: rgba(31, 41, 55, 0.8) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+/* Header styles now handled in layout.css - removed to avoid conflicts */
 
-[data-theme="dark"] .header .brand-name {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    transition: color 0.3s ease;
-}
-
-[data-theme="dark"] .header .brand-name:hover {
-    color: #60a5fa !important;
-}
-
-[data-theme="dark"] .setup-container {
-    background: rgba(30, 30, 50, 0.8) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+[data-theme="dark"] .setup-container.setup-card {
+    background: var(--glass-bg) !important;
+    border-color: var(--glass-border) !important;
+    box-shadow: var(--glass-shadow) !important;
 }
 
 [data-theme="dark"] .setup-container::before {
@@ -163,33 +136,27 @@
 }
 
 [data-theme="dark"] .form-group label {
-    color: var(--quiz-text-primary) !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+    color: var(--text-primary) !important;
+    text-shadow: none !important;
 }
 
 [data-theme="dark"] .form-group input[type="text"],
 [data-theme="dark"] .form-group select {
-    background: rgba(30, 30, 50, 0.6) !important;
-    border-color: rgba(255, 255, 255, 0.2) !important;
-    color: var(--quiz-text-primary) !important;
+    background: var(--surface-elevated) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .form-group input[type="text"]:focus,
+[data-theme="dark"] .form-group select:focus {
+    border-color: var(--border-accent) !important;
+    box-shadow: 0 0 0 3px var(--accent-primary-subtle), var(--shadow-sm) !important;
 }
 
 [data-theme="dark"] .form-help {
-    color: var(--quiz-text-secondary) !important;
+    color: var(--text-secondary) !important;
 }
 
-[data-theme="dark"] .setup-title h1 {
-    background: linear-gradient(135deg, #60a5fa, #34d399, #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: #60a5fa; /* Fallback color */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="dark"] .setup-title p {
-    color: var(--quiz-text-secondary) !important;
-}
 
 [data-theme="dark"] .setup-container::after {
     background: radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, transparent 70%);
@@ -204,99 +171,283 @@
     border-color: rgba(255, 255, 255, 0.1);
 }
 
-[data-theme="dark"] .theme-toggle {
-    background: rgba(31, 41, 55, 0.3);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
 /* =========================================
    GENERAL STYLES (Apply to Both Themes)
    ========================================= */
 
-/* 2. PAGE BACKGROUND (Interactive) */
+/* 2. BODY & PAGE (index philosophy) */
+html { scroll-behavior: smooth; }
+
 body {
-    background-color: var(--page-bg-color) !important;
-    background-image: none !important;
-    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    background-color: var(--surface-base) !important;
+    font-family: 'Montserrat', 'Nunito', 'Segoe UI', sans-serif;
     min-height: 100vh;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition-base);
     overflow-x: hidden;
 }
 
-/* Canvas Styling */
-#neural-bg {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    z-index: -1; pointer-events: none;
+/* 3. HERO SECTION (index.html philosophy) */
+.setup-hero-section.hero-section {
+    padding: 0;
+    height: 55vh;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--hero-bg),
+                url('../assets/images/landing-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
 }
 
-/* Video Background Styling */
-.setup-video-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-    opacity: 0.4;
-    filter: blur(1px) brightness(0.7);
-    transition: opacity 0.3s ease;
-}
-
-.setup-video-bg:hover {
-    opacity: 0.6;
-}
-
-/* Alternative: Animated particle background if no video */
-.setup-particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    background: linear-gradient(45deg, var(--page-bg-color), var(--game-blue));
-    overflow: hidden;
-}
-
-.setup-particles::before {
+.setup-hero-section.hero-section::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--hero-overlay);
+    z-index: 1;
+}
+
+.setup-hero-section.hero-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100vw;
+    overflow: visible;
+    padding: 0 15px;
+}
+
+.hero-text-line {
+    font-size: clamp(1.8rem, 7vw, 4rem);
+    line-height: 1.1;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--hero-text) !important;
+}
+
+.outline-text {
+    color: transparent !important;
+    -webkit-text-stroke: 2px var(--hero-text);
+}
+
+.hero-subtitle {
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    color: var(--hero-text) !important;
+    margin-bottom: 1.5rem;
+}
+
+.hero-cta .btn-primary {
+    background: transparent !important;
+    color: var(--hero-text) !important;
+    border: 1px solid var(--hero-text) !important;
+    border-radius: var(--radius-full) !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem !important;
+    padding: 0.75rem 2rem !important;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-cta .btn-primary:hover {
+    background: var(--hero-text) !important;
+    color: var(--accent-primary) !important;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+    .setup-hero-section.hero-section { height: 45vh; min-height: 280px; }
+    .outline-text { -webkit-text-stroke: 1px var(--text-white); }
+    .upscale-text-container:hover .glacier-title { letter-spacing: 6px; transform: scale(1.03); }
+}
+
+/* 4. SETUP FORM SECTION (index features-section / research-intro philosophy) */
+.setup-form-section {
+    padding: 80px 20px 100px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--hero-deep-navy) !important;
+}
+
+[data-theme="light"] .setup-form-section {
+    background: #f8fafc !important;
+}
+
+.setup-form-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.upscale-text-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 40px 0;
+    overflow: hidden;
+}
+
+.glacier-title {
+    display: inline-block;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    cursor: default;
+    letter-spacing: 2px;
+    margin-bottom: 0 !important;
+}
+
+.upscale-text-container:hover .glacier-title {
+    letter-spacing: 12px;
+    transform: scale(1.05);
+    text-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+}
+
+.section-title {
+    font-size: clamp(1.5rem, 5vw, 2rem) !important;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: clamp(2px, 1vw, 4px);
+    text-align: center;
+    color: var(--text-white);
+}
+
+[data-theme="light"] .section-title {
+    color: #1e293b !important;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--titan-solid);
+    margin: 16px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Neuro-particles: circles (index philosophy) */
+.circles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-image:
-        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 0%, transparent 50%);
-    animation: particleFloat 8s ease-in-out infinite;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
 }
 
-@keyframes particleFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(37, 99, 235, 0.15);
+    animation: animateCircles 25s linear infinite;
+    bottom: -150px;
 }
 
-/* 3. ENHANCED SETUP CONTAINER */
-.setup-container {
+.circles li:nth-child(1){ left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+.circles li:nth-child(2){ left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+.circles li:nth-child(3){ left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+.circles li:nth-child(4){ left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+.circles li:nth-child(5){ left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+.circles li:nth-child(6){ left: 75%; width: 90px; height: 90px; animation-delay: 3s; }
+.circles li:nth-child(7){ left: 35%; width: 120px; height: 120px; animation-delay: 7s; }
+.circles li:nth-child(8){ left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
+.circles li:nth-child(9){ left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
+.circles li:nth-child(10){ left: 85%; width: 120px; height: 120px; animation-delay: 0s; animation-duration: 11s; }
+.circles li:nth-child(11){ left: 5%; width: 40px; height: 40px; animation-delay: 4s; }
+.circles li:nth-child(12){ left: 55%; width: 100px; height: 100px; animation-delay: 8s; animation-duration: 20s; }
+.circles li:nth-child(13){ left: 92%; width: 30px; height: 30px; animation-delay: 1s; }
+.circles li:nth-child(14){ left: 18%; width: 70px; height: 70px; animation-delay: 5s; animation-duration: 15s; }
+.circles li:nth-child(15){ left: 80%; width: 50px; height: 50px; animation-delay: 2s; }
+
+.circles li:nth-child(even) {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+@keyframes animateCircles {
+    0%{ transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 20%; }
+    100%{ transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; }
+}
+
+/* 5. SETUP CARD (index feature-card philosophy) */
+.setup-container.setup-card {
     max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
-    border-radius: 20px !important;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-xl);
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.8s ease-out;
-    transition: all 0.3s ease;
+    transition: all var(--transition-base);
+
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
 }
 
-.setup-container:hover {
-    transform: translateY(-5px);
+/* Responsive Setup Container */
+@media (max-width: 768px) {
+    .setup-container.setup-card {
+        max-width: 90%;
+        padding: var(--spacing-lg);
+    }
 }
 
-/* Add glare effect */
+@media (max-width: 480px) {
+    .setup-container.setup-card {
+        padding: var(--spacing-md);
+        border-radius: var(--radius-lg);
+    }
+}
+
+[data-theme="light"] .setup-container.setup-card {
+    background: var(--surface-elevated);
+    border: 1px solid var(--border-default);
+    box-shadow: var(--shadow-lg);
+}
+
+.setup-container.setup-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--glass-border-hover);
+    box-shadow: var(--shadow-glow);
+}
+
+[data-theme="light"] .setup-container.setup-card:hover {
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-glow);
+}
+
 .setup-container::before {
     content: '';
     position: absolute;
@@ -304,8 +455,8 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
+    background: linear-gradient(90deg, transparent, var(--accent-primary-subtle), transparent);
+    transition: left 0.6s;
 }
 
 .setup-container:hover::before {
@@ -335,10 +486,12 @@ body {
 
 .form-group input[type="text"],
 .form-group select {
+    width: 100%;
+    min-height: 44px; /* Touch target */
     padding: 1rem !important;
     border: 2px solid var(--quiz-border) !important;
     border-radius: 12px !important;
-    font-size: 1rem !important;
+    font-size: clamp(1rem, 4vw, 1.125rem) !important;
     backdrop-filter: blur(10px) !important;
     transition: all 0.3s ease !important;
 }
@@ -351,8 +504,21 @@ body {
     transform: translateY(-2px) !important;
 }
 
+.form-group input[type="text"].error,
+.form-group select.error {
+    border-color: var(--game-red) !important;
+    box-shadow: 0 0 0 3px rgba(255, 75, 75, 0.2) !important;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
 .form-help {
-    font-size: 0.875rem !important;
+    font-size: clamp(0.8rem, 2.5vw, 0.875rem) !important;
     margin-top: 0.25rem !important;
     font-style: italic !important;
     animation: fadeIn 0.5s ease-out 0.5s both;
@@ -369,10 +535,11 @@ body {
 
 .setup-actions button,
 .setup-actions a {
+    min-height: 44px; /* Touch target */
     padding: 1rem 2rem !important;
     border: none !important;
     border-radius: 12px !important;
-    font-size: 1.1rem !important;
+    font-size: clamp(0.95rem, 3vw, 1.1rem) !important;
     font-weight: 700 !important;
     cursor: pointer !important;
     text-decoration: none !important;
@@ -406,50 +573,67 @@ body {
     box-shadow: none !important;
 }
 
-/* Primary button */
-.setup-actions button[type="submit"],
-.setup-actions a[href*="quiz"] {
-    background: var(--game-green) !important;
-    color: white !important;
-    box-shadow: 0 6px 0 var(--game-green-shadow) !important;
+/* Primary button (index philosophy: transparent, white border) */
+.setup-actions .btn-primary {
+    background: var(--btn-secondary-bg) !important;
+    color: var(--btn-secondary-text) !important;
+    border: 2px solid var(--btn-secondary-border) !important;
+    box-shadow: none !important;
 }
 
-/* Secondary button */
-.setup-actions button[type="button"],
-.setup-actions a:not([href*="quiz"]) {
-    background: var(--game-red) !important;
-    color: white !important;
-    box-shadow: 0 6px 0 var(--game-red-shadow) !important;
+.setup-actions .btn-primary:hover {
+    background: var(--btn-secondary-hover-bg) !important;
+    color: var(--btn-secondary-hover-text) !important;
+    border-color: var(--btn-secondary-hover-bg) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Secondary button (Cancel: outline style) */
+.setup-actions .btn-secondary {
+    background: var(--btn-outline-bg) !important;
+    color: var(--btn-outline-text) !important;
+    border: 2px solid var(--btn-outline-border) !important;
+    box-shadow: none !important;
+}
+
+.setup-actions .btn-secondary:hover {
+    background: var(--btn-outline-hover-bg) !important;
+    border-color: var(--btn-outline-hover-border) !important;
+    color: var(--btn-outline-hover-text) !important;
 }
 
 /* 6. ENHANCED TITLE */
+.tutorial-show-again {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--quiz-border);
+    border-radius: 8px;
+    color: var(--quiz-text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.tutorial-show-again:hover {
+    background: var(--quiz-border);
+    color: var(--quiz-text-primary);
+    border-color: var(--game-blue);
+}
+
+.tutorial-show-again svg {
+    width: 16px;
+    height: 16px;
+}
+
 .setup-title {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     position: relative;
     z-index: 1;
-    animation: fadeInDown 0.8s ease-out;
-}
-
-.setup-title h1 {
-    font-size: 2.5rem !important;
-    margin-bottom: 0.5rem !important;
-    font-weight: 900 !important;
-    text-align: center;
-    animation: titleGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes titleGlow {
-    from { filter: drop-shadow(0 0 5px rgba(28, 176, 246, 0.5)); }
-    to { filter: drop-shadow(0 0 20px rgba(28, 176, 246, 0.8)); }
-}
-
-.setup-title p {
-    font-size: 1.2rem !important;
-    font-weight: 500 !important;
-    text-align: center;
-    font-style: italic;
-    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 /* 7. ANIMATIONS */
@@ -514,10 +698,6 @@ body {
         max-width: 90% !important;
     }
 
-    .setup-title h1 {
-        font-size: 2rem !important;
-    }
-
     .setup-actions {
         flex-direction: column;
         align-items: stretch;
@@ -533,10 +713,6 @@ body {
 @media (max-width: 480px) {
     .setup-container {
         padding: 1rem !important;
-    }
-
-    .setup-title h1 {
-        font-size: 1.8rem !important;
     }
 
     .form-group input[type="text"],
@@ -681,6 +857,206 @@ body {
 }
 
 /* =========================================
+   TUTORIAL MODAL
+   ========================================= */
+
+.tutorial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.tutorial-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tutorial-modal {
+    background: var(--quiz-bg-color);
+    border-radius: 24px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--quiz-border);
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.tutorial-overlay.active .tutorial-modal {
+    transform: scale(1) translateY(0);
+}
+
+.tutorial-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom: 2px solid var(--quiz-border);
+}
+
+.tutorial-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--quiz-text-primary);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tutorial-close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--quiz-text-secondary);
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tutorial-close:hover {
+    background: var(--quiz-border);
+    color: var(--quiz-text-primary);
+    transform: rotate(90deg);
+}
+
+.tutorial-content {
+    padding: 1.5rem 2rem;
+    color: var(--quiz-text-primary);
+}
+
+.tutorial-section {
+    margin-bottom: 1.5rem;
+}
+
+.tutorial-section:last-child {
+    margin-bottom: 0;
+}
+
+.tutorial-section h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--quiz-text-primary);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.tutorial-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.tutorial-title-icon {
+    flex-shrink: 0;
+    color: var(--game-blue);
+}
+
+.tutorial-section-icon {
+    flex-shrink: 0;
+    color: var(--game-blue);
+}
+
+.tutorial-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--quiz-text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.tutorial-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0;
+}
+
+.tutorial-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--quiz-text-secondary);
+}
+
+.tutorial-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--game-blue);
+    font-weight: bold;
+}
+
+.tutorial-list li strong {
+    color: var(--quiz-text-primary);
+    font-weight: 600;
+}
+
+.tutorial-footer {
+    padding: 1.5rem 2rem;
+    border-top: 2px solid var(--quiz-border);
+    display: flex;
+    justify-content: center;
+}
+
+.tutorial-footer .btn {
+    min-width: 200px;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .tutorial-modal {
+    background: var(--quiz-bg-color);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .tutorial-header,
+[data-theme="dark"] .tutorial-footer {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .tutorial-modal {
+        width: 95%;
+        max-height: 90vh;
+        border-radius: 16px;
+    }
+    
+    .tutorial-header,
+    .tutorial-content,
+    .tutorial-footer {
+        padding: 1.5rem;
+    }
+    
+    .tutorial-title {
+        font-size: 1.5rem;
+    }
+    
+    .tutorial-section h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* =========================================
    CONTAINER GLOW EFFECT
    ========================================= */
 
@@ -702,10 +1078,20 @@ body {
    ========================================= */
 
 .label-icon {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 0.5rem;
-    font-size: 1.2rem;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--game-blue);
     animation: bounceIn 0.6s ease-out;
+}
+
+.label-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes bounceIn {

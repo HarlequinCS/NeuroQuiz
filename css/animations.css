@@ -439,3 +439,54 @@ body {
 /* UI Team: Add more animations as needed for your design.
    Remember to test with prefers-reduced-motion enabled. */
 
+/* ============================================
+   RESPONSIVE ANIMATION OPTIMIZATIONS
+   ============================================ */
+
+/* Reduce animation intensity on mobile */
+@media (max-width: 768px) {
+    .option-btn:hover:not(:disabled) {
+        transform: scale(1.02); /* Smaller scale on mobile */
+    }
+    
+    .card:hover,
+    .feature-card:hover {
+        transform: translateY(-5px); /* Smaller lift */
+    }
+    
+    .logo-link:hover {
+        transform: scale(1.1); /* Reduced hover scale */
+    }
+}
+
+/* Disable or reduce heavy animations on very small screens */
+@media (max-width: 480px) {
+    .card:hover,
+    .feature-card:hover {
+        transform: none; /* Disable transform on very small screens */
+    }
+    
+    /* Reduce particle effects */
+    #neural-bg,
+    #background-shapes {
+        display: none; /* Hide completely on very small screens */
+    }
+}
+
+/* GPU Acceleration for Smooth Animations */
+.animated-element,
+.card,
+.question-card,
+.feature-card {
+    will-change: transform, opacity;
+    transform: translateZ(0); /* Force GPU acceleration */
+    backface-visibility: hidden;
+}
+
+/* Prevent Animation Overflow */
+.card,
+.question-card,
+.feature-card {
+    overflow: hidden; /* Clip animations that exceed bounds */
+    position: relative;
+}

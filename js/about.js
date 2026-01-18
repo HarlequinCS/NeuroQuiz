@@ -2,17 +2,41 @@ const teamGrid = document.querySelector('.team-grid');
 const nextBtn = document.getElementById('nextTeam');
 const prevBtn = document.getElementById('prevTeam');
 
-nextBtn.addEventListener('click', () => {
-    // Scrolls right by the width of one card + gap
-    const cardWidth = document.querySelector('.team-member').offsetWidth + 24; 
-    teamGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
-});
+function getScrollStep() {
+    if (!teamGrid) return 280;
+    const card = document.querySelector('.team-member');
+    if (!card) return 280;
+    const gap = parseInt(getComputedStyle(teamGrid).gap, 10) || 16;
+    return card.offsetWidth + gap;
+}
 
-prevBtn.addEventListener('click', () => {
-    // Scrolls left
-    const cardWidth = document.querySelector('.team-member').offsetWidth + 24;
-    teamGrid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-});
+function scrollNext() {
+    if (!teamGrid) return;
+    teamGrid.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+}
+
+function scrollPrev() {
+    if (!teamGrid) return;
+    teamGrid.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+}
+
+if (nextBtn) nextBtn.addEventListener('click', scrollNext);
+if (prevBtn) prevBtn.addEventListener('click', scrollPrev);
+
+/* Touch/swipe carousel on mobile */
+if (teamGrid) {
+    let touchStartX = 0, touchEndX = 0;
+    teamGrid.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    teamGrid.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        const minSwipe = 50;
+        if (diff > minSwipe) scrollNext();
+        else if (diff < -minSwipe) scrollPrev();
+    }, { passive: true });
+}
 
 /**
  * NeuroQuiz™ - Liquid Synapse Background (Creative V2)

@@ -116,10 +116,21 @@ class QuizUIController {
     }
 
     setupEventListeners() {
+        // Use capture phase for better performance and prevent event bubbling issues
         this.elements.optionsContainer.addEventListener('click', (e) => {
+            // Prevent clicks during transitions or when disabled
+            if (this.isAnswered) return;
+            
             const optionBtn = e.target.closest('.option-btn');
-            if (optionBtn && !this.isAnswered) this.selectOption(optionBtn);
-        });
+            if (optionBtn && !optionBtn.disabled && !this.isAnswered) {
+                e.preventDefault();
+                e.stopPropagation();
+                // Use requestAnimationFrame for smoother interaction
+                requestAnimationFrame(() => {
+                    this.selectOption(optionBtn);
+                });
+            }
+        }, false);
         
         // Keyboard navigation for options
         this.elements.optionsContainer.addEventListener('keydown', (e) => {
@@ -266,8 +277,14 @@ class QuizUIController {
     }
     
     selectOption(optionBtn) {
+        // Prevent double-selection during animation
+        if (optionBtn.disabled || this.isAnswered) return;
+        
         const isAlreadySelected = optionBtn.classList.contains('selected');
-        document.querySelectorAll('.option-btn').forEach(btn => {
+        
+        // Batch DOM updates for better performance
+        const options = document.querySelectorAll('.option-btn');
+        options.forEach(btn => {
             btn.classList.remove('selected');
             btn.setAttribute('aria-checked', 'false');
             btn.setAttribute('tabindex', '-1');
@@ -281,10 +298,14 @@ class QuizUIController {
             optionBtn.classList.add('selected');
             optionBtn.setAttribute('aria-checked', 'true');
             optionBtn.setAttribute('tabindex', '0');
-            optionBtn.focus();
             this.selectedOption = parseInt(optionBtn.getAttribute('data-option-id'));
             this.elements.submitBtn.disabled = false;
             this.elements.submitBtn.setAttribute('aria-disabled', 'false');
+            
+            // Focus after a tiny delay to allow CSS transition
+            requestAnimationFrame(() => {
+                optionBtn.focus();
+            });
         }
     }
     

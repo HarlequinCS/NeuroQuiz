@@ -433,11 +433,14 @@ body {
     min-height: 88px; /* Large hitbox — easy to tap */
     min-width: 100%;
     width: 100%;
-    transition: transform 0.1s !important, outline 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important, outline 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 6px 0 rgba(0,0,0,0.2);
     z-index: 1;
     outline: 2px solid transparent;
     outline-offset: 3px; /* Slightly larger focus area */
+    touch-action: manipulation; /* Prevent double-tap zoom on mobile */
+    will-change: transform; /* Optimize transform animations */
+    user-select: none; /* Prevent text selection on tap */
 }
 
 /* Tablet */
@@ -476,6 +479,7 @@ body {
     position: static !important; content: '' !important; display: inline-block !important;
     width: 40px !important; height: 40px !important; margin-right: 15px !important;
     background: rgba(0,0,0,0.2) !important; border-radius: 8px !important;
+    pointer-events: none !important; /* Allow clicks to pass through */
 }
 
 /* Option Colors */
@@ -492,16 +496,22 @@ body {
 
 /* HOVER STATE: White Outline */
 .option-btn:hover:not(:disabled) {
-    transform: translateY(-4px) translateZ(10px); 
+    transform: translate3d(0, -4px, 10px); 
     filter: brightness(1.1); 
     /* White outline + shadow */
     box-shadow: 0 10px 0 rgba(0,0,0,0.1), 0 0 0 4px #ffffff !important; 
     z-index: 10;
 }
 
-/* ACTIVE / SELECTED STATE: White Outline + Glow */
-.option-btn:active:not(:disabled), .option-btn.selected {
-    transform: translateY(2px) translateZ(0px); 
+/* ACTIVE STATE: Immediate feedback for better responsiveness */
+.option-btn:active:not(:disabled) {
+    transform: translate3d(0, 2px, 0); 
+    transition: transform 0.05s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* SELECTED STATE: White Outline + Glow */
+.option-btn.selected:not(:disabled) {
+    transform: translate3d(0, 2px, 0); 
     filter: brightness(1.2) contrast(1.1);
     border: none; 
 }
@@ -520,7 +530,8 @@ body {
     box-shadow: 0 0 0 4px #ffffff, 0 0 20px var(--game-green), inset 0 0 20px rgba(255,255,255,0.4) !important; 
 }
 
-.option-label { display: none !important; }
+.option-label { display: none !important; pointer-events: none !important; }
+.option-text { pointer-events: none; /* Allow clicks to pass through to button */ }
 
 /* =========================================
    FEEDBACK AREA

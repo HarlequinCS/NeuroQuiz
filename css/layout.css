@@ -1584,6 +1584,103 @@
         font-size: 1rem;
         margin-top: var(--spacing-sm);
     }
+    
+    /* Mobile Theme Toggle in Nav Menu */
+    .nav-menu-theme-section {
+        margin-top: var(--spacing-md);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid var(--border-default);
+    }
+    
+    .nav-menu-theme-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: var(--spacing-sm);
+        font-family: 'Orbitron', 'Segoe UI', sans-serif;
+    }
+    
+    /* Mobile Theme Toggle - Different Design (List Style) */
+    .theme-segmented-control-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        background: transparent;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        position: relative;
+        align-items: stretch;
+    }
+    
+    .theme-label-mobile {
+        width: 100%;
+        height: auto;
+        min-height: 48px;
+        border-radius: var(--radius-md);
+        padding: var(--spacing-sm) var(--spacing-md);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+        background: rgba(0, 0, 0, 0.03);
+        border: 2px solid transparent;
+        transition: all var(--transition-base);
+        cursor: pointer;
+    }
+    
+    [data-theme="dark"] .theme-label-mobile {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .theme-label-mobile:hover {
+        background: rgba(0, 0, 0, 0.08);
+        transform: translateX(4px);
+    }
+    
+    [data-theme="dark"] .theme-label-mobile:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .theme-label-mobile svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        color: var(--text-secondary);
+    }
+    
+    .theme-label-mobile span {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--text-primary);
+    }
+    
+    /* Active state for mobile theme labels */
+    .theme-segmented-control-mobile input:checked + .theme-label-mobile {
+        background: var(--accent-primary);
+        border-color: var(--accent-primary);
+        color: #ffffff;
+    }
+    
+    .theme-segmented-control-mobile input:checked + .theme-label-mobile span {
+        color: #ffffff;
+    }
+    
+    .theme-segmented-control-mobile input:checked + .theme-label-mobile svg {
+        color: #ffffff;
+        stroke: #ffffff;
+    }
+    
+    /* Hide mobile slider */
+    .theme-slider-mobile {
+        display: none;
+    }
+    
+    /* Hide desktop theme toggle on mobile */
+    .theme-segmented-control:not(.theme-segmented-control-mobile) {
+        display: none !important;
+    }
 }
 
 @media (max-width: 480px) {

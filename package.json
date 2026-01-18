@@ -16,6 +16,7 @@
     "minify:html": "html-minifier-terser --input-dir . --output-dir dist --file-ext html --collapse-whitespace --remove-comments --minify-css --minify-js --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes",
     "optimize:images": "node build/optimize-images.js",
     "copy:assets": "node build/copy-assets.js",
+    "cache-bust": "node build/cache-bust.js",
     "production": "npm run build && npm run copy:assets",
     "clean": "rimraf dist"
   },

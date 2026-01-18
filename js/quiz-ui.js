@@ -120,18 +120,36 @@ class QuizUIController {
         
         const handleClick = (e) => {
             if (this.isAnswered || btn.disabled) return;
+            e.preventDefault();
             e.stopPropagation();
+            e.stopImmediatePropagation();
             this.selectOption(btn);
         };
         
-        btn.addEventListener('click', handleClick, false);
-        btn.addEventListener('touchend', (e) => {
-            if (!this.isAnswered && !btn.disabled) {
-                e.preventDefault();
-                e.stopPropagation();
-                this.selectOption(btn);
-            }
-        }, { passive: false });
+        btn.addEventListener('click', handleClick, { capture: true, passive: false });
+        
+        // Better mobile touch handling - prevent double-tap zoom and ensure immediate response
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+            let touchStartTime = 0;
+            
+            btn.addEventListener('touchstart', (e) => {
+                if (!this.isAnswered && !btn.disabled) {
+                    touchStartTime = Date.now();
+                }
+            }, { passive: true });
+            
+            btn.addEventListener('touchend', (e) => {
+                if (this.isAnswered || btn.disabled) return;
+                const touchDuration = Date.now() - touchStartTime;
+                if (touchDuration < 500) { // Quick tap
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    this.selectOption(btn);
+                }
+                touchStartTime = 0;
+            }, { passive: false, capture: true });
+        }
         
         btn.setAttribute('data-listener-attached', 'true');
         return btn;
@@ -142,18 +160,48 @@ class QuizUIController {
             if (this.isAnswered) return;
             const optionBtn = e.target.closest('.option-btn');
             if (!optionBtn || optionBtn.disabled) return;
+            e.preventDefault();
+            e.stopPropagation();
             this.selectOption(optionBtn);
         };
         
-        this.elements.optionsContainer.addEventListener('click', handleOptionClick, false);
-        if ('ontouchstart' in window) {
+        // Use capture phase for immediate handling on mobile
+        this.elements.optionsContainer.addEventListener('click', handleOptionClick, { capture: true, passive: false });
+        
+        // Enhanced mobile touch handling with scroll detection
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+            let touchStartPos = { x: 0, y: 0 };
+            let touchStartTime = 0;
+            
+            this.elements.optionsContainer.addEventListener('touchstart', (e) => {
+                if (this.isAnswered) return;
+                const optionBtn = e.target.closest('.option-btn');
+                if (optionBtn && !optionBtn.disabled) {
+                    touchStartPos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+                    touchStartTime = Date.now();
+                }
+            }, { passive: true });
+            
             this.elements.optionsContainer.addEventListener('touchend', (e) => {
                 if (this.isAnswered) return;
                 const optionBtn = e.target.closest('.option-btn');
                 if (!optionBtn || optionBtn.disabled) return;
-                e.preventDefault();
-                this.selectOption(optionBtn);
-            }, { passive: false });
+                
+                const touchEndPos = { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
+                const deltaX = Math.abs(touchEndPos.x - touchStartPos.x);
+                const deltaY = Math.abs(touchEndPos.y - touchStartPos.y);
+                const touchDuration = Date.now() - touchStartTime;
+                
+                // Only trigger if it's a tap (not a scroll) - movement less than 10px and duration less than 300ms
+                if (deltaX < 10 && deltaY < 10 && touchDuration < 300) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    this.selectOption(optionBtn);
+                }
+                touchStartPos = { x: 0, y: 0 };
+                touchStartTime = 0;
+            }, { passive: false, capture: true });
         }
         
         // Keyboard navigation for options
@@ -598,12 +646,25 @@ class QuizUIController {
 
         const { modalOverlay, modalIcon, modalTitle, modalMessage, modalFooter } = this.elements;
         
+        // Check if modal elements exist before using them
+        if (!modalIcon || !modalMessage || !modalFooter) {
+            console.warn('Some modal elements missing! Fallback to alert.');
+            alert(message);
+            if (onPrimary) onPrimary();
+            return;
+        }
+        
         if (typeof icon === 'string' && icon.startsWith('<svg')) {
             modalIcon.innerHTML = icon;
         } else {
             modalIcon.innerHTML = icon || '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>';
         }
-        modalTitle.textContent = title || 'Notice';
+        
+        // Only set title if modalTitle element exists (it was removed from HTML)
+        if (modalTitle) {
+            modalTitle.textContent = title || 'Notice';
+        }
+        
         modalMessage.textContent = message || '';
         
         modalFooter.innerHTML = '';
@@ -635,6 +696,7 @@ class QuizUIController {
     closeModal() {
         if (!this.elements.modalOverlay) return;
         this.elements.modalOverlay.classList.remove('active');
+        this.elements.modalOverlay.classList.add('hidden');
         this.elements.modalOverlay.setAttribute('aria-hidden', 'true');
     }
 
@@ -673,8 +735,18 @@ class QuizUIController {
 
         const { modalOverlay, modalIcon, modalTitle, modalMessage, modalFooter } = this.elements;
         
+        // Check if modal elements exist before using them
+        if (!modalIcon || !modalMessage || !modalFooter) {
+            console.warn('Some modal elements missing!');
+            return;
+        }
+        
         modalIcon.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>';
-        modalTitle.textContent = 'Amazing Streak!';
+        
+        // Only set title if modalTitle element exists (it was removed from HTML)
+        if (modalTitle) {
+            modalTitle.textContent = 'Amazing Streak!';
+        }
         modalMessage.innerHTML = `
             <p style="margin-bottom: 1rem;">You've achieved a streak of 10 correct answers on Expert difficulty!</p>
             <p style="margin-bottom: 1rem;"><strong>Current:</strong> ${currentLevelName} - Expert</p>

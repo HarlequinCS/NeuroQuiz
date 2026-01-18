@@ -2,6 +2,7 @@
   "name": "neuroquiz",
   "version": "1.0.0",
   "description": "NeuroQuiz™ - Adaptive Gamified Quiz Platform - Production Build",
+  "releaseDate": "2026-01-19",
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:html",
     "build:css": "npm run bundle:css && npm run minify:css",
@@ -17,7 +18,9 @@
     "optimize:images": "node build/optimize-images.js",
     "copy:assets": "node build/copy-assets.js",
     "cache-bust": "node build/cache-bust.js",
-    "production": "npm run build && npm run copy:assets",
+    "version:update": "node update-version.js",
+    "version": "npm run version:update",
+    "production": "npm run build && npm run copy:assets && npm run version:update",
     "clean": "rimraf dist"
   },
   "keywords": [

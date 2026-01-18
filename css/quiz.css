@@ -487,10 +487,13 @@ body {
         gap: 18px; /* More space between options for easier targeting */
     }
     .option-btn {
-        min-height: 80px;
-        padding: 1.25rem 1rem;
+        min-height: 90px; /* Increased for better touch target */
+        padding: 1.5rem 1.25rem;
         font-size: clamp(1rem, 4vw, 1.125rem);
         outline-offset: 0;
+        touch-action: manipulation !important; /* Prevent double-tap zoom and improve responsiveness */
+        -webkit-tap-highlight-color: rgba(37, 99, 235, 0.3); /* Visible tap feedback */
+        cursor: pointer; /* Ensure pointer cursor on mobile */
     }
 }
 
@@ -618,6 +621,8 @@ body {
     transform: translateZ(20px);
     position: relative;
     flex-wrap: wrap;
+    z-index: 1000;
+    pointer-events: auto;
 }
 
 /* Responsive Quiz Actions */
@@ -707,14 +712,18 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
-    z-index: 10;
+    z-index: 1001 !important;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
     white-space: nowrap;
+    -webkit-tap-highlight-color: rgba(255, 59, 48, 0.3);
 }
 .btn-stop-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    pointer-events: none;
 }
 .btn-stop-icon svg {
     width: 18px;
@@ -722,6 +731,7 @@ body {
 }
 .btn-stop-text {
     font-family: inherit;
+    pointer-events: none;
 }
 
 [data-theme="dark"] .btn-stop {
@@ -1101,9 +1111,11 @@ body {
 }
 
 @media (max-width: 480px) {
-    #neural-bg,
-    #background-shapes {
+    #neural-bg {
         display: none; /* Hide completely on very small screens */
+    }
+    #background-shapes {
+        display: none !important; /* Hide completely on mobile - causes performance issues */
     }
     
     .option-btn:hover:not(:disabled) {
@@ -1143,9 +1155,13 @@ body {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
     background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); z-index: 10000;
     display: flex; align-items: center; justify-content: center;
-    opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+    opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.custom-modal-overlay.active { opacity: 1; pointer-events: auto; }
+.custom-modal-overlay.active { 
+    opacity: 1; 
+    visibility: visible;
+    pointer-events: auto; 
+}
 
 .custom-modal-card {
     background: var(--quiz-bg-color); 
@@ -1161,6 +1177,8 @@ body {
     position: relative;
     z-index: 10001;
     pointer-events: auto;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 .custom-modal-overlay.active .custom-modal-card { transform: scale(1) translateY(0); }
 
@@ -1213,20 +1231,26 @@ body {
 #background-shapes {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     z-index: 0; pointer-events: none; overflow: hidden;
+    contain: layout style paint; /* CSS containment to isolate layout calculations */
+    will-change: contents; /* Optimize for animations */
 }
 
 .bg-shape {
     position: absolute; border-radius: 50%;
     backdrop-filter: blur(2px); mix-blend-mode: multiply; 
     animation: shapeFloat ease-in-out forwards;
+    will-change: transform, opacity; /* Optimize animation performance */
+    backface-visibility: hidden; /* Prevent flickering */
+    transform: translateZ(0); /* Force GPU acceleration */
 }
 
 [data-theme="dark"] .bg-shape { mix-blend-mode: screen; filter: brightness(1.2); }
 
 @keyframes shapeFloat {
-    0% { opacity: 0; transform: scale(0.5) translateY(50px) rotate(0deg); }
+    0% { opacity: 0; transform: translate3d(0, 50px, 0) scale(0.5) rotate(0deg); }
     30% { opacity: 0.6; } 70% { opacity: 0.6; }
-    100% { opacity: 0; transform: scale(1.2) translateY(-100px) rotate(45deg); }
+    100% { opacity: 0; transform: translate3d(0, -100px, 0) scale(1.2) rotate(45deg); }
+}
 }
 
 /* =========================================

@@ -1133,6 +1133,7 @@ class ResultsUIController {
         const margin = 20;
         const contentWidth = pageWidth - (margin * 2);
         let yPos = margin;
+        let pageNumber = 1;
 
         const results = this.results;
         const cognitive = results.cognitiveProfile || {};
@@ -1151,143 +1152,268 @@ class ResultsUIController {
 
         const userName = this.userName || results.userName || 'User';
         
-        const addHeader = () => {
-            doc.setFillColor(37, 99, 235);
-            doc.rect(0, 0, pageWidth, 40, 'F');
+        // Color scheme matching web design philosophy
+        const primaryColor = [37, 99, 235]; // Electric Blue (#2563eb) - Primary accent
+        const primaryLight = [59, 130, 246]; // Lighter blue (#3b82f6) - Active states
+        const secondaryColor = [124, 58, 237]; // Purple (#7c3aed) - Secondary accent
+        const successColor = [16, 185, 129]; // Green (#10b981) - Success indicators
+        const textColor = [17, 24, 39]; // Dark gray (#111827) - Main text
+        const textSecondary = [75, 85, 99]; // Secondary text (#4b5563)
+        const textTertiary = [107, 114, 128]; // Tertiary text (#6b7280)
+        const surfaceBase = [250, 251, 252]; // Very light gray (#fafbfc) - Page background
+        const surfaceElevated = [255, 255, 255]; // White (#ffffff) - Cards
+        const surfaceSubtle = [243, 244, 246]; // Light gray (#f3f4f6) - Subtle backgrounds
+        const borderGray = [229, 231, 235]; // Border (#e5e7eb)
+        
+        const addLogoAndHeader = () => {
+            // Header background - professional blue gradient effect
+            doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
+            doc.rect(0, 0, pageWidth, 55, 'F');
             
-            doc.setTextColor(255, 255, 255);
-            doc.setFontSize(24);
-            doc.setFont('helvetica', 'bold');
-            doc.text('NeuroQuiz™', margin, 20);
+            // Add logo image in header (logo.png for PDF compatibility)
+            // Logo dimensions: 35x15mm (proportional and fits well in header)
+            try {
+                const logoImg = document.querySelector('.logo');
+                if (logoImg && logoImg.src) {
+                    // Use the loaded logo image from the page
+                    doc.addImage(logoImg.src, 'PNG', margin + 2, 10, 35, 15);
+                } else {
+                    // Try to load from path
+                    doc.addImage('assets/images/logo.png', 'PNG', margin + 2, 10, 35, 15);
+                }
+            } catch (imgError) {
+                // If image loading fails, use text logo as fallback
+                doc.setTextColor(255, 255, 255);
+                doc.setFontSize(30);
+                doc.setFont('helvetica', 'bold');
+                doc.text('NeuroQuiz™', margin + 15, 20);
+                
+                // Decorative line under logo
+                doc.setDrawColor(255, 255, 255);
+                doc.setLineWidth(0.8);
+                doc.line(margin + 15, 22, margin + 75, 22);
+            }
             
-            doc.setFontSize(12);
+            // Subtitle
+            doc.setFontSize(10);
             doc.setFont('helvetica', 'normal');
-            doc.text('Cognitive Assessment Report', margin, 30);
+            doc.setTextColor(255, 255, 255);
+            doc.text('COGNITIVE ASSESSMENT REPORT', margin + 15, 28);
             
-            doc.setTextColor(0, 0, 0);
-            yPos = 50;
+            // Institutional affiliation
+            doc.setFontSize(8);
+            doc.setTextColor(240, 240, 240);
+            doc.text('Universiti Teknologi Mara Cawangan Melaka Kampus Jasin', margin + 15, 33);
             
-            doc.setFontSize(14);
-            doc.setFont('helvetica', 'bold');
-            doc.setTextColor(37, 99, 235);
-            doc.text(`Assessment for: ${userName}`, margin, yPos);
-            yPos += 8;
+            // Report metadata in header (right side)
+            doc.setFontSize(8);
+            doc.setTextColor(255, 255, 255);
+            doc.text(`Generated: ${formatDate(Date.now())}`, pageWidth - margin - 5, 18, { align: 'right' });
+            doc.text(`Report ID: ${Date.now().toString().slice(-8)}`, pageWidth - margin - 5, 23, { align: 'right' });
+            doc.text(`Participant: ${userName}`, pageWidth - margin - 5, 28, { align: 'right' });
+            
+            // Bottom border of header with accent
+            doc.setDrawColor(255, 255, 255);
+            doc.setLineWidth(1);
+            doc.line(0, 55, pageWidth, 55);
+            
+            // Small accent line below border (using primary light blue)
+            doc.setFillColor(primaryLight[0], primaryLight[1], primaryLight[2]);
+            doc.rect(0, 55, pageWidth, 2, 'F');
+            
+            yPos = 70;
+        };
+        
+        const addPageFooter = () => {
+            const footerY = pageHeight - 15;
+            
+            // Footer border
+            doc.setDrawColor(borderGray[0], borderGray[1], borderGray[2]);
+            doc.setLineWidth(0.3);
+            doc.line(margin, footerY - 5, pageWidth - margin, footerY - 5);
+            
+            // Footer text (using web tertiary text color)
+            doc.setFontSize(8);
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(textTertiary[0], textTertiary[1], textTertiary[2]);
+            doc.text('NeuroQuiz™ - Cognitive Assessment Platform | Universiti Teknologi Mara', margin, footerY, { align: 'left' });
+            doc.text(`Page ${pageNumber}`, pageWidth - margin, footerY, { align: 'right' });
+            
+            pageNumber++;
+        };
+        
+        const addNewPage = () => {
+            addPageFooter();
+            doc.addPage();
+            addLogoAndHeader();
         };
 
-        const addSectionTitle = (title, fontSize = 14) => {
+        const addSectionTitle = (title, fontSize = 16) => {
             if (yPos > pageHeight - 40) {
-                doc.addPage();
-                yPos = margin;
+                addNewPage();
             }
-            yPos += 10;
+            yPos += 12;
+            
+            // Section title with professional styling
             doc.setFontSize(fontSize);
             doc.setFont('helvetica', 'bold');
-            doc.setTextColor(37, 99, 235);
+            doc.setTextColor(primaryColor[0], primaryColor[1], primaryColor[2]);
             doc.text(title, margin, yPos);
+            
+            // Underline with accent color
+            yPos += 6;
+            doc.setDrawColor(primaryColor[0], primaryColor[1], primaryColor[2]);
+            doc.setLineWidth(1);
+            doc.line(margin, yPos - 3, margin + 50, yPos - 3);
+            
             yPos += 8;
-            doc.setDrawColor(37, 99, 235);
-            doc.setLineWidth(0.5);
-            doc.line(margin, yPos - 2, pageWidth - margin, yPos - 2);
-            yPos += 5;
         };
 
-        const addText = (text, fontSize = 10, isBold = false, color = [0, 0, 0]) => {
-            if (yPos > pageHeight - 30) {
-                doc.addPage();
-                yPos = margin;
+        const addText = (text, fontSize = 10, isBold = false, color = textColor) => {
+            if (yPos > pageHeight - 35) {
+                addNewPage();
             }
             doc.setFontSize(fontSize);
             doc.setFont('helvetica', isBold ? 'bold' : 'normal');
             doc.setTextColor(color[0], color[1], color[2]);
             const lines = doc.splitTextToSize(text, contentWidth);
             doc.text(lines, margin, yPos);
-            yPos += lines.length * (fontSize * 0.4) + 3;
+            yPos += lines.length * (fontSize * 0.45) + 4;
         };
 
         const addKeyValue = (key, value, indent = 0) => {
             if (yPos > pageHeight - 30) {
-                doc.addPage();
-                yPos = margin;
+                addNewPage();
             }
+            
+            // Professional key-value styling
             doc.setFontSize(10);
             doc.setFont('helvetica', 'bold');
-            doc.setTextColor(0, 0, 0);
+            doc.setTextColor(textColor[0], textColor[1], textColor[2]);
             doc.text(key + ':', margin + indent, yPos);
             
-            const valueX = margin + indent + 50;
+            const valueX = margin + indent + 55;
             doc.setFont('helvetica', 'normal');
-            const valueLines = doc.splitTextToSize(String(value), contentWidth - 50 - indent);
+            doc.setTextColor(textSecondary[0], textSecondary[1], textSecondary[2]);
+            const valueLines = doc.splitTextToSize(String(value), contentWidth - 55 - indent);
             doc.text(valueLines, valueX, yPos);
-            yPos += Math.max(valueLines.length * 4, 6);
+            yPos += Math.max(valueLines.length * 4.5, 7);
         };
 
         const addMetric = (label, value, maxValue = 100) => {
             if (yPos > pageHeight - 30) {
-                doc.addPage();
-                yPos = margin;
+                addNewPage();
             }
-            const percentage = typeof value === 'number' ? (value * maxValue) : parseFloat(value);
-            doc.setFontSize(9);
+            
+            const percentage = typeof value === 'number' && value <= 1 ? (value * maxValue) : (typeof value === 'number' ? value : parseFloat(value));
+            
+            // Label
+            doc.setFontSize(10);
             doc.setFont('helvetica', 'normal');
-            doc.setTextColor(0, 0, 0);
+            doc.setTextColor(textColor[0], textColor[1], textColor[2]);
             doc.text(`${label}:`, margin, yPos);
             
+            // Percentage value
             doc.setFont('helvetica', 'bold');
-            doc.text(`${percentage.toFixed(1)}%`, pageWidth - margin - 20, yPos);
+            doc.setTextColor(primaryColor[0], primaryColor[1], primaryColor[2]);
+            doc.text(`${Math.min(percentage, maxValue).toFixed(1)}%`, pageWidth - margin - 25, yPos, { align: 'right' });
             
-            const barWidth = contentWidth - 30;
-            const barHeight = 4;
-            const fillWidth = (percentage / maxValue) * barWidth;
+            // Progress bar with professional styling
+            const barWidth = contentWidth - 35;
+            const barHeight = 5;
+            const fillWidth = Math.min((percentage / maxValue) * barWidth, barWidth);
             
-            doc.setDrawColor(200, 200, 200);
-            doc.setFillColor(200, 200, 200);
-            doc.rect(margin, yPos + 2, barWidth, barHeight, 'FD');
+            // Background bar
+            doc.setDrawColor(borderGray[0], borderGray[1], borderGray[2]);
+            doc.setFillColor(surfaceSubtle[0], surfaceSubtle[1], surfaceSubtle[2]);
+            doc.rect(margin, yPos + 3, barWidth, barHeight, 'FD');
             
+            // Fill bar with color coding (matching web philosophy)
             if (percentage >= 70) {
-                doc.setFillColor(16, 185, 129);
+                doc.setFillColor(successColor[0], successColor[1], successColor[2]); // Green for success
             } else if (percentage >= 40) {
-                doc.setFillColor(245, 158, 11);
+                doc.setFillColor(245, 158, 11); // Amber for medium
             } else {
-                doc.setFillColor(239, 68, 68);
+                doc.setFillColor(239, 68, 68); // Red for low
             }
-            doc.rect(margin, yPos + 2, fillWidth, barHeight, 'F');
+            if (fillWidth > 0) {
+                doc.rect(margin, yPos + 3, fillWidth, barHeight, 'F');
+            }
             
-            yPos += 10;
+            yPos += 12;
         };
 
-        addHeader();
+        const addInfoBox = (items) => {
+            if (yPos > pageHeight - 60) {
+                addNewPage();
+            }
+            
+            // Background box (using web surface subtle color)
+            doc.setFillColor(surfaceSubtle[0], surfaceSubtle[1], surfaceSubtle[2]);
+            doc.rect(margin, yPos, contentWidth, items.length * 8 + 8, 'F');
+            
+            // Border (using web border color)
+            doc.setDrawColor(borderGray[0], borderGray[1], borderGray[2]);
+            doc.setLineWidth(0.5);
+            doc.rect(margin, yPos, contentWidth, items.length * 8 + 8, 'D');
+            
+            yPos += 6;
+            items.forEach(([key, value]) => {
+                doc.setFontSize(9);
+                doc.setFont('helvetica', 'bold');
+                doc.setTextColor(textColor[0], textColor[1], textColor[2]);
+                doc.text(key + ':', margin + 5, yPos);
+                
+                doc.setFont('helvetica', 'normal');
+                doc.setTextColor(textSecondary[0], textSecondary[1], textSecondary[2]);
+                doc.text(String(value), margin + 50, yPos);
+                yPos += 7;
+            });
+            yPos += 8;
+        };
 
-        addSectionTitle('EXECUTIVE SUMMARY', 16);
-        addText(`Assessment Date: ${formatDate(Date.now())}`, 10, false, [100, 100, 100]);
+        // Start with professional header
+        addLogoAndHeader();
+
+        // Executive Summary with info box
+        addSectionTitle('EXECUTIVE SUMMARY', 18);
+        
+        addInfoBox([
+            ['Participant Name', userName],
+            ['Assessment Date', formatDate(Date.now())],
+            ['Session Duration', this.formatTime(results.timeTaken || 0)],
+            ['Total Questions', `${results.totalQuestions || 0} questions`],
+            ['Overall Performance', `${results.percentage || 0}% accuracy`]
+        ]);
+        
         yPos += 3;
-        addText(`Participant: ${userName}`, 10, false, [100, 100, 100]);
-        yPos += 3;
-        addText(`Participant: ${userName}`, 10, false, [100, 100, 100]);
-        yPos += 3;
-        addText(`Session Duration: ${this.formatTime(results.timeTaken || 0)}`, 10, false, [100, 100, 100]);
-        yPos += 3;
-        addText(`Total Questions: ${results.totalQuestions || 0}`, 10, false, [100, 100, 100]);
-        yPos += 5;
 
         if (cognitive.professionalSummary) {
             const personalizedSummary = cognitive.professionalSummary
                 .replace(/\byour\b/gi, `${userName}'s`)
                 .replace(/\byou\b/g, userName);
-            addText(personalizedSummary, 11, false, [50, 50, 50]);
+            addText(personalizedSummary, 11, false, textColor);
             yPos += 5;
         }
 
-        addSectionTitle('PERFORMANCE METRICS', 14);
-        addKeyValue('Accuracy', `${results.percentage || 0}%`);
-        addKeyValue('Correct Answers', `${results.correctAnswers || 0} out of ${results.totalQuestions || 0}`);
-        addKeyValue('Average Response Time', `${Math.round((results.averageTimeMs || 0) / 1000)}s per question`);
-        addKeyValue('Questions per Minute', `${results.questionsPerMinute || 0}`);
-        addKeyValue('Best Streak', `${results.bestStreak || 0} consecutive correct answers`);
-        addKeyValue('Total Score', `${results.totalScore || 0} points`);
+        // Performance Metrics Section
+        addSectionTitle('PERFORMANCE METRICS', 16);
+        
+        addInfoBox([
+            ['Accuracy Rate', `${results.percentage || 0}%`],
+            ['Correct Answers', `${results.correctAnswers || 0} / ${results.totalQuestions || 0}`],
+            ['Average Response Time', `${Math.round((results.averageTimeMs || 0) / 1000)}s per question`],
+            ['Questions per Minute', `${(results.questionsPerMinute || 0).toFixed(1)}`],
+            ['Best Streak', `${results.bestStreak || 0} consecutive correct`],
+            ['Total Score', `${results.totalScore || 0} points`]
+        ]);
+        
+        yPos += 5;
 
-        addSectionTitle('COGNITIVE DIAGNOSTIC ASSESSMENT (CDA)', 14);
-        addText('Based on Rule Space Method (Tatsuoka, 2009)', 9, false, [100, 100, 100]);
-        yPos += 3;
+        // Cognitive Diagnostic Assessment Section
+        addSectionTitle('COGNITIVE DIAGNOSTIC ASSESSMENT (CDA)', 16);
+        addText('Based on Rule Space Method - Tatsuoka (2009)', 9, false, textTertiary);
+        yPos += 2;
         
         addMetric('Adaptability', cda.adaptability || 0);
         addMetric('Consistency', cda.consistency || 0);
@@ -1303,21 +1429,28 @@ class ResultsUIController {
             });
         }
 
-        addSectionTitle('EXECUTIVE FUNCTION INDICATORS', 14);
+        // Executive Function Indicators Section
+        addSectionTitle('EXECUTIVE FUNCTION INDICATORS', 16);
         addMetric('Processing Speed', executive.processingSpeed || 0);
         addMetric('Impulsivity Control', executive.impulsivityControl || 0);
         addMetric('Analytical Thinking', executive.analyticalThinking || 0);
         addMetric('Cognitive Endurance', executive.endurance || 0);
         addMetric('Self Regulation', executive.selfRegulation || 0);
 
-        addSectionTitle('RB-ADA ALGORITHM METRICS', 14);
-        addKeyValue('Initial Level', this.getLevelName(results.initialLevel || 1));
-        addKeyValue('Final Level', this.getLevelName(results.finalLevel || results.currentLevel || 1));
-        addKeyValue('Initial Difficulty', results.initialDifficulty || 1);
-        addKeyValue('Final Difficulty', results.finalDifficulty || results.currentDifficulty || 1);
-        addKeyValue('Level Drops', results.dropCount || 0);
-        addKeyValue('Level Promotions', results.promotionCount || 0);
-        addKeyValue('Net Level Change', (results.netLevelChange || 0) > 0 ? `+${results.netLevelChange}` : results.netLevelChange || 0);
+        // RB-ADA Algorithm Metrics Section
+        addSectionTitle('RB-ADA ALGORITHM METRICS', 16);
+        
+        addInfoBox([
+            ['Initial Level', this.getLevelName(results.initialLevel || 1)],
+            ['Final Level', this.getLevelName(results.finalLevel || results.currentLevel || 1)],
+            ['Initial Difficulty', results.initialDifficulty || 1],
+            ['Final Difficulty', results.finalDifficulty || results.currentDifficulty || 1],
+            ['Level Drops', results.dropCount || 0],
+            ['Level Promotions', results.promotionCount || 0],
+            ['Net Level Change', (results.netLevelChange || 0) > 0 ? `+${results.netLevelChange}` : results.netLevelChange || 0]
+        ]);
+        
+        yPos += 5;
 
         if (results.categoryPerformance && Object.keys(results.categoryPerformance).length > 0) {
             addSectionTitle('CATEGORY PERFORMANCE', 14);
@@ -1327,20 +1460,21 @@ class ResultsUIController {
             });
         }
 
-        addSectionTitle('REFERENCE', 14);
-        addText('Cognitive Assessment: An Introduction to the Rule Space Method', 10, true);
-        addText('Kikumi K. Tatsuoka (2009). Routledge.', 10, false, [100, 100, 100]);
-        yPos += 5;
-        addText('This assessment utilizes Cognitive Diagnostic Assessment principles, particularly the Rule Space Method, to provide detailed insights into knowledge mastery and learning patterns beyond aggregate scores.', 9, false, [80, 80, 80]);
+        // Reference Section
+        addSectionTitle('METHODOLOGY & REFERENCE', 16);
+        addText('Cognitive Assessment: An Introduction to the Rule Space Method', 11, true, textColor);
+        addText('Kikumi K. Tatsuoka (2009). Routledge.', 10, false, textSecondary);
+        yPos += 3;
+        addText('This assessment utilizes Cognitive Diagnostic Assessment (CDA) principles, particularly the Rule Space Method, to provide detailed insights into knowledge mastery and learning patterns beyond aggregate scores. The RB-ADA (Rule-Based Adaptive Dynamic Algorithm) adapts question difficulty in real-time based on cognitive load theory.', 9, false, textTertiary);
 
-        yPos += 10;
-        doc.setFontSize(8);
-        doc.setFont('helvetica', 'italic');
-        doc.setTextColor(150, 150, 150);
-        doc.text('Generated by NeuroQuiz™ - Cognitive Assessment Platform', margin, yPos);
-        doc.text(`Report ID: ${Date.now()}`, pageWidth - margin - 30, yPos);
+        // Final footer on last page
+        addPageFooter();
 
-        const fileName = `NeuroQuiz-Report-${new Date().toISOString().split('T')[0]}-${Date.now()}.pdf`;
+        // Generate filename with timestamp
+        const timestamp = new Date().toISOString().split('T')[0];
+        const reportId = Date.now().toString().slice(-8);
+        const fileName = `NeuroQuiz-Report-${userName.replace(/\s+/g, '-')}-${timestamp}-${reportId}.pdf`;
+        
         doc.save(fileName);
     }
     

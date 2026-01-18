@@ -305,6 +305,53 @@ observer.observe(document.documentElement, { attributes: true });
         }, duration * 1000);
     }
 
-    // Generate a new shape every 800ms
-    setInterval(createFloatingShape, 800);
+    // Initialize with a limited number of shapes (no continuous generation)
+    // Continuous generation causes performance issues and layout shifts
+    const initialShapeCount = window.innerWidth < 768 ? 0 : 8; // No shapes on mobile
+    
+    for (let i = 0; i < initialShapeCount; i++) {
+        createFloatingShape();
+    }
+    
+    // Only regenerate shapes occasionally (every 10 seconds) instead of continuously
+    // This prevents constant DOM manipulation and blinking
+    let shapeRegenerationInterval = null;
+    
+    function startShapeRegeneration() {
+        if (window.innerWidth < 768) return; // Skip on mobile
+        
+        shapeRegenerationInterval = setInterval(() => {
+            // Only add one new shape every 10 seconds if we have less than 12 shapes
+            if (shapesContainer.children.length < 12) {
+                createFloatingShape();
+            }
+        }, 10000);
+    }
+    
+    // Stop regeneration on mobile or when page is not visible
+    function stopShapeRegeneration() {
+        if (shapeRegenerationInterval) {
+            clearInterval(shapeRegenerationInterval);
+            shapeRegenerationInterval = null;
+        }
+    }
+    
+    // Only start regeneration on desktop and when page is visible
+    if (window.innerWidth >= 768) {
+        if (document.visibilityState === 'visible') {
+            startShapeRegeneration();
+        }
+    }
+    
+    // Pause regeneration when page is hidden
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+            stopShapeRegeneration();
+        } else if (window.innerWidth >= 768) {
+            startShapeRegeneration();
+        }
+    });
+    
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', stopShapeRegeneration);
 })();

@@ -1,262 +1,265 @@
-# NeuroQuiz References
+# NeuroQuiz™ - Academic References (APA 7th Edition)
 
-**Citation Style**: APA 7th Edition
-
-This document provides comprehensive academic references for the NeuroQuiz platform, including algorithm references, cognitive analyzer sources, and question bank sources.
+This document provides complete academic references for all algorithms, theories, and methodologies used in NeuroQuiz™. All references follow APA 7th Edition formatting guidelines.
 
 ---
 
-## RB-ADA Algorithm References
+## Primary Algorithm References
 
-### Primary Algorithm Source
+### Rule-Based Adaptive Dynamic Algorithm (RB-ADA)
 
-**Rule-Based Adaptive Dynamic Algorithm (RB-ADA)**
+**Algorithm Author:** Saiful Iqbal  
+**Team:** Team ChendAwan  
+**Year:** 2026  
+**Release Date:** January 19, 2026  
+**Description:** Custom adaptive learning algorithm developed for NeuroQuiz™ platform.
 
-Iqbal, S. (2024). *Rule-Based Adaptive Dynamic Algorithm (RB-ADA) for adaptive quiz systems* [Unpublished algorithm]. Team ChendAwan.
-
-**Algorithm Description**: The RB-ADA algorithm is a rule-based adaptive learning system specifically developed for the NeuroQuiz platform. It dynamically adjusts question difficulty and education level in real-time based on user performance through four core adaptive rules: First Question Penalty, Performance Ratio Check, Level Drop, and Level Recovery Promotion.
-
-**Key Features**:
-- Real-time difficulty adjustment based on performance patterns
-- Education level adaptation (Elementary, Secondary, University)
-- Recovery mechanism for users who struggle initially but improve
-- Difficulty-weighted scoring system
-
-**Algorithm Author**: Saiful Iqbal, Lead Developer, Team ChendAwan  
-**Platform**: NeuroQuiz™ Adaptive Learning Platform
-
-### Related Adaptive Learning Research
-
-1. Brusilovsky, P. (2001). Adaptive hypermedia. *User Modeling and User-Adapted Interaction*, *11*(1-2), 87-110. https://doi.org/10.1023/A:1011143116306
-
-2. Park, O., & Lee, J. (2003). Adaptive instructional systems. *Handbook of Research on Educational Communications and Technology*, 2, 651-684.
-
-3. VanLehn, K. (2006). The behavior of tutoring systems. *International Journal of Artificial Intelligence in Education*, *16*(3), 227-265.
-
-4. Koedinger, K. R., Corbett, A. T., & Perfetti, C. (2012). The knowledge-learning-instruction framework: Bridging the science-practice chasm to enhance robust student learning. *Cognitive Science*, *36*(5), 757-798. https://doi.org/10.1111/j.1551-6709.2012.01245.x
-
-5. Shute, V. J., & Zapata-Rivera, D. (2012). Adaptive educational systems. In *Adaptive Technologies for Training and Education* (pp. 7-27). Cambridge University Press.
+**Note:** RB-ADA is an original algorithm developed specifically for this project, inspired by adaptive testing principles and cognitive load theory.
 
 ---
 
-## Cognitive Analyzer References
+### Cognitive Diagnostic Assessment (CDA) - Rule Space Method
 
-### Primary Reference
-
-**Rule Space Method (RSM) - Cognitive Diagnostic Assessment**
+**Primary Reference:**
 
 Tatsuoka, K. K. (2009). *Cognitive assessment: An introduction to the Rule Space Method*. Routledge.
 
-**Citation in APA 7th Edition**:
-Tatsuoka, K. K. (2009). *Cognitive assessment: An introduction to the Rule Space Method*. Routledge.
+**DOI:** Not available  
+**ISBN:** 978-0-8058-6339-4  
+**Publisher:** Taylor & Francis / Routledge
 
-**Summary**: This foundational work introduces the Rule Space Method (RSM), a cognitive diagnostic technique that transforms item response patterns into measurable attribute mastery probabilities. RSM helps interpret test results beyond aggregate scores by identifying underlying knowledge strengths and weaknesses, enabling customized assessment feedback. It has been applied in large-scale assessments such as the PSAT and other educational diagnostics.
+**Summary:**  
+This foundational work introduces the Rule Space Method (RSM), a cognitive diagnostic technique that transforms item response patterns into measurable attribute mastery probabilities. RSM helps interpret test results beyond aggregate scores by identifying underlying knowledge strengths and weaknesses, enabling customized assessment feedback. The method has been applied in large-scale assessments such as the PSAT and other educational diagnostics.
 
-**Application in NeuroQuiz**: The Cognitive Analyzer component is inspired by RSM principles, analyzing learning patterns through multiple cognitive dimensions including knowledge mastery, adaptability, consistency, recovery patterns, processing speed, analytical thinking, and self-regulation.
+**Key Concepts Used:**
+- Attribute mastery probability
+- Knowledge state classification
+- Diagnostic feedback generation
+- Pattern recognition in response data
 
-### Related Cognitive Assessment Research
+---
 
-1. DiBello, L. V., Roussos, L. A., & Stout, W. (2007). 31A review of cognitively diagnostic assessment and a summary of psychometric models. *Handbook of Statistics*, *26*, 979-1030.
+## Theoretical Foundations
 
-2. Leighton, J. P., & Gierl, M. J. (2007). *Cognitive diagnostic assessment for education: Theory and applications*. Cambridge University Press.
+### Cognitive Load Theory
 
-3. Rupp, A. A., Templin, J., & Henson, R. A. (2010). *Diagnostic measurement: Theory, methods, and applications*. Guilford Press.
+**Reference (Classic):**
 
-4. De La Torre, J. (2011). The generalized DINA model framework. *Psychometrika*, *76*(2), 179-199. https://doi.org/10.1007/s11336-011-9207-7
+Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. *Cognitive Science*, *12*(2), 257-285. https://doi.org/10.1207/s15516709cog1202_4
 
-5. Junker, B. W., & Sijtsma, K. (2001). Cognitive assessment models with few assumptions, and connections with nonparametric item response theory. *Applied Psychological Measurement*, *25*(3), 258-272. https://doi.org/10.1177/01466210122032064
+**Reference (Modern Review):**
+
+Sweller, J., van Merriënboer, J. J. G., & Paas, F. (2019). Cognitive architecture and instructional design: 20 years later. *Educational Psychology Review*, *31*(2), 261-292. https://doi.org/10.1007/s10648-019-09465-5
+
+**Key Concepts Applied:**
+- Intrinsic cognitive load management
+- Extraneous cognitive load reduction
+- Germane cognitive load optimization
+- Adaptive difficulty adjustment
+
+---
+
+### Spaced Repetition
+
+**Reference (Foundational):**
+
+Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., & Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. *Psychological Bulletin*, *132*(3), 354-380. https://doi.org/10.1037/0033-2909.132.3.354
+
+**Key Concepts Applied:**
+- Optimal spacing intervals
+- Retention curve management
+- Long-term memory reinforcement
+
+---
 
 ### Executive Function Theory
 
-1. Diamond, A. (2013). Executive functions. *Annual Review of Psychology*, *64*, 135-168. https://doi.org/10.1146/annurev-psych-113011-143750
+**Reference (Educational Application):**
 
-2. Miyake, A., Friedman, N. P., Emerson, M. J., Witzki, A. H., Howerter, A., & Wager, T. D. (2000). The unity and diversity of executive functions and their contributions to complex "frontal lobe" tasks: A latent variable analysis. *Cognitive Psychology*, *41*(1), 49-100. https://doi.org/10.1006/cogp.1999.0734
+Diamond, A. (2013). Executive functions. *Annual Review of Psychology*, *64*, 135-168. https://doi.org/10.1146/annurev-psych-113011-143750
 
-3. Best, J. R., & Miller, P. H. (2010). A developmental perspective on executive function. *Child Development*, *81*(6), 1641-1660. https://doi.org/10.1111/j.1467-8624.2010.01499.x
+**Reference (Assessment):**
 
----
+Best, J. R., Miller, P. H., & Naglieri, J. A. (2011). Relations between executive function and academic achievement from ages 5 to 17 in a large, representative national sample. *Learning and Individual Differences*, *21*(4), 327-336. https://doi.org/10.1016/j.lindif.2011.01.007
 
-## Question Bank References
-
-### Logic Questions (IDs: 2001-2300)
-
-#### Books
-
-Copi, I. M., Cohen, C., & McMahon, K. (2019). *Introduction to Logic* (15th ed.). Pearson.
-
-Hurley, P. J. (2018). *A Concise Introduction to Logic* (13th ed.). Cengage Learning.
-
-Smith, N. J. (2020). *Logic: The Laws of Truth*. Princeton University Press.
-
-#### Academic Journals
-
-Johnson-Laird, P. N. (2010). Mental models and human reasoning. *Proceedings of the National Academy of Sciences*, *107*(43), 18243-18250. https://doi.org/10.1073/pnas.1012933107
-
-Rips, L. J. (1994). *The Psychology of Proof: Deductive Reasoning in Human Thinking*. MIT Press.
-
-#### Online Resources
-
-Stanford Encyclopedia of Philosophy. (2021). *Logic and Information*. Retrieved from https://plato.stanford.edu/entries/logic-information/
-
-Internet Encyclopedia of Philosophy. (n.d.). *Formal Logic*. Retrieved from https://iep.utm.edu/formal-logic/
+**Key Concepts Applied:**
+- Processing speed measurement
+- Impulse control assessment
+- Analytical thinking evaluation
+- Cognitive endurance tracking
+- Self-regulation analysis
 
 ---
 
-### Mathematics Questions (IDs: 1-300)
+### Gamification in Education
 
-#### Textbooks
+**Reference (Meta-Analysis):**
 
-Stewart, J., Redlin, L., & Watson, S. (2020). *Precalculus: Mathematics for Calculus* (8th ed.). Cengage Learning.
+Deterding, S., Dixon, D., Khaled, R., & Nacke, L. (2011). From game design elements to gamefulness: Defining "gamification". *Proceedings of the 15th International Academic MindTrek Conference: Envisioning Future Media Environments* (pp. 9-15). https://doi.org/10.1145/2181037.2181040
 
-Larson, R., & Edwards, B. H. (2021). *Calculus* (12th ed.). Cengage Learning.
+**Reference (Educational Impact):**
 
-Blitzer, R. (2020). *College Algebra* (8th ed.). Pearson.
+Sailer, M., Hense, J. U., Mayr, S. K., & Mandl, H. (2017). How gamification motivates: An experimental study of the effects of specific game design elements on psychological need satisfaction. *Computers in Human Behavior*, *69*, 371-380. https://doi.org/10.1016/j.chb.2016.12.033
 
-#### Educational Resources
-
-National Council of Teachers of Mathematics. (2020). *Principles and Standards for School Mathematics*. NCTM.
-
-Common Core State Standards Initiative. (2010). *Mathematics Standards*. Retrieved from http://www.corestandards.org/Math/
-
-#### Online Platforms
-
-Khan Academy. (n.d.). *Mathematics Courses*. Retrieved from https://www.khanacademy.org/math
-
-Wolfram MathWorld. (n.d.). *Mathematical Concepts*. Retrieved from https://mathworld.wolfram.com/
+**Key Concepts Applied:**
+- Points and reward systems
+- Level progression mechanics
+- Achievement badges
+- Progress visualization
 
 ---
 
-### STEM Questions (IDs: 3001-3300)
+## Assessment and Testing Methods
 
-#### Science Textbooks
+### Adaptive Testing
 
-Campbell, N. A., Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). *Biology* (12th ed.). Pearson.
+**Reference (Principles):**
 
-Young, H. D., Freedman, R. A., Ford, A. L., & Sears, F. W. (2019). *University Physics with Modern Physics* (15th ed.). Pearson.
+Weiss, D. J., & Kingsbury, G. G. (1984). Application of computerized adaptive testing to educational problems. *Journal of Educational Measurement*, *21*(4), 361-375. https://doi.org/10.1111/j.1745-3984.1984.tb01040.x
 
-Brown, T. L., LeMay, H. E., Bursten, B. E., Murphy, C. J., Woodward, P. M., & Stoltzfus, M. W. (2017). *Chemistry: The Central Science* (14th ed.). Pearson.
+**Reference (Modern Implementation):**
 
-#### Engineering Resources
+Wainer, H., & Dorans, N. J. (Eds.). (2000). *Computerized adaptive testing: A primer* (2nd ed.). Lawrence Erlbaum Associates.
 
-Hibbeler, R. C. (2020). *Engineering Mechanics: Statics & Dynamics* (15th ed.). Pearson.
-
-National Academy of Engineering. (2020). *Engineering Education Standards*. NAE.
-
-#### Scientific Journals
-
-*Nature*. (n.d.). Scientific Research Articles. Retrieved from https://www.nature.com/
-
-*Science*. (n.d.). AAAS Publications. Retrieved from https://www.science.org/
-
-#### Online Resources
-
-NASA. (n.d.). *STEM Education Resources*. Retrieved from https://www.nasa.gov/stem
-
-National Science Foundation. (n.d.). *Science and Engineering Resources*. Retrieved from https://www.nsf.gov/
+**Key Concepts Applied:**
+- Item selection algorithms
+- Ability estimation
+- Adaptive difficulty adjustment
 
 ---
 
-### Literature Questions (IDs: 4001-4300)
+### Knowledge Mastery Assessment
 
-#### Literary Texts
+**Reference:**
 
-Shakespeare, W. (1623). *The Complete Works of William Shakespeare* (Various editions).
+DiBello, L. V., Roussos, L. A., & Stout, W. (2007). Review of cognitively diagnostic assessment and a summary of psychometric models. In C. R. Rao & S. Sinharay (Eds.), *Handbook of statistics: Vol. 26. Psychometrics* (pp. 979-1030). Elsevier. https://doi.org/10.1016/S0169-7161(06)26031-0
 
-Austen, J. (1813). *Pride and Prejudice* (Various editions).
-
-Orwell, G. (1949). *1984*. Secker & Warburg.
-
-#### Literary Criticism
-
-Abrams, M. H., & Harpham, G. G. (2018). *A Glossary of Literary Terms* (11th ed.). Cengage Learning.
-
-Eagleton, T. (2011). *Literary Theory: An Introduction* (3rd ed.). Wiley-Blackwell.
-
-#### Educational Resources
-
-Modern Language Association. (2021). *MLA Handbook* (9th ed.). MLA.
-
-Norton Anthology of English Literature. (2018). *The Norton Anthology* (10th ed.). W. W. Norton & Company.
-
-#### Online Resources
-
-Project Gutenberg. (n.d.). *Free eBooks*. Retrieved from https://www.gutenberg.org/
-
-Poetry Foundation. (n.d.). *Poetry and Literary Resources*. Retrieved from https://www.poetryfoundation.org/
+**Key Concepts Applied:**
+- Mastery probability estimation
+- Knowledge state classification
+- Category-wise performance analysis
 
 ---
 
-### General Knowledge Questions (IDs: 5001-5300)
+## Educational Psychology
 
-#### History
+### Immediate Feedback
 
-Spielvogel, J. J. (2020). *Western Civilization* (11th ed.). Cengage Learning.
+**Reference (Meta-Analysis):**
 
-McNeill, W. H. (2010). *A World History* (5th ed.). Oxford University Press.
+Shute, V. J. (2008). Focus on formative feedback. *Review of Educational Research*, *78*(1), 153-189. https://doi.org/10.3102/0034654307313795
 
-#### Geography
-
-Knox, P. L., & Marston, S. A. (2020). *Human Geography: Places and Regions in Global Context* (7th ed.). Pearson.
-
-National Geographic Society. (2020). *World Atlas*. National Geographic.
-
-#### Current Events
-
-*The New York Times*. (n.d.). News and Current Events. Retrieved from https://www.nytimes.com/
-
-*BBC News*. (n.d.). World News. Retrieved from https://www.bbc.com/news
-
-#### Reference Works
-
-*Encyclopedia Britannica*. (2021). Online Encyclopedia. Retrieved from https://www.britannica.com/
-
-*World Book Encyclopedia*. (2021). Reference Materials. World Book, Inc.
+**Key Concepts Applied:**
+- Real-time feedback delivery
+- Error correction timing
+- Explanation provision
 
 ---
 
-### Open Educational Resources (OER)
+### Motivation and Engagement
 
-#### General OER Platforms
+**Reference:**
 
-OpenStax. (n.d.). *Free Textbooks*. Rice University. Retrieved from https://openstax.org/
+Deci, E. L., & Ryan, R. M. (2000). The "what" and "why" of goal pursuits: Human needs and the self-determination of behavior. *Psychological Inquiry*, *11*(4), 227-268. https://doi.org/10.1207/S15327965PLI1104_01
 
-OER Commons. (n.d.). *Open Educational Resources*. Retrieved from https://www.oercommons.org/
-
-MERLOT. (n.d.). *Multimedia Educational Resource for Learning and Online Teaching*. Retrieved from https://www.merlot.org/
-
-#### Question Banks
-
-OpenStax Quiz Bank. (n.d.). *Assessment Questions*. Retrieved from https://openstax.org/
-
-Saylor Academy. (n.d.). *Free Courses and Assessments*. Retrieved from https://www.saylor.org/
+**Key Concepts Applied:**
+- Intrinsic motivation support
+- Autonomy in learning
+- Competence building
+- Progress visualization
 
 ---
 
-## License and Usage Rights
+## Implementation Technologies
 
-All questions are used in accordance with:
-- Fair Use guidelines for educational purposes
-- Creative Commons licenses where applicable
-- Public domain materials
-- Original content created by NeuroQuiz Team
+### JavaScript Best Practices
 
-## Attribution Requirements
+**Reference:**
 
-When using NeuroQuiz questions:
-1. Cite the original source when known
-2. Attribute to NeuroQuiz Team for original content
-3. Follow license requirements of source materials
-4. Maintain academic integrity standards
+Mozilla Developer Network. (2023). *JavaScript Guide*. Mozilla Foundation. Retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
 
----
+### Chart.js Library
 
-## Document Information
+Chart.js Contributors. (2023). *Chart.js* [Computer software]. https://www.chartjs.org/
 
-**Version**: 2.0.0  
-**Last Updated**: January 2026  
-**Maintained by**: NeuroQuiz Development Team  
-**Citation Style**: APA 7th Edition
+**Version Used:** 4.4.0  
+**License:** MIT  
+**Purpose:** Data visualization for cognitive performance radar charts
 
 ---
 
-**Note**: This reference list should be updated as new sources are identified or questions are added. All citations should be verified for accuracy and completeness.
+## Question Sources
+
+### Mathematics Questions
+- Grade-level appropriate curriculum standards
+- Educational assessment frameworks
+- Standardized test preparation materials
+
+### Logic and Reasoning Questions
+- Critical thinking frameworks
+- Puzzle and problem-solving sources
+- Logical reasoning assessments
+
+### STEM Questions
+- Science curriculum standards
+- Technology education frameworks
+- Engineering problem-solving scenarios
+
+### Literature Questions
+- Reading comprehension frameworks
+- Literary analysis standards
+- Language arts curriculum
+
+### General Knowledge Questions
+- Standard reference materials
+- Educational encyclopedias
+- Cultural knowledge frameworks
+
+**Note:** All questions are created or adapted for educational purposes. Specific question content does not require individual citations as they represent general knowledge and standard educational content.
+
+---
+
+## Additional Resources
+
+### APA 7th Edition Formatting
+
+American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.). American Psychological Association.
+
+### Research Ethics
+
+All algorithms and assessment methods are implemented for educational purposes. User data is stored locally and not transmitted to external servers, maintaining privacy and ethical standards.
+
+---
+
+## Citation Format for This Project
+
+When referencing NeuroQuiz™ in academic work:
+
+**For the Platform:**
+Iqbal, S., & Team ChendAwan. (2026). NeuroQuiz™: Adaptive gamified quiz platform with cognitive diagnostic assessment [Computer software].
+
+**For RB-ADA Algorithm:**
+Iqbal, S. (2026). Rule-Based Adaptive Dynamic Algorithm (RB-ADA). In *NeuroQuiz™ Technical Documentation*.
+
+**For CDA Implementation:**
+Implementation based on Tatsuoka, K. K. (2009). *Cognitive assessment: An introduction to the Rule Space Method*. Routledge.
+
+---
+
+## Notes
+
+1. **Primary Algorithm (RB-ADA):** Original algorithm developed by Saiful Iqbal for Team ChendAwan, inspired by adaptive testing principles.
+
+2. **CDA Implementation:** Based on Tatsuoka's Rule Space Method but adapted for real-time assessment in a web-based environment.
+
+3. **Theoretical Foundations:** All theoretical concepts are applied in accordance with established research principles.
+
+4. **Questions:** Questions are educational content and do not require individual citations unless directly quoting from specific sources.
+
+5. **Privacy:** All assessment data is processed client-side. No user data is transmitted to external servers.
+
+---
+
+*Release Date: January 19, 2026*  
+*Last Updated: January 19, 2026*  
+*Maintained by: Team ChendAwan*

@@ -125,8 +125,10 @@ class ResultsUIController {
         // Cognitive Analytics is the primary focus - show it first
         this.displayCognitiveAnalytics();
         this.displayScore();
-        this.displayQuickStats();
-        this.displayChart();
+        // Wait for cognitive data to be ready before rendering chart
+        setTimeout(() => {
+            this.displayChart();
+        }, 100);
         this.displayTimeAnalysis();
         this.displayAchievements();
     }
@@ -243,57 +245,141 @@ class ResultsUIController {
         const chartWrapper = this.elements.chartWrapper;
         if (!chartWrapper) return;
         
-        const correct = this.results.correctAnswers || 0;
-        const incorrect = (this.results.totalQuestions || 0) - correct;
-        const total = correct + incorrect;
-        const correctPercent = total > 0 ? Math.round((correct / total) * 100) : 0;
-        const incorrectPercent = total > 0 ? Math.round((incorrect / total) * 100) : 0;
+        if (this.charts.cognitiveRadar) {
+            this.charts.cognitiveRadar.destroy();
+            this.charts.cognitiveRadar = null;
+        }
         
-        chartWrapper.innerHTML = `
-            <div class="performance-visual">
-                <div class="performance-bar-container">
-                    <div class="performance-bar-label">
-                        <span>Correct Answers</span>
-                        <span class="performance-value">${correct} (${correctPercent}%)</span>
-                    </div>
-                    <div class="performance-bar">
-                        <div class="performance-bar-fill performance-correct" style="width: ${correctPercent}%"></div>
-                    </div>
-                </div>
-                <div class="performance-bar-container">
-                    <div class="performance-bar-label">
-                        <span>Incorrect Answers</span>
-                        <span class="performance-value">${incorrect} (${incorrectPercent}%)</span>
-                    </div>
-                    <div class="performance-bar">
-                        <div class="performance-bar-fill performance-incorrect" style="width: ${incorrectPercent}%"></div>
-                    </div>
-                </div>
-                <div class="performance-summary">
-                    <div class="performance-summary-item">
-                        <div class="summary-icon">✅</div>
-                        <div class="summary-text">
-                            <div class="summary-label">Correct</div>
-                            <div class="summary-number">${correct}</div>
-                        </div>
-                    </div>
-                    <div class="performance-summary-item">
-                        <div class="summary-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
-                        <div class="summary-text">
-                            <div class="summary-label">Incorrect</div>
-                            <div class="summary-number">${incorrect}</div>
-                        </div>
-                    </div>
-                    <div class="performance-summary-item">
-                        <div class="summary-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
-                        <div class="summary-text">
-                            <div class="summary-label">Total</div>
-                            <div class="summary-number">${total}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
+        chartWrapper.innerHTML = '';
+        
+        let cognitive = this.results.cognitiveProfile;
+        if (!cognitive && typeof window !== 'undefined' && window.CognitiveAnalyzer) {
+            try {
+                cognitive = window.CognitiveAnalyzer.analyzeCognitiveProfile(this.results);
+                this.results.cognitiveProfile = cognitive;
+            } catch (e) {
+                console.error('Error computing cognitive profile for chart:', e);
+            }
+        }
+        
+        const cda = (cognitive || {}).cda || {};
+        const executive = (cognitive || {}).executiveFunction || {};
+        
+        const canvas = document.createElement('canvas');
+        canvas.id = 'cognitive-chart';
+        canvas.width = 600;
+        canvas.height = 600;
+        chartWrapper.appendChild(canvas);
+        
+        const labels = [
+            'Adaptability', 'Consistency', 'Recovery', 'Processing Speed',
+            'Impulsivity Control', 'Analytical Thinking', 'Endurance', 'Self Regulation'
+        ];
+        
+        const getValue = (val) => {
+            if (val === undefined || val === null) return 0;
+            if (val > 1) return Math.min(100, Math.round(val));
+            return Math.round(val * 100);
+        };
+        
+        const data = [
+            getValue(cda.adaptability),
+            getValue(cda.consistency),
+            getValue(cda.recovery),
+            getValue(executive.processingSpeed),
+            getValue(executive.impulsivityControl),
+            getValue(executive.analyticalThinking),
+            getValue(executive.endurance),
+            getValue(executive.selfRegulation)
+        ];
+        
+        console.log('Radar chart data:', { labels, data, cda, executive });
+        
+        if (typeof Chart !== 'undefined') {
+            const getComputedStyleValue = (property) => {
+                return getComputedStyle(document.documentElement).getPropertyValue(property).trim() || '#2563eb';
+            };
+            
+            const primaryColor = getComputedStyleValue('--color-primary');
+            const textColor = getComputedStyleValue('--color-text-primary');
+            const bgColor = getComputedStyleValue('--color-bg-secondary');
+            const borderColor = getComputedStyleValue('--color-border');
+            
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const gridColor = isDark ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.1)';
+            const tickColor = isDark ? 'rgba(255, 255, 255, 0.6)' : 'rgba(0, 0, 0, 0.6)';
+            const pointLabelColor = isDark ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)';
+            
+            const ctx = canvas.getContext('2d');
+            this.charts.cognitiveRadar = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Cognitive Performance',
+                        data: data,
+                        borderColor: primaryColor,
+                        backgroundColor: isDark 
+                            ? 'rgba(37, 99, 235, 0.3)' 
+                            : 'rgba(37, 99, 235, 0.2)',
+                        pointBackgroundColor: primaryColor,
+                        pointBorderColor: isDark ? '#1e293b' : '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 5,
+                        pointHoverBackgroundColor: isDark ? '#3b82f6' : '#fff',
+                        pointHoverBorderColor: primaryColor,
+                        pointHoverRadius: 7
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100,
+                            min: 0,
+                            ticks: {
+                                stepSize: 20,
+                                font: { size: 13 },
+                                color: tickColor,
+                                showLabelBackdrop: false,
+                                z: 1
+                            },
+                            grid: {
+                                color: gridColor,
+                                lineWidth: 1.5
+                            },
+                            pointLabels: {
+                                font: { size: 14, weight: '600' },
+                                color: pointLabelColor,
+                                padding: 12
+                            },
+                            angleLines: {
+                                color: gridColor,
+                                lineWidth: 1.5
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(0, 0, 0, 0.8)',
+                            titleColor: isDark ? '#fff' : '#fff',
+                            bodyColor: isDark ? '#fff' : '#fff',
+                            borderColor: primaryColor,
+                            borderWidth: 1,
+                            padding: 12,
+                            callbacks: {
+                                label: (context) => `${context.label}: ${context.parsed.r}%`
+                            }
+                        }
+                    }
+                }
+            });
+        }
     }
     
     displayAnalytics() {

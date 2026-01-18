@@ -941,19 +941,24 @@ html { scroll-behavior: smooth !important; }
 }
 
 .chart-wrapper {
-    margin-top: 1.5rem;
-    padding: 2rem;
+    margin: 2rem auto;
+    padding: 3rem;
     background: var(--color-bg-secondary, #f9fafb);
     border-radius: 12px;
     border: 1px solid var(--color-border, #e5e7eb);
     width: 100%;
-    max-width: 100%;
-    overflow-x: auto; /* Horizontal scroll if needed */
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
 }
 
 .chart-wrapper canvas {
     max-width: 100%;
-    height: auto;
+    max-height: 600px;
+    width: 600px !important;
+    height: 600px !important;
 }
 
 /* Responsive Chart Container */
@@ -963,8 +968,14 @@ html { scroll-behavior: smooth !important; }
     }
     
     .chart-wrapper {
-        padding: var(--spacing-md);
-        min-height: 250px;
+        padding: 2rem 1rem;
+        min-height: 500px;
+        max-width: 100%;
+    }
+    
+    .chart-wrapper canvas {
+        width: 500px !important;
+        height: 500px !important;
     }
 }
 
@@ -974,10 +985,14 @@ html { scroll-behavior: smooth !important; }
     }
     
     .chart-wrapper {
-        padding: var(--spacing-sm);
-        min-height: 200px;
-        transform: scale(0.95);
-        transform-origin: top left;
+        padding: 1.5rem 0.5rem;
+        min-height: 400px;
+        max-width: 100%;
+    }
+    
+    .chart-wrapper canvas {
+        width: 400px !important;
+        height: 400px !important;
     }
 }
 

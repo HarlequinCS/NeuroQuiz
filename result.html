@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="css/results.css?v=06aca9e">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body class="bg-primary">
@@ -200,22 +201,14 @@
 
             <hr class="results-hr" style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
 
-            <!-- Quick Stats Summary -->
-            <h2 class="section-label text-tertiary">Quick Summary</h2>
-            <section class="quick-stats-section" id="quick-stats-section">
-                <h2 class="section-title">Quick Summary</h2>
-                <div class="quick-stats-grid" id="quick-stats-grid"></div>
-            </section>
-
-            <hr class="results-hr" style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
-
-            <!-- Performance Chart -->
-            <h2 class="section-label text-tertiary">Performance Overview</h2>
+            <!-- Cognitive Performance Visualization -->
+            <h2 class="section-label text-tertiary">Cognitive Performance</h2>
             <section class="chart-section" id="chart-section">
                 <div class="chart-container results-tech-card" id="chart-container">
-                    <h2 class="chart-title" id="chart-title">Performance Overview</h2>
+                    <h2 class="chart-title" id="chart-title">Cognitive Performance Radar</h2>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem;">Visual overview of your cognitive assessment across key dimensions</p>
                     <div class="chart-wrapper" id="chart-wrapper">
-                        <!-- Performance visualization will be generated here -->
+                        <!-- Cognitive radar chart will be generated here -->
                     </div>
                 </div>
             </section>

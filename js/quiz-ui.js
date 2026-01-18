@@ -626,6 +626,7 @@ class QuizUIController {
         modalFooter.appendChild(confirmBtn);
 
         modalOverlay.classList.remove('hidden'); 
+        modalOverlay.setAttribute('aria-hidden', 'false');
         requestAnimationFrame(() => {
             modalOverlay.classList.add('active');
         });
@@ -634,6 +635,7 @@ class QuizUIController {
     closeModal() {
         if (!this.elements.modalOverlay) return;
         this.elements.modalOverlay.classList.remove('active');
+        this.elements.modalOverlay.setAttribute('aria-hidden', 'true');
     }
 
     showUpgradeOffer() {
@@ -742,6 +744,7 @@ class QuizUIController {
         modalFooter.appendChild(upgradeBtn);
         
         modalOverlay.classList.remove('hidden');
+        modalOverlay.setAttribute('aria-hidden', 'false');
         requestAnimationFrame(() => {
             modalOverlay.classList.add('active');
         });

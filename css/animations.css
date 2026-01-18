@@ -85,7 +85,8 @@
     overflow: hidden;
 }
 
-.option-btn::before {
+/* Shimmer effect - only show on hover, and don't block clicks */
+.option-btn::after {
     content: '';
     position: absolute;
     top: 0;
@@ -94,9 +95,11 @@
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s;
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: 0;
 }
 
-.option-btn:hover::before {
+.option-btn:hover::after {
     left: 100%;
 }
 

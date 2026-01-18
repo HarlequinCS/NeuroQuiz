@@ -2,6 +2,11 @@ const teamGrid = document.querySelector('.team-grid');
 const nextBtn = document.getElementById('nextTeam');
 const prevBtn = document.getElementById('prevTeam');
 
+// Only enable carousel on desktop (above 768px)
+function isMobileScreen() {
+    return window.innerWidth <= 768;
+}
+
 function getScrollStep() {
     if (!teamGrid) return 280;
     const card = document.querySelector('.team-member');
@@ -11,32 +16,48 @@ function getScrollStep() {
 }
 
 function scrollNext() {
-    if (!teamGrid) return;
+    if (!teamGrid || isMobileScreen()) return;
     teamGrid.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
 }
 
 function scrollPrev() {
-    if (!teamGrid) return;
+    if (!teamGrid || isMobileScreen()) return;
     teamGrid.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
 }
 
-if (nextBtn) nextBtn.addEventListener('click', scrollNext);
-if (prevBtn) prevBtn.addEventListener('click', scrollPrev);
-
-/* Touch/swipe carousel on mobile */
-if (teamGrid) {
-    let touchStartX = 0, touchEndX = 0;
-    teamGrid.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-    teamGrid.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        const diff = touchStartX - touchEndX;
-        const minSwipe = 50;
-        if (diff > minSwipe) scrollNext();
-        else if (diff < -minSwipe) scrollPrev();
-    }, { passive: true });
+// Only attach carousel events on desktop
+if (!isMobileScreen()) {
+    if (nextBtn) nextBtn.addEventListener('click', scrollNext);
+    if (prevBtn) prevBtn.addEventListener('click', scrollPrev);
+    
+    // Touch/swipe carousel - disabled on mobile (using hierarchy view instead)
+    // Only enable on tablets/desktop if needed
+    if (teamGrid && window.innerWidth > 768) {
+        let touchStartX = 0, touchEndX = 0;
+        teamGrid.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        teamGrid.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            const minSwipe = 50;
+            if (diff > minSwipe) scrollNext();
+            else if (diff < -minSwipe) scrollPrev();
+        }, { passive: true });
+    }
 }
+
+// Handle window resize - disable/enable carousel based on screen size
+window.addEventListener('resize', () => {
+    const wasMobile = isMobileScreen();
+    // Re-attach listeners if switching from mobile to desktop
+    if (!wasMobile && nextBtn && prevBtn && !nextBtn.hasAttribute('data-listener-attached')) {
+        nextBtn.addEventListener('click', scrollNext);
+        prevBtn.addEventListener('click', scrollPrev);
+        nextBtn.setAttribute('data-listener-attached', 'true');
+        prevBtn.setAttribute('data-listener-attached', 'true');
+    }
+});
 
 /**
  * NeuroQuiz™ - Liquid Synapse Background (Creative V2)

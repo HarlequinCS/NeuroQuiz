@@ -147,7 +147,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transform: none !important;
     position: relative;
-    overflow: hidden; 
+    overflow: visible; /* Changed from hidden to visible to prevent clipping click areas */
 }
 
 /* Responsive Question Card */
@@ -409,6 +409,9 @@ body {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
     transform: translateZ(20px);
+    position: relative;
+    z-index: 10; /* Higher z-index to ensure buttons are above everything */
+    isolation: isolate; /* Create new stacking context */
 }
 
 @media (min-width: 600px) {
@@ -433,14 +436,26 @@ body {
     min-height: 88px; /* Large hitbox — easy to tap */
     min-width: 100%;
     width: 100%;
-    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important, outline 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.1s !important, outline 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 6px 0 rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 10 !important; /* Force higher z-index */
     outline: 2px solid transparent;
     outline-offset: 3px; /* Slightly larger focus area */
-    touch-action: manipulation; /* Prevent double-tap zoom on mobile */
-    will-change: transform; /* Optimize transform animations */
-    user-select: none; /* Prevent text selection on tap */
+    pointer-events: auto !important; /* Force button to be clickable - CRITICAL */
+    touch-action: manipulation !important; /* Prevent double-tap zoom on mobile */
+    overflow: visible !important; /* Ensure click area extends to full button */
+    box-sizing: border-box;
+    isolation: isolate; /* Create new stacking context for each button */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+    user-select: none; /* Prevent text selection */
+}
+
+/* Ensure first button is also clickable - specifically target it */
+.option-btn:first-child,
+.option-btn:nth-child(1) {
+    z-index: 10 !important;
+    pointer-events: auto !important;
+    position: relative;
 }
 
 /* Tablet */
@@ -479,7 +494,7 @@ body {
     position: static !important; content: '' !important; display: inline-block !important;
     width: 40px !important; height: 40px !important; margin-right: 15px !important;
     background: rgba(0,0,0,0.2) !important; border-radius: 8px !important;
-    pointer-events: none !important; /* Allow clicks to pass through */
+    pointer-events: none; /* Allow clicks to pass through to button */
 }
 
 /* Option Colors */
@@ -496,24 +511,20 @@ body {
 
 /* HOVER STATE: White Outline */
 .option-btn:hover:not(:disabled) {
-    transform: translate3d(0, -4px, 10px); 
+    transform: translate3d(0, -4px, 10px); /* Use 3d for better performance */
     filter: brightness(1.1); 
     /* White outline + shadow */
     box-shadow: 0 10px 0 rgba(0,0,0,0.1), 0 0 0 4px #ffffff !important; 
     z-index: 10;
+    will-change: transform; /* Optimize transform only on hover */
 }
 
-/* ACTIVE STATE: Immediate feedback for better responsiveness */
-.option-btn:active:not(:disabled) {
-    transform: translate3d(0, 2px, 0); 
-    transition: transform 0.05s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-/* SELECTED STATE: White Outline + Glow */
-.option-btn.selected:not(:disabled) {
-    transform: translate3d(0, 2px, 0); 
+/* ACTIVE / SELECTED STATE: White Outline + Glow */
+.option-btn:active:not(:disabled), .option-btn.selected {
+    transform: translate3d(0, 2px, 0); /* Use 3d for better performance */
     filter: brightness(1.2) contrast(1.1);
     border: none; 
+    will-change: transform; /* Optimize transform during interaction */
 }
 
 /* Selected States with White Outline + Color Glow */
@@ -530,8 +541,15 @@ body {
     box-shadow: 0 0 0 4px #ffffff, 0 0 20px var(--game-green), inset 0 0 20px rgba(255,255,255,0.4) !important; 
 }
 
-.option-label { display: none !important; pointer-events: none !important; }
-.option-text { pointer-events: none; /* Allow clicks to pass through to button */ }
+.option-label { 
+    display: none !important; 
+    pointer-events: none !important; /* Allow clicks to pass through */
+}
+
+.option-text { 
+    pointer-events: none; /* Allow clicks to pass through to button */
+    user-select: none; /* Prevent text selection on tap */
+}
 
 /* =========================================
    FEEDBACK AREA

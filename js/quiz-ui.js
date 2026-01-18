@@ -115,22 +115,58 @@ class QuizUIController {
         });
     }
 
+    // Attach event listeners directly to a button - called when button is created
+    attachButtonEventListeners(btn) {
+        // Store reference to avoid closure issues
+        const button = btn;
+        
+        // Single unified handler for all events - called immediately without delays
+        const handleClick = (e) => {
+            if (this.isAnswered || button.disabled) return;
+            
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            
+            // Call selectOption immediately
+            this.selectOption(button);
+            
+            return false;
+        };
+        
+        // Attach all event types for maximum reliability - use capture phase
+        btn.addEventListener('click', handleClick, { capture: true, once: false });
+        btn.addEventListener('mousedown', handleClick, { capture: true, once: false });
+        btn.addEventListener('touchend', handleClick, { passive: false, capture: true, once: false });
+        btn.addEventListener('touchstart', (e) => { 
+            if (!this.isAnswered && !button.disabled) {
+                e.preventDefault(); 
+            }
+        }, { passive: false });
+        
+        return btn;
+    }
+    
     setupEventListeners() {
-        // Use capture phase for better performance and prevent event bubbling issues
-        this.elements.optionsContainer.addEventListener('click', (e) => {
-            // Prevent clicks during transitions or when disabled
+        // Event delegation as backup - capture phase for better catching
+        const handleOptionClick = (e) => {
             if (this.isAnswered) return;
             
             const optionBtn = e.target.closest('.option-btn');
-            if (optionBtn && !optionBtn.disabled && !this.isAnswered) {
-                e.preventDefault();
-                e.stopPropagation();
-                // Use requestAnimationFrame for smoother interaction
-                requestAnimationFrame(() => {
-                    this.selectOption(optionBtn);
-                });
-            }
-        }, false);
+            if (!optionBtn || optionBtn.disabled) return;
+            
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            this.selectOption(optionBtn);
+            return false;
+        };
+        
+        this.elements.optionsContainer.addEventListener('click', handleOptionClick, true);
+        this.elements.optionsContainer.addEventListener('mousedown', handleOptionClick, true);
+        if ('ontouchstart' in window) {
+            this.elements.optionsContainer.addEventListener('touchend', handleOptionClick, { passive: false, capture: true });
+        }
         
         // Keyboard navigation for options
         this.elements.optionsContainer.addEventListener('keydown', (e) => {
@@ -209,58 +245,78 @@ class QuizUIController {
         }
         
         this.currentQuestion = question;
-        this.elements.questionTitle.textContent = question.question;
-        this.elements.questionTitle.setAttribute('aria-live', 'polite');
         
-        const progress = this.engine.getProgress();
-        if (this.elements.badgeText) {
-            this.elements.badgeText.textContent = `Q${Math.max(progress.current, 1)}`;
-        }
-        
-        this.elements.optionsContainer.innerHTML = '';
-        question.options.forEach((option, index) => {
-            const optionBtn = this.createOptionButton(option, index);
-            this.elements.optionsContainer.appendChild(optionBtn);
+        // Batch DOM updates using requestAnimationFrame for better performance
+        requestAnimationFrame(() => {
+            // Update question text
+            this.elements.questionTitle.textContent = question.question;
+            this.elements.questionTitle.setAttribute('aria-live', 'polite');
+            
+            // Update badge
+            const progress = this.engine.getProgress();
+            if (this.elements.badgeText) {
+                this.elements.badgeText.textContent = `Q${Math.max(progress.current, 1)}`;
+            }
+            
+            // Build options efficiently using documentFragment
+            const fragment = document.createDocumentFragment();
+            const buttons = [];
+            question.options.forEach((option, index) => {
+                const btn = this.createOptionButton(option, index);
+                fragment.appendChild(btn);
+                buttons.push(btn);
+            });
+            this.elements.optionsContainer.innerHTML = '';
+            this.elements.optionsContainer.appendChild(fragment);
+            
+            // Attach event listeners directly to each button - MOST RELIABLE METHOD
+            buttons.forEach((btn, index) => {
+                const newBtn = this.attachButtonEventListeners(btn);
+                buttons[index] = newBtn; // Update reference
+            });
+            
+            // Set first option as focusable
+            const firstOption = buttons[0] || this.elements.optionsContainer.querySelector('.option-btn');
+            if (firstOption) {
+                firstOption.setAttribute('tabindex', '0');
+            }
+            
+            // Reset state
+            this.selectedOption = null;
+            this.isAnswered = false;
+            
+            // Update buttons state
+            this.elements.submitBtn.style.display = ''; 
+            this.elements.submitBtn.classList.remove('hidden');
+            this.elements.submitBtn.disabled = true;
+            this.elements.submitBtn.setAttribute('aria-disabled', 'true');
+            
+            this.elements.nextBtn.style.display = 'none';
+            this.elements.nextBtn.classList.remove('btn-enter');
+            this.elements.nextBtn.setAttribute('aria-disabled', 'true');
+            
+            // Clear feedback
+            this.elements.feedbackArea.innerHTML = '';
+            this.elements.feedbackArea.style.display = 'none';
+            
+            // Update displays
+            this.updateProgress();
+            this.updateGamificationDisplay();
+            this.updateMotivationalMessage();
         });
-        
-        // Set first option as focusable for keyboard navigation
-        const firstOption = this.elements.optionsContainer.querySelector('.option-btn');
-        if (firstOption) {
-            firstOption.setAttribute('tabindex', '0');
-        }
-        
-        this.updateProgress();
-        this.updateGamificationDisplay();
-        this.updateMotivationalMessage();
-        
-        this.selectedOption = null;
-        this.isAnswered = false;
-        
-        this.elements.submitBtn.style.display = ''; 
-        this.elements.submitBtn.classList.remove('hidden');
-        this.elements.submitBtn.disabled = true;
-        this.elements.submitBtn.setAttribute('aria-disabled', 'true');
-        
-        this.elements.nextBtn.style.display = 'none';
-        this.elements.nextBtn.classList.remove('btn-enter');
-        this.elements.nextBtn.setAttribute('aria-disabled', 'true');
-        
-        this.elements.feedbackArea.innerHTML = '';
-        this.elements.feedbackArea.style.display = 'none';
-        
-        // Focus management for accessibility
-        this.elements.questionTitle.focus();
     }
     
     createOptionButton(text, index) {
+        // Use documentFragment for better performance
         const btn = document.createElement('button');
         btn.className = 'option-btn';
-        btn.setAttribute('data-option-id', index);
+        btn.dataset.optionId = index; // Faster than setAttribute
         btn.setAttribute('aria-label', `Option ${String.fromCharCode(65 + index)}: ${text}`);
         btn.setAttribute('role', 'radio');
         btn.setAttribute('aria-checked', 'false');
         btn.setAttribute('tabindex', index === 0 ? '0' : '-1');
         
+        // Optimized child creation
         const label = document.createElement('span');
         label.className = 'option-label';
         label.textContent = String.fromCharCode(65 + index);
@@ -270,6 +326,7 @@ class QuizUIController {
         optionText.className = 'option-text';
         optionText.textContent = text;
         
+        // Append children efficiently
         btn.appendChild(label);
         btn.appendChild(optionText);
         
@@ -277,35 +334,36 @@ class QuizUIController {
     }
     
     selectOption(optionBtn) {
-        // Prevent double-selection during animation
+        // Fast path: early return if invalid
         if (optionBtn.disabled || this.isAnswered) return;
         
         const isAlreadySelected = optionBtn.classList.contains('selected');
         
-        // Batch DOM updates for better performance
-        const options = document.querySelectorAll('.option-btn');
-        options.forEach(btn => {
+        // Cache DOM query - only get options once
+        const options = this.elements.optionsContainer.querySelectorAll('.option-btn');
+        const optionCount = options.length;
+        
+        // Batch DOM updates using documentFragment for better performance
+        // Remove selected state from all buttons
+        for (let i = 0; i < optionCount; i++) {
+            const btn = options[i];
             btn.classList.remove('selected');
             btn.setAttribute('aria-checked', 'false');
             btn.setAttribute('tabindex', '-1');
-        });
+        }
 
         if (isAlreadySelected) {
             this.selectedOption = null;
             this.elements.submitBtn.disabled = true;
             this.elements.submitBtn.setAttribute('aria-disabled', 'true');
         } else {
+            // Fast update - set all properties at once
             optionBtn.classList.add('selected');
             optionBtn.setAttribute('aria-checked', 'true');
             optionBtn.setAttribute('tabindex', '0');
-            this.selectedOption = parseInt(optionBtn.getAttribute('data-option-id'));
+            this.selectedOption = parseInt(optionBtn.getAttribute('data-option-id'), 10);
             this.elements.submitBtn.disabled = false;
             this.elements.submitBtn.setAttribute('aria-disabled', 'false');
-            
-            // Focus after a tiny delay to allow CSS transition
-            requestAnimationFrame(() => {
-                optionBtn.focus();
-            });
         }
     }
     
@@ -320,13 +378,16 @@ class QuizUIController {
 
         this.isAnswered = true;
         
-        // --- VISUAL EFFECTS ---
-        this.triggerScreenBloom(result.isCorrect); 
-        if (result.isCorrect) {
-            this.triggerConfetti();
-        } else {
-            this.triggerEmojiRain();
-        }
+        // --- VISUAL EFFECTS (Deferred for better performance) ---
+        // Defer visual effects to avoid blocking button interactions
+        requestAnimationFrame(() => {
+            this.triggerScreenBloom(result.isCorrect); 
+            if (result.isCorrect) {
+                requestAnimationFrame(() => this.triggerConfetti());
+            } else {
+                requestAnimationFrame(() => this.triggerEmojiRain());
+            }
+        });
 
         // --- BUTTON SWAP ---
         this.elements.submitBtn.style.display = 'none';
@@ -344,12 +405,13 @@ class QuizUIController {
             nextBtn.classList.remove('btn-enter');
         }, 600);
         
-        this.showFeedback(result);
+        // Batch visual updates together for better performance
         this.highlightAnswers(result);
-        this.playAudioFeedback(result.isCorrect);
+        this.showFeedback(result);
         this.updateGamificationDisplay(); 
         this.updateProgress();
         this.updateMotivationalMessage();
+        // Audio feedback removed for production performance
         
         // Check for upgrade offer: streak 10 + Expert difficulty (3)
         // Only show if correct answer, streak is exactly 10, on Expert difficulty, and offer hasn't been shown
@@ -741,18 +803,23 @@ class QuizUIController {
     }
 
     triggerConfetti() {
-        const count = 80; 
-        const shapes = ['●', '◆', '■', '▲', '★', '♦', '◉', '◈'];
+        // Reduced count for better performance - use requestAnimationFrame for batch DOM updates
+        const count = 40; // Reduced from 80 for better performance
+        const shapes = ['●', '◆', '■', '▲'];
+        const fragment = document.createDocumentFragment();
+        const now = Date.now();
+        
+        // Batch DOM creation
         for (let i = 0; i < count; i++) {
             const el = document.createElement('div');
             el.classList.add('fx-particle', 'anim-confetti');
-            el.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+            el.textContent = shapes[i % shapes.length];
             el.style.left = `${Math.random() * 100}vw`;
             el.style.top = `${Math.random() * 100}vh`;
-            el.style.fontSize = `${1.5 + Math.random() * 2}rem`;
+            el.style.fontSize = `${1.5 + Math.random() * 1}rem`;
             
             const angle = Math.random() * 360;
-            const dist = 100 + Math.random() * 200;
+            const dist = 100 + Math.random() * 150;
             const tx = Math.cos(angle * Math.PI / 180) * dist;
             const ty = Math.sin(angle * Math.PI / 180) * dist;
             const rot = Math.random() * 720 - 360;
@@ -760,26 +827,55 @@ class QuizUIController {
             el.style.setProperty('--tx', `${tx}px`);
             el.style.setProperty('--ty', `${ty}px`);
             el.style.setProperty('--rot', `${rot}deg`);
+            el.dataset.removeTime = String(now + 1200); // Track removal time
             
-            document.body.appendChild(el);
-            setTimeout(() => el.remove(), 1500);
+            fragment.appendChild(el);
         }
+        
+        // Single DOM append
+        document.body.appendChild(fragment);
+        
+        // Batch cleanup
+        requestAnimationFrame(() => {
+            const particles = document.querySelectorAll('.fx-particle.anim-confetti');
+            particles.forEach(p => {
+                const removeTime = parseInt(p.dataset.removeTime || '0', 10);
+                if (Date.now() >= removeTime) {
+                    p.remove();
+                }
+            });
+        });
     }
 
     triggerEmojiRain() {
-        const count = 60; 
-        const shapes = ['✕', '✖', '✗', '○', '●', '×'];
+        // Reduced count and optimized DOM operations
+        const count = 30; // Reduced from 60 for better performance
+        const shapes = ['✕', '✖', '○', '×'];
+        const fragment = document.createDocumentFragment();
+        const now = Date.now();
+        
+        // Batch DOM creation
         for (let i = 0; i < count; i++) {
             const el = document.createElement('div');
             el.classList.add('fx-particle', 'anim-rain');
-            el.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+            el.textContent = shapes[i % shapes.length];
             el.style.left = `${Math.random() * 100}vw`;
             el.style.top = `-10vh`;
-            el.style.fontSize = `${2 + Math.random() * 2}rem`; 
+            el.style.fontSize = `${2 + Math.random() * 1.5}rem`; 
             el.style.animationDuration = `${2 + Math.random()}s`;
-            document.body.appendChild(el);
-            setTimeout(() => el.remove(), 3000);
+            el.dataset.removeTime = String(now + 2800);
+            
+            fragment.appendChild(el);
         }
+        
+        // Single DOM append
+        document.body.appendChild(fragment);
+        
+        // Batch cleanup after animation
+        setTimeout(() => {
+            const particles = document.querySelectorAll('.fx-particle.anim-rain');
+            particles.forEach(p => p.remove());
+        }, 3000);
     }
     
     // --- YOUR UI: Card Style Feedback ---
@@ -812,21 +908,29 @@ class QuizUIController {
     }
     
     highlightAnswers(result) {
-        const options = document.querySelectorAll('.option-btn');
-        options.forEach((btn, index) => {
+        // Cache query and batch DOM updates for better performance
+        const options = this.elements.optionsContainer.querySelectorAll('.option-btn');
+        const optionCount = options.length;
+        const correctIndex = result.correctAnswer;
+        const selectedIndex = this.selectedOption;
+        
+        // Batch updates in single loop - faster than forEach
+        for (let i = 0; i < optionCount; i++) {
+            const btn = options[i];
             btn.classList.remove('selected');
-            if (index === result.correctAnswer) {
+            btn.disabled = true;
+            
+            if (i === correctIndex) {
                 btn.classList.add('correct'); 
                 btn.style.boxShadow = "0 0 15px #2bde73";
                 btn.style.borderColor = "#2bde73";
-            } else if (index === this.selectedOption && !result.isCorrect) {
+            } else if (i === selectedIndex && !result.isCorrect) {
                 btn.classList.add('wrong');
                 btn.style.opacity = "0.7";
             } else {
                 btn.style.opacity = "0.5";
             }
-            btn.disabled = true;
-        });
+        }
     }
     
     nextQuestion() {
@@ -942,11 +1046,25 @@ class QuizUIController {
 
     async loadQuestionBank() {
         if (window.NEUROQUIZ_QUESTION_BANK && Array.isArray(window.NEUROQUIZ_QUESTION_BANK)) return window.NEUROQUIZ_QUESTION_BANK;
+        
+        // Get git version for cache busting - try to get from meta tag or default to timestamp
+        const getCacheVersion = () => {
+            // Try to get version from a script tag or use timestamp as fallback
+            const scriptTag = document.querySelector('script[src*="quiz-ui.js"]');
+            if (scriptTag && scriptTag.src) {
+                const match = scriptTag.src.match(/[?&]v=([^&]+)/);
+                if (match) return match[1];
+            }
+            // Fallback to git version or timestamp
+            return '06aca9e';
+        };
+        
+        const cacheVersion = getCacheVersion();
         const datasets = ['gk', 'literature', 'logic', 'math', 'stem'];
         const results = [];
         for (const name of datasets) {
             try {
-                const resp = await fetch(`data/${name}.json`);
+                const resp = await fetch(`data/${name}.json?v=${cacheVersion}`);
                 if (!resp.ok) continue;
                 const data = await resp.json();
                 if (Array.isArray(data)) results.push(...data);

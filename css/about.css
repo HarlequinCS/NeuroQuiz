@@ -237,46 +237,47 @@ html {
     scroll-snap-type: x mandatory;
 }
 
-/* Tablet: carousel with slightly smaller cards */
+/* Mobile: Vertical hierarchy view - no carousel */
 @media (max-width: 768px) {
-    .team-grid {
-        gap: var(--spacing-md);
-        padding: 16px 0;
-        scroll-padding: 0 16px;
+    /* Hide carousel navigation buttons on mobile */
+    .team-slider-wrapper .nav-btn {
+        display: none !important;
     }
     
     .team-slider-wrapper {
-        padding: 0 52px; /* Room for in-set nav buttons */
+        padding: 0; /* Remove padding since no buttons */
+        flex-direction: column; /* Stack vertically */
     }
     
-    .team-slider-wrapper .team-grid {
-        flex: 1;
-        min-width: 0;
+    /* Change from horizontal scroll to vertical grid */
+    .team-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        overflow-x: visible; /* No horizontal scroll */
+        overflow-y: visible; /* No vertical scroll */
+        scroll-behavior: auto; /* Remove smooth scroll */
+        scroll-snap-type: none; /* Remove snap scrolling */
+        flex-wrap: wrap; /* Allow wrapping */
+        width: 100%;
+        padding: 0;
     }
     
+    /* Full width team members on mobile */
     .team-member.question-card {
-        flex: 0 0 280px;
-        min-width: 260px;
-        max-width: 280px;
+        flex: 1 1 100%;
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .team-grid {
-        gap: var(--spacing-sm);
-        padding: 12px 8px;
-        scroll-padding: 0 12px;
+        gap: var(--spacing-md);
     }
     
-    .team-slider-wrapper {
-        padding: 0 48px;
-    }
-    
-    /* One card fills most of the width for carousel effect */
     .team-member.question-card {
-        flex: 0 0 85vw;
-        min-width: 240px;
-        max-width: 85vw;
         padding: var(--spacing-md);
     }
     
@@ -292,8 +293,9 @@ html {
         font-size: clamp(0.75rem, 3vw, 0.875rem);
     }
     
+    /* Hide scrollbar on mobile since we're not scrolling */
     .team-grid::-webkit-scrollbar {
-        height: 4px;
+        display: none;
     }
 }
 /* Navigation Buttons Styling */
@@ -324,30 +326,11 @@ html {
 .prev-btn { left: -40px; }
 .next-btn { right: -40px; }
 
-/* Mobile: arrows on-screen, touch-friendly (44px min) */
+/* Mobile: Hide navigation buttons - using hierarchy view instead */
 @media (max-width: 768px) {
-    .nav-btn {
-        width: 44px;
-        height: 44px;
-        min-width: 44px;
-        min-height: 44px;
-        font-size: 1.5rem;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 50%;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    .team-slider-wrapper .nav-btn {
+        display: none !important;
     }
-    
-    [data-theme="dark"] .nav-btn {
-        background: rgba(30, 41, 59, 0.95);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-    
-    .nav-btn:hover {
-        transform: translateY(-50%) scale(1.1);
-    }
-    
-    .prev-btn { left: 4px; right: auto; }
-    .next-btn { left: auto; right: 4px; }
 }
 
 /* Ensure the container doesn't cut off the arrows */

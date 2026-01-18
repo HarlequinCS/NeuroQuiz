@@ -29,29 +29,35 @@ function updateHTMLFile(filePath, version) {
   let content = fs.readFileSync(fullPath, 'utf8');
   let updated = false;
 
-  // Update CSS files
+  // Update CSS files - always update version even if it exists
   content = content.replace(
-    /href="(css\/[^"]+\.css)"/g,
-    (match, filePath) => {
-      // Skip if already has version
-      if (match.includes('?v=')) {
-        return match.replace(/\?v=[^"]+/, `?v=${version}`);
+    /href="(css\/[^"]+\.css)(\?v=[^"]+)?"/g,
+    (match, filePath, existingVersion) => {
+      if (existingVersion) {
+        // Replace existing version
+        updated = true;
+        return `href="${filePath}?v=${version}"`;
+      } else {
+        // Add version if missing
+        updated = true;
+        return `href="${filePath}?v=${version}"`;
       }
-      updated = true;
-      return `href="${filePath}?v=${version}"`;
     }
   );
 
-  // Update JS files
+  // Update JS files - always update version even if it exists
   content = content.replace(
-    /src="(js\/[^"]+\.js)"/g,
-    (match, filePath) => {
-      // Skip if already has version
-      if (match.includes('?v=')) {
-        return match.replace(/\?v=[^"]+/, `?v=${version}`);
+    /src="(js\/[^"]+\.js)(\?v=[^"]+)?"/g,
+    (match, filePath, existingVersion) => {
+      if (existingVersion) {
+        // Replace existing version
+        updated = true;
+        return `src="${filePath}?v=${version}"`;
+      } else {
+        // Add version if missing
+        updated = true;
+        return `src="${filePath}?v=${version}"`;
       }
-      updated = true;
-      return `src="${filePath}?v=${version}"`;
     }
   );
 
@@ -60,7 +66,7 @@ function updateHTMLFile(filePath, version) {
     console.log(`✓ Updated: ${filePath}`);
     return true;
   } else {
-    console.log(`- Skipped: ${filePath} (already has version or no matches)`);
+    console.log(`- Skipped: ${filePath} (no CSS/JS files found)`);
     return false;
   }
 }

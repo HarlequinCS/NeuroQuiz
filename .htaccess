@@ -167,7 +167,8 @@
 Options -Indexes
 
 # Prevent access to sensitive files
-<FilesMatch "(^\.|\.(git|md|json)$)">
+# Allow JSON files in data/ directory for quiz questions
+<FilesMatch "(^\.|\.(git|md)$)">
     Order allow,deny
     Deny from all
 </FilesMatch>

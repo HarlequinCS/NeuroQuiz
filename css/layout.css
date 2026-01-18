@@ -1527,6 +1527,12 @@
     }
 }
 
+/* Hide mobile theme toggle on desktop by default */
+.nav-menu-theme-section,
+.theme-segmented-control-mobile {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     /* Show hamburger menu on tablet and mobile */
     .hamburger-menu {
@@ -1585,11 +1591,16 @@
         margin-top: var(--spacing-sm);
     }
     
-    /* Mobile Theme Toggle in Nav Menu */
+    /* Show mobile theme toggle on mobile only */
     .nav-menu-theme-section {
+        display: block !important; /* Override desktop hide */
         margin-top: var(--spacing-md);
         padding-top: var(--spacing-md);
         border-top: 1px solid var(--border-default);
+    }
+    
+    .theme-segmented-control-mobile {
+        display: flex !important; /* Override desktop hide */
     }
     
     .nav-menu-theme-label {

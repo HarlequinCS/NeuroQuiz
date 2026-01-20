@@ -18,57 +18,79 @@ class LanguageController {
     async init() {
         if (this.isInitialized) return;
         
-        // Check if translations are already loaded
-        if (typeof TRANSLATIONS !== 'undefined') {
-            this.translations = TRANSLATIONS;
-            this.initializeLanguage();
-            return;
-        }
-        
-        // Wait for translations with timeout
-        let retries = 0;
-        const maxRetries = 20; // 2 seconds max wait
-        while (typeof TRANSLATIONS === 'undefined' && retries < maxRetries) {
-            await new Promise(resolve => setTimeout(resolve, 100));
-            retries++;
-        }
-        
-        // Load translations
-        if (typeof TRANSLATIONS !== 'undefined') {
-            this.translations = TRANSLATIONS;
-            this.initializeLanguage();
-        } else {
-            // Fallback: continue without translations
-            console.warn('Translations not loaded. Using default language.');
+        try {
+            // Check if translations are already loaded
+            if (typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS) {
+                this.translations = TRANSLATIONS;
+                this.initializeLanguage();
+                this.isInitialized = true;
+                return;
+            }
+            
+            // Wait for translations with timeout
+            let retries = 0;
+            const maxRetries = 20; // 2 seconds max wait
+            while (typeof TRANSLATIONS === 'undefined' && retries < maxRetries) {
+                await new Promise(resolve => setTimeout(resolve, 100));
+                retries++;
+            }
+            
+            // Load translations
+            if (typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS) {
+                this.translations = TRANSLATIONS;
+                this.initializeLanguage();
+            } else {
+                // Fallback: continue without translations
+                console.warn('Translations not loaded. Using default language.');
+                this.currentLanguage = 'en';
+                if (document.documentElement) {
+                    document.documentElement.setAttribute('lang', 'en');
+                }
+                this.setupLanguageSelector();
+            }
+            
+            this.isInitialized = true;
+        } catch (error) {
+            console.error('Language initialization error:', error);
+            // Fallback to default
             this.currentLanguage = 'en';
-            document.documentElement.setAttribute('lang', 'en');
-            this.setupLanguageSelector();
+            if (document.documentElement) {
+                document.documentElement.setAttribute('lang', 'en');
+            }
+            this.isInitialized = true;
         }
-        
-        this.isInitialized = true;
     }
     
     /**
      * Initialize language after translations are loaded
      */
     initializeLanguage() {
-        // Load saved language from localStorage
-        const savedLanguage = localStorage.getItem('neuroquizLanguage') || 'en';
-        if (this.translations && this.translations[savedLanguage]) {
-            this.setLanguage(savedLanguage, false);
-        } else {
-            // Detect browser language
-            const browserLang = navigator.language || navigator.userLanguage;
-            const langCode = browserLang.split('-')[0];
-            if (this.translations && this.translations[langCode]) {
-                this.setLanguage(langCode, false);
+        try {
+            // Load saved language from localStorage
+            const savedLanguage = localStorage.getItem('neuroquizLanguage') || 'en';
+            if (this.translations && this.translations[savedLanguage]) {
+                this.setLanguage(savedLanguage, false);
             } else {
-                this.setLanguage('en', false);
+                // Detect browser language
+                try {
+                    const browserLang = navigator.language || navigator.userLanguage;
+                    const langCode = browserLang ? browserLang.split('-')[0] : 'en';
+                    if (this.translations && this.translations[langCode]) {
+                        this.setLanguage(langCode, false);
+                    } else {
+                        this.setLanguage('en', false);
+                    }
+                } catch (e) {
+                    this.setLanguage('en', false);
+                }
             }
+            
+            // Setup language selector
+            this.setupLanguageSelector();
+        } catch (error) {
+            console.error('Language initialization error:', error);
+            this.setLanguage('en', false);
         }
-        
-        // Setup language selector
-        this.setupLanguageSelector();
     }
     
     /**
@@ -231,14 +253,42 @@ class LanguageController {
      * Setup language selector UI
      */
     setupLanguageSelector() {
-        const languageSelectors = document.querySelectorAll('.language-selector, [data-language-selector]');
-        languageSelectors.forEach(selector => {
-            const buttons = selector.querySelectorAll('[data-lang]');
+        // Setup desktop selector
+        const desktopSelectors = document.querySelectorAll('.language-selector');
+        desktopSelectors.forEach(selector => {
+            const buttons = selector.querySelectorAll('.language-btn[data-lang]');
             buttons.forEach(button => {
-                button.addEventListener('click', (e) => {
+                // Remove existing listeners to prevent duplicates
+                const newButton = button.cloneNode(true);
+                button.parentNode.replaceChild(newButton, button);
+                
+                newButton.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const lang = button.getAttribute('data-lang');
-                    this.setLanguage(lang);
+                    e.stopPropagation();
+                    const lang = newButton.getAttribute('data-lang');
+                    if (lang) {
+                        this.setLanguage(lang);
+                    }
+                });
+            });
+        });
+        
+        // Setup mobile selector
+        const mobileSelectors = document.querySelectorAll('.language-segmented-control-mobile');
+        mobileSelectors.forEach(selector => {
+            const buttons = selector.querySelectorAll('.language-btn-mobile[data-lang]');
+            buttons.forEach(button => {
+                // Remove existing listeners to prevent duplicates
+                const newButton = button.cloneNode(true);
+                button.parentNode.replaceChild(newButton, button);
+                
+                newButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const lang = newButton.getAttribute('data-lang');
+                    if (lang) {
+                        this.setLanguage(lang);
+                    }
                 });
             });
         });
@@ -248,9 +298,26 @@ class LanguageController {
      * Update language selector UI to show current language
      */
     updateLanguageSelector() {
-        const languageSelectors = document.querySelectorAll('.language-selector, [data-language-selector]');
-        languageSelectors.forEach(selector => {
-            const buttons = selector.querySelectorAll('[data-lang]');
+        // Update desktop selectors
+        const desktopSelectors = document.querySelectorAll('.language-selector');
+        desktopSelectors.forEach(selector => {
+            const buttons = selector.querySelectorAll('.language-btn[data-lang]');
+            buttons.forEach(button => {
+                const lang = button.getAttribute('data-lang');
+                if (lang === this.currentLanguage) {
+                    button.classList.add('active');
+                    button.setAttribute('aria-pressed', 'true');
+                } else {
+                    button.classList.remove('active');
+                    button.setAttribute('aria-pressed', 'false');
+                }
+            });
+        });
+        
+        // Update mobile selectors
+        const mobileSelectors = document.querySelectorAll('.language-segmented-control-mobile');
+        mobileSelectors.forEach(selector => {
+            const buttons = selector.querySelectorAll('.language-btn-mobile[data-lang]');
             buttons.forEach(button => {
                 const lang = button.getAttribute('data-lang');
                 if (lang === this.currentLanguage) {
@@ -278,19 +345,37 @@ let languageController;
 
 // Use DOMContentLoaded or immediate execution if DOM is ready
 const initLanguage = () => {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-            languageController = new LanguageController();
-            languageController.init().catch(err => {
-                console.error('Language initialization error:', err);
+    try {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                try {
+                    languageController = new LanguageController();
+                    // Use setTimeout to ensure translations.js is loaded
+                    setTimeout(() => {
+                        languageController.init().catch(err => {
+                            console.error('Language initialization error:', err);
+                        });
+                    }, 50);
+                } catch (err) {
+                    console.error('Language controller creation error:', err);
+                }
             });
-        });
-    } else {
-        // DOM already loaded
-        languageController = new LanguageController();
-        languageController.init().catch(err => {
-            console.error('Language initialization error:', err);
-        });
+        } else {
+            // DOM already loaded
+            try {
+                languageController = new LanguageController();
+                // Use setTimeout to ensure translations.js is loaded
+                setTimeout(() => {
+                    languageController.init().catch(err => {
+                        console.error('Language initialization error:', err);
+                    });
+                }, 50);
+            } catch (err) {
+                console.error('Language controller creation error:', err);
+            }
+        }
+    } catch (err) {
+        console.error('Language initialization setup error:', err);
     }
 };
 
@@ -347,8 +432,12 @@ initLanguage();
 
 // Setup observer after a delay to avoid blocking initial load
 setTimeout(() => {
-    if (languageController && languageController.isInitialized) {
-        setupTranslationObserver();
+    try {
+        if (languageController && languageController.isInitialized) {
+            setupTranslationObserver();
+        }
+    } catch (err) {
+        console.error('Translation observer setup error:', err);
     }
 }, 1000);
 

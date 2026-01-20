@@ -76,7 +76,7 @@
                 </div>
                 <div class="nav-trademark">
                     <span class="trademark-symbol">™</span>
-                    <span class="trademark-text">Adaptive Learning</span>
+                    <span class="trademark-text" data-i18n="common.adaptiveLearning">Adaptive Learning</span>
                 </div>
                 <!-- Hamburger Menu Button (Mobile) -->
                 <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -85,9 +85,17 @@
                     <span class="hamburger-line"></span>
                 </button>
                 <ul class="nav-menu" id="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
-                    <li><a href="setup.html" class="nav-link cta-button">Start Quiz</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" class="nav-link active" aria-current="page" data-i18n="nav.about">About</a></li>
+                    <li><a href="setup.html" class="nav-link cta-button" data-i18n="nav.startQuiz">Start Quiz</a></li>
+                    <!-- Mobile Language Toggle Section -->
+                    <li class="nav-menu-language-section">
+                        <div class="nav-menu-language-label">Language</div>
+                        <div class="language-segmented-control-mobile" role="radiogroup" aria-label="Language Switcher Mobile">
+                            <button type="button" class="language-btn-mobile" data-lang="en" aria-label="English">EN</button>
+                            <button type="button" class="language-btn-mobile" data-lang="ms" aria-label="Bahasa Malaysia">MS</button>
+                        </div>
+                    </li>
                     <!-- Mobile Theme Toggle Section -->
                     <li class="nav-menu-theme-section">
                         <div class="nav-menu-theme-label">Theme</div>
@@ -121,13 +129,13 @@
             <canvas id="neuro-web-canvas"></canvas>
 
             <div class="container hero-content centered-layout">
-                <h1 class="hero-title-giant scroll-move-right">About Us</h1>
-                <p class="description-text scroll-move-left">
+                <h1 class="hero-title-giant scroll-move-right" data-i18n="about.title">About Us</h1>
+                <p class="description-text scroll-move-left" data-i18n="about.description">
                     NeuroQuiz™ is an innovative adaptive gamified quiz platform that combines 
                     cutting-edge cognitive science research with engaging game mechanics.
                 </p>
                 <div class="btn-wrapper">
-                    <a href="#app-description" class="learn-more-btn">Learn More</a>
+                    <a href="#app-description" class="learn-more-btn" data-i18n="about.learnMore">Learn More</a>
                 </div>
             </div>
         </section>
@@ -137,8 +145,8 @@
             <section class="app-description" id="app-description" style="padding: var(--spacing-2xl) 0;">
     <div class="grid grid-2">
         <div>
-            <h2 class="text-primary" style="font-size: 3.5rem; line-height: 1.1; font-weight: 800; text-transform: uppercase;">Our Mission in Cognitive Excellence.</h2>
-            <p class="text-secondary" style="margin-top: var(--spacing-md); font-size: 1.1rem;">
+            <h2 class="text-primary" style="font-size: 3.5rem; line-height: 1.1; font-weight: 800; text-transform: uppercase;" data-i18n="about.mission">Our Mission in Cognitive Excellence.</h2>
+            <p class="text-secondary" style="margin-top: var(--spacing-md); font-size: 1.1rem;" data-i18n="about.missionSubtitle">
                 Transforming rote memorization into a dynamic, personalized journey.
             </p>
         </div>
@@ -146,24 +154,24 @@
             <div class="mission-card" onclick="this.classList.toggle('flipped')">
                 <div class="card-front">
                     <div class="mission-icon"><i class="fa-solid fa-brain"></i></div>
-                    <h3>Cognitive Load Theory</h3>
-                    <p>Real-time difficulty adjustment.</p>
-                    <span class="tap-indicator">Tap to learn more</span>
+                    <h3 data-i18n="about.cognitiveLoad">Cognitive Load Theory</h3>
+                    <p data-i18n="about.cognitiveLoadDesc">Real-time difficulty adjustment.</p>
+                    <span class="tap-indicator" data-i18n="about.tapToLearn">Tap to learn more</span>
                 </div>
                 <div class="card-back">
-                    <p>We analyze your learning patterns to ensure you're always challenged but never overwhelmed, fostering a state of "flow."</p>
+                    <p data-i18n="about.cognitiveLoadBack">We analyze your learning patterns to ensure you're always challenged but never overwhelmed, fostering a state of "flow."</p>
                 </div>
             </div>
 
             <div class="mission-card" onclick="this.classList.toggle('flipped')">
                 <div class="card-front">
                     <div class="mission-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
-                    <h3>Spaced Repetition</h3>
-                    <p>Long-term memory retention.</p>
-                    <span class="tap-indicator">Tap to learn more</span>
+                    <h3 data-i18n="about.spacedRepetition">Spaced Repetition</h3>
+                    <p data-i18n="about.spacedRepetitionDesc">Long-term memory retention.</p>
+                    <span class="tap-indicator" data-i18n="about.tapToLearn">Tap to learn more</span>
                 </div>
                 <div class="card-back">
-                    <p>Our algorithms optimize the timing of reviews to maximize recall and solidify knowledge acquisition.</p>
+                    <p data-i18n="about.spacedRepetitionBack">Our algorithms optimize the timing of reviews to maximize recall and solidify knowledge acquisition.</p>
                 </div>
             </div>
         </div>
@@ -174,25 +182,25 @@
 
 
            <section class="tech-section" style="padding: var(--spacing-2xl) 0;">
-    <h2 class="text-tertiary" style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.875rem; margin-bottom: var(--spacing-lg);">The Tech Stack</h2>
+    <h2 class="text-tertiary" style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.875rem; margin-bottom: var(--spacing-lg);" data-i18n="about.techStack">The Tech Stack</h2>
 
                 <div class="tech-grid">
                     <div class="tech-card">
                         <div class="tech-icon">🌐</div>
-                        <h3 class="tech-name">HTML5</h3>
-                        <p class="tech-desc">Structural foundation of the application.</p>
+                        <h3 class="tech-name" data-i18n="about.html5">HTML5</h3>
+                        <p class="tech-desc" data-i18n="about.html5Desc">Structural foundation of the application.</p>
                     </div>
 
                     <div class="tech-card">
                         <div class="tech-icon">🎨</div>
-                        <h3 class="tech-name">CSS3</h3>
-                        <p class="tech-desc">Styling, layout, and responsive design.</p>
+                        <h3 class="tech-name" data-i18n="about.css3">CSS3</h3>
+                        <p class="tech-desc" data-i18n="about.css3Desc">Styling, layout, and responsive design.</p>
                     </div>
 
                     <div class="tech-card">
                         <div class="tech-icon">⚡</div>
-                        <h3 class="tech-name">JavaScript</h3>
-                        <p class="tech-desc">Core logic and adaptive quiz engine.</p>
+                        <h3 class="tech-name" data-i18n="about.javascript">JavaScript</h3>
+                        <p class="tech-desc" data-i18n="about.javascriptDesc">Core logic and adaptive quiz engine.</p>
                     </div>
 
                     <div class="tech-card">
@@ -203,8 +211,8 @@
                                 <line x1="6" y1="20" x2="6" y2="14"></line>
                             </svg>
                         </div>
-                        <h3 class="tech-name">Chart.js</h3>
-                        <p class="tech-desc">Visualizing performance analytics.</p>
+                        <h3 class="tech-name" data-i18n="about.chartjs">Chart.js</h3>
+                        <p class="tech-desc" data-i18n="about.chartjsDesc">Visualizing performance analytics.</p>
                     </div>
                 </div>
             </section> 
@@ -213,7 +221,7 @@
 
             <section class="team-section" id="team-section">
     <div class="container">
-        <h2 class="text-tertiary" style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.875rem; margin-bottom: var(--spacing-lg);">
+        <h2 class="text-tertiary" style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.875rem; margin-bottom: var(--spacing-lg);" data-i18n="about.teamMembers">
             Team Members
         </h2>
         <div class="team-slider-wrapper" style="position: relative; display: flex; align-items: center;">
@@ -227,7 +235,7 @@
                     <img src="assets/images/saiful.jpg" alt="Saiful Iqbal - Project Lead">
                 </div>
                 <h3 class="text-primary">SAIFUL IQBAL</h3>
-                <p class="text-tertiary">Project Lead / Developer</p>
+                <p class="text-tertiary" data-i18n="about.projectLead">Project Lead / Developer</p>
             </div>
 
             <div class="team-member question-card">
@@ -235,7 +243,7 @@
                     <img src="assets/images/khai.jpg" alt="Khair Izz Khan - Developer">
                 </div>
                 <h3 class="text-primary">KHAIR IZZ KHAN</h3>
-                <p class="text-tertiary">Developer</p>
+                <p class="text-tertiary" data-i18n="about.developer">Developer</p>
             </div>
 
             <div class="team-member question-card">
@@ -243,7 +251,7 @@
                     <img src="assets/images/aiman.jpg" alt="Muhammad Aiman - Developer">
                 </div>
                 <h3 class="text-primary">MUHAMMAD AIMAN</h3>
-                <p class="text-tertiary">Developer</p>
+                <p class="text-tertiary" data-i18n="about.developer">Developer</p>
             </div>
 
             <div class="team-member question-card">
@@ -251,7 +259,7 @@
                     <img src="assets/images/jannah.jpg" alt="Nurul Jannah - Developer">
                 </div>
                 <h3 class="text-primary">NURUL JANNAH</h3>
-                <p class="text-tertiary">Developer</p>
+                <p class="text-tertiary" data-i18n="about.developer">Developer</p>
             </div>
 
             <div class="team-member question-card">
@@ -259,7 +267,7 @@
                     <img src="assets/images/nisa.jpg" alt="Alya Hanisah - Developer">
                 </div>
                 <h3 class="text-primary">ALYA HANISAH</h3>
-                <p class="text-tertiary">Developer</p>
+                <p class="text-tertiary" data-i18n="about.developer">Developer</p>
             </div>
         </div>
 
@@ -277,19 +285,19 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-copyright">
-                    <p class="footer-text">&copy; 2026 NeuroQuiz™. All rights reserved.</p>
+                    <p class="footer-text"><span data-i18n="common.copyright">&copy; 2026 NeuroQuiz™.</span> <span data-i18n="common.allRightsReserved">All rights reserved.</span></p>
                 </div>
                 <div class="footer-divider"></div>
                 <div class="footer-academic">
-                    <p class="footer-institution">Developed by students of <span class="footer-highlight">Universiti Teknologi Mara Cawangan Melaka Kampus Jasin</span></p>
+                    <p class="footer-institution"><span data-i18n="common.developedBy">Developed by students of</span> <span class="footer-highlight">Universiti Teknologi Mara Cawangan Melaka Kampus Jasin</span></p>
                     <p class="footer-faculty">Pelajar Fakulti Sains Komputer dan Matematik</p>
                     <p class="footer-course">Course code: <span class="footer-code">CDCS251</span> – Bachelor of Computer Sciences (Hons) Netcentric Computing</p>
                     <p class="footer-subject">Subjek: <span class="footer-code">ITT588</span> – Front End Technology</p>
                 </div>
             </div>
             <div class="footer-links">
-                <a href="index.html" class="footer-link">Home</a>
-                <a href="docs/research.pdf" class="footer-link" target="_blank">Research</a>
+                <a href="index.html" class="footer-link" data-i18n="nav.home">Home</a>
+                <a href="docs/research.pdf" class="footer-link" target="_blank" data-i18n="common.research">Research</a>
             </div>
         </div>
         <div class="footer-stars">
@@ -321,6 +329,14 @@
         <div class="theme-slider"></div>
     </div>
 
+    <!-- Language Selector (Desktop) -->
+    <div class="language-selector" role="radiogroup" aria-label="Language Switcher">
+        <button type="button" class="language-btn" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
+        <button type="button" class="language-btn" data-lang="ms" aria-label="Bahasa Malaysia" aria-pressed="false">MS</button>
+    </div>
+
+    <script src="js/translations.js?v=f12c9c0"></script>
+    <script src="js/language.js?v=f12c9c0"></script>
     <script src="js/theme.js?v=f12c9c0"></script>
     <script src="js/mobile-menu.js?v=f12c9c0"></script>
     <script src="js/about.js?v=f12c9c0"></script>

@@ -93,7 +93,7 @@
                 </div>
                 <div class="nav-trademark">
                     <span class="trademark-symbol">™</span>
-                    <span class="trademark-text">Adaptive Learning</span>
+                    <span class="trademark-text" data-i18n="common.adaptiveLearning">Adaptive Learning</span>
                 </div>
                 <!-- Hamburger Menu Button (Mobile) -->
                 <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -102,9 +102,17 @@
                     <span class="hamburger-line"></span>
                 </button>
                 <ul class="nav-menu" id="nav-menu">
-                    <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="setup.html" class="nav-link cta-button">Start Quiz</a></li>
+                    <li><a href="index.html" class="nav-link active" aria-current="page" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="setup.html" class="nav-link cta-button" data-i18n="nav.startQuiz">Start Quiz</a></li>
+                    <!-- Mobile Language Toggle Section -->
+                    <li class="nav-menu-language-section">
+                        <div class="nav-menu-language-label">Language</div>
+                        <div class="language-segmented-control-mobile" role="radiogroup" aria-label="Language Switcher Mobile">
+                            <button type="button" class="language-btn-mobile" data-lang="en" aria-label="English">EN</button>
+                            <button type="button" class="language-btn-mobile" data-lang="ms" aria-label="Bahasa Malaysia">MS</button>
+                        </div>
+                    </li>
                     <!-- Mobile Theme Toggle Section -->
                     <li class="nav-menu-theme-section">
                         <div class="nav-menu-theme-label">Theme</div>
@@ -137,12 +145,12 @@
         <section class="hero-section" id="hero-section">
             <div class="hero-container">
                 <div class="hero-title-container">
-                    <h1 class="hero-text-line left-line">WELCOME TO</h1>
+                    <h1 class="hero-text-line left-line" data-i18n="index.welcome">WELCOME TO</h1>
                     <h1 class="hero-text-line right-line outline-text">NEUROQUIZ™</h1>
                 </div>
-                <p class="hero-subtitle" id="hero-subtitle">An Adaptive Gamified Learning Experience</p>
+                <p class="hero-subtitle" id="hero-subtitle" data-i18n="index.subtitle">An Adaptive Gamified Learning Experience</p>
                 <div class="hero-cta" id="hero-cta">
-                    <a href="setup.html" class="btn btn-primary btn-large" id="start-quiz-btn">Begin Your Journey</a>
+                    <a href="setup.html" class="btn btn-primary btn-large" id="start-quiz-btn" data-i18n="index.beginJourney">Begin Your Journey</a>
                 </div>
             </div>
         </section>
@@ -155,20 +163,20 @@
             </ul>
             <div class="container-fluid">
                 <div class="upscale-text-container">
-                    <h2 class="section-title glacier-title">Powered by Cognitive Science</h2>
+                    <h2 class="section-title glacier-title" data-i18n="index.poweredBy">Powered by Cognitive Science</h2>
                 </div>
                 
                 <div class="accordion-container">
                     
                     <div class="accordion-card">
                         <div class="card-header">
-                            <h3>Adaptive Learning</h3>
+                            <h3 data-i18n="index.adaptiveLearning">Adaptive Learning</h3>
                         </div>
                         <div class="icon-display">
                             <i class="fas fa-sliders-h"></i>
                         </div>
                         <div class="card-content">
-                            <p>
+                            <p data-i18n="index.adaptiveLearningDesc">
                                 Our quiz adapts to your performance in real-time, adjusting difficulty 
                                 based on cognitive load theory and spaced repetition principles.
                             </p>
@@ -177,13 +185,13 @@
 
                     <div class="accordion-card">
                         <div class="card-header">
-                            <h3>Gamification</h3>
+                            <h3 data-i18n="index.gamification">Gamification</h3>
                         </div>
                         <div class="icon-display">
                             <i class="fas fa-gamepad"></i>
                         </div>
                         <div class="card-content">
-                            <p>
+                            <p data-i18n="index.gamificationDesc">
                                 Experience learning through game mechanics: points, levels, achievements, 
                                 and instant feedback to enhance motivation.
                             </p>
@@ -192,13 +200,13 @@
 
                     <div class="accordion-card">
                         <div class="card-header">
-                            <h3>Neuroscience</h3>
+                            <h3 data-i18n="index.neuroscience">Neuroscience</h3>
                         </div>
                         <div class="icon-display">
                             <i class="fas fa-brain"></i>
                         </div>
                         <div class="card-content">
-                            <p>
+                            <p data-i18n="index.neuroscienceDesc">
                                 Built on research from cognitive psychology, optimizing for 
                                 memory formation and leveraging brain plasticity.
                             </p>
@@ -217,7 +225,7 @@
             </ul>
             <div class="container">
                 <div class="upscale-text-container">
-                    <h2 class="section-title glacier-title">Key Features</h2>
+                    <h2 class="section-title glacier-title" data-i18n="index.keyFeatures">Key Features</h2>
                 </div>
                 
                 <div class="features-grid">
@@ -226,8 +234,8 @@
                         <div class="card-icon-bg">
                             <i class="fas fa-tachometer-alt"></i>
                         </div>
-                        <h3 class="feature-title">Adaptive Difficulty</h3>
-                        <p class="feature-description">
+                        <h3 class="feature-title" data-i18n="index.adaptiveDifficulty">Adaptive Difficulty</h3>
+                        <p class="feature-description" data-i18n="index.adaptiveDifficultyDesc">
                             Questions automatically adjust to your skill level in real-time.
                         </p>
                     </div>
@@ -236,8 +244,8 @@
                         <div class="card-icon-bg">
                             <i class="fas fa-trophy"></i>
                         </div>
-                        <h3 class="feature-title">Achievements</h3>
-                        <p class="feature-description">
+                        <h3 class="feature-title" data-i18n="index.achievements">Achievements</h3>
+                        <p class="feature-description" data-i18n="index.achievementsDesc">
                             Unlock badges and track your learning streaks and progress.
                         </p>
                     </div>
@@ -246,8 +254,8 @@
                         <div class="card-icon-bg">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="feature-title">Detailed Analytics</h3>
-                        <p class="feature-description">
+                        <h3 class="feature-title" data-i18n="index.detailedAnalytics">Detailed Analytics</h3>
+                        <p class="feature-description" data-i18n="index.detailedAnalyticsDesc">
                             Visual insights into your memory retention and performance.
                         </p>
                     </div>
@@ -262,19 +270,19 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-copyright">
-                    <p class="footer-text">&copy; 2026 NeuroQuiz™. All rights reserved.</p>
+                    <p class="footer-text"><span data-i18n="common.copyright">&copy; 2026 NeuroQuiz™.</span> <span data-i18n="common.allRightsReserved">All rights reserved.</span></p>
                 </div>
                 <div class="footer-divider"></div>
                 <div class="footer-academic">
-                    <p class="footer-institution">Developed by students of <span class="footer-highlight">Universiti Teknologi Mara Cawangan Melaka Kampus Jasin</span></p>
+                    <p class="footer-institution"><span data-i18n="common.developedBy">Developed by students of</span> <span class="footer-highlight">Universiti Teknologi Mara Cawangan Melaka Kampus Jasin</span></p>
                     <p class="footer-faculty">Pelajar Fakulti Sains Komputer dan Matematik</p>
                     <p class="footer-course">Course code: <span class="footer-code">CDCS251</span> – Bachelor of Computer Sciences (Hons) Netcentric Computing</p>
                     <p class="footer-subject">Subjek: <span class="footer-code">ITT588</span> – Front End Technology</p>
                 </div>
             </div>
             <div class="footer-links" id="footer-links">
-                <a href="about.html" class="footer-link">About</a>
-                <a href="docs/research.pdf" class="footer-link" target="_blank">Research</a>
+                <a href="about.html" class="footer-link" data-i18n="nav.about">About</a>
+                <a href="docs/research.pdf" class="footer-link" target="_blank" data-i18n="common.research">Research</a>
             </div>
         </div>
         <div class="footer-stars">
@@ -306,7 +314,15 @@
         <div class="theme-slider"></div>
     </div>
 
+    <!-- Language Selector (Desktop) -->
+    <div class="language-selector" role="radiogroup" aria-label="Language Switcher">
+        <button type="button" class="language-btn" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
+        <button type="button" class="language-btn" data-lang="ms" aria-label="Bahasa Malaysia" aria-pressed="false">MS</button>
+    </div>
+
     <!-- Scripts -->
+    <script src="js/translations.js?v=f12c9c0"></script>
+    <script src="js/language.js?v=f12c9c0"></script>
     <script src="js/theme.js?v=f12c9c0"></script>
     <script src="js/mobile-menu.js?v=f12c9c0"></script>
     <script src="js/index.js?v=f12c9c0"></script>

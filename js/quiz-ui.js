@@ -45,6 +45,17 @@ class QuizUIController {
         this.isAnswered = false;
         this.currentQuestion = null;
         this.upgradeOfferShown = false; // Track if upgrade offer has been shown
+        this.previousLevel = null; // Track previous level for level up detection
+        
+        // Audio elements for feedback
+        this.audioCorrect = new Audio('assets/audio/correct.mp3');
+        this.audioWrong = new Audio('assets/audio/wrong.mp3');
+        this.audioLevelUp = new Audio('assets/audio/levelup.mp3');
+        
+        // Set audio volume (0.0 to 1.0)
+        this.audioCorrect.volume = 0.5;
+        this.audioWrong.volume = 0.5;
+        this.audioLevelUp.volume = 0.6;
         
         console.log('QuizUIController initialized');
     }
@@ -274,6 +285,11 @@ class QuizUIController {
     }
     
     loadQuestion() {
+        // Initialize previous level on first question load
+        if (this.engine && this.previousLevel === null) {
+            const state = this.engine.getState();
+            this.previousLevel = state.currentLevel;
+        }
         const question = this.engine ? this.engine.getCurrentQuestion() : null;
         if (!question) {
             this.completeQuiz();
@@ -442,22 +458,42 @@ class QuizUIController {
         // Batch visual updates together for better performance
         this.highlightAnswers(result);
         this.showFeedback(result);
+        
+        // Check for level up before updating display
+        const state = this.engine.getState();
+        const levelUp = this.previousLevel !== null && state.currentLevel > this.previousLevel;
+        if (levelUp) {
+            this.playAudioFeedback('levelup');
+        }
+        
         this.updateGamificationDisplay(); 
         this.updateProgress();
         this.updateMotivationalMessage();
-        // Audio feedback removed for production performance
         
-        // Check for upgrade offer: streak 10 + Expert difficulty (3)
-        // Only show if correct answer, streak is exactly 10, on Expert difficulty, and offer hasn't been shown
-        if (result.isCorrect && result.streak === 10 && result.difficulty === 3 && !this.upgradeOfferShown) {
+        // Play audio feedback for answer correctness
+        this.playAudioFeedback(result.isCorrect ? 'correct' : 'wrong');
+        
+        // Update previous level for next comparison
+        this.previousLevel = state.currentLevel;
+        
+        // 4️⃣ LEVEL-UP OFFER LOGIC: Offers appear at every 10, 20, 30... consecutive correct in Expert
+        // Only triggered when ALL conditions are met:
+        // 1. User is currently in Expert difficulty (3)
+        // 2. User achieves 10, 20, 30... consecutive correct answers WHILE in Expert
+        // 3. Count ONLY expert streak (not displayed streak, not recovery streaks)
+        if (result.isCorrect && 
+            result.difficulty === 3 && 
+            result.expertStreak > 0 && 
+            result.expertStreak % 10 === 0) {
+            // Show offer at every 10-streak milestone (10, 20, 30...)
             // Delay showing the offer slightly so user can see their feedback first
             setTimeout(() => {
                 this.showUpgradeOffer();
             }, 1500);
         }
         
-        // Reset the flag if streak is broken (so they can get offer again when they reach 10)
-        if (!result.isCorrect && this.upgradeOfferShown) {
+        // Reset the flag if expert streak is broken (so they can get offer again at next 10-streak)
+        if (!result.isCorrect && result.difficulty === 3) {
             this.upgradeOfferShown = false;
         }
     }
@@ -748,7 +784,7 @@ class QuizUIController {
             modalTitle.textContent = 'Amazing Streak!';
         }
         modalMessage.innerHTML = `
-            <p style="margin-bottom: 1rem;">You've achieved a streak of 10 correct answers on Expert difficulty!</p>
+            <p style="margin-bottom: 1rem;">You've achieved 10 consecutive correct answers while in Expert difficulty!</p>
             <p style="margin-bottom: 1rem;"><strong>Current:</strong> ${currentLevelName} - Expert</p>
             <p style="margin-bottom: 1.5rem;"><strong>Upgrade Option:</strong> ${nextLevelName} - Beginner</p>
             <p>Would you like to continue at your current level or upgrade to the next level?</p>
@@ -1059,7 +1095,36 @@ class QuizUIController {
         }
     }
     
-    playAudioFeedback(isCorrect) {}
+    playAudioFeedback(type) {
+        try {
+            let audio = null;
+            
+            if (type === 'correct') {
+                audio = this.audioCorrect;
+            } else if (type === 'wrong') {
+                audio = this.audioWrong;
+            } else if (type === 'levelup') {
+                audio = this.audioLevelUp;
+            }
+            
+            if (audio) {
+                // Reset audio to start from beginning
+                audio.currentTime = 0;
+                // Play audio (with error handling for autoplay policies)
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        // Autoplay was prevented - this is normal in some browsers
+                        // Audio will play on user interaction
+                        console.log('Audio play prevented:', error);
+                    });
+                }
+            }
+        } catch (error) {
+            // Silently handle audio errors (e.g., file not found, autoplay blocked)
+            console.log('Audio feedback error:', error);
+        }
+    }
     
     showLoading() { if(this.elements.loadingOverlay) this.elements.loadingOverlay.setAttribute('aria-hidden', 'false'); }
     hideLoading() { if(this.elements.loadingOverlay) this.elements.loadingOverlay.setAttribute('aria-hidden', 'true'); }

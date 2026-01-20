@@ -51,7 +51,7 @@
                 </div>
                 <div class="nav-trademark">
                     <span class="trademark-symbol">™</span>
-                    <span class="trademark-text">Adaptive Learning</span>
+                    <span class="trademark-text" data-i18n="common.adaptiveLearning">Adaptive Learning</span>
                 </div>
                 <!-- Hamburger Menu Button (Mobile) -->
                 <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -60,9 +60,17 @@
                     <span class="hamburger-line"></span>
                 </button>
                 <ul class="nav-menu" id="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="setup.html" class="nav-link cta-button active" aria-current="page">Start Quiz</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="setup.html" class="nav-link cta-button active" aria-current="page" data-i18n="nav.startQuiz">Start Quiz</a></li>
+                    <!-- Mobile Language Toggle Section -->
+                    <li class="nav-menu-language-section">
+                        <div class="nav-menu-language-label">Language</div>
+                        <div class="language-segmented-control-mobile" role="radiogroup" aria-label="Language Switcher Mobile">
+                            <button type="button" class="language-btn-mobile" data-lang="en" aria-label="English">EN</button>
+                            <button type="button" class="language-btn-mobile" data-lang="ms" aria-label="Bahasa Malaysia">MS</button>
+                        </div>
+                    </li>
                     <!-- Mobile Theme Toggle Section -->
                     <li class="nav-menu-theme-section">
                         <div class="nav-menu-theme-label">Theme</div>
@@ -214,12 +222,12 @@
     <section class="setup-hero-section hero-section" id="setup-hero">
         <div class="hero-container">
             <div class="hero-title-container">
-                <h1 class="hero-text-line left-line">QUIZ</h1>
-                <h1 class="hero-text-line right-line outline-text">SETUP</h1>
+                <h1 class="hero-text-line left-line" data-i18n="setup.title">QUIZ</h1>
+                <h1 class="hero-text-line right-line outline-text" data-i18n="setup.titleOutline">SETUP</h1>
             </div>
-            <p class="hero-subtitle">Configure your preferences to begin your journey</p>
+            <p class="hero-subtitle" data-i18n="setup.subtitle">Configure your preferences to begin your journey</p>
             <div class="hero-cta">
-                <a href="#setup-form-section" class="btn btn-primary btn-large">Get Started</a>
+                <a href="#setup-form-section" class="btn btn-primary btn-large" data-i18n="setup.getStarted">Get Started</a>
             </div>
         </div>
     </section>
@@ -233,7 +241,7 @@
         </ul>
         <div class="container">
             <div class="upscale-text-container">
-                <h2 class="section-title glacier-title">Configure Your Quiz</h2>
+                <h2 class="section-title glacier-title" data-i18n="setup.configureQuiz">Configure Your Quiz</h2>
             </div>
 
             <div class="setup-container setup-card">
@@ -244,7 +252,7 @@
                             <line x1="12" y1="16" x2="12" y2="12"></line>
                             <line x1="12" y1="8" x2="12.01" y2="8"></line>
                         </svg>
-                        Show Tutorial Again
+                        <span data-i18n="setup.showTutorialAgain">Show Tutorial Again</span>
                     </button>
                 </div>
 
@@ -257,10 +265,10 @@
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg>
                         </span>
-                        Your Name
+                        <span data-i18n="setup.yourName">Your Name</span>
                     </label>
-                    <input type="text" id="name-input" name="name" placeholder="Enter your name" required maxlength="50">
-                    <div class="form-help">We'll use this to personalize your experience</div>
+                    <input type="text" id="name-input" name="name" data-i18n-attr='{"placeholder":"setup.namePlaceholder"}' placeholder="Enter your name" required maxlength="50">
+                    <div class="form-help" data-i18n="setup.nameHelp">We'll use this to personalize your experience</div>
                 </div>
 
                 <div class="form-group">
@@ -271,15 +279,15 @@
                                 <path d="M6 12v5c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2v-5"></path>
                             </svg>
                         </span>
-                        Education Level
+                        <span data-i18n="setup.educationLevel">Education Level</span>
                     </label>
                     <select id="level-select" name="level" required>
-                        <option value="">Select your level</option>
-                        <option value="1">Elementary (Level 1)</option>
-                        <option value="2">Secondary (Level 2)</option>
-                        <option value="3">University (Level 3)</option>
+                        <option value="" data-i18n="setup.selectLevel">Select your level</option>
+                        <option value="1" data-i18n="setup.level1">Elementary (Level 1)</option>
+                        <option value="2" data-i18n="setup.level2">Secondary (Level 2)</option>
+                        <option value="3" data-i18n="setup.level3">University (Level 3)</option>
                     </select>
-                    <div class="form-help">Choose your current education level</div>
+                    <div class="form-help" data-i18n="setup.levelHelp">Choose your current education level</div>
                 </div>
 
                 <div class="form-group">
@@ -290,17 +298,17 @@
                                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                             </svg>
                         </span>
-                        Category
+                        <span data-i18n="setup.category">Category</span>
                     </label>
                     <select id="category-select" name="category" required>
-                        <option value="">Select a category</option>
+                        <option value="" data-i18n="setup.selectCategory">Select a category</option>
                         <option value="Logic">Logic</option>
                         <option value="Math">Math</option>
                         <option value="STEM">STEM</option>
                         <option value="Literature">Literature</option>
                         <option value="General Knowledge">General Knowledge</option>
                     </select>
-                    <div class="form-help">Choose the subject you want to practice</div>
+                    <div class="form-help" data-i18n="setup.categoryHelp">Choose the subject you want to practice</div>
                 </div>
 
                 <div class="form-group">
@@ -312,20 +320,20 @@
                                 <path d="M22 8h-4l-1-3a2.5 2.5 0 0 1 2.83-3.5"></path>
                             </svg>
                         </span>
-                        Literacy Level
+                        <span data-i18n="setup.literacyLevel">Literacy Level</span>
                     </label>
                     <select id="literacy-select" name="literacyLevel" required>
-                        <option value="">Select your literacy level</option>
-                        <option value="Beginner">Beginner</option>
-                        <option value="Intermediate">Intermediate</option>
-                        <option value="Expert">Expert</option>
+                        <option value="" data-i18n="setup.selectLiteracy">Select your literacy level</option>
+                        <option value="Beginner" data-i18n="setup.beginner">Beginner</option>
+                        <option value="Intermediate" data-i18n="setup.intermediate">Intermediate</option>
+                        <option value="Expert" data-i18n="setup.expert">Expert</option>
                     </select>
-                    <div class="form-help">This determines your starting difficulty (Beginner=1, Intermediate=2, Expert=3)</div>
+                    <div class="form-help" data-i18n="setup.literacyHelp">This determines your starting difficulty (Beginner=1, Intermediate=2, Expert=3)</div>
                 </div>
 
                 <div class="setup-actions">
-                    <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Cancel</button>
-                    <button type="submit" class="btn btn-primary btn-large">Start Quiz</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'" data-i18n="setup.cancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-large" data-i18n="setup.startQuiz">Start Quiz</button>
                 </div>
             </form>
         </div>
@@ -338,19 +346,19 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-copyright">
-                    <p class="footer-text">&copy; 2026 NeuroQuiz™. All rights reserved.</p>
+                    <p class="footer-text"><span data-i18n="common.copyright">&copy; 2026 NeuroQuiz™.</span> <span data-i18n="common.allRightsReserved">All rights reserved.</span></p>
                 </div>
                 <div class="footer-divider"></div>
                 <div class="footer-academic">
-                    <p class="footer-institution">Developed by students of <span class="footer-highlight">Universiti Teknologi Mara Cawangan Melaka Kampus Jasin</span></p>
+                    <p class="footer-institution"><span data-i18n="common.developedBy">Developed by students of</span> <span class="footer-highlight">Universiti Teknologi Mara Cawangan Melaka Kampus Jasin</span></p>
                     <p class="footer-faculty">Pelajar Fakulti Sains Komputer dan Matematik</p>
                     <p class="footer-course">Course code: <span class="footer-code">CDCS251</span> – Bachelor of Computer Sciences (Hons) Netcentric Computing</p>
                     <p class="footer-subject">Subjek: <span class="footer-code">ITT588</span> – Front End Technology</p>
                 </div>
             </div>
             <div class="footer-links" id="footer-links">
-                <a href="about.html" class="footer-link">About</a>
-                <a href="docs/research.pdf" class="footer-link" target="_blank">Research</a>
+                <a href="about.html" class="footer-link" data-i18n="nav.about">About</a>
+                <a href="docs/research.pdf" class="footer-link" target="_blank" data-i18n="common.research">Research</a>
             </div>
         </div>
         <div class="footer-stars">
@@ -382,6 +390,14 @@
         <div class="theme-slider"></div>
     </div>
 
+    <!-- Language Selector (Desktop) -->
+    <div class="language-selector" role="radiogroup" aria-label="Language Switcher">
+        <button type="button" class="language-btn" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
+        <button type="button" class="language-btn" data-lang="ms" aria-label="Bahasa Malaysia" aria-pressed="false">MS</button>
+    </div>
+
+    <script src="js/translations.js?v=f12c9c0"></script>
+    <script src="js/language.js?v=f12c9c0"></script>
     <script src="js/theme.js?v=f12c9c0"></script>
     <script src="js/mobile-menu.js?v=f12c9c0"></script>
     <script>

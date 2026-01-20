@@ -582,22 +582,28 @@ class QuizUIController {
         }
         
         // Calculate difficulty change progress
-        // Show when user is close to difficulty change (within 1-2 questions)
-        // Since difficulty changes on each answer, we show a general indicator
-        // For recovery: if user dropped, they need 7 correct to recover (but this is internal)
+        // Difficulty changes after 5 consecutive correct (increase) or 5 consecutive wrong (decrease)
         let difficultyRemaining = null;
+        
         if (state.currentDifficulty < 3) {
-            // If at Beginner or Intermediate, next correct answer increases difficulty
-            // Show indicator when close to max difficulty
-            if (state.currentDifficulty === 2) {
-                // One correct answer away from Expert
-                difficultyRemaining = 1;
+            // At Beginner (1) or Intermediate (2): show remaining correct answers needed to increase difficulty
+            const correctStreak = state.correctStreak || 0;
+            const remaining = 5 - correctStreak;
+            if (remaining > 0 && remaining <= 5) {
+                difficultyRemaining = remaining;
+            }
+        } else if (state.currentDifficulty === 3) {
+            // At Expert (3): show remaining wrong answers needed to decrease difficulty
+            const wrongStreak = state.wrongStreak || 0;
+            const remaining = 5 - wrongStreak;
+            if (remaining > 0 && remaining <= 5) {
+                difficultyRemaining = remaining;
             }
         }
         
         // Update difficulty milestone display
         if (this.elements.difficultyMilestone && this.elements.difficultyRemaining) {
-            if (difficultyRemaining !== null && difficultyRemaining > 0 && difficultyRemaining <= 2) {
+            if (difficultyRemaining !== null && difficultyRemaining > 0 && difficultyRemaining <= 5) {
                 this.elements.difficultyRemaining.textContent = difficultyRemaining;
                 this.elements.difficultyMilestone.style.display = 'flex';
             } else {
@@ -1106,18 +1112,33 @@ class QuizUIController {
         // Batch updates in single loop - faster than forEach
         for (let i = 0; i < optionCount; i++) {
             const btn = options[i];
-            btn.classList.remove('selected');
+            btn.classList.remove('selected', 'correct', 'wrong');
             btn.disabled = true;
             
+            // Always highlight correct answer in green
             if (i === correctIndex) {
-                btn.classList.add('correct'); 
-                btn.style.boxShadow = "0 0 15px #2bde73";
-                btn.style.borderColor = "#2bde73";
-            } else if (i === selectedIndex && !result.isCorrect) {
+                btn.classList.add('correct');
+                // Ensure green styling is clear
+                btn.style.borderColor = "#10b981"; // Green
+                btn.style.backgroundColor = "rgba(16, 185, 129, 0.15)";
+                btn.style.boxShadow = "0 0 15px rgba(16, 185, 129, 0.5)";
+                btn.style.opacity = "1";
+            } 
+            // If answer is wrong, highlight the selected wrong answer in red
+            else if (i === selectedIndex && !result.isCorrect) {
                 btn.classList.add('wrong');
-                btn.style.opacity = "0.7";
-            } else {
+                // Ensure red styling is clear
+                btn.style.borderColor = "#ef4444"; // Red
+                btn.style.backgroundColor = "rgba(239, 68, 68, 0.15)";
+                btn.style.boxShadow = "0 0 15px rgba(239, 68, 68, 0.5)";
+                btn.style.opacity = "1";
+            } 
+            // Dim other options
+            else {
                 btn.style.opacity = "0.5";
+                btn.style.borderColor = "";
+                btn.style.backgroundColor = "";
+                btn.style.boxShadow = "";
             }
         }
     }

@@ -1,5 +1,7 @@
 # RB-ADA Algorithm & Cognitive Analyzer - Non-Technical Explanation
 
+> **Note:** This document is optimized for both light and dark mode viewing. If you're experiencing readability issues, try switching your markdown viewer's theme.
+
 ## Overview
 
 This document provides a non-technical explanation of the **Rule-Based Adaptive Dynamic Algorithm (RB-ADA)** and the **Cognitive Diagnostic Assessment (CDA)** system used in NeuroQuiz™. These algorithms work together to provide personalized learning experiences and detailed cognitive insights.

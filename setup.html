@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="app-version" content="f12c9c0">
+    <meta name="app-version" content="20260120-224655-mkmpjjxb">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -35,10 +35,10 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/theme.css?v=f12c9c0">
-    <link rel="stylesheet" href="css/layout.css?v=f12c9c0">
-    <link rel="stylesheet" href="css/animations.css?v=f12c9c0">
-    <link rel="stylesheet" href="css/setup.css?v=f12c9c0">
+    <link rel="stylesheet" href="css/theme.css?v=20260120-224655-mkmpjjxb">
+    <link rel="stylesheet" href="css/layout.css?v=20260120-224655-mkmpjjxb">
+    <link rel="stylesheet" href="css/animations.css?v=20260120-224655-mkmpjjxb">
+    <link rel="stylesheet" href="css/setup.css?v=20260120-224655-mkmpjjxb">
 </head>
 <body>
     <header class="header" role="banner">
@@ -46,7 +46,7 @@
             <div class="nav-container">
                 <div class="logo-container">
                     <a href="index.html" class="logo-link">
-                        <img src="assets/images/Logo.svg" alt="NeuroQuiz Logo" class="logo">
+                        <img src="assets/images/Logo.svg?v=20260120-224655-mkmpjjxb" alt="NeuroQuiz Logo" class="logo">
                     </a>
                 </div>
                 <!-- Language Selector (Desktop) - In Header -->
@@ -133,6 +133,18 @@
                     <p>NeuroQuiz™ is a smart quiz that <strong>automatically adjusts</strong> to your skill level. Answer questions correctly, and it gets harder. Answer incorrectly, and it gets easier. It's like having a personal tutor that knows exactly how to challenge you!</p>
                 </div>
                 
+                <div class="tutorial-section" style="background: rgba(37, 99, 235, 0.1); border-left: 4px solid #2563eb; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                    <h3>
+                        <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 16v-4"></path>
+                            <path d="M12 8h.01"></path>
+                        </svg>
+                        Important: Quiz Duration
+                    </h3>
+                    <p><strong>The quiz continues until you choose to stop it.</strong> There's no time limit and no fixed number of questions. You control when to finish by clicking the "Stop Quiz" button. Take your time, answer as many questions as you want, and stop whenever you're ready!</p>
+                </div>
+                
                 <div class="tutorial-section">
                     <h3>
                         <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -143,10 +155,9 @@
                         How Difficulty Changes
                     </h3>
                     <ul class="tutorial-list">
-                        <li><strong>Get it right?</strong> The next question will be a bit harder</li>
-                        <li><strong>Get it wrong?</strong> The next question will be a bit easier</li>
-                        <li><strong>Answer 7 in a row correctly?</strong> You'll jump to harder questions faster!</li>
-                        <li><strong>Struggling too much?</strong> You'll move to an easier level, but start at the hardest difficulty of that level</li>
+                        <li><strong>Correct answer:</strong> Next question gets harder</li>
+                        <li><strong>Wrong answer:</strong> Next question gets easier</li>
+                        <li><strong>7 correct in a row:</strong> Difficulty increases faster</li>
                     </ul>
                 </div>
                 
@@ -160,45 +171,9 @@
                             <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
                             <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
                         </svg>
-                        Special Bonus: Level Up Offer
+                        Level Up Bonus
                     </h3>
-                    <p>If you answer <strong>10 questions correctly in a row</strong> on the hardest difficulty, you'll get a special offer:</p>
-                    <ul class="tutorial-list">
-                        <li>Keep playing at your current level</li>
-                        <li>Move up to the next level (like going from Elementary to Secondary)</li>
-                    </ul>
-                </div>
-                
-                <div class="tutorial-section">
-                    <h3>
-                        <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                        What Are Education Levels?
-                    </h3>
-                    <ul class="tutorial-list">
-                        <li><strong>Elementary (Level 1):</strong> Easy questions for beginners</li>
-                        <li><strong>Secondary (Level 2):</strong> Medium questions for intermediate learners</li>
-                        <li><strong>University (Level 3):</strong> Hard questions for advanced learners</li>
-                    </ul>
-                </div>
-                
-                <div class="tutorial-section">
-                    <h3>
-                        <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 22"></path>
-                            <path d="M21 12h-3l-2-5a2.5 2.5 0 0 1 2.83-3.5"></path>
-                            <path d="M22 8h-4l-1-3a2.5 2.5 0 0 1 2.83-3.5"></path>
-                        </svg>
-                        What Are Difficulty Levels?
-                    </h3>
-                    <ul class="tutorial-list">
-                        <li><strong>Beginner:</strong> Start here if you're new to the topic</li>
-                        <li><strong>Intermediate:</strong> You know the basics and want more challenge</li>
-                        <li><strong>Expert:</strong> You're really good and want the toughest questions</li>
-                    </ul>
+                    <p>Answer <strong>10 questions correctly in a row</strong> on Expert difficulty to unlock a level-up offer. You can choose to stay at your current level or advance to the next level!</p>
                 </div>
                 
                 <div class="tutorial-section">
@@ -206,13 +181,14 @@
                         <svg class="tutorial-section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                         </svg>
-                        What You'll See While Playing
+                        What You'll See
                     </h3>
                     <ul class="tutorial-list">
-                        <li>Your <strong>streak</strong> - how many you got right in a row</li>
-                        <li>Your <strong>points</strong> - harder questions give more points</li>
-                        <li>Your current <strong>level</strong> - which level you're playing at</li>
-                        <li>After finishing, you'll get a detailed <strong>performance report</strong> showing how well you did</li>
+                        <li><strong>Level:</strong> Your education level (Elementary, Secondary, or University)</li>
+                        <li><strong>Difficulty:</strong> Current question difficulty (Beginner, Intermediate, or Expert)</li>
+                        <li><strong>Streak:</strong> Consecutive correct answers</li>
+                        <li><strong>Points:</strong> Earned from correct answers</li>
+                        <li><strong>Progress:</strong> See how many questions until difficulty change or level up</li>
                     </ul>
                 </div>
             </div>
@@ -395,16 +371,19 @@
     </div>
 
     <!-- Load translations first, then language controller -->
-    <script src="js/translations.js?v=f12c9c0"></script>
+    <script src="js/translations.js?v=20260120-224655-mkmpjjxb"></script>
     <script>
         // Ensure translations are loaded before language.js
         if (typeof TRANSLATIONS === 'undefined') {
             console.warn('Translations not found. Make sure translations.js loads before language.js');
         }
     </script>
-    <script src="js/language.js?v=f12c9c0"></script>
-    <script src="js/theme.js?v=f12c9c0"></script>
-    <script src="js/mobile-menu.js?v=f12c9c0"></script>
+    <script src="js/language.js?v=20260120-224655-mkmpjjxb"></script>
+    <script src="js/theme.js?v=20260120-224655-mkmpjjxb"></script>
+    <script src="js/mobile-menu.js?v=20260120-224655-mkmpjjxb"></script>
+    <!-- Cache utilities and version checker -->
+    <script src="js/cache-utils.js?v=20260120-224655-mkmpjjxb"></script>
+    <script src="js/version-checker.js?v=20260120-224655-mkmpjjxb"></script>
     <script>
         // Tutorial Modal Logic
         document.addEventListener('DOMContentLoaded', () => {

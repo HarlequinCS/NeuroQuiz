@@ -24,13 +24,21 @@ class QuizUIController {
             
             // --- GAMIFICATION ELEMENTS ---
             levelValue: document.getElementById('level-value'),
+            difficultyValue: document.getElementById('difficulty-value'),
             streakValue: document.getElementById('streak-value'),
             pointsValue: document.getElementById('points-value'),
             
             // Icons for Visual Effects (Star, Fire, Diamond)
             levelIcon: document.getElementById('level-icon'),
+            difficultyIcon: document.getElementById('difficulty-icon'),
             streakIcon: document.getElementById('streak-icon'),
             pointsIcon: document.getElementById('points-icon'),
+            
+            // Progress Milestones
+            difficultyMilestone: document.getElementById('difficulty-milestone'),
+            levelupMilestone: document.getElementById('levelup-milestone'),
+            difficultyRemaining: document.getElementById('difficulty-remaining'),
+            levelupRemaining: document.getElementById('levelup-remaining'),
 
             // --- MODAL ELEMENTS ---
             modalOverlay: document.getElementById('modal-overlay'),
@@ -528,6 +536,19 @@ class QuizUIController {
             this.elements.levelValue.textContent = state.currentLevel;
             this.elements.levelValue.setAttribute('aria-label', `Current level: ${state.currentLevel}`);
         }
+        
+        // Update Difficulty Display
+        if (this.elements.difficultyValue) {
+            const difficultyNames = {
+                1: 'Beginner',
+                2: 'Intermediate',
+                3: 'Expert'
+            };
+            const difficultyName = difficultyNames[state.currentDifficulty] || 'Unknown';
+            this.elements.difficultyValue.textContent = difficultyName;
+            this.elements.difficultyValue.setAttribute('aria-label', `Current difficulty: ${difficultyName}`);
+        }
+        
         if (this.elements.streakValue) {
             this.elements.streakValue.textContent = state.streak;
             this.elements.streakValue.setAttribute('aria-label', `Current streak: ${state.streak} correct answers in a row`);
@@ -539,8 +560,60 @@ class QuizUIController {
 
         // 2. Apply Visual Effects (Glows, Colors, Animations)
         this.applyVisualEffects(this.elements.levelIcon, state.currentLevel, 'level');
+        this.applyVisualEffects(this.elements.difficultyIcon, state.currentDifficulty, 'level');
         this.applyVisualEffects(this.elements.streakIcon, state.streak, 'streak');
         this.applyVisualEffects(this.elements.pointsIcon, state.score, 'points');
+        
+        // 3. Update Progress Milestones
+        this.updateProgressMilestones();
+    }
+    
+    updateProgressMilestones() {
+        if (!this.engine) return;
+        const state = this.engine.getState();
+        
+        // Calculate level up progress (10 correct in Expert difficulty)
+        let levelupRemaining = null;
+        if (state.currentDifficulty === 3 && state.currentLevel < 3 && state.expertStreak !== undefined) {
+            // Need 10 correct answers in Expert difficulty for level up
+            const expertStreak = state.expertStreak || 0;
+            levelupRemaining = Math.max(0, 10 - (expertStreak % 10));
+            if (levelupRemaining === 10) levelupRemaining = 0; // Already at a milestone
+        }
+        
+        // Calculate difficulty change progress
+        // Show when user is close to difficulty change (within 1-2 questions)
+        // Since difficulty changes on each answer, we show a general indicator
+        // For recovery: if user dropped, they need 7 correct to recover (but this is internal)
+        let difficultyRemaining = null;
+        if (state.currentDifficulty < 3) {
+            // If at Beginner or Intermediate, next correct answer increases difficulty
+            // Show indicator when close to max difficulty
+            if (state.currentDifficulty === 2) {
+                // One correct answer away from Expert
+                difficultyRemaining = 1;
+            }
+        }
+        
+        // Update difficulty milestone display
+        if (this.elements.difficultyMilestone && this.elements.difficultyRemaining) {
+            if (difficultyRemaining !== null && difficultyRemaining > 0 && difficultyRemaining <= 2) {
+                this.elements.difficultyRemaining.textContent = difficultyRemaining;
+                this.elements.difficultyMilestone.style.display = 'flex';
+            } else {
+                this.elements.difficultyMilestone.style.display = 'none';
+            }
+        }
+        
+        // Update level up milestone display
+        if (this.elements.levelupMilestone && this.elements.levelupRemaining) {
+            if (levelupRemaining !== null && levelupRemaining > 0 && levelupRemaining <= 10) {
+                this.elements.levelupRemaining.textContent = levelupRemaining;
+                this.elements.levelupMilestone.style.display = 'flex';
+            } else {
+                this.elements.levelupMilestone.style.display = 'none';
+            }
+        }
     }
     
     updateMotivationalMessage() {

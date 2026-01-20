@@ -170,3 +170,45 @@ window.addEventListener('scroll', () => {
         desc.style.transform = `translateX(-${scrollValue * 0.15}px)`;
     }
 });
+
+/**
+ * Scroll Reveal Animation for Timeline Items
+ */
+function initScrollReveal() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    if (!timelineItems.length) return;
+    
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add delay based on index for staggered effect
+                setTimeout(() => {
+                    entry.target.classList.add('scroll-revealed');
+                }, index * 150);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+}
+
+// Initialize scroll reveal when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initScrollReveal();
+});
+
+// Re-initialize on dynamic content load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollReveal);
+} else {
+    initScrollReveal();
+}

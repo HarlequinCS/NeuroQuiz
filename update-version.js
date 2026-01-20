@@ -7,13 +7,25 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-// Get git version (short commit hash)
+// Get version - use timestamp for better cache busting
+function getVersion() {
+  // For development: use timestamp for aggressive cache busting
+  // For production: can use git hash or semantic version
+  const timestamp = Date.now();
+  const date = new Date();
+  const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '');
+  const timeStr = date.toTimeString().slice(0, 8).replace(/:/g, '');
+  
+  // Format: YYYYMMDD-HHMMSS-timestamp
+  return `${dateStr}-${timeStr}-${timestamp.toString(36)}`;
+}
+
+// Get git version (short commit hash) - fallback
 function getGitVersion() {
   try {
     return execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim();
   } catch (error) {
-    console.warn('Warning: Could not get git version, using timestamp');
-    return Date.now().toString(36);
+    return null;
   }
 }
 
@@ -29,18 +41,28 @@ function updateHTMLFile(filePath, version) {
   let content = fs.readFileSync(fullPath, 'utf8');
   let updated = false;
 
-  // Update CSS files
+  // Update CSS files (with or without existing version)
   const cssPattern = /href=["'](css\/[^"']+\.css)([?&]v=[^"']+)?["']/g;
   content = content.replace(cssPattern, (match, filePath, existingVersion) => {
     updated = true;
-    return `href="${filePath}?v=${version}"`;
+    const separator = filePath.includes('?') ? '&' : '?';
+    return `href="${filePath}${separator}v=${version}"`;
   });
 
-  // Update JS files
+  // Update JS files (with or without existing version)
   const jsPattern = /src=["'](js\/[^"']+\.js)([?&]v=[^"']+)?["']/g;
   content = content.replace(jsPattern, (match, filePath, existingVersion) => {
     updated = true;
-    return `src="${filePath}?v=${version}"`;
+    const separator = filePath.includes('?') ? '&' : '?';
+    return `src="${filePath}${separator}v=${version}"`;
+  });
+  
+  // Update image files that might have versioning
+  const imgPattern = /src=["'](assets\/[^"']+\.(png|jpg|jpeg|svg|webp|gif))([?&]v=[^"']+)?["']/gi;
+  content = content.replace(imgPattern, (match, filePath, ext, existingVersion) => {
+    updated = true;
+    const separator = filePath.includes('?') ? '&' : '?';
+    return `src="${filePath}${separator}v=${version}"`;
   });
 
   // Add or update version meta tag
@@ -71,8 +93,15 @@ function updateHTMLFile(filePath, version) {
 
 // Main execution
 function main() {
-  const version = getGitVersion();
-  console.log(`🚀 Updating version to: ${version}\n`);
+  // Use timestamp-based version for better cache busting
+  const version = getVersion();
+  const gitVersion = getGitVersion();
+  
+  console.log(`🚀 Updating version to: ${version}`);
+  if (gitVersion) {
+    console.log(`   Git hash: ${gitVersion}`);
+  }
+  console.log('');
 
   const htmlFiles = [
     'quiz.html',

@@ -40,6 +40,7 @@ class ResultsUIController {
         this.results = null;
         this.charts = {};
         this.eventListenersSetup = false; // Flag to prevent duplicate listeners
+        this.isExporting = false; // Flag to prevent duplicate PDF downloads
         
         console.log('ResultsUIController initialized');
     }
@@ -1120,13 +1121,20 @@ class ResultsUIController {
             return;
         }
         
-        // Export button handler
+        // Export button handler - use once: true to prevent duplicate listeners
         if (this.elements.exportBtn) {
+            // Remove any existing listeners first
+            const newBtn = this.elements.exportBtn.cloneNode(true);
+            this.elements.exportBtn.parentNode.replaceChild(newBtn, this.elements.exportBtn);
+            this.elements.exportBtn = newBtn;
+            
+            // Add single event listener
             this.elements.exportBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                e.stopImmediatePropagation(); // Prevent other handlers
                 this.exportResults();
-            }, { once: false });
+            }, { once: false, passive: false });
         }
         
         // Retake button handler
@@ -1141,10 +1149,24 @@ class ResultsUIController {
     }
     
     exportResults() {
+        // Prevent duplicate downloads
+        if (this.isExporting) {
+            console.log('PDF export already in progress, ignoring duplicate request');
+            return;
+        }
+        
         if (typeof window.jspdf === 'undefined') {
             alert('PDF library not loaded. Please refresh the page and try again.');
             return;
         }
+
+        // Set flag to prevent duplicate calls
+        this.isExporting = true;
+        
+        // Reset flag after a short delay to allow download to complete
+        setTimeout(() => {
+            this.isExporting = false;
+        }, 2000);
 
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF('p', 'mm', 'a4');
@@ -1658,7 +1680,9 @@ class ResultsUIController {
         const reportId = Date.now().toString().slice(-8);
         const fileName = `NeuroQuiz-Report-${userName.replace(/\s+/g, '-')}-${timestamp}-${reportId}.pdf`;
         
+        // Save PDF and reset flag
         doc.save(fileName);
+        this.isExporting = false;
     }
     
     // toggleReview() method removed - review section no longer displayed

@@ -3,8 +3,28 @@
  * Offline Caching and Performance Optimization
  */
 
-const CACHE_NAME = 'neuroquiz-v1';
-const CACHE_VERSION = '1.0.0';
+// Use timestamp for cache versioning to force cache refresh on updates
+// This will be updated when version changes
+const CACHE_VERSION = '1.0.1-' + Date.now();
+const CACHE_NAME = 'neuroquiz-' + CACHE_VERSION;
+
+// Get app version from meta tag (if available)
+function getAppVersion() {
+  // This will be checked on each request
+  return null; // Will be set dynamically
+}
+
+// Development mode: Set to true to disable caching during development
+// Change this to true when developing to bypass all caching
+const DEV_MODE = false; // Set to true when developing to bypass cache
+
+// Helper: Clear all caches (useful for development)
+async function clearAllCaches() {
+  const cacheNames = await caches.keys();
+  await Promise.all(cacheNames.map(name => caches.delete(name)));
+  console.log('[Service Worker] All caches cleared');
+  return cacheNames;
+}
 
 // Assets to cache on install
 const STATIC_ASSETS = [
@@ -82,22 +102,35 @@ self.addEventListener('fetch', event => {
     return;
   }
   
-  // Strategy: Cache First for static assets, Network First for HTML
+  // Development mode: Always fetch from network, bypass cache
+  if (DEV_MODE) {
+    event.respondWith(fetch(request, { cache: 'no-store' }));
+    return;
+  }
+  
+  // Check for version parameter in URL - if version changes, bypass cache
+  const urlVersion = url.searchParams.get('v');
+  const hasVersionParam = urlVersion !== null;
+  
+  // Strategy: Network First for HTML (always get fresh content), Cache First for static assets
   if (request.destination === 'document' || 
       request.destination === '' ||
       url.pathname.endsWith('.html')) {
-    // HTML: Network First, fallback to cache
+    // HTML: Network First with cache-busting, fallback to cache
+    // Always fetch fresh HTML to check for version updates
     event.respondWith(
-      fetch(request)
+      fetch(request, { cache: 'no-store' })
         .then(response => {
-          // Clone the response
-          const responseToCache = response.clone();
-          
-          // Cache successful responses
-          if (response.status === 200) {
+          // Only cache if response is valid
+          if (response && response.status === 200 && response.type === 'basic') {
+            const responseToCache = response.clone();
             caches.open(CACHE_NAME)
               .then(cache => {
+                // Store with original URL
                 cache.put(request, responseToCache);
+              })
+              .catch(err => {
+                console.error('[Service Worker] Cache put failed:', err);
               });
           }
           
@@ -117,33 +150,55 @@ self.addEventListener('fetch', event => {
         })
     );
   } else {
-    // Static assets: Cache First, fallback to network
-    event.respondWith(
-      caches.match(request)
-        .then(cachedResponse => {
-          if (cachedResponse) {
-            return cachedResponse;
-          }
-          
-          // Not in cache, fetch from network
-          return fetch(request)
-            .then(response => {
-              // Don't cache if not a valid response
-              if (!response || response.status !== 200 || response.type !== 'basic') {
-                return response;
-              }
-              
-              // Clone the response
+    // Static assets: Network First if versioned, Cache First otherwise
+    // If URL has version parameter, always fetch fresh
+    if (hasVersionParam) {
+      event.respondWith(
+        fetch(request, { cache: 'no-store' })
+          .then(response => {
+            // Cache the fresh response
+            if (response && response.status === 200 && response.type === 'basic') {
               const responseToCache = response.clone();
-              
-              // Cache the response
               caches.open(CACHE_NAME)
                 .then(cache => {
                   cache.put(request, responseToCache);
                 });
-              
-              return response;
-            })
+            }
+            return response;
+          })
+          .catch(() => {
+            // Fallback to cache if network fails
+            return caches.match(request);
+          })
+      );
+    } else {
+      // No version param: Cache First, fallback to network
+      event.respondWith(
+        caches.match(request)
+          .then(cachedResponse => {
+            if (cachedResponse) {
+              return cachedResponse;
+            }
+            
+            // Not in cache, fetch from network
+            return fetch(request)
+              .then(response => {
+                // Don't cache if not a valid response
+                if (!response || response.status !== 200 || response.type !== 'basic') {
+                  return response;
+                }
+                
+                // Clone the response
+                const responseToCache = response.clone();
+                
+                // Cache the response
+                caches.open(CACHE_NAME)
+                  .then(cache => {
+                    cache.put(request, responseToCache);
+                  });
+                
+                return response;
+              })
             .catch(() => {
               // Network failed and not in cache
               // Return placeholder if image, or fail gracefully
@@ -168,10 +223,24 @@ self.addEventListener('message', event => {
   
   if (event.data && event.data.type === 'CLEAR_CACHE') {
     event.waitUntil(
-      caches.keys().then(cacheNames => {
-        return Promise.all(
-          cacheNames.map(cacheName => caches.delete(cacheName))
-        );
+      clearAllCaches().then(() => {
+        // Notify all clients that cache was cleared
+        return self.clients.matchAll().then(clients => {
+          clients.forEach(client => {
+            client.postMessage({ type: 'CACHE_CLEARED' });
+          });
+        });
+      })
+    );
+  }
+  
+  if (event.data && event.data.type === 'FORCE_RELOAD') {
+    // Force reload all clients
+    event.waitUntil(
+      self.clients.matchAll().then(clients => {
+        clients.forEach(client => {
+          client.postMessage({ type: 'FORCE_RELOAD' });
+        });
       })
     );
   }

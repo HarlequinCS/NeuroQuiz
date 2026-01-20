@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="app-version" content="f12c9c0">
+    <meta name="app-version" content="20260120-224655-mkmpjjxb">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -33,10 +33,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo favicon-16x16.png">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/theme.css?v=f12c9c0">
-    <link rel="stylesheet" href="css/layout.css?v=f12c9c0">
-    <link rel="stylesheet" href="css/animations.css?v=f12c9c0">
-    <link rel="stylesheet" href="css/about.css?v=f12c9c0">
+    <link rel="stylesheet" href="css/theme.css?v=20260120-224655-mkmpjjxb">
+    <link rel="stylesheet" href="css/layout.css?v=20260120-224655-mkmpjjxb">
+    <link rel="stylesheet" href="css/animations.css?v=20260120-224655-mkmpjjxb">
+    <link rel="stylesheet" href="css/about.css?v=20260120-224655-mkmpjjxb">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
@@ -71,7 +71,7 @@
             <div class="nav-container">
                 <div class="logo-container">
                     <a href="index.html" class="logo-link">
-                        <img src="assets/images/Logo.svg" alt="NeuroQuiz Logo" class="logo">
+                        <img src="assets/images/Logo.svg?v=20260120-224655-mkmpjjxb" alt="NeuroQuiz Logo" class="logo">
                     </a>
                 </div>
                 <!-- Language Selector (Desktop) - In Header -->
@@ -184,6 +184,221 @@
 
             <hr style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
 
+            <!-- Our Story Section -->
+            <section class="our-story-section" id="our-story-section" style="padding: var(--spacing-2xl) 0;">
+                <div class="story-container">
+                    <!-- Section Header -->
+                    <div class="story-header">
+                        <h2 class="story-title" data-i18n="about.ourStory">Our Story</h2>
+                        <p class="story-subtitle" data-i18n="about.storySubtitle">A journey from frustration to innovation</p>
+                    </div>
+
+                    <!-- The Problem -->
+                    <div class="story-timeline">
+                        <div class="timeline-item scroll-reveal">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-badge" data-i18n="about.timelineBeginning">The Beginning</div>
+                                <h3 class="timeline-title" data-i18n="about.problemTitle">The Problem We Couldn't Ignore</h3>
+                                <p class="timeline-text" data-i18n="about.problemText">
+                                    It started in a classroom at UiTM Jasin. We were students, and we were frustrated. 
+                                    Every learning platform treated us the same—same questions, same pace, same approach. 
+                                    The one-size-fits-all model wasn't working. Learning shouldn't feel like a chore. 
+                                    We knew there had to be a better way.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- The Aha! Moment -->
+                        <div class="timeline-item scroll-reveal">
+                            <div class="timeline-marker aha-marker"></div>
+                            <div class="timeline-content">
+                                <div class="aha-moment-card">
+                                    <div class="aha-icon">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="aha-badge" data-i18n="about.ahaBadge">The "Aha!" Moment</div>
+                                    <h3 class="aha-title" data-i18n="about.ahaTitle">Late-Night Coding, Early Morning Realization</h3>
+                                    <p class="aha-text" data-i18n="about.ahaText">
+                                        It was 2 AM. Coffee cups stacked high. Code scattered across screens. 
+                                        That's when it hit us: <strong>"What if a quiz could think like a tutor?"</strong> 
+                                        What if it could see when you're struggling and offer easier questions? 
+                                        Or recognize when you're excelling and challenge you more? 
+                                        That simple question sparked everything.
+                                    </p>
+                                    <div class="aha-quote">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                                        </svg>
+                                        <p data-i18n="about.ahaQuote">We were obsessed with the 'Why'. Why do some students struggle while others excel? Why do traditional quizzes fail to adapt? The answer: they don't understand how the human brain actually learns.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Built on Shoulders of Giants -->
+                        <div class="timeline-item scroll-reveal">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-badge" data-i18n="about.timelineFoundation">The Foundation</div>
+                                <h3 class="timeline-title" data-i18n="about.giantsTitle">Built on the Shoulders of Giants</h3>
+                                <p class="timeline-text" data-i18n="about.giantsIntro">
+                                    We didn't build this in a vacuum. NeuroQuiz™ stands on decades of research 
+                                    from cognitive science and educational psychology. Here are the minds that shaped our thinking:
+                                </p>
+                                
+                                <div class="giants-grid">
+                                    <div class="giant-card">
+                                        <div class="giant-icon">
+                                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                                <path d="M2 17l10 5 10-5"></path>
+                                                <path d="M2 12l10 5 10-5"></path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="giant-name">John Sweller</h4>
+                                        <p class="giant-role" data-i18n="about.swellerRole">Cognitive Load Theory</p>
+                                        <p class="giant-impact" data-i18n="about.swellerImpact">Optimal challenge, zero overwhelm</p>
+                                    </div>
+
+                                    <div class="giant-card">
+                                        <div class="giant-icon">
+                                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <path d="M12 6v6l4 2"></path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="giant-name">Kikumi Tatsuoka</h4>
+                                        <p class="giant-role" data-i18n="about.tatsuokaRole">Rule Space Method</p>
+                                        <p class="giant-impact" data-i18n="about.tatsuokaImpact">Diagnosis beyond scoring</p>
+                                    </div>
+
+                                    <div class="giant-card">
+                                        <div class="giant-icon">
+                                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 22"></path>
+                                                <path d="M21 12h-3l-2-5a2.5 2.5 0 0 1 2.83-3.5"></path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="giant-name">Adele Diamond</h4>
+                                        <p class="giant-role" data-i18n="about.diamondRole">Executive Functions</p>
+                                        <p class="giant-impact" data-i18n="about.diamondImpact">Cognitive skills assessment</p>
+                                    </div>
+
+                                    <div class="giant-card">
+                                        <div class="giant-icon">
+                                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="giant-name">Ben Shneiderman</h4>
+                                        <p class="giant-role" data-i18n="about.shneidermanRole">Interface Design</p>
+                                        <p class="giant-impact" data-i18n="about.shneidermanImpact">Eight golden rules</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- The Build -->
+                        <div class="timeline-item scroll-reveal">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-badge" data-i18n="about.timelineBuild">The Build</div>
+                                <h3 class="timeline-title" data-i18n="about.buildTitle">Privacy-First, Client-Side Engineering</h3>
+                                <p class="timeline-text" data-i18n="about.buildText">
+                                    We made a choice early on: <strong>no backend, no servers, no data collection.</strong> 
+                                    Everything runs in your browser. Your data never leaves your device. 
+                                    This isn't just about privacy—it's about trust. Learning is personal, 
+                                    and your cognitive profile should stay personal too.
+                                </p>
+                                <div class="build-highlights">
+                                    <div class="highlight-item">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                        </svg>
+                                        <span data-i18n="about.highlight1">100% Client-Side Processing</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                        </svg>
+                                        <span data-i18n="about.highlight2">Zero Data Transmission</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                        </svg>
+                                        <span data-i18n="about.highlight3">Your Device, Your Control</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team ChendAwan -->
+                        <div class="timeline-item scroll-reveal">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-badge" data-i18n="about.timelineTeam">The Team</div>
+                                <h3 class="timeline-title" data-i18n="about.teamTitle">Team NeuroQuiz: Collaboration Over Ego</h3>
+                                <p class="timeline-text" data-i18n="about.teamText">
+                                    We're students at UiTM Jasin, but we think like founders. 
+                                    Every line of code was debated. Every design decision was questioned. 
+                                    We built this together late nights, early mornings, countless iterations. 
+                                    No one person owns this. We all do.
+                                </p>
+                                <div class="team-values">
+                                    <div class="value-item">
+                                        <div class="value-icon">🤝</div>
+                                        <h4 data-i18n="about.value1Title">Collaboration</h4>
+                                        <p data-i18n="about.value1Desc">We build together, we learn together</p>
+                                    </div>
+                                    <div class="value-item">
+                                        <div class="value-icon">🔬</div>
+                                        <h4 data-i18n="about.value2Title">Research-Driven</h4>
+                                        <p data-i18n="about.value2Desc">Every feature backed by science</p>
+                                    </div>
+                                    <div class="value-item">
+                                        <div class="value-icon">🎯</div>
+                                        <h4 data-i18n="about.value3Title">User-First</h4>
+                                        <p data-i18n="about.value3Desc">Your experience is our mission</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- The Future -->
+                        <div class="timeline-item scroll-reveal">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-badge" data-i18n="about.timelineFuture">The Future</div>
+                                <h3 class="timeline-title" data-i18n="about.futureTitle">This Is Just the Beginning</h3>
+                                <p class="timeline-text" data-i18n="about.futureText">
+                                    NeuroQuiz™ isn't finished. It's evolving. Every user teaches us something new. 
+                                    Every session improves our algorithms. We're building the future of adaptive learning, 
+                                    one question at a time. And we're doing it from a small campus in Jasin, 
+                                    proving that great ideas don't need big budgets—they need passion, research, and coffee.
+                                </p>
+                                <div class="future-note">
+                                    <p data-i18n="about.futureNote">
+                                        <strong>Version 1.0.0</strong> • Released January 2026 • 
+                                        Developed at Universiti Teknologi Mara Cawangan Melaka Kampus Jasin
+                                    </p>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr style="border: 0; border-top: 1px solid var(--color-border); margin: var(--spacing-2xl) 0;">
+
 
            <section class="tech-section" style="padding: var(--spacing-2xl) 0;">
     <h2 class="text-tertiary" style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.875rem; margin-bottom: var(--spacing-lg);" data-i18n="about.techStack">The Tech Stack</h2>
@@ -236,42 +451,42 @@
         <div class="team-grid">
             <div class="team-member question-card">
                 <div class="avatar-frame">
-                    <img src="assets/images/saiful.jpg" alt="Saiful Iqbal - Project Lead">
+                    <img src="assets/images/saiful.jpg?v=20260120-224655-mkmpjjxb" alt="Saiful Iqbal - Project Lead">
                 </div>
                 <h3 class="text-primary">SAIFUL IQBAL</h3>
-                <p class="text-tertiary" data-i18n="about.projectLead">Project Lead / Developer</p>
+                <p class="text-tertiary" data-i18n="about.projectLead">Lead Architect & Engine Developer</p>
             </div>
 
             <div class="team-member question-card">
                 <div class="avatar-frame">
-                    <img src="assets/images/khai.jpg" alt="Khair Izz Khan - Developer">
+                    <img src="assets/images/khai.jpg?v=20260120-224655-mkmpjjxb" alt="Khair Izz Khan - Developer">
                 </div>
                 <h3 class="text-primary">KHAIR IZZ KHAN</h3>
-                <p class="text-tertiary" data-i18n="about.developer">Developer</p>
+                <p class="text-tertiary" data-i18n="about.developer">UI/UX Engineer & Frontend Specialist</p>
             </div>
 
             <div class="team-member question-card">
                 <div class="avatar-frame">
-                    <img src="assets/images/aiman.jpg" alt="Muhammad Aiman - Developer">
+                    <img src="assets/images/aiman.jpg?v=20260120-224655-mkmpjjxb" alt="Muhammad Aiman - Developer">
                 </div>
                 <h3 class="text-primary">MUHAMMAD AIMAN</h3>
-                <p class="text-tertiary" data-i18n="about.developer">Developer</p>
+                <p class="text-tertiary" data-i18n="about.developer2">Core Systems & Logic Engineer</p>
             </div>
 
             <div class="team-member question-card">
                 <div class="avatar-frame">
-                    <img src="assets/images/jannah.jpg" alt="Nurul Jannah - Developer">
+                    <img src="assets/images/jannah.jpg?v=20260120-224655-mkmpjjxb" alt="Nurul Jannah - Developer">
                 </div>
                 <h3 class="text-primary">NURUL JANNAH</h3>
-                <p class="text-tertiary" data-i18n="about.developer">Developer</p>
+                <p class="text-tertiary" data-i18n="about.developer3">Content Architect & UX Researcher</p>
             </div>
 
             <div class="team-member question-card">
                 <div class="avatar-frame">
-                    <img src="assets/images/nisa.jpg" alt="Alya Hanisah - Developer">
+                    <img src="assets/images/nisa.jpg?v=20260120-224655-mkmpjjxb" alt="Alya Hanisah - Developer">
                 </div>
                 <h3 class="text-primary">ALYA HANISAH</h3>
-                <p class="text-tertiary" data-i18n="about.developer">Developer</p>
+                <p class="text-tertiary" data-i18n="about.developer4">Interaction Designer & Quality Lead</p>
             </div>
         </div>
 
@@ -334,17 +549,21 @@
     </div>
 
     <!-- Load translations first, then language controller -->
-    <script src="js/translations.js?v=f12c9c0"></script>
+    <script src="js/translations.js?v=20260120-224655-mkmpjjxb"></script>
     <script>
         // Ensure translations are loaded before language.js
         if (typeof TRANSLATIONS === 'undefined') {
             console.warn('Translations not found. Make sure translations.js loads before language.js');
         }
     </script>
-    <script src="js/language.js?v=f12c9c0"></script>
-    <script src="js/theme.js?v=f12c9c0"></script>
-    <script src="js/mobile-menu.js?v=f12c9c0"></script>
-    <script src="js/about.js?v=f12c9c0"></script>
+    <script src="js/language.js?v=20260120-224655-mkmpjjxb"></script>
+    <script src="js/theme.js?v=20260120-224655-mkmpjjxb"></script>
+    <script src="js/mobile-menu.js?v=20260120-224655-mkmpjjxb"></script>
+    <script src="js/about.js?v=20260120-224655-mkmpjjxb"></script>
+    <!-- Cache utilities for development -->
+    <script src="js/cache-utils.js?v=20260120-224655-mkmpjjxb"></script>
+    <!-- Version checker - ensures latest version is always loaded -->
+    <script src="js/version-checker.js?v=20260120-224655-mkmpjjxb"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const themeInputs = document.querySelectorAll('input[name="theme"]');

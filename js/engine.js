@@ -271,8 +271,9 @@ class QuizEngine {
             correctCount: 0,
             wrongCount: 0,
             totalAnswered: 0,
-            displayedStreak: 0,  // Never resets, continues across difficulty changes, shown to user
-            expertStreak: 0,     // Only counts in Expert difficulty, resets when leaving Expert or first wrong in Expert
+            displayedStreak: 0,  // Never resets on difficulty change, only on wrong answer
+            expertStreak: 0,     // Only counts in Expert difficulty, resets when leaving Expert or wrong in Expert
+            wrongStreak: 0,      // NEW: Tracks consecutive wrong answers for 5-wrong drop rule
             hasDroppedLevel: false,
             dropCount: 0,
             promotionCount: 0,
@@ -283,10 +284,9 @@ class QuizEngine {
             currentQuestion: null,
             sessionStartMs: Date.now(),
             lastDifficultyIncreaseAtStreak: 0,
-            immediateDropTriggered: false,  // Track if immediate drop was triggered for current difficulty entry
-            questionsInCurrentDifficulty: 0,  // Questions answered in current difficulty entry
-            recoveryStreak: 0,  // Recovery streak in current difficulty (resets on wrong, must reach 7 to restore)
-            previousDifficulty: null  // Track previous difficulty for recovery logic
+            immediateDropDisabled: false,  // Session-based: disabled after first question (correct or wrong) OR if triggered
+            correctStreak: 0,  // Tracks consecutive correct answers for difficulty increase (5 = +1)
+            wrongStreak: 0  // Tracks consecutive wrong answers for difficulty decrease (5 = -1)
         };
         this.currentQuestionStartMs = null;
     }
@@ -349,10 +349,32 @@ class QuizEngine {
     }
 
     stripAnswer(question) {
+        // Shuffle options to prevent predictable patterns (e.g., longest answer always correct)
+        const options = [...question.options];
+        const originalCorrectIndex = question.correctIndex;
+        
+        // Create array of indices for shuffling
+        const indices = options.map((_, index) => index);
+        
+        // Fisher-Yates shuffle algorithm for true randomness
+        for (let i = indices.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [indices[i], indices[j]] = [indices[j], indices[i]];
+        }
+        
+        // Shuffle options array using the shuffled indices
+        const shuffledOptions = indices.map(index => options[index]);
+        
+        // Find new position of correct answer
+        const newCorrectIndex = indices.indexOf(originalCorrectIndex);
+        
+        // Update the question's correctIndex to match shuffled position
+        question.correctIndex = newCorrectIndex;
+        
         return {
             id: question.id,
             question: question.question,
-            options: [...question.options],
+            options: shuffledOptions,
             category: question.category,
             level: question.level,
             difficulty: question.difficulty,
@@ -397,9 +419,6 @@ class QuizEngine {
             this.state.displayedStreak = 0;
         }
         
-        // Increment questions answered in current difficulty entry
-        this.state.questionsInCurrentDifficulty += 1;
-        
         // Track difficulty before adjustment
         const difficultyBefore = this.state.currentDifficulty;
         const wasInExpertBefore = difficultyBefore === RBADA_CONSTANTS.MAX_DIFFICULTY;
@@ -410,40 +429,29 @@ class QuizEngine {
         // Track difficulty after adjustment
         const difficultyAfter = this.state.currentDifficulty;
         const isNowInExpert = difficultyAfter === RBADA_CONSTANTS.MAX_DIFFICULTY;
-        const difficultyChanged = difficultyAfter !== difficultyBefore;
         
-        // 3️⃣ EXPERT STREAK LOGIC: Only counts while in Expert, resets on leaving or first wrong
-        // Reset expert streak when entering Expert (new session starts at 0)
-        if (!wasInExpertBefore && isNowInExpert) {
-            this.state.expertStreak = 0; // Reset when entering Expert (recovery streaks don't count)
-        }
-        
+        // =====================================================================
+        // EXPERT STREAK LOGIC
+        // =====================================================================
+        // 1. Counts ONLY when difficulty === Expert
+        // 2. Increments on correct answers consecutively
+        // 3. Resets when: leaving Expert OR wrong answer in Expert
+        // =====================================================================
         if (isNowInExpert) {
             // In Expert difficulty
             if (isCorrect) {
-                // Increment expert streak for correct answers (recovery streaks don't affect this)
                 this.state.expertStreak += 1;
             } else {
-                // Reset expert streak on wrong answer in Expert
-                this.state.expertStreak = 0;
-                if (wasInExpertBefore) {
-                    // Only log if we were already in Expert (not just entered)
-                    logAdaptive('expert_streak_reset', {
-                        reason: 'wrong_answer_in_expert'
-                    });
-                }
-            }
-        } else {
-            // Not in Expert difficulty - reset expert streak when leaving
-            if (wasInExpertBefore && !isNowInExpert) {
+                // Wrong answer in Expert - reset streak
                 this.state.expertStreak = 0;
                 logAdaptive('expert_streak_reset', {
-                    reason: 'left_expert_difficulty'
+                    reason: 'wrong_answer_in_expert'
                 });
-            } else if (!wasInExpertBefore && !isNowInExpert) {
-                // Never was in Expert, ensure it's 0
-                this.state.expertStreak = 0;
             }
+        } else {
+            // Not in Expert - ensure expertStreak is 0
+            // (Reset handled in applyAdaptiveRules when leaving Expert)
+            this.state.expertStreak = 0;
         }
 
         this.state.totalTimeMs += timeTakenMs;
@@ -500,189 +508,206 @@ class QuizEngine {
     }
 
     applyAdaptiveRules(isCorrect) {
-        let difficultyDelta = 0;
         const before = {
             difficulty: this.state.currentDifficulty,
-            level: this.state.currentLevel,
-            displayedStreak: this.state.displayedStreak,
-            expertStreak: this.state.expertStreak,
-            dropCount: this.state.dropCount,
-            promotionCount: this.state.promotionCount
+            level: this.state.currentLevel
         };
 
-        // 1️⃣ IMMEDIATE DROP RULE: First wrong answer AFTER ENTERING ANY difficulty causes immediate drop
-        // Applies to ALL difficulties: Expert→Intermediate, Intermediate→Beginner
-        // Triggers once per difficulty entry
-        if (!this.state.immediateDropTriggered && !isCorrect && this.state.questionsInCurrentDifficulty === 1) {
-            const previousDifficulty = this.state.currentDifficulty;
-            
-            // Immediate drop to next lower difficulty
-            if (this.state.currentDifficulty > RBADA_CONSTANTS.MIN_DIFFICULTY) {
-                this.state.previousDifficulty = previousDifficulty; // Store for recovery tracking
-                this.state.currentDifficulty -= 1;
-                this.state.immediateDropTriggered = true; // Mark as triggered for this difficulty entry
-                this.state.questionsInCurrentDifficulty = 0; // Reset counter for new difficulty
-                this.state.recoveryStreak = 0; // Reset recovery streak (will start counting in new difficulty)
-                
-                logAdaptive('immediate_drop_rule', {
-                    fromDifficulty: previousDifficulty,
-                    toDifficulty: this.state.currentDifficulty,
-                    reason: 'first_wrong_after_entering_difficulty'
-                });
-                return; // Early return after immediate drop
-            }
-        }
+        // =====================================================================
+        // IMMEDIATE DROP RULE (SESSION-BASED)
+        // =====================================================================
+        // 1. Triggers ONLY on FIRST question of session if wrong
+        // 2. Can trigger ONLY ONCE per session
+        // 3. Permanently disabled after first question (correct OR wrong)
+        // 4. Affects LEVEL if difficulty would go below Beginner
+        // =====================================================================
+        const isFirstQuestion = this.state.totalAnswered === 1;
         
-        // Disable immediate drop flag after first answer (correct or wrong, if not triggered)
-        if (!this.state.immediateDropTriggered && this.state.questionsInCurrentDifficulty === 1) {
-            this.state.immediateDropTriggered = true; // Mark as processed (won't trigger again for this entry)
-        }
-
-        // 2️⃣ RECOVERY LOGIC (7-STREAK RULE): Track recovery streak separately
-        // After dropping, user must achieve 7 consecutive correct in current difficulty to return
-        // Recovery streak resets on wrong answer
-        // Ratio-based logic cannot promote until recovery is satisfied
-        const needsRecovery = this.state.previousDifficulty !== null && 
-                              this.state.previousDifficulty > this.state.currentDifficulty;
-        
-        if (needsRecovery) {
-            // User has dropped and needs to recover
-            if (isCorrect) {
-                this.state.recoveryStreak += 1;
-            } else {
-                // Reset recovery streak on wrong answer
-                this.state.recoveryStreak = 0;
-            }
-            
-            // Only promote back if recovery streak reaches 7
-            if (this.state.recoveryStreak >= 7) {
-                const currentDifficultyBeforeRecovery = this.state.currentDifficulty;
-                difficultyDelta = 1; // Promote back to previous difficulty
-                this.state.previousDifficulty = null; // Clear recovery tracking
-                this.state.recoveryStreak = 0; // Reset recovery streak
+        if (isFirstQuestion && !this.state.immediateDropDisabled) {
+            if (!isCorrect) {
+                // First question wrong - immediate drop
+                const previousDifficulty = this.state.currentDifficulty;
+                const previousLevel = this.state.currentLevel;
                 
-                logAdaptive('recovery_7_streak', {
-                    recoveryStreak: 7,
-                    fromDifficulty: currentDifficultyBeforeRecovery,
-                    toDifficulty: this.state.currentDifficulty + difficultyDelta,
-                    reason: '7_consecutive_correct_recovery'
-                });
-            } else {
-                // Do NOT allow ratio-based promotion until recovery is satisfied
-                // Block normal difficulty increase - user must complete 7-streak recovery first
-                difficultyDelta = 0; // No change until recovery complete
-            }
-        } else {
-            // 4️⃣ NORMAL DIFFICULTY ADJUSTMENT LOGIC (no recovery needed)
-            // Only apply if immediate drop was not triggered
-            if (this.state.immediateDropTriggered || this.state.questionsInCurrentDifficulty > 1) {
-                // Normal difficulty increase on correct answers
-                if (isCorrect) {
-                    difficultyDelta = 1;
-                } else {
-                    // Normal difficulty decrease on wrong answers
-                    difficultyDelta = -1;
+                if (this.state.currentDifficulty > RBADA_CONSTANTS.MIN_DIFFICULTY) {
+                    // Drop difficulty by 1
+                    this.state.currentDifficulty -= 1;
                     
-                    // Additional decrease if ratio is very low
-                    const ratio = this.state.wrongCount === 0 ? Infinity : this.state.correctCount / this.state.wrongCount;
-                    if (ratio <= (1 / 9)) {
-                        difficultyDelta = -1;
+                    logAdaptive('immediate_drop_rule', {
+                        fromDifficulty: previousDifficulty,
+                        toDifficulty: this.state.currentDifficulty,
+                        fromLevel: previousLevel,
+                        toLevel: this.state.currentLevel,
+                        reason: 'first_question_wrong_session'
+                    });
+                } else {
+                    // At Beginner - drop LEVEL by 1 and set difficulty to Expert
+                    if (this.state.currentLevel > RBADA_CONSTANTS.MIN_LEVEL) {
+                        this.state.currentLevel -= 1;
+                        this.state.currentDifficulty = RBADA_CONSTANTS.MAX_DIFFICULTY; // Expert
+                        this.state.hasDroppedLevel = true;
+                        this.state.dropCount += 1;
+                        this.state.expertStreak = 0; // Reset when leaving Expert
+                        
+                        logAdaptive('immediate_drop_rule_level', {
+                            fromDifficulty: previousDifficulty,
+                            toDifficulty: this.state.currentDifficulty,
+                            fromLevel: previousLevel,
+                            toLevel: this.state.currentLevel,
+                            reason: 'first_question_wrong_at_beginner_drop_level'
+                        });
                     }
                 }
+                
+                // Permanently disable immediate drop for session
+                this.state.immediateDropDisabled = true;
+                
+                // Reset streaks after immediate drop
+                this.state.correctStreak = 0;
+                this.state.wrongStreak = 0;
+                
+                return; // Early return - no further processing
+            } else {
+                // First question correct - disable immediate drop permanently
+                this.state.immediateDropDisabled = true;
             }
         }
 
-        difficultyDelta = clamp(difficultyDelta, -1, 1);
-
-        let nextDifficulty = this.state.currentDifficulty + difficultyDelta;
-
-        if (nextDifficulty < RBADA_CONSTANTS.MIN_DIFFICULTY) {
-            const previousLevel = this.state.currentLevel;
-            const previousDifficulty = this.state.currentDifficulty;
+        // =====================================================================
+        // NORMAL GAME LOGIC (STREAK-ONLY, AFTER IMMEDIATE DROP DISABLED)
+        // =====================================================================
+        // 1. Difficulty UP: 5 consecutive correct → difficulty +1
+        // 2. Difficulty DOWN: 5 consecutive wrong → difficulty -1
+        // 3. If difficulty < Beginner: Level -1, Difficulty = Expert
+        // 4. If difficulty > Expert: Clamp to Expert
+        // 5. NO recovery logic - just normal streak logic
+        // =====================================================================
+        
+        // Track streaks
+        if (isCorrect) {
+            this.state.correctStreak += 1;
+            this.state.wrongStreak = 0; // Reset wrong streak on correct
+        } else {
+            this.state.wrongStreak += 1;
+            this.state.correctStreak = 0; // Reset correct streak on wrong
+        }
+        
+        let difficultyDelta = 0;
+        
+        // Difficulty UP: 5 consecutive correct
+        if (this.state.correctStreak >= 5) {
+            difficultyDelta = 1;
             
-            // Drop level by 1 and set difficulty to Expert (MAX_DIFFICULTY)
-            this.state.currentLevel = clamp(this.state.currentLevel - 1, RBADA_CONSTANTS.MIN_LEVEL, RBADA_CONSTANTS.MAX_LEVEL);
-            this.state.dropCount += 1;
-            this.state.hasDroppedLevel = true;
-            nextDifficulty = RBADA_CONSTANTS.MAX_DIFFICULTY; // Set to Expert when dropping level
-            
-            // Reset expert streak when leaving Expert (even if going to Expert in lower level)
-            // This ensures expert streak only counts in the current Expert session
-            this.state.expertStreak = 0;
-            
-            if (this.state.currentLevel > previousLevel) {
-                this.state.currentLevel = previousLevel;
-            }
-            
-            logAdaptive('level_drop', {
-                fromLevel: previousLevel,
-                toLevel: this.state.currentLevel,
-                fromDifficulty: previousDifficulty,
-                toDifficulty: nextDifficulty,
-                reason: 'difficulty_below_min_drop_to_expert',
-                displayedStreak: this.state.displayedStreak,
-                expertStreak: this.state.expertStreak,
-                dropCount: this.state.dropCount
+            logAdaptive('difficulty_increase_5_correct', {
+                fromDifficulty: this.state.currentDifficulty,
+                toDifficulty: this.state.currentDifficulty + difficultyDelta,
+                reason: '5_consecutive_correct_answers'
             });
         }
-
-        // Track difficulty changes for immediate drop rule reset
-        const difficultyChanged = nextDifficulty !== before.difficulty;
         
-        // When difficulty changes, reset immediate drop flag for new difficulty entry
-        if (difficultyChanged) {
-            this.state.immediateDropTriggered = false; // Reset flag for new difficulty entry
-            this.state.questionsInCurrentDifficulty = 0; // Reset counter for new difficulty
+        // Difficulty DOWN: 5 consecutive wrong
+        if (this.state.wrongStreak >= 5) {
+            difficultyDelta = -1;
             
-            // If difficulty increased (promoted), clear recovery tracking
-            if (nextDifficulty > before.difficulty) {
-                this.state.previousDifficulty = null;
-                this.state.recoveryStreak = 0;
-            }
-            
-            // If difficulty decreased (dropped via normal adjustment), store previous difficulty for recovery
-            if (nextDifficulty < before.difficulty && this.state.previousDifficulty === null) {
-                this.state.previousDifficulty = before.difficulty;
-                this.state.recoveryStreak = 0; // Start recovery streak tracking
+            logAdaptive('difficulty_decrease_5_wrong', {
+                fromDifficulty: this.state.currentDifficulty,
+                toDifficulty: this.state.currentDifficulty + difficultyDelta,
+                reason: '5_consecutive_wrong_answers'
+            });
+        }
+        
+        // Apply difficulty change
+        let nextDifficulty = this.state.currentDifficulty + difficultyDelta;
+        
+        // Handle difficulty below Beginner: Drop level
+        if (nextDifficulty < RBADA_CONSTANTS.MIN_DIFFICULTY) {
+            if (this.state.currentLevel > RBADA_CONSTANTS.MIN_LEVEL) {
+                const previousLevel = this.state.currentLevel;
+                this.state.currentLevel -= 1;
+                this.state.hasDroppedLevel = true;
+                this.state.dropCount += 1;
+                nextDifficulty = RBADA_CONSTANTS.MAX_DIFFICULTY; // Set to Expert
+                this.state.expertStreak = 0; // Reset when leaving Expert
+                
+                logAdaptive('level_drop_5_wrong', {
+                    fromLevel: previousLevel,
+                    toLevel: this.state.currentLevel,
+                    fromDifficulty: this.state.currentDifficulty,
+                    toDifficulty: nextDifficulty,
+                    reason: '5_wrong_at_beginner_drop_level'
+                });
+            } else {
+                // Already at minimum level - clamp difficulty to Beginner
+                nextDifficulty = RBADA_CONSTANTS.MIN_DIFFICULTY;
             }
         }
-
-        this.state.currentDifficulty = clamp(nextDifficulty, RBADA_CONSTANTS.MIN_DIFFICULTY, RBADA_CONSTANTS.MAX_DIFFICULTY);
         
-        // Log only significant difficulty changes (not every answer)
-        if (this.state.currentDifficulty !== before.difficulty && !(isCorrect && this.state.recoveryStreak >= 7 && difficultyDelta === 1)) {
-            const ratio = this.state.wrongCount === 0 ? Infinity : this.state.correctCount / this.state.wrongCount;
-            let reason = 'normal_adjustment';
-            if (ratio <= (1 / 9)) {
-                reason = 'low_correct_wrong_ratio';
-            } else if (isCorrect) {
-                reason = 'correct_answer_increase';
-            } else {
-                reason = 'wrong_answer_decrease';
+        // Clamp difficulty to valid range
+        nextDifficulty = clamp(nextDifficulty, RBADA_CONSTANTS.MIN_DIFFICULTY, RBADA_CONSTANTS.MAX_DIFFICULTY);
+        
+        // Track difficulty change for streak reset and expert streak reset
+        const difficultyChanged = nextDifficulty !== before.difficulty;
+        
+        // Reset streaks ONLY if difficulty actually changed
+        if (difficultyChanged) {
+            if (difficultyDelta > 0) {
+                // Difficulty increased - reset correct streak
+                this.state.correctStreak = 0;
+            } else if (difficultyDelta < 0) {
+                // Difficulty decreased - reset wrong streak
+                this.state.wrongStreak = 0;
+            }
+        } else {
+            // Difficulty didn't change (clamped) - reset the streak that triggered the attempt
+            if (difficultyDelta > 0 && this.state.correctStreak >= 5) {
+                // At Expert, tried to increase - reset correct streak
+                this.state.correctStreak = 0;
+            } else if (difficultyDelta < 0 && this.state.wrongStreak >= 5) {
+                // At Beginner (min level), tried to decrease - reset wrong streak
+                this.state.wrongStreak = 0;
+            }
+        }
+        
+        // If leaving Expert, reset expertStreak
+        if (difficultyChanged && before.difficulty === RBADA_CONSTANTS.MAX_DIFFICULTY && nextDifficulty !== RBADA_CONSTANTS.MAX_DIFFICULTY) {
+            this.state.expertStreak = 0;
+            logAdaptive('expert_streak_reset', {
+                reason: 'left_expert_difficulty'
+            });
+        }
+        
+        // If entering Expert, ensure expertStreak starts at 0 (will be incremented in submitAnswer if correct)
+        if (difficultyChanged && before.difficulty !== RBADA_CONSTANTS.MAX_DIFFICULTY && nextDifficulty === RBADA_CONSTANTS.MAX_DIFFICULTY) {
+            this.state.expertStreak = 0;
+        }
+        
+        this.state.currentDifficulty = nextDifficulty;
+        
+        // Log difficulty change
+        if (difficultyChanged) {
+            let reason = 'unknown';
+            if (difficultyDelta > 0) {
+                reason = '5_correct_streak';
+            } else if (difficultyDelta < 0) {
+                reason = '5_wrong_streak';
+            } else if (this.state.currentLevel < before.level) {
+                reason = 'level_drop';
             }
             
             logAdaptive('difficulty_change', {
                 from: before.difficulty,
                 to: this.state.currentDifficulty,
+                fromLevel: before.level,
+                toLevel: this.state.currentLevel,
                 reason: reason
             });
-        }
-
-        // Level promotion based on displayed streak (not expert streak)
-        if (this.state.hasDroppedLevel && this.state.displayedStreak >= 7) {
-            const previousLevel = this.state.currentLevel;
-            this.state.currentLevel = clamp(this.state.currentLevel + 1, RBADA_CONSTANTS.MIN_LEVEL, RBADA_CONSTANTS.MAX_LEVEL);
-            if (this.state.currentLevel > previousLevel) {
-                this.state.hasDroppedLevel = false;
-                this.state.promotionCount += 1;
-                logAdaptive('level_promotion', {
-                    fromLevel: previousLevel,
-                    toLevel: this.state.currentLevel,
-                    reason: 'recovery_displayed_streak',
-                    promotionCount: this.state.promotionCount,
-                    displayedStreak: this.state.displayedStreak
-                });
-            }
+        } else if (difficultyDelta !== 0) {
+            // Difficulty attempted to change but was clamped
+            logAdaptive('difficulty_clamped', {
+                attemptedDelta: difficultyDelta,
+                currentDifficulty: this.state.currentDifficulty,
+                reason: difficultyDelta > 0 ? 'at_max_expert' : 'at_min_beginner'
+            });
         }
     }
 
@@ -693,7 +718,31 @@ class QuizEngine {
     }
 
     upgradeLevel() {
-        // Upgrade to next level with Beginner difficulty (difficulty 1)
+        // 6️⃣ LEVEL-UP OFFER LOGIC (FIXED)
+        // Triggers ONLY in Expert difficulty
+        // Triggers every 10 expertStreak (10, 20, 30, etc.)
+        // If user declines, offer reappears at next 10-streak milestone
+        
+        // Only allow if in Expert difficulty
+        if (this.state.currentDifficulty !== RBADA_CONSTANTS.MAX_DIFFICULTY) {
+            return {
+                success: false,
+                reason: 'not_in_expert_difficulty',
+                currentDifficulty: this.state.currentDifficulty
+            };
+        }
+        
+        // Check if expertStreak is at a 10-milestone
+        if (this.state.expertStreak < 10 || this.state.expertStreak % 10 !== 0) {
+            return {
+                success: false,
+                reason: 'expert_streak_not_at_milestone',
+                currentStreak: this.state.expertStreak,
+                nextMilestone: Math.ceil(this.state.expertStreak / 10) * 10
+            };
+        }
+        
+        // Level-up offer available - proceed with upgrade
         const previousLevel = this.state.currentLevel;
         const previousDifficulty = this.state.currentDifficulty;
         
@@ -702,13 +751,19 @@ class QuizEngine {
             this.state.currentDifficulty = RBADA_CONSTANTS.MIN_DIFFICULTY; // Beginner difficulty
             this.state.promotionCount += 1;
             
-            logAdaptive('level_upgrade_offer', {
+            // Reset streaks after level-up
+            this.state.correctStreak = 0;
+            this.state.wrongStreak = 0;
+            this.state.expertStreak = 0; // Reset after level-up
+            // Do NOT reset immediateDropDisabled - it's session-based
+            
+            logAdaptive('level_upgrade_offer_accepted', {
                 fromLevel: previousLevel,
                 toLevel: this.state.currentLevel,
                 fromDifficulty: previousDifficulty,
                 toDifficulty: this.state.currentDifficulty,
-                reason: 'streak_10_expert_upgrade',
-                streak: this.state.streak
+                expertStreak: this.state.expertStreak,
+                reason: 'expert_streak_milestone_reached'
             });
             
             return {
@@ -736,6 +791,9 @@ class QuizEngine {
             streak: this.state.displayedStreak,  // Return displayed streak for UI compatibility
             displayedStreak: this.state.displayedStreak,  // Explicit displayed streak
             expertStreak: this.state.expertStreak,  // Expert streak for upgrade offer logic
+            correctStreak: this.state.correctStreak,  // Consecutive correct for difficulty increase
+            wrongStreak: this.state.wrongStreak,  // Consecutive wrong for difficulty decrease
+            immediateDropDisabled: this.state.immediateDropDisabled,  // Session-based immediate drop status
             hasDroppedLevel: this.state.hasDroppedLevel,
             dropCount: this.state.dropCount,
             promotionCount: this.state.promotionCount,

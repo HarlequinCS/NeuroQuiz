@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="app-version" content="f12c9c0">
+    <meta name="app-version" content="20260120-224655-mkmpjjxb">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -33,8 +33,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo favicon-16x16.png">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/quiz.css?v=f12c9c0">
-    <link rel="stylesheet" href="css/animations.css?v=f12c9c0">
+    <link rel="stylesheet" href="css/quiz.css?v=20260120-224655-mkmpjjxb">
+    <link rel="stylesheet" href="css/animations.css?v=20260120-224655-mkmpjjxb">
 </head>
 <body>
     <canvas id="neural-bg"></canvas>
@@ -96,6 +96,17 @@
                         <div class="stat-value" id="level-value">1</div>
                     </div>
                     <div class="header-stat">
+                        <div class="stat-icon" id="difficulty-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 22"></path>
+                                <path d="M21 12h-3l-2-5a2.5 2.5 0 0 1 2.83-3.5"></path>
+                                <path d="M22 8h-4l-1-3a2.5 2.5 0 0 1 2.83-3.5"></path>
+                            </svg>
+                        </div> 
+                        <div class="stat-label" data-i18n="quiz.difficulty">Difficulty</div>
+                        <div class="stat-value" id="difficulty-value">Beginner</div>
+                    </div>
+                    <div class="header-stat">
                         <div class="stat-icon" id="streak-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
@@ -127,6 +138,17 @@
                     </div>
                     <div class="progress-text" id="progress-text">
                         <span class="question-counter" id="question-counter" aria-live="polite">Question 0 of 0</span>
+                    </div>
+                </div>
+                <!-- Progress Milestones Section -->
+                <div class="progress-milestones" id="progress-milestones">
+                    <div class="milestone-item" id="difficulty-milestone" style="display: none;">
+                        <span class="milestone-icon">📈</span>
+                        <span class="milestone-text" id="difficulty-milestone-text" data-i18n="quiz.difficultyChange">Difficulty change in: <strong id="difficulty-remaining">0</strong> questions</span>
+                    </div>
+                    <div class="milestone-item" id="levelup-milestone" style="display: none;">
+                        <span class="milestone-icon">⭐</span>
+                        <span class="milestone-text" id="levelup-milestone-text" data-i18n="quiz.levelUp">Level up in: <strong id="levelup-remaining">0</strong> correct answers</span>
                     </div>
                 </div>
                 <!-- Motivational Message Section -->
@@ -313,10 +335,13 @@
         </div>
     </div>
 
-    <script src="js/data.js?v=f12c9c0"></script>
-    <script src="js/cognitive-analyzer.js?v=f12c9c0"></script> <script src="js/engine.js?v=f12c9c0"></script>
-    <script src="js/quiz-ui.js?v=f12c9c0"></script> <script src="js/theme.js?v=f12c9c0"></script>
-    <script src="js/background-effects.js?v=f12c9c0"></script>
+    <script src="js/data.js?v=20260120-224655-mkmpjjxb"></script>
+    <script src="js/cognitive-analyzer.js?v=20260120-224655-mkmpjjxb"></script> <script src="js/engine.js?v=20260120-224655-mkmpjjxb"></script>
+    <script src="js/quiz-ui.js?v=20260120-224655-mkmpjjxb"></script> <script src="js/theme.js?v=20260120-224655-mkmpjjxb"></script>
+    <script src="js/background-effects.js?v=20260120-224655-mkmpjjxb"></script>
+    <!-- Cache utilities and version checker -->
+    <script src="js/cache-utils.js?v=20260120-224655-mkmpjjxb"></script>
+    <script src="js/version-checker.js?v=20260120-224655-mkmpjjxb"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

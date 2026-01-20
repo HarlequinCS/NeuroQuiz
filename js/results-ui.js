@@ -1135,8 +1135,8 @@ class ResultsUIController {
         let yPos = margin;
         let pageNumber = 1;
         
-        // Set dark blue page background
-        doc.setFillColor(15, 23, 42);
+        // Set white page background
+        doc.setFillColor(255, 255, 255);
         doc.rect(0, 0, pageWidth, pageHeight, 'F');
 
         const results = this.results;
@@ -1156,44 +1156,32 @@ class ResultsUIController {
 
         const userName = this.userName || results.userName || 'User';
         
-        // Dark Blue Theme with Vibrant Colors - Professional & Clean
-        const darkBlue = [15, 23, 42]; // Deep dark blue (#0f172a) - Primary background
-        const darkBlueLight = [30, 41, 59]; // Lighter dark blue (#1e293b) - Secondary background
-        const primaryColor = [59, 130, 246]; // Vibrant Blue (#3b82f6) - Primary accent
-        const primaryBright = [96, 165, 250]; // Bright Blue (#60a5fa) - Highlights
-        const primaryDark = [37, 99, 235]; // Deep Blue (#2563eb) - Darker accent
-        const accentCyan = [6, 182, 212]; // Vibrant Cyan (#06b6d4) - Accent color
-        const accentPurple = [139, 92, 246]; // Vibrant Purple (#8b5cf6) - Secondary accent
-        const successColor = [34, 197, 94]; // Vibrant Green (#22c55e) - Success indicators
-        const warningColor = [251, 191, 36]; // Vibrant Amber (#fbbf24) - Warning
-        const errorColor = [239, 68, 68]; // Vibrant Red (#ef4444) - Error/Low
-        const textColor = [255, 255, 255]; // White - Main text on dark
-        const textSecondary = [203, 213, 225]; // Light gray (#cbd5e1) - Secondary text
-        const textTertiary = [148, 163, 184]; // Medium gray (#94a3b8) - Tertiary text
-        const surfaceBase = [15, 23, 42]; // Dark blue - Page background
-        const surfaceElevated = [30, 41, 59]; // Lighter dark blue - Cards
-        const surfaceSubtle = [51, 65, 85]; // Medium dark blue (#334155) - Subtle backgrounds
-        const borderColor = [71, 85, 105]; // Slate gray (#475569) - Borders
-        const borderAccent = [59, 130, 246]; // Blue border accent
+        // Professional White Background with Dark Blue Theme
+        const darkBlue = [15, 23, 42]; // Deep dark blue (#0f172a) - Header background
+        const darkBlueMedium = [30, 41, 59]; // Medium dark blue (#1e293b) - Accents
+        const primaryColor = [37, 99, 235]; // Dark Blue (#2563eb) - Primary accent
+        const primaryDark = [29, 78, 216]; // Deeper Blue (#1d4ed8) - Darker accent
+        const primaryLight = [59, 130, 246]; // Medium Blue (#3b82f6) - Light accents
+        const successColor = [16, 185, 129]; // Green (#10b981) - Success indicators
+        const warningColor = [245, 158, 11]; // Amber (#f59e0b) - Warning
+        const errorColor = [239, 68, 68]; // Red (#ef4444) - Error/Low
+        const textColor = [17, 24, 39]; // Dark gray (#111827) - Main text on white
+        const textSecondary = [75, 85, 99]; // Medium gray (#4b5563) - Secondary text
+        const textTertiary = [107, 114, 128]; // Light gray (#6b7280) - Tertiary text
+        const surfaceBase = [255, 255, 255]; // White - Page background
+        const surfaceElevated = [249, 250, 251]; // Very light gray (#f9fafb) - Cards
+        const surfaceSubtle = [243, 244, 246]; // Light gray (#f3f4f6) - Subtle backgrounds
+        const borderColor = [229, 231, 235]; // Light gray (#e5e7eb) - Borders
+        const borderAccent = [37, 99, 235]; // Dark blue border accent
         
         const addLogoAndHeader = () => {
-            // Header background - Dark blue with gradient effect
+            // Header background - Dark blue professional header
             doc.setFillColor(darkBlue[0], darkBlue[1], darkBlue[2]);
-            doc.rect(0, 0, pageWidth, 60, 'F');
+            doc.rect(0, 0, pageWidth, 55, 'F');
             
-            // Gradient overlay effect (darker to lighter)
-            doc.setFillColor(primaryDark[0], primaryDark[1], primaryDark[2]);
-            doc.setGState(doc.GState({opacity: 0.3}));
-            doc.rect(0, 0, pageWidth, 60, 'F');
-            doc.setGState(doc.GState({opacity: 1}));
-            
-            // Vibrant accent stripe at top
+            // Dark blue accent stripe at top
             doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-            doc.rect(0, 0, pageWidth, 3, 'F');
-            
-            // Cyan accent line
-            doc.setFillColor(accentCyan[0], accentCyan[1], accentCyan[2]);
-            doc.rect(0, 3, pageWidth, 1.5, 'F');
+            doc.rect(0, 0, pageWidth, 4, 'F');
             
             // Add logo image in header (logo.png for PDF compatibility)
             // Logo dimensions: 35x15mm (proportional and fits well in header)
@@ -1201,73 +1189,68 @@ class ResultsUIController {
                 const logoImg = document.querySelector('.logo');
                 if (logoImg && logoImg.src) {
                     // Use the loaded logo image from the page
-                    doc.addImage(logoImg.src, 'PNG', margin + 2, 12, 35, 15);
+                    doc.addImage(logoImg.src, 'PNG', margin + 2, 10, 35, 15);
                 } else {
                     // Try to load from path
-                    doc.addImage('assets/images/logo.png', 'PNG', margin + 2, 12, 35, 15);
+                    doc.addImage('assets/images/logo.png', 'PNG', margin + 2, 10, 35, 15);
                 }
             } catch (imgError) {
                 // If image loading fails, use text logo as fallback
                 doc.setTextColor(255, 255, 255);
-                doc.setFontSize(32);
+                doc.setFontSize(30);
                 doc.setFont('helvetica', 'bold');
-                doc.text('NeuroQuiz™', margin + 15, 22);
+                doc.text('NeuroQuiz™', margin + 15, 20);
                 
-                // Vibrant accent line under logo
-                doc.setDrawColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-                doc.setLineWidth(2);
-                doc.line(margin + 15, 24, margin + 75, 24);
+                // Accent line under logo
+                doc.setDrawColor(255, 255, 255);
+                doc.setLineWidth(1);
+                doc.line(margin + 15, 22, margin + 75, 22);
             }
             
-            // Subtitle with vibrant color
-            doc.setFontSize(11);
+            // Subtitle
+            doc.setFontSize(10);
             doc.setFont('helvetica', 'bold');
-            doc.setTextColor(primaryBright[0], primaryBright[1], primaryBright[2]);
-            doc.text('COGNITIVE ASSESSMENT REPORT', margin + 15, 30);
+            doc.setTextColor(255, 255, 255);
+            doc.text('COGNITIVE ASSESSMENT REPORT', margin + 15, 28);
             
             // Institutional affiliation
             doc.setFontSize(8);
-            doc.setTextColor(textSecondary[0], textSecondary[1], textSecondary[2]);
-            doc.text('Universiti Teknologi Mara Cawangan Melaka Kampus Jasin', margin + 15, 35);
+            doc.setTextColor(240, 240, 240);
+            doc.text('Universiti Teknologi Mara Cawangan Melaka Kampus Jasin', margin + 15, 33);
             
-            // Report metadata in header (right side) with vibrant accents
+            // Report metadata in header (right side)
             doc.setFontSize(8);
-            doc.setTextColor(textColor[0], textColor[1], textColor[2]);
-            doc.text(`Generated: ${formatDate(Date.now())}`, pageWidth - margin - 5, 20, { align: 'right' });
-            doc.text(`Report ID: ${Date.now().toString().slice(-8)}`, pageWidth - margin - 5, 25, { align: 'right' });
-            doc.setTextColor(primaryBright[0], primaryBright[1], primaryBright[2]);
-            doc.text(`Participant: ${userName}`, pageWidth - margin - 5, 30, { align: 'right' });
+            doc.setTextColor(255, 255, 255);
+            doc.text(`Generated: ${formatDate(Date.now())}`, pageWidth - margin - 5, 18, { align: 'right' });
+            doc.text(`Report ID: ${Date.now().toString().slice(-8)}`, pageWidth - margin - 5, 23, { align: 'right' });
+            doc.text(`Participant: ${userName}`, pageWidth - margin - 5, 28, { align: 'right' });
             
-            // Bottom border of header with vibrant accent
+            // Bottom border of header
             doc.setDrawColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-            doc.setLineWidth(2);
-            doc.line(0, 60, pageWidth, 60);
+            doc.setLineWidth(1.5);
+            doc.line(0, 55, pageWidth, 55);
             
-            // Vibrant accent line below border
-            doc.setFillColor(accentCyan[0], accentCyan[1], accentCyan[2]);
-            doc.rect(0, 60, pageWidth, 2, 'F');
-            
-            yPos = 75;
+            yPos = 70;
         };
         
         const addPageFooter = () => {
             const footerY = pageHeight - 15;
             
-            // Vibrant footer border
-            doc.setDrawColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-            doc.setLineWidth(1);
+            // Footer border
+            doc.setDrawColor(borderColor[0], borderColor[1], borderColor[2]);
+            doc.setLineWidth(0.5);
             doc.line(margin, footerY - 5, pageWidth - margin, footerY - 5);
             
-            // Accent line
-            doc.setFillColor(accentCyan[0], accentCyan[1], accentCyan[2]);
-            doc.rect(margin, footerY - 4, (pageWidth - margin * 2) * 0.3, 1, 'F');
+            // Dark blue accent line
+            doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
+            doc.rect(margin, footerY - 4.5, (pageWidth - margin * 2) * 0.25, 1.5, 'F');
             
-            // Footer text with vibrant colors
+            // Footer text
             doc.setFontSize(8);
             doc.setFont('helvetica', 'normal');
-            doc.setTextColor(textSecondary[0], textSecondary[1], textSecondary[2]);
+            doc.setTextColor(textTertiary[0], textTertiary[1], textTertiary[2]);
             doc.text('NeuroQuiz™ - Cognitive Assessment Platform | Universiti Teknologi Mara', margin, footerY, { align: 'left' });
-            doc.setTextColor(primaryBright[0], primaryBright[1], primaryBright[2]);
+            doc.setTextColor(primaryColor[0], primaryColor[1], primaryColor[2]);
             doc.text(`Page ${pageNumber}`, pageWidth - margin, footerY, { align: 'right' });
             
             pageNumber++;
@@ -1276,8 +1259,8 @@ class ResultsUIController {
         const addNewPage = () => {
             addPageFooter();
             doc.addPage();
-            // Set dark blue background for new page
-            doc.setFillColor(15, 23, 42);
+            // Set white background for new page
+            doc.setFillColor(255, 255, 255);
             doc.rect(0, 0, pageWidth, pageHeight, 'F');
             addLogoAndHeader();
         };
@@ -1286,38 +1269,34 @@ class ResultsUIController {
             if (yPos > pageHeight - 40) {
                 addNewPage();
             }
-            yPos += 12;
+            yPos += 15;
             
-            // Vibrant decorative box behind title
+            // Light background box behind title for professional look
             doc.setFillColor(surfaceElevated[0], surfaceElevated[1], surfaceElevated[2]);
-            doc.rect(margin - 3, yPos - fontSize * 0.6, contentWidth + 6, fontSize * 1.3, 'F');
+            doc.rect(margin - 2, yPos - fontSize * 0.65, contentWidth + 4, fontSize * 1.4, 'F');
             
-            // Vibrant left accent bar
+            // Dark blue left accent bar
             doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-            doc.rect(margin - 3, yPos - fontSize * 0.6, 4, fontSize * 1.3, 'F');
+            doc.rect(margin - 2, yPos - fontSize * 0.65, 5, fontSize * 1.4, 'F');
             
-            // Cyan accent stripe
-            doc.setFillColor(accentCyan[0], accentCyan[1], accentCyan[2]);
-            doc.rect(margin + 1, yPos - fontSize * 0.6, 1.5, fontSize * 1.3, 'F');
-            
-            // Section title with vibrant styling
+            // Section title with dark blue color
             doc.setFontSize(fontSize);
             doc.setFont('helvetica', 'bold');
-            doc.setTextColor(primaryBright[0], primaryBright[1], primaryBright[2]);
-            doc.text(title, margin + 8, yPos);
+            doc.setTextColor(primaryColor[0], primaryColor[1], primaryColor[2]);
+            doc.text(title, margin + 10, yPos);
             
-            // Vibrant accent lines
-            yPos += 6;
+            // Dark blue accent line
+            yPos += 7;
             doc.setDrawColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-            doc.setLineWidth(2.5);
-            doc.line(margin + 8, yPos - 3, margin + 70, yPos - 3);
+            doc.setLineWidth(2);
+            doc.line(margin + 10, yPos - 2, margin + 70, yPos - 2);
             
-            // Cyan accent line
-            doc.setDrawColor(accentCyan[0], accentCyan[1], accentCyan[2]);
-            doc.setLineWidth(1);
-            doc.line(margin + 8, yPos - 1, margin + 50, yPos - 1);
+            // Secondary accent line
+            doc.setDrawColor(primaryLight[0], primaryLight[1], primaryLight[2]);
+            doc.setLineWidth(0.8);
+            doc.line(margin + 10, yPos, margin + 50, yPos);
             
-            yPos += 8;
+            yPos += 10;
         };
 
         const addText = (text, fontSize = 10, isBold = false, color = textColor) => {
@@ -1329,7 +1308,7 @@ class ResultsUIController {
             doc.setTextColor(color[0], color[1], color[2]);
             const lines = doc.splitTextToSize(text, contentWidth);
             doc.text(lines, margin, yPos);
-            yPos += lines.length * (fontSize * 0.45) + 4;
+            yPos += lines.length * (fontSize * 0.5) + 5;
         };
 
         const addKeyValue = (key, value, indent = 0) => {
@@ -1348,7 +1327,7 @@ class ResultsUIController {
             doc.setTextColor(textSecondary[0], textSecondary[1], textSecondary[2]);
             const valueLines = doc.splitTextToSize(String(value), contentWidth - 55 - indent);
             doc.text(valueLines, valueX, yPos);
-            yPos += Math.max(valueLines.length * 4.5, 7);
+            yPos += Math.max(valueLines.length * 5, 8);
         };
 
         const addMetric = (label, value, maxValue = 100) => {
@@ -1364,60 +1343,56 @@ class ResultsUIController {
             doc.setTextColor(textColor[0], textColor[1], textColor[2]);
             doc.text(`${label}:`, margin, yPos);
             
-            // Percentage value with vibrant color
+            // Percentage value with dark blue color
             doc.setFont('helvetica', 'bold');
-            doc.setTextColor(primaryBright[0], primaryBright[1], primaryBright[2]);
+            doc.setTextColor(primaryColor[0], primaryColor[1], primaryColor[2]);
             doc.text(`${Math.min(percentage, maxValue).toFixed(1)}%`, pageWidth - margin - 25, yPos, { align: 'right' });
             
-            // Vibrant progress bar with dark theme
+            // Professional progress bar
             const barWidth = contentWidth - 35;
-            const barHeight = 7;
+            const barHeight = 6;
             const fillWidth = Math.min((percentage / maxValue) * barWidth, barWidth);
             
-            // Dark background bar
+            // Light background bar
             doc.setFillColor(surfaceSubtle[0], surfaceSubtle[1], surfaceSubtle[2]);
-            doc.rect(margin, yPos + 3, barWidth, barHeight, 'F');
+            doc.rect(margin, yPos + 3.5, barWidth, barHeight, 'F');
             
-            // Border with vibrant color
+            // Border
             doc.setDrawColor(borderColor[0], borderColor[1], borderColor[2]);
-            doc.setLineWidth(0.5);
-            doc.rect(margin, yPos + 3, barWidth, barHeight, 'D');
+            doc.setLineWidth(0.3);
+            doc.rect(margin, yPos + 3.5, barWidth, barHeight, 'D');
             
-            // Vibrant fill bar with color coding
+            // Color-coded fill bar
             let fillColor;
             if (percentage >= 70) {
-                fillColor = [successColor[0], successColor[1], successColor[2]]; // Vibrant Green
+                fillColor = [successColor[0], successColor[1], successColor[2]]; // Green
             } else if (percentage >= 40) {
-                fillColor = [warningColor[0], warningColor[1], warningColor[2]]; // Vibrant Amber
+                fillColor = [warningColor[0], warningColor[1], warningColor[2]]; // Amber
             } else {
-                fillColor = [errorColor[0], errorColor[1], errorColor[2]]; // Vibrant Red
+                fillColor = [errorColor[0], errorColor[1], errorColor[2]]; // Red
             }
             
             if (fillWidth > 0) {
-                // Main vibrant fill
+                // Main fill
                 doc.setFillColor(fillColor[0], fillColor[1], fillColor[2]);
-                doc.rect(margin, yPos + 3, fillWidth, barHeight, 'F');
+                doc.rect(margin, yPos + 3.5, fillWidth, barHeight, 'F');
                 
-                // Bright highlight effect on top
+                // Highlight effect on top
                 const highlightColor = [
-                    Math.min(255, fillColor[0] + 40),
-                    Math.min(255, fillColor[1] + 40),
-                    Math.min(255, fillColor[2] + 40)
+                    Math.min(255, fillColor[0] + 30),
+                    Math.min(255, fillColor[1] + 30),
+                    Math.min(255, fillColor[2] + 30)
                 ];
                 doc.setFillColor(highlightColor[0], highlightColor[1], highlightColor[2]);
-                doc.rect(margin, yPos + 3, fillWidth, barHeight * 0.35, 'F');
+                doc.rect(margin, yPos + 3.5, fillWidth, barHeight * 0.4, 'F');
                 
-                // Cyan accent line on top
-                doc.setFillColor(accentCyan[0], accentCyan[1], accentCyan[2]);
-                doc.rect(margin, yPos + 3, fillWidth, 1, 'F');
-                
-                // Vibrant border
+                // Border
                 doc.setDrawColor(fillColor[0], fillColor[1], fillColor[2]);
-                doc.setLineWidth(0.5);
-                doc.rect(margin, yPos + 3, fillWidth, barHeight, 'D');
+                doc.setLineWidth(0.3);
+                doc.rect(margin, yPos + 3.5, fillWidth, barHeight, 'D');
             }
             
-            yPos += 12;
+            yPos += 13;
         };
 
         const addInfoBox = (items) => {
@@ -1425,44 +1400,40 @@ class ResultsUIController {
                 addNewPage();
             }
             
-            const boxHeight = items.length * 8 + 12;
+            const boxHeight = items.length * 8 + 14;
             
-            // Dark background box
+            // Light background box
             doc.setFillColor(surfaceElevated[0], surfaceElevated[1], surfaceElevated[2]);
             doc.rect(margin, yPos, contentWidth, boxHeight, 'F');
             
-            // Vibrant left accent border (gradient effect)
+            // Dark blue left accent border
             doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
             doc.rect(margin, yPos, 4, boxHeight, 'F');
             
-            // Cyan accent stripe
-            doc.setFillColor(accentCyan[0], accentCyan[1], accentCyan[2]);
-            doc.rect(margin + 4, yPos, 1.5, boxHeight, 'F');
-            
-            // Vibrant border
-            doc.setDrawColor(borderAccent[0], borderAccent[1], borderAccent[2]);
-            doc.setLineWidth(0.8);
+            // Professional border
+            doc.setDrawColor(borderColor[0], borderColor[1], borderColor[2]);
+            doc.setLineWidth(0.5);
             doc.rect(margin, yPos, contentWidth, boxHeight, 'D');
             
-            yPos += 6;
+            yPos += 7;
             items.forEach(([key, value], index) => {
                 // Alternating row background for better readability
                 if (index % 2 === 0) {
-                    doc.setFillColor(surfaceSubtle[0], surfaceSubtle[1], surfaceSubtle[2]);
-                    doc.rect(margin + 5.5, yPos - 3, contentWidth - 5.5, 6, 'F');
+                    doc.setFillColor(255, 255, 255);
+                    doc.rect(margin + 4, yPos - 3, contentWidth - 4, 7, 'F');
                 }
                 
                 doc.setFontSize(9);
                 doc.setFont('helvetica', 'bold');
-                doc.setTextColor(primaryBright[0], primaryBright[1], primaryBright[2]);
+                doc.setTextColor(primaryColor[0], primaryColor[1], primaryColor[2]);
                 doc.text(key + ':', margin + 10, yPos);
                 
                 doc.setFont('helvetica', 'normal');
                 doc.setTextColor(textColor[0], textColor[1], textColor[2]);
                 doc.text(String(value), margin + 50, yPos);
-                yPos += 7;
+                yPos += 8;
             });
-            yPos += 8;
+            yPos += 10;
         };
 
         // Start with professional header

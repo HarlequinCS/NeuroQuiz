@@ -53,6 +53,15 @@
                     <span class="trademark-symbol">™</span>
                     <span class="trademark-text" data-i18n="common.adaptiveLearning">Adaptive Learning</span>
                 </div>
+                <!-- Language Selector (Desktop) - In Header -->
+                <div class="header-language-selector" role="radiogroup" aria-label="Language Switcher">
+                    <button type="button" class="header-language-btn" data-lang="en" aria-label="English" aria-pressed="true">
+                        <span class="language-code">EN</span>
+                    </button>
+                    <button type="button" class="header-language-btn" data-lang="ms" aria-label="Bahasa Malaysia" aria-pressed="false">
+                        <span class="language-code">MS</span>
+                    </button>
+                </div>
                 <!-- Hamburger Menu Button (Mobile) -->
                 <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span class="hamburger-line"></span>
@@ -390,13 +399,14 @@
         <div class="theme-slider"></div>
     </div>
 
-    <!-- Language Selector (Desktop) -->
-    <div class="language-selector" role="radiogroup" aria-label="Language Switcher">
-        <button type="button" class="language-btn" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
-        <button type="button" class="language-btn" data-lang="ms" aria-label="Bahasa Malaysia" aria-pressed="false">MS</button>
-    </div>
-
+    <!-- Load translations first, then language controller -->
     <script src="js/translations.js?v=f12c9c0"></script>
+    <script>
+        // Ensure translations are loaded before language.js
+        if (typeof TRANSLATIONS === 'undefined') {
+            console.warn('Translations not found. Make sure translations.js loads before language.js');
+        }
+    </script>
     <script src="js/language.js?v=f12c9c0"></script>
     <script src="js/theme.js?v=f12c9c0"></script>
     <script src="js/mobile-menu.js?v=f12c9c0"></script>

@@ -51,11 +51,26 @@ class QuizUIController {
         this.audioCorrect = new Audio('assets/audio/correct.mp3');
         this.audioWrong = new Audio('assets/audio/wrong.mp3');
         this.audioLevelUp = new Audio('assets/audio/levelup.mp3');
+        this.audioBackground = new Audio('assets/audio/background.mp3');
         
         // Set audio volume (0.0 to 1.0)
         this.audioCorrect.volume = 0.5;
         this.audioWrong.volume = 0.5;
         this.audioLevelUp.volume = 0.6;
+        this.audioBackground.volume = 0.3; // Lower volume for background music
+        
+        // Configure background music to loop
+        this.audioBackground.loop = true;
+        
+        // Audio settings state
+        this.audioSettings = {
+            backgroundMusic: true,
+            soundEffects: true,
+            allSounds: true
+        };
+        
+        // Load audio settings from localStorage
+        this.loadAudioSettings();
         
         console.log('QuizUIController initialized');
     }
@@ -74,6 +89,8 @@ class QuizUIController {
             
             this.loadQuestion();
             this.setupEventListeners();
+            this.setupSettingsModal();
+            this.startBackgroundMusic();
         } catch (error) {
             console.error('Error initializing quiz:', error);
             this.showError('Failed to load quiz. Please refresh the page.');
@@ -883,6 +900,8 @@ class QuizUIController {
             isDanger: true,
             onPrimary: () => {
                 console.log('[RB-ADA] quiz_stopped_by_user');
+                // Stop background music before completing quiz
+                this.stopBackgroundMusic();
                 this.completeQuiz();
             }
         });
@@ -1063,6 +1082,9 @@ class QuizUIController {
     }
     
     completeQuiz() {
+        // Stop background music when quiz completes
+        this.stopBackgroundMusic();
+        
         if (this.engine) {
             const summary = this.engine.getPerformanceSummary();
             localStorage.setItem('quizResults', JSON.stringify(summary));
@@ -1097,6 +1119,11 @@ class QuizUIController {
     
     playAudioFeedback(type) {
         try {
+            // Check if sound effects are enabled
+            if (!this.audioSettings.soundEffects || !this.audioSettings.allSounds) {
+                return;
+            }
+            
             let audio = null;
             
             if (type === 'correct') {
@@ -1123,6 +1150,229 @@ class QuizUIController {
         } catch (error) {
             // Silently handle audio errors (e.g., file not found, autoplay blocked)
             console.log('Audio feedback error:', error);
+        }
+    }
+    
+    /**
+     * Start background music
+     */
+    startBackgroundMusic() {
+        try {
+            if (this.audioSettings.backgroundMusic && this.audioSettings.allSounds) {
+                const playPromise = this.audioBackground.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        // Autoplay was prevented - will play on user interaction
+                        console.log('Background music autoplay prevented:', error);
+                    });
+                }
+            }
+        } catch (error) {
+            console.log('Background music error:', error);
+        }
+    }
+    
+    /**
+     * Stop background music
+     */
+    stopBackgroundMusic() {
+        try {
+            this.audioBackground.pause();
+            this.audioBackground.currentTime = 0;
+        } catch (error) {
+            console.log('Background music stop error:', error);
+        }
+    }
+    
+    /**
+     * Load audio settings from localStorage
+     */
+    loadAudioSettings() {
+        try {
+            const saved = localStorage.getItem('neuroquizAudioSettings');
+            if (saved) {
+                this.audioSettings = JSON.parse(saved);
+            }
+        } catch (error) {
+            console.log('Error loading audio settings:', error);
+        }
+    }
+    
+    /**
+     * Save audio settings to localStorage
+     */
+    saveAudioSettings() {
+        try {
+            localStorage.setItem('neuroquizAudioSettings', JSON.stringify(this.audioSettings));
+        } catch (error) {
+            console.log('Error saving audio settings:', error);
+        }
+    }
+    
+    /**
+     * Setup settings modal
+     */
+    setupSettingsModal() {
+        const settingsBtn = document.getElementById('settings-btn');
+        const settingsOverlay = document.getElementById('settings-modal-overlay');
+        const settingsCloseBtn = document.getElementById('settings-close-btn');
+        const toggleBgMusic = document.getElementById('toggle-bg-music');
+        const toggleSoundEffects = document.getElementById('toggle-sound-effects');
+        const toggleAllSounds = document.getElementById('toggle-all-sounds');
+        
+        if (!settingsBtn || !settingsOverlay) return;
+        
+        // Open settings modal
+        settingsBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.openSettingsModal();
+        });
+        
+        // Close settings modal
+        if (settingsCloseBtn) {
+            settingsCloseBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.closeSettingsModal();
+            });
+        }
+        
+        // Close on overlay click
+        settingsOverlay.addEventListener('click', (e) => {
+            if (e.target === settingsOverlay) {
+                this.closeSettingsModal();
+            }
+        });
+        
+        // Close on Escape key (use once to avoid multiple listeners)
+        const escapeHandler = (e) => {
+            if (e.key === 'Escape' && !settingsOverlay.classList.contains('hidden')) {
+                this.closeSettingsModal();
+            }
+        };
+        document.addEventListener('keydown', escapeHandler);
+        
+        // Update toggle states from saved settings
+        if (toggleBgMusic) {
+            toggleBgMusic.checked = this.audioSettings.backgroundMusic && this.audioSettings.allSounds;
+            toggleBgMusic.addEventListener('change', (e) => {
+                this.audioSettings.backgroundMusic = e.target.checked;
+                this.updateAudioSettings();
+            });
+        }
+        
+        if (toggleSoundEffects) {
+            toggleSoundEffects.checked = this.audioSettings.soundEffects && this.audioSettings.allSounds;
+            toggleSoundEffects.addEventListener('change', (e) => {
+                this.audioSettings.soundEffects = e.target.checked;
+                this.updateAudioSettings();
+            });
+        }
+        
+        if (toggleAllSounds) {
+            toggleAllSounds.checked = this.audioSettings.allSounds;
+            toggleAllSounds.addEventListener('change', (e) => {
+                this.audioSettings.allSounds = e.target.checked;
+                this.updateAudioSettings();
+            });
+        }
+    }
+    
+    /**
+     * Open settings modal
+     */
+    openSettingsModal() {
+        const settingsOverlay = document.getElementById('settings-modal-overlay');
+        const settingsBtn = document.getElementById('settings-btn');
+        
+        if (!settingsOverlay) return;
+        
+        settingsOverlay.classList.remove('hidden');
+        settingsOverlay.setAttribute('aria-hidden', 'false');
+        
+        if (settingsBtn) {
+            settingsBtn.setAttribute('aria-expanded', 'true');
+        }
+        
+        // Update toggle states
+        const toggleBgMusic = document.getElementById('toggle-bg-music');
+        const toggleSoundEffects = document.getElementById('toggle-sound-effects');
+        const toggleAllSounds = document.getElementById('toggle-all-sounds');
+        
+        if (toggleBgMusic) {
+            toggleBgMusic.checked = this.audioSettings.backgroundMusic && this.audioSettings.allSounds;
+        }
+        if (toggleSoundEffects) {
+            toggleSoundEffects.checked = this.audioSettings.soundEffects && this.audioSettings.allSounds;
+        }
+        if (toggleAllSounds) {
+            toggleAllSounds.checked = this.audioSettings.allSounds;
+        }
+    }
+    
+    /**
+     * Close settings modal
+     */
+    closeSettingsModal() {
+        const settingsOverlay = document.getElementById('settings-modal-overlay');
+        const settingsBtn = document.getElementById('settings-btn');
+        
+        if (!settingsOverlay) return;
+        
+        settingsOverlay.classList.add('hidden');
+        settingsOverlay.setAttribute('aria-hidden', 'true');
+        
+        if (settingsBtn) {
+            settingsBtn.setAttribute('aria-expanded', 'false');
+        }
+    }
+    
+    /**
+     * Update audio settings based on toggles
+     */
+    updateAudioSettings() {
+        const toggleAllSounds = document.getElementById('toggle-all-sounds');
+        const toggleBgMusic = document.getElementById('toggle-bg-music');
+        const toggleSoundEffects = document.getElementById('toggle-sound-effects');
+        
+        // If "All Sounds" is off, mute everything
+        if (toggleAllSounds && !toggleAllSounds.checked) {
+            this.audioSettings.allSounds = false;
+            this.audioSettings.backgroundMusic = false;
+            this.audioSettings.soundEffects = false;
+            
+            // Update UI to reflect this
+            if (toggleBgMusic) toggleBgMusic.checked = false;
+            if (toggleSoundEffects) toggleSoundEffects.checked = false;
+        } else {
+            // "All Sounds" is on, respect individual settings
+            this.audioSettings.allSounds = true;
+            
+            if (toggleBgMusic) {
+                this.audioSettings.backgroundMusic = toggleBgMusic.checked;
+            }
+            if (toggleSoundEffects) {
+                this.audioSettings.soundEffects = toggleSoundEffects.checked;
+            }
+        }
+        
+        // Apply settings
+        this.applyAudioSettings();
+        this.saveAudioSettings();
+    }
+    
+    /**
+     * Apply audio settings
+     */
+    applyAudioSettings() {
+        // Background music
+        if (this.audioSettings.backgroundMusic && this.audioSettings.allSounds) {
+            if (this.audioBackground.paused) {
+                this.startBackgroundMusic();
+            }
+        } else {
+            this.stopBackgroundMusic();
         }
     }
     

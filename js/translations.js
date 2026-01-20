@@ -125,6 +125,18 @@ const TRANSLATIONS = {
             cancel: "Cancel",
             startQuiz: "Start Quiz"
         },
+        // Quiz Page
+        quiz: {
+            welcomeBack: "Welcome back,",
+            cognitiveAnalysisActive: "Cognitive Analysis Active",
+            level: "Level",
+            streak: "Streak",
+            points: "Points",
+            submitAnswer: "SUBMIT ANSWER",
+            submitHelp: "Select an answer option first to enable this button",
+            nextQuestion: "NEXT QUESTION ➜",
+            stop: "STOP"
+        },
         // Result Page
         result: {
             quizComplete: "Quiz Complete, {name}!",
@@ -274,6 +286,18 @@ const TRANSLATIONS = {
             literacyHelp: "Ini menentukan kesukaran permulaan anda (Pemula=1, Pertengahan=2, Pakar=3)",
             cancel: "Batal",
             startQuiz: "Mula Kuiz"
+        },
+        // Quiz Page
+        quiz: {
+            welcomeBack: "Selamat kembali,",
+            cognitiveAnalysisActive: "Analisis Kognitif Aktif",
+            level: "Peringkat",
+            streak: "Rentetan",
+            points: "Mata",
+            submitAnswer: "HANTAR JAWAPAN",
+            submitHelp: "Pilih pilihan jawapan terlebih dahulu untuk membolehkan butang ini",
+            nextQuestion: "SOALAN SETERUSNYA ➜",
+            stop: "BERHENTI"
         },
         // Result Page
         result: {

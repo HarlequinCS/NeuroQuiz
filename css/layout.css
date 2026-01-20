@@ -1878,6 +1878,14 @@
     position: relative;
 }
 
+/* Explicitly hide mobile language selector on desktop */
+@media (min-width: 769px) {
+    .language-segmented-control-mobile,
+    .nav-menu-language-section {
+        display: none !important;
+    }
+}
+
 .language-btn-mobile {
     flex: 1;
     padding: var(--spacing-sm) var(--spacing-md);
@@ -1925,6 +1933,7 @@
 /* Show mobile language selector and hide desktop on mobile */
 @media (max-width: 768px) {
     /* Hide desktop selector on mobile */
+    .header-language-selector,
     .language-selector {
         display: none !important;
     }
@@ -1935,6 +1944,19 @@
     }
     
     .language-segmented-control-mobile {
+        display: flex !important;
+    }
+}
+
+/* Explicitly hide mobile language selector on desktop (min-width: 769px) */
+@media (min-width: 769px) {
+    .language-segmented-control-mobile,
+    .nav-menu-language-section {
+        display: none !important;
+    }
+    
+    /* Ensure desktop selector is visible */
+    .header-language-selector {
         display: flex !important;
     }
 }

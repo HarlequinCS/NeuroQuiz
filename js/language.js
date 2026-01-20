@@ -8,16 +8,27 @@ class LanguageController {
     constructor() {
         this.currentLanguage = 'en';
         this.translations = null;
-        this.init();
+        this.isInitialized = false;
+        this.translationQueue = [];
     }
     
     /**
-     * Initialize language controller
+     * Initialize language controller (non-blocking)
      */
     async init() {
-        // Wait for translations to be available
+        if (this.isInitialized) return;
+        
+        // Check if translations are already loaded
+        if (typeof TRANSLATIONS !== 'undefined') {
+            this.translations = TRANSLATIONS;
+            this.initializeLanguage();
+            return;
+        }
+        
+        // Wait for translations with timeout
         let retries = 0;
-        while (typeof TRANSLATIONS === 'undefined' && retries < 10) {
+        const maxRetries = 20; // 2 seconds max wait
+        while (typeof TRANSLATIONS === 'undefined' && retries < maxRetries) {
             await new Promise(resolve => setTimeout(resolve, 100));
             retries++;
         }
@@ -25,24 +36,34 @@ class LanguageController {
         // Load translations
         if (typeof TRANSLATIONS !== 'undefined') {
             this.translations = TRANSLATIONS;
+            this.initializeLanguage();
         } else {
-            // If translations.js is not loaded, try to load it
-            console.warn('Translations not found. Make sure translations.js is loaded.');
-            return;
+            // Fallback: continue without translations
+            console.warn('Translations not loaded. Using default language.');
+            this.currentLanguage = 'en';
+            document.documentElement.setAttribute('lang', 'en');
+            this.setupLanguageSelector();
         }
         
+        this.isInitialized = true;
+    }
+    
+    /**
+     * Initialize language after translations are loaded
+     */
+    initializeLanguage() {
         // Load saved language from localStorage
         const savedLanguage = localStorage.getItem('neuroquizLanguage') || 'en';
-        if (this.translations[savedLanguage]) {
-            this.setLanguage(savedLanguage);
+        if (this.translations && this.translations[savedLanguage]) {
+            this.setLanguage(savedLanguage, false);
         } else {
             // Detect browser language
             const browserLang = navigator.language || navigator.userLanguage;
             const langCode = browserLang.split('-')[0];
-            if (this.translations[langCode]) {
-                this.setLanguage(langCode);
+            if (this.translations && this.translations[langCode]) {
+                this.setLanguage(langCode, false);
             } else {
-                this.setLanguage('en');
+                this.setLanguage('en', false);
             }
         }
         
@@ -53,8 +74,9 @@ class LanguageController {
     /**
      * Set language
      * @param {string} lang - Language code (en, ms)
+     * @param {boolean} save - Whether to save to localStorage (default: true)
      */
-    setLanguage(lang) {
+    setLanguage(lang, save = true) {
         if (!this.translations || !this.translations[lang]) {
             console.warn(`Language ${lang} not found`);
             return;
@@ -62,13 +84,15 @@ class LanguageController {
         
         this.currentLanguage = lang;
         document.documentElement.setAttribute('lang', lang);
-        localStorage.setItem('neuroquizLanguage', lang);
+        if (save) {
+            localStorage.setItem('neuroquizLanguage', lang);
+        }
         
-        // Update all translatable content
-        this.translatePage();
-        
-        // Update language selector UI
-        this.updateLanguageSelector();
+        // Update all translatable content (use requestAnimationFrame for performance)
+        requestAnimationFrame(() => {
+            this.translatePage();
+            this.updateLanguageSelector();
+        });
     }
     
     /**
@@ -107,71 +131,100 @@ class LanguageController {
      * Translate all elements with data-i18n attribute
      */
     translatePage() {
-        const elements = document.querySelectorAll('[data-i18n]');
-        elements.forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            const translation = this.t(key);
-            
-            if (translation && translation !== key) {
-                // Handle different element types
-                if (element.tagName === 'INPUT' && (element.type === 'text' || element.type === 'email' || element.type === 'password')) {
-                    // Only update placeholder if it's a placeholder attribute
-                    if (element.hasAttribute('data-i18n-attr')) {
-                        // Will be handled by data-i18n-attr
-                    } else {
-                        element.placeholder = translation;
-                    }
-                } else if (element.tagName === 'INPUT' && (element.type === 'submit' || element.type === 'button')) {
-                    element.value = translation;
-                } else if (element.tagName === 'OPTION') {
-                    element.textContent = translation;
-                } else {
-                    // Handle special case for result page with user name
-                    if (key === 'result.quizComplete') {
-                        const nameDisplay = element.querySelector('#user-name-display');
-                        if (nameDisplay) {
-                            const name = nameDisplay.textContent || 'User';
-                            const translated = translation.replace('{name}', name);
-                            // Replace the entire content but preserve the name span
-                            element.innerHTML = translated.replace(name, `<span id="user-name-display">${name}</span>`);
+        if (!this.translations) {
+            return; // Don't translate if translations aren't loaded
+        }
+        
+        try {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                try {
+                    const key = element.getAttribute('data-i18n');
+                    if (!key) return;
+                    
+                    const translation = this.t(key);
+                    
+                    if (translation && translation !== key) {
+                        // Handle different element types
+                        if (element.tagName === 'INPUT' && (element.type === 'text' || element.type === 'email' || element.type === 'password')) {
+                            // Only update placeholder if it's a placeholder attribute
+                            if (element.hasAttribute('data-i18n-attr')) {
+                                // Will be handled by data-i18n-attr
+                            } else {
+                                element.placeholder = translation;
+                            }
+                        } else if (element.tagName === 'INPUT' && (element.type === 'submit' || element.type === 'button')) {
+                            element.value = translation;
+                        } else if (element.tagName === 'OPTION') {
+                            element.textContent = translation;
                         } else {
-                            element.textContent = translation.replace('{name}', 'User');
+                            // Handle special case for result page with user name
+                            if (key === 'result.quizComplete') {
+                                const nameDisplay = element.querySelector('#user-name-display');
+                                if (nameDisplay) {
+                                    const name = nameDisplay.textContent || 'User';
+                                    const translated = translation.replace('{name}', name);
+                                    // Replace the entire content but preserve the name span
+                                    element.innerHTML = translated.replace(name, `<span id="user-name-display">${name}</span>`);
+                                } else {
+                                    element.textContent = translation.replace('{name}', 'User');
+                                }
+                            } else {
+                                element.textContent = translation;
+                            }
                         }
-                    } else {
-                        element.textContent = translation;
                     }
+                } catch (err) {
+                    console.warn('Translation error for element:', element, err);
                 }
-            }
-        });
+            });
+        } catch (err) {
+            console.error('Translation page error:', err);
+        }
+        
         
         // Handle elements with data-i18n-html (for HTML content)
-        const htmlElements = document.querySelectorAll('[data-i18n-html]');
-        htmlElements.forEach(element => {
-            const key = element.getAttribute('data-i18n-html');
-            const translation = this.t(key);
-            
-            if (translation && translation !== key) {
-                element.innerHTML = translation;
-            }
-        });
+        try {
+            const htmlElements = document.querySelectorAll('[data-i18n-html]');
+            htmlElements.forEach(element => {
+                try {
+                    const key = element.getAttribute('data-i18n-html');
+                    if (!key) return;
+                    const translation = this.t(key);
+                    
+                    if (translation && translation !== key) {
+                        element.innerHTML = translation;
+                    }
+                } catch (err) {
+                    console.warn('HTML translation error:', element, err);
+                }
+            });
+        } catch (err) {
+            console.error('HTML translation error:', err);
+        }
         
         // Handle elements with data-i18n-attr (for attributes)
-        const attrElements = document.querySelectorAll('[data-i18n-attr]');
-        attrElements.forEach(element => {
-            const attrData = element.getAttribute('data-i18n-attr');
-            try {
-                const attrs = JSON.parse(attrData);
-                Object.keys(attrs).forEach(attr => {
-                    const key = attrs[attr];
-                    const translation = this.t(key);
-                    if (translation && translation !== key) {
-                        element.setAttribute(attr, translation);
-                    }
-                });
-            } catch (e) {
-                console.warn('Invalid data-i18n-attr:', attrData);
-            }
-        });
+        try {
+            const attrElements = document.querySelectorAll('[data-i18n-attr]');
+            attrElements.forEach(element => {
+                try {
+                    const attrData = element.getAttribute('data-i18n-attr');
+                    if (!attrData) return;
+                    const attrs = JSON.parse(attrData);
+                    Object.keys(attrs).forEach(attr => {
+                        const key = attrs[attr];
+                        const translation = this.t(key);
+                        if (translation && translation !== key) {
+                            element.setAttribute(attr, translation);
+                        }
+                    });
+                } catch (e) {
+                    console.warn('Invalid data-i18n-attr:', element, e);
+                }
+            });
+        } catch (err) {
+            console.error('Attribute translation error:', err);
+        }
     }
     
     /**
@@ -220,24 +273,84 @@ class LanguageController {
     }
 }
 
-// Initialize language controller
+// Initialize language controller (non-blocking)
 let languageController;
 
-document.addEventListener('DOMContentLoaded', () => {
-    languageController = new LanguageController();
+// Use DOMContentLoaded or immediate execution if DOM is ready
+const initLanguage = () => {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            languageController = new LanguageController();
+            languageController.init().catch(err => {
+                console.error('Language initialization error:', err);
+            });
+        });
+    } else {
+        // DOM already loaded
+        languageController = new LanguageController();
+        languageController.init().catch(err => {
+            console.error('Language initialization error:', err);
+        });
+    }
+};
+
+// Optimized MutationObserver - only observe specific containers
+const setupTranslationObserver = () => {
+    if (!languageController || !languageController.translations) return;
     
-    // Re-translate when new content is added dynamically
-    const observer = new MutationObserver(() => {
-        if (languageController && languageController.translations) {
-            languageController.translatePage();
+    // Only observe specific containers that might have dynamic content
+    const observeTargets = [
+        document.getElementById('results-container'),
+        document.getElementById('question-section'),
+        document.getElementById('setup-form-section')
+    ].filter(Boolean);
+    
+    if (observeTargets.length === 0) return;
+    
+    let translateTimeout = null;
+    const observer = new MutationObserver((mutations) => {
+        // Debounce translations to avoid excessive calls
+        let shouldTranslate = false;
+        mutations.forEach(mutation => {
+            if (mutation.addedNodes.length > 0) {
+                shouldTranslate = true;
+            }
+        });
+        
+        if (shouldTranslate) {
+            // Clear existing timeout
+            if (translateTimeout) {
+                clearTimeout(translateTimeout);
+            }
+            
+            // Debounce translation updates
+            translateTimeout = setTimeout(() => {
+                requestAnimationFrame(() => {
+                    if (languageController && languageController.translations) {
+                        languageController.translatePage();
+                    }
+                });
+            }, 100); // 100ms debounce
         }
     });
     
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
+    observeTargets.forEach(target => {
+        observer.observe(target, {
+            childList: true,
+            subtree: true
+        });
     });
-});
+};
+
+// Initialize
+initLanguage();
+
+// Setup observer after a delay to avoid blocking initial load
+setTimeout(() => {
+    if (languageController && languageController.isInitialized) {
+        setupTranslationObserver();
+    }
+}, 1000);
 
 // Export for global access
 window.LanguageController = LanguageController;

@@ -153,8 +153,8 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1.5px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    padding: 4px;
+    border-radius: 10px; /* Reduced from 12px */
+    padding: 3px; /* Reduced from 4px */
     margin-right: 0;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -180,9 +180,9 @@
 }
 
 .header-language-btn {
-    min-width: 48px;
-    height: 38px;
-    border-radius: 10px;
+    min-width: 42px; /* Reduced from 48px */
+    height: 34px; /* Reduced from 38px */
+    border-radius: 8px; /* Reduced from 10px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,10 +194,10 @@
     border: none;
     background: transparent;
     font-weight: 700;
-    font-size: 0.875rem;
-    padding: 0 14px;
+    font-size: 0.8125rem; /* Reduced from 0.875rem (13px) */
+    padding: 0 10px; /* Reduced from 14px */
     font-family: 'Orbitron', 'Segoe UI', sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px; /* Reduced from 1px */
 }
 
 .header-language-btn .language-code {
@@ -555,17 +555,17 @@
 .nav-menu .nav-link,
 .nav-link {
     /* Typography - Consistent across all pages */
-    font-size: 0.95rem !important;
+    font-size: 0.875rem !important; /* Reduced from 0.95rem */
     font-weight: 600 !important;
     font-family: 'Orbitron', 'Segoe UI', sans-serif !important;
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
-    line-height: 1.4 !important;
+    line-height: 1.3 !important; /* Reduced from 1.4 */
     
     /* Layout */
     text-decoration: none;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    min-height: 44px; /* Touch target */
+    padding: 8px 16px !important; /* Reduced from var(--spacing-sm) var(--spacing-lg) */
+    min-height: 36px !important; /* Reduced from 44px for better proportion */
     border-radius: var(--radius-md);
     border: 1px solid transparent;
     background: transparent;
@@ -1864,12 +1864,7 @@
     display: none !important; /* Hidden on desktop by default */
 }
 
-.nav-menu-language-label {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-sm);
-    text-transform: uppercase;
+/* Language label removed - buttons only */
     letter-spacing: 0.05em;
 }
 

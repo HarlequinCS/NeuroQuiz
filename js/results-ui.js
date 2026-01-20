@@ -1254,17 +1254,26 @@ class ResultsUIController {
             }
             yPos += 12;
             
+            // Decorative box behind title for visual appeal
+            doc.setFillColor(surfaceSubtle[0], surfaceSubtle[1], surfaceSubtle[2]);
+            doc.rect(margin - 3, yPos - fontSize * 0.6, contentWidth + 6, fontSize * 1.2, 'F');
+            
             // Section title with professional styling
             doc.setFontSize(fontSize);
             doc.setFont('helvetica', 'bold');
             doc.setTextColor(primaryColor[0], primaryColor[1], primaryColor[2]);
             doc.text(title, margin, yPos);
             
-            // Underline with accent color
+            // Accent line with gradient effect (thicker line)
             yPos += 6;
             doc.setDrawColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-            doc.setLineWidth(1);
-            doc.line(margin, yPos - 3, margin + 50, yPos - 3);
+            doc.setLineWidth(2);
+            doc.line(margin, yPos - 3, margin + 60, yPos - 3);
+            
+            // Secondary accent line
+            doc.setDrawColor(primaryLight[0], primaryLight[1], primaryLight[2]);
+            doc.setLineWidth(0.5);
+            doc.line(margin, yPos - 1, margin + 40, yPos - 1);
             
             yPos += 8;
         };
@@ -1318,26 +1327,48 @@ class ResultsUIController {
             doc.setTextColor(primaryColor[0], primaryColor[1], primaryColor[2]);
             doc.text(`${Math.min(percentage, maxValue).toFixed(1)}%`, pageWidth - margin - 25, yPos, { align: 'right' });
             
-            // Progress bar with professional styling
+            // Progress bar with professional styling and visual enhancements
             const barWidth = contentWidth - 35;
-            const barHeight = 5;
+            const barHeight = 6;
             const fillWidth = Math.min((percentage / maxValue) * barWidth, barWidth);
             
-            // Background bar
+            // Background bar with rounded effect (shadow)
+            doc.setFillColor(240, 240, 240);
+            doc.rect(margin + 0.5, yPos + 3.5, barWidth, barHeight, 'F');
+            
+            // Main background bar
             doc.setDrawColor(borderGray[0], borderGray[1], borderGray[2]);
             doc.setFillColor(surfaceSubtle[0], surfaceSubtle[1], surfaceSubtle[2]);
             doc.rect(margin, yPos + 3, barWidth, barHeight, 'FD');
             
-            // Fill bar with color coding (matching web philosophy)
+            // Fill bar with color coding and gradient effect (matching web philosophy)
+            let fillColor;
             if (percentage >= 70) {
-                doc.setFillColor(successColor[0], successColor[1], successColor[2]); // Green for success
+                fillColor = [successColor[0], successColor[1], successColor[2]]; // Green for success
             } else if (percentage >= 40) {
-                doc.setFillColor(245, 158, 11); // Amber for medium
+                fillColor = [245, 158, 11]; // Amber for medium
             } else {
-                doc.setFillColor(239, 68, 68); // Red for low
+                fillColor = [239, 68, 68]; // Red for low
             }
+            
             if (fillWidth > 0) {
+                // Main fill
+                doc.setFillColor(fillColor[0], fillColor[1], fillColor[2]);
                 doc.rect(margin, yPos + 3, fillWidth, barHeight, 'F');
+                
+                // Highlight effect on top (lighter shade)
+                const highlightColor = [
+                    Math.min(255, fillColor[0] + 30),
+                    Math.min(255, fillColor[1] + 30),
+                    Math.min(255, fillColor[2] + 30)
+                ];
+                doc.setFillColor(highlightColor[0], highlightColor[1], highlightColor[2]);
+                doc.rect(margin, yPos + 3, fillWidth, barHeight * 0.4, 'F');
+                
+                // Border accent
+                doc.setDrawColor(fillColor[0], fillColor[1], fillColor[2]);
+                doc.setLineWidth(0.3);
+                doc.rect(margin, yPos + 3, fillWidth, barHeight, 'D');
             }
             
             yPos += 12;
@@ -1348,21 +1379,33 @@ class ResultsUIController {
                 addNewPage();
             }
             
-            // Background box (using web surface subtle color)
-            doc.setFillColor(surfaceSubtle[0], surfaceSubtle[1], surfaceSubtle[2]);
-            doc.rect(margin, yPos, contentWidth, items.length * 8 + 8, 'F');
+            const boxHeight = items.length * 8 + 10;
             
-            // Border (using web border color)
+            // Background box with gradient effect (using web surface subtle color)
+            doc.setFillColor(surfaceSubtle[0], surfaceSubtle[1], surfaceSubtle[2]);
+            doc.rect(margin, yPos, contentWidth, boxHeight, 'F');
+            
+            // Left accent border (primary color)
+            doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
+            doc.rect(margin, yPos, 3, boxHeight, 'F');
+            
+            // Main border (using web border color)
             doc.setDrawColor(borderGray[0], borderGray[1], borderGray[2]);
             doc.setLineWidth(0.5);
-            doc.rect(margin, yPos, contentWidth, items.length * 8 + 8, 'D');
+            doc.rect(margin, yPos, contentWidth, boxHeight, 'D');
             
             yPos += 6;
-            items.forEach(([key, value]) => {
+            items.forEach(([key, value], index) => {
+                // Alternating row background for better readability
+                if (index % 2 === 0) {
+                    doc.setFillColor(255, 255, 255);
+                    doc.rect(margin + 3, yPos - 3, contentWidth - 3, 6, 'F');
+                }
+                
                 doc.setFontSize(9);
                 doc.setFont('helvetica', 'bold');
                 doc.setTextColor(textColor[0], textColor[1], textColor[2]);
-                doc.text(key + ':', margin + 5, yPos);
+                doc.text(key + ':', margin + 8, yPos);
                 
                 doc.setFont('helvetica', 'normal');
                 doc.setTextColor(textSecondary[0], textSecondary[1], textSecondary[2]);
@@ -1378,6 +1421,9 @@ class ResultsUIController {
         // Executive Summary with info box
         addSectionTitle('EXECUTIVE SUMMARY', 18);
         
+        addText('This comprehensive cognitive assessment report provides detailed insights into your learning performance, cognitive abilities, and adaptive learning patterns. The analysis is based on advanced cognitive diagnostic assessment (CDA) methodologies and executive function theory.', 10, false, textSecondary);
+        yPos += 5;
+        
         addInfoBox([
             ['Participant Name', userName],
             ['Assessment Date', formatDate(Date.now())],
@@ -1389,15 +1435,20 @@ class ResultsUIController {
         yPos += 3;
 
         if (cognitive.professionalSummary) {
+            addText('Cognitive Profile Summary:', 11, true, primaryColor);
+            yPos += 2;
             const personalizedSummary = cognitive.professionalSummary
                 .replace(/\byour\b/gi, `${userName}'s`)
                 .replace(/\byou\b/g, userName);
-            addText(personalizedSummary, 11, false, textColor);
+            addText(personalizedSummary, 10, false, textColor);
             yPos += 5;
         }
 
         // Performance Metrics Section
         addSectionTitle('PERFORMANCE METRICS', 16);
+        
+        addText('This section provides a comprehensive overview of your quiz performance, including accuracy, response times, and achievement metrics. These metrics help identify strengths and areas for improvement in your learning journey.', 10, false, textSecondary);
+        yPos += 5;
         
         addInfoBox([
             ['Accuracy Rate', `${results.percentage || 0}%`],
@@ -1408,6 +1459,18 @@ class ResultsUIController {
             ['Total Score', `${results.totalScore || 0} points`]
         ]);
         
+        yPos += 3;
+        
+        // Add explanations for key metrics
+        addText('Metric Explanations:', 10, true, primaryColor);
+        yPos += 2;
+        addText('• Accuracy Rate: The percentage of questions answered correctly, indicating overall knowledge mastery.', 9, false, textSecondary);
+        yPos += 3;
+        addText('• Average Response Time: Mean time taken per question, reflecting cognitive processing speed and decision-making efficiency.', 9, false, textSecondary);
+        yPos += 3;
+        addText('• Best Streak: Longest sequence of consecutive correct answers, demonstrating sustained focus and knowledge retention.', 9, false, textSecondary);
+        yPos += 3;
+        addText('• Total Score: Cumulative points earned based on question difficulty, rewarding performance on challenging questions.', 9, false, textSecondary);
         yPos += 5;
 
         // Cognitive Diagnostic Assessment Section
@@ -1415,10 +1478,27 @@ class ResultsUIController {
         addText('Based on Rule Space Method - Tatsuoka (2009)', 9, false, textTertiary);
         yPos += 2;
         
+        addText('The Cognitive Diagnostic Assessment (CDA) framework provides detailed insights into your learning patterns and knowledge mastery. Unlike traditional assessments that only provide aggregate scores, CDA identifies specific cognitive attributes and learning behaviors through the Rule Space Method.', 10, false, textSecondary);
+        yPos += 5;
+        
+        addText('CDA Metrics:', 11, true, primaryColor);
+        yPos += 2;
+        
         addMetric('Adaptability', cda.adaptability || 0);
+        addText('Measures your ability to adjust performance when question difficulty changes. Higher scores indicate better adaptation to new challenge levels, showing flexibility in learning and problem-solving approaches.', 9, false, textTertiary);
+        yPos += 3;
+        
         addMetric('Consistency', cda.consistency || 0);
+        addText('Reflects the stability and predictability of your performance patterns. Higher scores mean more consistent results with less variability, indicating reliable knowledge application across different question types.', 9, false, textTertiary);
+        yPos += 3;
+        
         addMetric('Recovery Rate', cda.recovery || 0);
+        addText('Shows how quickly and effectively you recover after the system lowers your level due to difficulty. Higher scores indicate strong resilience, learning from setbacks, and the ability to bounce back from challenges.', 9, false, textTertiary);
+        yPos += 3;
+        
         addMetric('Error Persistence', cda.errorPersistence || 0);
+        addText('Indicates how often errors occur in sequence. Lower scores are better, showing you learn from mistakes quickly and avoid repeating them, demonstrating effective error correction strategies.', 9, false, textTertiary);
+        yPos += 3;
 
         if (cda.knowledgeMastery && Object.keys(cda.knowledgeMastery).length > 0) {
             yPos += 3;
@@ -1431,14 +1511,38 @@ class ResultsUIController {
 
         // Executive Function Indicators Section
         addSectionTitle('EXECUTIVE FUNCTION INDICATORS', 16);
+        
+        addText('Executive functions are higher-order cognitive processes that enable goal-directed behavior, problem-solving, and adaptive learning. These indicators assess your cognitive control mechanisms and self-regulatory abilities based on your response patterns throughout the assessment.', 10, false, textSecondary);
+        yPos += 5;
+        
+        addText('Executive Function Metrics:', 11, true, primaryColor);
+        yPos += 2;
+        
         addMetric('Processing Speed', executive.processingSpeed || 0);
+        addText('Measures your response speed compared to your own average time. Higher scores indicate faster, more efficient cognitive processing while maintaining accuracy, reflecting optimal balance between speed and precision.', 9, false, textTertiary);
+        yPos += 3;
+        
         addMetric('Impulsivity Control', executive.impulsivityControl || 0);
+        addText('Shows your capacity to resist quick, impulsive responses that lead to errors. Higher scores indicate better self-control and careful, deliberate thinking, demonstrating effective inhibition of automatic responses.', 9, false, textTertiary);
+        yPos += 3;
+        
         addMetric('Analytical Thinking', executive.analyticalThinking || 0);
+        addText('Reflects your approach to problem-solving. Higher scores indicate you take appropriate time to analyze questions, leading to more thoughtful and correct answers, showing strong analytical reasoning skills.', 9, false, textTertiary);
+        yPos += 3;
+        
         addMetric('Cognitive Endurance', executive.endurance || 0);
+        addText('Measures whether your performance stays consistent or declines as the session progresses. Higher scores show sustained focus, energy, and cognitive stamina, indicating strong mental endurance throughout extended tasks.', 9, false, textTertiary);
+        yPos += 3;
+        
         addMetric('Self Regulation', executive.selfRegulation || 0);
+        addText('Indicates your ability to manage and regulate your own learning process, especially after encountering challenges. Higher scores show strong self-management and adaptive learning skills, demonstrating effective metacognitive control.', 9, false, textTertiary);
+        yPos += 3;
 
         // RB-ADA Algorithm Metrics Section
         addSectionTitle('RB-ADA ALGORITHM METRICS', 16);
+        
+        addText('The Rule-Based Adaptive Dynamic Algorithm (RB-ADA) dynamically adjusts question difficulty in real-time based on your performance. This section shows how the adaptive system responded to your learning patterns, tracking your progression through different difficulty levels and education tiers.', 10, false, textSecondary);
+        yPos += 5;
         
         addInfoBox([
             ['Initial Level', this.getLevelName(results.initialLevel || 1)],
@@ -1450,6 +1554,15 @@ class ResultsUIController {
             ['Net Level Change', (results.netLevelChange || 0) > 0 ? `+${results.netLevelChange}` : results.netLevelChange || 0]
         ]);
         
+        yPos += 3;
+        
+        addText('Algorithm Behavior Explanation:', 10, true, primaryColor);
+        yPos += 2;
+        addText('• Level Drops: Occur when the system detects difficulty, automatically adjusting to an appropriate challenge level to maintain optimal learning conditions.', 9, false, textTertiary);
+        yPos += 3;
+        addText('• Level Promotions: Triggered by consistent strong performance, indicating mastery at the current level and readiness for more challenging content.', 9, false, textTertiary);
+        yPos += 3;
+        addText('• Net Level Change: Overall progression indicator showing whether you advanced, maintained, or adjusted your learning level during the session.', 9, false, textTertiary);
         yPos += 5;
 
         if (results.categoryPerformance && Object.keys(results.categoryPerformance).length > 0) {
@@ -1462,10 +1575,39 @@ class ResultsUIController {
 
         // Reference Section
         addSectionTitle('METHODOLOGY & REFERENCE', 16);
-        addText('Cognitive Assessment: An Introduction to the Rule Space Method', 11, true, textColor);
-        addText('Kikumi K. Tatsuoka (2009). Routledge.', 10, false, textSecondary);
+        
+        addText('This assessment is grounded in established cognitive science research and educational assessment methodologies. The following references and explanations provide context for the analytical frameworks used in this report.', 10, false, textSecondary);
+        yPos += 5;
+        
+        addText('Primary Reference:', 11, true, primaryColor);
+        yPos += 2;
+        addText('Cognitive Assessment: An Introduction to the Rule Space Method', 10, true, textColor);
+        addText('Kikumi K. Tatsuoka (2009). Routledge.', 9, false, textSecondary);
         yPos += 3;
-        addText('This assessment utilizes Cognitive Diagnostic Assessment (CDA) principles, particularly the Rule Space Method, to provide detailed insights into knowledge mastery and learning patterns beyond aggregate scores. The RB-ADA (Rule-Based Adaptive Dynamic Algorithm) adapts question difficulty in real-time based on cognitive load theory.', 9, false, textTertiary);
+        
+        addText('Methodology Overview:', 11, true, primaryColor);
+        yPos += 2;
+        addText('This assessment utilizes Cognitive Diagnostic Assessment (CDA) principles, particularly the Rule Space Method, to provide detailed insights into knowledge mastery and learning patterns beyond aggregate scores. The Rule Space Method enables fine-grained analysis of cognitive attributes and learning behaviors, identifying specific strengths and areas for improvement.', 9, false, textTertiary);
+        yPos += 4;
+        
+        addText('The RB-ADA (Rule-Based Adaptive Dynamic Algorithm) adapts question difficulty in real-time based on cognitive load theory, ensuring optimal challenge levels that promote learning without overwhelming the participant. This adaptive approach maintains engagement while providing accurate assessments of current knowledge and cognitive capabilities.', 9, false, textTertiary);
+        yPos += 4;
+        
+        addText('Key Theoretical Foundations:', 11, true, primaryColor);
+        yPos += 2;
+        addText('• Cognitive Load Theory: Optimizes question difficulty to maintain cognitive engagement without overload', 9, false, textTertiary);
+        yPos += 3;
+        addText('• Spaced Repetition: Enhances long-term memory retention through strategic question timing', 9, false, textTertiary);
+        yPos += 3;
+        addText('• Executive Function Theory: Assesses higher-order cognitive processes including self-regulation and cognitive control', 9, false, textTertiary);
+        yPos += 3;
+        addText('• Adaptive Learning: Dynamically adjusts content difficulty based on real-time performance feedback', 9, false, textTertiary);
+        yPos += 5;
+        
+        addText('Report Validity:', 11, true, primaryColor);
+        yPos += 2;
+        addText('This report is generated from a single assessment session and reflects performance patterns observed during that specific time period. For comprehensive evaluation, multiple assessments over time provide more robust insights into learning progression and cognitive development.', 9, false, textTertiary);
+        yPos += 5;
 
         // Final footer on last page
         addPageFooter();

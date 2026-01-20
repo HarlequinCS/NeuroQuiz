@@ -126,7 +126,7 @@
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
     position: relative;
 }
 
@@ -135,62 +135,7 @@
     justify-self: start;
 }
 
-/* Middle: Trademark */
-.nav-trademark {
-    justify-self: center;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    opacity: 0.6;
-    transition: opacity var(--transition-base), transform var(--transition-base);
-    animation: fadeInDown 0.8s ease-out 0.2s both;
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 0.6;
-        transform: translateY(0);
-    }
-}
-
-.nav-trademark:hover {
-    opacity: 1;
-    transform: translateY(-2px);
-}
-
-.trademark-text {
-    font-size: 0.75rem;
-    font-weight: 400;
-    color: var(--text-secondary);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'Orbitron', 'Segoe UI', sans-serif;
-}
-
-[data-theme="dark"] .trademark-text {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.trademark-symbol {
-    font-size: 0.85rem;
-    color: var(--accent-primary);
-    animation: pulseGlow 2s ease-in-out infinite;
-}
-
-@keyframes pulseGlow {
-    0%, 100% { 
-        opacity: 0.6;
-        transform: scale(1);
-    }
-    50% { 
-        opacity: 1;
-        transform: scale(1.1);
-    }
-}
+/* Trademark removed - cleaner navbar design */
 
 /* Right: CTA Menu */
 .nav-container > .nav-menu {
@@ -198,43 +143,46 @@
     animation: slideInFromRight 0.6s ease-out;
 }
 
-/* Header Language Selector - Desktop */
+/* Header Language Selector - Desktop - Professional Design */
 .header-language-selector {
     justify-self: end;
     display: flex;
     align-items: center;
-    gap: 4px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 24px;
-    padding: 3px;
-    margin-right: var(--spacing-md);
+    gap: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 4px;
+    margin-right: 0;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 [data-theme="dark"] .header-language-selector {
-    background: rgba(15, 23, 42, 0.4);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.5);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .header-language-selector:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(37, 99, 235, 0.3);
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(37, 99, 235, 0.4);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    transform: translateY(-1px);
 }
 
 [data-theme="dark"] .header-language-selector:hover {
-    background: rgba(15, 23, 42, 0.6);
-    border-color: rgba(28, 176, 246, 0.3);
-    box-shadow: 0 2px 8px rgba(28, 176, 246, 0.2);
+    background: rgba(15, 23, 42, 0.7);
+    border-color: rgba(28, 176, 246, 0.4);
+    box-shadow: 0 4px 12px rgba(28, 176, 246, 0.25);
 }
 
 .header-language-btn {
-    min-width: 44px;
-    height: 36px;
-    border-radius: 20px;
+    min-width: 48px;
+    height: 38px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,51 +193,66 @@
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
     background: transparent;
-    font-weight: 600;
-    font-size: 0.8125rem;
-    padding: 0 12px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 0 14px;
     font-family: 'Orbitron', 'Segoe UI', sans-serif;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .header-language-btn .language-code {
     position: relative;
     z-index: 1;
+    font-weight: 700;
 }
 
 .header-language-btn:hover {
     color: var(--accent-primary);
-    background: rgba(37, 99, 235, 0.1);
-    transform: translateY(-1px);
+    background: rgba(37, 99, 235, 0.12);
+    transform: scale(1.05);
 }
 
 [data-theme="dark"] .header-language-btn:hover {
-    background: rgba(28, 176, 246, 0.15);
+    background: rgba(28, 176, 246, 0.18);
+    color: var(--accent-primary-light);
 }
 
 .header-language-btn:active {
-    transform: translateY(0);
+    transform: scale(0.98);
 }
 
 .header-language-btn.active {
     color: #ffffff;
     background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-hover) 100%);
-    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.35), 0 1px 3px rgba(37, 99, 235, 0.25);
-    transform: translateY(-1px);
+    box-shadow: 
+        0 2px 8px rgba(37, 99, 235, 0.4),
+        0 1px 3px rgba(37, 99, 235, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
 }
 
 [data-theme="dark"] .header-language-btn.active {
     background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-light) 100%);
-    box-shadow: 0 3px 10px rgba(28, 176, 246, 0.4), 0 1px 3px rgba(28, 176, 246, 0.3);
+    box-shadow: 
+        0 2px 8px rgba(28, 176, 246, 0.5),
+        0 1px 3px rgba(28, 176, 246, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .header-language-btn.active:hover {
     background: linear-gradient(135deg, var(--accent-primary-hover) 0%, var(--accent-primary) 100%);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4), 0 2px 4px rgba(37, 99, 235, 0.3);
+    box-shadow: 
+        0 4px 12px rgba(37, 99, 235, 0.5),
+        0 2px 4px rgba(37, 99, 235, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    transform: scale(1.03);
 }
 
 [data-theme="dark"] .header-language-btn.active:hover {
-    box-shadow: 0 4px 12px rgba(28, 176, 246, 0.5), 0 2px 4px rgba(28, 176, 246, 0.4);
+    box-shadow: 
+        0 4px 12px rgba(28, 176, 246, 0.6),
+        0 2px 4px rgba(28, 176, 246, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 @keyframes slideInFromRight {
@@ -1551,13 +1514,7 @@
     }
 
     /* Hide trademark text on tablet, show only symbol */
-    .nav-trademark .trademark-text {
-        display: none;
-    }
-
-    .nav-trademark {
-        justify-self: center;
-    }
+    /* Trademark removed */
 
     .brand-name {
         font-size: 1.5rem;
@@ -1804,10 +1761,7 @@
         justify-self: start;
     }
 
-    /* Hide trademark on mobile to save space */
-    .nav-trademark {
-        display: none;
-    }
+    /* Trademark removed */
 
     .brand-name {
         font-size: 1.25rem;

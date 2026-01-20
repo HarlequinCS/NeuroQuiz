@@ -3,6 +3,206 @@
    File: css/quiz.css
    ========================================= */
 
+/* =========================================
+   0. QUIZ HEADER (Top Settings Button)
+   ========================================= */
+
+.quiz-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-default);
+    padding: var(--spacing-sm) 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+[data-theme="dark"] .quiz-header {
+    background: linear-gradient(180deg, 
+        rgba(10, 15, 30, 0.95) 0%, 
+        rgba(5, 10, 25, 0.98) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 2px 10px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(28, 176, 246, 0.1);
+}
+
+.quiz-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+.quiz-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.quiz-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.quiz-logo-link:hover {
+    transform: scale(1.05);
+}
+
+.quiz-logo {
+    height: 32px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+[data-theme="dark"] .quiz-logo {
+    filter: drop-shadow(0 2px 4px rgba(28, 176, 246, 0.3));
+}
+
+.quiz-header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+/* Universal Settings Icon Button */
+.quiz-settings-icon-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+    position: relative;
+    z-index: 1001;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .quiz-settings-icon-btn {
+    background: rgba(15, 23, 42, 0.5);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-settings-icon-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+    transition: transform 0.3s ease;
+}
+
+.quiz-settings-icon-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(37, 99, 235, 0.4);
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+[data-theme="dark"] .quiz-settings-icon-btn:hover {
+    background: rgba(15, 23, 42, 0.7);
+    border-color: rgba(28, 176, 246, 0.4);
+    color: var(--accent-primary-light);
+    box-shadow: 0 4px 12px rgba(28, 176, 246, 0.25);
+}
+
+.quiz-settings-icon-btn:hover svg {
+    transform: rotate(90deg);
+}
+
+.quiz-settings-icon-btn:active {
+    transform: translateY(0) scale(0.95);
+}
+
+.quiz-settings-icon-btn:focus-visible {
+    outline: 3px solid var(--accent-primary);
+    outline-offset: 2px;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.05),
+        0 0 0 4px rgba(37, 99, 235, 0.3);
+}
+
+[data-theme="dark"] .quiz-settings-icon-btn:focus-visible {
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.3),
+        0 0 0 4px rgba(28, 176, 246, 0.4);
+}
+
+.quiz-settings-icon-btn[aria-expanded="true"] {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-hover) 100%);
+    border-color: var(--accent-primary);
+    color: #ffffff;
+    box-shadow: 
+        0 2px 8px rgba(37, 99, 235, 0.4),
+        0 1px 3px rgba(37, 99, 235, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .quiz-settings-icon-btn[aria-expanded="true"] {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-light) 100%);
+    border-color: var(--accent-primary-light);
+    box-shadow: 
+        0 2px 8px rgba(28, 176, 246, 0.5),
+        0 1px 3px rgba(28, 176, 246, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+    .quiz-header {
+        padding: var(--spacing-xs) 0;
+    }
+    
+    .quiz-header-container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .quiz-logo {
+        height: 28px;
+    }
+    
+    .quiz-settings-icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .quiz-settings-icon-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-settings-icon-btn {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .quiz-settings-icon-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
 /* 1. THEME VARIABLES SETUP */
 :root {
     /* --- CORE GAME COLORS --- */
@@ -109,8 +309,8 @@ body {
     max-width: 850px;
     width: 100%;
     
-    /* Professional spacing: dino animation (80px) + comfortable gap (60px) = 140px */
-    margin: 140px auto 100px auto;
+    /* Professional spacing: header (60px) + dino animation (80px) + comfortable gap (60px) = 200px */
+    margin: 200px auto 100px auto;
     
     border: 4px solid var(--quiz-border);
     box-shadow: 0 20px 0 var(--quiz-shadow);
@@ -123,7 +323,7 @@ body {
 @media (max-width: 768px) {
     .quiz-container {
         padding: var(--spacing-lg);
-        margin: var(--spacing-xl) auto var(--spacing-lg);
+        margin: calc(var(--spacing-xl) + 60px) auto var(--spacing-lg);
         border-radius: 20px;
     }
 }
@@ -131,7 +331,7 @@ body {
 @media (max-width: 480px) {
     .quiz-container {
         padding: var(--spacing-md);
-        margin: var(--spacing-lg) auto var(--spacing-md);
+        margin: calc(var(--spacing-lg) + 60px) auto var(--spacing-md);
         border-radius: 15px;
         border-width: 2px;
     }
@@ -1506,119 +1706,9 @@ body {
    10. SETTINGS BUTTON & MODAL
    ========================================= */
 
-/* Action Right Container */
-.action-right { 
-    display: flex; 
-    align-items: center; 
-    gap: 12px; 
-    flex-shrink: 0;
-}
+/* Action Right Container - Settings button moved to header */
 
-/* SETTINGS BUTTON */
-.btn-settings {
-    flex: 0 0 auto;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    min-width: 120px;
-    min-height: 52px;
-    padding: 12px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 14px;
-    color: var(--quiz-text-primary);
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    position: relative;
-    z-index: 1001 !important;
-    pointer-events: auto !important;
-    touch-action: manipulation !important;
-    -webkit-tap-highlight-color: transparent;
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
-}
-
-.btn-settings-icon,
-.btn-settings-text {
-    pointer-events: none;
-    z-index: -1;
-}
-
-.btn-settings-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-settings-icon svg {
-    width: 18px;
-    height: 18px;
-    stroke-width: 2.5;
-}
-
-.btn-settings-text {
-    font-size: 0.85rem;
-}
-
-[data-theme="dark"] .btn-settings {
-    background: rgba(15, 23, 42, 0.4);
-    border-color: rgba(255, 255, 255, 0.15);
-    color: var(--quiz-text-primary);
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
-}
-
-.btn-settings:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(37, 99, 235, 0.4);
-    color: var(--accent-primary);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
-}
-
-[data-theme="dark"] .btn-settings:hover {
-    background: rgba(28, 176, 246, 0.15);
-    border-color: rgba(28, 176, 246, 0.4);
-    color: var(--accent-primary-light);
-    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4), 0 0 15px rgba(28, 176, 246, 0.3);
-}
-
-.btn-settings:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2) !important;
-}
-
-.btn-settings:focus-visible {
-    outline: 3px solid var(--game-blue);
-    outline-offset: 2px;
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15), 0 0 0 4px rgba(28, 176, 246, 0.3);
-}
-
-@media (max-width: 768px) {
-    .btn-settings {
-        min-width: 100px;
-        min-height: 48px;
-        padding: 10px 16px;
-        font-size: 0.8rem;
-    }
-    .btn-settings-icon svg { width: 16px; height: 16px; }
-    .btn-settings-text { font-size: 0.75rem; }
-}
-
-@media (max-width: 480px) {
-    .btn-settings {
-        min-width: 90px;
-        min-height: 44px;
-        padding: 8px 12px;
-    }
-    .btn-settings-icon svg { width: 15px; height: 15px; }
-    .btn-settings-text { font-size: 0.7rem; }
-}
+/* Old settings button removed - now in header */
 
 /* SETTINGS MODAL */
 .settings-modal-overlay {

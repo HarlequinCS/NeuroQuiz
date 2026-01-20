@@ -39,6 +39,7 @@ class ResultsUIController {
         
         this.results = null;
         this.charts = {};
+        this.eventListenersSetup = false; // Flag to prevent duplicate listeners
         
         console.log('ResultsUIController initialized');
     }
@@ -1114,10 +1115,29 @@ class ResultsUIController {
     }
     
     setupEventListeners() {
-        this.elements.exportBtn?.addEventListener('click', () => this.exportResults());
-        this.elements.retakeBtn?.addEventListener('click', () => {
-            window.location.href = 'setup.html';
-        });
+        // Prevent duplicate event listeners
+        if (this.eventListenersSetup) {
+            return;
+        }
+        
+        // Export button handler
+        if (this.elements.exportBtn) {
+            this.elements.exportBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.exportResults();
+            }, { once: false });
+        }
+        
+        // Retake button handler
+        if (this.elements.retakeBtn) {
+            this.elements.retakeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = 'setup.html';
+            }, { once: false });
+        }
+        
+        this.eventListenersSetup = true;
     }
     
     exportResults() {

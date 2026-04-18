@@ -96,7 +96,7 @@ NeuroQuiz™ is built on research from:
 - **Attention and Focus**: Design principles that maintain user engagement
 - **Reward Systems**: Dopamine-driven motivation through achievement systems
 
-For detailed research documentation and references, see the [`docs/`](docs/) folder.
+For detailed research documentation and references, see the [`docs/`](docs/) folder. All documentation is available in both Markdown (`.md`) and PDF (`.pdf`) formats.
 
 ## 👥 Team Members
 
@@ -189,9 +189,13 @@ NeuroQuiz/
 │
 └── docs/
     ├── COGNITIVE_ANALYZER.md      # Cognitive analyzer documentation
+    ├── COGNITIVE_ANALYZER.pdf     # PDF version
     ├── LOGIC_EXPLANATION.md       # RB-ADA algorithm explanation
+    ├── LOGIC_EXPLANATION.pdf      # PDF version
     ├── SHNEIDERMAN_GOLDEN_RULES.md # UI/UX design principles
-    └── REFERENCES.md              # Research references
+    ├── SHNEIDERMAN_GOLDEN_RULES.pdf # PDF version
+    ├── REFERENCES.md              # Research references
+    └── REFERENCES.pdf             # PDF version
 ```
 
 ## 🚀 Setup Instructions

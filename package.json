@@ -21,7 +21,8 @@
     "version:update": "node update-version.js",
     "version": "npm run version:update",
     "production": "npm run build && npm run copy:assets && npm run version:update",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "docs:pdf": "node convert-docs-to-pdf.js"
   },
   "keywords": [
     "adaptive-quiz",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "clean-css-cli": "^5.6.3",
     "html-minifier-terser": "^7.2.0",
+    "md-to-pdf": "^5.2.5",
     "rimraf": "^5.0.5",
     "terser": "^5.31.0"
   }

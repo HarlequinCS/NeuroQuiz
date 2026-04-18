@@ -52,3 +52,6 @@ coverage/
 
 # Build tools
 .cache/
+
+# Temporary PDF conversion files
+temp-pdf-styles.css

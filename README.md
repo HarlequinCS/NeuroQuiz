@@ -8,6 +8,8 @@
 
 > **Production Ready** - Version 1.0.0 | Released January 2026
 
+**PRESENTATION SLIDE**: https://www.canva.com/design/DAG_IPtiutc/IsqJQKNHZJd0DG4vL8bz7w/edit?utm_content=DAG_IPtiutc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 ## 📋 Project Overview
 
 NeuroQuiz™ is an innovative client-side web application that combines cutting-edge cognitive science research with engaging game mechanics to create an optimal learning experience. The platform adapts to each user's performance in real-time, adjusting question difficulty based on cognitive load theory and implementing spaced repetition principles to enhance long-term memory retention.
